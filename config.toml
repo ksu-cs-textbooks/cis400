@@ -13,7 +13,7 @@ section = [ "HTML", "Iframeable", "Teleprompter"]
 
 [params]
   editURL = "https://gitlab.cs.ksu.edu/russfeld/ksucs-hugo/tree/master/content/"
-  description = "K-State CS Hugo Framework"
+  description = "K-State Computer Science Object-Oriented Design, "
   author = "Russell Feldhausen"
   showVisitedLinks = false
   themeVariant = "purple"
