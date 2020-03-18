@@ -1,6 +1,6 @@
-baseURL = "https://ksucs-hugo.russfeld.me"
+baseURL = "https://cs.ksu.edu/~nhbean/cis400"
 languageCode = "en-us"
-title = "K-State CS Hugo Framework"
+title = "K-State CIS 400 Textbook"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "ksucs-hugo-theme"
@@ -14,7 +14,7 @@ section = [ "HTML", "Iframeable", "Teleprompter"]
 [params]
   editURL = "https://gitlab.cs.ksu.edu/russfeld/ksucs-hugo/tree/master/content/"
   description = "K-State Computer Science Object-Oriented Design, "
-  author = "Russell Feldhausen"
+  author = "Nathan Bean"
   showVisitedLinks = false
   themeVariant = "purple"
   disableLanguageSwitchingButton = true
