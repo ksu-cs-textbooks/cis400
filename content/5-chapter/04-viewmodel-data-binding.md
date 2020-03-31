@@ -1,7 +1,7 @@
 ---
 title: "MVVM Data Binding"
-pre: "3. "
-weight: 3
+pre: "4. "
+weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -9,7 +9,7 @@ As Microsoft developed Windows Presentation Framework, they sought to address so
 
 Specifically, Microsoft architects Ken Cooper and Ted Peters introduced a new software archtectural pattern to leverage when writing WPF controls, [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel).  This approach splits the user interface code into two classes: the View (the XAML + codebehind), and a ViewModel, which converts the actual model objects into a form more easily bound and consumed by the view.
 
-![MVVM Pattern](assets/MVVMPattern.png)
+![MVVM Pattern]({{<static "images/MVVMPattern.png">}})
 
 Consider the challenge we had in binding an enum to radio buttons.  Neither of the two solutions we came up with were exactly ideal.  The first added additional, otherwise unneeded properties to the `Person` class, and the other used the rather arcane `IValueConverter` implementation.  Had we used the M-V-VM pattern, we would have placed the responsiblity for conversion on a custom Viewmodel class, which would not have polluted our `Person` class with extra methods and would have bound cleanly to the radio buttons with no messy converters.
 
@@ -20,7 +20,7 @@ But the best way to learn about this pattern is to implement it for ourselves. s
 ## Initial Project
 We'll start with a Model we absolutely can't change - one that comes from a second-party DLL, _CashRegister.dll_.  This DLL file has been included in our starting project, and the Model we'll be working with is the `CashDrawer` class, which represents the contents of a cash drawer in a cash register.  We'll develop a View and a ViewModel to work with an instance of this class.
 
-You can clone the starting project from the GitHub Classroom url provided in the Canvas Assignment (for students in the CIS 400 course), or directly from the GitHub [repo](https://github.com/ksu-cis/manual-data-binding.git) (for other readers).
+You can clone the starting project from the GitHub Classroom url provided in the Canvas Assignment (for students in the CIS 400 course), or directly from the GitHub [repo](https://github.com/ksu-cis/mvvm-data-binding.git) (for other readers).
 
 ## Connecting the DLL 
 
@@ -34,7 +34,7 @@ Since the `CashDrawer` seperates its data into the different denominations, it m
 
 Here is a mockup of what I am thinking:
 
-![Currency User Interface](assets/CurrencyUI.png)
+![Currency User Interface]({{<static "images/CurrencyUI.png">}})
 
 ## Creating the ModelView Class 
 
