@@ -12,8 +12,8 @@ page = [ "HTML", "Iframeable", "Teleprompter"]
 section = [ "HTML", "Iframeable", "Teleprompter"]
 
 [params]
-  editURL = "https://gitlab.cs.ksu.edu/russfeld/ksucs-hugo/tree/master/content/"
-  description = "K-State Computer Science Object-Oriented Design, "
+  editURL = "https://gitlab.cs.ksu.edu/nhbean/cis400-textbook/tree/master/content/"
+  description = "K-State CIS 400 Textbook"
   author = "Nathan Bean"
   showVisitedLinks = false
   themeVariant = "purple"
