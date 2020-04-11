@@ -110,6 +110,7 @@ Now let's write the proxy property for the actual denominations.  Let's start wi
             int quantity = value - drawer.Pennies;
             if (quantity > 0) drawer.AddCoin(Coins.Penny, quantity);
             else drawer.RemoveCoin(Coins.Penny, -quantity);
+            InvokePropertyChanged("Pennies");
         }
     }
 ```
@@ -254,12 +255,12 @@ The "-" event handler mirrors the approach:
 The XAML might look something like:
 
 ```xml
-<UserControl x:Class="CashRegisterStarter.CoinControl"
+<UserControl x:Class="MVVMDataBinding.CoinControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:CashRegisterStarter"
+             xmlns:local="clr-namespace:MVVMDataBinding"
              mc:Ignorable="d" 
              Height="120" Width="120"
              d:DesignHeight="120" d:DesignWidth="120">
@@ -300,12 +301,12 @@ The `BillControl` will follow the same format as the `CoinControl`, substituting
 Now we're ready to create a control reprsenting our complete cash register.  Let's call it `CashRegisterControl`.  This just needs to include a `BillControl` and `CoinControl` for every denomination.  The XAML might look like:
 
 ```xml 
-<UserControl x:Class="CashRegisterStarter.CashRegisterControl"
+<UserControl x:Class="MVVMDataBinding.CashRegisterControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:CashRegisterStarter"
+             xmlns:local="clr-namespace:MVVMDataBinding"
              mc:Ignorable="d"  
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -339,12 +340,12 @@ Now we're ready to create a control reprsenting our complete cash register.  Let
 Now we'll tweak our `MainWindow` class to display our control.  We'll also set its `DataContext` property using XAML:
 
 ```csharp
-<Window x:Class="CashRegisterStarter.MainWindow"
+<Window x:Class="MVVMDataBinding.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CashRegisterStarter"
+        xmlns:local="clr-namespace:MVVMDataBinding"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="900">
     <Grid>
