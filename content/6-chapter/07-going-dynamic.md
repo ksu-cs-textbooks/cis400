@@ -162,7 +162,7 @@ Go ahead and run your program.  Your page should look like:
 
 ![The refactored index page]({{<static "images/6.7.1.png">}})
 
-This approach would work fine, but there are 3201 entries in our database - do you really want to do that by hand?
+This approach would work fine, but there are 3,201 entries in our database - do you really want to do that by hand?
 
 Instead, let's leverage the power of Razor templates, and use some C# code to iterate through each entry in the database.  We can do this with a `foreach` loop, just like you might do in a regular C# class:
 
@@ -182,11 +182,11 @@ Each of these is in turn concatenated into the page as the `foreach` loop is pro
 
 ![The full list of movies]({{<static "images/6.7.2.png">}})
 
-They're all there.  You can scroll to the bottom to see for yourself!
+They're all there.  You can scroll all the way to the bottom.
 
 ### Adding Some Detail
 
-It might be interesting to see more information about the movies than just the title.  Let's take full advantage of the details in our `Movie` class by expanding what is shown:
+It might be interesting to see more information about the movies than just the title.  Let's take advantage of the details in our `Movie` class by expanding what is shown:
 
 ```csharp
 <h1>Movies</h1>
@@ -197,8 +197,6 @@ It might be interesting to see more information about the movies than just the t
             <h3>@movie.Title</h3>
             <div>@movie.MPAARating</div>
             <div>@movie.MajorGenre</div>
-            <div>@movie.IMDBRating</div>
-            <div>@movie.RottenTomatoesRating</div>
         </li>
     }
 </ul>
@@ -218,7 +216,7 @@ Let's take advantage of Razor's ability to use conditionals to leave those blank
     @foreach(Movie movie in MovieDatabase.All)
     {
         <li>
-            <h3>@movie.Title</h3>
+            <h3 class="title">@movie.Title</h3>
             @if (movie.MPAARating != null)
             {
                 <div class="mpaa">
@@ -238,7 +236,7 @@ Let's take advantage of Razor's ability to use conditionals to leave those blank
 
 We've also added the text "Rated" before our `MPAARating`, so the entry will now read "Rated R" for an R-rated movie, "Rated G" for a g-rated movie, and so on.
 
-We also added class attributes to each div, as well as the movie list itself.  We'll use these to style our elements.
+We also added class attributes to the `<h3>` and each `<div>`, as well as the movie list itself.  We'll use these to style our elements.
 
 ### Adding Some Style
 
@@ -268,10 +266,10 @@ You might wonder why we put the list in an unordered list at all, if we're just 
 
 Remember, it's not just humans that read the internet.  Many bots and algorithms do as well, and they typically won't use the lens of CSS styling - they'll be reading the raw HTML.
 
-We'll use the same child selection technique to make our headers a dark slate gray, have a slightly larger-then-normal text, and remove the margins so that the next text is directly beneath them:
+We'll make our title headers a dark slate gray, have a slightly larger-then-normal text, and remove the margins so that there are no large spacedb between the header and the text is directly above and beneath them:
 
 ```css
-ul.movie-list > li > h3 {
+.title {
     color: darkslategray;
     font-size: 1.2rem;
     margin: 0;
@@ -403,6 +401,6 @@ The end result is very close to our sketch:
 
 ![The end result]({{<static "images/6.7.5.png">}})
 
-Clearly, CSS is a powerful tool.  It can be challenging to learn, but if you are going to be invovled with web development, it is time well spent.
+Clearly, CSS is a powerful tool.  It can be challenging to learn, but if you are going to be involved in web development, it is time well spent.
 
 The [MDN CSS documentation](https://developer.mozilla.org/en-US/docs/Web/CSS) and the [CSS-Tricks site](https://css-tricks.com/) are both excellent references for learning CSS.
