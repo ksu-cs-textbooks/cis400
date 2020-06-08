@@ -92,7 +92,7 @@ Now, there is a chance that the search terms we recieve are `null`.  If that's t
 
 ```csharp 
     // Return all movies if there are no search terms
-    if(SearchTerms == null) return All;
+    if(terms == null) return All;
 ```
 
 If we _do_ have search terms, we need to add any movies from our database that include those terms in the title.  This requires us to check _each movie_ in our database:
@@ -659,6 +659,46 @@ This further simplifies our `OnGet()` method:
     }
 ```
 
+{{% notice note %}}
+
+You only need to do _one_ binding approach per property in a PageModel.  I.e. you can just use the property decorator:
+```csharp 
+public class SomePageModel : PageModel 
+{
+    [BindProperty]
+    public float SomeProperty { get; set; }
+
+    public void OnGet() {
+        DoSomething(SomeProperty);
+    }
+}
+```
+
+_or_ you might use the argument binding:
+
+```csharp 
+public class SomePageModel : PageModel 
+{
+    public void OnGet(float SomeProperty) {
+        DoSomething(SomeProperty);
+    }
+}
+```
+
+_or_ you can parse it from the request:
+
+```csharp 
+class SomePageModel : PageModel 
+{
+    public void OnGet() {
+        var someProperty = float.Parse(Request.Query["SomeProperty"]);
+        DoSomething(someProperty);
+    }
+}
+```
+These are all _different means_ of accessing the _same data_ from the incoming request.  The use of the `[BindProperty]` decorator is often the most concise if you need to be able to access the property in the page itself.  If not, arguement binding is a good alternative.  
+{{% /notice %}}
+
 Now all we need to do is implement the actual filter.
 
 ### Implementing the IMDB Rating Filter 
@@ -733,14 +773,39 @@ Finally, we could handle the case where we have both a min and max value to our 
 
 Notice too, that in each of these cases we're treating the range as _inclusive_ (including the specified minimum and maximum).  This is the behavior most casual internet users will expect.  If the database and user expectations are different for your audience, you'd want your code to match that expectation.
 
+{{% notice warning %}}
 
-## Bug Workarounds
-You should now be able to run your code andn see the ratings.  Unfortuantely, the version of ASP.NET that this project was originally built with (.NET Core 2.2) does not convert the nullable doubles correctly - it always sets them to `null`.  You could either upgrade the project (which is messy - much easier to create a new project and copy your code across), or use a workaround like this one:
+You should now be able to run your code and see the ratings.  Unfortuantely, the version of ASP.NET that this project was originally built with (.NET Core 2.2) does not convert the nullable doubles correctly - it always sets them to `null`.  You could either upgrade the project (which is messy - much easier to create a new project and copy your code across), or use a workaround like this one:
 
 ```csharp
+    /// <summary>
+    /// Gets and sets the search terms
+    /// </summary>
+    [BindProperty]
+    public string SearchTerms { get; set; }
+
+    /// <summary>
+    /// Gets and sets the MPAA rating filters
+    /// </summary>
+    [BindProperty]
+    public string[] MPAARating { get; set; }
+
+    /// <summary>
+    /// Gets and sets the IMDB minimium rating
+    /// </summary>
+    public float IMDBMin { get; set; }
+
+    /// <summary>
+    /// Gets and sets the IMDB maximum rating
+    /// </summary>
+    public float IMDBMax { get; set; }
+
+    /// <summary>
+    /// Does the response initialization for incoming GET requests
+    /// </summary>
     public void OnGet(double? IMDBMin, double? IMDBMax)
     {
-        # Nullable conversion workaround
+        // Nullable conversion workaround
         this.IMDBMin = IMDBMin;
         this.IMDBMax = IMDBMax;
         Movies = MovieDatabase.Search(SearchTerms);
@@ -750,7 +815,11 @@ You should now be able to run your code andn see the ratings.  Unfortuantely, th
     }
 ```
 
-Here we take the `IMDBMin` and `IMDBMax` values as arguments (which _does_ convert them correctly), and then assign them to the properties of the same name.  This sidesteps the conversion problem with the `[BindProperty]` decorator.  In later versions of .NET Core, this shouldn't be necessary.
+Here we take the `IMDBMin` and `IMDBMax` values as arguments (which _does_ convert them correctly), and then assign them to the properties of the same name.  This sidesteps the conversion problem with the `[BindProperty]` decorator.  
+
+In later versions of .NET Core, such as your milestone will be using, this shouldn't be necessary.  You should be able to use the `[BindProperty]` decorator with nullable types as well.
+
+{{% /notice %}}
 
 Now we can filter by IMDB rating:
 
