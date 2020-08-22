@@ -12,6 +12,7 @@ page = [ "HTML", "Iframeable", "Teleprompter"]
 section = [ "HTML", "Iframeable", "Teleprompter"]
 
 [params]
+  textbookURL = "https://cs.ksu.edu/~nhbean/cis400"
   editURL = "https://gitlab.cs.ksu.edu/nhbean/cis400-textbook/tree/master/content/"
   description = "K-State CIS 400 Textbook"
   author = "Nathan Bean"

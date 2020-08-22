@@ -1,9 +1,10 @@
 ---
 title: "Objects in Memory"
-pre: "4. "
-weight: 4
+pre: "7. "
+weight: 7
 date: 2018-08-24T10:53:26-05:00
 ---
+
 We often talk about the **_class_** as a *blueprint* for an **_object_**.  This is because classes define what properties and methods an object should have, in the form of a **_constructor_**.  Consider this class representing a planet:
 
 ```csharp
@@ -13,7 +14,7 @@ We often talk about the **_class_** as a *blueprint* for an **_object_**.  This 
 public class Planet {
 
     /// <summary>
-    /// The planet's mass in Earth Mass (~5.9722 x 10^24kg)
+    /// The planet's mass in Earth Mass units (~5.9722 x 10^24kg)
     /// </summary>
     private double mass;
     public double Mass {
@@ -21,7 +22,7 @@ public class Planet {
     }
 
     /// <summary>
-    /// The planet's radius in Earth Radius (~6.738 x 10^6m)
+    /// The planet's radius in Earth Radius units (~6.738 x 10^6m)
     /// </summary>
     private double radius;
     public double Radius {

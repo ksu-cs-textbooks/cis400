@@ -1,7 +1,7 @@
 ---
 title: "Documenting Objects"
-pre: "5. "
-weight: 5
+pre: "9. "
+weight: 9
 date: 2018-08-24T10:53:26-05:00
 ---
 While often overlooked, *documenting* is a critically important part of writing software.  There are two purposes to documenting:
@@ -9,7 +9,7 @@ While often overlooked, *documenting* is a critically important part of writing 
 1. To explain to end users how the software should be used, and
 2. To explain to developers how the software works.
 
-For the moment, we'll focus on the second use for documentation - documentation intended for developers.  In the early days of programming, this would often be done in a separate file or files from the source code, due to memory limitations.  But today we often employ in-code documentation, along with powerful tools that make it even more useful.
+For the moment, we'll focus on the second use for documentation - documentation intended for developers.  In the early days of programming, this would often be done in a separate file or files from the source code, due to memory limitations (Remember the EPIC documentation?).  But today we often employ in-code documentation, along with powerful tools that make it even more useful.
 
 ## .NET XML Documentation
 Consider the .NET XML Documentation - a collection of XML tags and commenting styles that Visual Studio will find and use for Intellisense (the tooltips that pop up as you code in Visual Studio, explaining what a class is and how it is to be used).  
@@ -25,17 +25,17 @@ public class Vector3 {
   /// <summary>
   /// Gets or sets the X property
   /// </summary>
-  public double X;
+  public double X {get; set;};
 
   /// <summary>
   /// Gets or sets the Y property
   /// </summary>
-  public double Y;
+  public double Y {get; set;};
 
   /// <summary>
   /// Gets or sets the Z property
   /// </summary>
-  public double Z;
+  public double Z {get; set;};
 
   /// <summary>
   /// Constructs a new instance of Vector3 with
