@@ -40,8 +40,10 @@ for(int i = 0; i < nums.Length/2; i++) {
 
 JavaScript and CSS libraries like [highlight.js](https://highlightjs.org/), [prism](https://prismjs.com/), and others can provide syntax highlighting functionality without much extra work. 
 
+Of course, one of the strongest benefits of HTML is the ability to create _hyperlinks_ between pages.  This can be invaluable in documenting software, where the documentation about a particular method could include links to documentation about the classes being supplied as parameters, or being returned from the method.  This allows developers to quickly navigate and find the information they need as they work with your code.
+
 ## Markdown
-However, there is a significant amount of [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) invovled in writing a webpage (i.e. each page needs a minimum of elements not specific to the documentation to set up the structure of the page).  [Markdown](https://www.markdownguide.org/) is a markup language developed to counter this issue.  Markdown is written as plain text, with a few special formatting annotations, which indicate how it sould be transformed to HTML.  Some of the most common annotations are:
+However, there is a significant amount of [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) invovled in writing a webpage (i.e. each page needs a minimum of elements not specific to the documentation to set up the structure of the page).  The extensive use of HTML elements also makes it more time-consuming to write and harder for people to read in its raw form. [Markdown](https://www.markdownguide.org/) is a markup language developed to counter these issues.  Markdown is written as plain text, with a few special formatting annotations, which indicate how it sould be transformed to HTML.  Some of the most common annotations are:
 
 * Starting a line with hash (`#`) indicates it should be a `<h1>` element, two hashes (`##`) indicates a `<h2>`, and so on...
 * Wrapping a statement with underscores (`_`) or asterisks (`*`) indicates it should be wrapped in a `<i>` element
@@ -54,10 +56,10 @@ Code snippets are indicated with backtick marks (`` ` ``).  Inline code is writt
 <pre><code class="language-md" data-lang="md">
 This algorithm reverses the contents of the array, `nums`
 ```
-for(int i = 0; i < nums.Length/2; i++) {
+for(int i = 0; i < nums.Count/2; i++) {
     int tmp = nums[i];
-    nums[i] = nums[nums.Length - 1 - i];
-    nums[nums.Length - 1 - i] = tmp;
+    nums[i] = nums[nums.Count - 1 - i];
+    nums[nums.Count - 1 - i] = tmp;
 }
 ```
 </code></pre>
@@ -70,7 +72,7 @@ List<int> = new List<int>;
 ```
 </code></pre>
 
-Nearly every programming langauge features at least one open-source library for converting Markdown to HTML.  Microsoft even includes a C# one in the [Windows Community Toolkit](https://docs.microsoft.com/en-us/windows/communitytoolkit/parsers/markdownparser).  In addition to being faster to write than HTML, and avoiding the necessity to write boilerplate code, Markdown offers some security benefits.  Because it generates only a limited set of HTML elements, which specifically excludes some most commonly employed in web-based exploits (like `<script>` tags for cross-scripting attacks), it is often safer to allow users to contribute markdown-based content than HTML-based content.
+Nearly every programming langauge features at least one open-source library for converting Markdown to HTML.  Microsoft even includes a C# one in the [Windows Community Toolkit](https://docs.microsoft.com/en-us/windows/communitytoolkit/parsers/markdownparser).  In addition to being faster to write than HTML, and avoiding the necessity to write boilerplate code, Markdown offers some security benefits.  Because it generates only a limited set of HTML elements, which specifically excludes some most commonly employed in web-based exploits (like using `<script>` elements for script injection attacks), it is often safer to allow users to contribute markdown-based content than HTML-based content. **Note: this protection is dependent on the settings provided to your HTML generator - most markdown converters can be configured to allow or escape HTML elements in the markdown text**
 
 In fact, this book was written using Markdown, and then converted to HTML using the [Hugo framework](https://gohugo.io/), a static website generator built using the [Go programming language](https://golang.org/).  
 
@@ -80,7 +82,7 @@ GitHub even incorporates a markdown compiler into its repository displays.  If y
 
 {{% notice info %}}
 It is best practice to include a README.md file at the top level of a project.  This document provides an overview of the project, as well as helpful instructions on how it is to be used and where to go for more information.  For open-source projects, you should also include a LICENSE file that contains the terms of the license the software is released under.
-{{% %}}
+{{% /notice %}}
 
 ## XML
 

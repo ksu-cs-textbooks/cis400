@@ -118,7 +118,11 @@ And, if a method might throw an exception, this should be also indicated with th
 /// </exception>
 ```
 
-Note too, the use of the `<remarks>` element in the above example to add supplemental information.  The `<example>` element can also be used to provide examples of using the class, method, or other code construct.  There are more elements available, like `<see>` and `<seealso>` that generate links to other documentation, `<para>`, `<code>`, `<c>`, and `<list>` which are used to format text, and so on.  See [the official documentation](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc) for a complete list and discussion.
+Note too, the use of the `<remarks>` element in the above example to add supplemental information.  The `<example>` element can also be used to provide examples of using the class, method, or other code construct.  There are more elements available, like `<see>` and `<seealso>` that generate links to other documentation, `<para>`, and `<list>` which are used to format text, and so on.  
+
+Of especial interest are the `<code>` and `<c>` elements, which format code blocks and inline code, respectively.
+
+See [the official documentation](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc) for a complete list and discussion.
 
 Thus, our completely documented class would be:
 
