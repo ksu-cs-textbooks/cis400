@@ -26,5 +26,11 @@ Some key terms to learn in this chapter are:
 
 * Property
 
+* Public
+
+* Private
+
+* Static
+
 To begin, we’ll examine the term *encapsulation*.
 

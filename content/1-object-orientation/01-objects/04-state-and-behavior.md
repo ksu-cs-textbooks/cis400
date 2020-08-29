@@ -64,7 +64,7 @@ On the other hand, with encapsulation we can reason about state and behavior on 
 /// <summary>
 /// Returns the the supplied vector scaled by the provided scalar
 /// </summary>
-public static void Scale(Vector3 vec, double scale) {
+public static Vector3 Scale(Vector3 vec, double scale) {
     double x = vec.x * scale;
     double y = vec.y * scale;
     double z = vec.z * scale;

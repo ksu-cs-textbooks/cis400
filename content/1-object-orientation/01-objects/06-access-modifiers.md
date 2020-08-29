@@ -35,7 +35,11 @@ By using the access modifier `private`, we have indicated that our fields `first
 Student willie = new Student("Willie", "Wildcat", 888888888);
 ```
 
-We would not be able to change his name, i.e. `willie.first = "Bob"` would fail, because the field `first` is private.  In fact, we cannot even see his name, so `Console.Writeline(willie.First);` would also fail.  Instead, we’d need to write **_accessor methods_**, a.k.a. *getters* and *setters*, methods that allow us to see and change field values.  Adding accessors to our Student class might look like:
+We would not be able to change his name, i.e. `willie.first = "Bob"` would fail, because the field `first` is private.  In fact, we cannot even see his name, so `Console.WriteLine(willie.First);` would also fail.  
+
+If we want to allow a field or method to be accessible _outside_ of the object, we must declare it `public`.  While we _can_ declare fields public, this violates the core principles of encapsulation, as any outside code can modify our object's state in uncontrolled ways.
+
+Instead, in a true object-oriented approache we would write public  **_accessor methods_**, a.k.a. *getters* and *setters*.  These are methods that allow us to see and change field values _in a contorolled way_.  Adding accessors to our Student class might look like:
 
 ```csharp
 public class Student {
@@ -73,7 +77,7 @@ public class Student {
 
 Notice how the `SetFirst()` and `SetLast()` method check that the provided name has at least one character?  We can use setters to make sure that we never allow the object state to be set to something that makes no sense.
 
-Also, notice that the `wid` field only has a getter.  This effectively means once a student’s Wid is set by the constructor, it cannot be changed (it’s readonly).
+Also, notice that the `wid` field only has a getter.  This effectively means once a student’s Wid is set by the constructor, it cannot be changed (it’s readonly).  This allows us to share data without allowing it to be changed outside of the class.
 
 While accessors provide a powerful control mechanism in object-oriented languages, they also require a lot of boilerplate typing.  Many languages therefore introduce a mechanism for quickly defining basic accessors.  In C#, we have [Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties).  Let’s rewrite our Student class with Properties:
 
