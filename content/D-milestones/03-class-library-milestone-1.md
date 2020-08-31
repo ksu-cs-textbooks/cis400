@@ -210,7 +210,7 @@ If there are no special instructions return an empty list whenever `SpecialInstr
         <td>"Garden Orc Omelette"</td>
     </tr>
     <tr>
-        <td>Philly Poacher</td>
+        <td>PhillyPoacher</td>
         <td>"Philly Poacher"</td>
     </tr>
     <tr>
