@@ -589,9 +589,9 @@ Assert.Empty(SomeEnumerable) /* Check to see that a List or other collection is 
 
 ### How to start the assignment
 
-* Find the starter project and add it.
+* Pull the upstream repository into your local repo (see the video or [these instructions]({{<ref "b-git-workflows/04-upstream.md">}}))
 
-* Within each class you will find a set of commented out method headers. Complete the method in accordance to the name of each method.
+* Within each class you will find a set of method headers. Complete the method in accordance to the name of each method.
 
 ### How to check yourself
 
@@ -659,4 +659,4 @@ Do not work ahead, chances are you will have to rewrite the code anyways because
 
 [Interfaces](https://www.tutorialsteacher.com/csharp/csharp-interface "Interfaces")
 
-[UML Arrow Types](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/#:~:text=Aggregation%20implies%20a%20relationship%20where,)%20and%20Student%20(child).&text=Composition%20implies%20a%20relationship%20where,)%20and%20Room%20(child). "UML Arrow Types")
+[UML Arrow Types](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/)

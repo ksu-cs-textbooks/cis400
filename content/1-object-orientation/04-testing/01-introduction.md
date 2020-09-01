@@ -13,11 +13,11 @@ Some key terms to learn in this chapter are:
 * Informal Testing
 * Formal Testing
 * Test Plan
+* Test Framework
 * Automated Testing
 * Assertions
 * Unit tests
-* Testing coverage
-* Test Framework
+* Testing Code Coverage
 * Regression Testing
 
 ## Key Skills
