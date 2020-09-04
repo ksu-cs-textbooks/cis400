@@ -5,7 +5,7 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
-One of the biggest innovations in documenting software was the development of autodocumentation tools. These were programs that would read source code files, and combine information parsed from the code itself and information contained in code comments to generate documentation in an easy-to-distribute form (often HTML).  One of the earliest examples of this approach came from the programming langauge Java, whose [API specification](https://docs.oracle.com/javase/7/docs/api/) was generated from the language source files using [JavaDoc](https://en.wikipedia.org/wiki/Javadoc).
+One of the biggest innovations in documenting software was the development of autodocumentation tools. These were programs that would read source code files, and combine information parsed from the code itself and information contained in code comments to generate documentation in an easy-to-distribute form (often HTML).  One of the earliest examples of this approach came from the programming language Java, whose [API specification](https://docs.oracle.com/javase/7/docs/api/) was generated from the language source files using [JavaDoc](https://en.wikipedia.org/wiki/Javadoc).
 
 This approach meant that the language of the documentation was embedded _within the source code itself_, making it far easier to update the documentation as the source code was refactored.  Then, every time a release of the software was built (in this case, the Java language), the documentation could be regenerated from the updated comments and source code.  This made it far more likely developer documentation would be kept up-to-date.
 

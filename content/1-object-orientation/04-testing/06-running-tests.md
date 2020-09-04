@@ -29,4 +29,4 @@ Occasionally, your tests may not seem to finish, but get stuck running. If this 
 
 ![Test Ouput in the Output Panel]({{<static "images/1.4.6.4.png">}})
 
-It is a good idea to run tests you've written previously as you add to or refactor your code.  This practice is known as _regression testing_, and can help you identify errors your changes introduct that break what had previously been working code.  This is also one of the strongest arguments for writing test code rather than performing ad-hoc testing; automated tests are easy to repeat.
+It is a good idea to run tests you've written previously as you add to or refactor your code.  This practice is known as _regression testing_, and can help you identify errors your changes introduce that break what had previously been working code.  This is also one of the strongest arguments for writing test code rather than performing ad-hoc testing; automated tests are easy to repeat.

@@ -11,21 +11,25 @@ While encapsulation of state and behavior into objects is the most central theor
 ## Key Terms
 
 Some key terms to learn in this chapter are:
-
 * Polymorphism
-
 * Type
-
 * Type Checking
-
+* Casting
+* Implicit Casting
+* Explicit Casting
 * Interface
-
 * Inheritance
-
-* Protected
-
 * Superclass
-
 * Subclass
+* Abstract Classes
 
-* Abstract Class
+C# Keywords:
+* `Interface`
+* `protected`
+* `abstract`
+* `virtual`
+* `override`
+* `sealed` 
+* `as`
+* `is`
+* `dyanamic` 
