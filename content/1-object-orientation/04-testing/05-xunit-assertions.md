@@ -34,6 +34,14 @@ In addition, two objects may be considered equal, but may or may not the same ob
 * `Assert.Same(object expected, object actual)` asserts the `expected` and `actual` object references are to the same object, while
 * `Assert.NotSame(object expected, object actual)` asserts the `expected` and `actual` object references are _not_ the same object
 
+## Type Assertions 
+At times, you may want to assure it is possible to cast an object to a specific type.  This can be done with:
+* `Assert.IsAssignableFrom<T>(object obj)`
+Where `T` is the type to cast into.
+
+At other times, you may want to assert that the object is _exactly_ the type you expect (.e. `T` is not an interface or base class of `obj`).  That can be done with:
+* `Assert.IsType<T>(object obj)` 
+
 ## Collection Assertions
 There are a host of assertions for working with collections:
 
@@ -76,10 +84,9 @@ Note how we place the code that is expected to throw the exception _inside_ the 
 * `Assert.ThrowsAny<T>(Action testCode) where T: System.Exception` asserts that _any_ exception will be thrown by the `testCode` when executed
 
 There are also similar assertions for exceptions being thrown in _asynchronous_ code. These operate nearly identically, except instead of supplying an Action, we supply a [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=netcore-3.1):
-
-* `Assert.ThrowsAsync(System.Exception expectedException, Task testCode)` asserts the supplied `expectedException` is thrown when `testCode` is executed 
-* `Assert.ThrowsAsync<T>(Task testCode) where T : System.Exception` the templated version of the above
-* `Assert.ThrowsAnyAsync<T>(Task testCode) where T: System.Exception`
+ 
+* `Assert.ThrowsAsync<T>(Task testCode) where T : System.Exception` asserts the supplied exception type `T` is thrown when `testCode` is executed 
+* `Assert.ThrowsAnyAsync<T>(Task testCode) where T: System.Exception` is the asynchronous version
 
 ## Events Assertions 
 Asserting that events will be thrown also invovles [Action<T> delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=netcore-3.1), and is a bit more involved as it requires _three_.  The first delegate is for attaching the assertion-supplied event handler to the listener, the second for detaching it, and the third is for triggering the event with the actual code involved.

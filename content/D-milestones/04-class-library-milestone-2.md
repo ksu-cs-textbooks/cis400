@@ -31,7 +31,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 * Add a new test class for `WarriorWater`, and write test methods similar to those found in the other drink classes testing the expected functionality of the `WarriorWater`.
 
-* When all tests are written your code should have a minimum code coverage of 95%
+* When all tests are written your code should have a minimum code coverage of 92%
 
 ### Purpose:
 
