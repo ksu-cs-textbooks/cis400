@@ -136,7 +136,7 @@ However, we can _cast_ the value to a new type (changing how it is represented),
 foo = (int)8.9;
 ```
 
-For this to work, the language must know how to perform the cast. The cast may also loose some information - in the above example, the resulting value of **foo** is *8* (the fractional part is discarded).
+For this to work, the language must know how to perform the cast. The cast may also lose some information - in the above example, the resulting value of **foo** is *8* (the fractional part is discarded).
 
 In contrast, in a _dynamically_ typed language the type of the variable changes when a value of a different type is assigned to it.  For example, in JavaScript, this expression is legal:
 

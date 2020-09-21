@@ -48,5 +48,5 @@ $$
 \texttt{- age: int {age: >= 0}}
 $$
 
-Indicates the private variable `age` must be greater than 0.
+Indicates the private variable `age` must be greater than or equal to 0.
 

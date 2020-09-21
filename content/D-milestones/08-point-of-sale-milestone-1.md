@@ -1,0 +1,124 @@
+---
+title: "Point of Sale Milestone #1 - Assignment Description"
+pre: "8. "
+weight: 80
+date: 2018-08-24T10:53:26-05:00
+---
+
+{{% notice noiframe %}}
+This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to that course.  If you are not enrolled in the course, please disregard this section.
+{{% /notice %}}
+
+This week we begin developing the software for a _Point of Sale System (POS)_.  A POS is the modern equivalent of a cash register, used to put together a sale, take payment, print reciepts, and typically integrates with a businesses' inventory tracking system and accounting system.  In our case, we are focusing on the kind of POS found in the fast-food industry; one that takes orders, and sends an order to the kitchen, as well as taking payment and printing a reciept.
+
+{{% notice note %}}
+
+**Design Contest Annoucement**
+
+With the Point of Sale project, we want to encourage you to go above and beyond the core requirements of the assignments, and create an application that is both attractive and easy to use.  In other words, a _great design_!  This will both help you develop your skills, and make a great portfolio piece when you start applying for jobs.  
+
+Accordingly, every semester we award prizes for the best POS design.  This will be judged by your TAs, and will be decided at the last milestone in the Point of Sale project (POS #4).  To be a serious contender though, you should start your efforts with this milestone.
+{{% /notice %}}
+
+### General requirements:
+
+* You will need to follow the style laid out in the C# Coding Conventions
+
+* Adding a new project named _PointOfSale_
+
+* You will need to comment your code using XML comments
+
+### Assignment requirements:
+
+* Create a new Project of type Windows Presentation Foundation within your BleakwindBuffet
+
+* Create GUI components by extending the WPF `UserControl` base class to create your own custom controls consisting of layout elements and customization screens for all menu items currently offered on the menu
+
+* Provide navigation functionality to switch between customization screens
+
+* Create/Update UML Class Diagrams corresponding to your projects (both the Data and PointOfSale projects).  Hint: this is when you'll start using the _has-a_ associations more regularly.
+
+### Purpose:
+
+This assignment is intended to introduce you to Microsoft's Windows Presentation Foundations' approach to using Extensible Application Markup Language (XAML) to create user interfaces.  XAML is a markup language based on XML which is used by WPF in a manner similar to how HTML defines the display of web pages. This assignment will challenge you to use a language you probably have not used before. We will focus on navigation between screens and how to connect user input with functionality. 
+
+### Assignment Details
+
+Most of this class is concerned with creating custom components which bundle related functionality into a single custom control.  These are created by exending the `UserControl` class found in WPF, and embeding controls into other controls, either by nesting them within XAML, or by adding them programmatically.  The goal is to create a complete user interface for the Point of Sale system.  The initial screen might look something like:
+
+![Example POS Main Screen]({{<static "images/d.8.1.png">}})
+
+And pressing a button like the "Double Draugr" button will open a customization screen:
+
+![Example POS Customization Screen]({{<static "images/d.8.2.png">}})
+
+Which displays the customization options for the selected menu item.  The "Done" button in this screen will then return back to the main screen.  
+
+In this arragement, we might see three components (The MainWindow, an order component that manages the overall order, and either the menu item selection screen, or a customization screen for a specific element):
+
+![Example Components of the POS]({{<static "images/d.8.3.png">}})
+
+Making the menu item selection screen and the customization screens children (i.e. a composition association) of the `OrderComponent` greatly simplifies managing the swapping between the various screens as changes are being made to the order - though this is certainly not the only way of setting up the application.
+
+{{% notice tip %}}
+Note that this example is only one possible direction for your design to go.  The requirement is simply to display the order being built and provide the option to customize the menu item with its specific customizations.  If you would like to organize your application differently, use different controls, add images, multimedia, animations, or use a completely different approach - you are free to do so!  Doing so will make it more likely your Point of Sale will stand out from the rest of the class.
+{{% /notice %}}
+
+Because of the flexiblity offered in WPF and in this assignment, we are not requiring specific classes be written, but rather bundles of _functionality_ (which you _will_ probably want to collect into custom components built of classes extending the `UserControl` base class).  We'll break down this required functionality according to these suggested components next:
+
+#### MainWindow
+
+While the assignment doesn't require specific classes, every WPF application has a class that extends the `MainWindow` control, so you will definitely have one.  This serves as the topmost control and contains the other controls/components of the program, as well as managing windows operations (fullscreening, closing, etc). Optionally, some of the logic of the application can be moved into this class as well, though in many cases it makes more sense to place this in a component that is the child of the `MainWindow`.
+
+#### Order Component
+
+The POS needs to manage creating and completing orders - adding items to the order, customizing those items, totaling the cost and applying tax, and collecting payment.  While each of these processes will be tackled in a later milestone, it makes sense to have a single component responsible for them already in your application design.  Much of these processes should be pushed into thier own components (i.e. you will likely want to have a component for displaying the order information, and seperate components for customizing specific menu items).  Since these actions are bundled within the concept of an order, it makes sense to have one component oversee each of these subcomponents.
+
+Remember that this component would then need to provide space for these subcomponents to be displayed, and that the order details should probably _always_ be displayed throughout the order process, probably alongside other components.  In addition, your order control should have a button or other mechanism for:
+
+1. Completing the order building process and starting the payment process (this does not need to be implemented yet, but your design should consider it)
+2. Canceling the in-progress order, for those occasions where the customer changes thier mind.
+
+#### Menu Selection Screen Component
+
+The POS also needs to allow the cashier to select items to add to the order.  Thus, this screen will probably primarily consist of buttons to allow the user to select items from the menu.  This could be handled by just one screen, or be split between multiple screens (i.e. select a menu category - entrees, sides, drinks, and then the specific items in that category).  As you design this control, keep in mind _usability_ and the cashiers who will be using it.  For some cashiers, small buttons may be difficult to touch due to advanced age, neuro-muscular conditions, or simply large fingertips, so making your buttons large and easy to distinguish is a good idea.  Similarly, some cashiers my have various vision issues, so making text large and easy-to-read is a good idea.  Finally, some cashiers may be illiterate, so pictures of the menu item are often included as well. 
+
+The Menu Selection screen (or screens) must allow for the selection of each menu item currently offered by BleakwindBuffet:
+
+_Entrees_
+* Briarheart Burger
+* Double Draugr
+* Thalmor Triple
+* Smokehouse Skeleton
+* Garden Orc Omelette
+* Philly Poacher
+* Thugs T-Bone
+
+_Drinks_
+* Sailor’s Soda
+* Markarth Milk
+* Aretino Apple Juice
+* Candlehearth Coffee
+* Warrior Water
+
+_Sides_
+* Vokun Salad
+* Fried Miraak
+* Mad Otar Grits
+* Dragonborn Waffle Fries
+
+#### Item Customization Screen Components
+
+For each menu item, you will need to allow the cashier to customize it to meet the customer's requests.  You will probably want to accomplish this with a custom control for each type of menu item (though you may be able to combine multiple types under a single customization screen).
+
+This means that for each boolean property in the menu item, the cashier should be able to change the boolean to `true` or `false` easily.  Checkboxes, toggle buttons, and switches are all common methods for representing this kind of functionality in a GUI.  Similarly, controls for changing categorical information (i.e. size, flavor) need to be supplied for those items that use them.  Commonly used approaches for this include drop-down selection menus and radio buttons.  As with the menu selection screen, these should be large enough to be easily interacted with, and clearly denote what they change (Note these do not yet need to be functional - that will be the focus of the next milestone).  
+
+You will also need to provide a button or other means to return to the menu item selection screen once the customization is finished.
+
+The full cusomization options can be found in the [Class Library Milestone #1 Description]({{<ref "d-milestones/03-class-library-milestone-1">}}).  
+
+#### Update your UMLs
+
+Once you've created your new controls and all the classes involved, remember to add them to your UML diagram for the PointOfSale project.  This can either be a new UML diagram, or you can create another namespace in your existing UML diagram.
+
+Also, if you made any modifications to the data project, remember to update its UML diagram as well.  This also includes fixing any issues your grader found in your previous diagram version.  

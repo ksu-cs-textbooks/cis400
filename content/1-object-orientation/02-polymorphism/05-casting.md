@@ -19,7 +19,7 @@ int c = (int)b;
 
 What you are actually doing when you cast is _transforming a value from one type to another_.  In the first case, you are taking the value of `a` (5), and converting it to the equivalent double (5.0).  If you consider the internal representation of an integer (a 2's complement binary number) to a double (an [IEEE 754 standard](https://en.wikipedia.org/wiki/IEEE_754) representation), we are actually applying a conversion algorithm to the binary representations.  
 
-We call the first operation an _implicit cast_, as we don't expressly tell the compiler to perform the cast. In contrast, the second assignment is an _explicit cast_, as we signify the cast by wrapping the _type_ we are casting to in parenthesis before the variable we are casting.  We _have_ to perform an explicit cast in the second case, as the conversion has the possiblity of loosing some precision (i.e. if we cast 7.2 to an integer, it would be truncated to 7).  In any case where the conversion may loose precision or possibly throw an error, an _explicit_ cast is required.
+We call the first operation an _implicit cast_, as we don't expressly tell the compiler to perform the cast. In contrast, the second assignment is an _explicit cast_, as we signify the cast by wrapping the _type_ we are casting to in parenthesis before the variable we are casting.  We _have_ to perform an explicit cast in the second case, as the conversion has the possiblity of losing some precision (i.e. if we cast 7.2 to an integer, it would be truncated to 7).  In any case where the conversion may lose precision or possibly throw an error, an _explicit_ cast is required.
 
 ## Custom Casting Conversions
 We can actaully [extend the C# language to add additional conversions](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/user-defined-conversion-operators) to provide addional casting operations.  Consider if we had `Rectangle` and `Square` structs:
@@ -140,7 +140,7 @@ The `is` operator evaluates to a boolean, `true` if the cast is possible, `false
 sam is UndergraduateStudent; // evaluates to true
 sam is GradauteStudent; // evaluates to false
 roo is Kangaroo; // evalutes to true
-roo is Kangaroo; // evaluates to false
+roo is Car; // evaluates to false
 ```
 
 The `is` operator is commonly used to determine if a cast will succeed before peforming it, i.e.:

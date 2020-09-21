@@ -10,7 +10,7 @@ Documentation refers to the written materials that accompany program code.  Docu
 * _User Documentation_ is meant for the end-users of the software 
 * _Developer Documentation_ is meant for the developers of the software
 
-As you might expect, the goals for these two styles of documenation is very different.  User documentation instructs the user on how to use the software.  Developer documentation helps orient the developer so that they can effectively create, maintain, and expand the software.
+As you might expect, the goals for these two styles of documentation are very different.  User documentation instructs the user on how to use the software.  Developer documentation helps orient the developer so that they can effectively create, maintain, and expand the software.
 
 Historically, documentation was printed separately from the software.  This was largely due to the limited memory available on most systems.  For example, the EPIC software we discussed had two publications associated with it: a [User Manual](http://agrilife.org/epicapex/files/2015/10/EPIC.0810-User-Manual-Sept-15.pdf), which explains how to use it, and [Model Documentation](http://agrilife.org/epicapex/files/2015/05/EpicModelDocumentation.pdf) which presents the mathematic models that programmers adapted to create the software. There are a few very obvious downsides to printed manuals: they take substantial resources to produce and update, and they are easily misplaced.
 
