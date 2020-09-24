@@ -11,7 +11,7 @@ Let's examine each of five layouts in turn:
 
 ## The Grid
 
-The default layout is the [`<Grid>`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.grid?view=netcore-3.1), which lays out its children elements in a grid pattern. A grid is composed of columns and rows, the number and characteristics of which are defined by the grid's `ColumnDefinitions` and `RowDefinitions` properties.  These consist of a collection of `<ColumnDefinition/>` and `<RowDefinition/>` elements.  Each `<ColumnDefinition/>` is typically given a `Width` property value, while each `<RowDefinition>` is given a `Height` property value.  
+The default layout is the [`Grid`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.grid?view=netcore-3.1), which lays out its children elements in a grid pattern. A grid is composed of columns and rows, the number and characteristics of which are defined by the grid's `ColumnDefinitions` and `RowDefinitions` properties.  These consist of a collection of `ColumnDefinition` and `<RowDefinition/>` elements.  Each `<ColumnDefinition/>` is typically given a `Width` property value, while each `<RowDefinition/>` is given a `Height` property value.  
 
 Thus, you might expect the code:
 
@@ -69,7 +69,7 @@ Which would create:
 Note too that we use the properties `Grid.Column` and `Grid.Row` in the `<TextBlock>` elements to assign them to cells in the grid.  The row and column indices start at 0 in the upper-left corner of the grid, and increase to the right and down.
 
 ## The StackPanel
-The [`<StackPanel>`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stackpanel?view=netcore-3.1) arranges content into a single row or column (defaults to vertical).  For example, this XAML:
+The [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stackpanel?view=netcore-3.1) arranges content into a single row or column (defaults to vertical).  For example, this XAML:
 
 ```xml
 <StackPanel>
@@ -89,7 +89,20 @@ Creates this layout:
 
 ## The WrapPanel
 
-The [`<WrapPanel>`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netcore-3.1) layout is like the `<StackPanel>`, with the additional caveat that if there is not enough space for its contents, it will wrap to an additional line. For example, this XAML code:
+The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netcore-3.1) layout is like the `<StackPanel>`, with the additional caveat that if there is not enough space for its contents, it will wrap to an additional line. For example, this XAML code:
+
+
+```xml
+<WrapPanel>
+    <Button>Bannana</Button>
+    <Button>Orange</Button>
+    <Button>Mango</Button>
+    <Button>Strawberry</Button>
+    <Button>Blackberry</Button>
+    <Button>Peach</Button>
+    <Button>Watermellon</Button>
+</WrapPanel>
+```
 
 Produces this layout when there is ample room:
 
@@ -101,7 +114,7 @@ And this one when things get tighter:
 
 ## The DockPanel
 
-The [`<DockPanel>`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.dockpanel?view=netcore-3.1) layout should be familiar to you - it's what Visual Studio uses.  Its content items can be 'docked' to one of the sides, as defined by the `Dock` enum: `Bottom`, `Top`, `Left`, or `Right` by setting the `DockPanel.Dock` property on that item. The last item specified will also fill the central space.  If more than one child is specified for a particular side, it will be stacked with that side.
+The [`DockPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.dockpanel?view=netcore-3.1) layout should be familiar to you - it's what Visual Studio uses.  Its content items can be 'docked' to one of the sides, as defined by the `Dock` enum: `Bottom`, `Top`, `Left`, or `Right` by setting the `DockPanel.Dock` property on that item. The last item specified will also fill the central space.  If more than one child is specified for a particular side, it will be stacked with that side.
 
 Thus, this XAML:
 
@@ -119,9 +132,9 @@ Generates this layout:
 
 ![The DockPanel Example]({{<static "images/2.1.4.6.png">}})
 
-## The CanvasPanel
+## The Canvas
 
-Finally, the [`<Canvas>`]() lays its content out strictly by their position within the `<Canvas>`, much like Windows Forms. This approach provides precise placement and size control, at the expense of the ability to automatically adjust to other screen resolutions.  For example, the code:
+Finally, the [`Canvas`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.canvas?view=netcore-3.1) lays its content out strictly by their position within the `<Canvas>`, much like Windows Forms. This approach provides precise placement and size control, at the expense of the ability to automatically adjust to other screen resolutions.  For example, the code:
 
 ```xml
 <Canvas>

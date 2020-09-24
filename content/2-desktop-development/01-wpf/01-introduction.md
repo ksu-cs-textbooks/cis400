@@ -11,12 +11,13 @@ Windows Presentation Foundation (WPF) is a open-source system for rendering Wind
 
 Some key terms to learn in this chapter are:
 * Graphical User Interface (GUI)
-* Usability
 * Windows Presentation Foundation (WPF)
 * Extensible Application Markup Language (XAML)
 * Codebehind
 * Layouts
 * Controls
+* Component-Based Design
+* Composition
 
 ## Key Skills
 

@@ -57,7 +57,7 @@ WPF controls use three properties to determine the height of the element.  These
 
 In addition to the size of the element, we can set margins around the element, adding empty space between this and other elements.  The `Margin` property is actually of type `Thickness`, a structure with four properties: _left, top, right,_ and _bottom_.  We can set the `Margin` property in several ways using XAML.
 
-To set all marigns to be the same size, we just supply a single value:
+To set all margins to be the same size, we just supply a single value:
 
 ```xml
 <Button Margin="3">Do something</Button>
@@ -192,7 +192,7 @@ The `IsEnabled` property is a boolean that indicates if this control is currentl
 
 #### Opacity 
 
-A similar effect can be obtained by changing an elements' `Opacity` property, a double that ranges from 0.0 (completely transparent) to 1.0 (completely solid).  Below you can see two `<TextBlock>` elements, with the one on the left set to an opacity of 0.40:
+A similar effect can be obtained by changing an element's `Opacity` property, a double that ranges from 0.0 (completely transparent) to 1.0 (completely solid).  Below you can see two `<TextBlock>` elements, with the one on the left set to an opacity of 0.40:
 
 ![Opacity Example]({{<static "images/2.1.6.2.png">}})
 

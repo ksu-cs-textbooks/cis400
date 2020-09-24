@@ -1,5 +1,5 @@
 ---
-title: "Editing in WPF"
+title: "Editing WPF Controls"
 pre: "7. "
 weight: 70
 date: 2018-08-24T10:53:26-05:00
@@ -61,7 +61,7 @@ As was mentioned previously, the `InitializeComponent()` call in the constructor
 
 
 {{% notice tip %}}
-Most custom controls are subclasses of the `UserControl` class, and choosing this option has Visual Studio create the boilerplate for us.  However, if you need to extend a _specific_ control, i.e. a `ListView`, it is often easiest to start with a `UserControl` made this way, and then change the base class in the _[filename].xaml.cs_ file.
+Most custom controls are subclasses of the `UserControl` class, and choosing this option has Visual Studio create the boilerplate for us.  However, if you need to extend a _specific_ control, i.e. a `ListView`, it is often easiest to start with a `UserControl` made this way, and then change the base class to `ListView` in the _[filename].xaml.cs_ file, as well as changing the `<UserControl>` element to a `<ListView>` element in the _[filename].xaml_.
 {{% /notice %}}
 
 ### Namespaces and Assemblies
@@ -110,4 +110,17 @@ A couple of buttons in the editor deserve some closer attention:
 
 ![Visual Studio WPF XAML Editor Button Detail 1]({{<static "images/2.1.7.3.png">}})
 
+1. The zoom factor in the design editor
+2. Refreshes the design editor - sometimes it hangs on re-rendering, and you need to click this.
+3. Toggles rendering effects (These use the graphics hardware, and can be computationally involved. Turning them off can improve performance on weaker machines)
+4. Toggles the snap grid (provides grid lines for easier layout)
+5. Toggles snap-to-grid
+6. Toggles the artboard background (which provides a checkered background to make it easier to judge what is transparent)
+7. Toggles snapping to snap lines (those lines that appear between controls to help you align them)
+8. Toggles showing platform-only vs. all controls (for when targeting multiple platforms)
+
 ![Visual Studio WPF XAML Editor Button Detail 2]({{<static "images/2.1.7.4.png">}})
+
+9. Switches to a vertical split between the design editor and XAML editor 
+10. Switches to a horizontal split between the design editor and XAML editor
+11. Switches to showing only the design editor or XAML editor 

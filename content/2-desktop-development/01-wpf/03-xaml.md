@@ -54,6 +54,12 @@ Note how we repeat the tag name (`Button`) and append the attribute name (`Heigh
 
 `<Grid.ColumnDefinitions>` and `<Grid.RowDefinitions>` are attributes of the `<Grid>`, while ` <Button Height="30" Width="120" Content="Click Me!"/>` is a child element of the `<Grid>` element.
 
+Because XAML is an extension of XML, we can add comments the same way, by enclosing the comment within a `<!--` and `-->`:
+
+```xml
+<!-- I am a commment -->
+```
+
 ## XAML Defines Objects
 
 What makes XAML different from vanilla XML is that _it defines objects_.  The XAML used for Windows Presentation Foundation is drawn from the http://schemas.microsoft.com/winfx/2006/xaml/presentation namespace.  This namespace defines exactly what elements exist in this flavor of XAML, and they correspond to specific classes defined in the WPF namespaces.  
@@ -111,7 +117,7 @@ namespace WpfApp1
 }
 ```
 
-Notice the use of the `partial` modifier in the C# code?  This indicates that the `MainWindow` class is only _paritally_ defined in this file (_MainWindow.xaml.cs_) - the rest of the definition exists in another file.  That's the previously referenced XAML file (_MainWindow.xaml_).  Notice in the XAML that the `<Window>` element has the attribute `x:Class="WpfApp1.MainWindow"`?  That indicates that it defines part of the class `MainWindow` defined in the `WpfApp1` namespace - it's the other part of our file!
+Notice the use of the `partial` modifier in the C# code?  This indicates that the `MainWindow` class is only _partially_ defined in this file (_MainWindow.xaml.cs_) - the rest of the definition exists in another file.  That's the previously referenced XAML file (_MainWindow.xaml_).  Notice in the XAML that the `<Window>` element has the attribute `x:Class="WpfApp1.MainWindow"`?  That indicates that it defines part of the class `MainWindow` defined in the `WpfApp1` namespace - it's the other part of our file!
 
 When we compile this project, the XAML is actually transformed into a temporary C# file as part of the build process, and that C# file is joined with the other C# file.  This temporary file defines the `InitializeComponent()` method, which would look something like this:
 
