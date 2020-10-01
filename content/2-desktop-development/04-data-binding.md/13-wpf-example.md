@@ -3,6 +3,7 @@ title: "WPF Data Binding"
 pre: "3. "
 weight: 3
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 
 Now that we've manually implemented data binding, we'll turn our attention to using the data binding functionality built into Windows Presentation Foundation.  
@@ -128,7 +129,7 @@ The XAML for the `PersonControl` class is:
 </UserControl>
 ```
 
-It's a simple stack of labels and editing controls (`TextBoxe`s, a `DatePicker`, and a `CheckBox`).  We use a `Border` with its `Padding` property set to provide some whitespace around these controls.  Similarily, we have set a `Margin` on the checkbox the space between it and the control beneath it is similar to the `TextBox`s.
+It's a simple stack of labels and editing controls (`TextBox`es, a `DatePicker`, and a `CheckBox`).  We use a `Border` with its `Padding` property set to provide some whitespace around these controls.  Similarily, we have set a `Margin` on the checkbox the space between it and the control beneath it is similar to the `TextBox`s.
 
 ### PersonList Class 
 And the XAML for the `PersonList` control is:

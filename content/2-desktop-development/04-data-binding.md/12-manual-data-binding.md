@@ -3,6 +3,7 @@ title: "Manual Data Binding"
 pre: "2. "
 weight: 2
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 To better understand the process of data binding, we will first explore the concept by building a data binding from scratch, instead of adopting the tools provided by WPF.  This can give us a far more thorough understanding of just how data binding works.
 

@@ -91,7 +91,6 @@ Creates this layout:
 
 The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netcore-3.1) layout is like the `<StackPanel>`, with the additional caveat that if there is not enough space for its contents, it will wrap to an additional line. For example, this XAML code:
 
-
 ```xml
 <WrapPanel>
     <Button>Bannana</Button>

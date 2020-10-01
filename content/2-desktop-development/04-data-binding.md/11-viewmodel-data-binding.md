@@ -3,6 +3,7 @@ title: "MVVM Data Binding"
 pre: "4. "
 weight: 4
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 
 As Microsoft developed Windows Presentation Framework, they sought to address some of the challenges that had become obvious with Windows Forms.  We've already seen how XAML simplified the design of controls and is more adaptable to varying sizes of displays.  But another major improvement is not found in the code or the technology, but rather in how we put those together.

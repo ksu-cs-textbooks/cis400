@@ -1,13 +1,13 @@
 +++
 title = "Data Binding"
 date = 2018-08-24T10:53:05-05:00
-weight = 5
+weight = 40
 chapter = true
-pre = "<b>5. </b>"
+pre = "<b>4. </b>"
 +++
 
-### Chapter 2
+### Chapter 4
 
 # Data Binding
 
-Linking User Interfaces to Data
+Linking GUIs to Data

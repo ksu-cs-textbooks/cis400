@@ -215,3 +215,5 @@ And finally, we'll modify our `MainWindow` XAML to display a `ListSwitcher`:
 The resulting app allows us to create multiple shopping lists, and swap between them using the buttons:
 
 ![ShopEasy App]({{<static "images/2.1.8.1.png">}})
+
+Much like we can use objects to break program functionality into smaller, more focused units, we can use component-based design to break GUIs into smaller, more focused units.  Both reflect one of the principles of good programming practice - the Single Responsiblity Principle.  This principle suggests each unit of code should focus on a single responsibility, and more complex behaviors be achieved by using multiple units together.  As we see here, this principle extends across multiple programming paradigms.
