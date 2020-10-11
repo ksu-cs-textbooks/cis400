@@ -100,7 +100,7 @@ public void EmailerShouldRaiseEmailSentWhenSendingEmails()
     string address = "test@test.com";
     string body = "this is a test";
     Emailer emailer = new Emailer();
-    Assert.raises<EmailSentEventArgs>(
+    Assert.Raises<EmailSentEventArgs>(
         listener => emailer += listener, // This action attaches the listener
         listener => emailer -= listener, // This action detatches the listener 
         () => {
