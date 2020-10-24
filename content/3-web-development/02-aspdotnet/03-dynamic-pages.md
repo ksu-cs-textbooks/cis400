@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Pages"
-pre: "2. "
-weight: 20
+pre: "3. "
+weight: 30
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -46,5 +46,7 @@ public string GenerateResponse()
 ```
 
 The resulting string could then be streamed back to the requesting web browser.  This is the basic technique used in all server-side web frameworks: they dynamically assemble the response to a request by assembling strings into an HTML page.  Where the differ is what language they use to do so, and how much of the process they've abstracted.
+
+This approach was adopted by Microsoft and implemented as _Active Server Pages (ASP)_.  By placing files with the _.asp_ extension among those served by an IIS server, C# or Visual Basic code written on that page would be executed, and the resulting string would be served as a file.  This would happen on each request - so a request for http://somesite.com/somepage.asp would execute the code in the _somepage.asp_ file, and the resulting text would be served.
 
 You might have looked at the above examples and shuddered.  After all, who wants to assemble text like that?  And when you assemble HTML using raw string concatenation, you don't have the benefit of syntax highlighting, code completion, or any of the other modern development tools we've grown to rely on.  Thankfully, most web development frameworks provide some abstraction around this process, and by and large have adopted some form of _template syntax_ to make the process of writing a page easier.
