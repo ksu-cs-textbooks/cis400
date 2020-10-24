@@ -1,7 +1,7 @@
 ---
 title: "Responsive Setup"
-pre: "d. "
-weight: 4
+pre: "4. "
+weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -61,6 +61,6 @@ As this rule is declared _after_ the first two border rules, it will _override_ 
 
 ![Border at small viewport size]({{<static "images/3.3.4.3.png">}})
 
-This strategy of using successively smaller media queries to override CSS styles at different screen widths is known as _responsive breakpoints_, because at those widths you specify, the appearance of your page changes. 
+This strategy of using successively smaller media queries to override CSS styles at different screen widths is known as _responsive breakpoints_, because at those widths you specify, the appearance of your page changes.
 
 It is a good idea to have the starting point of your page (when no media queries are applied) be a normal desktop resolution so that your site appears normal in very old browsers.

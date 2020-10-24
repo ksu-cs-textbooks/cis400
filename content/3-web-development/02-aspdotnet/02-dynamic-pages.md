@@ -1,17 +1,16 @@
-+++
-title = "Razor Pages"
-date = 2018-08-24T10:53:05-05:00
-weight = 2
-chapter = true
-pre = "<b>2. </b>"
-+++
+---
+title: "Dynamic Pages"
+pre: "2. "
+weight: 20
+date: 2018-08-24T10:53:26-05:00
+---
 
 Modern websites are more often full-fledged applications than collections of static files.  But these applications remain built upon the foundations of the core web technologies of HTML, CSS, and JavaScript.  In fact, the client-side application is typically built of _exactly_ these three kinds of files!  So how can we create a dynamic web application?
 
 One of the earliest approaches was to write a program to _dynamically create_ the HTML file that was being served.  Consider this method:
 
-```csharp 
-public string GeneratePage() 
+```csharp
+public string GeneratePage()
 {
     StringBuilder sb = new StringBuilder();
     sb.Append("<!DOCTYPE html>");
@@ -30,7 +29,7 @@ public string GeneratePage()
 }
 ```
 
-It generates the HTML of a page showning the current date and time.  Remember too that HTTP responses are simply text, so we can generate a response as a string as well:
+It generates the HTML of a page showing the current date and time.  Remember too that HTTP responses are simply text, so we can generate a response as a string as well:
 
 ```csharp
 public string GenerateResponse()
@@ -48,4 +47,4 @@ public string GenerateResponse()
 
 The resulting string could then be streamed back to the requesting web browser.  This is the basic technique used in all server-side web frameworks: they dynamically assemble the response to a request by assembling strings into an HTML page.  Where the differ is what language they use to do so, and how much of the process they've abstracted.
 
-You might have looked at the above examples and shuddered.  After all, who wants to assemble text like that?  And when you assemble HTML using raw string concatenation, you don't have the benefit of syntax higlighting, code completion, or any of the other modern development tools we've grown to rely on.  Thankfully, most web development frameworks provide some abstraction around this process, and by and large have adopted some form of _template syntax_ to make the process of writing a page easier.
+You might have looked at the above examples and shuddered.  After all, who wants to assemble text like that?  And when you assemble HTML using raw string concatenation, you don't have the benefit of syntax highlighting, code completion, or any of the other modern development tools we've grown to rely on.  Thankfully, most web development frameworks provide some abstraction around this process, and by and large have adopted some form of _template syntax_ to make the process of writing a page easier.

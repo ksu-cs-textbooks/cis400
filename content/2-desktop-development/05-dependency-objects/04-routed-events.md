@@ -5,7 +5,7 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Another aspect of WPF elements are _routed events_.  Just as _dependency properties_ are similar to regular C# properties, but add additional functionality, _routed events_ are similar to regular C# events, but provide additional functionality.  One of the most important of these is the ability of the routed event to "bubble" up the [elements tree]({{<ref "2-desktop-development/02-element-tree/">}}).  Essentially, the event will be passed up each successive WPF element until one chooses to "handle" it, or the top of the tree is reached (in which case the event is ignored).  This routed event functionality is managed by the [`UIElement`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.uielement?view=netcore-3.1) base class, a third base class shared by all WPF elements.
+Another aspect of WPF elements are _routed events_.  Just as _dependency properties_ are similar to regular C# properties, but add additional functionality, _routed events_ are similar to regular C# events, but provide additional functionality.  One of the most important of these is the ability of the routed event to "bubble" up the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  Essentially, the event will be passed up each successive WPF element until one chooses to "handle" it, or the top of the tree is reached (in which case the event is ignored).  This routed event functionality is managed by the [`UIElement`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.uielement?view=netcore-3.1) base class, a third base class shared by all WPF elements.
 
 Let's consider the two buttons we declared in our `<NumberBox>`.  When clicked, these each trigger a `Click` routed event.  We could attach a handler to each button, but it is also possible to instead attach it to any other element up the tree; for example, our `<Grid>`:
 
@@ -13,10 +13,10 @@ Let's consider the two buttons we declared in our `<NumberBox>`.  When clicked, 
 <UserControl x:Class="CustomDependencyObjectExample.NumberBox"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:CustomDependencyObjectExample"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="50" d:DesignWidth="200">
     <Grid Button.Click="HandleButtonClick">
         <Grid.ColumnDefinitions>
@@ -61,7 +61,7 @@ When either button is clicked, it creates a `Button.Click` event.  As the button
 
 Much like dependency properties, we can declare our own routed events.  These also use a `Register()` method, but for events this is a static method of the `EventHandler` class:  `EventManger.Register(string eventName, RoutingStrategy routing, Type eventHandlerType, Type controlType)`.  The first argument is a string, which is the name of the event, the second is one of the values from the `RoutingStrategy` enum, the third is the type of event handler, and the fourth is the type of the control it is declared in.  This `Register()` method returns a `RoutedEvent` that is used as a key when registering event listeners, which we typically store in a `public static readonly RoutedEvent` field.
 
-The `RoutingStrategy` options are 
+The `RoutingStrategy` options are
 
 * `RoutingStrategy.Bubble` - which travels up the elements tree through ancestor nodes
 * `RoutingStrategy.Tunnel` - which travels down the elements tree through descendant nodes
@@ -96,7 +96,7 @@ You might think we would do this in the `HandleButtonClick()` method, and we cou
 
 ```csharp
 /// <summary>
-/// Callback for the ValueProperty, which clamps the Value to the range 
+/// Callback for the ValueProperty, which clamps the Value to the range
 /// defined by MinValue and MaxValue
 /// </summary>
 /// <param name="sender">The NumberBox whose value is changing</param>

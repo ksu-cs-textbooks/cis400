@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-pre: "a. "
-weight: 1
+pre: "1. "
+weight: 10
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -29,4 +29,3 @@ Some key terms to learn in this chapter are:
 * Grid
 
 * Bootstrap
-

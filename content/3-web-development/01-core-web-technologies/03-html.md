@@ -1,14 +1,14 @@
 ---
 title: "Hyper-Text Markup Language"
-pre: "a. "
-weight: 1
+pre: "3. "
+weight: 30
 date: 2018-08-24T10:53:26-05:00
 ---
 Hyper-Text Markup Language (HTML), is one of the three core technologies of the world-wide-web, along with Cascading Style Sheets (CSS) and Javascript (JS).  Each of these technologies has a specific role to play in delivering a website.  HTML defines the _structure_ and _contents_ of the web page.  It is a markup language, similar to XML and the XAML you have been working with (indeed, HTML is based on the SGML (Standardized General Markup Language) standard, which XML is also based on, and XAML is an extension of XML).  
 
 ## HTML Elements
 
-Thus, it uses the same kind of elment structure, consisting of tags.  For example, a button in HTML looks like this:
+Thus, it uses the same kind of element structure, consisting of tags.  For example, a button in HTML looks like this:
 
 ```html
 <button onclick="doSomething">
@@ -16,7 +16,7 @@ Thus, it uses the same kind of elment structure, consisting of tags.  For exampl
 </button>
 ```
 
-You likely notice how similar this definition is to buttons in XAML.  As with XAML elements, HTML elements have and opening and closing tag, and can have additional HTML content nested inside these tags.  HTML tags can also be self-closing, as is the case with the line break tag: 
+You likely notice how similar this definition is to buttons in XAML.  As with XAML elements, HTML elements have and opening and closing tag, and can have additional HTML content nested inside these tags.  HTML tags can also be self-closing, as is the case with the line break tag:
 
 ```html
 <br/>
@@ -30,7 +30,9 @@ Let's explore the parts of an HTML element in more detail.
 
 The start tag is enclosed in angle brackets (`<` and `>`).  The angle brackets differentiate the text inside them as being HTML elements, rather than text.  This guides the browser to interpret them correctly.  
 
-> Note: Because angle brackets are intepreted as defining HTML tags, you cannot use those characters to represent greater than and less than signs.  Instead, HTML defines escape character sequences to represent these and other special characters.  Greater than is `&gt;`, less than is `&lt;`.  A full list can be found on [mdn](https://developer.mozilla.org/en-US/docs/Glossary/Entity).
+{{% notice note %}}
+Because angle brackets are interpreted as defining HTML tags, you cannot use those characters to represent greater than and less than signs.  Instead, HTML defines escape character sequences to represent these and other special characters.  Greater than is `&gt;`, less than is `&lt;`.  A full list can be found on [mdn](https://developer.mozilla.org/en-US/docs/Glossary/Entity).
+{{% /notice %}}
 
 #### The Tag Name
 
@@ -48,7 +50,7 @@ However, several attributes bear special mention:
 
 Also, some web technologies (like Angular) introduce new attributes specific to their framework, taking advantage of the fact that a browser will ignore any attributes it does not recognize.
 
-### The Tag Content 
+### The Tag Content
 
 The content nested inside the tag can be plain text, or another HTML element (or collection of elements).  Unlike XAML elements, which usually can have only one child, HTML elements can have multiple children.  Indentation should be used to keep your code legible by indenting any nested content, i.e.:
 
@@ -60,7 +62,7 @@ The content nested inside the tag can be plain text, or another HTML element (or
 </div>
 ```
 
-### The End Tag 
+### The End Tag
 
 The end tag is also enclosed in angle brackets (`<` and `>`).  Immediately after the `<` is a forward slash `/`, and then the tag name.  You do not include attributes in a end tag.
 
@@ -144,7 +146,7 @@ Alternatively, you can denote line breaks with `<br/>`, and non-breaking spaces 
     If you can keep your head when all about you<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;Are losing theirs and blaming it on you,<br/>   
     If you can trust yourself when all men doubt you,<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;But make allowance for their doubting too;<br/> 
+    &nbsp;&nbsp;&nbsp;&nbsp;But make allowance for their doubting too;<br/>
     If you can wait and not be tired by waiting,<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;Or being lied about, don’t deal in lies,<br/>
     Or being hated, don’t give way to hating,<br/>
@@ -153,13 +155,13 @@ Alternatively, you can denote line breaks with `<br/>`, and non-breaking spaces 
 </blockquote>
 ```
 
-Which renders: 
+Which renders:
 
 <blockquote>        
     If you can keep your head when all about you<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;Are losing theirs and blaming it on you,<br/>   
     If you can trust yourself when all men doubt you,<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;But make allowance for their doubting too;<br/> 
+    &nbsp;&nbsp;&nbsp;&nbsp;But make allowance for their doubting too;<br/>
     If you can wait and not be tired by waiting,<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;Or being lied about, don’t deal in lies,<br/>
     Or being hated, don’t give way to hating,<br/>
@@ -169,7 +171,7 @@ Which renders:
 
 Additionally, as a program you may want to use the the [&lt;code&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code) element in conjunction with the [&lt;pre&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) element to display preformatted code snippets in your pages.
 
-## HTML Comments 
+## HTML Comments
 
 HTML comments are identical to XAML comments (as both inherited from SGML).  Comments start with the sequence `<!--` and end with the sequence `-->`, i.e.:
 
@@ -177,7 +179,7 @@ HTML comments are identical to XAML comments (as both inherited from SGML).  Com
 <!-- This is an example of a HTML comment -->
 ```
 
-## Basic Page Structure 
+## Basic Page Structure
 
 HTML5.0 (the current HTML standard) pages have an expected structure that you should follow.  This is:
 
@@ -212,4 +214,3 @@ There are more tags than this, but these are the most commonly employed, and the
 ## Learning More
 
 The [MDN HTML Docs](https://developer.mozilla.org/en-US/docs/Web/HTML) are recommended reading for learning more about HTML.
-

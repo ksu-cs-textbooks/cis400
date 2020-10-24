@@ -1,7 +1,7 @@
 ---
 title: "Media Queries"
-pre: "c. "
-weight: 3
+pre: "3. "
+weight: 30
 date: 2018-08-24T10:53:26-05:00
 ---
 
