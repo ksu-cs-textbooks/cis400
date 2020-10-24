@@ -31,13 +31,13 @@ Similar to an HTTP Request, an HTTP response consists of one or more lines of te
 ## Making a Request
 With our new understanding of HTTP requests and responses as consisting of streams of text that match a well-defined format, we can try manually making our own requests, using a Linux command line tool _netcat_.
 
-Open a PowerShell isntance (Windows) or a terminal (Mac/Linux) and enter the command:
+Open a PowerShell instance (Windows) or a terminal (Mac/Linux) and enter the command:
 
 `
-$ ssh eid@cslinux.cs.ksu.edu
+$ ssh [eid]@cslinux.cs.ksu.edu
 `
 
-The __$__ indicates a terminal prompt; you don't need to type it.  The `eid` should be replaced with your eid.  This should ssh you into the CS Linux system.  It will prompt you for your cs password, unless you've set up public/private key access.  
+The __$__ indicates a terminal prompt; you don't need to type it.  The `[eid]` should be replaced with your eid.  This should ssh you into the CS Linux system.  It will prompt you for your CS password, unless you've set up public/private key access.  
 
 Once in, type the command:
 
