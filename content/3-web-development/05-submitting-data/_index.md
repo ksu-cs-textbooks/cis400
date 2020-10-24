@@ -4,6 +4,7 @@ date = 2018-08-24T10:53:05-05:00
 weight = 2
 chapter = false
 pre = "<b>5. </b>"
+draft = true
 +++
 
 Now that we've seen how to dynamically create the content of a Razor Page on the server, we should turn our attention to how we can do so based on our user's needs.  Consider the example application we have been developing - it exposes a database of movie infomation to the user.  How might a user want to use this database?  They might want to find the details for a specific movie - who directed it, when was it released, etc.  They might be looking for a movie they want to watch in a favorite genre.  They might be looking to find all the movies directed by a favorite director... there are a lot of possiblities.

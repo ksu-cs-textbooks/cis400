@@ -1,7 +1,7 @@
 ---
 title: "Hyper-Text Transfer Protocol"
-pre: "d "
-weight: 4
+pre: "6 "
+weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
 At the heart of the world wide web is the Hyper-Text Transfer Protocol (HTTP).  This is a protocol defining how HTTP servers (which host web pages) interact with HTTP clients (which display web pages).   
@@ -15,8 +15,8 @@ This HTTP request-response pattern is at the core of how all web applications co
 ## The HTTP Request
 A HTTP Request is just text that follows a specific format and sent from a client to a server.  It consists of one or more lines terminated by a CRLF (a carriage return and a line feed character, typically written `\r\n` in most programming languages).
 
-1. A _request-line_ describing the request 
-2. Additional optional lines containing HTTP headers.  These specify details of the request or describe the body of the request 
+1. A _request-line_ describing the request
+2. Additional optional lines containing HTTP headers.  These specify details of the request or describe the body of the request
 3. A blank line, which indicates the end of the request headers
 4. An optional body, containing any data belonging of the request, like a file upload or form submission.  The exact nature of the body is described by the headers.
 
@@ -25,11 +25,11 @@ Similar to an HTTP Request, an HTTP response consists of one or more lines of te
 
 1. A _status-line_ indicating the HTTP protocol, the status code, and a textual status
 2. Optional lines containing the Response Headers.  These specify the details of the response or describe the response body
-3. A blank line, indicating the end of the response metadata 
+3. A blank line, indicating the end of the response metadata
 4. An optional response body.  This will typically be the text of an HTML file, or binary data for an image or other file type, or a block of bytes for streaming data.
 
 ## Making a Request
-With our new understanding of HTTP requests and responses as consisting of streams of text that match a well-defined format, we can try manually making our own requests, using a Linux command line tool _netcat_. 
+With our new understanding of HTTP requests and responses as consisting of streams of text that match a well-defined format, we can try manually making our own requests, using a Linux command line tool _netcat_.
 
 Open a PowerShell isntance (Windows) or a terminal (Mac/Linux) and enter the command:
 
@@ -85,6 +85,5 @@ The first line indicates that the server responded using the HTTP 1.1 protocol, 
 
 Everything after the blank line is the body of the response - in this case, the page content as HTML text.  If you scroll far enough through it, you should be able to locate all of the HTML elements in Google's search page.
 
-## Summary
 
-That's really all there is with a HTTP request and reponse.  They're just streams of data.  A webserver just recieves a request, processes it, and sends a response.
+That's really all there is with a HTTP request and response.  They're just streams of data.  A webserver just receives a request, processes it, and sends a response.

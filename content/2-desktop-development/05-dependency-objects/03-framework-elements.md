@@ -5,9 +5,9 @@ weight: 3
 date: 2018-08-24T10:53:26-05:00
 ---
 
-WPF controls are built on the foundation of dependency objects - the `DependencyObject` is at the bottom of thier inheritance chain.  But they also add additional functionality on top of that trhough another common base class, `FrameworkElement`.  The `FrameworkElement` is involved in the layout algorithm, as well as helping to define the [elements tree]({{<ref "2-desktop-development/02-element-tree/">}}).  Let's add a _second_ dependency property to our `<NumberBox>`, a `Value` property that will represent the value the `<NumberBox>` currently represents, which will be displayed in the `<TextBox>`.
+WPF controls are built on the foundation of dependency objects - the `DependencyObject` is at the bottom of thier inheritance chain.  But they also add additional functionality on top of that trhough another common base class, `FrameworkElement`.  The `FrameworkElement` is involved in the layout algorithm, as well as helping to define the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  Let's add a _second_ dependency property to our `<NumberBox>`, a `Value` property that will represent the value the `<NumberBox>` currently represents, which will be displayed in the `<TextBox>`.
 
-We register this dependency property in much the same way as our `Step`.  But instead of supplying the `DependencyProperty.Register()` method a `PropertyMetadata`, we'll instead supply a `FrameworkPropertyMetadata`, which extends `PropertyMetadata` to include additional data about how the property interacts with the WPF rendering and layout algorithms.  This additonal data is in the form of a bitmask defined in [`FrameworkPropertyMetadataOptions`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkpropertymetadataoptions?view=netcore-3.1) enumeration. 
+We register this dependency property in much the same way as our `Step`.  But instead of supplying the `DependencyProperty.Register()` method a `PropertyMetadata`, we'll instead supply a `FrameworkPropertyMetadata`, which extends `PropertyMetadata` to include additional data about how the property interacts with the WPF rendering and layout algorithms.  This additonal data is in the form of a bitmask defined in [`FrameworkPropertyMetadataOptions`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkpropertymetadataoptions?view=netcore-3.1) enumeration.
 
 Some of the possible options are:
 
@@ -45,11 +45,10 @@ public double Value {
 }
 ```
 
-If we want to display the current value of `Value` it in the textbox of our `NumberBox` control, we'll need to bind the `<TextBox>` element's `Text` property.  This is accomplished in a similar fashion to the other bindings we've done previously, only we need to specify a `RelativeSource`.  This is a source relative to the control in the [elements tree]({{<ref "2-desktop-development/02-element-tree/">}}).  We'll specify two properties on the `RelativeSource`: the `Mode` which we set to `FindAncestor` to search up the tree, and the `AncestorType` which we set to our `NumberBox`.  Thus, instead of binding to the `DataContext`, we'll bind to the `NumberBox` the `<TextBox>` is located within.  The full declaration would be:
+If we want to display the current value of `Value` it in the textbox of our `NumberBox` control, we'll need to bind the `<TextBox>` element's `Text` property.  This is accomplished in a similar fashion to the other bindings we've done previously, only we need to specify a `RelativeSource`.  This is a source relative to the control in the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  We'll specify two properties on the `RelativeSource`: the `Mode` which we set to `FindAncestor` to search up the tree, and the `AncestorType` which we set to our `NumberBox`.  Thus, instead of binding to the `DataContext`, we'll bind to the `NumberBox` the `<TextBox>` is located within.  The full declaration would be:
 
 ```xml
 <TextBox Grid.Column="1" Text="{Binding Path=Value, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:NumberBox}}"/>
 ```
 
 Now a two-way binding exists between the `Value` of the `<NumberBox>` and the `Text` value of the textbox.  Updating either one will update the other.  We've in effect made an editable control!
-

@@ -1,25 +1,25 @@
 ---
 title: "Cascading Style Sheets"
-pre: "b. "
-weight: 2
+pre: "4. "
+weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Cascading Style Sheets (CSS) is the second core web technology of the web.  It defines the _appearance_ of web pages by applying stylistic rules to matching HTML elements.  CSS is normally declared in a file with the _.css_ extension, separate from the HTML files it is modifiying, though it can also be declared within the page using the [&lt;style&rt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) element, or directly on an element using the `style` attribute.
+Cascading Style Sheets (CSS) is the second core web technology of the web.  It defines the _appearance_ of web pages by applying stylistic rules to matching HTML elements.  CSS is normally declared in a file with the _.css_ extension, separate from the HTML files it is modifiying, though it can also be declared within the page using the [&lt;style&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) element, or directly on an element using the `style` attribute.
 
 ## CSS Rules
 
 A CSS rule consists of a _selector_ and a _definition block_, i.e.:
 
-```css 
-h1 
+```css
+h1
 {
     color: red;
     font-weight: bold;
 }
 ```
 
-### CSS Selectors 
+### CSS Selectors
 A CSS selector determines which elements the associated _definition block_ apply to.  In the above example, the `h1` selector indicates that the style definition supplied applies to _all_ `<h1>` elements.  The selectors can be:
 
 * By element type, indicated by the name of the element.  I.e. the selector `p` applies to all `<p>` elements.
@@ -59,5 +59,3 @@ Or you can swap out the layout model entirely by changing the [display](https://
 This is just the tip of the iceberg of what is possible with CSS.  Using [CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) can change the rules applied to elements based on the size of the device it is viewed on, allowing for _responsive design_.  [CSS Animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) can allow properties to change over time, making stunning visual animations easy to implement.  And CSS can also carry out calculations and store values, leading some computer scientists to argue that it is a Turing Complete language.
 
 The [MDN Cascading Stylesheets Docs](https://developer.mozilla.org/en-US/docs/Web/CSS) and [CSS Tricks](https://css-tricks.com/) are recommended reading to learn more about CSS and its uses.
-
-
