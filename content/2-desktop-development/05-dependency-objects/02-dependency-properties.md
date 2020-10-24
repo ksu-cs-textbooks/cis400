@@ -100,3 +100,4 @@ One of the great benefits of dependency properties is that they can be set using
     <NumberBox Step="3.0"/>
 </StackPanel>
 ```
+

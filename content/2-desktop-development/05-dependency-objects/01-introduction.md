@@ -4,6 +4,22 @@ pre: "1. "
 weight: 1
 date: 2018-08-24T10:53:26-05:00
 ---
-We've seen a lot of powerful functionality emerge from Windows Presentation Foundation over the past few chapters. Now it's time to delve into exactly how those features are implemented, by exploring the concept of dependency properties and the WPF `DependencyObject` implementation.
 
-You've now worked with a variety of WPF controls, laid out components using containers, traversed the elmeents tree, performed data binding,and worked with routed events.  Each of these is made possible through the use of the `DependencyObject` class, which serves as a base class for all WPF controls, as well as many other WPF-related 
+You've now worked with a variety of WPF controls, laid out components using containers, traversed the elmeents tree, performed data binding,and worked with routed events.  Each of these is made possible through the use of several classes:  `DependencyObject`, `UIElement`, and `FrameworkElement`, which serves as a base classes for all WPF controls.  In this chapter we'll dig deeper into how these base classes implement _dependency properties_ and _routed events_.
+
+## Key Terms
+
+Some key terms to learn in this chapter are:
+
+* Dependency Property
+* Routed Event 
+* MVVM Pattern
+
+## Key Skills
+
+Some key skills you need to develop in this chapter are:
+
+* Creating custom dependency properties
+* Handling routed events 
+* Creating custom routed events
+* Using dependency property callbacks
