@@ -5,6 +5,8 @@ weight: 10
 date: 2018-08-24T10:53:26-05:00
 ---
 
+{{<youtube NXSgmSWz8tc>}}
+
 Now that you know how to create Razor pages, let's see what makes them useful for creating dynamic web pages.
 
 ## Initial Project
