@@ -91,6 +91,8 @@ Below each of the menu category headers, list the items in that category. Each i
 
 You may use additional HTML elements to organize and present this information, and use CSS to style it as you see fit.
 
+You should use the methods from your `Menu` class in the Data project to determine the entrees, sides, and drinks to display.  This will mean using the `Menu` class in the model class for the index page, _Index.cshtml.cs_.
+
 ##### Display the Combo Details 
 Indicate that any entree, side, and drink can be combined into a Combo with a $1 discount.
 

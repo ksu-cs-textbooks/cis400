@@ -40,7 +40,7 @@ The `@{}` section is a place to define variables.  In this case, we add a key/va
 
 Finally, the page content itself is presented in Razor syntax - a mixture of HTML and embedded C# proceeded by the `@` symbol.  Note that we do not need to provide termination to the C# code - the compiler will automatically determine when we switch from code back to HTML based on the grammar of the C# language.
 
-# Layouts
+## Layouts
 
 If you remember from our discussions of HTML, a valid HTML page must have a `<!DOCTYPE html>` element, and `<html>`, `<head>`, `<title>`, and `<body>` elements.  But where are these in our Razor page?  It exists in the _Pages/Shared/_Layout.cshtml_ file:
 
@@ -121,3 +121,35 @@ While the _Pages/Shared/_Layout.cshtml_ file is the default layout, you can defi
 
 Where the string you set the property to is the name of your layout.
 
+## Model Classes 
+
+The model class serves a similar role to the codebehind classes of your WPF and Windows Forms applications.  Any public properties defined in the model class are accessible in the Razor page.  I.e. if we defined a property:
+
+```csharp
+public class IndexModel:PageModel {
+
+    public DateTime CurrentTime 
+    {
+        get 
+        {
+            return DateTime.Now;
+        }
+    }
+
+    public void OnGet()
+    {
+
+    }
+}
+```
+
+We could use it in the corresponding Razor page:
+
+```csharp
+@page 
+@model IndexModel 
+
+<p>The current time is @Model.CurrentTime</p>
+```
+
+In addition, the model class can define a method to be triggered on each HTTP Request, i.e. the `OnGet()` method will be triggered with each HTTP GET request, and `OnPost()` will be called with each HTTP POST request.  You can define a method for any of the valid HTTP request verbs that will be invoked on each corresponding request.
