@@ -6,8 +6,8 @@ chapter = true
 pre = "<b>3. </b>"
 +++
 
-### Chapter 3
+### Responsive Design Exercise
 
-# Responsive Design
+# Responsive Design Exercise
 
 Fitting the Screen
