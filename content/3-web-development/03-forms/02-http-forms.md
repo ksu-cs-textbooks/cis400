@@ -9,7 +9,7 @@ One of the earliest (and still widely used) mechanisms for transferring data fro
 
 ### The `<input>` Element
 
-Perhaps the most important - and versatile - of these is the `<input>` element.  By setting its `type` attribute, we can represent a wide range of possible inputs, as is demonstrated by this table [taken from MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input):
+Perhaps the most important - and versatile - of these is the [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) element.  By setting its `type` attribute, we can represent a wide range of possible inputs, as is demonstrated by this table [taken from MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input):
 
 <table class="standard-table">
  <colgroup>
@@ -207,7 +207,7 @@ Regardless of the type, the `<input>` element also has a `name` and `value` prop
 
 ### The `<textarea>` Element
 
-The `<textarea>` element represents a multi-line text input.  Similar to terminal programs, this is represented by columns and rows, the numbers of which are set by the `cols` and `rows` attributes, respectively.  Thus:
+The [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) element represents a multi-line text input.  Similar to terminal programs, this is represented by columns and rows, the numbers of which are set by the `cols` and `rows` attributes, respectively.  Thus:
 
 ```html
 <textarea cols=40 rows=5></textarea>
@@ -216,3 +216,74 @@ The `<textarea>` element represents a multi-line text input.  Similar to termina
 Would look like:
 
 <textarea cols=40 rows=5></textarea>
+
+As with inputs, a `<textarea>` has a `name` and `value` attribute.
+
+### The `<select>` Element
+
+### The `<label>` Element
+
+A [`<label>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) element represents a caption for an element in the form.  It can be tied to a specific input using its `for` attribute, by setting its value to the `id` attribute of the associated input.  This allows screen readers to identify the label as belonging to the input, and also allows browsers to give focus or activate the input element when the label is clicked.
+
+For example, if you create a checkbox with a label:
+
+```html
+<fieldset style="display:flex; align-items:center;">
+  <input type="checkbox" id="example"/>
+  <label for="example">Is Checked</label>
+</fieldset>
+```
+
+<fieldset style="display:flex; align-items:center;">
+  <input type="checkbox" id="example"/>
+  <label for="example">Is Checked</label>
+</fieldset>
+
+Clicking the label will toggle the checkbox!
+
+### The `<fieldset>` Element
+
+The `<fieldset>` element is used to group related form parts together, which can be captioned with a `<legend>`.  It also has a `for` attribute which can be set to the `id` of a form on the page to associate with, so that the fieldset will be serialiazed with the form (this is not necessary if the fieldset is inside the form).  Setting the fieldset's `disabled` attribute will also disable all elements inside of it.
+
+For example:
+
+```html
+<fieldset>
+  <legend>Who is your favorite muppet?</legend>
+  <input type="radio" name="muppet" id="kermit">
+    <label for="kermit">Kermit</label>
+  </input>
+  <input type="radio" name="muppet" id="animal">
+    <label for="animal">Animal</label>
+  </input>
+  <input type="radio" name="muppet" id="piggy">
+    <label for="piggy">Miss Piggy</label>
+  </input>
+  <input type="radio" name="muppet" id="gonzo">
+    <label for="gonzo">Gonzo</label>
+  </input>
+</fieldset>
+```
+
+Would render:
+
+<style>fieldset>label {display: inline; margin-right: 2rem;} </style>
+<fieldset>
+  <legend>Who is your favorite muppet?</legend>
+  <input type="radio" name="muppet" id="kermit">
+    <label for="kermit">Kermit</label>
+  </input>
+  <input type="radio" name="muppet" id="animal">
+    <label for="animal">Animal</label>
+  </input>
+  <input type="radio" name="muppet" id="piggy">
+    <label for="piggy">Miss Piggy</label>
+  </input>
+  <input type="radio" name="muppet" id="gonzo">
+    <label for="gonzo">Gonzo</label>
+  </input>
+</fieldset>
+
+### The `<form>` Element
+
+Finally, the `<form>` element wraps around all the `<input>`, `<textarea>`, and `<select>` elements, and gathers them along with any contained within associated `<fieldset>`s to submit in a serialized form.  This is done when an `<input type="submit">` is clicked within the form, when the enter key is pressed and the form has focus, or by calling the `submit()` method on the form with JavaScript.
