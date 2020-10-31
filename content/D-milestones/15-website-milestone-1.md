@@ -49,7 +49,7 @@ Beyond these core requirements, you may add features and elements as you see fit
 Modify the Razor page named _Privacy.cshtml_. It should:
 
 1. Set the page title to “Privacy Policy”
-2. Render a `<h1>` tag with the text “Cowboy Cafe Website Privacy Policy”
+2. Render a `<h1>` tag with the text “Bleakwind Buffet Website Privacy Policy”
 3. Render the following privacy policy in a `<p>` tag:
 
 _Bleakwind Buffet respects and values the privacy of its customers, as we hope you respect and value our own. This site does not collect any data on you. This site does not use cookies. This site only displays information about Bleakwind Buffet and its delectable food and delightful Skyrim-themed ambiance._
@@ -68,7 +68,7 @@ _Founded in 2020 from the game-saturated mind of Undergraduate Teaching Assistan
 
 Modify the existing _Shared/_Layout.cshtml_ to:
 
-1. Set the page title to what is provided by the page with the string “- Cowboy Cafe” concatenated to the end
+1. Set the page title to what is provided by the page with the string “- Bleakwind Buffet” concatenated to the end
 2. Provide a navigation link to the new About page
 3. Change the copyright statement to “(c) 2020 - Bleakwind Buffet LLC.”
 
