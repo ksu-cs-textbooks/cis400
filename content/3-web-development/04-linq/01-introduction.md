@@ -10,5 +10,5 @@ Now that we have explored some ideas about getting data _from_ the web server, l
 ## Key Terms
 
 Some key terms to learn in this chapter are:
-* Form
-* Encoding
+* Language Integrated Query (LINQ)
+* Extension Methods

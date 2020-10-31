@@ -5,9 +5,9 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
-In our movie website, we've been using a custom "database" object, `MovieDatabse` to provide the movie data and search and filter functionality.  In professional practice, we would probably replace this with an external database program.  These programs have been developed specifically for persisting and accessing data, and leverage specialized data structures like B+ trees that allow them to do searches and filters much more efficiently. 
+In our movie website, we've been using a custom "database" object, `MovieDatabase` to provide the movie data and search and filter functionality.  In professional practice, we would probably replace this with an external database program.  These programs have been developed specifically for persisting and accessing data, and leverage specialized data structures like B+ trees that allow them to do searches and filters much more efficiently.
 
-Some of the most widely adopted database programs are _relational databases_ like MySQL, MsSQL, Postgres, and SQLLite.  These predate object-orientation, and accept requests for data in the form of SQL (Structured Query Langauge).  You will learn more about these databases and how to use them in CIS560.
+Some of the most widely adopted database programs are _relational databases_ like MySQL, MsSQL, Postgres, and SQLLite.  These predate object-orientation, and accept requests for data in the form of SQL (Structured Query Language).  You will learn more about these databases and how to use them in CIS560.
 
 ## LINQ
 Microsoft, inspired by SQL, introduced Language Integrated Query (LINQ) in 2007 to bring the concept of a query language into .NET.  LINQ allows you to construct queries in either chained method calls or in a syntax similar to SQL that can operate on collections or relational databases.  
@@ -37,9 +37,9 @@ However if we run the program we will encounter a null exception.  On our first 
 
 ## Making Search Conditional
 
-If the `SearchTerms` is null, that indicates that the user did not enter a search term - accordingly, we probably don't want to search.  We can wrap our filter in an `if` test to prevent applyting the filter when there is no search term.  Thus, we would refactor our filtering expression to:
+If the `SearchTerms` is null, that indicates that the user did not enter a search term - accordingly, we probably don't want to search.  We can wrap our filter in an `if` test to prevent applying the filter when there is no search term.  Thus, we would refactor our filtering expression to:
 
-```csharp 
+```csharp
 Movies = MovieDatabase.All;
 // Search movie titles for the SearchTerms
 if(SearchTerms != null) {
@@ -51,7 +51,7 @@ Now if we run the program, and search for a specific term, we'll see our results
 
 We can also use the query syntax instead of the extension method syntax, which is similar to SQL:
 
-```csharp 
+```csharp
 Movies = MovieDatabase.All;
 // Search movie titles for the SearchTerms
 if(SerchTerms != null)
@@ -76,11 +76,11 @@ Movies = MovieDatabase.All
     if(SearchTerms != null) {
         Movies = Movies.Where(movie => movie.Title != null && movie.Title.Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
     }
-    // Filter by MPAA Rating 
+    // Filter by MPAA Rating
     if(MPAARatings != null && MPAARatings.Length != 0)
     {
-        Movies = Movies.Where(movie => 
-            movie.MPAARating != null && 
+        Movies = Movies.Where(movie =>
+            movie.MPAARating != null &&
             MPAARatings.Contains(movie.MPAARating)
             );
     }
@@ -99,4 +99,3 @@ Consider our movie website example.  We have four filters - the search, the MPAA
 In contrast, because LINQ doesn't actually run the filters until we start iterating, it can combine all the `While` tests into a single boolean expression.  The result is it only has to iterate through the list _once_.  Hence, its complexity becomes **O(n)**.  There is a little additional overhead for holding onto the query information that way, but it's small compared to the benefit.  
 
 Also, we could have done the same kind of optimization ourselves, but it takes a lot of work to set up, and may not be worth it for a single web app.  But LINQ provides us that benefit for free.
-
