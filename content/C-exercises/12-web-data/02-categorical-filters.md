@@ -9,7 +9,7 @@ Let's add some filters to the page as well.  We'll start with _categorical_ filt
 
 ## Defining the MPAA Ratings
 
-So let's define a string array with our MPAA values, and make it accessble from our `MovieDatabase` class:
+So let's define a string array with our MPAA values, and make it accessible from our `MovieDatabase` class:
 
 
 ```csharp 
@@ -83,7 +83,7 @@ Now our filters stick around when we submit the search request.  That just leave
 
 ## Applying MPAA Rating Filters
 
-Let's add another method to our `MoveDatabase` class, `FilterByMPAARating()`:
+Let's add another method to our `MovieDatabase` class, `FilterByMPAARating()`:
 
 ```csharp 
     /// <summary>
@@ -146,7 +146,7 @@ Now we can run a search with filters applied.  For example, searching for the wo
 
 You might be wondering why _Cloverfield_ is listed.  But remember, we're searching by substring, and C __LOVE__ rfield contains love!
 
-## Filtering by Genere 
+## Filtering by Genre 
 
 Let's add filters for genre next.  But what genres should be included?  This is not as clear-cut as our MPAA rating, as there is no standards organization that says "these are the only offical genres that exist."  In fact, new genres emerge from time to time.  So a better source of this info might just be to see what Genres are defined in our data, i.e.:
 

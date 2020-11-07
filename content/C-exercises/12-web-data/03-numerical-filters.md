@@ -45,7 +45,7 @@ Let's move the filters to a column on the left, leave the search bar above, and 
                 Between
                 <input name="IMDBMin" type="number" min="0" max="10" step="0.1" placeholder="min"/>
                 and
-                <input name="IMDBMax" type="number" min="0" max="10" step="0.1" placeholder="min"/>
+                <input name="IMDBMax" type="number" min="0" max="10" step="0.1" placeholder="max"/>
             </div>
 
         </div>
@@ -84,7 +84,7 @@ Let's move the filters to a column on the left, leave the search bar above, and 
     </form>
 ```
 
-Most of this is simply moving elements around the page, but note that we are using inputs of `type=number` to represent our range of imdb values.  We can specify a minimum and maximum for this range, as well as an allowable increement.  Also, we use the `placeholder` attribute to put text into the `input` until a value is added.
+Most of this is simply moving elements around the page, but note that we are using inputs of `type=number` to represent our range of IMDB values.  We can specify a minimum and maximum for this range, as well as an allowable increment.  Also, we use the `placeholder` attribute to put text into the `input` until a value is added.
 
 ## Adding More Styles
 Now we'll need to add some rules to our _wwwroot/css/styles.css_.  First, we'll use a `grid` for the layout of the form:
@@ -158,13 +158,22 @@ But the returned value would be a string, so we'd need to parse it:
 
 If the query was `null`, then this would evaluate to `NAN`, which we wouldn't want to set our `<input>` to...
 
-Instead, we'll look at an option built into the PageModel.  The first is we can define arguments to our `OnGet()` method to be parsed out of the Request automatically, i.e.:
+Instead, we'll look at some options built into the PageModel.  
+
+## Parameter Binding
+
+The first of these options is [_Parameter Binding_](https://docs.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api).  In this approach, we define parameters to our `OnGet()` method to be parsed out of the request automatically, i.e.:
 
 ```csharp
     /// <summary>
     /// Gets the search results for display on the page
     /// </summary>
-    OnGet(string SearchTerms, string[] MPAARatings, string[] Genre, double IMDBMin, double IMDBMax) {
+    OnGet(string SearchTerms, string[] MPAARatings, string[] Genre, double? IMDBMin, double? IMDBMax) {
+        this.SearchTerms = SearchTerms;
+        this.MPAARatings = MPAARatings;
+        this.Genre = Genre;
+        this.IMDBMin = IMDBMin;
+        this.IMDBMax = IMDBMax;
         Movies = MovieDatabase.Search(SearchTerms);
         Movies = MovieDatabase.FilterByMPAARating(Movies, MPAARatings);
         Movies = MovieDatabase.FilterByGenre(Movies, Genres);
@@ -172,13 +181,55 @@ Instead, we'll look at an option built into the PageModel.  The first is we can 
     }
 ```
 
+The benefit of this approach is that as long as C# knows a conversion into the type we specify, the conversion is done automatically.  Note that the parameter name matches the `name` property of the corresponding `<input>` - this must be the case for the Razor Page to bind the parameter to the corresponding input value.
+
+Note that we still need to assign these parameter values to the corresponding properties of our PageModel.  If we don't, then those properties will all be `null`, and the `<inputs>` rendered on our page will always be blank.
+
+## Model Binding
+
+A second option is to use [_Model Binding_](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-3.1).  Model binding also automatically converts incoming form data, but in this case it binds directly to the properties of our PageModel.  We indicate this form of binding with a `[BindProperty]` attribute, i.e.:
+
+```csharp
+
+public class IndexModel : PageModel {
+
+    [BindProperty(SupportsGet=true)]
+    string SearchTerms {get; set;}
+
+    [BindProperty(SupportsGet=true)]
+    string[] MPAARatings {get; set;}
+
+    [BindProperty(SupportsGet=true)]
+    string[] Genre {get; set;}
+
+    [BindProperty(SupportsGet=true)]
+    double? IMDBMin;
+
+    [BindProperty(SupportsGet=true)]
+    double? IMDBMax;
+
+    /// <summary>
+    /// Gets the search results for display on the page
+    /// </summary>
+    OnGet() {
+        Movies = MovieDatabase.Search(SearchTerms);
+        Movies = MovieDatabase.FilterByMPAARating(Movies, MPAARatings);
+        Movies = MovieDatabase.FilterByGenre(Movies, Genres);
+        Movies = MovieDatabase.FilterByIMDBRating(Movies, IMDBMin, IMDBMax);
+    }
+}
+```
+
+Note that with this approach, the incoming data is directly bound to the properties, so we don't need to do any special assignments within our `OnGet()` method.  Also, note that we have to use `SupportsGet=true` in order for this binding to occur on GET requests (by default, model binding only happens with POST requests).
+
+
 {{% notice note %}}
 
 You only need to do _one_ binding approach per property in a PageModel.  I.e. you can just use the property decorator:
 ```csharp
 public class SomePageModel : PageModel
 {
-    [BindProperty]
+    [BindProperty(SupportsGet=true)]
     public float SomeProperty { get; set; }
 
     public void OnGet() {
@@ -187,7 +238,7 @@ public class SomePageModel : PageModel
 }
 ```
 
-_or_ you might use the argument binding:
+_or_ you might use parameter binding:
 
 ```csharp
 public class SomePageModel : PageModel
@@ -209,7 +260,8 @@ class SomePageModel : PageModel
     }
 }
 ```
-These are all _different means_ of accessing the _same data_ from the incoming request.  The use of the `[BindProperty]` decorator is often the most concise if you need to be able to access the property in the page itself.  If not, arguement binding is a good alternative.  
+
+These are all _different means_ of accessing the _same data_ from the incoming request.  
 {{% /notice %}}
 
 Now all we need to do is implement the actual filter.
