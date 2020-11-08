@@ -47,7 +47,7 @@ if(SearchTerms != null) {
 }
 ```
 
-Now if we run the program, and search for a specific term, we'll see our results is modified to contain _only_ those movies with the terms in thier title!
+Now if we run the program, and search for a specific term, we'll see our results is modified to contain _only_ those movies with the terms in their title!
 
 We can also use the query syntax instead of the extension method syntax, which is similar to SQL:
 
@@ -94,8 +94,8 @@ The numerical filters are handled the same way - with additional `Where` clauses
 
 While LINQ is a bit less code for us to write, there is another big benefit - the actual filtering is only applied _when we start iterating through the results_.  This means that LINQ queries with multiple `Where()` invocations can combine them into a single iteration.
 
-Consider our movie website example.  We have four filters - the search, the MPAA Ratings, the IMDB Ratings, and the Rotten Tomato Rating.  In the worst case, each movie in the database would pass each filter, so that our list never got smaller.  With the filter functions we wrote in `MovieDatabase`, we would have to iterate over that full list _four times_.  In terms of complexity, that's **O(4n)**.  
+Consider our movie website example.  We have four filters - the search, the MPAA Ratings, the IMDB Ratings, and the Rotten Tomato Rating.  In the worst case, each movie in the database would pass each filter, so that our list never got smaller.  With the filter functions we wrote in `MovieDatabase`, we would have to iterate over that full list _four times_.  In terms of complexity, that's $O(4n)$.  
 
-In contrast, because LINQ doesn't actually run the filters until we start iterating, it can combine all the `While` tests into a single boolean expression.  The result is it only has to iterate through the list _once_.  Hence, its complexity becomes **O(n)**.  There is a little additional overhead for holding onto the query information that way, but it's small compared to the benefit.  
+In contrast, because LINQ doesn't actually run the filters until we start iterating, it can combine all the `While` tests into a single boolean expression.  The result is it only has to iterate through the list _once_.  Hence, its complexity becomes $O(n)$.  There is a little additional overhead for holding onto the query information that way, but it's small compared to the benefit.  
 
 Also, we could have done the same kind of optimization ourselves, but it takes a lot of work to set up, and may not be worth it for a single web app.  But LINQ provides us that benefit for free.

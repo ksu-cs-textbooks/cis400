@@ -14,7 +14,7 @@ In CSS3, the `@media` rule was extended to include the concept of _media queries
 
 Media queries are primarily used to enable _responsive design_, which refers to your page re-arranging itself for display on different devices.
 
-A media query expands the `@media` rule that we used previously.  It consists of the `@media` keyword followed by an optonal media type (`all`, `print`, `screen`, or `speech`), and then any media features we want to query for within parenthesis.
+A media query expands the `@media` rule that we used previously.  It consists of the `@media` keyword followed by an optional media type (`all`, `print`, `screen`, or `speech`), and then any media features we want to query for within parenthesis.
 
 Let's start with a simple example.  Let's change the color of our `h1` elements based on the orientation of the screen.  Add these two rules to your _wwwroot/css/site.css_:
 
