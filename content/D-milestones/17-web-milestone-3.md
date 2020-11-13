@@ -57,7 +57,7 @@ Refactor your `IOrderItem` interface to include a new property, `Description`, a
 * **Smokehouse Skeleton:** Put some meat on those bones with a small stack of pancakes. Includes sausage links, eggs, and hash browns on the side. Topped with the syrup of your choice.
 * **Garden Orc Omelette:** Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.
 * **Philly Poacher:** Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.
-* **Jucy T-Bone:** Juicy T-Bone, not much else to say.
+* **Thugs T-Bone:** Juicy T-Bone, not much else to say.
 
 ##### Sides
 * **Vokun Salad:** A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.
