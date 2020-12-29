@@ -9,7 +9,7 @@ date: 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-This course is taught in the "flipped" style.  This means you will be watching videos and working through totorials _before_ you come to class.  Your class sessions will be for working on and getting help with your projects.
+This course is taught in the "flipped" style.  This means you will be watching videos and working through tutorials _before_ you come to class.  Your class sessions will be for working on and getting help with your projects.
 
 ### The Big Software Solution
 Up to this point, you've likely done a lot of what I like to call "Baby Projects" - programming projects that are useful to demonstrate a concept or technique, but really don't do anything beyond that.  In contrast, we'll be building a large, multi-project software solution to meet a real-world problem - the software needed to run a fast-food franchise chain, the _Bleakwood Buffet_.  
@@ -40,7 +40,7 @@ You can verify your group by visiting the Canvas page, clicking the **People** m
 
 ![Finding your Group on Canvas]({{<static "images/0.0.2.1.png">}})
 
-I will be sending a survey _before_ the start of the semester to determine students' preferred group.  Students will be placed in groups based on available space and the order thier request was recieved in.
+I will be sending a survey _before_ the start of the semester to determine students' preferred group.  Students will be placed in groups based on available space and the order their request was recieved in.
 
 {{% notice info %}}
 The CS Scholars section will be split into groups, as it is small enough to fit into the classroom safely.  Scholars still have the choice of attending in-person or remotely.
@@ -48,14 +48,14 @@ The CS Scholars section will be split into groups, as it is small enough to fit 
 
 Also, if you realize your group meeting time is not working for you, let me know.  It may be possible to switch.
 
-Attendance at the class meetings is not manditory.  If you are uncomfortable coming to the classroom, you do not need to.
+Attendance at the class meetings is not mandatory.  If you are uncomfortable coming to the classroom, you do not need to.
 
 ### Joining Remotely
 Class meetings will also be broadcast over zoom, should you want to join a session that you are not attending in-person. These meetings can be accessed from the **Zoom** Menu option in Canvas.
 
 ![Zoom in Canvas]({{<static "images/0.0.2.2.png">}})
 
-You may join **any** class session via Zoom, either section, any day.  Please maintain good netiquitte while in a class Zoom session.
+You may join **any** class session via Zoom, either section, any day.  Please maintain good netiquette while in a class Zoom session.
 
 
 

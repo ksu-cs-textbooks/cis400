@@ -22,7 +22,7 @@ Week 1 (Week of 8/17/2020)
 
 Week 2 (Week of 8/24/2020)
 * Classes and Objects
-* Ecapsulation
+* Encapsulation
 * Data Hiding
 * State and Behavior
 * Objects in Memory
@@ -61,7 +61,7 @@ Week 7 (Week of 9/28/2020)
 
 Week 8 (Week of 10/5/2020)
 * Component Interaction
-* Advanced Debugging technqiues
+* Advanced Debugging techniques
 * POS Milestone 3
 
 Week 9 (Week of 10/12/2020)

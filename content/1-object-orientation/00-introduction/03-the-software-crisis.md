@@ -12,7 +12,7 @@ At the 1968 NATO Software Engineering Conference held in Garmisch Germany, the t
 * Software that made inefficient use of calculations and memory
 * Software was of low quality
 * Software that failed to meet the requirements it was developed to meet
-* Projects that became unmanagable and code difficult to maintain
+* Projects that became unmanageable and code difficult to maintain
 * Software that never finished development
 
 The software development industry sought to counter these problems through a variety of efforts:

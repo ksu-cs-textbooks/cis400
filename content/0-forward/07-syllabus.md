@@ -70,7 +70,7 @@ importance of these different aspects of learning. Most class periods will consi
 There is no shortcut to becoming a great programmer. Only by **_doing the work_** will you develop the skills and knowledge to make your a successful computer scientist. This course is built around that principle, and gives you ample opportunity to do the work, with as much support as we can offer.
 
 _Tutorials_
-Each module will include many tutorial assignments that will take you step-by-step through using a particular concept or technique.  The point is not simply to complete the tutorial, but to _practice_ the technique and coding invovled.  You will be expected to implement these techniques on your own in the milestone assignment of the module - so this practice helps prepare you for those assignments.
+Each module will include many tutorial assignments that will take you step-by-step through using a particular concept or technique.  The point is not simply to complete the tutorial, but to _practice_ the technique and coding involved.  You will be expected to implement these techniques on your own in the milestone assignment of the module - so this practice helps prepare you for those assignments.
 
 _Milestone Programming Assignments_
 Throughout the semester you will be building a non-trivial software project iteratively; every week a new milestone (a collection of features embodying a new version of a software application) will be due. Each milestone builds upon the prior milestone’s code base, so it is critical that you complete each milestone in a timely manner! This process also reflects the way software development is done in the real world - breaking large projects into more readily achievable milestones helps manage the development process.
@@ -109,7 +109,7 @@ are working on are the foundations on which all future computer science coursewo
 
 Determining where the line between good collaboration and overreliance on others can be
 challenging, especially as a student. I offer a few guidelines that can help:
-1.  If you can’t yet put a concept into your own words and explain it to someone not versed in programming, you do not yet have a full grasp of the concept. Don’t be tempted to use someone else’s words - keep working at it until you can use your own. But “working at it” in this context can mean seeking out additional explanations from other people. Sometimes getting enough different perspectives on a concept is what you need to be
+1.  If you can’t yet put a concept into your own words and explain it to someone not versed in programming, you do not yet have a full grasp of the concept. Don’t be tempted to use someone else's words - keep working at it until you can use your own. But “working at it” in this context can mean seeking out additional explanations from other people. Sometimes getting enough different perspectives on a concept is what you need to be
 able to synthesize your own.
 2. Directly copying another student’s code and turning it in as your own work is never acceptable. It is a form of plagiarism and constitutes academic dishonesty and can result in severe penalties (covered below). This does not mean you can’t discuss the assignment and approaches to solving it with your peers - in fact doing so is often a useful learning practice. Just keep those discussions above the code level.
 3. As a corollary to point 2, it is okay to ask another student to look at your code when you are struggling with syntax or errors. However, don’t let them correct it for you - let them offer suggestions but make any changes yourself. The act of making these changes actually contributes to the stimulus your brain is using to develop programming skills. So don’t let others shortchange your opportunity to learn (including instructors and UTAs).
@@ -128,7 +128,7 @@ development license through your Azure Student Portal. See the CS support docume
 
 Additionally, we will create UML diagrams using Microsoft Visio, which can also be downloaded from the Azure Student Portal (see above).
 
-We will use Xamarin workbooks to distribute some content. This free software can be downlaoded from: [https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
+We will use Xamarin workbooks to distribute some content. This free software can be downloaded from: [https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
 
 RocketChat also offers some free desktop and mobile clients that you may prefer over the web client.  You may download them from: [https://rocket.chat/install/](https://rocket.chat/install/).
 
@@ -138,7 +138,7 @@ To participate in this course, students must have access to a modern web browser
 
 This course offers an instructor-written textbook, which is broken up into a specific reading order and interleaved with activities and quizzes in the modules. It can also be directly accessed at [{{< param textbookURL >}}]({{< param textbookURL >}}).
 
-Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offerd by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
+Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
 
 ### Subject to Change
 The details in this syllabus are not set in stone. Due to the flexible nature of this class, adjustments may need to be made as the semester progresses, though they will be kept to a minimum. If any changes occur, the changes will be posted on the Canvas page for this course and emailed to all students.
@@ -148,7 +148,7 @@ Kansas State University has an Honor and Integrity System based on personal inte
 
 **For this course, a violation of the Honor Pledge will result in an automatic 0 for the assignment and the violation will be reported to the Honor System. A second violation will result in an XF in the course.**
 
-In this course, _unauthorized aid_ broadly consists of _giving or reciving code to complete assignments_.  This could be code you share with a classmate, code you have asked a third party to write for you, or code you have found online or elsewhere.  
+In this course, _unauthorized aid_ broadly consists of _giving or receiving code to complete assignments_.  This could be code you share with a classmate, code you have asked a third party to write for you, or code you have found online or elsewhere.  
 
 Authorized aid - which is not a violation of the honor policy - includes
 using the code snippets provided in the course materials, discussing strategies and techniques with classmates, instructors, TAs, and mentors. Additionally, you may use code snippets and algorithms found in textbooks and web sources if you clearly label them with comments indicating where the code came from and how it is being used in your project.

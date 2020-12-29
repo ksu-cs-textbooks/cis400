@@ -34,12 +34,12 @@ Another common change to programming languages was the removal of the `GOTO` sta
 
 [^goto]: Dijkstra, Edgar (1968). ["Go To Statement Considered Harmful"](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf)
 
-However, the actual _functionality_ of a `GOTO` statement remains in higher-order programming languages, abstracted into control-flow structures like conditionals, loops, and switch statements.  This is the basis of [structured programming](https://en.wikipedia.org/wiki/Structured_programming), a paradigm adopted by all modern higher-order programming langauges. Each of these control-flow structures can be represented by careful use of `GOTO` statements (and, in fact the resulting assembly code from compiling these langauges does just that). The benefit is using structured programming promotes "reliability, correctness, and organizational clarity" by clearly defining the circumstances and effects fo code jumps [^wirth1974].
+However, the actual _functionality_ of a `GOTO` statement remains in higher-order programming languages, abstracted into control-flow structures like conditionals, loops, and switch statements.  This is the basis of [structured programming](https://en.wikipedia.org/wiki/Structured_programming), a paradigm adopted by all modern higher-order programming languages. Each of these control-flow structures can be represented by careful use of `GOTO` statements (and, in fact the resulting assembly code from compiling these languages does just that). The benefit is using structured programming promotes "reliability, correctness, and organizational clarity" by clearly defining the circumstances and effects fo code jumps [^wirth1974].
 
 [^wirth1974]: Wirth, Nicklaus (1974). ["On the Composition of Well-Structured Programs"](https://oberoncore.ru/_media/library/wirth_on_the_composition_of_well-structured_programs.pdf)
 
 ### Object-Orientation Paradigm
-The object-orientation paradigm was similarly developed to make programming large projects easier and less error-prone.  We'll examine just how it seeks to do so in the next few chapters.  But before we do, you might want to see how language poularity has fared since the onset of the software crisis, and how new languages have appeared and grown in popularity in this animatated chart from _Data is Beautiful_:
+The object-orientation paradigm was similarly developed to make programming large projects easier and less error-prone.  We'll examine just how it seeks to do so in the next few chapters.  But before we do, you might want to see how language popularity has fared since the onset of the software crisis, and how new languages have appeared and grown in popularity in this animated chart from _Data is Beautiful_:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Og847HVwRSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

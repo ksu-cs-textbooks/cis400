@@ -5,7 +5,7 @@ weight: 20
 date: 2018-08-24T10:53:26-05:00
 ---
 
-By this point, you should be familiar enough with the history of computers to be aware of the evolution from the massive room-filling vaccum tube implementations of ENIAC, UNIVAC, and other first-generation computers to transistor-based mainframes like the PDP-1, and the eventual introduction of the microcomputer (desktop computers that are the basis of the modern PC) in the late 1970's.  Along with a declining size, each generation of these machines also cost less:
+By this point, you should be familiar enough with the history of computers to be aware of the evolution from the massive room-filling vacuum tube implementations of ENIAC, UNIVAC, and other first-generation computers to transistor-based mainframes like the PDP-1, and the eventual introduction of the microcomputer (desktop computers that are the basis of the modern PC) in the late 1970's.  Along with a declining size, each generation of these machines also cost less:
 
 <table>
  <tr>
@@ -58,7 +58,7 @@ By this point, you should be familiar enough with the history of computers to be
   </tr>
 </table>
 
-This increase in affordability was also coupled with an increase in computatinal power.  Consider the ENIAC, which computed at 100,000 cycles per second.  In contrast, the relatively inexpensive Commodore 64 ran at 1,000,000 cycles per second, while the more pricy IBM PC ran 4,770,000 cycles per second.
+This increase in affordability was also coupled with an increase in computational power.  Consider the ENIAC, which computed at 100,000 cycles per second.  In contrast, the relatively inexpensive Commodore 64 ran at 1,000,000 cycles per second, while the more pricy IBM PC ran 4,770,000 cycles per second.
 
 Not surprisingly, governments, corporations, schools, and even individuals purchased computers in larger and larger quantities, and the demand for software to run on these platforms and meet these customers' needs likewise grew. Moreover, the sophistication expected from this software also grew.  Edsger Dijkstra described it in these terms:
 
