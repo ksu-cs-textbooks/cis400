@@ -5,7 +5,7 @@ weight: 3
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Let's start by focusing on encapsulation's benefits to organizing our code by exporing some examples of encapsulation you may already be familiar with.
+Let's start by focusing on encapsulation's benefits to organizing our code by exploring some examples of encapsulation you may already be familiar with.
 
 ## Namespaces
 
@@ -91,9 +91,9 @@ You might think that the kind of modules that Parnas was describing don't exist 
 Math.Pow(10, 8);
 ```
 
-The `Math` class in this example is actually used _just like a module!_  We can't see the underlying implementation of the `Pow()` method, it provides to us a well-defined interface (i.e. you call it with the symbol `Pow` and two doubles for parameters), and this method and other related math functions (`Sin()`, `Abs()`, `Floor()`, etc.) are encapsualted within the `Math` class.  
+The `Math` class in this example is actually used _just like a module!_  We can't see the underlying implementation of the `Pow()` method, it provides to us a well-defined interface (i.e. you call it with the symbol `Pow` and two doubles for parameters), and this method and other related math functions (`Sin()`, `Abs()`, `Floor()`, etc.) are encapsulated within the `Math` class.  
 
-We can define our own module-like classes by using the `static` keyword, i.e. we could group our vector math funtions into a static `VectorMath` class:
+We can define our own module-like classes by using the `static` keyword, i.e. we could group our vector math functions into a static `VectorMath` class:
 
 ```csharp
 /// <summary>

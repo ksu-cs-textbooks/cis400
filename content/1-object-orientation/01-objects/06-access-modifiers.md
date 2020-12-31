@@ -39,7 +39,7 @@ We would not be able to change his name, i.e. `willie.first = "Bob"` would fail,
 
 If we want to allow a field or method to be accessible _outside_ of the object, we must declare it `public`.  While we _can_ declare fields public, this violates the core principles of encapsulation, as any outside code can modify our object's state in uncontrolled ways.
 
-Instead, in a true object-oriented approache we would write public  **_accessor methods_**, a.k.a. *getters* and *setters*.  These are methods that allow us to see and change field values _in a contorolled way_.  Adding accessors to our Student class might look like:
+Instead, in a true object-oriented approach we would write public  **_accessor methods_**, a.k.a. *getters* and *setters*.  These are methods that allow us to see and change field values _in a controlled way_.  Adding accessors to our Student class might look like:
 
 ```csharp
 public class Student {
