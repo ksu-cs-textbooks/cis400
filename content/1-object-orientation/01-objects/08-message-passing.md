@@ -5,7 +5,7 @@ weight: 8
 date: 2018-08-24T10:53:26-05:00
 ---
 
-The second criteria Alan Kay set for object-oriented langauges was [message passing](https://en.wikipedia.org/wiki/Message_passing).  Message passing is a way to request a unit of code engage in a behavior, i.e. changing its state, or sharing some aspect of its state.  
+The second criteria Alan Kay set for object-oriented languages was [message passing](https://en.wikipedia.org/wiki/Message_passing).  Message passing is a way to request a unit of code engage in a behavior, i.e. changing its state, or sharing some aspect of its state.  
 
 Consider the real-world analogue of a letter sent via the postal service.  Such a message consists of: an address the message needs to be sent to, a return address, the message itself (the letter), and any data that needs to accompany the letter (the enclosures).  A specific letter might be a wedding invitation.  The message includes the details of the wedding (the host, the location, the time), an enclosure might be a refrigerator magnet with these details duplicated.  The recipient should (per custom) send a response to the host addressed to the return address letting them know if they will be attending.
 
@@ -81,10 +81,10 @@ f.Normalize();
 
 Note how here, `f` is the object receiving the message `Normalize`.  There is no additional data needed, so there are no parameters being passed in.  Our earlier `DotProduct()` method took a second vector as its argument, and used that vector's values to mutate its state.  
 
-Message passsing therefore acts like those special molecular pumps and other gate mechanisms of a cell that control what crosses the cell wall.  The methods defined on a class determine how outside code can interact with the object. An extra benefit of this approach is that a method becomes an abstraction for the behavior of the code, and the associated state changes it embodies.  As a programmer using the method, we don't need to know the exact implementation of that behavior - just what data we need to provide, and what it should return or how it will alter the program state.  This makes it far easier to reason about our program, and also means we can change the internal details of a class (perhaps to make it run faster) without impacting the other aspects of the program.
+Message passing therefore acts like those special molecular pumps and other gate mechanisms of a cell that control what crosses the cell wall.  The methods defined on a class determine how outside code can interact with the object. An extra benefit of this approach is that a method becomes an abstraction for the behavior of the code, and the associated state changes it embodies.  As a programmer using the method, we don't need to know the exact implementation of that behavior - just what data we need to provide, and what it should return or how it will alter the program state.  This makes it far easier to reason about our program, and also means we can change the internal details of a class (perhaps to make it run faster) without impacting the other aspects of the program.
 
 {{% notice info %}}
-You probably have noticed that in many programming languages we speak of _functions_, but in C# and other object-oriented langauges, we'll often speak of _methods_.  You might be wondering just what is the difference?
+You probably have noticed that in many programming languages we speak of _functions_, but in C# and other object-oriented languages, we'll often speak of _methods_.  You might be wondering just what is the difference?
 
-Both are forms of message passing, and share many of the same characterstics.  Broadly speaking though, _methods_ are _functions_ defined as part of an object.  Therefore, their bodies can access the state of the object.  In fact, that's what the `this` keyword in C# means - it refers to _this object_, i.e. the instance of the class that the method is currently executing for.  For non-object-oriented languages, there is no concept of `this` (or `self` as it appears in other langauges).
+Both are forms of message passing, and share many of the same characteristics.  Broadly speaking though, _methods_ are _functions_ defined as part of an object.  Therefore, their bodies can access the state of the object.  In fact, that's what the `this` keyword in C# means - it refers to _this object_, i.e. the instance of the class that the method is currently executing for.  For non-object-oriented languages, there is no concept of `this` (or `self` as it appears in other languages).
 {{% /notice %}}
