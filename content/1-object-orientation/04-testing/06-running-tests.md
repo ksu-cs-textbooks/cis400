@@ -5,7 +5,7 @@ weight: 6
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Tests are usually run with a _test runner_, a program that will execute the test code against the code to be tested.  The exact mechanism invovled depends on the testing framework.  
+Tests are usually run with a _test runner_, a program that will execute the test code against the code to be tested.  The exact mechanism involved depends on the testing framework.  
 
 The xUnit framework is offered as a set of Nuget packages:
 * The `xunit` package contains the library code defining the `Assertion` class as well as the `[Fact]` and `[Test]` attributes.
@@ -21,11 +21,11 @@ To explore and run your tests, you can open the [Test Explorer](https://docs.mic
 
 ![Run and Run All buttons]({{<static "images/1.4.6.2.png">}})
 
-As tests complete, the will report thier status - pass or fail - indicated by a green checkmark or red x next to the test name, as well as the time it took to run the test.  There will also be a summary available with details about any failures that can be accessed by clicking the test name.
+As tests complete, the will report their status - pass or fail - indicated by a green checkmark or red x next to the test name, as well as the time it took to run the test.  There will also be a summary available with details about any failures that can be accessed by clicking the test name.
 
 ![Test Detail Summary]({{<static "images/1.4.6.3.png">}})
 
-Occasionally, your tests may not seem to finish, but get stuck running. If this happens, check the output panel, switching it from "build" to "tests".  Most likley your test process crashed because of an error in your test code, and the output reporting that error will be reported there.
+Occasionally, your tests may not seem to finish, but get stuck running. If this happens, check the output panel, switching it from "build" to "tests".  Most likely your test process crashed because of an error in your test code, and the output reporting that error will be reported there.
 
 ![Test Ouput in the Output Panel]({{<static "images/1.4.6.4.png">}})
 

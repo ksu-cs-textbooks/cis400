@@ -18,12 +18,12 @@ While it may be tempting to use `Assert.True()` for all tests, i.e. `Assert.True
 ## Equality Assertions
 The `Assert.Equal<T>(T expected, T actual)` is the workhorse of the assertion library. Notice it is a template method, so it can be used with any type that is comparable (which is pretty much everything possible in C#).  It also has an override, `Assert.Equal<T>(T expected, T actual, int precision)` which allows you to specify the precision for floating-point numbers.  Remember that floating point error can cause two calculated values to be slightly different than one another; specifying a precision allows you to say just how close the expected an actual value needs to be to be considered 'equal' for the purposes of the test.
 
-Like most assertions, it is paired with an opposite, `Assert.NotEqual<T>(T expected, T actual)`, which also has an override for suppling precision.
+Like most assertions, it is paired with an opposite, `Assert.NotEqual<T>(T expected, T actual)`, which also has an override for supplying precision.
 
 ## Numeric Assertions
 With numeric values, it can be handy to determine if the value falls within a range:
 * `Assert.InRange<T>(T actual, T low, T high)` asserts `actual` falls between `low` and `high` (inclusive), and 
-* `Assert.NotInRange<T>(T actual, T low, T high)` asserts `actual` does not fall beween `low` and `high` (inclusive)
+* `Assert.NotInRange<T>(T actual, T low, T high)` asserts `actual` does not fall between `low` and `high` (inclusive)
 
 ## Reference Assertions
 There are special assertions to deal with null references:
@@ -50,7 +50,7 @@ There are a host of assertions for working with collections:
 * `Assert.Contains<T>(T expected, IEnumerable<T> collection)` asserts that the `expected` item is found in the `collection`, while 
 * `Assert.DoesNotContain<T>(T expected, IEnumerable<T> collection)` asserts the `expected` item is _not_ found in the `collection`
 
-Finally, `Assert.Collection<T>(IEnumerable<T> collection, Action<T>[] inspectors)` can apply specific inspectors against each item in a collection.  This bears a bit of explaination by way of a demonstration:
+Finally, `Assert.Collection<T>(IEnumerable<T> collection, Action<T>[] inspectors)` can apply specific inspectors against each item in a collection.  This bears a bit of explanation by way of a demonstration:
 
 ```csharp 
 List<int> nums = new List<int>() {1, 2, 3};
@@ -89,7 +89,7 @@ There are also similar assertions for exceptions being thrown in _asynchronous_ 
 * `Assert.ThrowsAnyAsync<T>(Task testCode) where T: System.Exception` is the asynchronous version
 
 ## Events Assertions 
-Asserting that events will be thrown also invovles [Action<T> delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=netcore-3.1), and is a bit more involved as it requires _three_.  The first delegate is for attaching the assertion-supplied event handler to the listener, the second for detaching it, and the third is for triggering the event with the actual code involved.
+Asserting that events will be thrown also involves [Action<T> delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=netcore-3.1), and is a bit more involved as it requires _three_.  The first delegate is for attaching the assertion-supplied event handler to the listener, the second for detaching it, and the third is for triggering the event with the actual code involved.
 
 For example, assume we have a class, `Emailer`, with a method `SendEmail(string address, string body)` that should have an event handler `EmailSent` whose event args are `EmailSentEventArgs`.  We could test that this class was actually raising this event with:
 
