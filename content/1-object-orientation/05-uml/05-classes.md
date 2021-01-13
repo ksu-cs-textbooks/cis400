@@ -31,17 +31,17 @@ $$
 $$
 
 {{% notice info %}}
-In C#, properties are technically methods.  But we use the same syntax to utlize them as we do fields, and they serve the same role - to expose aspects of the class state. So for the purposes of this class we'll classify them as attributes.
+In C#, properties are technically methods.  But we use the same syntax to utilize them as we do fields, and they serve the same role - to expose aspects of the class state. So for the purposes of this class we'll classify them as attributes.
 {{% /notice %}}
 
 ### Operators
 The _operators_ in UML represent the _behavior_ of the object, i.e. the _methods_ we can invoke upon it.  These are declared using the pattern:
 
 $$ 
-\texttt{visiblity name([parameter list])[:return type]}
+\texttt{visibility name([parameter list])[:return type]}
 $$
 
-The  $\texttt{[visibility]}$ uses the same symbols as typed elements, with the same correspondences. The $\texttt{name}$ is the name of the method, and the $\texttt{[paramter list]}$ is a comma-separated list of typed elements, corresponding to the parameters.  The $\texttt{[:return type]}$ indicates the return type for the method (it can be ommitted for void). 
+The  $\texttt{[visibility]}$ uses the same symbols as typed elements, with the same correspondences. The $\texttt{name}$ is the name of the method, and the $\texttt{[parameter list]}$ is a comma-separated list of typed elements, corresponding to the parameters.  The $\texttt{[:return type]}$ indicates the return type for the method (it can be omitted for void). 
 
 Thus, in the example above, the protected method `Blend` has no parameters and returns a string.  Similarly, the method:
 
@@ -59,6 +59,6 @@ $$
 $$
 
 ## Static and Abstract
-In UML, we indicate a class is static by _underlining_ its name in the first compartment of the class diagram.  We can similarly indicate static operators and methods is static by underlinging the entire line referring to them.
+In UML, we indicate a class is static by _underlining_ its name in the first compartment of the class diagram.  We can similarly indicate static operators and methods is static by underlining the entire line referring to them.
 
 To indicate a class is abstract, we _italicize_ its name.  Abstract methods are also indicated by italicizing the entire line referring to them.

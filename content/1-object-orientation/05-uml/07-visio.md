@@ -11,11 +11,11 @@ Visio is a vector graphics editor for creating flowcharts and diagrams.  it come
 
 ![UML Class Diagram Template]({{<static "images/5.7.1.png">}})
 
-Class diagrams are built by dragging shapes from the shape toolbox onto the drawing surface.  Notice that the shapes include classes, interfaces, enumerations, and all the associations we have discussed. Once in the drawing surface, these can be resized and editied.
+Class diagrams are built by dragging shapes from the shape toolbox onto the drawing surface.  Notice that the shapes include classes, interfaces, enumerations, and all the associations we have discussed. Once in the drawing surface, these can be resized and edited.
 
 ![Dragging Shapes]({{<static "images/5.7.2.gif">}})
 
-Right-clicking on an association will open a context menu, allowing you to turn on multiplicites.  These can be edited by double-clicking on them.  Unneeded multiplicities can be deleted.
+Right-clicking on an association will open a context menu, allowing you to turn on multiplicities.  These can be edited by double-clicking on them.  Unneeded multiplicities can be deleted.
 
 ![Setting Multiplicities]({{<static "images/5.7.3.gif">}})
 
