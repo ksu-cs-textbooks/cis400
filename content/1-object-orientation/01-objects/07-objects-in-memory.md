@@ -5,7 +5,7 @@ weight: 7
 date: 2018-08-24T10:53:26-05:00
 ---
 
-We often talk about the **_class_** as a *blueprint* for an **_object_**.  This is because classes define what properties and methods an object should have, in the form of a **_constructor_**.  Consider this class representing a planet:
+We often talk about the **_class_** as a *blueprint* for an **_object_**.  This is because classes define what properties and methods an object should have, in the form of the class definition.  An object is created from this blueprint by invoking the class' **constructor**. Consider this class representing a planet:
 
 ```csharp
 /// <summary>
@@ -67,7 +67,7 @@ mars.Radius
 
 But a class does more than just labeling the properties and fields and providing methods to mutate the state they contain.  It also specifies how *memory needs to be allocated* to hold those values as the program runs.
 
-Looking at our Planet class again, we can see it contains two doubles.  We know in C#, that each double needs 32 bits to represent it.  Therefore, when the constructor is run, it must allocate 64 bits (two 32 bit chunks) to store these values as the program runs.
+Looking at our Planet class again, we can see it contains two doubles.  We know in C#, that each double needs 32 bits to represent it.  Therefore, when the constructor is run, it must allocate 64 bits (two 32 bit chunks) to store these values as the program runs. Essentially, the constructor _reserves the necessary memory to hold the object data(allocation)_, and initializes the values of those fields.
 
 State and memory are clearly related - the current state is what data is stored in memory.  It is possible to take that memory’s current state, write it to persistent storage (like the hard drive), and then read it back out at a later point in time and restore the program to exactly the state we left it with.  This is actually what Windows does when you put it into hibernation mode.
 

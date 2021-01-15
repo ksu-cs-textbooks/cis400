@@ -24,6 +24,8 @@ Some key terms to learn in this chapter are:
 
 * Method
 
+* Constructor
+
 * Property
 
 * Public
