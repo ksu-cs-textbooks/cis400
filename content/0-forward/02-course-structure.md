@@ -9,15 +9,11 @@ date: 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-<<<<<<< HEAD
-This course is taught in the "flipped" style.  This means you will be watching videos and working through tutorials _before_ you come to class.  Your class sessions will be for working on and getting help with your projects.
-=======
 This course is taught in the "flipped" style.  This means you will be watching videos and working through tutorials _before_ you come to class.  Your class sessions will be used to work on and get help with your projects.
 
 {{% notice info %}}
 Due to the ongoing COVID-19 pandemic, this course has been structured so that there is **never** a need to attend in-person, though we have strived to keep as much possibility of face-to-face contact as possible.  This way, if you need to isolate, you have the freedom to do so without concern for falling behind.
 {{% /notice %}}
->>>>>>> upstream/master
 
 ### The Big Software Solution
 Up to this point, you've likely done a lot of what I like to call "Baby Projects" - programming projects that are useful to demonstrate a concept or technique, but really don't do anything beyond that.  In contrast, we'll be building a large, multi-project software solution to meet a real-world problem - the software needed to run a fast-food franchise chain, the _{{< param ProjectName >}}_.  
