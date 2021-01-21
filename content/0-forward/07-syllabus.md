@@ -129,15 +129,15 @@ Additionally, we will create UML diagrams using Microsoft Visio, which can also 
 
 We will use Xamarin workbooks to distribute some content. This free software can be downlaoded from: [https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
 
-RocketChat also offers some free desktop and mobile clients that you may prefer over the web client.  You may download them from: [https://rocket.chat/install/](https://rocket.chat/install/).
+Discord also offers some free desktop and mobile clients that you may prefer over the web client.  You may download them from: [https://discord.com/download](https://discord.com/download).
 
 
 ### Recommended Texts & Supplies
-To participate in this course, students must have access to a modern web browser and broadband internet connection. All course materials will be provided via Canvas and Codio. Modules may also contain links to external resources for additional information, such as programming language documentation.
+To participate in this course, students must have access to a modern web browser and broadband internet connection. All course materials will be provided via Canvas. Modules may also contain links to external resources for additional information, such as programming language documentation.
 
 This course offers an instructor-written textbook, which is broken up into a specific reading order and interleaved with activities and quizzes in the modules. It can also be directly accessed at [{{< param textbookURL >}}]({{< param textbookURL >}}).
 
-Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offerd by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
+Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
 
 ### Subject to Change
 The details in this syllabus are not set in stone. Due to the flexible nature of this class, adjustments may need to be made as the semester progresses, though they will be kept to a minimum. If any changes occur, the changes will be posted on the Canvas page for this course and emailed to all students.

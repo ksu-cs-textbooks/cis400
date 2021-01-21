@@ -45,8 +45,8 @@ In an object-oriented programming language, a Class also _defines a new type_.  
 ```csharp
 public class Student {
   // backing variables
-  private void creditPoints = 0;
-  private void creditHours = 0;
+  private uint creditPoints = 0;
+  private uint creditHours = 0;
 
   /// <summary>
   /// Gets and sets first name.
@@ -77,23 +77,22 @@ public class Student {
     this.creditHours += hours;
     switch(grade) {
       case Grade.A:
-        this.creditPoints += 4.0;
+        this.creditPoints += 4.0 * hours;
         break;
       case Grade.B:
-        this.creditPoints += 3.0;
+        this.creditPoints += 3.0 * hours;
         break;
       case Grade.C:
-        this.creditPoints += 2.0;
+        this.creditPoints += 2.0 * hours;
         break;
       case Grade.D:
-        this.creditPoints += 1.0;
+        this.creditPoints += 1.0 * hours;
         break;
       case Grade.F:
-        this.creditPoints += 0.0;
+        this.creditPoints += 0.0 * hours;
         break;
     }
   }
-
 }
 ```
 
@@ -147,4 +146,4 @@ a = "foo";
 
 and the type of **a** changes from int (at the first assignment) to string (at the second assignment).
 
-C#, Java, C, C++, and Kotlin are all _statically typed languages_, while Python, JavaScript, and Ruby are _dynamically typed langauges_.   
+C#, Java, C, C++, and Kotlin are all _statically typed languages_, while Python, JavaScript, and Ruby are _dynamically typed languages_.   

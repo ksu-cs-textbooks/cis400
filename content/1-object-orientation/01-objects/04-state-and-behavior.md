@@ -50,7 +50,7 @@ The state of our variable `b` is $\\{6.0, 3.7, 5.6\\}$.
 
 We can also think about the state of the *program*, which would be something like: $\\{a: 5, b: \\{x: 6.0, y: 3.7, z: 5.6\\}\\}$, or a state vector like: $|5, 6.0, 3.7, 5.6|$.  We can therefore think of a program as a *state machine*. We can in fact, draw our entire program as a state table listing all possible legal states (combinations of variable values) and the transitions between those states. Techniques like this can be used to reason about our programs and even prove them correct!
 
-This way of reasoning about programs is the heart of [Automata Theory](https://en.wikipedia.org/wiki/Automata_theory), a subject you may choose to learn more about if you persue graduate studies in computer science.
+This way of reasoning about programs is the heart of [Automata Theory](https://en.wikipedia.org/wiki/Automata_theory), a subject you may choose to learn more about if you pursue graduate studies in computer science.
 
 What causes our program to transition between states?  If we look at our earlier examples, it is clear that *assignment* is a strong culprit.  Expressions clearly have a role to play, as do control-flow structures decide which transformations take place.  In fact, we can say that our program code is what drives state changes - the *behavior* of the program.
 

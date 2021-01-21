@@ -29,7 +29,7 @@ public struct Vector3 {
     /// <summary>
     /// Computes the dot product of this vector and another one 
     /// </summary>
-    /// <param name="other">The othe vector</param>
+    /// <param name="other">The other vector</param>
     public double DotProduct(Vector3 other) {
         return this.X * other.X + this.Y * other.Y + this.Z * other.Z;
     }

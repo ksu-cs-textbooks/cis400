@@ -10,7 +10,7 @@ As part of the strategy for tackling the challenges of the software crisis, good
 ## Key Terms
 
 Some key terms to learn in this chapter are:
-* User documenation
+* User documentation
 * Developer documentation
 * Markdown
 * XML

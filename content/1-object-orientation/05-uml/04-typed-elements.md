@@ -12,9 +12,9 @@ $$
 \texttt{[visibility] element : type [constraint]} 
 $$
 
-The optional $[visibility]$ indicates the visilbity of the element, the $element$ is the name of the typed element, and the $type$ is its type, and the $[constraint]$ is an optional constraint.  
+The optional $[visibility]$ indicates the visibility of the element, the $element$ is the name of the typed element, and the $type$ is its type, and the $[constraint]$ is an optional constraint.  
 
-### Visiblity
+### Visibility
 In UML _visibility_ (what we would call access level in C#) is indicated with symbols, i.e.:
 
 * $\texttt{+}$ indicates `public`
@@ -49,4 +49,3 @@ $$
 $$
 
 Indicates the private variable `age` must be greater than or equal to 0.
-

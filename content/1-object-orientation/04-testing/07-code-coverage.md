@@ -5,9 +5,9 @@ weight: 7
 date: 2018-08-24T10:53:26-05:00
 ---
 
-The term _test code coverage_ refers to how much of your program's code is executed as your tests run. It is a useful metric for evaluating the _depth_ of your test, if not necessarily the quality.  Basically, if your code is not executed in the test framework, it is not tested in any way. If it is executed, then at least _some_ tests are looking at it.  So aiming for a high code coverage is a good starting point for wrting tests.
+The term _test code coverage_ refers to how much of your program's code is executed as your tests run. It is a useful metric for evaluating the _depth_ of your test, if not necessarily the quality.  Basically, if your code is not executed in the test framework, it is not tested in any way. If it is executed, then at least _some_ tests are looking at it.  So aiming for a high code coverage is a good starting point for writing tests.
 
-Much like Visual Studio provides a Test Explorer for running tests, it provides support for analzying test coverage.  We can access this from the "Test" menu, where we select the "Analyze Code Coverage for All Tests".
+Much like Visual Studio provides a Test Explorer for running tests, it provides support for analyzing test coverage.  We can access this from the "Test" menu, where we select the "Analyze Code Coverage for All Tests".
 
 ![Code coverage command in the Test Menu]({{<static "images/1.4.7.1.png">}})
 

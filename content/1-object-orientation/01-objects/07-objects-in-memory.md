@@ -95,7 +95,7 @@ Simple first = new Simple(10, 12);
 Simple second = new Simple(8, 5);
 ```
 
-The value of `first.A` would be 8 - becuase `first.A` and `second.A` reference the _same_ memory location, and `second.A` was set _after_ `first.A`.  If we changed it again:
+The value of `first.A` would be 8 - because `first.A` and `second.A` reference the _same_ memory location, and `second.A` was set _after_ `first.A`.  If we changed it again:
 
 ```csharp
 first.A = 3;
@@ -103,7 +103,7 @@ first.A = 3;
 
 Then both `first.A` and `second.A` would have the value 3, as they share the same memory.  `first.B` would still be 12, and `second.B` would be 5.
 
-Another way to think about `static` is that it means the field or method we are modifying belongs to the _class_ and not the individual _object_.  Hence, each object _shares_ a `static` variable, because it belongs to thier class.  Used on a method, `static` indicates that the method belongs to the class definition, not the object instance.  Hence, we must invoke it _from the class_, not an object instance: i.e. `Math.Pow()`, not `Math m = new Math(); m.Pow();`.  
+Another way to think about `static` is that it means the field or method we are modifying belongs to the _class_ and not the individual _object_.  Hence, each object _shares_ a `static` variable, because it belongs to their class.  Used on a method, `static` indicates that the method belongs to the class definition, not the object instance.  Hence, we must invoke it _from the class_, not an object instance: i.e. `Math.Pow()`, not `Math m = new Math(); m.Pow();`.  
 
 Finally, when used with a class, `static` indicates we can't create objects from the class - the class definition exists on its own.  Hence, the `Math m = new Math();`  is actually an error, as the `Math` class is declared static.
 {{% /notice %}}

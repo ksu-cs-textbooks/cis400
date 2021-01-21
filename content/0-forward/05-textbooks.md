@@ -17,7 +17,7 @@ Please note that the materials presented in Canvas have additional graded assign
 
 ### O'Riley for Higher Education
 
-If you are looking for additional resources to support your learning, a great resource that is availabe to Kansas State University students is the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered through the Kansas State University Library.  These include electronic editions of thousands of popular textbooks as well as videos and tutorials.  As of this writing, a search for object-orientation returns 13,237 results and C# returns 5,984 results.  In particular, I would recommend these books:
+If you are looking for additional resources to support your learning, a great resource that is available to Kansas State University students is the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered through the Kansas State University Library.  These include electronic editions of thousands of popular textbooks as well as videos and tutorials.  As of this writing, a search for object-orientation returns 13,237 results and C# returns 5,984 results.  In particular, I would recommend these books:
 
 * ["The Object-Oriented Thought Process"](https://learning.oreilly.com/library/view/the-object-oriented-thought/9780135182130/) by Matt Weisfeld for learning more about object-orientation.
 * ["Mastering Windows Presentation Foundation"](https://learning.oreilly.com/library/view/mastering-windows-presentation/9781838643416/) by Sheridan Yuen for learning about WPF.

@@ -20,7 +20,7 @@ Some key terms to learn in this chapter are:
 * Association
 * Generalization
 * Realization
-* Compostion
+* Composition
 * Aggregation
 
 ## Key Skills
