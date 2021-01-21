@@ -12,7 +12,8 @@ page = [ "HTML", "Iframeable", "Teleprompter"]
 section = [ "HTML", "Iframeable", "Teleprompter"]
 
 [params]
-  projectName = "Flying Saucer"
+  projectName = "The Flying Saucer"
+  projectUpstream = "https://github.com/ksu-cis/flying-saucer.git"
   textbookURL = "https://textbooks.cs.ksu.edu/cis400"
   editURL = "https://gitlab.cs.ksu.edu/nhbean/cis400-textbook/tree/master/content/"
   description = "K-State CIS 400 Textbook"

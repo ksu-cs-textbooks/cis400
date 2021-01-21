@@ -18,7 +18,7 @@ As mentioned before, the course sessions are one of the best time to get help wi
 Because attendance at class sessions is not required, it may be tempting to schedule work hours or other activities during that time.  **Please do not do so - the course is designed with the understanding that that time is reserved for your homework, and it is the best time to reach the instructor.** Students who have done this in the past have struggled in the course and averaged more than a letter grade under their peers who used that time for homework.
 {{% /notice %}}
 
-## RocketChat
+## Discord
 For questions that crop up outside of class times, your first line of communication for this course is the departmental RocketChat server hosted at [https://chat.cs.ksu.edu](https://chat.cs.ksu.edu/):
 
 ![The RocketChat Web App]({{<static "images/0.0.3.1.png">}})
