@@ -48,7 +48,7 @@ public class Fruit
 }
 
 /// <summary>
-/// A class representing a bananna
+/// A class representing a banana
 /// </summary>
 public class Banana : Fruit
 {
@@ -145,7 +145,7 @@ Now we can override the `Blend()` method in Banana class:
 
 ```csharp
 /// <summary>
-/// A class representing a bananna
+/// A class representing a banana
 /// </summary>
 public class Banana : Fruit
 {
