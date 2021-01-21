@@ -15,7 +15,7 @@ This course does not have a required print textbook.  The resources presented in
 Please note that the materials presented in Canvas have additional graded assignments and exercises worked into the reading order that do not appear in the online edition of the textbook.  You are responsible for completing these!
 {{% /notice %}}
 
-## O'Riley for Higher Education
+### O'Riley for Higher Education
 
 If you are looking for additional resources to support your learning, a great resource that is available to Kansas State University students is the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered through the Kansas State University Library.  These include electronic editions of thousands of popular textbooks as well as videos and tutorials.  As of this writing, a search for object-orientation returns 13,237 results and C# returns 5,984 results.  In particular, I would recommend these books:
 

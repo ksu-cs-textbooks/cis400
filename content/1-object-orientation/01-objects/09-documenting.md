@@ -3,6 +3,7 @@ title: "Documenting Objects"
 pre: "9. "
 weight: 9
 date: 2018-08-24T10:53:26-05:00
+hidden: true
 ---
 While often overlooked, *documenting* is a critically important part of writing software.  There are two purposes to documenting:
 

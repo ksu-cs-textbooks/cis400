@@ -1,7 +1,7 @@
 ---
 title: "Message Passing"
-pre: "8. "
-weight: 8
+pre: "9. "
+weight: 9
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -29,7 +29,7 @@ public struct Vector3 {
     /// <summary>
     /// Computes the dot product of this vector and another one 
     /// </summary>
-    /// <param name="other">The othe vector</param>
+    /// <param name="other">The other vector</param>
     public double DotProduct(Vector3 other) {
         return this.X * other.X + this.Y * other.Y + this.Z * other.Z;
     }
@@ -83,8 +83,10 @@ Note how here, `f` is the object receiving the message `Normalize`.  There is no
 
 Message passing therefore acts like those special molecular pumps and other gate mechanisms of a cell that control what crosses the cell wall.  The methods defined on a class determine how outside code can interact with the object. An extra benefit of this approach is that a method becomes an abstraction for the behavior of the code, and the associated state changes it embodies.  As a programmer using the method, we don't need to know the exact implementation of that behavior - just what data we need to provide, and what it should return or how it will alter the program state.  This makes it far easier to reason about our program, and also means we can change the internal details of a class (perhaps to make it run faster) without impacting the other aspects of the program.
 
+This is also the reason we want to use getters and setters (or properties in C#) instead of public fields in an object-oriented language.  Getters, setters, and C# properties are all methods, and therefore are a form of message passing, and they ensure that outside code is not modifying the state of the object (rather, the outside code is requesting the object to change its state).  It is a fine distinction, but one that can be very important.
+
 {{% notice info %}}
 You probably have noticed that in many programming languages we speak of _functions_, but in C# and other object-oriented languages, we'll often speak of _methods_.  You might be wondering just what is the difference?
 
-Both are forms of message passing, and share many of the same characteristics.  Broadly speaking though, _methods_ are _functions_ defined as part of an object.  Therefore, their bodies can access the state of the object.  In fact, that's what the `this` keyword in C# means - it refers to _this object_, i.e. the instance of the class that the method is currently executing for.  For non-object-oriented languages, there is no concept of `this` (or `self` as it appears in other languages).
+Both are forms of message passing, and share many of the same characteristics.  Broadly speaking though, _methods_ are _functions_ defined as part of an object.  Therefore, their bodies can access the state of the object.  In fact, that's what the `this` keyword in C# means - it refers to _this object_, i.e. the instance of the class that the method is currently executing for.  For non-object-oriented languages, there is no concept of `this` (or `self` as it appears in some other languages).
 {{% /notice %}}

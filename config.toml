@@ -1,4 +1,4 @@
-baseURL = "https://cs.ksu.edu/~nhbean/cis400"
+baseURL = "https://textbooks.cs.ksu.edu/cis400"
 languageCode = "en-us"
 title = "K-State CIS 400 Textbook"
 
@@ -12,7 +12,9 @@ page = [ "HTML", "Iframeable", "Teleprompter"]
 section = [ "HTML", "Iframeable", "Teleprompter"]
 
 [params]
-  textbookURL = "https://cs.ksu.edu/~nhbean/cis400"
+  projectName = "The Flying Saucer"
+  projectUpstream = "https://github.com/ksu-cis/flying-saucer.git"
+  textbookURL = "https://textbooks.cs.ksu.edu/cis400"
   editURL = "https://gitlab.cs.ksu.edu/nhbean/cis400-textbook/tree/master/content/"
   description = "K-State CIS 400 Textbook"
   author = "Nathan Bean"

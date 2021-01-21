@@ -15,84 +15,76 @@ The following is an outline of the topics we will be covering and when.
 Please be aware that this schedule and topic list will likely undergo some revision during the semester.
 {{% /notice %}}
 
-Week 1 (Week of 8/17/2020)
-* How we learn programming
-* The context in which object-orientation emerged
-* **Exam 0 - The Pretest**
+Week 0 
+* COVID-19 Pandemic Information
+* Introduction to the Course
 
-Week 2 (Week of 8/24/2020)
+Week 1 
+* **Exam 0 - The Preassessment*
+* The Science of Learning Programming
+* Setting the Stage (The context in which object-orientation emerged)
+
+Week 2 
 * Classes and Objects
-* Encapsulation
-* Data Hiding
-* State and Behavior
-* Objects in Memory
 * Documenting Objects
-* Data Milestone 1
+* Class Library Milestone 1
 
-Week 3 (Week of 8/31/2020)
-* Message Passing
-* Interfaces
-* Automated Testing
-* Test-Driven Design
-* Data Milestone 2
+Week 3 
+* Testing
+* Class Library Milestone 2
 
-Week 4 (Week of 9/7/2020)
+Week 4 
 * Polymorphism
-* Types
-* Inheritance
-* Dynamic Dispatch
-* Data Milestone 3
+* UML Diagrams
+* Class Library Milestone 3
 
-Week 5 (Week of 9/14/2020)
+Week 5 
 * Exam I
 
-Week 6 (Week of 9/21/2020)
-* Desktop Development
-* Windows Presentation Foundation vs. Windows Forms
-* Component-Based Design
-* XAML
+Week 6 
+* Windows Presentation Foundation
+* The Elements Tree
 * POS Milestone 1
 
-Week 7 (Week of 9/28/2020)
-* Data Binding
-* MVVM Architecture
-* Testing User Interfaces
+Week 7
+* Events
+* Routed Events
 * POS Milestone 2
 
-Week 8 (Week of 10/5/2020)
-* Component Interaction
-* Advanced Debugging techniques
+Week 8
+* Data Binding
+* Dependency Properties
 * POS Milestone 3
 
-Week 9 (Week of 10/12/2020)
-* DLL Integration
+Week 9
+* Dependency Objects
+* Component-Based Design
 * POS Milestone 4
 
-Week 10 (Week of 10/19/2020)
+Week 10 
 * Exam II
 
-Week 11 (Week of 10/26/2020)
-* .NET Core 
-* Webservers
-* Razor Pages
+Week 11
+* Core Web Technologies
+* ASP.NET
 * Web Milestone 1
 
-Week 12 (Week of 11/2/2020)
-* Web Forms
-* Request Processing
-* Aggregation Functions
+Week 12 
+* Web Data
+* Responsive Design
 * Web Milestone 2
 
-Week 13 (Week of 11/9/2020)
+Week 13 
 * LINQ
+* Deployment
 * Web Milestone 3
 
-Week 14 (Week of 11/16/2020)
+Week 14 
 * Blazor components
 * Web Milestone 4
 
-Week 15 (Week of 11/30/2020) [Distance Week]
+Week 15 
 * Asynchronous functions
 
-Week 16 (Week of 12/7/2020)
+Week 16 
 * Final

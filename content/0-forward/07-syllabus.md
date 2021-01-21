@@ -72,19 +72,19 @@ There is no shortcut to becoming a great programmer. Only by **_doing the work_*
 _Tutorials_
 Each module will include many tutorial assignments that will take you step-by-step through using a particular concept or technique.  The point is not simply to complete the tutorial, but to _practice_ the technique and coding involved.  You will be expected to implement these techniques on your own in the milestone assignment of the module - so this practice helps prepare you for those assignments.
 
-_Milestone Programming Assignments_
+#### Milestone Programming Assignments
 Throughout the semester you will be building a non-trivial software project iteratively; every week a new milestone (a collection of features embodying a new version of a software application) will be due. Each milestone builds upon the prior milestone’s code base, so it is critical that you complete each milestone in a timely manner! This process also reflects the way software development is done in the real world - breaking large projects into more readily achievable milestones helps manage the development process.
 
 Following along that real-world theme, programming assignments in this class will also be graded according to their conformance to coding style, documentation, and testing requirements. Each milestone’s rubric will include points assigned to each of these factors. It is not enough to simply write code that compiles and meets the specification; good code is readable, maintainable, efficient, and secure. The principles and practices of Object-Oriented programming that we will be learning in this course have been developed specifically to help address these concerns.
 
-_Exams_
+#### Exams
 Over the course of the semester we will have a total of four exams. The primary purpose of these exams is formative; they are intended to help us (me as the instructor and you as the student) evaluate how you are learning the material. Thus, my testing policies may differ greatly from your prior courses.
 
 These exams will cover the vocabulary and concepts we are learning and involve reasoning about object-oriented programming, including some code writing. The purpose of this style of assessment to assess your ability to recognize the problem and conceive an appropriate solution.  Hence, you are encouraged to annotate your answers with comments, describing your reasoning as you tackle the problem. Additionally, I will include a “certainty scale” for each question, and would ask that you mark how confident you are in your answer. Doing these extra steps helps me know how well you are grasping the material, and helps both of us to know what concepts and skills may need more work.
 
 The first exam is a _pretest_ that is used to help establish your knowledge and readiness coming into the course.  You will earn a **100%** for completing this exam, regardless of your correct or incorrect responses.
 
-The second two exams are _midterms_, which cover the content immediately proceeding them. You will have a chance to correct mistakes you have made in thee exams, potentially earning back your full points.
+The second three exams are _midterms_, which cover the content immediately proceeding them. You will have a chance to correct mistakes you have made in thee exams, potentially earning back your full points.
 
 The _final_ exam is comprehensive, and covers the most important topics and skills we have developed in the course.  This is considered a _summative_ test (one that measures your mastery of a subject).  It will count for twice the number of points as the earlier exams, and you will not have a chance to correct mistakes made on it.
 

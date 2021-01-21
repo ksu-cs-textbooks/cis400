@@ -9,7 +9,9 @@ date: 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-The projects for this semester are all centered around the creation of software to support a fantasy-themed fast-food chain, Bleakwind Buffet. We will be developing this program iteratively, and each week we will have a new set of features to add and turn in as a milestone. These milestones are:
+The projects for this semester are all centered around the creation of software to support a fast-food restaurant chain, **{{<param projectName >}}**. We will be developing this program iteratively, and each week we will have a new set of features to add and turn in as a milestone. Each milestone will represent a new release in your git repository created in the first assignment.
+
+These milestones are:
 
 <table>
   <tr>
@@ -20,27 +22,27 @@ The projects for this semester are all centered around the creation of software 
   <tr>
     <td>2</td>
     <td>Class Library Milestone 1</td>
-    <td>8/28/2020</td>
+    <td>2/5/2021</td>
   </tr>
   <tr>
     <td>3</td>
     <td>Class Library Milestone 2</td>
-    <td>9/4/2020</td>
+    <td>2/12/2021</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Class Library Milestone 3</td>
-    <td>9/11/2020</td>
+    <td>2/19/2021</td>
   </tr>
   <tr>
     <td>6</td>
     <td>Point of Sale Milestone 1</td>
-    <td>9/26/2020</td>
+    <td>3/12/2021</td>
   </tr>
   <tr>
     <td>7</td>
     <td>Point of Sale Milestone 2</td>
-    <td>10/3/2020</td>
+    <td>3/12/2020</td>
   </tr>
   <tr>
     <td>8</td>
@@ -68,7 +70,7 @@ The projects for this semester are all centered around the creation of software 
     <td>11/14/2020</td>
   </tr>
   <tr>
-    <td>12</td>
+    <td>15</td>
     <td>Website Milestone 4</td>
     <td>11/21/2020</td>
   </tr>

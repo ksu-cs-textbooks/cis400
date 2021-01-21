@@ -9,8 +9,6 @@ date: 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# Class Data Library Milestone #1
-
 ### General requirements:
 
 * You need to follow the style laid out in the [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
@@ -21,11 +19,9 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
   * Create entrée classes
 
-  * Create drink classes
-
-  * Create side classes
-
 * All classes should be declared in their respective namespace (see below)
+
+* All files should have 
 
 ### Assignment requirements:
 
@@ -33,76 +29,71 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
   * Declared in the `BleakwindBuffet.Data.Enums` namespace
 
-* Entrée classes (7)
+* Entrée classes (6)
 
   * Declared in the `BleakwindBuffet.Data.Entrees` namespace
 
-* Drink classes (5)
-
-  * Declared in the `BleakwindBuffet.Data.Drinks` namespace
-
-* Side classes (4)
-
-  * Declared in the `BleakwindBuffet.Data.Sides` namespace
 
 ### Purpose:
 
-Review of how to create classes - Sets the stage for the rest of the semester. Everything included in this assignment you should have exposed to before in CIS200 and CIS300. This assignment should be relatively straight forward just a bit time consuming and repetative. If we are talking about MVC (Model-View-Controller) we are building the models for the application. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, another TA, or myself.
-
-### Time requirements:
-
-* 2 - 3 hours
+Review of how to create classes - Sets the stage for the rest of the semester. Everything included in this assignment you should have exposed to before in CIS200 and CIS300. This assignment should be relatively straight forward, though it will take some time to complete. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
 
 ### Recommendations:
 
 * Get in the habit of reading the entire assignment before you start to code. Make sure you understand what is being asked of you. Please do not stub your toe and have to redo work because you did not read the entire assignment.
 
-```csharp
-/* Remember all classes need to be commented and include a general class comment at the top of every class */
+* Accuracy is _important_.  Your class, property, enumeration and other names, along with the descriptions _must match the specification given here_.  Otherwise, your code is **not correct**.  While typos may be a small issue in writing intended for human consumption, in computer code _it is a big problem!_ 
 
+* Remember that you must document your classes.  This includes a general identity comment at the top of your files, i.e.:
+
+```csharp
 /*
-* Author: Zachery Brunner
+* Author: Nathan Bean
 * Edited by: (Only include if you are not the original author)
-* Class name: Something.cs
+* File name: Something.cs
 * Purpose: To inform the students of the requirements for this milestone
 */
-
-/* Also if you copy and paste code please remember to change the comments if applicable. I.E. should not see a comment "Briarheart burger" in the double draugr class :) */
 ```
+
+* Also, you must provide XML-style documentation for all classes, fields, methods, and properties, as was described in the module on documentation.
+
+* The tests provided in the _DataTest_ project can be un-commented and run to check your work.  You should _not_ change these tests - if your code fails, it is _your code_ that needs to change.
 
 ## Enum Classes (10 Points)
 
-All enums should reside in the `BleakwindBuffet.Data.Enums` namespace
+All enums should reside in the `FlyingSaucer.Data.Enums` namespace
 
-There are two enums needed:
+There are three enums needed:
 
-* Size - Done for you! Look below :)
+* `Size` - Done for you! Look below and in the repository code.
 
-* SodaFlavor - Includes the following attributes
-
-  * Blackberry
-
+* `SyrupFlavor` - Includes the following attributes:
+  * Maple
   * Cherry
+  * Blueberry
+  * Blackberry
+  * Strawberry
 
-  * Grapefruit
-
-  * Lemon
-
-  * Peach
-
-  * Watermelon
+* `EggStyle` - includes the following attributes
+  * Scrambled
+  * Poached
+  * HardBoiled
+  * SunnySideUp
+  * OverEasy
+  * OverMedium
+  * OverWell
 
 ```csharp
 /*
-* Author: Zachery Brunner
-* Class name: Size.cs
-* Purpose: Class used to represent sizes through an enumeration
+* Author: Nathan Bean
+* File name: Size.cs
+* Purpose: Enumeration used to represent sizes
 */
 
-namespace BleakwindBuffet.Data.Enums
+namespace FlyingSaucer.Data.Enums
 {
     /// <summary>
-    /// Stores available sizes
+    /// Provides available sizes
     /// </summary>
     public enum Size
     {
@@ -113,298 +104,143 @@ namespace BleakwindBuffet.Data.Enums
 }
 ```
 
-## Entree Classes (30 Points)
+## Entree Classes 
 
-All entrees should reside in the `BleakwindBuffet.Data.Entrees` namespace
+All entrees should reside in the `FlyingSaucer.Data.Entrees` namespace
 
-Bleakwind Buffet offers seven entrées:
+The Flying Saucer offers six entrées:
 
-* Briarheart Burger
+* Flying Saucer
 
-* Double Draugr
+* Crashed Saucer
 
-* Thalmor Triple
+* The Outer Omelette
 
-* Smokehouse Skeleton
+* Space Scramble
 
-* Garden Orc Omelette
+* Livestock Mutilation
 
-* Philly Poacher
+* Nothing to See Here
 
-* Thugs T-Bone
 
-Each entrée should implement a property for: **Price** (`double`), **Calories** (`uint`), and **SpecialInstructions** (`List<String>`). This is in addition to the ingredients each of the entrees contain. All entrées override the `ToString()` function and return the name of the entrée. See the table of strings the respective `ToString()` methods should return below.
-
-<hr/>
-
-#### Briarheart Burger (A 1/4lb burger)
-
-_Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese._
-
-Implement a class to represent the Briarheart Burger “BriarheartBurger.cs”. Its price is **$6.32** and its calories are **743**. It should have boolean properties for **Bun**, **Ketchup**, **Mustard**, **Pickle**, and **Cheese**. These are true by default. Setting these to false results in the addition of the corresponding instructions in the **SpecialInstructions** list: “Hold bun”, “Hold ketchup”, “Hold mustard”, “Hold pickle”, and “Hold cheese”.
-
-#### Double Draugr (A 1/2lb burger)
-
-_Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo._
-
-Implement a class to represent the Double Draugr “DoubleDraugr.cs”. Its price is **$7.32** and its calories are **843**. It has all the properties of the Brairheart Burger, plus **Tomato**, **Lettuce**, and **Mayo**. These are also set to true by default. Setting these to false results in the addition of the corresponding instruction in the **SpecialInstructions** list: “Hold tomato”, “Hold lettuce”, and “Hold mayo”.
-
-#### Thalmor Triple (A 1lb burger)
-
-_Think you are strong enough to take on the Thalmor? Inlcudes two 1/4lb patties with a 1/2lb patty inbetween with ketchup, mustard, pickle, cheese, tomato, lettuce, mayo, bacon, and an egg._
-
-Implement a class to represent the Thalmor Triple “ThalmorTriple.cs”. Its price is **$8.32** and its calories are **943**. It has all of the properties of the Double Drauger, plus **Bacon** and **Egg**. These are also set to true by default.  Setting these to false results in the addition of the corresponding instructions in the **SpecialInstructions** list: “Hold bacon”, and “Hold egg”.
-
-#### Smokehouse Skeleton (Breakfast combo)
-
-_Put some meat on those bones with a small stack of pancakes. Includes sausage links, eggs, and hash browns on the side. Topped with the syrup of your choice._
-
-Implement a class to represent the Smokehouse Skeleton “SmokehouseSkeleton.cs”. Its price is **$5.62** and its calories are **602**. It should have boolean properties for **SausageLink**, **Egg**, **HashBrowns**, and **Pancake.** These are true by default. Setting these to false results in the addition of the corresponding instructions in the **SpecialInstructions** list: “Hold sausage”, “Hold eggs”, “Hold hash browns”, and “Hold pancakes”.
-
-#### Garden Orc Omelette (Vegetarian omelette)
-
-_Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese._
-
-Implement a class to represent the Garden Orc Omelette “GardenOrcOmelette.cs”. Its price is **$4.57** and its calories are **404**. It should have boolean properties for **Broccoli**, **Mushrooms**, **Tomato**, and **Cheddar.** These are true by default. Setting these to false results in the addition of the corresponding instruction in the **SpecialInstructions** list: “Hold broccoli”, “Hold mushrooms”, “Hold tomato”, and “Hold cheddar”.
-
-#### Philly Poacher (Philly cheesesteak sandwich)
-
-_Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll._
-
-Implement a class to represent the Philly Poacher “PhillyPoacher.cs”. Its price is **$7.23** and its calories are **784**. It should have boolean properties for **Sirloin**, **Onion**, and **Roll**. These are true by default. Setting these to false results in the addition of  the corresponding instructions in the **SpecialInstructions** list: “Hold sirloin”, “Hold onions”, and “Hold roll”.
-
-#### Thugs T-Bone (T-Bone)
-
-_Juicy T-Bone not much else to say_
-
-Implement a class to represent the Thugs T-Bone “ThugsTBone.cs”. Its price is **$6.44** and its calories are **982**. It has no boolean properties. The **SpecialInstructions** should return an empty list always.
-
-### Special Note:
-
-If there are no special instructions return an empty list whenever `SpecialInstructions` is called.
-
-#### ToString() Return Values
-<table>
-    <tr>
-        <th>Class</th>
-        <th>ToString() return value</th>
-    </tr>
-    <tr>
-        <td>BriarheartBurger</td>
-        <td>"Briarheart Burger"</td>
-    </tr>    
-    <tr>
-        <td>DoubleDraugr</td>
-        <td>"Double Draugr"</td>
-    </tr> 
-    <tr>
-        <td>ThalmorTriple</td>
-        <td>"Thalmor Triple"</td>
-    </tr>
-    <tr>
-        <td>SmokehouseSkeleton</td>
-        <td>"Smokehouse Skeleton"</td>
-    </tr>
-    <tr>
-        <td>GardenOrcOmelette</td>
-        <td>"Garden Orc Omelette"</td>
-    </tr>
-    <tr>
-        <td>PhillyPoacher</td>
-        <td>"Philly Poacher"</td>
-    </tr>
-    <tr>
-        <td>ThugsTBone</td>
-        <td>"Thugs T-Bone"</td>
-    </tr>
-</table>
-
-## Drink Classes (30 Points)
-
-All drinks should reside in the `BleakwindBuffet.Data.Drinks` namespace
-
-Bleakwind Buffet offers five drinks:
-
-* Sailor’s Soda
-
-* Markarth Milk
-
-* Aretino Apple Juice
-
-* Candlehearth Coffee
-
-* Warrior Water
-
-Each drink should implement a property for: **Price** (`double`), **Calories** (`uint`), and **SpecialInstructions** (`List<string>`), **Size** (`Size` enum, default small), and **Ice** (`boolean`, default false) in addition to each of the drink specific properties.  They each should also override the `ToString()` method, and provide the name specified in the table below:
+Each entrée should implement a property for: `Name` (a `string`), `Description` (a `string`), `Price` (a `decimal`), `Calories` (a `uint`), and `SpecialInstructions` (a `List<String>`), containing any special instructions needed to prepare the dish for a specific customer (or empty if there are none). 
 
 <hr/>
 
-#### Sailor Soda (Old-fashioned soda)
+#### Flying Saucer (a full stack of pancakes)
+Implement a class to represent the Flying Saucer, named `FlyingSaucer` in the file _FlyingSaucer.cs_.  It should have the following properties:
 
-Implement a class to represent the Sailor Soda “SailorSoda.cs”. The price is **$1.42** (small), **$1.74** (medium), and **$2.07** (large). Calories are **117** (small), **153** (medium), **205** (large).  It should have a boolean property for **Ice** (default `true`), a `SodaFlavor` **Flavor** property (default cherry). **SpecialInstructions** should contain “Hold ice” if `Ice` is false.
+`Name`: _Flying Saucer_
 
-#### Markarth Milk (2% milk)
+`Description`: _Our namesake dish. A full stack of fluffy golden pancakes, served with whipped cream, butter and your choice of syrup._
 
-Implement a class to represent the Markarth Milk “MarkarthMilk.cs”. The price is **$1.05** (small), **$1.11** (medium), and **$1.22** (large). Calories are **56** (small), **72** (medium), **93** (large).  It should have a boolean property for **Ice** (default false) and a **SpecialInstructions** should contain “Add ice” if `Ice` is true.
+`Calories`: _254_  (or _127_ for a half-stack)
 
-#### Aretino Apple Juice (Apple juice)
+`Price`: _$5.50_  (or _$3.25_ for a half-stack)
 
-Implement a class to represent the Aretino Apple Juice “AretinoAppleJuice.cs”. The price is **$0.62** (small), **$0.87** (medium), and **$1.01** (large). Calories are **44** (small), **88** (medium), **132** (large).  It should have a boolean property for **Ice** (default false) and a **SpecialInstructions** should contain “Add ice” if `Ice` is true.
+In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), a boolean property for `WhippedCream` (indicating the pancake should be served with whipped cream - default `true`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple).  
 
-#### Candlehearth Coffee (Coffee)
+If the `HalfStack` property is true, the string `"Half Stack"` should appear in the `SpecialInstructions` list.  Similarly, the name of the selected syrup should appear in the `SpecialInstructions` along with the word "Syrup", i.e. when the selected syrup is maple, the `SpeicalInstructions` should include `"Maple Syrup"`.
 
-Implement a class to represent the Candlehearth Coffee “CandlehearthCoffee.cs”. The price is **$0.75** (small), **$1.25** (medium), and **$1.75** (large). Calories are **7** (small), **10** (medium), **20** (large). It should have a boolean properties for **Ice** (default false) and **RoomForCream** (default false), **Decaf** (default false) and **SpecialInstructions** should contain “Add ice” and “Add cream” when the corresponding properties are true, respectively.
+#### Crashed Saucer (a stack of french toast)
+Implement a class to represent the Crashed Saucer, named `CrashedSaucer` in the file _CrashedSaucer.cs_.  It should have the following properties:
 
-#### Warrior Water (Water)
+`Name`: _Crashed Saucer_
 
-Implement a class to represent the Warrior Water “WarriorWater.cs”. The price is **$0.00** for all sizes. It has **0** Calories for all sizes. It should have a boolean properties for **Ice** (default true) and **Lemon** (default false) and **SpecialInstructions** should contain “Hold ice” and “Add lemon” when the corresponding properties are false and true, respectively.
+`Description`: _A stack of thick-sliced french toast, served with whipped cream, butter and your choice of syrup._
 
-### Special Note:
+`Calories`: _510_ (or _255_ for a half-stack)
 
-If there are no special instructions return an empty list whenever `SpecialInstructions` is called.
+`Price`: _$5.80_ (or _$3.70_ for a half-stack)
 
-#### ToString() Return Values
-<table>
-    <tr>
-        <th>Class</th>
-        <th>ToString() return value</th>
-    </tr>
-    <tr>
-        <td>SailorSoda</td>
-        <td>"[Size] [Flavor] Sailor Soda" where [Size] is "Large", "Medium", or "Small" and [Flavor] is "Blackberry", "Cherry", "Grapefruit", "Lemon", "Peach", or "Watermelon"</td>
-    </tr>   
-    <tr>
-        <td>MarkarthMilk</td>
-        <td>"[Size] Markarth Milk" where [Size] is "Large", "Medium", or "Small"</td>
-    </tr>   
-    <tr>
-        <td>AretinoAppleJuice</td>
-        <td>"[Size] Aretino Apple Juice" where [Size] is "Large", "Medium", or "Small"</td>
-    </tr>   
-    <tr>
-        <td>CandlehearthCoffee</td>
-        <td>"[Size] Candlehearth Coffee" when the coffee is caffinated, or "[Size] Decaf Candlehearth Coffee" when it is decaffinated, and for both [Size] is "Large", "Medium", or "Small"</td>
-    </tr>  
-    <tr>
-        <td>Warrior Water</td>
-        <td>"[Size] Warrior Water" where [Size] is "Large", "Medium", or "Small"</td>
-    </tr>  
-</table>
-
-## Side Classes (30 Points)
-
-All sides should reside in the `BleakwindBuffet.Data.Sides` namespace
-
-Bleakwind Buffet offers four sides:
-
-* Vokun Salad
-
-* Fried Miraak
-
-* Mad Otar Grits
-
-* Dragonborn Waffle Fries
-
-Each side should implement a property for: **Price** (`double`), **Calories** (`uint`), and **Size** (`Size` enum, default small). They each should also override the `ToString()` method, and provide the name specified in the table below.
-
-<hr/>
-
-#### Vokun Salad (A fruit salad)
-
-Implement a class to represent the Vokun Salad “VokunSalad.cs”. The price is **$0.93** (small), **$1.28** (medium), and **$1.82** (large). Calories are **41** (small), **52** (medium), **73** (large).
-
-#### Fried Miraak  (Hash brown pancakes)
-
-Implement a class to represent the Fried Miraak “FriedMiraak.cs”. The price is **$1.78** (small), **$2.01** (medium), and **$2.88** (large). Calories are **151** (small), **236** (medium), **306** (large).
-
-#### Mad Otar Grits (Cheesy Grits)
-
-Implement a class to represent the Mad Otar Grits “MadOtarGrits.cs”. The price is **$1.22** (small), **$1.58** (medium), and **$1.93** (large). Calories are **105** (small), **142** (medium), **179** (large).
-
-#### Dragonborn Waffle Fries (Cajun fries)
-
-Implement a class to represent the Dragonborn Waffle Fries “DragonbornWaffleFries.cs”. The price is **$0.42** (small), **$0.76** (medium), and **$0.96** (large). Calories are **77** (small), **89** (medium), **100** (large).
-
-### Special Note:
-
-Since there are no special instructions for any sides they all should return an empty list whenever `SpecialInstructions` is called.
-
-#### ToString Return Values
-<table>
-    <tr>
-        <th>Class</th>
-        <th>ToString() return value</th>
-    </tr>
-    <tr>
-        <td>VokunSalad</td>
-        <td>"[Size] Vokun Salad" where [Size] is "Large", "Medium", or "Small"</td>
-    </tr> 
-    <tr>
-        <td>FriedMiraak</td>
-        <td>"[Size] Fried Miraak" where [Size] is "Large", "Medium", or "Small"</td>
-    </tr> 
-    <tr>
-        <td>MadOtarGrits</td>
-        <td>"[Size] Mad Otar Grits" where [Size] is "Large", "Medium", or "Small"</td>
-    </tr> 
-    <tr>
-        <td>DragonbornWaffleFries</td>
-        <td>"[Size] Dragonborn Waffle Fries" where [Size] is "Large", "Medium", or "Small"</td>
-    </tr> 
-</table>
+In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), a boolean property for `WhippedCream` (indicating the pancake should be served with whipped cream - default `true`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple). 
 
 
-### Common Coding Errors
+#### Outer Omelette (a loaded omelette)
+Implement a class to represent the Outer Omelette, named `OuterOmelette` in the file _OuterOmelette.cs_.  It should have the following properties:
 
-`StackOverflowException`: This exception is thrown when you run out of stack space. Usually due to nested method calls (recursion)
+`Name`: _OuterOmelette_
 
-```csharp
-/* StackOverflowException Example */
+`Description`: _A loaded omelette stuffed with all the favorites._
 
-/* Private backing variable */
-private bool ice = false;
+`Calories`: _510_
 
-/* Getter and setter for the private backing variable */
-public bool Ice
-{
-    get { return Ice; }
-    set { Ice = value; }
-}
-```
+`Price`: _$5.80_ 
 
-What is wrong with the example above? Notice that your backing variable has the name `ice` (lower case), while the getter property has the name `Ice` (upper case).  When you use the name `Ice` _within_ the getter or setter, you're referring to the getter or setter method, _not_ the backing variable.  So you are not getting or setting the actual backing variable. Rather, each time you invoke the getter/setter it then invokes itself, which then invokes itself.  This process spirals into an infinite recursion loop which will cause the program to crash due to a `StackOverflowException`. 
+In addition to the normal entree properties, it should have a boolean properties for `Tomatoes`, `Mushrooms`, `Peppers`, `Onions`, `Spinach`, `Ham`, `Cheese`, and `SourCream`.  Each of these indicates an ingredient to include on the omelette, and each is `true` by default.  If any of these properties are set to `false` then a "Hold" message should be included in the `SpecialInstructions` list, i.e. if `SourCream` is false, the `SpecialInstructions` should contain the instruction `"Hold Sour Cream"` (note that all words should be capitalized and spaced in the special instructions).
 
-Here is a code block to demonstrate several correct ways to use getters and setters with a private backing variable:
+#### Space Scramble (skillet-fried potatoes, sausage, and egg)
+Implement a class to represent the Space Scramble, named `SpaceScramble` in the file _SpaceScramble.cs_.  It should have the following properties:
 
-```csharp
-/* Correct getter/setter Example */
+`Name`: _Space Scramble_
 
-/* Private backing variable */
-private bool ice = false;
+`Description`: _A hearty skillet-fried scramble of potatoes, sausage, peppers, jack cheddar cheese, sour cream, and topped with your choice of egg._
 
-/* Getter and setter for the private backing variable */
-public bool Ice
-{
-    get { return ice; }
-    set { ice = value; }
-}
-``` 
+`Calories`: _380_
 
-Notice the getter and setter methods access the private backing variable `ice` (lower case).  Alternatively, if you do not need access to the private backing variable in your class, you can use [Auto Implemented Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties):
+`Price`: _$5.20_ 
 
-```csharp
-/* Or use Auto Implemented Properties */
-public bool SomeAutoProperty { get; set; }
-```
+In addition to the normal entree properties, it should have a boolean properties for `Potatoes`, `Sausage`, `Peppers`, `Cheese`, `SourCream`, and `Egg`.  Each of these indicates an ingredient to include on the omelette, and each is `true` by default.  If any of these properties are set to `false` then a "Hold" message should be included in the `SpecialInstructions` list, i.e. if `SourCream` is false, the `SpecialInstructions` should contain the instruction `"Hold Sour Cream"` (note that all words should be capitalized and spaced in the special instructions).
 
-This approach causes the compiler to create a 'hidden' backing variable for the property to use.  Other than the fact you cannot access that backing variable elsewhere in your code, it functions identically to the example above.
+Also, it should have a property for `EggStyle` with type `EggStyle`.  The selected `EggStyle` should appear in the special instructions, provided that the `Egg` property is `true`.  I.e. if `OverEasy` is selected, the `SpecialInstructions` should include `"Eggs Over Easy"` (note that all words should be capitalized and spaced in the special instructions). If the `Egg` property is `false`, then no instructions on the egg style should appear in the special instructions.
+
+#### Livestock Mutilation (biscuits and gravy)
+Implement a class to represent the Livestock Mutilation, named `LivestockMutilation` in the file _LivestockMutilation.cs_.  It should have the following properties:
+
+`Name`: _Livestock Mutilation_
+
+`Description`: _A hearty gravy saturated with sausage, poured over fluffy golden buttermilk biscuits._
+
+`Calories`: _332_  
+
+`Price`: _$6.10_
+
+In addition to the normal entree properties, it should have a boolean property for `GravyOnTheSide` (indicating the sausage and gravy should not be poured over the biscuits, default `false`).  If this property is `true`, then the instruction `"Gravy on the Side"` should appear in the `SpecialInstructions` list.
 
 
-### How Grading Works (for this assignment)
+#### Nothing To See Here (bacon, eggs, and toast)
+Implement a class to represent the Nothing to See Here, named `NothingToSeeHere` in the file _NothingToSeeHere.cs_.  It should have the following properties:
 
-The TA’s will use a series of automated tests to ensure you followed the given UML and completed the entirety of the assignment. If you have any questions please do not hesitate to ask.
+`Name`: _Nothing to See Here_
 
-Lets talk about how to submit this assignment. You will be working out of repository hosted on Github.
+`Description`: _The breakfast classic of bacon, eggs, and Texas toast._
+
+`Calories`: _512_ 
+
+`Price`: _$3.50_  
+
+In addition to the normal entree properties, it should have a boolean property for `SubstituteSausage` (indicating the bacon should be substituted with bacon, default `false`).  If this property is `true`, then the `SpecialInstructions` list should include `"Substitute Sausage"`, and the `Calories` property should instead report _543_ calories.
+
+You should also implement an `EggStyle` property of type `EggStyle`, indicating how the eggs should be prepared.  The `SpecialInstructions` should always contain instructions for preparing the eggs.  I.e. if `OverEasy` is selected, the `SpecialInstructions` should include `"Eggs Over Easy"` (note that all words should be capitalized and spaced in the special instructions). 
+
+## Grading
+
+The TA’s will use a series of automated tests to ensure you completed the entirety of the assignment as described above, and assign points based on the rubric below. The TAs should not have to alter your code in order to run the tests.  If you have any questions please do not hesitate to ask.
+
+{{% notice warning %}}
+At this point in your studies, you should **never** turn in a program that does not compile successfully.  If your assignment does not compile, it will automatically be assigned a grade of 0.
+
+Similarly, you should not have warnings when you compile.  Uncorrected warnings will result in a flat deduction of 10 points from your assignment.  If you are unsure of what a particular warning means, ask!
+{{% /notice %}}
+
+#### Milestone 1 Rubric
+
+Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
+
+Comments 
+* -1 point for every public member not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every file not containing a header describing the file purpose and author(s).
+
+Enum Classes 
+* -2 points for every missing or incorrect attribute
+
+Entree Classes
+* -2 points for every missing or incorrect property
+* -2 points for every missing or incorrect method
+
+## Submitting the Assignment
+
+Since this is your first Milestone, let's review how to submit milestones. You will be working out of repository hosted on Github.
 
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABOkAAAEvCAYAAAAQKJV8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAIjKSURBVHhe7d0JYBPF/gfwb+nFVUDOQhEpHiBIW4QWFVARlcNnFZ8I/BWeoCBCEW8FBREU3vOJoiAoVVHBB+pTpD4QQVA5FFqQtiCnAgqFcilSrra0/c/MziabNEmTNjUtfD+6bGaP2c1mu5n8dmY2qEgAERERERERERERBUwVPSYiIiIiIiIiIqIAYZCOiIiIiIiIiIgowBikIyIiIiIiIiIiCjAG6YiIiIiIiIiIiAKMQToiIiIiIiIiIqIAY5COiIgoQBo3uQzrUn/UKSIiIiIiOp8xSEdERBRAz4x5noE6IiIiIiJikI6IiCiQvv56IQN1RERERETEIB0REVGgMVBHREREREQM0hEREVUADNQREREREZ3fGKQjIiKqIBioIyIiIiI6fzFIR0REVIEwUEdEREREdH5ikI6IiKiCYaCOiIiIiOj8wyAdERFRBbRo8acM1BERERERnUcYpCMiIqqAwsNC8OmnHzJQR0RERER0nmCQjoiIqIKqXbsmPvzwbQbqiIiIiIjOAwzSERERVWCNGjXAu+++oQJ1RERERER07goqEvRrr506fQZ/5pxAbm6enkJERES+SuhwLQ4d/FmngJMnz6BGjarqdefOPdTYau68d/UrIiIiIiIKhPDwMNSOqInq1Yxyuz/5HKSTAbpDR35Hw/p1y2WHiIiIzheNm1yGA/t3qNcyQNeoUTTmfzQXf7ulG2666XaMGvUg/va37mo+EREREREFXnnGxXxu7ipr0DFAR0RE5D9mgG75ikUYM/pZNe2dd6ZjzJjx6jUREREREVUMMh4m42IyPuZvPgfpZBNXBuiIiIj8wxqg65hwJS666CKsWpWKZs2aqtf/+99XekkiIiIiIqoIZFysPLqA44MjiIiIAqRN68sdAnTSs2OfxNAHktTrl156Hs8+O0G9JiIiIiKicxuDdERERAHy9dcLceLEAVuATpKvL7m4BbZu3Y7LL2+J0NAwPYeIiIiIiM5lDNIRERFVMG/Nmoo7/j4A9903ErOSX9dTiYiIiIjoXObz01337N2P5hc20SkiIiIiIiIiIqLzS3nEx1iTjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIi8rOdv+zGrPfmqUG+JiIiIipJUJGgX3tlz979aH5hE50iIiL665w+fQaLln6D3/84hksvbo6uXa7WcxytTduItevT0bRJpFqmXt06eg4RUfk6+vsxzPloQbHAXOwVl+PviT15PSKiSkGWt3b+skenirtMl8OqVauqpxCdf8ojPsYgHRERVQoyQDd20itqbJKFwztv66lThjnzP1MBOpP8QTxhzKM65S/pmD1oFpA0A4Pa60kV2E8zhuMFDMW84XF6ChH5m7w2fbPqB/XDVqp7QR3b9em/C79UNxekW27ueu79sD2wBOPGpKLzpHG4ubGeRkSVlryOLdbXMk/kzdCHHxxcia5nRvltd+9xmJAYqacRlV55xMfY3JV8l52Kd54eiGs6xOLS1rG44oaBmLtTzztHyR+4/ccswSGdJqK/3tr1G9WP4Ks6xIkC4SBUq1pV/SB2lrF5m5onl5HLylotrpZz5/i2+RjRKRb//FFPICIqgay9K28iyB+28vrT6+aumPjMo6r2nBzkazlNzpPLyGWtNxNKcvj7ZIz4W2dV7rq0U2+MmJmKwwV6JhGRn5k1geWNBlmecjVENYnEvv3ZmDrzXYcbqL7gtY2oOAbpzgPyB6qsqiwH+boscn+cgh43DME/U3ah1jX9MPwfvXBl9V3Yl6MXOG/IuzDDMXuDThJRuTtlFgCDgtC0SWNUr+76ru3pM2fUPLmMSd7pLVHOLnw7cwi63jEZS//Q04iIPJA/TKfOnK2at5o3EWRATtaWcyanjX50uFpGLitr/cp1S/pxu29BErreP11cly7HPQ/2w/XhWVg6bQgGvJqBXL0MEVF5kOWnSy+Odjk88uDgMgXqeG0jco1BunOYccGcjXGTXlEXTjkYr2ereT7LXoykoR/glxb9kLxiNZa8PhqPPDUZH/xvNZ6O1cuco9oMn4F5k3qgoU4T0V/vBtk8rGpVVWPl8bGT1E0H+WPXWUybVmqeXEbWVJHr1L3gAj3XtcNfjUb7jr0xZJooGFbXE4mISmD02WTUOJE15Qb0u8Njsy/Z/F4uI5eV5Lpm81iX/liOV15cJa5Louy1LBnPjRyN5P9Nx31RwC/vTsEnv+nliIj+YvJaV+pAHa9tRG4xSHeOkhfIWe/9RxX+ZJ8o8oesHORrOU3O8/Vux5YF0/HtqXDc89SjuN65UkqwHhMRlRNZGHx4uFEYlOQ17c7beqnXVg8M+j9b8E5e82TNlRI7as8FLk58DB+sWIDnKkEfc0RUMezbf0C/guq/ST7J1VOrBTlPLmPt68mah7PjqV/ji1NA06G9cb15A6F6Avrc20q8yMDSdVnGNCKicmb8hnR8WnVpA3W8thG5xwdHnKNk/0uyk2L5Q1XesbUyO1WXfQy4ezJicRl4tcNAzMBAfLzuMbQrTVBuwyz0n27tfyUSg6wdDJc0X7B1ft4x1bKsuZzREehSPRXxjp2kl3ndfYl4bVIPHJav0/QMk235bCwdMwGzLeXtS9kxKZFfmZ0Zy/5QZHMLVzI2b1UFSVfXQM+O4JMHumHMKuC+uRl4+ko9uRj7gyNuyZqAUQvstZOd/+aLX3vi8OzsoWij87BddyR3163e2Rg3JgVm95+uryvF8zOX8y0fIvKW/EEquxOR5Sl53XH3cAj5o9XVQyXkdUo+qVp2vO7Kxpdjcde7wD1vpeK5LuF6qrBuCi4d9AEw+APsfNx1c4ZDKeLatDZBlF0iscjh2mBeg+zUspbrmKsymFR8OZ2XqwdHmOW6xkb5qaGLMpJ9npXztUxsIwl4YXq263KhpUx2s9PDfIrtr8vtEZEz89pmLWuZ01yVreQ17lUxP2t/tlcPkyjLtc3+oJqhwDTjmmItz3i+LhjXF+cHRzhfK4qXj0ous7laxtW2fboW85pV4fHBEeSSvCtr9jlnDrI5mOSqlok5TS7jvJ7bu7/Zu7DllBi3bwGst3fwKR8a8fyCbTheQgef8oIjC2ryQjVvtjG81tt+4ZMX0/6q8GWdD8we46LftzRR6FuXoJcbh0GNszFbXKDHDUpBlLn+pERcKpYbl2ItSAplWVdTTV/FBfVm8dr2fqwBuqbigq3yN/JyHUIgorKSfdQ5X8PM4ZtVa9Uydet6buZaVrs/nYDpMvhl/s0nxWHnAnFNcb5+7EvBONu1xyiQHUpJUUE+6/XC7XVrmljUaRsO10ZZYJUFP1lgtOTncP3xJh8iKpXYK1q5fTiEp4dKeHYE+3SFlfAalh+xUqge79yFw/qla6mYPigVCebfvSr7pOMFcb34SS8hfzguksE82zIz8Gy8KB+NsS5jlNVGLYBDWe3ZeD3TmQ7QyR+6tu5CNqRg9VUibduOKEsdSMGoGZYbtPpaJn9A25ZTATrLMoosc4kf4vIGqm25OCydbi83Gj92I8WPYD1fvvemxjwi8p28+SC7FLkqvp2eYudbjTp/XNuA1dNmASONv28joFbydcEV49pmuVaI8hOcynIll9nswT/bMmLbNi6ubc/GO16Lec0iE4N054DJr8xQF0LrYPY55+oOhjnNvIBah8mvzlDzijmYBfVsxA2TMWDEfOQl9MPwfl1Q63gG5j7TF3e9s00t5pK4KE1fkF3s7mbDRFE4k3dDxfyP0orfsW2YOE4V/pZ+6vxU1Tg8a7trEYmb/y5eHxDvt7fOT2rcA33FujvXpvtx3ZJkI+sAcHNHywVZ5DWItVSIyoWsgeJ8DTMH2RRD/hiW/diVp51NEx3vtLYfqm5A7FyQ4vDjFgci0dfhbqtxjbNeE23Xnn32QqFBXLesd1HbJ4of2eLauM780SoKpdNSsNP5jm6x609J+RBRWbl6OIQ3D5Vw58xZ/aK0RLlE1jax19QQZR+Rvln8oPzI9uMyTpTBHGtqtOktfoDqco2yYRZecFFWazPcsRaIYgnQOV8fHWumxOEWecNWXPPM8tZP4topr2WurqsONqRgtriuDhppvaYNdSg3HpbX0vgEx/c+3PF9EpH3ZI062aWIu1YMvgTqynxtE9cnXGX5/SZ5cV0oRv0OlRUvLNcyUX5KcirLlVhmE78nd4trTOd4x2uXuY66tjVORJLl2iavn9ZrMa9ZZGKQ7hwgm0vIphLWQf44LYlcxnm9OxN76rlOCnKNp+ycSsBzC5cjeVwSHhk3Hd9/PBryXsovsxbgBzeP4TmUloqdoiCWYL2wWaj5jRMQZ73Iam1kwOtAKtKtTSMcLl5Ck2aiIAlERzkV4Fwpy7olikSU/ME7fQKWWveXiMqFq2uYHOQPYbOmiqemFv7gEJTXGqrrieXHrdS4GRrol46Mu779BxmDap5h+cGqOF+35LVG3lk1lzuQjtViW672xUFJ+RCRX5gPh5DNxEzytZzm92tSiFMtFGcuy1dGeaXYDQEZXNPXov6qWby4ju03Zv0kg/luymoO9i/BOFcBOgvVekJvRzXrOvCbrjGTjlRxDby0afH1jOuqndqf+ETHH+hCA7muzk+99tAygojcq3eB0Zev7D7JfY244pwDdStWqWoevivp2iY4/37z5rrgzPgdmohbnH6nuizLeSqzNY5EtJjvXAPZYFzbbv67c8DN8VrMaxaZGKQ7B8gqx7Ldv3WQzS4k2T+KM3OaXMZ5PVfVl5VGLaDqo3Tphuuj1BRDiwQkXiHGp7Kw7w9jkjN1V8DtD1Q9/5wg706bTUSMizcvskTlR96gcL6GyUH+EJY1Vco7QOcTUfByvhNq/FCd4ND8y23TMU/2/yZ+TIuCHruLJapQrLVN3NU88aw+mrbQL/P12GSmo6Pclq+8ppphievRdDg095I3MQ3ih+o+MXJxHXMkyj/Ti9cWMamuT+QPW0sXAQ415FRNFG9unOr9kU349Y9lc7D25SRrvpjN+tX8MW5q0hBRMbJ7JF8fBmGS5a+r9W/KfY5RLs0f1zbnco931wVn6neobHbvtI7Rh7BdyWW2OAyydSdg5GFrYquvbbLZrcM2RH7WPjp5zSITg3TnKDPYJptYyA7WzX6a5Gs5TXIbkHMlMgqt5fiPXBxXE7yn7gp4UNL8ysbos04M5kXW2tcKEflNiU9sDSjj7qhbtqZjZj8qZaBrBBPRueeSy7qo8Q8/71Jj0y8/p6rxrW3NX7q+M2qsWZrLO3VgbieuZ171iySvaUONfuacf1xauj5x7Gi9NPT+WPvgdBgs76O9uYzeL4e++IjIHecacb4E6mQ/nLIGnnTDta67HfH/tc2H64KF+h0qH87gch3dvN/rMptRYUOuK29AyKCcqrChatnJJrXO+evBek3kNYsEBunOUfKO7YC+vdXFVHZUbPbTJF/LaXKeT3d1g2Nx3d3hwOYP8Mk6e7vW3B8XYO5m8SK2M652c81S1YWdm6xaeJrvdfOKikhcZNUdYrMaNBGVmSwoZurawLJDdl/u7JYHV/25Gdct97WH3TOaQ/hMN7FYncaau0SViTfXrwbtO6tuRba8twA/yAd4SadS8cl724DqvdAjIUJPdMNV+Uo3kfdUY83oqsTOaIaV6sWPRVmbxE2grphspK+1XLcax6GzKO+5va5aeL8/JrFfqnZgtlPzNSJypzSBOhmgMyuEePq9WeZrmwu+XxdK/p3qnucym9m3utGU1bhx61sfwLxmnc8YpDuHyZpyE8YYTxqTfTSZ/TTJaT7VolPCcfXwyehzQRbeGdQNPR6ajOcf6o1r7vkAv6AF7nuiN9zeZFUddsomoI59tR1KmWWk3c6fYNy1sHb+WWG4utimY7ZDrTld+BRfGOzwk6jsZMFQFhBlQVEy7tQuVq8DJm2WwxPDjOuWq35HnKjab46BtZ9mOD3a32uiIKdr7jo0sT+wBLPZ5J6oXDVtYtxFXLT0W/XAGm/JZd96b556bfb95FKz3hj9YAsg6wMM+VsSnp82WY3fyQrH9c8k4eYSH2AtylfTrMEyUVaR/c3Z+mDStU+sP2x1rTcr+bCv4k+FNa5bxX8Q6x+X1kCdrkliLTfJcqC1qZeqhSIf6OXcJ5OqxaJfaw0TE1WH6y84BwLFsuY12XnfjMCjUX4jIu/4EqhzDtB5/L1Z5mtbcd5cF4pRD9GSv0OdrmXWMpQ3ZbZiZS5rH5turm2C9TrFaxaZGKQ7x8nmYLJvJtlHk9lPU6mbiF3QDZMWJuPpxBY4/v18zP36MBrcOBCvLJyPp6/03LmnbAL6Wm/Y+mqTw6i1zWDWkHM5Xz2C2vEpYhWH/WKr9tcMzjn0gzABs5sO9UOzDiKSZOfDsmAobzi8PHEM6ooftrI2XSDdnDQOUZ9ar1tQzSEcngDmSuMemGDtd0QMqR1L2SedJJtHiB/FsOTXf0wqoqxPGSMiv5PlKvnAGhl0mzpztu1Jru4c/f2YWkYuK9eR68q+n9wLR7vhH2Dhi/3QGqmYO3M+fqzeGY+8vRjJva2dBLshm3H9/TdLf0vih6VsDmZ5mmub4Y79KPWfBiQ59Eknmf3uWpYTwwtwfiCNJq9xZqBOlIeWHtCBO0s5aTpcPLVVXsucro391yWoaY5EfrL/J8j87fvT/9Nmlg7gHffVKFe6a9JLRO54E6jzKUCnlPHa5pI31wVnrq9t/cf8hgSzaauXZbbd1uuWuNbutj5Ax1U5TQwfNU20XJN4zSJDUJGgX3tlz979aH4he6cmIqK/1jerflB9nMiCnwzUyVoospD4xssT9BJERIFh9sF0+swZ9YP2hi5Xq9YLIx4fp+bL65TsckRex+R1Sz6dWj78xveWDd6TNXtHrU3Aa5aAXKW1YZZ+sAV/sBIFirx2vTrzXWTtz0bTJpHqYV3yeud7gI7o3FEe8TEG6YiIqFKQhcOxL76ifgSbuoofwvKHLhFRoMlrlKzxKx/SJcmWC7LmnPNrGbyTQTz547Y8nUtBOvlkxRf2JZ4bAUeiSsw5UCcDcuZDIhigo/MRg3RERHRek4VDWRvl6O9/4LJLolWQjoioIpHBONlfZuZP2/QUQ0ybVqpp61/1ZOrKGKST+7woapxDlwHqfaiuBCpqFyhE5xdroM7EAB2drxikIyIiIiKqBGSfcytW/qBe33Dt1b49Vd8PKmVNOtWs1bmv0Tg2cyWqYGSgTt6MOPrHMXXDNPaKy/UcovMLg3REREREREREREQBVh7xMT7dlYiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgqwoCJBv/bKrl27cM1HF+sUERERERERERHR+eX7vr+gRYsWOuUfrElHREREREREREQUYAzSERERERERERERBRiDdERERERERERERAHGIB0REREREREREVGAMUhHREREREREREQUYAzSERERERERERERBVipgnTRF1yiXxEREREREREREZ0/yisu5nOQrmrVqnj0qnE6RUREREREREREdP6QcTEZH/M3n4N0derUQftanTCt5wesUUdEREREREREROcFGQeT8TAZF5PxMX8LKhL0a6+dOnUKx44dw5kzZ/QUIiIiIiIiIiKic5usQScDdNWrV9dT/KdUQToiIiIiIiIiIiLyHz7dlYiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCjEE6IiIiIiIiIiKiAGOQjoiIiIiIiIiIKMAYpCMiIiIiIiIiIgowBumIiIiIiIiIiIgCLKhI0K+99ufx4zh48DBOnDyppxC5VrNGDTRq1AC1a9XSU7zDc4y8VdpzjIiIqCJh2YeIzlWlLa+vPJCGd7f/F5m/b0dhUaGeShRYVYKqIKZuSwxueSeubRyvp/qPz0G6P/88jr37shAZ2QgREREICgpSg8yGY46tYznk5OQgO/sgLmwahdq1vbsoy0Lqb3v3oUnjxqghLujBwcEet8Px+TsuKCjASfFjZv+BA2h2YVMG6oiIqFKS5es9v+1FVJPGqKW/y7z5HuS48o83/7QF0c0v8np5jgM3/mXXbsS0vcLr5Tk2xqUtr8sA3UPrXkCV+mEIrlYFRVWCECSmy+AFxxwHdFxYhILThSg8kofXOz7r90Cdz0G67Tt+RsNGjVCjejXbH594IfbW/sfINNPW9MlTp3Ho4EG0vOwSfRZ5tn3nL2jYoAFq1qzhVf5MM33yxEkcPnwYl116sT6LiIiIKo8donxdt3491NI3wP31/ch0xU+bQboaNWv6JT+myy+9adNmW5DOm+WZdkz7Wl6/95unsCl8N4Kqiry8D59wzPFfNi46U4S2udF4r+u/RNp/fO6TLufkSVSrGq52Tf69ybF8wTTT7tLyfJHnjbdOnDiBqtWqep0/00zL8yVHfPETERFVRrKcFFGzZonfd0yfe2n5jzVd0vJMM11Z076W19MPb0VQWBBUK1eZX6HMTI6ZZrpipOX5mX54m5jgX6V6cESVKsH6lUlGEq2YdnR+p4ufLyUJEutYT03/7g/T517a8XwhIiKqfIKCnL/L/P996YhpR0w7YtoR0458T/taXrf1QVckgyNybA5MM11B0kJhUYHxwo98/2Wr9snYMY459mXsLW/z45jjYmMiIqLKyPn7jGOOOeb4XB17q0gsrWovif9ttZiYZrripf2N1U+IiIiIiIiIqMIoksEPNeiACNNMV9S0n5UiSGfskPhX7ZQcM810SWmV8JaL9Zlm2ps0ERFRZeT8fcY000xXvLRO2NLO85n2Lu21QrmeGNSYaaYrbtrfWJOOiIiIiIiIiCoWGf9Qg/jH9ppppitQuhyUqk86+Y+xX3rnmGbai7T3vMuPaaataZ0gIiKqpLz7vmOaaaaZrqxpnfCKWl7XVkKhTMsx00xXtLRxvvqTz0E6531g2hHTjpzTvvL39pl2dK6liYiIKiN/fx8y7YhpR0w7YtpReae9JleUERD5vx4zzXRFTPtbqZq7yn2Re2OMmWZa/Vti2lve5se0SjLtlCYiIqqMSvp+Y1r9e+6lVcrDfKYVptW/50zaK7rWkurzS4+ZZrqipeV56m9l6JMuSI9NntN5efmY9fY7uG/IA3oYhgkvTMKGDT8ab87H/PyVzsvLU/s16+131Ws7/+Rvx7RvSpH/wYUY0a4DYjqNwuKDzvM3YYqcl7QQR1S6FPk7+GvSRxaOQky7UfhMvx/ntB3TRERElV8pv/9ytmPx1CdxV49OopwgyjvtuuL2B2cgNaeU+dmcB+mCo0hNHoUbOsnj9jAWHz2KxU92Racnl4gyo1w+0yhDTs00lncQyPRRfJYUbynbSnr+xqnqPJiy0Yf81DrxYh2dVnxYXyk5nTFVHuepyNBpR0Y69+eFmDSwq9qf+BmZyN30Lu7qejeSN+Wr+ZWxPGy8b/F5qb9Pc3hNHQfn92fn4/Y2vqbytX+GxZe3H9sO4thusmxb/g4Wy9vOHWN5R/5Oe0GGCUo7VO2CR9u8jlWdP8PGLp8h/Vox7jQHC1p2EfMTMesakb76eQx0te65MjR5HqvE+17ZNtH1/L9iuOx1dfwXXOZinh+H5zrIz/l1POdiXrkO5aAUzV2NPTECa76PW7ZsiVEjkzD8wWGoXbsW3kx+G5u3bPF6/XIbq3+9WK4CjHM2zsXTg7pjmrh4erN8hRj7eAZ7na/TWDm1Bs9NXYEc8dI+X40E1+tV2LH6V3CXPkfG+1b8C4/2fhKfZXu3vLsxERFRZeTt95yrce6WdzGgx914+v00hHe4C0OGDBbDbWiVux+HT3qfj6/jSlkedTHOWfEq7p+Rhqi7X0Dy1NsQheM4/Fsu5L1723LqX9frB3JsKjZf/SvHTtNLGJu8Xb60Y5Pr+dvx/qiJmJ9zA0ZPnYHRV0Yg9/csZB3LwxlzOfWv4HL9chz7eDydx0BXPDZzJpJnzMDbapyIFmJqsfdX2rH6V47dLbcNH+hjO2bqTIxuVxN55rYty5mKr++fsdfE8tZaSz6NLxiC+Vc+ggF1myKi6Bh2n9xnDPlARNgFYjm9Dcmb/CrrWIxsPC1XnmMbL5cv7djk7fJ+HPtb6Zq76rHJl3TtOrXRslVLXNkuDv379UWD+vWxbdsOPddQlvylcz195rc0LE4/CrPen7/zL+90Scqaf1TzaGDJs5i2xjhCZc0v0OmS+Ht7gUgfyfwEX+/JtaWtfE0TERFVRqX6/ju1BlOGzEBGwz6Y/vU3+GDiKIwcPhxJD47C5HdfQK9GalGlVPlbOKcre3nUTOeekrd149H77z2QcG1XxNaLxsB5a5A6tQfqG4u45K/tm/yddubv/MsvnYvj+8XoutvQ79p43HFVNCKufRarN36CpLZhxiIu+G/7hvJJRyHuqngkiCFejcV7E1NdvT//bM/OSOfZjm3f68Q5L7d/3Vis/vHjYsfWP9uzc057QwX15Ip67H36Sky5tCdaheQh69As3LLyXvROHYnbU5PQ+/t7cGP658ZyphLzq8Rpk5mWkzwtXy5pMajJZtoY+ztt4+Xyfk37WekeHCF2xNgfY+x1Wr6WdDo0OAShYaGoU7uWSufk5ODFyf/CB3Pm4uP/fooHhidh+44dOPb7H/hg7od45LEncd/QYXj55Vew59dfbfmvXr0GTz49BhmZmzDjzbcwdNhwvDzlVRw4kG1sUyxXUFiIdalpmPjiZNXc9tHHn0JGRqZtn4rE/G3bt+O55yeq9d997wOcEPsj5/+6Zw8ef/JprPn+B1t+cmx7fxunIvbKeLz83S58NnkwOrfrgM7/eAlfZxXhzJa5SOpxjZjfCTeM/hi7Tpnr5+GXpVPxaH9RIBDLx3bugRGzUnG4QM8v2I+VU5/A7TfEI7bdNeg2eCbWHS9Cxmvx6DZ+jdwq3h8s1rvyNWSY+5OdiuSHdX433IVHLPkdTnkYslr4+0v0/oxcaN9/c/1yTnvPu/zcpVvc8wSe7pSH+ZNmYJ3teIuRGBQzffY4tqa8hIFd5XEUn8+gf+Gzn+Vt01ysmhyPmE5TkWF+Hjnf4Gl5XMd8gxy9/uGFo8R6Y7FcfC4qPz1dLZ+uq5un7cfySYPQWZwfMV0HYVLKbuQ6rP8wFmTb15efU6yqvm/JT86Tg7u0HlvXl5/zCP05H5HzC45i3axR6NZZnk9dcftj72LdEcv6p7Zj3rPGfsbK/Vy2EC/L92uur5sSj0g5at9e9ucYIZZPWnjEvj8H05A8qjsS1Pvtg0eT03DkrF7+bBZWvfYketuOt/h8co5iQVIHDHxf7sgajO8ptp/0OQ6b+cnJ5vZKShspIiKiysnb7ztLet+idzD/VBMkvfAkutR1t/wRfDZSfr/OweL3H1bNOs3v8+PbjaZvshyb0MMop8jaPGr9PzLx/tjhuF19b8ej80CjnCTzL215tNj+meWllbuxQJeX4nuIcswWVY3Ntrzcz8l6P+P1fsry1Jk1L4n1r8GUdDP/HHw9Wu6PpXymyyujlx532r5xXG5Q70OUQXqI9US557DteJnlEbmwwba+bCKry1WqabEoV6XqcpXD+/sL0uKF6/maSovjHKvLpV/r46zKe9bPW5MpW36iXDfr0T7G8up9voaVv1nmH9uE9599UP9eMX7/fLYz1z5f/Z7R5c9O3THi/e34U86T9HYd3o86HwbjA5l+f7D6vF/eaExX+y8+Z+v7s66fs+1zTPrHDep8Sug5GJMX7rLVDivK2YT5opxr/7wWIkuv57D98kxrLuc7vz8zLf4uPtOfV4L+u7Cuv2/la0Z5X5Sru42ag63H5QzNmr9Mq9+rg6GK3PLYmtvTv2OnyOMsl5fzFfv67v7+HPL3Nm2kvKOfoClrvcmx1+mL7kLnqmL9nK8xZPNi7HO3vGJJh1+LR+PexKrrP0d61wXIuP5DfN1uCHqGm+vfhlldFiC9ywQ8ffk0rNbLrbt6LAZUteRfsxcmJcxFRlc9v/N0TGrS0P3+6uVTdX7p132Iz664E61syyfhM7k/V03AtKs/Est8js9aWda35Nf50n/i62v1/l/7FqbVFNP1+zSXbxn1KD7r/JHD/k25KNqYH/1PrBPTV8Ul2pZ/tIOx3EcXG+micL0/HQaJ9AjxWszv+CQei3sL664X+y/X7zAEXfT65h5IKi2mt4x6BAs6f6zylcuv6zwNr1zUwja/KHIEPrrmQ1t+6de+ieQW7e3zqybilYQPbevL7dUyN6S3a46LHe9ySPtbGfqkKxvZR13ahg0oLChAbExbPdUgg2kXt2iBmdNfx2WXXYbDR4+gWrXqeOThkXh2zGicLTiL//73M5w8eVKvAZw8dQrLln2NjgkJuHfgABw6fBifLvgcubnii0IcvB/WrsV7732AqKgmqrntnXfegfyzZ/XawPbtO7Fq1WrccUdvdL32Wqz5/nukrt+g53rno/H/Rla7BzF59G2ov+kTPJp0D/4xcQ86j56KyUNaImfJSxi/SN6+kHKwbd0RxP7jNSxYsRAfDG6F1JnDMXmZvJuXh9QpfZD0SR5umfQxli98E0NaHMWRU0D0LTMw+e6WKoduj83ALF1NGgeXIOnvw7Gozn1IXrgEC8Z3xZH3h2OI+DK0W4NXFgFJH69B+rTb9LRzUEgL9H7sScTun4vJ863v3yoPGbPuQ7+XtiFh/Mf4Wh7jZuvx/L0TsfxYGGI79ABOpWHrXr34L5lYXj0M4SszsUsWNMX6W38ShTpR0I2Vt8DcWDX5Bay65D5MmTERSa32iHPkHryy1rznXF4cP+f6OIovH0vEkC/rY8j0hVj+2UR0++MdDBnyLrbJ9yIKUAueugeTv8nDjeJcTZ50FyLmvWQUkHyhz8HFLs9B+zndS5zT6niLc/roqQgkDJ2BR2+SGbTEwEkzkDw0Xt1VJCIiIk9EWXLjJqDJbejcWk/yZM1rWBTyID7/Lg3TE+shd9NMDOz/ErZeNRELvlyI5MEtkCrKKeNVWVTYk4bV9btj9LtL8LUoO9yS8wmef3iuKjuUrTxa3PKpM1UZesrUJ9GrmijHDJ2KVF1c8rSf4THx6CXLGNt2GwsX7EH6SlFeq74C6b8Yk3J/3o7V6ISEGOfShVEGMd6HUQaZ5VUZpIRyVQXmU7lUf5bJ+2OQNFWUz6Y+iLjdc5HUf6woK+tlxDmySp8j8jj0EufIeH2OqLKfWCfp/Uy0+MdEJL88Fl12T8Rjn6g1XWueiOQZo9BNvr5plDivZqB3czXHI/Mc2ebyXN6Pj5IGY/JPrTBilvF53XJa/K4yVq3QPP5dpL2GoeJYp0ffh8kzpmJ8pz0YP+ZjY6Yr4tjOshxb2eTWl2Pr9jpRrorU/+LHvE/jXhENES6S2/54C1ku5tvGJpWOwfiYJAy8oBFwcgMWZ6/EqpNA/Tq9ML7tvYhS6xmLIzgGt1xwEqlymRMnEV61PZIu76PzuQ3JcUPF5yV+a2aJ36J7fkBWUFP0uvQpPFZNzhfrO+yHXr5GKI78+YPY7g/IyA9FiwZ3442YG+3LSdVi0CLnPfT9+jb03qKn2/IBoppNwOSmLVE/6CAyDq3E4mP5iGsUY7+myeUunIC3L7sWLYL/QMZBscyh7cgJbopuLcZiemMx/5dt2C1GEdVaIUHvX6tqxupREbcZ22vcFFFitCtH/OCUaalae/QK3YflB8X+5+YhIqIXRrdpa8w3lzH317oPcj8PbrPvQ6Rerk4rRJ39Bct/nSWO4QZxDBshodndGC2Dr0VXYnLcIHSrUQM5J8RndeAH7Aq7UaTlRuR8vZ2/amz841e+B+ls+1Jk2ydv09K6tal4MOkhDB8xEt+tXI27+/dHvfr1HZaPjY3BFW1EaSMoSKUvueQS3HnH7WjatCmaX3QRrr76ahWE+/P4cTVfrpefl4+bu9+EK9u1w1VXdUTHjvGqJl3O8RwcOXoUS5YsRZdrO+MfAwagbdsrcHXHBFx5ZTtjZUH2j9e3X1/EXHEFev2tl9rOrt27Vb7NxOt//2uy2O5Vtu0Ve39CqwefRVL3eHTu8yQeu1NM2JODG599Fn2vjUfPIQ+ir5iUsSZT3ZVDUV30fHYiBnZviSZ1miBm4N1q/vJte0R+OcjaK67AzTugW4do1LuwLfo+8wx6isMUcXE84i81Kt9HtYlHQsdo1BSvt6XMxKo6D2Lys30Qc2E9RHcZhhG9gd2frcFWubDayTAMHHwPWsq/VBefz8y3ZiFO3ikTg7vxm2/Osi3vvH5JaW+5W9+rtHwp/7noToxOisbu6f/C/D1yojlXz/9jBd5P3o1uz7yGEddGo37TK9B36N1IOLUEy9JyENG2AzpjO1ZtPqqW3/bjCtS/sSfizcBd0S5sWyM+82tiUE/m52J/pFp9nsBzfUTBsGN33D/1X+hbPQ/zv0mz3X2SzOWNsfxHjr1PG2PrfPk5360/Z/H/loWYvrI+kl4Q52JsE9Rr3glJD4ovkj0LsXqnmL/pE/xTvJduz87Ec3d2QvxVPZA07V8Qp49i5us41tuTL9U/RdgqzsHV4hycNFacg03rIvraB9U5uEucg9uKjmOfeU7H6+Mt/jZ61gtDk7bi/GosM6mP6DhxfrdtgnAP789jmoiIqDJy/j7zKp0HUcwFouuhvsv5lrRU/R4M7XsZagaL10U5WD73Xey+UfwoerATohuKsmifwRjYIQ+Lv1mPHLl+3GDMeigR8c1F/hf1wIB74oH9mdhypCzl0eL7J9Xv/zBG9BD5dLkTI+7tpJrxZsi4myg/OO5nY8f9rNkW8WLxbWu3G+XrnWlYXqcneon5KnAn8t+1XRRyWndCrGz667D9MERd0UG/D1EGaSe2f0VjMdXCevwkmXYoVzXW5aq7dLmq+PsrKa1Y0sbYy7TJxXzFKW0vl/ZwKpfaV1FEQpXrTnXF+JnifXYRn/e1ffDclCcQK8rKyV/uNpaPHYRZo25DwkX1xHHogYH3dFDnyFbxYRQd/BIffLgfUQ/OxKz7e4jyZSdR9puIEdbAkPP7qd1cLBerAgBoEiv2swOi6xjzFZfvLwcr5ryLXTeJc2TYNYhuJM7lOwdjQHwevhTv7TiOImuTWDamE3pdbnxe978+GDG29eVYZ1mOacNcDLT+vpqqW3WZ852Wr99/lP676OP0d3EUiz6Yi6wmDyJ52mD0FL97O/d5FpOHRRsrivWNfCz7UydaHM8Y49g2jlXNbaNr6/kmc3lTSX9/Ht6vx7SXxOIwnvBqjsULL9L1g+Vf8UkcP+NpeTGYZDryNnSpKdbLWYy7fpiA0ZumYMQPU7D8NBAecTUeu0CvLwUdxKqfnsQjm19GUsb32CUmhVdvhZ5iftRl1yEhVFyTsp7CgC0fY/7Of2LE4YNAlRZIkJE+p/0xlz9yZBZ6pk0W2/0nBqxfqFpz1a97I5LM5aWzmZifvghbLevb82uI+5vIgNwfWLV1KAZmTMHTPw7H6MN/qFXVZ1DUEKMj7csMyHwZozOexIA925CLC8T+3S3yWYQtsiVa1QvV+0GjGLQI+QNHzojrftVWSBDb61mzEcJxELuys9X2lcJdmPfD88b+/7pN/FWK74Ya7Y39M5YQxCuxn6Mbm/swxNjPzKcw0LIP6v1sHoFO3z+L0TsXYd7OCZh/7KQ47o3QQnzZFTW7HV1k4DBnEfqKz+rpzf/EwPWLbTdJjOPheHyGNe+LjBvFce32udvxsOh+tuWd1y8x7Wd/eU26Vq1a4qGRSXhk1EgVjHt9+gwsXbrMeJNa3QsuQFiY/SsyLy8X69alYsbMtzB+wkR8+J95eo5dnTq1Ua9uXfU6KCgIDRs0VOvln83H77//rgJ2cntVqrh+y40bR6JmDSP8WjU8HI0aNVRNZK37VZLYS5voV2GoVV2OO6HVJWoCEByNaHFtRYHR75aUs2cNPnplLIbecw963zzcUnOpHrp074TwLa+J6YMx+v012C3PdFmocukotmbuF1+KM9Evwbjwx7VPwNAPxaz9OaIIZxIXYxUMcW3YA0MxbOgQnSpu2AND1DKVRat7xuL+5pswecpCZDnf2RQXguVitPyZG2zHK+5vLyBVTMs5LY6YuCB1aQ2szpQXjN3IWHEE3W6/W0zbLi7KR8Vx3Y7U/U1wYzv9ZehGbCvL/LAWaNVOjPcfUReu8uP4OR/5ORNZ2I/ponAd116fHw+okwPHxRfPkd92i/fYAZ2td5jFF40oy/jAcg7G6+MptmM/B8U53UOf0zeJc/qDks5pIiIi8sofed6VK9o1RxPb9+4ebF0mRl+PRRdVDpLlg9vw/HoxLee4KBcIBUeRmfIhJj92D/r9Xw/c8UKanOqBt+XR4mIvMcvQ4odpM1l2MsooxfdTli+s+1kPcZ1aAiszsU1sYPfGFThy020Y2LGlCtwdEflsXbcfUTfEwHOJzXuO5SqjvBP3wFwxx9zniiu2lSVC5rFcqj/LTp0QL4NkpuatECtG2w6eMNLqHJmLyY+Lc6S/PEfkB6Md2IPVYtQtzqhxqQQ3R1y8fu034hz5WoyWiXPE/Dzai3NEnq45OeIcaYkb7xeffsrDuLbXI3glZVMAa9F1xaMzZM1TPfzNc1U2938X+7F7jRh1bYtWlrJ0dJsO+pW/lPT3V87kz3A16ECIt2klFOEhYuRqvpk2yXSdRqoPyl3HZe07c/n1SD8tW+7VRIQME5jrnD2IrfIkkumT+3BENs6rEooGIt2thtERaKsLZyHzphRk3LQQXzY2poW52B9j+ZPYdVQcaD0NJ+fgF9lWO7iGugGjpkm5B/GBSrt6P1ejqaw+eHYvUrPs81f9sdf+9y2WaSGDW2oZmTaGrJ/3imsaxPG6QKQPYvGJgyLVEBdfDCQ0aIr6YvkFf4pp1ZqiV1EjXFtDLJe7D1+bx0A6sxfJOj/sOWjcNKkiDpqaphdSr13tQxH22fZBXHDk+4nohfHtp2Lx9Z8grdtCPFZXV5OTy4vty1+tWTmf22pKFp2cjS3ymEkyraabQxFm/jJfDMVjSCY5T80383Na33NaDH5Wij7p5E7Jf1XC53St2rXQ8rJL0bpNa/y99+247trOWL/hR5yQTVdty6uX6h8ZZJv/0X/x2ecLERcbi+EPPoA+fWQ1NYPKWa6gGeu7TgcHVbGl1RS5qp/SivN8hCMizJrWZHr7bAy842HMz2mLAY9NRPKnr6qadCoHMb/eLa9i5Rcz8PSN4Vj92sPofftT+DLbyN+WmWV7SocnMW/5cqzUw6rlK8R4GNqa8xVjeTXFsr6ZfuCBIXjARaBOThs2dGix5X1Ke6nU+at/5FinQ9tiyOi7EbXmJUxeoptBSOZ8oe+rzsdrOSZ1ryvmN0fsDeKL8fvt2HVkO1ZtuQ0Jl0ejVYcwrM7YiiNb0pBa/QbEX+K4ffnKllaTLOki8VVm/TazLWTOVyk7L9KO+aupdnq+Mb0DRv/HeH/W9zuirTlfXNXF1cCen2VfLe9HLeG8Pev8Dk/YzkHzeKpzUMyq32uq5Zx+BL1vexKLD1ryUxzzl698SRMREVVGzt9n3qXrolU7UVbZ8iXW7XU13552YM6Xr/u9avm+1t/fL/ZEPRwXv8sTMfDfKxBx4yg896+P8d4TOgCg1zcysKfl9hQP5VG1hGV5exaWtJ5onS/30zE/8frFHqo1Q3TcDYjCGmzddQRb123H7e1bonmrDghbmYmtB7cjNS0MN7S7zCF/V9sTExzTJrW8HFvnd8DT/3HaHzGMkAUetbxj/uWTDkWE/KW6Zg9+KXCcfyRLlntlax378nqWLV1UJH7R2sqlxvr6pZpvY1veOlWmxTky7jYMfMnFOaKXV0Ic1z+jehuyp+U/1vlGWo4d5+uX+h8LNV/Q54jD+SzOkfpFYWj74EdYOWciBrQ7go/GD0avAe8iI9cxf8/744+0TDRBXMd4xHfsYAwXiw9Qz9eLuk3L/BQzLV8Hy87S7POLdE9OtrSRcEwrjvPVyF1a8vD3JxeSS7rdnou0t+STM9V6YixeeJ1+77gMMoWh1QV9PC8vRuZ2xL9GQu6rZXkblTZfy8GYr/LTi9mXP4mM3VPwVObLeHqTffyy7M/RzNccm6z5WaYbaZ0QnNd3SOvVHOYHGdPEBJG2vbTPV2NjsiTT6w7uxRFZ07jmtehZoxFyT2zDtD8OIgeN0OLiXoiuBuSczMAitb5eUXCXn30RPd+yn8bycn+NaVJR4Y14o90DuKOu2PafP+Czn1/G+7ImnZppzy+3KNuyfkNUVe9VvFZpY7p9fhFm7PwPZv5cPFA342djuvPyPqX9rJQ16Wyftla6tHxTZ1W/cM7z7Y4dO4adO39GfHw8rrn6KtSvXx9nTpthUpPn7UXUqoV69epiy9ZtKCyUZ43n5f+K9LbvF2I3OmHgsD7oHBctLnInLHd1xPIFQHiTePQdPQMrPx6FVse+waJ1R/V8Z/XFH0wYsD5N5BmBiDq1xCDHcpA1En3bP1lbzhqoUwG6B6yBO9/yK54uSVnzt6fDOjyIp+8EVv9zITJs/bWI+Y2j0Vm8Wr1jv9PxEkOYsX6rdjcgbH8a0pZkYrXsTFgcylYdbgO+34HFO78BenXQd6/cb39/trx3odPHRD7rxT5d3ML4UlOOIPe0uXwetm6Ut8V85bx9R/WaRYvL7HqkivKa8R7t7zdM7H9EPXmXbg0yt5v3uEV+xzapfTXY8z+inoBmpHO3i2XUK5muh4vVObhenINOx7OOvK0jiHM6rEkHcU7PtJ3Ti9U57bz/ZU0TERFVRr5//7XqejdisQmvvPIJdp/y5fuxCVrIGvMrdyArwvy+1t/fEeL7PGc9li8R5YI7H0ZSj3i0ujACOGH2q+yOf8ujRrqJ0RJF7adT+SJCly8uiccN1fcjbf0SZKzsjoQYsa3WHdBblG22fbUNK3AbElQZ0NftOzPmyxpNslyVtjvIcX/E+5XlKjtft+druhZatJW11D7GCtWvnJ5fsB+rvhLlyeoxiLZXxFKMcqmmy3rhtnKpNf96xme5Zg3SzP7n5Pw925AhXsVEiTVyNuhz5BGMEOXkVhfWcjxH6kShlRil/mTeKBfrF2xHpihCG5zfT0lpd1ydy8bnoc5lSZRBI1r3wIgX52Dlq7chb/tMfL3F1+2XNe2spPnOrMtHIEqe0+szsdvWWkj8vky3HVzB1/1zlfbi78/G1/y9JOMfapCBES/Tv65XzUXDL7gDcy7rUHy+OUjm65w/VI2zFhEP6P7nxD9F4vdfNVmDS/xOV30A6GUla36Sfv316d/FixqIqhmKxVnfWYZvsUr+LZnr6PXN5VvUM/ufE0O1AbhY9r1WcFLXFBODyUwXez+/IEeGVUIuRFwD+/w7LrhQ1TpTir7HPhmYD70QCU2M+XKIuuRC1Qw6N0/VCAKyMrErX1zrat6B1tWAXcfmqL/9XQVhiKofg6ZBedj1xwLb+jZm2tU0Sb3+AVnyciX2s6PcqJ5v34eD4rS7BpfL0+vk97h9/RRM+mUbwmWtPNPpk+r+QlTNwfa+AqvdroKHipom/jHnWdIyGCeDciaZnrlT1qAz5jsv71W6HPgepFM7IqOG6l819iX957E/sX37dmzevEU92GHlqjWIadtGPRhCzjeZy4eFVUX16tXw8887sfmnn8R3xQ/49rvvjGXkfzp/57QxFq/EuFHDhqo/uS+XfIX/fvoZfhL5/PDDOmz48Uf7+up/S36W9K+//oonnhqN73/4wTZfjh2WN6ba55tTzLQxQS9ahPp1ZZXlNCxftB6Z6avx9uSXsErOUo5g8eQXMH/dbhw5uAepK9djl7xINqup8qnXrLkoHACrli1E6kIZFClC2x73IRrfYPyDL+Cjlduw9af1WJUyFa8skUEQ+/aNkZGWe2ndP2taBubMQQboSlq+pLT833vF1/cubbLOD0PnByeipyjAZqgONvX8hl1xe48wZM0cjgfeFoW6n7YjY90SfDDmQ8jeIdT6rdvjdlEI+2j+GnROiIE4+ghtGYPO+9/B9P/koWd8W4Sa+dm2Z09Lq/79FN5YkobUtV9h+mMTsRxt8ehtV6j59dp0EJ/ZdrwycQYWr12PxW+PwhvrjdKUXN2eX0lpY+x2ftvuGNIcWP7ig3j+E1Fg3bINqd+lYMprS3BEzA+L74EBYrMLnhmG6UvWi/PtYzz/sD4fVX4in4YxSBB5bHtjovF+lszGyDfTjH4t9HZs5+Dwifjou+3YuiUNqxa+Js7BI2L+UXFOi+lr9+Dowd1i+/qcloV+sX6T5rIEIP8e1mD1N5lqv2z7r8fepImIiCqjkr7f3KYv6oMXnxPfoSv/jTu698DIyTMxfeYMMbyGMfc9i8Xi9459efHatn49dEvsjrD9MzFk5LtYvHG7+IGfhsXvj8UHm8T8avVRX3bdsnIJFqRnImPhv/H8++btZCO/0pZHje3b81EsaTnfINP2/Ryq93Or3s85cj/l8sGXIb4XkDr/E6y+Jh6xEWJ6aCvEXrsfyckfIrdHB8SEmvkZ+RfbvuI8X7zWaZ0y0k7lqq26XPWKLlfZ19fLl2O6effB6Fk9Dx891BMPTJaf+0xMHnkPnl8jyr9P3I148b7tyxvl0um6XPqGLpc+osulcknjX2P5mD5PonP1b/CcKtfp8uFj/0ZG87vxaE9RcKxeT58jX2LBxk3ITHnJdo6onJp3xV3XiLLjK0+q45Qqytlvj3wYs2xBP2M79v2zpw3O89Ukh7QcFaEubrjVPEdmY3G6OO82rseXHzyLDzLl/Eyx3dn4cksWjv+2HYvXyTBjJ7Ro7Jx/yWnjf/fzPacNHud7TBsTjXRz3NhH/N1veQ2PvvAxVonfEV++LR/Sof9G9fKO+Ztpk32++7QXf396Pev6JaW9Jlaw11ryIX3yAzy1MxM5qIHY6HHY1O1tfN5pBhZ2noHPr5+Hb+JvN5Y3yfV2LcCyE3lArVvwSefn8M+2j2NG58dxo6w1dvR/eF0/6tnYe+v21ASDSO/buR5bxbT6DYZhyVWjMbrVA/hX3Av4XOT5D3P/zPXU8suwTmzWXP6fbZ/G3I63IzY4D7sOzMcsvbyZv/v3n4n5R2XH6RfgxpgZeEPs/6tXvY3R9S9Qq6odL8rGrL3yuFyALm3exty4x/DP2Jcwt0UrhBfuxaJfPtL5fYb0k2KnqrVAq+C92LpH5j8Hv5wS+1m7BSKK9iJdPgvI3A9J5W/fH2OaTtvItNyHDNs+zIl9TByff2NOtH0f8PvvUA8qrhaD5DYj8Xz8i+hdS2UgshT57ViD9HwgvPYtmNPxafwr5jl8fvUtuNyMA5v7Zdkfa3rmjv+oWnVqEK9LWt6btL+VsiZd6W3fvgOvT3sDr70+Denp6bj7//qjR4/ubvuKi4ioib///Q6cPn0Gb8x4EwcOHED3m2/Uc70j8+4hCi533tkb69f/iKmvTcPyFStQXfdBFwj1bnkCL9/ZEhlvDMeQMf9F2MAJurmrFIb6dXYj+fG7cFOvu/D4/8LQ95UZeDRO3w1q2weT7myLI/NfwMg3N6moPy4bhPffewLdqq/BK48MwP8NfEoUiPLQSj09oHRkcM5ao67SqtMVjz7dSRUk7SLQbcLHeH1gBxyeN1Y9EXjI83OREW3psyQsBgndgaz9Eegco+u+1WuJzq3zkHeqExLalnxs+44bhVpfjcXIEWPx0bFOeGT2VPQ1u5+4uA9efro7ovbMxjNPjMViDMbTg/zVY4pFcEvcN/sdPN01DKtefwT9BwzA468vQd4lLY07K2GigPbGRPS9eA/eeWY4Hn8tE62etZ6PUnP0fekJ9Gy4B28/8zDGfAXcN3qw/VhJLQfhvdniHJRPn3p0gNjOU3j1qzxc3kpuJQz15Dn9xF24UZ7Ti8Q5/eoMPKLP6Xo3DsOj10Yg9Y1HMEZ1cEBERETeiEp8Fcv+MxEDOkYg47+z8fbbszEnZT2ORokyjbU/MScRN07Ep6/cjYSDc/HM/eJ7e6T84d0CsReKmcFtkfTWKHQ+tRDP3/cwXtnSAY886tSZ2F9UHvW4n4p8Kr8osO3fj4hO+oFe4t9WHVuK8loeOne0PN3QH0oqV/2VRBl30n9nYETXetgqPvt3xGe/+GAHDHhxLqYkOlWjEzyWS501ScTLs0X5sJEs1w3HA8+8i12tnxCf7yjEyOCcOEdGvCnOkdMLMeH+hzHlJ3GOPGI9R+rh9hffEeW7HCz+5yMY+fwSYNBLGC37wfMzeY589urdiBfnyJj7xHn30Fh8kGmeI/VQr/qXmDzgdlzX+z5M39YST8+egNuNbsIqrXq3TMB7D3XC8a//jYf074gpDsffP0r++ytHMvYhAyClGGf9MgZ9Ni5QT1/NDW2EFhEXqiEqOA9ZObuM5RRzvTQ8t/5dLP7zD4TV7IBeUdehSw1gV/Yc3Ld2geqnTi1nsm5P0emT7+CRjP8h40w+oi64Bv2b34JejS5B+JlfsM1c3jo++Rnuz5T7aSzfK+oaxAafRMavr2N4xnr7cibn9S3jdRkvY9rhg8gNuRBd5P5Xzcb8gzJwJxnLyePy1K712HW2EWIbX49ejVshPG8b5mWMx3OylbDOb9ofYj0Z9Dq9F4tlS1Mx3eirTjj5C+ZZt69Y0uYkyZrW87N+ecayD9c57YNY6OTreHnPL8gJaoSOF96EW2rsxfKj9uauKFqA5zb/D1vzwlBfHrMmlwOH/od1+cYiDvvhZiwDdXIoaTmvx34WVKTCkd5bm/Yj2rRpI17J1eQnxzHHJY9l7cWr4q8Ur0tmnGOyDrf3+Ve4cfpruPL+DzHg7XV4JM6L5SvcOBOvdrgfc655Bstev00Ub7xdL3Djn37a4vU5RkREVJGwfH3+jmX5pXnzi1Cjhnw+rvfr+TSu9OXSijGWv2f4d1q2sS/l9VZvdEPoRVVVHMTMJkiMmWa6IqXzfz2DbSPkIyn95y+vSUdERERERERE5IkKiFgGppmucOly4HOQztiRItsOMa3+ZdrLtLe8zY9p9W+5pQ3+y6+800RERJVRSd9vTKt/mS5T2nns7/yZZlolS0x7Ta5QKNfjmOOKOxYv9AnrP6WqSWfuBscc+zL2lrf5Vehx3EPYsD4Vj8R5uXyFG7fFw2L/N7yWiLoq7e16gR8TERFVRt5+z3HMsc9jVS6VTV29XJ5jjst57BW5sBrEPxxzXGHHYvAz32vS6X+K1D/qX6aZ9i7tLXfrM820x7RMEBERVT6O32clfd8xfW6l1f+WdEnLM810ZU7LhHfkEzSN2krGmGmmK2ra38rQJ53sLc+KaUdMO3JOl8Tf22Pa0bmeJiIiqoz8/X3ItCOmHTHtiGlH5Z0uSZHxvwyEiP/FC6aZrnhplfAv34N0YmfUbnDMsY9jb5WUD8ccux0TERFVSl5+z3HMMcccV/axt+Tyqs8v8b/u+4tppiti2t/KUJOOiIiIiIiIiMjPZDNCGQAp0oEQppmuqGk/8z1IFwQUFBSq/ZE7ZOyXMWaaaVdpeb74Vru5CAVmdFqmSsifaabl+RJkTCUiIqp0gkQ5qbCQ5evzMi3+9TifaabPkbSv5fUg+QNSrCNrK6lB5KHyY5rpipIW46AiX5txl8znIF1EzZo4c+a0kXDeH6YdMa3I80WeN96ynWN+2r4N047OobQ8X2pGeH+OERERVSQ1RdknJyfHSPjx+1Fh2lFFSzvzd/5MO2La0V+Y9rW83q5JGxTlFUJH+4yxOTDNdAVIF+UWqvPU34KKVAjQe78f+xO/7P4VkZGRqFGjBqpUYYtZck3eET558iQOHMjGJS0uQt06tfUcz3iOkbdKe44RERFVJH+Iss/2n3ejSZPGiIiIQJCsWkfnhS1btuCiiy7SKarI9uz5FW3atNYp8lZpy+vf7PoBD6SMRpXaIQiqKn4P8rJIFYUM0J0pROGfZ/FW4mR0bXG1nuEfPgfpJBlEydqfjZwTJ2SNPyKXZPlS1oqLahLpc/CE5xh5oyznGBERUUUiA3X7xI/YEyz7EFVI/LssnbKU12Wgblbqh9i4/ycUFslOwIgCr0pQFVWDbmjC3X4P0EmlCtIRERERERERERGR/7AdIRERERERERERUYAxSEdERERERERERBRgDNIREREREREREREFGIN0REREREREREREAcYgHRERERERERERUYAxSEdERERERERERBRgDNIREREREREREREFGIN0REREREREREREAcYgHRERERERERERUYAFFQn6tdf2HMnDn6eLUFBUBfkI1VOJiIiIiIiIiIjOTaHIR3BQEepUBy6qF6an+o/PQbpfj+Thj9xg1K4ejHpip4iIiIiIiIiIiM4HR08Cf54uQJ3wAjSv799Anc/NXY+dBmpXY4COiIiIiIiIiIjOL/VqQFVcky1M/c3nIF1BUZDaISIiIiIiIiIiovONrLgmu4DzN59zZB90RERERERERER0PiuP+Bif7kpERERERERERBRgDNIREREREREREREFGIN0REREREREREREAcYgHRERERERERERUYAxSEdERERERERERBRgDNIREREREREREREFWFCRoF97Zd1vwOWNdMJvilB45iTOFhagsEowqgQB1UKCUFiUj6DQYBQWhiH0bAGqFeappU8GV0MQzkLMQZUqRpyxULyNokKZk3g7wVVw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mOn4RNbi+XVGXdVEtuQAncEI/lXFY7e46bvOgZv9t/zO8w/5JNcozIm0bk9s5EE5TS9CRFRZtE/EoMbZmK0eCDHB6empmn66qgyemQ+NSO1Yij7ppPZDMW9SImDJq/+YVESZNeRczk9BdFIZm9qWJ6djSERERES+OIwvLA9XsA4OAThnsp+4e1urIJdtnY0xappV3ACzeapeRvZN59QnnUEHzQ4ddlEzzWkf3zuMW5/00HeebBrrtG9p7Zz6pBPkk1zl02jT37PnnQwXT6hVTW37Ic7WJ54c5iO7+0gfayAGXlCRoF97JXPLTsS0Lp9ecZb98JMaOl95KRKv9y5SterHHfji23TcdHUbNRARERERERERkX9lL5uGiRtjMNbbvvHKSUXZj/KIj1WoIN3+w8cwdY7vDYSkhwfcjCYN6ugUERERERERERH5h6xtZ9ROK/PDHsrkMJa8NA1fNPa1nz7/K4/4WIVq7iqDbHd1T0Cbi6PQomkDrwa5rFyHAToiIiIiIiIiIv/LXrYc6bLJ618YoEufU/wJsXKafHDFkErWjNVbFaomHRERERERERERVQyqaal6kERrDJH9vhmT/xL2bVs07BbwZq6mc765KxERERERERERUUV3zjd3JSIiIiIiIiIiOh8xSEdERERERERERBRgDNIREREREREREREFGIN0REREREREREREAcYgHRERERERERERUYAxSEdERERERERERBRgDNIREREREREREREFGIN0REREREREREREAVaqIF1RUZF+RUREREREREREdP4or7iYz0G6GtWr4XjOSZ0iIiIiIiIiIiI6f8i4mIyP+ZvPQboG9S/AvgOH8OfxE6xRR0RERERERERE5wUZB5PxMBkXk/ExfwsSG/A50nb8xEkcPvIHTp46racQERERERERERGd22QNOhmgq1Wzhp7iP6UK0hEREREREREREZH/8OmuREREREREREREAcYgHRERERERERERUYAxSEdERERERERERBRgDNIREREREREREREFGIN0REREREREREREAcYgHRERERERERERUYAxSEdERERERERERBRgDNIREREREREREREFGIN0REREREREREREAcYgHRERERERERERUYAxSEdERERERERERBRgDNIREREREREREREFGIN0REREREREREREAcYgHRERERERERERUUAB/w+5qPYbDZ88YAAAAABJRU5ErkJggg==)
 
@@ -436,11 +272,3 @@ If you are having trouble with any of the concepts learned this week consider ta
 [Access Modifiers (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
 
 [What is a UML?](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-uml/ "What is a UML")
-
-### Sneak peek at next time!!!
-
-Do not work ahead, chances are you will have to rewrite the code anyways because it will not match the specs. However, I highly encourage you to follow tutorials and/or learn other material.
-
-[C# Testing Fundamentals](https://docs.microsoft.com/en-us/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code?view=vs-2019)
-
-[UML Class Diagram Creation](https://support.microsoft.com/en-us/office/create-a-uml-class-diagram-de6be927-8a7b-4a79-ae63-90da8f1a8a6b)

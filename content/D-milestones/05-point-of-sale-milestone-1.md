@@ -115,7 +115,6 @@ This means that for each boolean property in the menu item, the cashier should b
 
 You will also need to provide a button or other means to return to the menu item selection screen once the customization is finished.
 
-The full cusomization options can be found in the [Class Library Milestone #1 Description]({{<ref "d-milestones/03-class-library-milestone-1">}}).  
 
 #### Update your UMLs
 
