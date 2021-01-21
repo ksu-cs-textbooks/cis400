@@ -27,11 +27,11 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 * Enum classes (2)
 
-  * Declared in the `BleakwindBuffet.Data.Enums` namespace
+  * Declared in the `TheFlyingSaucer.Data.Enums` namespace
 
 * Entrée classes (6)
 
-  * Declared in the `BleakwindBuffet.Data.Entrees` namespace
+  * Declared in the `TheFlyingSaucer.Data.Entrees` namespace
 
 
 ### Purpose:
@@ -61,7 +61,7 @@ Review of how to create classes - Sets the stage for the rest of the semester. E
 
 ## Enum Classes (10 Points)
 
-All enums should reside in the `FlyingSaucer.Data.Enums` namespace
+All enums should reside in the `TheFlyingSaucer.Data.Enums` namespace
 
 There are three enums needed:
 
@@ -106,7 +106,7 @@ namespace FlyingSaucer.Data.Enums
 
 ## Entree Classes 
 
-All entrees should reside in the `FlyingSaucer.Data.Entrees` namespace
+All entrees should reside in the `TheFlyingSaucer.Data.Entrees` namespace
 
 The Flying Saucer offers six entrées:
 

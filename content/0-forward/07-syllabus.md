@@ -19,7 +19,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 * **Virtual Office Hours:** By appointment via [Zoom](ksu.zoom.us).  Schedule a meeting via email or RocketChat
 
 ### Preferred Methods of Communication:
-* **Chat:** Quick questions via Rocket Chat are the preferred means of communication.   Questions whose answers may benefit the class I would encourage you to post in the` #cis400` channel, as this keeps a public history your classmates can review.  More personal questions should be direct messaged to `@nhbean`.
+* **Chat:** Quick questions via Discord are the preferred means of communication.   Questions whose answers may benefit the class I would encourage you to post in the` #cis400` channel, as this keeps a public history your classmates can review.  More personal questions should be direct messaged to `@Nathan Bean`.
 * **Email:** For questions outside of this course, email to nhbean@ksu.edu is preferred.
 * **Phone/Text:** 785-483-9264 _Emergencies only!_ I will do my best to respond as quickly as I can.
 
@@ -70,7 +70,7 @@ importance of these different aspects of learning. Most class periods will consi
 There is no shortcut to becoming a great programmer. Only by **_doing the work_** will you develop the skills and knowledge to make your a successful computer scientist. This course is built around that principle, and gives you ample opportunity to do the work, with as much support as we can offer.
 
 #### Tutorials
-Each module will include many tutorial assignments that will take you step-by-step through using a particular concept or technique.  The point is not simply to complete the tutorial, but to _practice_ the technique and coding invovled.  You will be expected to implement these techniques on your own in the milestone assignment of the module - so this practice helps prepare you for those assignments.
+Each module will include many tutorial assignments that will take you step-by-step through using a particular concept or technique.  The point is not simply to complete the tutorial, but to _practice_ the technique and coding involved.  You will be expected to implement these techniques on your own in the milestone assignment of the module - so this practice helps prepare you for those assignments.
 
 #### Milestone Programming Assignments
 Throughout the semester you will be building a non-trivial software project iteratively; every week a new milestone (a collection of features embodying a new version of a software application) will be due. Each milestone builds upon the prior milestone’s code base, so it is critical that you complete each milestone in a timely manner! This process also reflects the way software development is done in the real world - breaking large projects into more readily achievable milestones helps manage the development process.
@@ -93,10 +93,9 @@ In theory, each student begins the course with an A. As you submit work, you can
 
 30% - Activities, Tutorials, and Quizzes (The lowest 4 scores are dropped)
 
-36% - Programming Assignment Milestones (3.6% each, 11 milestones total)
-(The single lowest assignment score will be dropped)
+36% - Programming Assignment Milestones (3.6% each, 11 milestones total; The single lowest assignment score will be dropped)
 
-34% - Exams (6.8% each, with the final worth double at 13.6; 4 exams total)
+34% - Exams (8.5% each, with the final worth double at 17; 4 exams total)
 
 Letter grades will be assigned following the standard scale:
 90% - 100% - A; 80% - 89.99% - B; 70% - 79.99% - C; 60% - 69.99% - D; 00% - 59.99% - F
@@ -148,7 +147,7 @@ Kansas State University has an Honor and Integrity System based on personal inte
 
 **For this course, a violation of the Honor Pledge will result in an automatic 0 for the assignment and the violation will be reported to the Honor System. A second violation will result in an XF in the course.**
 
-In this course, _unauthorized aid_ broadly consists of _giving or reciving code to complete assignments_.  This could be code you share with a classmate, code you have asked a third party to write for you, or code you have found online or elsewhere.  
+In this course, _unauthorized aid_ broadly consists of _giving or receiving code to complete assignments_.  This could be code you share with a classmate, code you have asked a third party to write for you, or code you have found online or elsewhere.  
 
 Authorized aid - which is not a violation of the honor policy - includes
 using the code snippets provided in the course materials, discussing strategies and techniques with classmates, instructors, TAs, and mentors. Additionally, you may use code snippets and algorithms found in textbooks and web sources if you clearly label them with comments indicating where the code came from and how it is being used in your project.
