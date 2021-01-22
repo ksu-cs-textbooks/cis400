@@ -32,7 +32,8 @@ The Visual Studio Community Edition is also available as a free download [here](
 
 Xamarin Workbooks is a free tool and can be downloaded from [here](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install).
 
-## RocketChat
-The CS Department's RocketChat server can be accessed as a web-based app from [https://chat.cs.ksu.edu](https://chat.cs.ksu.edu).
+## Discord
+Discord can be used through its web app at [https://discord.com/webapp](https://discord.com/webapp) or you can [download a native app](https://discord.com/download) for Windows, Linux, Mac, iOS, or Android devices.
 
-In addition, RocketChat offers free desktop and mobile client apps you can download from [here](https://rocket.chat/install/).  Once installed, they will prompt you for a server address to connect to.  Use the CS Departmental server address: [https://chat.cs.ksu.edu](https://chat.cs.ksu.edu).
+## Xamarin Workbooks
+Xamarin Workbooks is a note-taking app with built-in C# processing (similar to the Jupyter notebooks you used in CIS 115).  You can download the installer directly from GitHub: [https://github.com/microsoft/workbooks](https://github.com/microsoft/workbooks), and scroll down to the Resources section of the README - there's a link to "Download latest public release for Windows"
