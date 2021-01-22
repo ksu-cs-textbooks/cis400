@@ -31,6 +31,7 @@ Week 2
 
 Week 3 
 * Testing
+* Advanced C# Syntax
 * Class Library Milestone 2
 
 Week 4 

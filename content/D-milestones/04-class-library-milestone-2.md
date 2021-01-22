@@ -23,13 +23,13 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 * Author new classes
 
-    * Create base classes for entree and side
+    * Create base classes for entree and side (2)
 
-    * Create side classes 
+    * Create side classes (6)
 
 * Refactor entree classes to inherit from Entree base class
 
-* Write the body of all side test methods 
+* Write the bodies of all required side test methods 
 
 * When all tests are written your code should have a minimum code coverage of 92%
 
@@ -106,7 +106,7 @@ In addition to the normal side properties, it should have a boolean property for
 
 If the `Sauced` property is `false`, the string `"Hold Sauce"` should appear in the `SpecialInstructions` list.
 
-#### Taken Bacon
+#### Taken Bacon 
 Implement a class to represent the Taken Bacon, named `TakenBacon` in the file _TakenBacon.cs_.  It should have the following properties:
 
 `Name`: _[Size] Taken Bacon_ where _[Size]_ is the size of the side.
@@ -218,6 +218,24 @@ Implement a class to test the You're Toast!, named `YoureToastTests` in the file
 * `PriceIsCorrectForSize(Size size)`
 * `SpecialInstructionsShouldBeEmpty()`
 
+#### Milestone 2 Rubric
+
+Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
+
+Comments 
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every file not containing a header describing the file purpose and author(s).
+
+Enum Classes 
+* -2 points for every missing or incorrect attribute
+
+Entree and Side Classes
+* -2 points for every missing or incorrect property
+* -2 points for every missing or incorrect method
+
+Test Classes
+* -2 points for every missing or incorrect test method
+
 ### Submissions
 
 * Create a new release tag - Submit the release URL
@@ -230,5 +248,4 @@ Implement a class to test the You're Toast!, named `YoureToastTests` in the file
 
 [C# Testing Fundamentals](https://docs.microsoft.com/en-us/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code?view=vs-2019)
 
-[UML Class Diagram Creation](https://support.microsoft.com/en-us/office/create-a-uml-class-diagram-de6be927-8a7b-4a79-ae63-90da8f1a8a6b)
 

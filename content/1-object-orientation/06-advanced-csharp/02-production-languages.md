@@ -1,0 +1,1 @@
+It is important to understand that C# is a _production_ language - i.e. one intended to be used to create real-world software.  To support this goal, the developers of the C# language have made many efforts to make C# code easier to write, read, and reason about.  Each new version of C# 

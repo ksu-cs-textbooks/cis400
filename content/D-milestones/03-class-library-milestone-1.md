@@ -59,7 +59,7 @@ Review of how to create classes - Sets the stage for the rest of the semester. E
 
 * The tests provided in the _DataTest_ project can be un-commented and run to check your work.  You should _not_ change these tests - if your code fails, it is _your code_ that needs to change.
 
-## Enum Classes (10 Points)
+## Enum Classes 
 
 All enums should reside in the `TheFlyingSaucer.Data.Enums` namespace
 
