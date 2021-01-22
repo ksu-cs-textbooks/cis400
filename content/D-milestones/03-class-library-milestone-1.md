@@ -123,7 +123,7 @@ The Flying Saucer offers six entrées:
 * Nothing to See Here
 
 
-Each entrée should implement a property for: `Name` (a `string`), `Description` (a `string`), `Price` (a `decimal`), `Calories` (a `uint`), and `SpecialInstructions` (a `List<String>`), containing any special instructions needed to prepare the dish for a specific customer (or empty if there are none). 
+Each entrée should implement getter properties for: `Name` (a `string`), `Description` (a `string`), `Price` (a `decimal`), `Calories` (a `uint`), and `SpecialInstructions` (a `List<String>`), containing any special instructions needed to prepare the dish for a specific customer (or empty if there are none). 
 
 <hr/>
 
@@ -138,9 +138,9 @@ Implement a class to represent the Flying Saucer, named `FlyingSaucer` in the fi
 
 `Price`: _$5.50_  (or _$3.25_ for a half-stack)
 
-In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), a boolean property for `WhippedCream` (indicating the pancake should be served with whipped cream - default `true`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple).  
+In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple).  
 
-If the `HalfStack` property is true, the string `"Half Stack"` should appear in the `SpecialInstructions` list.  Similarly, the name of the selected syrup should appear in the `SpecialInstructions` along with the word "Syrup", i.e. when the selected syrup is maple, the `SpeicalInstructions` should include `"Maple Syrup"`.
+If the `HalfStack` property is true, the string `"Half Stack"` should appear in the `SpecialInstructions` list.  Similarly, the name of the selected syrup should appear in the `SpecialInstructions` along with the word "Syrup", i.e. when the selected syrup is maple, the `SpecialInstructions` should include `"Maple Syrup"`.
 
 #### Crashed Saucer (a stack of french toast)
 Implement a class to represent the Crashed Saucer, named `CrashedSaucer` in the file _CrashedSaucer.cs_.  It should have the following properties:
@@ -153,8 +153,7 @@ Implement a class to represent the Crashed Saucer, named `CrashedSaucer` in the 
 
 `Price`: _$5.80_ (or _$3.70_ for a half-stack)
 
-In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), a boolean property for `WhippedCream` (indicating the pancake should be served with whipped cream - default `true`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple). 
-
+In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple). 
 
 #### Outer Omelette (a loaded omelette)
 Implement a class to represent the Outer Omelette, named `OuterOmelette` in the file _OuterOmelette.cs_.  It should have the following properties:
