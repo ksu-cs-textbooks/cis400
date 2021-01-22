@@ -36,4 +36,4 @@ Xamarin Workbooks is a free tool and can be downloaded from [here](https://docs.
 Discord can be used through its web app at [https://discord.com/webapp](https://discord.com/webapp) or you can [download a native app](https://discord.com/download) for Windows, Linux, Mac, iOS, or Android devices.
 
 ## Xamarin Workbooks
-Xamarin Workbooks is a note-taking app with built-in C# processing (similar to the Jupyter notebooks you used in CIS 115).  You can download the installer directly from GitHub: [https://github.com/microsoft/workbooks](https://github.com/microsoft/workbooks), and scroll down to the Resources section of the README - there's a link to "Download latest public release for Windows"
+Xamarin Workbooks is a note-taking app with built-in C# processing (similar to the Jupyter notebooks you used in CIS 115).  You can download the installer directly from GitHub: [https://github.com/microsoft/workbooks](https://github.com/microsoft/workbooks), and scroll down to the Resources section of the README - there's a link to "Download latest public release for Windows".
