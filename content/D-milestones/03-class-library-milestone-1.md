@@ -13,7 +13,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 * You need to follow the style laid out in the [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
 
-* Create classes that reflect the given [UML]({{<static "pdfs/data-ms-1-uml.pdf">}})
+* Create classes that reflect the given UML (in the projects' _Documentation_ folder.)
 
   * Create enum classes
 
@@ -138,7 +138,7 @@ Implement a class to represent the Flying Saucer, named `FlyingSaucer` in the fi
 
 `Price`: _$5.50_  (or _$3.25_ for a half-stack)
 
-In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple).  
+In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), and a `SyrupFlavor` property `SyrupFlavor` indicating what syrup it should be served with (default Maple).  
 
 If the `HalfStack` property is true, the string `"Half Stack"` should appear in the `SpecialInstructions` list.  Similarly, the name of the selected syrup should appear in the `SpecialInstructions` along with the word "Syrup", i.e. when the selected syrup is maple, the `SpecialInstructions` should include `"Maple Syrup"`.
 
