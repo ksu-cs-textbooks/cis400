@@ -8,7 +8,7 @@ So what does all of this mean in the context of _your_ learning?
 
 * Developing into an expert programmer is going to take hard work
 * It will require a _lot_ of writing and reading code 
-* There is _no_ shortcut in this learning process, because _you must create disequilibrium in your brain_ in order for the necessary cognitive structures to form through the process of accomodation
+* There is _no_ shortcut in this learning process, because _you must create disequilibrium in your brain_ in order for the necessary cognitive structures to form through the process of accommodation
 * This process can be very frustrating
 * _You can **do this**_, just as many students before you have
 
