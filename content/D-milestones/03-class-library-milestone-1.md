@@ -36,7 +36,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ### Purpose:
 
-Review of how to create classes - Sets the stage for the rest of the semester. Everything included in this assignment you should have exposed to before in CIS200 and CIS300. This assignment should be relatively straight forward, though it will take some time to complete. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
+Review of how to create classes - Sets the stage for the rest of the semester. Everything included in this assignment you should have been exposed to before in CIS200 and CIS300. This assignment should be relatively straight forward, though it will take some time to complete. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
 
 ### Recommendations:
 
