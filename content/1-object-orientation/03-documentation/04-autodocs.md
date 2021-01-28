@@ -188,7 +188,7 @@ public class Vector2 {
 }
 ```
 
-With the exception of the `<remarks>`, the XML documentation elements used in the above code should be considered the _minimum_ for best practices.  That is, every `Class`, `Struct`, and `Enum` should have a `<summary>`. Every property should have a `<value>`. And every method should have a `<summary>`, a `<param>` for every parameter, a `<returns>` if it returns a value (this can be omitted for `void`) and an `<exception>` for every exception it might throw.
+With the exception of the `<remarks>`, the XML documentation elements used in the above code should be considered the _minimum_ for best practices.  That is, every `Class`, `Struct`, and `Enum` should have a `<summary>`. Every property should have a `<summary>`. And every method should have a `<summary>`, a `<param>` for every parameter, a `<returns>` if it returns a value (this can be omitted for `void`) and an `<exception>` for every exception it might throw.
 
 There are multiple autodoc programs that generate documentation from XML comments embedded in C# code, including open-source [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB) and the simple [Docu](https://github.com/jagregory/docu), as well as multiple commerical products.
 
