@@ -9,7 +9,7 @@ One of the biggest innovations in documenting software was the development of au
 
 This approach meant that the language of the documentation was embedded _within the source code itself_, making it far easier to update the documentation as the source code was refactored.  Then, every time a release of the software was built (in this case, the Java language), the documentation could be regenerated from the updated comments and source code.  This made it far more likely developer documentation would be kept up-to-date.
 
-Microsoft adopted a similar strategy for the .NET languages, known as XML comments.  This approach was based on embedding XML tags into comments above classes, methods, fields, properties, structs, enums, and other code objects.  These comments are set off with a triple forward slash (`///`) to indicate the intent of being used for autodoc generation.  Comments using double slashes (`//`) and slash-astrisk notation (`/* */`) are ignored in this autodoc scheme.
+Microsoft adopted a similar strategy for the .NET languages, known as XML comments.  This approach was based on embedding XML tags into comments above classes, methods, fields, properties, structs, enums, and other code objects.  These comments are set off with a triple forward slash (`///`) to indicate the intent of being used for autodoc generation.  Comments using double slashes (`//`) and slash-asterisk notation (`/* */`) are ignored in this autodoc scheme.
 
 For example, to document an Enum, we would write:
 
