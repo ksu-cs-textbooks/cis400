@@ -67,12 +67,12 @@ We would want to add a `<summary>` element just above the class declaration, i.e
 /// </summary>
 ```
 
-Properties should be described using the `<value>` element, i.e.:
+Properties should be described using the `<summary>` element, i.e.:
 
 ```csharp
-/// <value>
+/// <summary>
 /// The x component of the vector 
-/// </value>
+/// </summary>
 ```
 
 And methods should use `<summary>`, plus `<param>` elements to describe parameters.  It has an attribute of `name` that should be set to match the parameter it describes:
