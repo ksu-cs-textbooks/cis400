@@ -158,7 +158,7 @@ In addition to the normal entree properties, it should have a boolean property f
 #### Outer Omelette (a loaded omelette)
 Implement a class to represent the Outer Omelette, named `OuterOmelette` in the file _OuterOmelette.cs_.  It should have the following properties:
 
-`Name`: _OuterOmelette_
+`Name`: _Outer Omelette_
 
 `Description`: _A loaded omelette stuffed with all the favorites._
 
