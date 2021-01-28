@@ -9,7 +9,7 @@ One of the biggest innovations in documenting software was the development of au
 
 This approach meant that the language of the documentation was embedded _within the source code itself_, making it far easier to update the documentation as the source code was refactored.  Then, every time a release of the software was built (in this case, the Java language), the documentation could be regenerated from the updated comments and source code.  This made it far more likely developer documentation would be kept up-to-date.
 
-Microsoft adopted a similar strategy for the .NET langauges, known as XML comments.  This approach was based on embedding XML tags into comments above classes, methods, fields, properties, structs, enums, and other code objects.  These comments are set off with a triple forward slash (`///`) to indicate the intent of being used for autodoc generation.  Comments using double slashes (`//`) and slash-astrisk notation (`/* */`) are ignored in this autodoc scheme.
+Microsoft adopted a similar strategy for the .NET languages, known as XML comments.  This approach was based on embedding XML tags into comments above classes, methods, fields, properties, structs, enums, and other code objects.  These comments are set off with a triple forward slash (`///`) to indicate the intent of being used for autodoc generation.  Comments using double slashes (`//`) and slash-astrisk notation (`/* */`) are ignored in this autodoc scheme.
 
 For example, to document an Enum, we would write:
 
@@ -190,6 +190,6 @@ public class Vector2 {
 
 With the exception of the `<remarks>`, the XML documentation elements used in the above code should be considered the _minimum_ for best practices.  That is, every `Class`, `Struct`, and `Enum` should have a `<summary>`. Every property should have a `<summary>`. And every method should have a `<summary>`, a `<param>` for every parameter, a `<returns>` if it returns a value (this can be omitted for `void`) and an `<exception>` for every exception it might throw.
 
-There are multiple autodoc programs that generate documentation from XML comments embedded in C# code, including open-source [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB) and the simple [Docu](https://github.com/jagregory/docu), as well as multiple commerical products.
+There are multiple autodoc programs that generate documentation from XML comments embedded in C# code, including open-source [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB) and the simple [Docu](https://github.com/jagregory/docu), as well as multiple commercial products.
 
 However, the perhaps more important consumer of XML comments is _Visual Studio_, which uses these comments to power its Intellisense features, displaying text from the comments as tooltips as you edit code.  This intellisense data is automatically built into DLLs built from Visual Studio, making it available in projects that utilize compiled DLLs as well.
