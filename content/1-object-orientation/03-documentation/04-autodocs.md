@@ -132,14 +132,14 @@ Thus, our completely documented class would be:
 /// </summary>
 public class Vector2 {
 
-    /// <value>
+    /// <summary>
     /// The x component of the vector 
-    /// </value>
+    /// </summary>
     public float X {get; set;}
 
-    /// <value>
+    /// <summary>
     /// The y component of the vector 
-    /// </value>
+    /// </summary>
     public float Y {get; set;}
 
     /// <summary>
