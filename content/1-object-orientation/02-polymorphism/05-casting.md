@@ -144,6 +144,15 @@ roo is Kangaroo; // evaluates to true
 roo is Car; // evaluates to false
 ```
 
+{{% notice warning %}}
+The `is` operator does not work with user-defined casting operators, i.e. when used with the Rectangle/Square cast we defined above:
+```csharp
+Square s = new Square(10);
+bool test = s is Rectangle;
+```
+The value of `test` will be `false`, even though we have a user-defined implicit cast that works.
+{{% /notice %}}
+
 The `is` operator is commonly used to determine if a cast will succeed before performing it, i.e.:
 
 ```csharp
