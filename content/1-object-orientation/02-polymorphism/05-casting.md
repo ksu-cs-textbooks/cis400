@@ -122,8 +122,8 @@ And if that cast is illegal, we'll throw an `InvalidCastException`:
 Car c = (Car)roo;
 ```
 
-## The `as` and `is` Operators
-When we are casting reference and nullable types, we have a few additional casting options - the `as` and `is` casting operators.  
+## The `as` Operator
+When we are casting reference and nullable types, we have an additional casting option - the `as` casting operator.  
 
 The `as` operator performs the cast, or evaluates to `null` if the cast fails (instead of throwing an `InvalidCastException`), i.e.:
 
@@ -134,7 +134,8 @@ Kangaroo k = roo as Kangaroo; // evaluates to a Kangaroo
 Car c = roo as Kangaroo; // evaluates to null
 ```
 
-The `is` operator evaluates to a boolean, `true` if the cast is possible, `false` if not:
+## The `is` Operator
+Rather than performing a cast and catching the exception (or performing a null check when using the `as` operator), it is often useful to know if a cast is possible.  This can be checked for with the `is` operator.  It evaluates to a boolean, `true` if the cast is possible, `false` if not:
 
 ```csharp
 sam is UndergraduateStudent; // evaluates to true
@@ -153,12 +154,12 @@ if(sam is UndergraduateStudent)
 }
 ```
 
-This pattern was so commonly employed, it led to the addition of the [is type pattern matching operator](https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching#the-is-type-pattern-expression) in C# version 7.0:
+This pattern was so commonly employed, it led to the addition of the [is type pattern matching expression](https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching#the-is-type-pattern-expression) in C# version 7.0:
 
 ```csharp 
 if(sam is UndergraduateStudent samAsUGrad) 
 {
-    // TODO: Do something undergraduat-ey with samAsUGrad
+    // TODO: Do something undergraduate-y with samAsUGrad
 }
 ```
 
