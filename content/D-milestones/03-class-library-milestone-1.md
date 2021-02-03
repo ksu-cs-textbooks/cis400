@@ -153,7 +153,9 @@ Implement a class to represent the Crashed Saucer, named `CrashedSaucer` in the 
 
 `Price`: _$5.80_ (or _$3.70_ for a half-stack)
 
-In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple). 
+In addition to the normal entree properties, it should have a boolean property for `HalfStack` (indicating a half-order, default `false`), and a `SyrupFlavor` property `SyrupFlavor` indicating what syrup it should be served with (default Maple). 
+
+If the `HalfStack` property is true, the string `"Half Stack"` should appear in the `SpecialInstructions` list.  Similarly, the name of the selected syrup should appear in the `SpecialInstructions` along with the word "Syrup", i.e. when the selected syrup is maple, the `SpecialInstructions` should include `"Maple Syrup"`.
 
 #### Outer Omelette (a loaded omelette)
 Implement a class to represent the Outer Omelette, named `OuterOmelette` in the file _OuterOmelette.cs_.  It should have the following properties:
