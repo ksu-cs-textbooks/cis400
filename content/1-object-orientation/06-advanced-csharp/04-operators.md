@@ -5,7 +5,7 @@ weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
 
-C# allows you to override most of the language's operators to provide class-specific functionality.  The user-defined casts [we discussed earlier]({{<ref "02-polymorphism/05-casting.md">}}) are one example of this.
+C# allows you to override most of the language's operators to provide class-specific functionality.  The user-defined casts [we discussed earlier]({{<ref "1-object-orientation/02-polymorphism/05-casting.md">}}) are one example of this.
 
 Perhaps the most obvious of these are the arithmetic operators, i.e. `+`, `-`, `\`, `*`.  Consider our `Vector3` class we defined earlier.  If we wanted to overload the `+` operator to allow for vector addition, we could add it to the class definition:
 
