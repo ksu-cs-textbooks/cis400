@@ -88,5 +88,5 @@ public static double ComputeCircumference(Shape shape)
 The `when` applies conditions to the match that only allow a match when the corresponding condition is true.
 
 {{% notice info %}}
-C# 8.0, which is currently in preview, has expanded greatly upon pattern matching, adding exciting new features, such as the switch expression, tuples, and deconstruction operator.
+C# 8.0, which is currently in preview, has [expanded greatly upon pattern matching](https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/may/csharp-8-0-pattern-matching-in-csharp-8-0), adding exciting new features, such as the switch expression, tuples, and deconstruction operator.
 {{% /notice %}}
