@@ -13,8 +13,11 @@ In this chapter, we'll examine many aspects of C# that fall outside of the objec
 
 Some key terms to learn in this chapter are:
 
-* Production Language
+* Production Languages
+* The `static` keyword
+* Generics
+* Nullables
+* Anonymous Types
+* Lambda Syntax
+* Pattern Matching
 
-* Static
-
-* Assembly
