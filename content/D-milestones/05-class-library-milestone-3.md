@@ -160,8 +160,8 @@ With your new interface adn base classes, you will need to refactor your existin
 #### Create a static Menu class
 You should also create a static class named `Menu` declared in the file _Menu.cs_ which contains the following `static` properties:
 
-* `Entrees` which returns an `IEnumerable<IOrderItem>` containing an instance of all available entrees.
-* `Sides` which returns an `IEnumerable<IOrderItem>` containing an instance of all available sides.  As each side has 3 different sizes, this collection should contain a small, medium, and large instance of each. 
+* `Entrees` which returns an `IEnumerable<IOrderItem>` containing an instance of all available entrees.  For entrees with choices, i.e. egg style or syrup flavors, you only need to show the default choice.  However, you should include half-stack options.
+* `Sides` which returns an `IEnumerable<IOrderItem>` containing an instance of all available sides.  As each side has 3 different sizes, this collection should contain a small, medium, and large instance of each. Again, you do not need to supply all the egg styles.
 * `Drinks` which returns an `IEnumerable<IOrderItem>` containing all available drinks.  As each drink has 3 different sizes, this collection should contain a small, medium, and large instance of each.  Similarly, it should contain one of every size and flavor of `LiquifiedVegetation`, and six instances of `SaucerFuel` to represent both regular and decaf small, medium, and large.
 * `FullMenu` should return an `IEnumerable<IOrderItem>` containing all of the items on the menu.
 
