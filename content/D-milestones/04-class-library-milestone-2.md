@@ -87,9 +87,9 @@ Implement a class to represent the Crop Circle Oats, named `CropCircleOats` in t
 
 `Price`: _$1.50_ (small), _$2.00_ (medium), _$2.50_ (large)
 
-In addition to the normal side properties, it should have a boolean property for `Butter` (indicating the oatmeal should be served with butter, default `true`), a boolean property for `Syrup` (indicating the oatmeal should be served with syrup default `true`), and a `SyrupFlavor` property `Syrup` indicating what syrup it should be served with (default Maple).  
+In addition to the normal side properties, it should have a boolean property for `Butter` (indicating the oatmeal should be served with butter, default `true`), a boolean property for `Syrup` (indicating the oatmeal should be served with syrup default `true`), and a `SyrupFlavor` property `SyrupFlavor` indicating what syrup it should be served with (default Maple).  
 
-If the `Butter` property is `false`, the string `"Hold Butter"` should appear in the `SpecialInstructions` list.  Similarly, if the `Syrup` property is `true`, the name of the selected syrup should appear in the `SpecialInstructions` along with the word "Syrup". I.e. when the selected syrup is maple, the `SpecialInstructions` should include `"Maple Syrup"`.
+If the `Butter` property is `false`, the string `"Hold Butter"` should appear in the `SpecialInstructions` list.  Similarly, if the `Syrup` property is `true`, the name of the selected syrup flavor should appear in the `SpecialInstructions` along with the word "Syrup". I.e. when the selected syrup flavor is maple, the `SpecialInstructions` should include `"Maple Syrup"`.
 
 #### Glowing Haystack (Smothered Hashbrowns)
 Implement a class to represent the Glowing Haystack, named `GlowingHaystack` in the file _GlowingHaystack.cs_.  It should have the following properties:
@@ -168,10 +168,10 @@ You will need to write unit tests for each of your `Side` methods.  These should
 
 #### Crop Circle Oats Tests
 Implement a class to test the Crop Circle Oats, named `CropCircleOatsTests` in the file _CropCircleOatsTests.cs_.  It should implement the following test methods:
-* `NameIsCorrectForSize(Size size)`
+* `NameIsCorrectForSize(Size size, string name)`
 * `DescriptionIsCorrect()`
-* `CaloriesAreCorrectForSize(Size size)`
-* `PriceIsCorrectForSize(Size size)`
+* `CaloriesAreCorrectForSize(Size size, uint calories)`
+* `PriceIsCorrectForSize(Size size, decimal price)`
 * `ShouldBeAbleToSetButter()`
 * `ShouldBeAbleToSetSyrupFlavor(SyrupFlavor flavor)`
 * `ShouldProvideCurrentSpecialInstructions(bool butter, SyrupFlavor flavor, string[] instructions)`
@@ -180,8 +180,8 @@ Implement a class to test the Crop Circle Oats, named `CropCircleOatsTests` in t
 Implement a class to test the Glowing Haystack, named `GlowingHaystackTests` in the file _GlowingHaystackTests.cs_.  It should implement the following test methods:
 * `NameIsCorrectForSize(Size size)`
 * `DescriptionIsCorrect()`
-* `CaloriesAreCorrectForSize(Size size)`
-* `PriceIsCorrectForSize(Size size)`
+* `CaloriesAreCorrectForSize(Size size, uint calories)`
+* `PriceIsCorrectForSize(Size size, decimal price)`
 * `ShouldBeAbleToSetSauced(bool sauced)`
 * `ShouldProvideCurrentSpecialInstructions(bool sauced, string[] instructions)`
 
@@ -189,24 +189,24 @@ Implement a class to test the Glowing Haystack, named `GlowingHaystackTests` in 
 Implement a class to test the Taken Bacon, named `TakenBaconTests` in the file _TakenBaconTests.cs_.  It should have the following properties:
 * `NameIsCorrectForSize(Size size)`
 * `DescriptionIsCorrect()`
-* `CaloriesAreCorrectForSize(Size size)`
-* `PriceIsCorrectForSize(Size size)`
+* `CaloriesAreCorrectForSize(Size size, uint calories)`
+* `PriceIsCorrectForSize(Size size, decimal price)`
 * `SpecialInstructionsShouldBeEmpty()`
 
 #### Missing Links Tests
 Implement a class to test the Missing Links, named `MissingLinksTests` in the file _MissingLinksTests.cs_.  It should implement the following test methods:
 * `NameIsCorrectForSize(Size size)`
 * `DescriptionIsCorrect()`
-* `CaloriesAreCorrectForSize(Size size)`
-* `PriceIsCorrectForSize(Size size)`
+* `CaloriesAreCorrectForSize(Size size, uint calories)`
+* `PriceIsCorrectForSize(Size size, decimal price)`
 * `SpecialInstructionsShouldBeEmpty()`
 
 #### Eviscerated Eggs Tests
 Implement a class to test the Eviscerated Eggs, named `EvisceratedEggsTests` in the file _EvisceratedEggsTests.cs_.  It should implement the following test methods:
 * `NameIsCorrectForSize(Size size)`
 * `DescriptionIsCorrect()`
-* `CaloriesAreCorrectForSize(Size size)`
-* `PriceIsCorrectForSize(Size size)`
+* `CaloriesAreCorrectForSize(Size size, uint calories)`
+* `PriceIsCorrectForSize(Size size, decimal price)`
 * `ShouldBeAbleToSetEggStyle(EggStyle style)`
 * `ShouldProvideCurrentSpecialInstructions(EggStyle style, string[] instructions)`
 

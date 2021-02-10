@@ -184,7 +184,7 @@ public void ShouldBeAssignableToAbstractFooClass()
 
 Additionally, you should test that all items on the menu can be cast to their respective base classes (`Entree`, `Side`, or `Drink`). This, and the interface test, should be placed in the corresponding unit test class.
 
-You should also test the methods in the `Menu` class to ensure they return a correct list of items. This can be done with the `Assert.Collection()` assertion or a series of `Assert.Contains()`.  If you are unsure on how to do this please visit office hours for directions. Try this yourself first don’t come to us unless you have spent some time trying to figure it out. You should be able to reach 100% code coverage on the `Menu` class.
+You should also test the properties in the `Menu` class to ensure they return a correct list of items. This can be done with the `Assert.Collection()` assertion or a series of `Assert.Contains()`.  If you are unsure on how to do this please visit office hours for directions. Try this yourself first don’t come to us unless you have spent some time trying to figure it out. You should be able to reach 100% code coverage on the `Menu` class.
 
 #### Update or Create the UML Class Diagram
 You will also need to create (or update) a UML Class Diagram to correspond to the Data project _as you have implemented it_.  You may choose to use the diagram from Milestone #1 as a starting point.  It is saved in Microsoft Visio format in the _documentation_ folder of your project.  
