@@ -50,7 +50,7 @@ Ask Professor Bean or any of the TA’s about any questions you might have. Get 
 
 Define abstract base classes for your entrées and sides, called `Entree` and `Side`, respectively. All entrées should inherit from `Entree`, and all sides should inherit from `Side`.  You should push what property definitions you can into these base classes. These base classes should be defined in their corresponding namespaces.
 
-All properties that are shared by derived classes should be pushed to the base class (generalization).  For example, as all entrées have a `Name`, `Description`, `Price`, `Calories`, and `SpecialInstructions`, so these should be implemented in the base class as either `abstract` or `virtual` methods.  That said, you may need to override some or all in derived classes to provide the necessary functionality.
+All properties that are shared by derived classes should be pushed to the base class (generalization).  For example, as all entrées have a `Name`, `Description`, `Price`, `Calories`, and `SpecialInstructions`, so these should be implemented in the base class as either `abstract` or `virtual` properties.  That said, you may need to override some or all in derived classes to provide the necessary functionality.
 
 Note that sides all also have a `Size` property, so this should be defined in the `Side` base class as well.
 
