@@ -13,7 +13,7 @@ In this class, we will be working with multiple git repositories, much the way y
 
 ## Workflows
 * [Cloning your origin repository]({{<ref "b-git-workflows/03-clone">}}) to create a local repository.
-* [Commiting changes]({{<ref "b-git-workflows/05-commit">}}) in a local repository.
+* [Committing changes]({{<ref "b-git-workflows/05-commit">}}) in a local repository.
 * [Pushing changes]({{<ref "b-git-workflows/06-push">}}) in a local repository to your origin repository.
 * [Pulling changes]({{<ref "b-git-workflows/07-pull">}}) from your origin repository to your local repository.
 * [Resolving merge conflicts]({{<ref "b-git-workflows/08-merge-conflicts">}}) after a merge or pull.

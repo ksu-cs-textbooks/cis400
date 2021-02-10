@@ -1,7 +1,7 @@
 ---
 title: "Lambda Syntax"
-pre: "04. "
-weight: 40
+pre: "08. "
+weight: 80
 date: 2018-08-24T10:53:26-05:00
 ---
 
