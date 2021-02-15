@@ -72,9 +72,9 @@ All properties that are shared by derived `Drink` classes should be pushed to th
 
 ## Drink Classes
 
-All sides should reside in the `FlyingSaucer.Data.Drink` namespace.
+All drinks should reside in the `FlyingSaucer.Data.Drink` namespace.
 
-The Flying Saucer offers six drinks:
+The Flying Saucer offers three drinks:
 
 * Liquified Vegetation
 
