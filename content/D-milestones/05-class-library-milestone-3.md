@@ -150,7 +150,7 @@ Create an interface named IOrderItem.cs which contains the following properties:
 All entrees, drinks, and sides will need to implement this interface.
 
 #### Inheritance and Interfaces
-With your new interface adn base classes, you will need to refactor your existing classes to ensure:
+With your new interface and base classes, you will need to refactor your existing classes to ensure:
 
 * All entrees inherit `Entree`
 * All sides inherit `Side`
