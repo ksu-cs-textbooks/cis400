@@ -47,7 +47,7 @@ This assignment is to further explore polymorphism through the use of interfaces
 
 ### Recommendations:
 
-Read the entire assignment before you start to code. Make sure you understand what is being asked of you. Start early, these assignments are going to start taking more and more time to complete. 
+Read the entire assignment before you start to code. Make sure you understand what is being asked of you. Start early, these assignments are going to start taking more and more time to complete.
 
 ### Assignment Details
 
@@ -70,20 +70,20 @@ Define abstract base classes for your drinks, called `Drink`. All drinks should 
 
 All properties that are shared by derived `Drink` classes should be pushed to the base class (generalization).  Examine the drink class requirements below to determine what should be generalized.
 
-## Drink Classes 
+## Drink Classes
 
-All sides should reside in the `FlyingSaucer.Data.Drink` namespace.
+All drinks should reside in the `FlyingSaucer.Data.Drink` namespace.
 
-The Flying Saucer offers six drinks:
+The Flying Saucer offers three drinks:
 
-* Liquified Vegetation 
+* Liquified Vegetation
 
 * Saucer Fuel
 
 * Water
 
 
-Each drink should implement a property for: `Name` (a `string`), `Description` (a `string`), `Size` (a `Size` enumeration), `Price` (a `decimal`), `Calories` (a `uint`), and `SpecialInstructions` (a `List<String>`), containing any special instructions needed to prepare the dish for a specific customer (or empty if there are none). 
+Each drink should implement a property for: `Name` (a `string`), `Description` (a `string`), `Size` (a `Size` enumeration), `Price` (a `decimal`), `Calories` (a `uint`), and `SpecialInstructions` (a `List<String>`), containing any special instructions needed to prepare the dish for a specific customer (or empty if there are none).
 
 <hr/>
 
@@ -141,7 +141,7 @@ Water should be named _[Size] Water_ with _[Size]_ being _Small_, _Medium_, or _
 
 Create an interface named IOrderItem.cs which contains the following properties:
 
-* Price - a getter of type `double`
+* Price - a getter of type `decimal`
 
 * Calories - A getter of type `uint`
 
@@ -150,7 +150,7 @@ Create an interface named IOrderItem.cs which contains the following properties:
 All entrees, drinks, and sides will need to implement this interface.
 
 #### Inheritance and Interfaces
-With your new interface adn base classes, you will need to refactor your existing classes to ensure:
+With your new interface and base classes, you will need to refactor your existing classes to ensure:
 
 * All entrees inherit `Entree`
 * All sides inherit `Side`
@@ -197,7 +197,7 @@ Your finished UML diagram should be included in a _documentation_ folder in a fo
 
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
-Comments 
+Comments
 * -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
 * -1 point for every file not containing a header describing the file purpose and author(s).
 
