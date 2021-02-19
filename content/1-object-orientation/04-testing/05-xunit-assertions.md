@@ -50,20 +50,54 @@ There are a host of assertions for working with collections:
 * `Assert.Contains<T>(T expected, IEnumerable<T> collection)` asserts that the `expected` item is found in the `collection`, while 
 * `Assert.DoesNotContain<T>(T expected, IEnumerable<T> collection)` asserts the `expected` item is _not_ found in the `collection`
 
-Finally, `Assert.Collection<T>(IEnumerable<T> collection, Action<T>[] inspectors)` can apply specific inspectors against each item in a collection.  This bears a bit of explanation by way of a demonstration:
+In addition to the simple equality check form of `Assert.Contains<T>()` and `Assert.DoesNotContain<T>()`, there is a version that takes a filter expression (an expression that evaluates to `true` or `false` indicating that an item was found) written as a lambda expression.  For example, to determine if a list of `Fruit` contains an `Orange` we could use:
+
+```csharp
+List<Fruit> fruits = new List<Fruit>() {
+    new Orange(),
+    new Apple(),
+    new Grape(),
+    new Banana() {Overripe = true}
+};
+Assert.Contains(fruits, item => item is Orange);
+```
+
+The expression `item is Orange` is run on each item in `fruits` until it evaluates to `true` or we run out of fruit to check. We can also supply curly braces with a return statement if we need to perform more complex logic:
+
+```csharp
+Assert.Contains(fruits, item => {
+    if(item is Banana banana) {
+        if(banana.Overripe) return true;
+    }
+    return false;
+});
+```
+
+Here we only return `true` for overripe bananas.  Using `Assert.Contains()` with a filter expression can be useful for checking that expected items are in a collection.  To check that the collection also does not contain unexpected items, we can test the length of the collection against the expected number of values, i.e.:
+
+```csharp
+Assert.True(fruits.Count == 4, $"Expected 4 items but found {fruits.Count}");
+```
+
+Here we use the `Assert.True()` overload that allows a custom message when the test fails.
+
+Finally, `Assert.Collection<T>(IEnumerable<T> collection, Action<T>[] inspectors)` can apply specific inspectors against each item in a collection.  Using the same fruits list as above:
 
 ```csharp 
-List<int> nums = new List<int>() {1, 2, 3};
-Assert.Collection(nums, 
-    item => Assert.Equal(1, item),
-    item => Assert.Equal(2, item),
-    item => Assert.Equal(3, item)
-    );
+Assert.Collection(fruits, 
+    item => Assert.IsType<Orange>(item),
+    item => Assert.IsType<Apple>(item),
+    item => Assert.IsType<Grape>(item),
+    item => {
+        Assert.IsType<Banana>(item);
+        Assert.True(((Banana)item).Overripe);
+    }
+);
 ```
 
 Here we use an [Action<T> delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=netcore-3.1) to map each item in the collection to an assertion.  These actions are written using [lambda expressions], which are conceptually _functions_.  
 
-The number of actions should correspond to the expected size of the collection, and the items supplied to the actions are in the order they appear in the collection.
+The number of actions should correspond to the expected size of the collection, and the items supplied to the actions _must be in the same order as they appear in the collection_.  Thus, the `Assert.Collection()` is a good choice when the collection is expected to always be in the same order, while the `Assert.Contains()` approach allows for variation in the ordering.
 
 ## Exception Assertions
 Error assertions _also_ use [Action<T> delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=netcore-3.1), in this case to execute code that is expected to throw an exception, i.e. we could test for `System.DivideByZeroException` with:
