@@ -47,17 +47,17 @@ This assignment is intended to introduce you to Microsoft's Windows Presentation
 
 Most of this class is concerned with creating custom components which bundle related functionality into a single custom control.  These are created by extending the `UserControl` class found in WPF, and embedding controls into other controls, either by nesting them within XAML, or by adding them programmatically.  The goal is to create a complete user interface for the Point of Sale system.  The initial screen might look something like:
 
-![Example POS Main Screen]({{<static "images/d.8.1.png">}})
+![Example POS Main Screen]({{<static "images/d.6.1.png">}})
 
 And pressing a button like the "Flying Saucer" button would add a Flying Saucer instance to the order (to be done next milestone) and will open a customization screen:
 
-![Example POS Customization Screen]({{<static "images/d.8.2.png">}})
+![Example POS Customization Screen]({{<static "images/d.6.2.png">}})
 
 Which displays the customization options for the selected menu item.  The "Done" button in this screen will then return back to the main screen.  
 
 In this arrangement, we might see three components (The MainWindow, an order component that manages the overall order, and either the menu item selection screen, or a customization screen for a specific element):
 
-![Example Components of the POS]({{<static "images/d.8.3.png">}})
+![Example Components of the POS]({{<static "images/d.6.3.png">}})
 
 Making the menu item selection screen and the customization screens children (i.e. a composition association) of the `OrderComponent` greatly simplifies managing the swapping between the various screens as changes are being made to the order - though this is certainly not the only way of setting up the application.
 
