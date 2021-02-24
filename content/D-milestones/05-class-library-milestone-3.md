@@ -1,5 +1,5 @@
 ---
-title: "Class Library Milestone #3 - Assignment Description"
+title: "Class Library Milestone #3"
 pre: "6. "
 weight: 60
 date: 2018-08-24T10:53:26-05:00
