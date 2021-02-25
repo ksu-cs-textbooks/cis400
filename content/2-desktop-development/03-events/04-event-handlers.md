@@ -47,21 +47,20 @@ public Egg()
     // Set a timer to go off in 20 days 
     // (ms = 20 days * 24 hours/day * 60 minutes/hour * 60 seconds/minute * 1000 milliseconds/seconds)
     var timer = new System.Timers.Timer(20 * 24 * 60 * 60 * 1000);
-    timer.Elapsed += startHatching;
+    timer.Elapsed += StartHatching;
 }
 ```
 
 In the event listener `startHatching`, we'll want to create our new baby chick, and then trigger the `Hatch` event.  To do this, we need to _invoke_ it on any attached listeners with `Hatch.Invoke()`, passing in both the event arguments and the source of the event (our egg):
 
 ```csharp
-private void startHatching(object source, ElapsedEventArgs e) 
+private void StartHatching(object source, ElapsedEventArgs e) 
 {
     var chick = new Chick();
     var args = new HatchEventArgs(chick);
     Hatch.Invoke(this, args);
 }
 ```
-
 
 However we might have the case where there are no registered event listeners, in which case `Hatch` evaluates to `null`, and attempting to call `Invoke()` will cause an error.  We can prevent this by wrapping our `Invoke()` within a conditional:
 
@@ -71,13 +70,13 @@ if(Hatch !== null) {
 }
 ```
 
-However, there is a handy shorthand form for doing this (more syntatic sugar):
+However, there is a handy shorthand form for doing this (more syntactic sugar):
 
 ```csharp 
 Hatch?.Invoke(this, args);
 ```
 
-Using the question mark (`?`) before the method invocation is known as the [Null-condition operator](Notice that we use the  null-conditional operator [`?.`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-) to avoid calling the `Invoke()` method if `PropertyChanged` is null (which is the case if no event listeners have been assigned).  ).  It tests the object to see if it is null.  If it is null, the method is not invoked. 
+Using the question mark (`?`) before the method invocation is known as the [Null-condition operator](Notice that we use the  null-conditional operator [`?.`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-) to avoid calling the `Invoke()` method if `PropertyChanged` is null (which is the case if no event listeners have been assigned). It tests the object to see if it is null.  If it is null, the method is not invoked. 
 
 {{% notice info %}}
 You might be wondering why an event handler with no assigned events is `Null` instead of some form of empty collection. The answer is rooted in efficiency - remember that each object (even empty collection) requires a certain amount of memory to hold its details.  Now think about all the possible events we might want to listen for in a GUI.  The [System.Windows.Controls.Control](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.control?view=netcore-3.1#events) Class (a base class for all WPF controls) defines around 100 events.  Now multiply that by all the controls used in a single GUI, and you'll see that small amount of memory consumption adds up quickly.  By leaving unused event handlers as null, .NET saves significant memory!
@@ -104,14 +103,14 @@ public class Egg
         // Set a timer to go off in 20 days 
         // (ms = 20 days * 24 hours/day * 60 minutes/hour * 60 seconds/minute * 1000 milliseconds/seconds)
         var timer = new System.Timers.Timer(20 * 24 * 60 * 60 * 1000);
-        timer.Elapsed += startHatching;
+        timer.Elapsed += StartHatching;
     }
 
     /// <summary>
     /// Handles the end of the incubation period 
     /// by triggering a Hatch event 
-    /// </sumamry>
-    private void startHatching(object source, ElapsedEventArgs e) 
+    /// </summary>
+    private void StartHatching(object source, ElapsedEventArgs e) 
     {
         var chick = new Chick();
         var args = new HatchEventArgs(chick);

@@ -7,9 +7,9 @@ date: 2018-08-24T10:53:26-05:00
 
 We often have classes which encapsulate data we might need to look at.  For example, we might have a "Smart" dog dish, which keeps track of the amount of food it contains in ounces.  So it exposes a `Weight` property.
 
-Now let's assume we have a few possible add-on products that can be combined with that smart bowl.  One is a "dinner bell", which makes noises when the bowl is filled (obstensibly to attract the dog, but mostly just to annoy your neighbors).  Another is a wireless device that sends texts to your phone to let you know when the bowl is empty.
+Now let's assume we have a few possible add-on products that can be combined with that smart bowl.  One is a "dinner bell", which makes noises when the bowl is filled (ostensibly to attract the dog, but mostly just to annoy your neighbors).  Another is a wireless device that sends texts to your phone to let you know when the bowl is empty.
 
-How can the software running on these devices determine when the bowl is empty or full?  One possiblity would be to check the bowl's weight constantly, or at a set interval.  We call this strategy _polling_:
+How can the software running on these devices determine when the bowl is empty or full?  One possibility would be to check the bowl's weight constantly, or at a set interval.  We call this strategy _polling_:
 
 ```csharp 
 /// <summary>
@@ -31,7 +31,7 @@ This was a common problem in GUI design - sometimes we need to know when a prope
 
 ### The INotifyPropertyChanged Interface
 
-The standard answer to this delimma in .NET is the `INotifyPropertyChanged` interface - an interface defined in the `System.ComponentModel` namespace that requires you to implement a single event `PropertyChanged` on the class that is changing.  You can define this event as:
+The standard answer to this dilemma in .NET is the `INotifyPropertyChanged` interface - an interface defined in the `System.ComponentModel` namespace that requires you to implement a single event `PropertyChanged` on the class that is changing.  You can define this event as:
 
 ```csharp 
 public event PropertyChangedEventHandler PropertyChanged;
@@ -187,11 +187,11 @@ public string Name {
 }
 ```
 
-Notice how we use the setter for `Name` to invoke the `PropertyChanged` event handler, _after_ the change to the property has been made.  This invocation needs to be done _after_ the change, or the responding event listener may grab the _old_ value.
+Notice how we use the setter for `Name` to invoke the `PropertyChanged` event handler, _after_ the change to the property has been made.  This invocation needs to be done _after_ the change, or the responding event listener may grab the _old_ value (remember, event listeners are triggered _synchronously_).
 
 Also note that we use the  null-conditional operator [`?.`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-) to avoid calling the `Invoke()` method if `PropertyChanged` is null (which is the case if no event listeners have been assigned).  
 
-Now let's tackle a more complex example.  Since our `SmartBowl` uses a sensor to measure the weight of its contents, we might be able to read the sensor data - probably through a driver or a class respresnting the sensor. Rather than doing this constantly, let's set a polling interval of 1 minute:
+Now let's tackle a more complex example.  Since our `SmartBowl` uses a sensor to measure the weight of its contents, we might be able to read the sensor data - probably through a driver or a class representing the sensor. Rather than doing this constantly, let's set a polling interval of 1 minute:
 
 ```csharp 
 /// <summary>
@@ -226,7 +226,7 @@ public class SmartBowl : INotifyPropertyChanged
     private double weight;
     /// <summary>
     /// The weight of the bowl contents, measured in ounces
-    /// </sumamry>
+    /// </summary>
     public double Weight
     {
         get { return weight; }
@@ -272,10 +272,10 @@ public class SmartBowl : INotifyPropertyChanged
 }
 ```
 
-Notice in this code, we use the setter of the `Weight` property to trigger the `PropertyChanged` event.  Becuase we're dealing with a real-world sensor that may have slight variations in the readings, we also only treat changes of more than 1/16th of an ounce as signficant enough to change the property.
+Notice in this code, we use the setter of the `Weight` property to trigger the `PropertyChanged` event.  Because we're dealing with a real-world sensor that may have slight variations in the readings, we also only treat changes of more than 1/16th of an ounce as significant enough to change the property.
 
 {{% notice warning %}}
-With the `INotifyPropertyChanged` interface, the _only_ aspect Visual Studio checks is that the `PropertyChanged` event handler is declared.  There is no built-in check that the programmer is using it as expected.  Therefore it is upon you, the programmer, to ensure that you meet the expectation that comes with implemeting this interface: _that any public or protected property that changes will invoke the `PropertyChanged` event handler_.
+With the `INotifyPropertyChanged` interface, the _only_ aspect Visual Studio checks is that the `PropertyChanged` event handler is declared.  There is no built-in check that the programmer is using it as expected.  Therefore it is upon you, the programmer, to ensure that you meet the expectation that comes with implementing this interface: _that any public or protected property that changes will invoke the `PropertyChanged` event handler_.
 {{% /notice %}}
 
 #### Testing the PropertyChanged Event Handler 
@@ -335,6 +335,6 @@ public void NameChangeShouldTriggerPropertyChanged()
 }
 ```
 
-Notice that `Assert.PropertyChanged(@object ojb, string propertyName, Action action)` takes three arguements - first the object with the property that should be chaging, second the name of the property we expect to change, and third an action that should trigger the event.  In this case, we change the name property.
+Notice that `Assert.PropertyChanged(@object ojb, string propertyName, Action action)` takes three arguments - first the object with the property that should be changing, second the name of the property we expect to change, and third an action that should trigger the event.  In this case, we change the name property.
 
-The second is a bit more involved, as we have an event that happens based on a timer.  To test it therefore, we have to wait for the timer to have had an opportunity to trigger.  We do this with an asynchronous action, so we use the `Assert.PropertyChangedAsync(@object ojb, string propertyName, Func<Task> action)`.  The first two arguements are the same, but the last one is a `Func` (a function) that returns an asynchronous `Task` object.  The simplest one to use here is `Task.Delay`, which delays for the supplied period of time (in our case, two minutes).  Since our property should change on one-minute intervals, we'll know if there was a problem if it doesn't change after two minutes.
+The second is a bit more involved, as we have an event that happens based on a timer.  To test it therefore, we have to wait for the timer to have had an opportunity to trigger.  We do this with an asynchronous action, so we use the `Assert.PropertyChangedAsync(@object ojb, string propertyName, Func<Task> action)`.  The first two arguments are the same, but the last one is a `Func` (a function) that returns an asynchronous `Task` object.  The simplest one to use here is `Task.Delay`, which delays for the supplied period of time (in our case, two minutes).  Since our property should change on one-minute intervals, we'll know if there was a problem if it doesn't change after two minutes.

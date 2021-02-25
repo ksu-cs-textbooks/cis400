@@ -12,8 +12,8 @@ As you might suspect, event-driven programming is often used alongside other pro
 ## Key Terms
 
 * Event
-* Event Loop
-* Event Queue
+* Message Loop
+* Message Queue
 * Event Handler
 * Event Listener
 * Event Arguments
