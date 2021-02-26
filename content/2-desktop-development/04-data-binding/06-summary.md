@@ -1,7 +1,7 @@
 ---
-title: "Binding Enumerations"
-pre: "7. "
-weight: 7
+title: "Summary"
+pre: "6. "
+weight: 6
 date: 2018-08-24T10:53:26-05:00
 ---
 

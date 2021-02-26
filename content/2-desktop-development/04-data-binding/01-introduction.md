@@ -19,7 +19,8 @@ Some key terms to learn in this chapter are:
 
 Some key skills you need to develop in this chapter are:
 
-* Implementing (realizing) the INotifyPropertyChanged interface
+* Binding data objects to UI Components
+* Implementing (realizing) the `INotifyPropertyChanged` interface
 * Invoking event handlers
 * Using the `DataContext` property
 * Casting objects to a specific Type without triggering errors

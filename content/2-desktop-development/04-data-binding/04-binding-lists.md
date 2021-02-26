@@ -5,11 +5,7 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Most controls simply require binding a path to the appropriate kind of property.  We saw this in binding a string (or something that has a `ToString()` method) to the `Text` property of a `<TextBlock>` or `<TextBox>`.  It also holds true for binding a boolean property to a `<CheckBox>` element's `IsChecked` property.  I.e. if we added an `IsCartoon` property to our `Person`:
 
-```xml
-<CheckBox IsChecked="{Binding Path=IsCartoom}">Is a Loony Toon</CheckBox>
-```
 For list controls, i.e. `ListView` and `ListBox`, the appropriate binding is a collection implementing `IEnumerable`, and we bind it to the `ItemsSource` property.  Let's say we want to create a directory that displays information for a `List<Person>`.  We might write a custom `DirectoryControl` like:
 
 ```xml
@@ -76,7 +72,7 @@ When we run this code, our results will be:
 
 ![The ListView in the running application]({{<static "images/2.4.4.1.png">}})
 
-This is becuase the `ListBox` (and the `ListView`) by default are composed of `<TextBlock>` elements, so each `Person` in the list is being bound to a `<TextBlock>`'s `Text` property.  This invokes the `ToString()` method on the `Person` object, hence the `DataBindingExample.Person` displayed for each entry.
+This is because the `ListBox` (and the `ListView`) by default are composed of `<TextBlock>` elements, so each `Person` in the list is being bound to a `<TextBlock>`'s `Text` property.  This invokes the `ToString()` method on the `Person` object, hence the `DataBindingExample.Person` displayed for each entry.
 
 We could, of course, override the `ToString()` method on person.  But we can also overwrite the `DataTemplate` the list uses to display its contents.  Instead of using the default `<TextView>`, the list will use the `DataContext`, and the bindings, we supply.  For example, we could re-write the `DirectoryControl` control as:
 
@@ -110,7 +106,7 @@ We could, of course, override the `ToString()` method on person.  But we can als
 
 And the resulting application would display:
 
-![The updated ListView in the running application]({{<static "images/2.4.3.2.png">}})
+![The updated ListView in the running application]({{<static "images/2.4.4.2.png">}})
 
 Note that in our `DataTemplate`, we can bind to properties in the `Person` object.  This works because as the `ListBox` processes its `ItemsSource` property, it creates a new instance of its `ItemTemplate` (in this case, our custom `DataTemplate`) and assigns the item from the `ItemSource` to its `DataContext`.
 
@@ -166,7 +162,7 @@ Note how we bind the `<PersonControl>`'s `DataContext` to the `CurrentItem` of t
 </UserControl>
 ```
 
-With these changes, when we select a person in the `<RegistryControl>`, thier information will appear in the `<PersonControl>`:
+With these changes, when we select a person in the `<RegistryControl>`, their information will appear in the `<PersonControl>`:
 
 ![The bound controls]({{<static "images/2.4.4.3.png">}})
 

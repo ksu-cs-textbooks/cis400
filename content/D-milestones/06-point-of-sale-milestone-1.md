@@ -1,7 +1,7 @@
 ---
 title: "Point of Sale Milestone #1"
-pre: "8. "
-weight: 80
+pre: "6. "
+weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
 

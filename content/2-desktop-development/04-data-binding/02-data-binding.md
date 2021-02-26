@@ -199,7 +199,7 @@ namespace DataContextExample
 
 And have a `PersonElement` nested somewhere further down the elements tree:
 
-```xaml
+```xml
 <Window x:Class="DataBindingExample.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
