@@ -11,7 +11,7 @@ WPF and XAML lend themselves to a design approach known as Component-Based Desig
 
 Let's dig deeper by focusing on a specific example.  Let's say we want to build an application for keeping track of multiple shopping lists.  So our core component is a displayed list, plus a mechanism for adding to it. Let's create a `UserComponent` to represent this.
 
-For laying out the component, let's say at the very top, we place the text "Shopping List For", and direclty below that we have an editable text box where the user can enter a store name.  On the bottom, we'll have a text box to enter a new item, and a button to add that item to the list.  And in the space bewtween, we'll show the list in its current form.  This sounds like an ideal fit for the `DockPanel`:
+For laying out the component, let's say at the very top, we place the text "Shopping List For", and directly below that we have an editable text box where the user can enter a store name.  On the bottom, we'll have a text box to enter a new item, and a button to add that item to the list.  And in the space between, we'll show the list in its current form.  This sounds like an ideal fit for the `DockPanel`:
 
 ```xml
 <UserControl x:Class="ShopEasy.ShoppingList"
@@ -216,4 +216,4 @@ The resulting app allows us to create multiple shopping lists, and swap between 
 
 ![ShopEasy App]({{<static "images/2.1.8.1.png">}})
 
-Much like we can use objects to break program functionality into smaller, more focused units, we can use component-based design to break GUIs into smaller, more focused units.  Both reflect one of the principles of good programming practice - the Single Responsiblity Principle.  This principle suggests each unit of code should focus on a single responsibility, and more complex behaviors be achieved by using multiple units together.  As we see here, this principle extends across multiple programming paradigms.
+Much like we can use objects to break program functionality into smaller, more focused units, we can use component-based design to break GUIs into smaller, more focused units.  Both reflect one of the principles of good programming practice - the Single Responsibility Principle.  This principle suggests each unit of code should focus on a single responsibility, and more complex behaviors be achieved by using multiple units together.  As we see here, this principle extends across multiple programming paradigms.

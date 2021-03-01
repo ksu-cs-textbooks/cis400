@@ -94,7 +94,7 @@ This brings in the `System` namespace, so now we can use the classes and types d
 <system:String>Hello World!</system:String>
 ```
 
-Note that for the namespace attribute, we also included the assembly information.  This is necessary for any assemblies that are not defined by this project (i.e. exist in thier own DLL files).
+Note that for the namespace attribute, we also included the assembly information.  This is necessary for any assemblies that are not defined by this project (i.e. exist in their own DLL files).
 
 ### The WPF Editor
 
@@ -102,7 +102,7 @@ In Visual Studio, opening a WPF XAML file will open a special editor that provid
 
 ![The Visual Studio WPF XAML Editor]({{<static "images/2.1.7.2.png">}})
 
-As you edit the XAML, it also updates the visualization in the visual editor.  Also, many element properties can be edited from the visual editor or the properites pane - and these changes are automatically applied to the XAML. And, just like with Windows Forms, you can drag controls from the toolbox into the visualization to add them to the layout.
+As you edit the XAML, it also updates the visualization in the visual editor.  Also, many element properties can be edited from the visual editor or the properties pane - and these changes are automatically applied to the XAML. And, just like with Windows Forms, you can drag controls from the toolbox into the visualization to add them to the layout.
 
 However, you will likely find yourselves often directly editing the XAML. This is often the fastest and most foolproof way of editing WPF controls.  Remember that in WPF controls resize to fit the available space, and are not positioned by coordinates.  For this reason, the visual editor will actually apply _margins_ instead of positioning elements, which can cause unexpected results if your application is viewed at a different resolution (including some controls being inaccessible as they are covered by other controls).
 

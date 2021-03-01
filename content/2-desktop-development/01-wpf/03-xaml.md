@@ -5,7 +5,7 @@ weight: 30
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Windows Presentation Foundation builds upon Extensible Application Markup Langauge (XAML), an extension of the XML language we've discussed previously.  Just like XML, it consists of elements defined by opening and closing tags.
+Windows Presentation Foundation builds upon Extensible Application Markup Language (XAML), an extension of the XML language we've discussed previously.  Just like XML, it consists of elements defined by opening and closing tags.
 
 For example, a button is represented by:
 
@@ -64,7 +64,7 @@ Because XAML is an extension of XML, we can add comments the same way, by enclos
 
 What makes XAML different from vanilla XML is that _it defines objects_.  The XAML used for Windows Presentation Foundation is drawn from the http://schemas.microsoft.com/winfx/2006/xaml/presentation namespace.  This namespace defines exactly what elements exist in this flavor of XAML, and they correspond to specific classes defined in the WPF namespaces.  
 
-For example, the `<Button>` class corresponds to the WPF [Button](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.button?view=netcore-3.1) class. This class has a `Content` property which defines the text or other content displayed on the button.  Additionally, it has a `Width` and `Height` propety.  Thus the XAML:
+For example, the `<Button>` class corresponds to the WPF [Button](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.button?view=netcore-3.1) class. This class has a `Content` property which defines the text or other content displayed on the button.  Additionally, it has a `Width` and `Height` property.  Thus the XAML:
 
 ```xml
 <Button Height="30" Width="120" Content="Click Me!"/>
@@ -79,7 +79,7 @@ button.Width = 120;
 button.Content = "Click Me!";
 ```
 
-This is why XAML stands for Extensible _Application_ Markup Langauge - it's effectively another way of writing programs! You can find the documentation for all the controls declared in the xaml/presentation namespace on [docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls?view=netcore-3.1).
+This is why XAML stands for Extensible _Application_ Markup Language - it's effectively another way of writing programs! You can find the documentation for all the controls declared in the xaml/presentation namespace on [docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls?view=netcore-3.1).
 
 ## XAML and Partial Classes 
 
@@ -135,14 +135,14 @@ void InitializeComponent()
 
 Notice how it sets the properties corresponding to the attributes defined on the `<MainWindow>` element?  Further, it assigns the child of that element (a `<Grid>` element) as the `Content` property of the `Window`.  Nested XAML elements are typically assigned to either `Content` or `Children` properties, depending on if the element in question is a container element or not (container elements can have multiple children, all other elements are limited to a single child).
 
-Any structure defined in our XAML is set up during this `InitializeComponent()` call.  This means you should **never remove the `InitializeComponent();` invocation** from a WPF class, or your XAML-defined content will not be added.  Similarly, you sould not manipulate that structure until the `InitializeComponent();` method has been invoked, or the structure will not exist!
+Any structure defined in our XAML is set up during this `InitializeComponent()` call.  This means you should **never remove the `InitializeComponent();` invocation** from a WPF class, or your XAML-defined content will not be added.  Similarly, you should not manipulate that structure until the `InitializeComponent();` method has been invoked, or the structure will not exist!
 
 This strategy of splitting GUI code into two files is known in Microsoft parlance as _codebehind_, and it allows the GUI's visual aspect to be created independently of the code that provides its logic.  This approach has been a staple of both Windows Forms and Windows Presentation Foundation.  This separation also allows for graphic designers to create the GUI look-and-feel without ever needing to write a line of code.  There is a companion application to Visual Studio called [Blend](https://en.wikipedia.org/wiki/Microsoft_Blend) that can be used to write the XAML files for a project without needing the full weight and useability of Visual Studio.
 
 {{% notice tip %}}
-Occasionally, Visual Studio will encounter a problem while building the temporary file from the XAML definition, and the resulting temporary file may become corrupted.  When this happens, your changes to the XAML are no longer incorporated into the program when you compile, because the process can't overwrite the corrupted temporary file.  Instead, the corrupted temporary file is used - resuliting in weird and unexpected behavior.  If this happens to you, just run the **"Build > Clean"** menu option on the project to delete all the temporary files.
+Occasionally, Visual Studio will encounter a problem while building the temporary file from the XAML definition, and the resulting temporary file may become corrupted.  When this happens, your changes to the XAML are no longer incorporated into the program when you compile, because the process can't overwrite the corrupted temporary file.  Instead, the corrupted temporary file is used - resulting in weird and unexpected behavior.  If this happens to you, just run the **"Build > Clean"** menu option on the project to delete all the temporary files.
 {{% /notice %}}
 
 {{% notice info %}}
-Partial classes weren't a WPF-specific innovation - Windows Forms used them first.  In Windows Forms, when you create a form, Visual Studio actually creates _two_ C# files.  One of these is the one intended for you to edit, and the other is used by the drag-and-drop editor, which fills it with auto-generated C# code.  If you ever make the mistake of editing _this_ file, it will cause all kinds of problems for the drag-and-drop editor (and you)!  In contrast, the drag-and-drop editor for WPF actually modifies the same XAML file you do - allowing you to use the editor, manually edit the XAML, or any combintation of the two.
+Partial classes weren't a WPF-specific innovation - Windows Forms used them first.  In Windows Forms, when you create a form, Visual Studio actually creates _two_ C# files.  One of these is the one intended for you to edit, and the other is used by the drag-and-drop editor, which fills it with auto-generated C# code.  If you ever make the mistake of editing _this_ file, it will cause all kinds of problems for the drag-and-drop editor (and you)!  In contrast, the drag-and-drop editor for WPF actually modifies the same XAML file you do - allowing you to use the editor, manually edit the XAML, or any combination of the two.
 {{% /notice %}}

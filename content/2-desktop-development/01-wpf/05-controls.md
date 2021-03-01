@@ -85,7 +85,7 @@ Alternatively, you can expose the `ComboBox` in the codebehind `.xaml.cs` file b
 </ComboBox>
 ```
 
-Then, after the combo box has been initalized, use the `ItemsSource` to specify a collection declared in the corresponding `.xaml.cs` file.
+Then, after the combo box has been initialized, use the `ItemsSource` to specify a collection declared in the corresponding `.xaml.cs` file.
 
 ```csharp
 /// <summary>
@@ -135,7 +135,7 @@ A [Label](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.la
 
 ![A Label Example]({{<static "images/2.1.5.4.png">}})
 
-What distinguishes it from other text controls is that it can also be associated with a specific control specifed by the `Target` parameter, whose value should be bound to the name of the control.  It can then provide an access key (aka a memenoic) that will transfer focus to that control when a the corresponding key is pressed.  The access key is indicated by proceeding the corresponding character in the text with an underscore:
+What distinguishes it from other text controls is that it can also be associated with a specific control specified by the `Target` parameter, whose value should be bound to the name of the control.  It can then provide an access key (aka a mnemonic) that will transfer focus to that control when a the corresponding key is pressed.  The access key is indicated by proceeding the corresponding character in the text with an underscore:
 
 ```xml
 <StackPanel>
@@ -152,7 +152,7 @@ Now when the program is running, the user can press `ALT + F` to shift focus to 
 
 ### ListBox 
 
-A [`ListBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.listbox?view=netcore-3.1) displays a list of items that can be selected.  The `SelectionMode` property can be set to either `"Single"` or `"Multiple"`, and the `"SelectedItems"` read-only property provides those selected items. The `ItemsSource` property can be set declaritively using `<ListItem>` contents.  It also exposes a `SelectionChanged` event handler:
+A [`ListBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.listbox?view=netcore-3.1) displays a list of items that can be selected.  The `SelectionMode` property can be set to either `"Single"` or `"Multiple"`, and the `"SelectedItems"` read-only property provides those selected items. The `ItemsSource` property can be set declaratively using `<ListItem>` contents.  It also exposes a `SelectionChanged` event handler:
 
 ```xml
 <ListBox>

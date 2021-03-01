@@ -34,7 +34,7 @@ Creates a grid with three columns, each 200 logial units wide, and two rows, eac
 
 ![The resulting Grid]({{<static "images/2.1.4.1.png">}})
 
-Remember, all WPF containers will fill the availble space - so the grid streches the last column and row to fill the remaining space.  Also, any element declared as a child of the grid (in this case, our button), will be placed in the first grid cell - [0,0] (counted from the top-left corner).
+Remember, all WPF containers will fill the available space - so the grid stretches the last column and row to fill the remaining space.  Also, any element declared as a child of the grid (in this case, our button), will be placed in the first grid cell - [0,0] (counted from the top-left corner).
 
 When declaring measurements in WPF, integer values correspond to logical units, which are 1/96th of an inch.  We can also use relative values, by following a measurement with a `*`.  This indicates the ratio of remaining space a column or row should take up after the elements with an exact size are positioned. I.e. a column with a width of `2*` will be twice as wide as one with a width of `1*`.
 
@@ -99,7 +99,7 @@ The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.con
     <Button>Strawberry</Button>
     <Button>Blackberry</Button>
     <Button>Peach</Button>
-    <Button>Watermellon</Button>
+    <Button>Watermelon</Button>
 </WrapPanel>
 ```
 

@@ -9,7 +9,7 @@ All WPF controls (including the layout controls we've already seen) derive from 
 
 ### Size & Placement Modifying Properties
 
-Perhaps the most important of the control properties are those that concrol sizing and placement.  Let's take a look at the most important of these.
+Perhaps the most important of the control properties are those that control sizing and placement.  Let's take a look at the most important of these.
 
 #### Size
 
@@ -175,7 +175,7 @@ There are often times in working with a GUI where you might want to disable or e
 
 #### IsEnabled
 
-The `IsEnabled` property is a boolean that indicates if this control is currently enabled. It defaults to `true`.  Exactly what 'enabled' means for a control is specfic to that kind of control, but usually means the control cannot be interacted with.  For example, a button with `IsEnabled=false` cannot be clicked on, and will be rendered grayed out, i.e.:
+The `IsEnabled` property is a boolean that indicates if this control is currently enabled. It defaults to `true`.  Exactly what 'enabled' means for a control is specific to that kind of control, but usually means the control cannot be interacted with.  For example, a button with `IsEnabled=false` cannot be clicked on, and will be rendered grayed out, i.e.:
 
 ![Enabled vs. Disabled Buttons]({{<static "images/2.1.6.1.png">}})
 
@@ -213,9 +213,9 @@ A similar effect can be obtained by changing an element's `Opacity` property, a 
 
 Alerting an elements' opacity does not have any effect on its functionality, i.e. a completely transparent button can still be clicked.
 
-#### Visiblity
+#### Visibility
 
-Finally, the Visible property alters how the element is considered in the WPF rendering algorithm.  It has three possible values: `"Visible"`, `"Hidden"`, and `"Collapsed"`. The default value is `"Visible"`, and the elment renders normally, as "Button One" does in the example below:
+Finally, the Visible property alters how the element is considered in the WPF rendering algorithm.  It has three possible values: `"Visible"`, `"Hidden"`, and `"Collapsed"`. The default value is `"Visible"`, and the element renders normally, as "Button One" does in the example below:
 
 ![Visible Visibility Example]({{<static "images/2.1.6.3.png">}})
 
@@ -267,7 +267,7 @@ What we've been using up to this point have been [`SolidColorBrush`](https://doc
 
 The simplest way to set the color in XAML is to use a value from the predefined [brush name list](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.brushes?view=netcore-3.1#remarks), like the `"BlueViolet"` and `"DarkSeaGreen"` in the example.
 
-Alternatively, you can use a hexidecimal number defining the red, green, and blue channels in that order, i.e. to use K-State purple and white (as defined in the [K-State Brand Guide](https://www.k-state.edu/vpcm/branding/KansasStateUniversity-BrandGuide.pdf)) we'd use:
+Alternatively, you can use a hexadecimal number defining the red, green, and blue channels in that order, i.e. to use K-State purple and white (as defined in the [K-State Brand Guide](https://www.k-state.edu/vpcm/branding/KansasStateUniversity-BrandGuide.pdf)) we'd use:
 
 ```xml
 <TextBlock Foreground="#FFFFFF" Background="#512888" FontSize="25">
@@ -280,7 +280,7 @@ The various formats the hex values can be given are detailed [here](https://docs
 
 #### Gradient Brushes
 
-Gradient brushes gradually transition between colors.  There are two kinds of graident brushes in WPF: with a [`LinearGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.lineargradientbrush?view=netcore-3.1) the brush gradually changes along a line.  WIth a [`RadialGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.radialgradientbrush?view=netcore-3.1), the color changes radially from a center point.
+Gradient brushes gradually transition between colors.  There are two kinds of gradient brushes in WPF: with a [`LinearGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.lineargradientbrush?view=netcore-3.1) the brush gradually changes along a line.  With a [`RadialGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.radialgradientbrush?view=netcore-3.1), the color changes radially from a center point.
 
 In both cases, the gradient is defined in terms of `<GradientStops>` - a distance along the line (or from the center) where the expected color value is defined.  In the spaces between gradient stops, the color value is interpolated between the two stops on either side of the point.  The gradient stop needs both an `Offset` value (a double indicating the percentage of how far along the line or from the center this stop falls, between 0.0 and 1.0) and a `Color` value (which can be defined as with solid color brushes).
 
@@ -330,7 +330,7 @@ To make the above gradient fall in the center half of the element, and be horizo
 
 ![Rainbow Linear Gradient with Start and End Points Example]({{<static "images/2.1.6.9.png">}})
 
-A `<RadialGradietBrush>` is defined similarly thorugh the use of `GradientStops`, only this time they are in relation to the center around which the gradient radiates:
+A `<RadialGradietBrush>` is defined similarly through the use of `GradientStops`, only this time they are in relation to the center around which the gradient radiates:
 
 ```xml
 <TextBlock Foreground="#FFFFFF" FontSize="25">
@@ -351,7 +351,7 @@ A `<RadialGradietBrush>` is defined similarly thorugh the use of `GradientStops`
 
 ![Rainbow Radial Gradient Example]({{<static "images/2.1.6.10.png">}})
 
-The gradient fills an ellipse defined by the `Center` property and the `RadiusX` and `RadiusY` properties.  By default these values are (0.5. 0.5), 0.5, and 0.5 respectively.  Like other gradient properties, they are doubles between 0.0 and 1.0.  Finally, the gradient eminates from the `GradientOrigin`, also a point with values defined by this coordinate system.
+The gradient fills an ellipse defined by the `Center` property and the `RadiusX` and `RadiusY` properties.  By default these values are (0.5. 0.5), 0.5, and 0.5 respectively.  Like other gradient properties, they are doubles between 0.0 and 1.0.  Finally, the gradient emanates from the `GradientOrigin`, also a point with values defined by this coordinate system.
 
 To center the above gradient in the left half of the block, we would therefore use:
 
@@ -443,6 +443,6 @@ The `ImageBrush` extends the `TileBrush`, so the image can actually be _tiled_ i
 
 
 {{% notice warning %}}
-When using images with Visual Studio, it is important to understand how those are used and distributed.  You should make sure the images are physically located within the project folder (so that they are included in your source control).  Additionally, you want to mark the property "Copy to Output Directory" to either "Copy Always" or "Copy if Newer."  When distributing your project, these files will also need to be distributed, or the image will be unavalable to your executable.
+When using images with Visual Studio, it is important to understand how those are used and distributed.  You should make sure the images are physically located within the project folder (so that they are included in your source control).  Additionally, you want to mark the property "Copy to Output Directory" to either "Copy Always" or "Copy if Newer."  When distributing your project, these files will also need to be distributed, or the image will be unavailable to your executable.
 ![Copy to Output Directory]({{<static "images/2.1.6.15.png">}})
 {{% /notice %}}
