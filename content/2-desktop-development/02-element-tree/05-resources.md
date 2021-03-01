@@ -5,7 +5,7 @@ weight: 50
 date: 2018-08-24T10:53:26-05:00
 ---
 
-The `<Style>` element represents just one kind of resource.  We can provide other kinds of resources, like raw data.  Say we want to provide a string to display in our program, but want that string declared somewhere easy to find and change (perhaps our customers change thier mind frequently).  We could declare the string in the `Application` resources:
+The `<Style>` element represents just one kind of resource.  We can provide other kinds of resources, like raw data.  Say we want to provide a string to display in our program, but want that string declared somewhere easy to find and change (perhaps our customers change their mind frequently).  We could declare the string in the `Application` resources:
 
 ```xml
 <Application x:Class="WpfTutorialSamples.App"
@@ -25,7 +25,7 @@ Then, in our actual control we can use that string as a _static resource_:
 <TextBlock Text="{StaticResource StringToDisplay}">
 ```
 
-As long as that element is a descendant of the element the resource is declared on, it will be used in the property.  In this case, we'll display the string "Hello World!" in the `TextBlock`.  Note that we have to use the `x:Key` property to identify the resource, and repeat the key in the `"{StaticResource StringToDisplay}"`.  The curly braces and the `StaticResource` both need to be there (techncally, they are setting up a _data binding_, which we'll talk about in a future chapter).
+As long as that element is a descendant of the element the resource is declared on, it will be used in the property.  In this case, we'll display the string "Hello World!" in the `TextBlock`.  Note that we have to use the `x:Key` property to identify the resource, and repeat the key in the `"{StaticResource StringToDisplay}"`.  The curly braces and the `StaticResource` both need to be there (technically, they are setting up a _data binding_, which we'll talk about in a future chapter).
 
 We can declare any kind of type as a resource and make it available in our XAML this way.  F
 

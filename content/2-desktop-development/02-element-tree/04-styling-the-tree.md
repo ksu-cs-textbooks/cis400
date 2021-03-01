@@ -72,7 +72,7 @@ Therefore, if we use:
 </Grid.Resources>
 ```
 
-The result will be that all buttons that are children of the `<Grid>` will have thier `FontSize` set to `40` device-independent pixels.  We don't need to add a separate `FontSize="40"` to each one!  However, if we add `FontSize="50"` to a single button, that button alone will have a slightly larger font. 
+The result will be that all buttons that are children of the `<Grid>` will have their `FontSize` set to `40` device-independent pixels.  We don't need to add a separate `FontSize="40"` to each one!  However, if we add `FontSize="50"` to a single button, that button alone will have a slightly larger font. 
 
 We can declare as many `<Setters>` as we want in a `<Style>` element, and as many `<Style>` elements as we want in a `<.Resources>` element.  Moreover, styles apply to all children in the elements tree.  Closer setters override those farther up the tree, and setting the property directly on an element always gives the final say.
 

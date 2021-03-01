@@ -18,7 +18,7 @@ In this example, `this` is our `ShoppingList`, the first `Parent` is the `Border
 Of course, this is a rather brittle way of finding an ancestor, because if we add any nodes to the element tree (perhaps move the `Grid` within a `DockPanel`), we'll need to rewrite it.  It would be better to use a loop to iteratively climb the tree until we find the control we're looking for.  This is greatly aided by the [`LogicalTreeHelper`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.logicaltreehelper?view=netcore-3.1) library, which provides standardized static methods for accessing parents and children in the elements tree:
 
 ```csharp
-// Start climing the tree from this node
+// Start climbing the tree from this node
 DependencyObject parent = this;
 do
 {
@@ -30,7 +30,7 @@ while(!(parent is null || parent is ListSwitcher));
 // If we get to this point, parent is either null, or the ListSwitcher we're looking for
 ```
 
-Searching the ancestors is a relatively easy task, as each node in the tree has only one parent.  Searching the descendants takes more work, as each node may have many children, with children of thier own.
+Searching the ancestors is a relatively easy task, as each node in the tree has only one parent.  Searching the descendants takes more work, as each node may have many children, with children of their own.
 
 This approach works well for complex applications with complex GUIs, where it is infeasible to keep references around.  However, for our simple application here, it might make more sense to refactor the `ShoppingList` class to keep track of the `ListSwitcher` that created it, i.e.:
 
