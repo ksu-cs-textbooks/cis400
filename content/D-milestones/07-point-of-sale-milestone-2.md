@@ -87,6 +87,9 @@ INotifyPropertyChanged implementation
 * -5 points for every entree, side, or drink class that does not implement `INotifyPropertyChanged`
 * -2 points for every property that does not invoke `PropertyChanged` when its value changes
 
+DataBinding 
+* -5 points for every customization screen that does not bind an instance of the corresponding menu item to the `DataContext` 
+
 Testing
 * -2 points for every entree, side, or drink unit test that does not confirm the menu item implements `INotifyPropertyChanged`
 * -2 points for every missing test for checking if a entree, side, or drink property changes
