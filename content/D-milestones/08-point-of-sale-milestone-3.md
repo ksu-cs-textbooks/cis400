@@ -35,7 +35,7 @@ This assignment is intended to help you gain a greater grasp of creating complex
 
 #### Implement functionality for the Order class
 
-In the Data project, create an `Order` class to represent an order, which is a collection of `IOrderItems`.  You will need to create public `Add(IOrderItem item)` and `Remove(IOrderItem item)` methods, which add or remove `IOrderItems` respectively.  Additionally, you should implement a getter and setter for `SalesTaxRate` (a double, default 0.12) and getter-only properties for `Subtotal` (a double), `Tax` (a double), and `Total` (a double).  The `Subtotal` is the total price for all items in the order, the `Tax` is the `Subtotal` multiplied by the `SalesTaxRate`, and `Total` is the sum of the `Subtotal` and `Tax`.  It should also provide a property `Calories` which is a unsigned integer, and the sum of all the calories of the item sin the order.
+In the Data project, create an `Order` class to represent an order, which is a collection of `IOrderItems`.  You will need to create public `Add(IOrderItem item)` and `Remove(IOrderItem item)` methods, which add or remove `IOrderItems` respectively.  Additionally, you should implement a getter and setter for `SalesTaxRate` (a double, default 0.12) and getter-only properties for `Subtotal` (a decimal), `Tax` (a decimal), and `Total` (a decimal).  The `Subtotal` is the total price for all items in the order, the `Tax` is the `Subtotal` multiplied by the `SalesTaxRate`, and `Total` is the sum of the `Subtotal` and `Tax`.  It should also provide a property `Calories` which is a unsigned integer, and the sum of all the calories of the item sin the order.
 
 Additionally, the `Order` should have an identifying `Number` getter property, which is unique to each order.  An easy way to ensure uniqueness is to have a private static field, i.e. `nextOrderNumber`, which is initialized to 1.  In the `Order` constructor, set this order's `Number` property to `nextOrderNumber` and then increment `nextOrderNumber`.  When your next order is created, it will use the incremented value, and increment it again. Technically this only ensures a single Point of Sale terminal is using unique order numbers (as multiple terminals will have duplicate values), but it is sufficient for now.
 
@@ -50,7 +50,7 @@ Finally, this class should implement the `ICollection`, `INotifyCollectionChange
     4. A `PropertyChanged` event noting the `Total` property has changed
     5. A `PropertyChanged` event noting the `Calories` property has changed 
 * Removing an `IOrderItem` from the `Order` should trigger:
-    1. A `CollectionChanged` event noting the addition of a new item 
+    1. A `CollectionChanged` event noting the removal of the item 
     2. A `PropertyChanged` event noting the `Subtotal` property has changed 
     3. A `PropertyChanged` event noting the `Tax` property has changed
     4. A `PropertyChanged` event noting the `Total` property has changed
