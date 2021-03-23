@@ -12,13 +12,9 @@ Now that you've learned how to build a WPF application, how do you test that it 
 Some key terms to learn in this chapter are:
 
 * Test Plan
-* MVVM Pattern
-* Mock Objects
 
 ## Key Skills
 
 Some key skills you need to develop in this chapter are:
 
 * Writing Test Plans
-* Utilizing the MVVM pattern
-* Using Mock Objects 
