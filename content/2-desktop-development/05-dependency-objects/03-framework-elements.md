@@ -5,9 +5,9 @@ weight: 3
 date: 2018-08-24T10:53:26-05:00
 ---
 
-WPF controls are built on the foundation of dependency objects - the `DependencyObject` is at the bottom of thier inheritance chain.  But they also add additional functionality on top of that trhough another common base class, `FrameworkElement`.  The `FrameworkElement` is involved in the layout algorithm, as well as helping to define the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  Let's add a _second_ dependency property to our `<NumberBox>`, a `Value` property that will represent the value the `<NumberBox>` currently represents, which will be displayed in the `<TextBox>`.
+WPF controls are built on the foundation of dependency objects - the `DependencyObject` is at the bottom of their inheritance chain.  But they also add additional functionality on top of that through another common base class, `FrameworkElement`.  The `FrameworkElement` is involved in the layout algorithm, as well as helping to define the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  Let's add a _second_ dependency property to our `<NumberBox>`, a `Value` property that will represent the value the `<NumberBox>` currently represents, which will be displayed in the `<TextBox>`.
 
-We register this dependency property in much the same way as our `Step`.  But instead of supplying the `DependencyProperty.Register()` method a `PropertyMetadata`, we'll instead supply a `FrameworkPropertyMetadata`, which extends `PropertyMetadata` to include additional data about how the property interacts with the WPF rendering and layout algorithms.  This additonal data is in the form of a bitmask defined in [`FrameworkPropertyMetadataOptions`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkpropertymetadataoptions?view=netcore-3.1) enumeration.
+We register this dependency property in much the same way as our `Step`.  But instead of supplying the `DependencyProperty.Register()` method a `PropertyMetadata`, we'll instead supply a `FrameworkPropertyMetadata`, which extends `PropertyMetadata` to include additional data about how the property interacts with the WPF rendering and layout algorithms.  This additional data is in the form of a bitmask defined in [`FrameworkPropertyMetadataOptions`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkpropertymetadataoptions?view=netcore-3.1) enumeration.
 
 Some of the possible options are:
 
@@ -30,7 +30,7 @@ And registering the dependency property would be:
 /// <summary>
 /// Identifies the NumberBox.Value XAML attached property
 /// </summary>
-public static DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(double), typeof(NumberBox), new FrameworkPropertyMetadata(0, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(double), typeof(NumberBox), new FrameworkPropertyMetadata(0, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 ```
 
 As with the `Step`, we also want to declare a traditional property with the name "Value".  But instead of declaring a backing field, we will use the key/value pair stored in our `DependencyObject` using `GetValue()` and `SetValue()`:

@@ -127,7 +127,7 @@ Now we need to refactor our `Value` dependency property registration to use this
 /// <summary>
 /// Identifies the NumberBox.Value XAML attached property
 /// </summary>
-public static DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(double), typeof(NumberBox), new FrameworkPropertyMetadata(0, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, HandleValueChanged));
+public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(double), typeof(NumberBox), new FrameworkPropertyMetadata(0, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, HandleValueChanged));
 ```
 
 By adding the callback to the dependency property, we ensure that _any time it changes_, regardless of the method the change occurs by, we will ensure the value is clamped to the specified range.  

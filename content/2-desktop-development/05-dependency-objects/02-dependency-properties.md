@@ -75,7 +75,7 @@ The `DependencyProperty.Register()` method returns a registered `DependencyObjec
 /// <summary>
 /// Identifies the NumberBox.Step XAML attached property
 /// </summary>
-public static DependencyProperty StepProperty = DependencyProperty.Register("Step", typeof(double), typeof(NumberBox), new PropertyMetadata(1.0)); 
+public static readonly DependencyProperty StepProperty = DependencyProperty.Register("Step", typeof(double), typeof(NumberBox), new PropertyMetadata(1.0)); 
 ```
 
 We also want to declare a traditional property with the name "Value".  But instead of declaring a backing field, we will use the key/value pair stored in our `DependencyObject` using `GetValue()` and `SetValue()`:
