@@ -1,7 +1,7 @@
 ---
 title: "Website Milestone #1 - Assignment Description"
-pre: "15. "
-weight: 150
+pre: "10. "
+weight: 100
 date: 2018-08-24T10:53:26-05:00
 ---
 
