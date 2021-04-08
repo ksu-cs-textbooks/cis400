@@ -66,30 +66,38 @@ _Founded in 2021 by a group of definitely human Earth people, The Flying Saucer 
 
 #### Layout
 
-Modify the existing (created by the template) _Shared/_Layout.cshtml_ to:
+Modify the existing (created by the template) _Shared/_Layout.cshtml_ to (at a minimum):
 
 1. Set the page title to what is provided by the page with the string “- The Flying Saucer” concatenated to the end
 2. Provide a navigation link to the new About page
-3. Change the copyright statement to “(c) 2020 - The Flying Saucer Buffet LLC.”
+3. Change the copyright statement to “(c) 2020 - The Flying Saucer LLC.”
+4. Add the flying saucer logo to the navigation bar.
+
+{{% notice hint %}}
+
+You can make the browser scroll to a specific section of the page by adding a `#` followed by the `id` of the page you want to scroll to.  I.e. if you want to scroll to the tag `<h1 id="entrees">` on the home page, the corresponding URL would be `/home#entrees`.  With a normal anchor tag, this would be: `<a href="/home#entrees">Entrees</a>`.
+
+If you are using the ASP tag helpers, the equivalent tag would be `<a asp-page="Home" asp-fragment="entrees">Entrees</a>`.
+{{% /notice %}}
 
 #### Index Page 
 
 Modify the existing _Index.cshtml_ page to display the full menu of The Flying Saucer, following these guidelines:
 
 Welcome Message
-Add a first-level header (`<h1>`) identifying the page as Bleakwind Buffet.
+Add a first-level header (`<h1>`) identifying the page as "The Flying Saucer".
 
 Under that, add a section greeting the customer with the message:
 
 _Breakfast out of this World!_
 
-(You can find an image bearing this message in the graphics resources)
+(You can find an image bearing this message in the graphics resources.)
 
 ##### List the Menu Categories
 List the three categories of menu items (Entrees, Sides, and Drinks) using second-level header tags (`<h2>`).
 
 ##### List the Menu Items
-Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of menu-item. The `<div`> should include, nested inside, the name of the item, its price, its calories, and its description. If an item comes in multiple sizes, you will need to list the price and calories for each size.
+Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of menu-item. The `<div`> should include, nested inside, an image of the item (see the art resources for files you can use), the name of the item, its price, its calories, and its description. If an item comes in multiple sizes, you will need to list the price and calories for each size.
 
 You may use additional HTML elements to organize and present this information, and use CSS to style it as you see fit.  You may choose to follow the suggestions of the graphic designer included with the art assets.
 
