@@ -5,7 +5,7 @@ weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Cascading Style Sheets (CSS) is the second core web technology of the web.  It defines the _appearance_ of web pages by applying stylistic rules to matching HTML elements.  CSS is normally declared in a file with the _.css_ extension, separate from the HTML files it is modifiying, though it can also be declared within the page using the [&lt;style&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) element, or directly on an element using the `style` attribute.
+Cascading Style Sheets (CSS) is the second core web technology of the web.  It defines the _appearance_ of web pages by applying stylistic rules to matching HTML elements.  CSS is normally declared in a file with the _.css_ extension, separate from the HTML files it is modifying, though it can also be declared within the page using the [&lt;style&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) element, or directly on an element using the `style` attribute.
 
 ## CSS Rules
 
@@ -26,7 +26,7 @@ A CSS selector determines which elements the associated _definition block_ apply
 * By the element id, indicated by the id prefixed with a `#`.  I.e. the selector `#foo` applies to the element `<span id="foo">`.
 * By the element class, indicated by the class prefixed with a `.`.  I.e. the selector `.bar` applies to the elements `<div class="bar">`, `<span class="bar none">`, and `<p class="alert bar warning">`.
 
-CSS selectors can also be combined in a number of ways, and psuedo-selectors can be applied under certain circumstances, like the `:hover` psudo-selector which applies only when the mouse cursor is over the element.
+CSS selectors can also be combined in a number of ways, and pseudo-selectors can be applied under certain circumstances, like the `:hover` pseudo-selector which applies only when the mouse cursor is over the element.
 
 You can read more on [MDN's CSS Selectors Page](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
 

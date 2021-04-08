@@ -23,7 +23,7 @@ And abbreviated versions:
 
 Template rendering proved such a popular and powerful tool that rendering libraries were written for most programming languages, and could be used for more than just HTML files - really _any_ kind of text file can be rendered with a template.  Thus, you can find template rendering libraries for JavaScript, Python, Ruby, and pretty much any language you care to (and they aren't that hard to write either).  
 
-Microsoft's classic ASP implementation was limited to the Visual Basic programming language.  As thier C# langauge gained in popularity, they replaced classic ASP with ASP.NET web pages.  Like classic ASP, each page file (named with a _.aspx_ extension) generates a corresponding HTML page.  The script could be either Visual Basic or C#, and a new syntax using the at symbol (`@`) to proceed the code snippets was adopted.  Thus the page:
+Microsoft's classic ASP implementation was limited to the Visual Basic programming language.  As the C# language gained in popularity, they replaced classic ASP with ASP.NET web pages.  Like classic ASP, each page file (named with a _.aspx_ extension) generates a corresponding HTML page.  The script could be either Visual Basic or C#, and a new syntax using the at symbol (`@`) to proceed the code snippets was adopted.  Thus the page:
 
 ```aspx
 <html>

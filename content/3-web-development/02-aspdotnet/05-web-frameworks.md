@@ -29,4 +29,4 @@ While ASP.NET applications are traditionally hosted on IIS running on the Window
 
 $[w3cook]: [W3Cook OS Summary](https://web.archive.org/web/20150806093859/http://www.w3cook.com/os/summary/)
 
-Microsoft has accordingly migrated its ASP.NET family to a new implementation can run on .NET Core _or_ IIS: [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1).  When you build a ASP.NET Core application, you can choose your deployment target: IIS, .NET Core, or even Microsoft's cloud service, Azure.  The same application can run on _any_ of these platforms.
+Microsoft has accordingly migrated its ASP.NET family to a new implementation can run on .NET Core _or_ IIS: [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0).  When you build a ASP.NET Core application, you can choose your deployment target: IIS, .NET Core, or even Microsoft's cloud service, Azure.  The same application can run on _any_ of these platforms.

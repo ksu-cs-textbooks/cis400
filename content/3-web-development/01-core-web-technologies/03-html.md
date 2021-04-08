@@ -85,7 +85,7 @@ Text in HTML works a bit differently than you might expect.  Most notably, all w
         Or being lied about, don’t deal in lies,
     Or being hated, don’t give way to hating,
         And yet don’t look too good, nor talk too wise:
-    <i>-Rudyard Kipling, exerpt from "If"</i>
+    <i>-Rudyard Kipling, excerpt from "If"</i>
 </blockquote>
 ```
 
@@ -100,7 +100,7 @@ Would be rendered:
         Or being lied about, don’t deal in lies,
     Or being hated, don’t give way to hating,
         And yet don’t look too good, nor talk too wise:
-    <i>-Rudyard Kipling, exerpt from "If"</i>
+    <i>-Rudyard Kipling, excerpt from "If"</i>
 </blockquote>
 
 If, for some reason you need to maintain formatting of the included text, you can use the [&lt;pre&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) element (which indicates the text is preformatted):
@@ -117,7 +117,7 @@ If you can wait and not be tired by waiting,
 Or being hated, don’t give way to hating,
     And yet don’t look too good, nor talk too wise:
     </pre>
-    <i>-Rudyard Kipling, exerpt from "If"</i>
+    <i>-Rudyard Kipling, excerpt from "If"</i>
 </blockquote>
 ```
 
@@ -134,10 +134,10 @@ If you can wait and not be tired by waiting,
 Or being hated, don’t give way to hating,
     And yet don’t look too good, nor talk too wise:
     </pre>
-    <blockquote>-Rudyard Kipling, exerpt from "If"</blockquote>
+    <blockquote>-Rudyard Kipling, excerpt from "If"</blockquote>
 </article>
 
-Note that the &gt;pre&lt; preserves _all_ formatting, so it is necessary _not to indent_ its contents.
+Note that the &lt;pre&gt; preserves _all_ formatting, so it is necessary _not to indent_ its contents.
 
 Alternatively, you can denote line breaks with `<br/>`, and non-breaking spaces with `&nbsp;`:
 
@@ -151,7 +151,7 @@ Alternatively, you can denote line breaks with `<br/>`, and non-breaking spaces 
     &nbsp;&nbsp;&nbsp;&nbsp;Or being lied about, don’t deal in lies,<br/>
     Or being hated, don’t give way to hating,<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;And yet don’t look too good, nor talk too wise:<br/>    
-    <i>-Rudyard Kipling, exerpt from "If"</i>
+    <i>-Rudyard Kipling, excerpt from "If"</i>
 </blockquote>
 ```
 
@@ -166,7 +166,7 @@ Which renders:
     &nbsp;&nbsp;&nbsp;&nbsp;Or being lied about, don’t deal in lies,<br/>
     Or being hated, don’t give way to hating,<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;And yet don’t look too good, nor talk too wise:<br/><br/>    
-    <i>-Rudyard Kipling, exerpt from "If"</i>
+    <i>-Rudyard Kipling, excerpt from "If"</i>
 </blockquote>
 
 Additionally, as a program you may want to use the the [&lt;code&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code) element in conjunction with the [&lt;pre&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) element to display preformatted code snippets in your pages.
@@ -197,7 +197,7 @@ HTML5.0 (the current HTML standard) pages have an expected structure that you sh
 ```
 
 ## HTML Elements
-Rather than include an exhustive list of HTML elements, I will direct you to the list provided by [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).  However, it is useful to recognize that elements can serve different purposes:
+Rather than include an exhaustive list of HTML elements, I will direct you to the list provided by [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).  However, it is useful to recognize that elements can serve different purposes:
 
 * Some organize the page into sections like the header and footer - MDN calls these the [Content Section elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning)
 

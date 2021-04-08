@@ -16,7 +16,7 @@ There were three key technologies that Sir Tim Berners-Lee proposed and develope
 * Hyper-Text Markup Language
 * Cascading Style Sheets
 
-They are joined with a third key client-side technology, which began as a scripting language developed by [Brendon Eich](https://en.wikipedia.org/wiki/Brendan_Eich) to add interactivity to web pages in the Netscape Navigator.
+They are joined with a third key client-side technology, which began as a scripting language developed by [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich) to add interactivity to web pages in the Netscape Navigator.
 
 * JavaScript
 

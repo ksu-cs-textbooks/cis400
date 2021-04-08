@@ -49,52 +49,51 @@ Beyond these core requirements, you may add features and elements as you see fit
 Modify the Razor page named _Privacy.cshtml_. It should:
 
 1. Set the page title to “Privacy Policy”
-2. Render a `<h1>` tag with the text “Bleakwind Buffet Website Privacy Policy”
+2. Render a `<h1>` tag with the text “The Flying Saucer Website Privacy Policy”
 3. Render the following privacy policy in a `<p>` tag:
 
-_Bleakwind Buffet respects and values the privacy of its customers, as we hope you respect and value our own. This site does not collect any data on you. This site does not use cookies. This site only displays information about Bleakwind Buffet and its delectable food and delightful Skyrim-themed ambiance._
+_The Flying Saucer respects the privacy and autonomy of all sentient beings.  This site does not collect your data. This site does not use cookies. This site only offers information about The Flying Saucer and its out-of-this world consumable foodstuffs._
 
 #### About Page 
 
 Create a new Razor page named _About.cshtml_. It should:
 
 1. Set the page title to “About”
-2. Render a `<h1>` tag with the text “About Bleakwind Buffet”
+2. Render a `<h1>` tag with the text “About The Flying Saucer”
 3. Render the following description in a `<p>` tag:
 
-_Founded in 2020 from the game-saturated mind of Undergraduate Teaching Assistant Zachery Brunner, Bleakwind Buffet is devoted to bringing you the finest in Skyrim-themed dining experiences. So put your bow down, pull up a chair, and join the feast!_
+_Founded in 2021 by a group of definitely human Earth people, The Flying Saucer provides breakfast repast at any hour of the day for your devouring.  Beam down to and of our many Earth-based locations for a taste._
 
 #### Layout
 
-Modify the existing _Shared/_Layout.cshtml_ to:
+Modify the existing (created by the template) _Shared/_Layout.cshtml_ to:
 
-1. Set the page title to what is provided by the page with the string “- Bleakwind Buffet” concatenated to the end
+1. Set the page title to what is provided by the page with the string “- The Flying Saucer” concatenated to the end
 2. Provide a navigation link to the new About page
-3. Change the copyright statement to “(c) 2020 - Bleakwind Buffet LLC.”
+3. Change the copyright statement to “(c) 2020 - The Flying Saucer Buffet LLC.”
 
 #### Index Page 
 
-Modify the existing _Index.cshtml_ page to display the full menu of Bleakwind Buffet, following these guidelines:
+Modify the existing _Index.cshtml_ page to display the full menu of The Flying Saucer, following these guidelines:
 
 Welcome Message
 Add a first-level header (`<h1>`) identifying the page as Bleakwind Buffet.
 
 Under that, add a section greeting the customer with the message:
 
-_We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!._
+_Breakfast out of this World!_
+
+(You can find an image bearing this message in the graphics resources)
 
 ##### List the Menu Categories
 List the three categories of menu items (Entrees, Sides, and Drinks) using second-level header tags (`<h2>`).
 
 ##### List the Menu Items
-Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of menu-item. The `<div`> should include, nested inside, the name of the item, its price, and its calories. If an item comes in multiple sizes, you will need to list the price and calories for each size.
+Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of menu-item. The `<div`> should include, nested inside, the name of the item, its price, its calories, and its description. If an item comes in multiple sizes, you will need to list the price and calories for each size.
 
-You may use additional HTML elements to organize and present this information, and use CSS to style it as you see fit.
+You may use additional HTML elements to organize and present this information, and use CSS to style it as you see fit.  You may choose to follow the suggestions of the graphic designer included with the art assets.
 
 You should use the methods from your `Menu` class in the Data project to determine the entrees, sides, and drinks to display.  This will mean using the `Menu` class in the model class for the index page, _Index.cshtml.cs_.
 
-##### Display the Combo Details 
-Indicate that any entree, side, and drink can be combined into a Combo with a $1 discount.
-
-##### Display the Soda Flavors 
-List the flavors available for the Sailor Soda.
+##### Display the Syrup Flavors 
+List the flavors available for the Syrups somewhere on the page, under a heading "Syrup Flavors".

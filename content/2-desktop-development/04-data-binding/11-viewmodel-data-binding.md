@@ -124,7 +124,7 @@ We can't have a negative number of bills in the drawer, so we have our property 
 
 The setter needs to change the underlying number of pennies in the drawer.  We can't do this directly - remember `drawer.Pennies` is read-only.  Instead we change the amount of coins by invoking the `AddCoin()` or `RemoveCoin()` method, specifying the denomination and quantity.  So we'll need to calculate the quantity from the incoming value, hence the line `int quantity = value - drawer.Pennies;`
 
-If the result is postive, we are adding bills; hence the line `if(quantity > 0) drawer.AddCoin(Coins.Penny, quantity);`.  
+If the result is positive, we are adding bills; hence the line `if(quantity > 0) drawer.AddCoin(Coins.Penny, quantity);`.  
 
 If the quantity is negative, we are removing them. However, we need to invert the sign, as we are removing a _positive_ number of bills:  `else drawer.removeCoin(Coins.penny, -quantity);`.
 
