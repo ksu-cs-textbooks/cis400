@@ -46,17 +46,23 @@ Beyond these core requirements, you may add features and elements as you see fit
 
 #### Privacy Page
 
-Modify the Razor page named _Privacy.cshtml_. It should:
+Modify the Razor page named _Privacy.cshtml_ to meet the following guidelines. An example of what this might look like:
+
+![Privacy page example]({{<static "images/d.10.1.png">}})
+
+It should:
 
 1. Set the page title to “Privacy Policy”
-2. Render a `<h1>` tag with the text “The Flying Saucer Website Privacy Policy”
+2. Render a `<h1>` tag with the text “The Flying Saucer Website Privacy Policy” or something similar.
 3. Render the following privacy policy in a `<p>` tag:
 
 _The Flying Saucer respects the privacy and autonomy of all sentient beings.  This site does not collect your data. This site does not use cookies. This site only offers information about The Flying Saucer and its out-of-this world consumable foodstuffs._
 
 #### About Page 
 
-Create a new Razor page named _About.cshtml_. It should:
+Create a new Razor page named _About.cshtml_. It should meet the following guidelines. An example of what this might look like:
+
+![About page example]({{<static "images/d.10.2.png">}})
 
 1. Set the page title to “About”
 2. Render a `<h1>` tag with the text “About The Flying Saucer”
@@ -69,7 +75,7 @@ _Founded in 2021 by a group of definitely human Earth people, The Flying Saucer 
 Modify the existing (created by the template) _Shared/_Layout.cshtml_ to (at a minimum):
 
 1. Set the page title to what is provided by the page with the string “- The Flying Saucer” concatenated to the end
-2. Provide a navigation link to the new About page
+2. Provide a navigation link to the new About page, as well as the Privacy page, and the Entrees, Sides, and Drinks on the index page.
 3. Change the copyright statement to “(c) 2020 - The Flying Saucer LLC.”
 4. Add the flying saucer logo to the navigation bar.
 
@@ -80,11 +86,17 @@ You can make the browser scroll to a specific section of the page by adding a `#
 If you are using the ASP tag helpers, the equivalent tag would be `<a asp-page="Home" asp-fragment="entrees">Entrees</a>`.
 {{% /notice %}}
 
+The navigation bar should look like:
+
+![Navigation example]({{<static "images/d.10.3.png">}})
+
 #### Index Page 
 
-Modify the existing _Index.cshtml_ page to display the full menu of The Flying Saucer, following these guidelines:
+Modify the existing _Index.cshtml_ page to display the full menu of The Flying Saucer according to hte guidelines that follow.  An example of what this might look like:
 
-Welcome Message
+![Home page example]({{<static "images/d.10.4.png">}})
+
+##### Welcome Message
 Add a first-level header (`<h1>`) identifying the page as "The Flying Saucer".
 
 Under that, add a section greeting the customer with the message:
@@ -105,3 +117,52 @@ You should use the methods from your `Menu` class in the Data project to determi
 
 ##### Display the Syrup Flavors 
 List the flavors available for the Syrups somewhere on the page, under a heading "Syrup Flavors".
+
+### Website Milestone 1 Rubric
+
+Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
+
+Comments
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in CSHTML files**
+
+Privacy Page
+* -20 points if the privacy page is missing 
+* -5 points if the page title does not contain "Privacy"
+* -5 points if a header with the term "Privacy" or "Privacy Policy" does not appear above the privacy message
+* -10 points if the page does not contain the supplied privacy message
+
+About Page 
+* -20 points if the about page is missing
+* -5 points if the page title does not contain "About"
+* -5 points if a header with the term "About" does not appear above the about message
+* -10 points if the page does not contain the supplied about message
+
+Layout
+* -5 points if the flying saucer logo does not appear in the navigation bar 
+* -5 points if the string "The Flying Saucer" does not appear in the title 
+* -5 points for each missing navigation link (Should contain links for about, privacy, entrees, sides, and drinks)
+
+Home Page
+* -20 points if the home page is missing
+* -10 points for each missing section (should have a section for entrees, sides, drinks, Syrup flavors, Juice Flavors, and Egg Styles)
+* -5 points for each item missing from a section (i.e. missing the "Space Scramble" in the "Entrees" section)
+* -5 points for each menu item missing its image, name, price, calories, or description
+
+UML Diagram
+* -2 points for every missing or incorrect class
+* -2 points for every missing or incorrect association
+
+{{% notice info %}}
+You only need to include one UML box for each razor page (cshtml and cshtml.cs).  Technically, the cshtml file is just a text file, and the cshtml.cs file defines a model class, so we only need to include the class defined in the cshtml.cs file.
+
+Alternatively, you can represent the cshtml portion as a box labeled with the page name, and draw an association line between it and the model class it uses (just a  plain line if fine, as the cshtml page is not a class).  
+{{% /notice %}}
+
+### Submissions
+
+* Create a new release tag - Submit the release URL
+
+  * Your release tag for this project should be a new minor version, i.e. if your first Point of Sale milestone was **v.1.0.0**, this release will be **v1.3.0**.
+
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
