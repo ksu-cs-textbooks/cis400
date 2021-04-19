@@ -64,3 +64,45 @@ The suggested structure for the Menu class is represented in the UML class diagr
 
 #### Testing the Menu Search and Filter Methods
 You should add tests to verify that the search and filtering functions operate as expected. Remember to test both valid and null values for all parameters.
+
+### Website Milestone 1 Rubric
+
+Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
+
+Comments
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in CSHTML files**
+
+Type Filtering
+* -10 points if the checkbox for each of the type categories (Entrees, Sides, Drinks) that is missing
+* -10 points if the filter functionality for of the type categories (Entrees, Sides, Drinks) that is missing.
+
+Calories Filtering
+* -10 points each if the minimum or maximum calorie input is missing
+* -10 points if the filter functionality for the calorie filtering does not work.
+
+Price Filtering
+* -10 points each if the minimum or maximum price input is missing
+* -10 points if the filter functionality for of the price filtering does not work.
+
+Searching
+* -10 points if the search term input is missing
+* -20 points if the search functionality does not work
+
+UML Diagram
+* -2 points for every missing or incorrect class
+* -2 points for every missing or incorrect association
+
+{{% notice info %}}
+You only need to include one UML box for each razor page (cshtml and cshtml.cs).  Technically, the cshtml file is just a text file, and the cshtml.cs file defines a model class, so we only need to include the class defined in the cshtml.cs file.
+
+Alternatively, you can represent the cshtml portion as a box labeled with the page name, and draw an association line between it and the model class it uses (just a  plain line if fine, as the cshtml page is not a class).  
+{{% /notice %}}
+
+### Submissions
+
+* Create a new release tag - Submit the release URL
+
+  * Your release tag for this project should be a new minor version, i.e. if your first Point of Sale milestone was **v.1.0.0**, this release will be **v1.3.1**.
+
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
