@@ -44,10 +44,10 @@ This assignment is to introduce submitting and processing form data, as well as 
 Add a form to your Index.cshtml page. that contains inputs for:
 
 1. A submit button to run the search and filter operations
-A text input to enter search terms into
-2. A series of checkboxes corresponding to the types of order items (Entree, Side, and Drink)
-3. Two number inputs specifying a range that calories should fall into
-4. Two number inputs specifying a range that price should fall into.
+2. A text input to enter search terms into (search both the Name and Description)
+3. A series of checkboxes corresponding to the types of order items (Entree, Side, and Drink)
+4. Two number inputs specifying a range that calories should fall into
+5. Two number inputs specifying a range that price should fall into.
 
 Each of these additional inputs should be arranged so that their purpose and use is clear to the casual web surfer. I.e. they should be clearly labeled and ordered. Look at your Movie site for ideas.
 
@@ -57,6 +57,8 @@ Finally, the results listed on the page should be only those that fit the search
 
 #### Search and Filter functionality
 The Searching and Filtering functionality should be implemented in your Menu class in the Data project as static methods. Each of these methods should take an IEnumerable<IOrderItem> as its starting collection, and return an IEnumerable<IOrderItem> that is the filtered or searched collection. If the filter options or search term is null, then the original collection should be returned.
+
+The search should be _case insensitive_ (i.e. capital and lower case letters are treated identically) and work for multiple terms (i.e. searching for "buttermilk pancakes" should include the FlyingSaucer, even though "buttermilk" does not appear in its name or description).  _Hint: You might want to use `String.Split()` to break up your search terms._
 
 The suggested structure for the Menu class is represented in the UML class diagram, below:
 
@@ -73,6 +75,12 @@ Comments
 * -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
 * -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in CSHTML files**
 
+Searching
+* -10 points if the search term input is missing
+* -10 points if the search functionality does not work for finding terms either the Name or Description
+* -10 points if the search is not case-insensitive
+* -10 points if the search does not return results which mach only part of multiple search terms.
+
 Type Filtering
 * -10 points if the checkbox for each of the type categories (Entrees, Sides, Drinks) that is missing
 * -10 points if the filter functionality for of the type categories (Entrees, Sides, Drinks) that is missing.
@@ -84,10 +92,6 @@ Calories Filtering
 Price Filtering
 * -10 points each if the minimum or maximum price input is missing
 * -10 points if the filter functionality for of the price filtering does not work.
-
-Searching
-* -10 points if the search term input is missing
-* -20 points if the search functionality does not work
 
 UML Diagram
 * -2 points for every missing or incorrect class
