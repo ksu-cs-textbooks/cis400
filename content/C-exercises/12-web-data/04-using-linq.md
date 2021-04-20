@@ -64,6 +64,10 @@ if(SerchTerms != null)
 
 This syntax is converted by the C# compiler to use the extension methods as part of the compilation process.
 
+{{% notice info %}}
+The search approach listed above will only find the _exact_ search terms, i.e. searching for "Clear Present Danger" will _not_ match the film "Clear and Present Danger".  How might you tweak the search approach so that terms would be found individually?
+{{% /notice %}}
+
 You can use either form for writing your queries, though it is best to stay consistent within a single program.
 
 ## Filtering with LINQ
