@@ -67,7 +67,7 @@ The suggested structure for the Menu class is represented in the UML class diagr
 #### Testing the Menu Search and Filter Methods
 You should add tests to verify that the search and filtering functions operate as expected. Remember to test both valid and null values for all parameters.
 
-### Website Milestone 1 Rubric
+### Website Milestone 2 Rubric
 
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
