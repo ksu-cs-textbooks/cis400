@@ -12,11 +12,11 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 This course is taught in the "flipped" style.  This means you will be watching videos and working through tutorials _before_ you come to class.  Your class sessions will be used to work on and get help with your projects.
 
 {{% notice info %}}
-Due to the ongoing COVID-19 pandemic, this course has been structured so that there is **never** a need to attend in-person, though we have strived to keep as much possibility of face-to-face contact as possible.  This way, if you need to isolate, you have the freedom to do so without concern for falling behind.
+Online sections of the course will not have in-person meetings on campus; instead we will hold office hours and appointments meet over Zoom.  You should ensure that you have a working webcam, microphone, and adequate internet connection for teleconferencing.
 {{% /notice %}}
 
 ### The Big Software Solution
-Up to this point, you've likely done a lot of what I like to call "Baby Projects" - programming projects that are useful to demonstrate a concept or technique, but really don't do anything beyond that.  In contrast, we'll be building a large, multi-project software solution to meet a real-world problem - the software needed to run a fast-food franchise chain, the _{{< param ProjectName >}}_.  
+Up to this point, you've likely done a lot of what I like to call "Baby Projects" - programming projects that are useful to demonstrate a concept or technique, but really don't do anything beyond that.  In contrast, we'll be building a large, multi-project software solution to meet a real-world problem - the software needed to run a fast-food franchise chain! 
 
 We'll be building this software _iteratively_ over the entire semester!  Each week, you'll turn in one milestone as a GitHub release, just like you might do as a professional software developer.  Because each milestone builds upon your prior work, it is critical that you keep up.  Falling behind will very quickly tank your grade.
 
@@ -29,6 +29,7 @@ The modules, and all of their associated assignments, are available through Canv
 Remember that in the CS Professional Program, a grade of **less than C** in a professional program course (like CIS 400) results in a "**Warning of Unsatisfactory Progress**."  This warning sticks with you the rest of your time at K-State. If you earn a second, similar grade, you will be dismissed from the CS Professional Program!
 {{% /notice %}}
 
+<!--
 ### Class Meetings
 As we are operating in a "flipped" classroom style, class times are _when you should be working on your homework_ and _asking the questions you have about the course content_.  This means you should have your readings and exercises done _before_ the class meeting and be prepared and ready to work on your milestones!  In other words, class sessions are essentially _help sessions_ - think of them as extended office hours/a recitation period.
 
@@ -41,7 +42,7 @@ Due to the COVID-19 classroom capacity restrictions, not all students in the cou
 * All class meetings will likewise be recorded - so you can go back and review the discussion.  These recordings will also be available under the **Zoom** tab in Canvas.
 
 * Only Monday class meetings will be held in-person; other days will be held only via Zoom.  Students wishing to attend a class session in-person will need to sign up using the provided application.  This is done on a weekly basis. _Note: If no one signs up for the in-person class meeting, that class meeting will be held entirely online_.
-
+-->
 
 
 
