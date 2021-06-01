@@ -35,3 +35,14 @@ For this milestone you will be deploying your website project to Azure web servi
 #### Description
 
 Publish your website to Azure Web Services.  The process is exactly like the deployment exercise.  Once you have published your website, submit the URL to your now-live website.
+
+### Website Milestone 3 Rubric
+This is an all-or nothing assignment.  If your website is available, you get full points, otherwise you get a 0.
+
+### Submissions
+
+* Create a new release tag - Submit the release URL
+
+  * Your release tag for this project should be a new minor version, i.e. if your first Point of Sale milestone was **v.1.0.0**, this release will be **v1.4.1**.
+
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
