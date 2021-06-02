@@ -5,7 +5,7 @@ weight: 3
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Git is one of the many version control programs that has been developed to tackle these challenges, and is currently one of the most popular.  In part, this is becuase it does a _very good job_ at tackling each of those issues we just discussed.  Of course, it can only do this if you are using it as it was intended to be used... so it's a good idea to spend a bit of time learning those details (though, as the authors of xkcd suggest, many people don't):
+Git is one of the many version control programs that has been developed to tackle these challenges, and is currently one of the most popular.  In part, this is because it does a _very good job_ at tackling each of those issues we just discussed.  Of course, it can only do this if you are using it as it was intended to be used... so it's a good idea to spend a bit of time learning those details (though, as the authors of xkcd suggest, many people don't):
 
 ![xkcd's take on Git](https://imgs.xkcd.com/comics/git.png)
 

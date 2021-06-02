@@ -23,4 +23,4 @@ $ git checkout [hash]
 
 Where `[hash]` is the hash of the commit, i.e. `cec94d9078c036b6ebd374cde0d7e400a8a94ebd` for the initial commit in the example. 
 
-This reverts your files to that point, and reports you are in a 'detached HEAD' state, i.e. the commit loaded is not the latest one on this branch.  If you want to start working from this point (leaving your later changes out), best practice is to create a new branch to hold this commit.  We'll look at branches next.
+This reverts your files to that point, and reports you are in a 'detached HEAD' state, i.e. the commit loaded is not the latest one on this branch.  Carlos Schults has an [excellent post describing this condition](https://www.cloudbees.com/blog/git-detached-head). If you want to start working from this point (leaving your later changes out), best practice is to create a new branch to hold this commit.  We'll look at branches next.
