@@ -106,7 +106,7 @@ At the end of the semester, for students who have earned a borderline grade (i.e
 Collaboration is an important practice for both learning and software development. As such, you are encouraged to work with peers and seek out help from your instructors and UTAs. However, it is also critical to remember that **_(s)he who does the work, does the learning._**  Relying too much on your peers will deny you the opportunity to learn yourself. As the skills we
 are working on are the foundations on which all future computer science coursework relies, any skills you fail to develop in this course can have long-ranging effects on your future success, in both classes and the working world.
 
-Determining where the line between good collaboration and overreliance on others can be
+Determining where the line between good collaboration and over-reliance on others can be
 challenging, especially as a student. I offer a few guidelines that can help:
 1.  If you can’t yet put a concept into your own words and explain it to someone not versed in programming, you do not yet have a full grasp of the concept. Don’t be tempted to use someone else’s words - keep working at it until you can use your own. But “working at it” in this context can mean seeking out additional explanations from other people. Sometimes getting enough different perspectives on a concept is what you need to be
 able to synthesize your own.
