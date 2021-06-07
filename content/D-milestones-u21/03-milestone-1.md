@@ -70,7 +70,7 @@ A Dogs 'N Such hot dog is a combination of bun, sausage, and toppings.  You will
 
 `Sausage`: A property with the `Sausage` enum type, representing what sausage this hot dog is composed of.  It should default to Beef.
 
-`Bun`: A property with the `Bun` enum type, representing the bun the hot dog is served on.  It should default to White.
+`Bun`: A property with the `Bun` enum type, representing the bun the hot dog is served on.  It should default to SesameSeed.
 
 `Ketchup`: A boolean property indicating if the hot dog is topped with ketchup (default true).
 
@@ -150,19 +150,19 @@ The price and calories for each ingredient is:
     <td>140</td>
   </tr>
   <tr>
-    <td>Pizza bread bun</td>
+    <td>Hoagie bun</td>
+    <td>1.00</td>
+    <td>260</td>
+  </tr>
+  <tr>
+    <td>Pizza dough</td>
     <td>2.00</td>
     <td>130</td>
   </tr>
   <tr>
-    <td>White bun</td>
-    <td>0.80</td>
-    <td>79</td>
-  </tr>
-  <tr>
-    <td>Wheat bun</td>
-    <td>0.90</td>
-    <td>160</td>
+    <td>Corn Breading</td>
+    <td>1.50</td>
+    <td>86</td>
   </tr>
   <tr>
     <td>Ketchup</td>
@@ -205,6 +205,16 @@ The price and calories for each ingredient is:
     <td>34</td>
   </tr>
   <tr>
+    <td>Sauteed Onion</td>
+    <td>0.20</td>
+    <td>34</td>
+  </tr>
+  <tr>
+    <td>Fried Onion</td>
+    <td>0.20</td>
+    <td>34</td>
+  </tr>
+  <tr>
     <td>Tomato Slices</td>
     <td>0.18</td>
     <td>34</td>
@@ -218,6 +228,11 @@ The price and calories for each ingredient is:
     <td>Cheddar Cheese</td>
     <td>0.50</td>
     <td>113</td>
+  </tr>
+  <tr>
+    <td>Swiss Cheese</td>
+    <td>0.50</td>
+    <td>106</td>
   </tr>
   <tr>
     <td>BBQ Sauce</td>
