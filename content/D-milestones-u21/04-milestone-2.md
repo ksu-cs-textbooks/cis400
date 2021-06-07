@@ -1,7 +1,7 @@
 ---
 title: "Milestone 2 Requirements"
-pre: "1. "
-weight: 1
+pre: "4. "
+weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -228,4 +228,4 @@ Declare a  implement a class `Drink` in the file _Drink.cs_ in the `FranksNSuch.
 
 ### Review of the week
 
-[C# Inheritance](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)
+* [C# Inheritance](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)
