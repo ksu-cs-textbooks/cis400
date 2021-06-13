@@ -215,6 +215,11 @@ The price and calories for each ingredient is:
     <td>34</td>
   </tr>
   <tr>
+    <td>Fried Peppers</td>
+    <td>0.20</td>
+    <td>172</td>
+  </tr>
+  <tr>
     <td>Tomato Slices</td>
     <td>0.18</td>
     <td>34</td>
