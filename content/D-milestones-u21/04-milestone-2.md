@@ -11,15 +11,15 @@ For this milestone, you will be creating additional classes to represent the ent
 
 * You need to follow the style laid out in the [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
 
-* Create classes that reflect the given UML (in the projects' _Documentation_ folder.)
+* Create classes that reflect the specifications given below
 
-  * Create enum classes
+  * Create specialty dog classes
 
-  * Create entrée classes
+  * Create Drink class
+
+  * Create DrinkFlavor Enum
 
 * All classes should be declared in their respective namespace (see below)
-
-* All files should have 
 
 ### Assignment requirements:
 
@@ -27,7 +27,7 @@ For this milestone, you will be creating additional classes to represent the ent
 * Specialty Dog classes (7)
 * Side Base class (1)
 * Refactored side classes (4)
-* Drink Enum (1)
+* DrinkFlavor Enum (1)
 * Drink class (1)
 
 ### Purpose:
@@ -154,7 +154,41 @@ Armed with our new understanding of inheritance, we can see that the Side classe
 Create a new class, `Side` to serve as a base class for each of your sides in the _Side.cs_ file.  It should be declared `abstract`, and have `abstract` read-only properties for `Name` and `Description` (both strings).  It should also have properties for `Calories` (a `uint`), `Price` (a `decimal`), and `Size` (a `Size`).  
 
 ### Refactor Side classes
-Refactor your four side classes to inherit from `Side`.  This may allow you to remove duplicate code from the derived classes!
+Refactor your four side classes to inherit from `Side`.  This may allow you to remove duplicate code from the derived classes!  
+
+The `Name` property of the side should be the name in _human_ case (not _Pascal_ or _Camel Case_), and be proceeded with the size, i.e. "Large French Fries".  Refer to the table below for clarity.
+
+The `Description` property should also match that given in the table below.
+
+<table>
+  <tr>
+    <th>Class</th>
+    <th>Name *</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Chili</td>
+    <td>[size] Chili</td>
+    <th>A spicy and meaty bean chili</th>
+  </tr>
+  <tr>
+    <td>FrenchFries</td>
+    <td>[size] French Fries</td>
+    <th>Fried and lightly salted potato strips</th>
+  </tr>
+  <tr>
+    <td>FriedPotatoes</td>
+    <td>[size] Fried Potatoes</td>
+    <th>Crispy fried diced potatoes</th>
+  </tr>
+  <tr>
+    <td>Coleslaw</td>
+    <td>[size] Coleslaw</td>
+    <th>Shredded cabbage, carrots, and mayo</th>
+  </tr>
+</table>
+
+\* Where `[size]` is the size of the side.
 
 ### Hints
 * Remember the `override` keyword is used to replace the implementation of properties and methods in derived classes, but it can only be used in conjunction with properties or methods declared `virtual`, `abstract`, or `override`.
