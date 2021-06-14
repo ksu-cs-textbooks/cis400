@@ -149,6 +149,50 @@ public void ChicagoDogIsAnIOrderItem()
 }
 ```
 
+### Collection Tests
+For collection properties (like `Items` and `Ingredients`) you should test that the collection contains the expected values (if any).   This can be done with the `Assert.Collection()`, `Assert.Contains()`, or `Assert.Empty()` methods, i.e.:
+
+```csharp
+public void EmptyArrayShouldBeEmpty() 
+{
+    string[] empty = new String[0];
+    Assert.Empty(empty);
+}
+
+public void ArrayShouldContainApple() 
+{
+    string[] fruits = new String[] {"Apple", "Orange", "Peach"};
+    Assert.Contains(fruits, "Apple");
+}
+
+public void ArrayShouldContainFruits()
+{
+    string[] fruits = new String[] {"Apple", "Orange", "Peach"};
+    Assert.Collection(fruits,
+      one => one == "Apple",
+      two => two == "Orange",
+      three => three == "Peach"
+    );
+}
+```
+
+Note that `Assert.Collection()` tests _all_ the items in the collection, and in a specific order (i.e. the array `["Orange", "Apple", "Peach"]` would fail the third test).  Thus multiple `Assert.Contains()` calls can be more flexible about ordering:
+
+```
+public void ArrayShouldContainFruitsInAnyOrder()
+{
+    string[] fruits = new String[] {"Apple", "Orange", "Peach"};
+    Assert.Contains(fruits, f => f == "Apple");
+    Assert.Contains(fruits, f => f == "Orange");
+    Assert.Contains(fruits, f => f == "Peach");
+    Assert.Equals(3, fruits.Length);
+}
+```
+
+Because it does not verify the length of the array, we should do that as well (hence the `Assert.Equals()`).
+
+As with other calculated fields, you should test different configurations of the class (i.e. different customizations of the `Dog` class when testing `Dog.Ingredients`, and `Order` instances with different `IOrderItems` added) to ensure these are being populated correctly.  You should have at least eight variations when possible.
+
 #### Hints
 Since the various specialty dog classes inherit the `Price` and `Calories` from the base `Dog` class, you may think that you only need to test these for the base class.  Not so!  Because your tests will be used to determine if future refactoring introduced breaking changes, you _cannot depend on this functionality always being defined in only the base class_.  So you must duplicate your tests across all of these classes.  This is one instance where copying code is acceptable.
 
