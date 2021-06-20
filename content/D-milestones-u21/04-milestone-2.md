@@ -65,7 +65,7 @@ Because the specialty dogs will be listed on a menu, we need to add two addition
 
 ### Specialty Dog Classes
 
-For each specialty dog, you will need to create a new class that derives from the `Dog` class.  All of these specialty dog classes should reside in the `DogsNSuch.Data.Data` namespace
+For each specialty dog, you will need to create a new class that derives from the `Dog` class.  All of these specialty dog classes should reside in the `DogsNSuch.Data` namespace
 
 The Dogs N' Such offers seven specialty dogs:
 
@@ -84,9 +84,9 @@ Implement a class to represent the Chicago Dog, named `ChicagoDog` in the file _
 
 `Name`: _Chicago Dog_
 
-`Description`: _A kosher all-beef dog on a poppy-seed bun, topped with yellow mustard, chopped white onions, tomato slices, relish, a dill pickle spear, and a dash of celery salt._
+`Description`: _A kosher all-beef dog on a sesame-seed bun, topped with yellow mustard, chopped white onions, tomato slices, relish, a dill pickle spear, and a dash of celery salt._
 
-It should have its `Sausage` property set to `Sausage.Beef`, its `Bun` property set to `Bun.SesameSeed`, and the boolean properties for `YellowMustard`, `ChoppedOnions`, `TomatoSlices`, `SweetRelish`, `DillSpear`, `CelerySalt` all set to true.  Other boolean properties should be false.
+It should have its `Sausage` property set to `Sausage.Beef`, its `Bun` property set to `Bun.SesameSeed`, and the boolean properties for `YellowMustard`, `ChoppedOnion`, `TomatoSlices`, `SweetRelish`, `DillSpear`, `CelerySalt` all set to true.  Other boolean properties should be false.
 
 #### Kansas City Dog 
 Implement a class to represent the Kansas City Dog, named `KansasCityDog` in the file _KansasCityDog.cs_.  It should have the following properties:
@@ -113,7 +113,7 @@ Implement a class to represent the Polish Boy, named `SeattleDog` in the file _S
 
 `Description`: _A kielbasa sausage in hoagie bun topped with cream cheese and sauteed onions._
 
-It should have its `Sausage` property set to `Sausage.Kielbasa`, its `Bun` property set to `Bun.Hoagie`, and the boolean properties for `CreamCheese` and `SauteedOnions` all set to true.  Other boolean properties should be false.
+It should have its `Sausage` property set to `Sausage.Kielbasa`, its `Bun` property set to `Bun.Hoagie`, and the boolean properties for `CreamCheese` and `SauteedOnion` all set to true.  Other boolean properties should be false.
 
 #### Italian Dog
 Implement a class to represent the Italian Dog, named `ItalianDog` in the file _ItalianDog.cs_.  It should have the following properties:
@@ -125,11 +125,11 @@ Implement a class to represent the Italian Dog, named `ItalianDog` in the file _
 It should have its `Sausage` property set to `Sausage.Pork`, its `Bun` property set to `Bun.PizzaDough`, and the boolean properties for `FriedPepper`, `FriedOnion`, and `FriedPotatoes` all set to true.  Other boolean properties should be false.
 
 #### Chili Dog
-Implement a class to represent the Cincinnati Dog, named `ChiliDog` in the file _ChiliDog.cs_.  It should have the following properties:
+Implement a class to represent the Chili Dog, named `ChiliDog` in the file _ChiliDog.cs_.  It should have the following properties:
 
 `Name`: _Chili Dog_
 
-`Description`: _A beef frank on a white bun toped with chili, cheddar cheese, and diced onion._
+`Description`: _A beef frank on a hoagie bun toped with chili, cheddar cheese, and diced onion._
 
 It should have its `Sausage` property set to `Sausage.Beef`, its `Bun` property set to `Bun.Hoagie`, and the boolean properties for `Chili`, `CheddarCheese`, and `ChoppedOnion` all set to true.  Other boolean properties should be false.
 
@@ -202,12 +202,12 @@ Finally, you will need to create a class to represent the drinks available at Fr
 Declare an enumeration to list the flavors of drink available.  These are:
 * RCCola
 * CherryRCCola
-* 7UP
+* SevenUP
 * BigRed
 * DrPepper
 
 ### Drink Class
-Declare a  implement a class `Drink` in the file _Drink.cs_ in the `FranksNSuch.Data` namespace that represents the drinks available at Franks 'N Such.  It should have the following properties:
+Declare a  implement a class `Drink` in the file _Drink.cs_ in the `DogsNSuch.Data` namespace that represents the drinks available at Dogs 'N Such.  It should have the following properties:
 
 `Flavor`: An property with the `DrinkFlavor` enum type.  It should default to `DrinkFlavor.RCCola`.
 
@@ -236,7 +236,7 @@ Declare a  implement a class `Drink` in the file _Drink.cs_ in the `FranksNSuch.
     <td>110</td>
   </td>  
   <tr>
-    <td>7UP</td>
+    <td>SevenUP</td>
     <td>7UP</td>
     <td>140</td>
   </td>  
