@@ -1,7 +1,7 @@
 ---
 title: "Milestone 3 Requirements"
-pre: "4. "
-weight: 40
+pre: "5. "
+weight: 50
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -15,7 +15,7 @@ For this milestone, you will be creating an additional class to represent an Ord
 
 * Document your classes using XML-Style comments
 
-* Create UML class diagrams to represent your poject
+* Create UML class diagrams to represent your project
 
 ### Assignment requirements:
 
