@@ -53,9 +53,6 @@ This assignment is intended to introduce you to Microsoft’s Windows Presentati
 ```
 **AND** XML-Style comments above every public class, field, property, and method!
 
-### Dog Customization Control
-
-
 ### Menu Item Selection Control
 
 Create a custom WPF control named `MenuItemSelection` in the file _MenuItemSelection.xaml_ and _MenuItemSelection.xaml.cs_ that extends the `UserControl` class.  This control should have buttons for each item that appears on the Dogs 'N Such menu, which are large enough for a user to easily touch them when displayed on a touch screen.
