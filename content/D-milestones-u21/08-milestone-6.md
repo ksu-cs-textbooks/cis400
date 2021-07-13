@@ -1,5 +1,5 @@
 ---
-title: "Milestone #6 - Assignment Description"
+title: "Milestone 6 - Assignment Description"
 pre: "8. "
 weight: 80
 date: 2018-08-24T10:53:26-05:00
@@ -121,9 +121,12 @@ You should print a receipt for each completed sale.
 
 #### Testing the Cash Payment Processing
 
-One of the primary benefits of the MVVM architecture is it allows you to push logic that would otherwise be in the View classes into the ViewModel, and create unit tests for this viewmodel.  You should write unit tests for the intermediate class that test the ability to make correct change, finalize the sale, and update properties correctly.
+One of the primary benefits of the MVVM architecture is it allows you to push logic that would otherwise be in the View classes into the ViewModel, and create unit tests for this ViewModel.  You should write unit tests for the intermediate class that test the ability to make correct change, finalize the sale, and update properties correctly.
 
 Since you will not be able to replace the `CashDrawer` with a mock instance, you should invoke its `Reset()` method at the start of each test to ensure that each test starts with the drawer in the same state.
+
+#### Testing the GUI
+In addition to the automated tests, you should write a _test plan_ document for testing the GUI.  This should lead a user through a series of tests (adding specific items to the order) and provide guidance of expected results (i.e. should show specific price and order details).  This test plan should be include the process of making at least four different orders all the way through finalizing the sale.
 
 
 ### Submissions
