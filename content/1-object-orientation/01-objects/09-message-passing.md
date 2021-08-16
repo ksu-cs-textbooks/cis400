@@ -12,7 +12,7 @@ Consider the real-world analogue of a letter sent via the postal service.  Such 
 In an object-oriented language, message passing primarily take the form of methods. Let's revisit our example `Vector3` class:
 
 ```csharp
-public struct Vector3 {
+public class Vector3 {
     public double X {get; set;}
     public double Y {get; set;}
     public double Z {get; set;}
