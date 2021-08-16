@@ -54,6 +54,6 @@ Vector3 up = new Vector3(0.0, 1.0, 0.0);
 Vector3 a = new Vector3(5.4, -21.4, 3.11);
 ```
 
-Conceptually, what we are doing is not that different from using a compound data type like a struct and a module of functions that work upon that struct.  But practically, it means _all the code for working with Vectors appears in one place_.  This arguably makes it much easier to find all the pertinent parts of working with vectors, and makes the resulting code better organized and easier to maintain and add features to.  
+Conceptually, what we are doing is not that different from using a compound data type like a struct and a module of functions that work upon that struct.  But practically, it means _all the code for working with Vectors appears in one place_.  This arguably makes it much easier to find all the pertinent parts of working with vectors, and makes the resulting code better organized and easier to maintain and add features to.
 
 Classes also provide additional benefits over structs in the form of _polymorphism_, which we'll discuss in [Chapter 2]({{< ref "01-objects/02-polymorphism" >}}).

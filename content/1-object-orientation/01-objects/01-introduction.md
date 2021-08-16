@@ -30,6 +30,8 @@ Some key terms to learn in this chapter are:
 
 * Constructor
 
+* Parameterless Constructor
+
 * Property
 
 * Public
