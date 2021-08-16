@@ -120,3 +120,7 @@ public static class VectorMath() {
 {{% notice note %}}
 To duplicate the module behavior with C#, we must declare both the class and its methods `static`.
 {{% /notice %}}
+
+## Classes
+
+But what most distinguishes C# is that it is an _object-oriented_ language, and as such, it's primary form of encapsulation is _classes_ and _objects_.  The key idea behind encapsulation in an object-oriented language is that we encapsulate both _state_ and _behavior_ in the class definition.  Let's explore that idea more deeply in the next section. 

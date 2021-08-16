@@ -1,5 +1,5 @@
 ---
-title: "Access Modifiers"
+title: "Data Hiding in Object-Orientation"
 pre: "6. "
 weight: 6
 date: 2018-08-24T10:53:26-05:00
@@ -13,7 +13,7 @@ If we consider the program as a state machine, that means that any part of the p
 
 For example, if you were to make a typo in the part of the program dealing with water run-off in a field which ends up assigning a new value to a variable that was supposed to be used for crop growth, you've just introduced a very subtle and difficult-to-find error.  When the crop growth modeling functionality fails to work properly, we'll probably spend serious time and effort looking for a problem in the crop growth portion of the code... but the problem doesn't lie there at all!
 
-C# uses [access modifiers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers) to implement data hiding.  Consider a class representing a student:
+There are several techniques involved in data hiding in an object-oriented language.  One of these is [access modifiers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers), which determine what parts of the program code can access a particular class, field, property, or method.  Consider a class representing a student:
 
 ```csharp
 public class Student {
@@ -29,16 +29,17 @@ public class Student {
 }
 ```
 
-By using the access modifier `private`, we have indicated that our fields `first`, `last`, and `wid` cannot be accessed (seen or assigned) outside of this code.  If we were to create a specific student:
+By using the access modifier `private`, we have indicated that our fields `first`, `last`, and `wid` cannot be accessed (seen or assigned to) outside of the code that makes up the `Student` class.  If we were to create a specific student:
 
 ```csharp
 Student willie = new Student("Willie", "Wildcat", 888888888);
 ```
 
-We would not be able to change his name, i.e. `willie.first = "Bob"` would fail, because the field `first` is private.  In fact, we cannot even see his name, so `Console.WriteLine(willie.First);` would also fail.  
+We would not be able to change his name, i.e. `willie.first = "Bob"` would fail, because the field `first` is private.  In fact, we cannot even see his name, so `Console.WriteLine(willie.first);` would also fail.  
 
 If we want to allow a field or method to be accessible _outside_ of the object, we must declare it `public`.  While we _can_ declare fields public, this violates the core principles of encapsulation, as any outside code can modify our object's state in uncontrolled ways.
 
+### Accessor Methods
 Instead, in a true object-oriented approach we would write public  **_accessor methods_**, a.k.a. *getters* and *setters*.  These are methods that allow us to see and change field values _in a controlled way_.  Adding accessors to our Student class might look like:
 
 ```csharp
@@ -79,6 +80,7 @@ Notice how the `SetFirst()` and `SetLast()` method check that the provided name 
 
 Also, notice that the `wid` field only has a getter.  This effectively means once a student’s Wid is set by the constructor, it cannot be changed (it’s readonly).  This allows us to share data without allowing it to be changed outside of the class.
 
+## Properties
 While accessors provide a powerful control mechanism in object-oriented languages, they also require a lot of boilerplate typing.  Many languages therefore introduce a mechanism for quickly defining basic accessors.  In C#, we have [Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties).  Let’s rewrite our Student class with Properties:
 
 ```csharp

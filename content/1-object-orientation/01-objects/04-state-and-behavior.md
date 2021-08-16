@@ -156,4 +156,6 @@ our state table would look something like:
   </tr>
 </table>
 
-Because the parameters `vec` and `scale`, as well as the variables `x`, `y`, `z`, and the unnamed `Vector3` we return are all defined only within the scope of the method, we can reason about them and the associated state changes _independently_ of the rest of the program.  This greatly simplifies both writing and debugging programs.
+Because the parameters `vec` and `scale`, as well as the variables `x`, `y`, `z`, and the unnamed `Vector3` we return are all defined only within the scope of the method, we can reason about them and the associated state changes _independently_ of the rest of the program. Essentially, we have encapsulated a portion of the program _state_ in our `Vector3` struct, and encapsulated a portion of the program behavior in the static `Vector3` library.  This greatly simplifies both writing and debugging programs.
+
+However, we really will only use the `Vector3` library in conjunction with `Vector3` structures, so it makes a certain amount of sense to define them in the same place.  This is where _classes_ and _objects_ come into the picture, which we'll discuss next.

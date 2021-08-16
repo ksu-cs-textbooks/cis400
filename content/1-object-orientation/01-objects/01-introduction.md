@@ -14,6 +14,8 @@ Some key terms to learn in this chapter are:
 
 * Encapsulation
 
+* Information Hiding
+
 * Message Passing
 
 * State
