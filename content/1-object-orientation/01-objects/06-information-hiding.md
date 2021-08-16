@@ -121,7 +121,9 @@ Student willie = new Student("William", "Wildcat", 888888888);
 willie.Nickname = "Willie";
 Console.Write(willie.First + " " + willie.Last);
 ```
+
 {{% notice info %}}
+#### Properties are _Methods_
 
 While C# properties are used like fields, i.e. `Console.WriteLine(willie.Wid)` or `willie.First = "William"`, they are actually _methods_.  As such, they _do not add structure to hold state_, hence the need for a _backing variable_.  
 
@@ -138,5 +140,4 @@ public string FullName {
 ```
 
 Here we're effectively generating the value of the `FullName` property from the `first` and `last` backing variables every time the `FullName` property is requested.  This does cause a bit more computation, but we also know that it will always reflect the current state of the first and last names.
-
 {{% /notice %}}
