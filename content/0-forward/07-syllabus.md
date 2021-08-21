@@ -16,7 +16,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 * **Office:** DUE 2216
 * **Phone:** (785)483-9264 (Call/Text)
 * **Website:** [https://nathanhbean.com](https://nathanhbean.com)
-* **Office Hours:** 
+* **Office Hours:** TBD
 * **Virtual Office Hours:** By appointment via [Zoom](ksu.zoom.us).  Schedule a meeting via email or Discord.
 
 ### Preferred Methods of Communication:

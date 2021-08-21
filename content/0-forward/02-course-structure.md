@@ -11,7 +11,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 This course is taught in the "flipped" style.  This means you will be watching videos and working through tutorials _before_ you come to class.  Your class sessions will be used for asking questions, working on and getting help with your projects, and taking exams.
 
-{{% notice info %}}
+{{% notice note note-2 "For Online Students" %}}
 Online sections of the course will not have in-person meetings on campus (although you can come to in-person office hours if those work for you); instead we will hold office hours and appointments meet over Zoom.  You should ensure that you have a working webcam, microphone, and adequate internet connection for teleconferencing.  Exams for distance sections will be delivered online.
 {{% /notice %}}
 
