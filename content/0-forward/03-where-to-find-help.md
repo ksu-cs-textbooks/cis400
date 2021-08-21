@@ -12,21 +12,17 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 As you work on the materials in this course, you may run into questions or problems and need assistance.
 
 ## Course Sessions
-As mentioned before, the course sessions are one of the best time to get help with your assignments - during this time the instructor and TAs are scheduled to be available and on-hand.  A strategy many students have found helpful is to log into the Zoom session, put it on mute, and start working on the course homework.  Then, if you run into a question, unmute and ask (alternatively, if the noise doesn't interfere with your work, you can leave the session unmuted and hear other students' questions).
+As mentioned before, the course sessions are one of the best time to get help with your assignments - during this time the instructor and TAs are scheduled to be available and on-hand in the computer lab. 
 
 {{% notice info %}}
-The summer course does not have a scheduled class time to allow for the greatest flexibility in scheduling for students.  With that in mind, you should bring your questions directly to the Discord course channel where the instructor, TA, and possibly your peers can help!
-{{% /notice %}}
-
-{{% notice warning %}}
-Because attendance at class sessions is not required, it may be tempting to schedule work hours or other activities during that time.  **Please do not do so - the course is designed with the understanding that that time is reserved for your homework, and it is the best time to reach the instructor.** Students who have done this in the past have struggled in the course and averaged more than a letter grade under their peers who used that time for homework.
+The online course sections do not have in-person class times.  With that in mind, you should bring your questions directly to the Discord course channel where the instructor, TA, and possibly your peers can help!
 {{% /notice %}}
 
 ## Discord
 For questions that crop up outside of class times, your first line of communication for this course is the departmental Discord server.   If you have not yet signed into the course discord channel, or are not yet a Discord user, please visit [https://discordbot.cs.ksu.edu](https://discordbot.cs.ksu.edu).  This assistant will link your K-State and Discord accounts and set your username for the server in accordance with K-State policy.
 
 {{% notice info %}}
-In addition to class channels, the Discord server hosts channels for student clubs, announcements, and general discussion.  It is a good place to socialize while we are unable to meet face-to-face.
+In addition to class channels, the Discord server hosts channels for student clubs, announcements, and general discussion.  It is a good place to find information and socialize when you are unable to meet face-to-face.
 {{% /notice %}}
 
 #### Course Channel

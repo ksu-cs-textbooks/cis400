@@ -19,29 +19,31 @@ Please be aware that this schedule and topic list will likely undergo some revis
 The summer offering of CIS 400 compresses the normally 16-week course into 8 weeks.  Accordingly, for the summer course we double up on weekly modules.
 {{% /notice %}}
 
+## Fall/Spring Schedule
+
 Week 0 
-* COVID-19 Pandemic Information
 * Introduction to the Course
 
-Week 1 [Week 1 in summer]
+Week 1 
 * **Exam 0 - The Preassessment*
 * The Science of Learning Programming
 * Setting the Stage (The context in which object-orientation emerged)
+* Milestone 1
 
-Week 2 [Week 1 in summer]
+Week 2
 * Classes and Objects
 * Documenting Objects
-* Class Library Milestone 1
+* Milestone 2
 
-Week 3 [Week 2 in summer]
+Week 3
 * Testing
 * Advanced C# Syntax
-* Class Library Milestone 2
+* Milestone 3
 
 Week 4 [Week 2 in summer]
 * Polymorphism
 * UML Diagrams
-* Class Library Milestone 3
+* Milestone 4
 
 Week 5 [Week 3 in summer]
 * Exam I

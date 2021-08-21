@@ -12,6 +12,7 @@ page = [ "HTML", "Iframeable", "Teleprompter"]
 section = [ "HTML", "Iframeable", "Teleprompter"]
 
 [params]
+  landingPageURL = "/cis400"
   projectName = "The Flying Saucer"
   projectUpstream = "https://github.com/ksu-cis/flying-saucer.git"
   textbookURL = "https://textbooks.cs.ksu.edu/cis400"
@@ -21,6 +22,7 @@ section = [ "HTML", "Iframeable", "Teleprompter"]
   showVisitedLinks = false
   themeVariant = "purple"
   disableLanguageSwitchingButton = true
+  linenumbers = true
 
 [blackfriday]
   plainIDAnchors = true

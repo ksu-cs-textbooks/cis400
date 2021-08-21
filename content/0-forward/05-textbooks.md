@@ -15,6 +15,9 @@ This course does not have a required print textbook.  The resources presented in
 Please note that the materials presented in Canvas have additional graded assignments and exercises worked into the reading order that do not appear in the online edition of the textbook.  You are responsible for completing these!
 {{% /notice %}}
 
+### CS Departmental Textbook Server
+The CIS 400 course textbook is only one of several textbooks authored by your instructors and made available on the departmental server.  For example, your CIS 300 textbook is also available there for you to go back and review.  You can access any of these textbooks at the site <a href="https://textbooks.cs.ksu.edu" target="_blank">https://textbooks.cs.ksu.edu</a>
+
 ### O'Riley for Higher Education
 
 If you are looking for additional resources to support your learning, a great resource that is available to Kansas State University students is the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered through the Kansas State University Library.  These include electronic editions of thousands of popular textbooks as well as videos and tutorials.  As of this writing, a search for object-orientation returns 13,237 results and C# returns 5,984 results.  In particular, I would recommend these books:

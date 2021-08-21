@@ -16,6 +16,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 * **Office:** DUE 2216
 * **Phone:** (785)483-9264 (Call/Text)
 * **Website:** [https://nathanhbean.com](https://nathanhbean.com)
+* **Office Hours:** 
 * **Virtual Office Hours:** By appointment via [Zoom](ksu.zoom.us).  Schedule a meeting via email or Discord.
 
 ### Preferred Methods of Communication:
@@ -40,7 +41,7 @@ C# Language and the Visual Studio compiler, as well as other professional tools 
 ### Course Objectives
 By the end of this course, we expect each student to be able to:
 * Create class definitions that 1) utilize **encapsulation** to organize related data and
-behavior, 2) prevent uncontrolled internal state changes through **data hiding**, and 3)
+behavior, 2) prevent uncontrolled internal state changes through **information hiding**, and 3)
 allow outside code controlled interactions through **message passing**.
 * **Specify** expected object behavior and verify it through creating and executing **unit tests**
 against a class definition.
@@ -142,74 +143,10 @@ Students who would like additional textbooks should refer to resources available
 ### Subject to Change
 The details in this syllabus are not set in stone. Due to the flexible nature of this class, adjustments may need to be made as the semester progresses, though they will be kept to a minimum. If any changes occur, the changes will be posted on the Canvas page for this course and emailed to all students.
 
-### Academic Honesty
-Kansas State University has an Honor and Integrity System based on personal integrity, which is presumed to be sufficient assurance that, in academic matters, one’s work is performed honestly and without unauthorized assistance. Undergraduate and graduate students, by registration, acknowledge the jurisdiction of the Honor and Integrity System. The policies and procedures of the [Honor and Integrity System](https://www.k-state.edu/honor/) apply to all full and part-time students enrolled in undergraduate and graduate courses on-campus, off-campus, and via distance learning. A component vital to the Honor and Integrity System is the inclusion of the Honor Pledge which applies to all assignments, examinations, or other course work undertaken by students. The Honor Pledge is implied, whether or not it is stated: “On my honor, as a student, I have neither given nor received unauthorized aid on this academic work.” A grade of XF can result from a breach of academic honesty. The F indicates failure in the course; the X indicates the reason is an Honor Pledge violation.
-
-**For this course, a violation of the Honor Pledge will result in an automatic 0 for the assignment and the violation will be reported to the Honor System. A second violation will result in an XF in the course.**
-
-In this course, _unauthorized aid_ broadly consists of _giving or receiving code to complete assignments_.  This could be code you share with a classmate, code you have asked a third party to write for you, or code you have found online or elsewhere.  
-
-Authorized aid - which is not a violation of the honor policy - includes
-using the code snippets provided in the course materials, discussing strategies and techniques with classmates, instructors, TAs, and mentors. Additionally, you may use code snippets and algorithms found in textbooks and web sources if you clearly label them with comments indicating where the code came from and how it is being used in your project.
-
-### Students with Disabilities
-Students with disabilities who need classroom accommodations, access to technology, or information about emergency building/campus evacuation processes should contact the Student Access Center and/or their instructor. Services are available to students with a wide range of disabilities including, but not limited to, physical disabilities, medical conditions, learning disabilities, attention deficit disorder, depression, and anxiety. If you are a student enrolled in campus/online courses through the Manhattan or Olathe campuses, contact the Student Access Center at [accesscenter@k-state.edu](accesscenter@k-state.edu), 785-532-6441; for K-State Polytechnic campus, contact Academic and Student Services at [polytechnicadvising@ksu.edu](polytechnicadvising@ksu.edu) or call 785-826-2674.
-
-### Diversity and Inclusion
-{{% notice note %}}
-This is our personal policy and not a required syllabus statement from K-State. It has been adapted from [this statement](https://tomprof.stanford.edu/posting/1625) created by two educators at Brown University. We feel that a statement such as this is very powerful and important in today’s world, and we’ll do our best to live up to it. 
-{{% /notice %}}
-
-In an ideal world, science and technology would be objective. However, much of science and technology is subjective and is historically built on a small subset of privileged voices. In this class, we will reference many materials from a diverse set of sources, but limits still exist on this diversity. I acknowledge that it is possible that there may be both overt and covert biases in the material due to the lens with which it was written, even though the material is primarily of a technical nature.
-
-Please contact me or submit anonymous feedback through the Computer Science department office if you have any concerns or suggestions regarding this course and related materials.
-
-### Netiquette
-{{% notice note %}}
-This is our personal policy and not a required syllabus statement from K-State. It has been adapted from [this statement](https://global.k-state.edu/students/courses/netiquette/) from K-State Global Campus, and the [Recurse Center Manual](https://www.recurse.com/manual). We have adapted their ideas to fit this course.
-{{% /notice %}}
-
-Online communication is inherently different than in-person communication. When speaking in person, many times we can take advantage of the context and body language of the person speaking to better understand what the speaker means, not just what is said. This information is not present when communicating online, so we must be much more careful about what we say and how we say it in order to get our meaning across.
-
-Here are a few general rules to help us all communicate online in this course, especially while using tools such as email or Canvas:
-
-* **Use a clear and meaningful subject line to announce your topic.** Subject lines such as “Question” or “Problem” are not helpful. Subjects such as “Logic Question in Project 5, Part 1 in Java” or “Unexpected Exception when Opening Text File in Python” give plenty of information about your topic.
-* **Use only one topic per message.** If you have multiple topics, post multiple messages so each one can be discussed independently.
-* **Be thorough, concise, and to the point.** Ideally, each message should be a page or less.
-* **Include exact error messages, code snippets, or screenshots, as well as any previous steps taken to fix the problem.** It is much easier to solve a problem when the exact error message or screenshot is provided. If we know what you’ve tried so far, we can get to the root cause of the issue more quickly.
-* **Consider carefully what you write before you post it.** Once a message is posted, it becomes part of the permanent record of the course and can easily be found by others.
-* **If you are lost, don’t know an answer, or don’t understand something, speak up!** Email allows you to send a message privately to the instructors. Don’t be afraid to ask questions anytime, as you can choose to do so without any fear of being identified by your fellow students.
-* **Class discussions are confidential.** Do not share information from the course with anyone outside of the course without explicit permission.
-Do not quote entire message chains; only include the relevant parts. When replying to a previous message, only quote the relevant lines in your response.
-* **Do not use all caps.** It makes it look like you are shouting. Use appropriate text markup (bold, italics, etc.) to highlight a point if needed.
-* **No feigning surprise.** If someone asks a question, saying things like “I can’t believe you don’t know that!” are not helpful, and only serve to make that person feel bad.
-* **No “well-actually’s."** If someone makes a statement that is not entirely correct, resist the urge to offer a “well, actually…” correction, especially if it is not relevant to the discussion. If you can help solve their problem, feel free to provide correct information, but don’t post a correction just for the sake of being correct.
-* **Do not correct someone’s grammar or spelling.** Again, it is not helpful, and only serves to make that person feel bad. If there is a genuine mistake that may affect the meaning of the post, please contact the person privately or let the instructors know privately so it can be resolved.
-* **Avoid subtle -isms and microaggressions.** Avoid comments that could make others feel uncomfortable based on their personal identity. See the syllabus section on Diversity and Inclusion above for more information on this topic. If a comment makes you uncomfortable, please contact the instructor.
-* **Avoid sarcasm, flaming, advertisements, lingo, trolling, doxxing, and other bad online habits.** They have no place in an academic environment. Tasteful humor is fine, but sarcasm can be misunderstood.
-
-### Expectations of Conduct 
-All student activities in the University, including this course, are governed by the [Student Judicial Conduct Code](http://www.k-state.edu/sga/judicial/) as outlined in the Student Governing Association [By Laws](http://www.k-state.edu/sga/old_files/sgadocs/ByLaws.pdf), Article V, Section 3, number 2. Students who engage in behavior that disrupts the learning environment may be asked to leave the class.
-
-### Face Coverings
-To protect the health and safety of the K-State community, students, faculty, staff and visitors must wear face coverings over their mouths and noses while on K-State campuses in all hallways, public spaces, classrooms and other common areas of campus buildings, and when in offices or other work spaces or outdoor settings when 6-feet social distancing cannot be maintained. In addition, all students, faculty, and staff are required to take the [COVID-19 and Face Mask Safety training](https://www.k-state.edu/safety/covid-19/training/). Employees who need reasonable accommodations and assistance related to required face coverings may contact the ADA coordinator at [charlott@k-state.edu](mailto:charlott@k-state.edu), and students needing accommodations may contact the Student Access Center at [accesscenter@k-state.edu](accesscenter@k-state.edu).
-
-In classrooms, faculty have the right to deny a student entry into the room if the student is not wearing a face covering. Students not wearing a face covering will be reminded to do so and offered a clean face covering, if one is available. If the student does not comply, the faculty member will ask the student to leave the space, and if available, join the class remotely.  As a last resort, campus police will be called. The faculty members will complete the [Code of Conduct form](https://www.k-state.edu/report/conduct-violation/) and the Office of Student Life will look further into the issue and take the non-compliance with the request to leave into consideration of further accountability measures. 
-
-At no point should the professor or other students put themselves into an unsafe situation while attempting to enforce the face-covering policy. Manhattan campus police: 785-532-6412
-
-### Campus Safety
-Kansas State University is committed to providing a safe teaching and learning environment for student and faculty members. In order to enhance your safety in the unlikely case of a campus emergency make sure that you know where and how to quickly exit your classroom and how to follow any emergency directives. To view additional campus emergency information go to the University’s main page, [www.k-state.edu](http://www.k-state.edu/), and click on the Emergency Information button, located at the bottom of the page.
-
-### Student Resources
-K-State has many resources to help contribute to student success. These resources include accommodations for academics, paying for college, student life, health and safety, and others found at [www.k-state.edu/onestop](http://www.k-state.edu/onestop).
-
-### Academic Freedom Statement
-Kansas State University is a community of students, faculty, and staff who work together to discover new knowledge, create new ideas, and share the results of their scholarly inquiry with the wider public. Although new ideas or research results may be controversial or challenge established views, the health and growth of any society requires frank intellectual exchange. Academic freedom protects this type of free exchange and is thus essential to any university’s mission.
-
-Moreover, academic freedom supports collaborative work in the pursuit of truth and the dissemination of knowledge in an environment of inquiry, respectful debate, and professionalism. Academic freedom is not limited to the classroom or to scientific and scholarly research, but extends to the life of the university as well as to larger social and political questions. It is the right and responsibility of the university community to engage with such issues.
+{{% include "themes/ksucs-hugo-theme/static/files/syllabus-no-copyright.md" %}} 
 
 ### Copyright Notice
-©2020 The materials in this online course fall under the protection of all intellectual property, copyright and trademark laws of the U.S. The digital materials included here come with the legal permissions and releases of the copyright holders. These course materials should be used for educational purposes only; the contents should not be distributed electronically or otherwise beyond the confines of this online course. The URLs listed here do not suggest endorsement of either the site owners or the contents found at the sites. Likewise, mentioned brands (products and services) do not suggest endorsement. Students own copyright to what they create.
+©2021 The materials in this online course fall under the protection of all intellectual property, copyright and trademark laws of the U.S. The digital materials included here come with the legal permissions and releases of the copyright holders. These course materials should be used for educational purposes only; the contents should not be distributed electronically or otherwise beyond the confines of this online course. The URLs listed here do not suggest endorsement of either the site owners or the contents found at the sites. Likewise, mentioned brands (products and services) do not suggest endorsement. Students own copyright to what they create.
 
 Original content in the course textbook at [{{< param textbookURL >}}]({{< param textbookURL >}}) is licensed under a Creative Commons BY-SA license by Nathan Bean unless otherwise stated.
+

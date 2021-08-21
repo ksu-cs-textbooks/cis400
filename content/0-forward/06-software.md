@@ -30,8 +30,6 @@ After signing in, click the "Software" option in the left menu, and browse the a
 
 The Visual Studio Community Edition is also available as a free download [here](https://visualstudio.microsoft.com/downloads/). While not as full-featured as the Professional edition you can download through Azure Portal, it will be sufficient for the needs of this class.
 
-Xamarin Workbooks is a free tool and can be downloaded from <a href="https://github.com/microsoft/workbooks" target="_blank">here</a>.
-
 ## Discord
 Discord can be used through its web app at [https://discord.com/webapp](https://discord.com/webapp) or you can [download a native app](https://discord.com/download) for Windows, Linux, Mac, iOS, or Android devices.
 
