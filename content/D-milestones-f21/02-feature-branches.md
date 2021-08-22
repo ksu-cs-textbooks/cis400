@@ -3,6 +3,7 @@ title: "Pendant and Feature Branches"
 pre: "2. "
 weight: 20
 date: 2018-08-24T10:53:26-05:00
+linenumbers: false
 ---
 
 For this semester, we will be utilizing a new web-based tool, _Pendant_, developed here at K-State for this course. When set up correctly, this tool will automatically evaluate your milestones and provide feedback on where your submission does not yet meet the specification.
