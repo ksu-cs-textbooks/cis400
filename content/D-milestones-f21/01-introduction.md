@@ -6,10 +6,10 @@ date: 2018-08-24T10:53:26-05:00
 ---
 
 {{% notice noiframe %}}
-This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to that course.  If you are not enrolled in the course, please disregard this section.
+This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to that course, as offered in **Fall 2021**.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-The projects for this semester are all centered around the creation of software to support a fast-food restaurant chain, **Dogs 'N Such**. We will be developing this program iteratively, and each week we will have a new set of features to add and turn in as a milestone. Each milestone will represent a new release in your git repository.
+The projects for this semester are all centered around the creation of software to support a fast-food restaurant chain, **GyroScope**. We will be developing this program iteratively, and each week we will have a new set of features to add and turn in as a milestone. Each milestone will represent a new release in your git repository.
 
 These milestones are:
 
