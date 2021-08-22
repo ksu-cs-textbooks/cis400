@@ -11,6 +11,11 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ## CIS 400 - Object-Oriented Design, Implementation, and Testing
 
+### Class Meeting Times and Locations
+* **Section A**: M 1:30pm-3:20pm DUF 1092
+* **Section B**: W 1:30pm-3:20pm DUF 1092
+* **Section S**: F 1:30pm-3:20pm DUF 1092
+
 ### Instructor Contact Information
 * **Instructor:** Nathan Bean (nhbean AT ksu DOT edu)
 * **Office:** DUE 2216
@@ -61,11 +66,9 @@ against a class definition.
 * Code Modularization
 
 ### Course Structure
-A common axiom in learner-centered teaching is **_“(s)he who does the work does the learning.”_** What this really means is that students primarily learn through grappling with the concepts and skills of a course while attempting to apply them. Simply seeing a demonstration or hearing a lecture by itself doesn’t do much in terms of learning. This is not to say that they don’t serve an important role - as they set the stage for the learning to come, helping you to recognize the core ideas to focus on as you work. The work itself consists of applying ideas,
-practicing skills, and putting the concepts into your own words.
+A common axiom in learner-centered teaching is **_“(s)he who does the work does the learning.”_** What this really means is that students primarily learn through grappling with the concepts and skills of a course while attempting to apply them. Simply seeing a demonstration or hearing a lecture by itself doesn’t do much in terms of learning. This is not to say that they don’t serve an important role - as they set the stage for the learning to come, helping you to recognize the core ideas to focus on as you work. The work itself consists of applying ideas, practicing skills, and putting the concepts into your own words.
 
-This course is built around learner-centered teaching and its recognition of the role and
-importance of these different aspects of learning. Most class periods will consist of short lectures interspersed with a variety of hands-on activities built around the concepts and skills we are seeking to master. In addition, we will be applying these ideas in iteratively building a series of related software applications over the course of the semester. Part of our class time will be reserved for working on these applications, giving you the chance to ask questions and receive feedback from your instructors, UTAs, and classmates.
+This course is built around learner-centered teaching and its recognition of the role and importance of these different aspects of learning. Most class periods will consist of short lectures interspersed with a variety of hands-on activities built around the concepts and skills we are seeking to master. In addition, we will be applying these ideas in iteratively building a series of related software applications over the course of the semester. Part of our class time will be reserved for working on these applications, giving you the chance to ask questions and receive feedback from your instructors, UTAs, and classmates.
 
 ### The Work
 There is no shortcut to becoming a great programmer. Only by **_doing the work_** will you develop the skills and knowledge to make your a successful computer scientist. This course is built around that principle, and gives you ample opportunity to do the work, with as much support as we can offer.
@@ -107,8 +110,7 @@ At the end of the semester, for students who have earned a borderline grade (i.e
 Collaboration is an important practice for both learning and software development. As such, you are encouraged to work with peers and seek out help from your instructors and UTAs. However, it is also critical to remember that **_(s)he who does the work, does the learning._**  Relying too much on your peers will deny you the opportunity to learn yourself. As the skills we
 are working on are the foundations on which all future computer science coursework relies, any skills you fail to develop in this course can have long-ranging effects on your future success, in both classes and the working world.
 
-Determining where the line between good collaboration and over-reliance on others can be
-challenging, especially as a student. I offer a few guidelines that can help:
+Determining where the line between good collaboration and over-reliance on others can be challenging, especially as a student. I offer a few guidelines that can help:
 1.  If you can’t yet put a concept into your own words and explain it to someone not versed in programming, you do not yet have a full grasp of the concept. Don’t be tempted to use someone else’s words - keep working at it until you can use your own. But “working at it” in this context can mean seeking out additional explanations from other people. Sometimes getting enough different perspectives on a concept is what you need to be
 able to synthesize your own.
 2. Directly copying another student’s code and turning it in as your own work is never acceptable. It is a form of plagiarism and constitutes academic dishonesty and can result in severe penalties (covered below). This does not mean you can’t discuss the assignment and approaches to solving it with your peers - in fact doing so is often a useful learning practice. Just keep those discussions above the code level.
