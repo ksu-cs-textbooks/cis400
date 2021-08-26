@@ -140,4 +140,4 @@ Now you can push your `main` branch to GitHub:
 $ git push origin main
 ```
 
-And [create a release]({{<ref "B-git-and-github/10-merge-conflicts">}}) tagged `v0.1.0` with name `"Milestone 1"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+And [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.1.0` with name `"Milestone 1"`.  Copy the URL for the release page and submit it to the Canvas assignment.
