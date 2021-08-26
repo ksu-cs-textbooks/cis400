@@ -15,7 +15,7 @@ This should print a list of the commits and thier details, with the newest commi
 
 ![git log output]({{<static "images/b.7.1.png">}})
 
-Notice each commit is identified by a hash, date, and commit message. This is  This is why a good commit message is important - it helps to let us know what we changed (and therfore what changes we would be undoing if we reverted to that commit).  If we wanted to revert to an earlier version, we would use the **git checkout** command:
+Notice each commit is identified by a hash, date, and commit message. This is why a good commit message is important - it helps to let us know what we changed (and therfore what changes we would be undoing if we reverted to that commit).  If we wanted to revert to an earlier version, we would use the **git checkout** command:
 
 ```
 $ git checkout [hash]
