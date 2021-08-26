@@ -4,7 +4,7 @@ pre: "6. "
 weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
-Among these neo-Piagetian researchers was an group including Raymond Lister and Donna M. Teague whom applied these theories to the learning of computer science, formulating a theory Lister calls _The Developmental Epistemology of Computer Programming_. This theory describes the traits of programmers at each of the stages of development.  In particular, they use a student's ability to _trace_ code (explain line-by-line what it does) as a demarcation between stages.
+Among these neo-Piagetian researchers is a group including Raymond Lister and Donna M. Teague whom applied these theories to the learning of computer science, formulating a theory Lister calls _The Developmental Epistemology of Computer Programming_. This theory describes the traits of programmers at each of the stages of development.  In particular, they use a student's ability to _trace_ code (explain line-by-line what it does) as a demarcation between stages.
 
 <table>
   <tr>
