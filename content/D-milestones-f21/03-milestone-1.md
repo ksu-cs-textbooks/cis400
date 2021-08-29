@@ -37,7 +37,7 @@ $ git clone [repoURL]
 ```
 
 {{% notice tip %}}
-It is comon practice to indicate a terminal cursor with the `$` - but it is _not_ part of the command.  You only need to type what comes after the `$` - in this case `git clone [repoURL]`.  Likewise `[repoURL]` should be replaced with your actual repository URL
+It is common practice to indicate a terminal cursor with the `$` - but it is _not_ part of the command.  You only need to type what comes after the `$` - in this case `git clone [repoURL]`.  Likewise `[repoURL]` should be replaced with your actual repository URL
 {{% /notice %}}
 
 Where `[repoURL]` is the clone repo from GitHub:
