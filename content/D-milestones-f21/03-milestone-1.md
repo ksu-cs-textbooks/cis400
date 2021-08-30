@@ -56,7 +56,7 @@ After that, you will set up a webhook on your GitHub repo using the secret provi
 
 This is covered step-by-step in the video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dvwnwn6Qy3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dvwnwn6Qy3w" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Part 3 - Create a Local Feature Branch, Make and Commit Changes, and Push to GitHub
 
@@ -105,6 +105,10 @@ This push will also trigger the webhook you created in step 2.  You can visit ht
 {{% notice tip %}}
 If you need to pull this remote branch into another local repo (say you created the branch in the lab but now you are on your home computer), the process is covered in the [previous section]({{<ref "D-milestones-f21/02-feature-branches#pulling-a-remote-feature-branch-to-another-local-machine">}})
 {{% /notice %}}
+
+The following video walks through Parts 3 & 4 in a step-by-step manner:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y02SKI0gO-w" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Part 4 - Merging your Feature Branch and Submitting to GitHub
 
