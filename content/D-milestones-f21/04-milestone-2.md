@@ -53,7 +53,7 @@ All enums should reside in the `GyroScope.Data.Enums` namespace
 
 There is one additional enum needed:
 
-* `DonerMeats` - The various kinds of spiced meat prepared on a spit
+* `DonerMeat` - The various kinds of spiced meat prepared on a spit
   * Beef
   * Pork
   * Chicken
