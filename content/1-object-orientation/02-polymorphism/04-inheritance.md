@@ -141,7 +141,7 @@ What happens when we construct an instance of `GraduateStudent`?  First, we invo
 GraduateStudent bobby = new GraduateStudent("Bobby", "TwoSocks", "Economics");
 ```
 
-This constructor then invokes the constructor of the base class, `Student`, with the arguments `"Bobby"` and `"Twosocks"`.  Thus, we allocate space to hold the state of a student, and populate it with the values set by the constructor.  Finally, execution returns to the super class of `GraduateStudent`, which allocates the additional memory for the reference to the `BachelorDegree` property.  Thus, the memory space of the `GraduateStudent` _contains_ an instance of the `Student`, somewhat like nesting dolls.
+This constructor then invokes the constructor of the base class, `Student`, with the arguments `"Bobby"` and `"Twosocks"`.  Thus, we allocate space to hold the state of a student, and populate it with the values set by the constructor.  Finally, execution returns to the derived class of `GraduateStudent`, which allocates the additional memory for the reference to the `BachelorDegree` property.  Thus, the memory space of the `GraduateStudent` _contains_ an instance of the `Student`, somewhat like nesting dolls.
 
 Because of this, we can treat a `GraduateStudent` object as a `Student` object.  For example, we can store it in a list of type `Student`, along with `UndergraduateStudent` objects:
 
