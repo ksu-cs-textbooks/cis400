@@ -120,7 +120,7 @@ The class `LibraLibation` should be declared in the `GyroScope.Data.Drinks` name
     <th>Calories</th>
   </tr>
   <tr>
-    <td>Orangeaide</td>
+    <td>Orangeade</td>
     <td>$1.00</td>
     <td>180</td>
   </tr>
