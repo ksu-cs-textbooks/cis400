@@ -258,11 +258,23 @@ The calories for each ingredient is:
 </table>
 
 
-
 ## The Milestone Feature Branch 
-
 You will want to [create a feature branch and push it to GitHub]({{<ref "D-milestones-f21/02-feature-branches">}}) for your validations to be generated on https://pendant.cs.ksu.edu.  For this milestone, your feature branch should be named `ms2`.  
 
 ## Submitting the Assignment
-
 Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.2.0` with name `"Milestone 2"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+
+## Grading Rubric
+The grading rubric for this assignment will be:
+
+**25% Structure** Did you implement the structure as laid out in the specification?  Are the correct names used for classes, enums, properties, methods, events, etc?  Do classes inherit from expected base classes?
+
+**25% Documentation** Does every class, method, property, and field use the correct XML-style documentation?  Does every XML comment tag contain explainitory text?
+
+**25% Design** Are you appropriately using C# to create reasonably efficient, secure, and usable software?  Does your code contain bugs that will cause issues at runtime?
+
+**25% Functionality** Does the program do what the assignment asks?  Do properties return the expected values?  Do methods perform the expected actions?
+
+{{% notice warning %}}
+Projects that do not compile will recieve an automatic grade of 0.
+{{% /notice %}}
