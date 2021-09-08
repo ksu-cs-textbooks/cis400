@@ -54,7 +54,7 @@ public class Student {
   public string First { get; set; }
 
   /// <summary>
-  /// Gets and sets first name.
+  /// Gets and sets last name.
   /// </summary>
   public string Last { get; set; }
 
