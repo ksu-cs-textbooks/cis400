@@ -27,7 +27,7 @@ You will need to:
 * Create new classes for:
     * Cancer Helvah Cake
     * Libra Libation
-    * Capricorn Iced Tea
+    * Capricorn Mountain Tea
 * Refactor existing classes to use inhertance
 
 ### Purpose:
@@ -105,7 +105,7 @@ You will need to create a new enum in the `GyroScope.Data.Enums` namespace to re
 * `PinkLemonada`
 
 ### Create new Classes
-You will need to create three new classes, `CancerHalvehCake`, `LibraLibation`, and `CapricornIcedTea`.
+You will need to create three new classes, `CancerHalvehCake`, `LibraLibation`, and `CapricornMountainTea`.
 
 #### CancerHalvehCake
 The class `CancerHalvehCake` should be declared in the `GyroScope.Data.Treats` namespace.  It should inherit from the `Treat` base class.  It's price is $3.00 and it has 272 calories.
@@ -125,7 +125,7 @@ The class `LibraLibation` should be declared in the `GyroScope.Data.Drinks` name
     <td>180</td>
   </tr>
   <tr>
-    <td>SourCherry</td>
+    <td>Sour Cherry</td>
     <td>$1.00</td>
     <td>100</td>
   </tr>
