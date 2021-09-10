@@ -48,7 +48,7 @@ In Visual Studio, you can right-click on a symbol like a class or variable name 
 {{% /notice %}}
 
 ### Abstract Base Classes
-You will need to create a base class for each of the kinds of items served at GyroScope: _Entrees_, _Sides_, _Treats_, and _Drinks_. Becuase you will never instanicate one of these classes directly i.e. you would never write:
+You will need to create a base class for each of the kinds of items served at GyroScope: _Entrees_, _Sides_, _Treats_, and _Drinks_. Because you will never instanciate one of these classes directly i.e. you would never write:
 
 ```csharp
 Side side = new Side();
