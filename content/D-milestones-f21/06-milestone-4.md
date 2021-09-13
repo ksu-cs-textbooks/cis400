@@ -44,22 +44,22 @@ The _AquariusIceTests.cs_ contains unit tests for the `AquariusIce` class, which
 Create an XUnit test class, `VirgoClassicGyroTests` with the following test methods:
 * `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `VirgoClassicGyro` match the defaults set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}. 
 * `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void SpecialInstructionsShouldReflectIngredients(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
 
 #### LeoLambGyroTests
 Create an XUnit test class, `LeoLambGyroTests` with the following test methods:
 * `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `LeoLambGyro` match the defaults set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}. 
 * `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
         
 #### SpicyScorpioGyroTests
 Create an XUnit test class, `SpicyScorpioGyroTests` with the following test methods:
 * `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `SpicyScorpioGyro` match the defaults set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}. 
 * `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
         
 #### PiscesFishDishTests
 Create an XUnit test class, `PiscesFishDishTests` with the following test methods:
