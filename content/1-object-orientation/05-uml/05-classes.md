@@ -9,9 +9,9 @@ In a UML class diagram, individual classes are represented with a box divided in
 
 ![Class Diagram example]({{<static "images/5.5.1.png">}})
 
-The first compartment identifies the class - it contains the name of the class. The second compartment holds the _attributes_ of the class (in C#, these are the _fields_ and _properties_).  And the third compartment holds the _operations_ of the class (in C#, these are the _methods_) of the class.
+The first compartment identifies the class - it contains the name of the class. The second compartment holds the _attributes_ of the class (in C#, these are the _fields_ and _properties_).  And the third compartment holds the _operations_ of the class (in C#, these are the _methods_).
 
-In the diagram above, we can see the `Fruit` class modeled on the left side. 
+In the diagram above, we can see the `Fruit` class modeled on the right side. 
 
 ### Attributes
 The _attributes_ in UML represent the _state_ of an object.  For C#, this would correspond to the _fields_ and _properties_ of the class.
@@ -19,7 +19,7 @@ The _attributes_ in UML represent the _state_ of an object.  For C#, this would 
 We indicate fields with a typed element, i.e. in the example above, the `blended` field is represented with:
 
 $$
-\texttt{-blended:bool}
+\text{-blended:bool}
 $$ 
 
 Indicating it should be declared `private` with the type `bool`.
