@@ -122,7 +122,7 @@ Create an XUnit test class, `GeminiStuffedGrapeLeavesTests` with the following t
 * `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `GeminiStuffedGrapeLeaves` set to the specified size matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
 * `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `GeminiStuffedGrapeLeaves` set to the the specified size the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
 
-#### SagittariusGreekSalad
+#### SagittariusGreekSaladTests
 Create an XUnit test class, `SagittariusGreekSaladTests` with the following test methods:
 * `public void SizeShouldDefaultToSmall()` - verifies a newly created `SagittariusGreekSalad` is small.
 * `public void ShouldBeAbleToSetSize(Size size)` - verifies an `SagittariusGreekSalad` can be set to be small, medium, or large.
