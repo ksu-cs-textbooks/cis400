@@ -120,7 +120,7 @@ Note how we place the code that is expected to throw the exception _inside_ the 
 There are also similar assertions for exceptions being thrown in _asynchronous_ code. These operate nearly identically, except instead of supplying an Action, we supply a [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=netcore-3.1):
  
 * `Assert.ThrowsAsync<T>(Task testCode) where T : System.Exception` asserts the supplied exception type `T` is thrown when `testCode` is executed 
-* `Assert.ThrowsAnyAsync<T>(Task testCode) where T: System.Exception` is the asynchronous version
+* `Assert.ThrowsAnyAsync<T>(Task testCode) where T: System.Exception` is the asynchronous version of the previous assertion, asserts the supplied exception type `T` will be thrown some point after `testCode` is executed.
 
 ## Events Assertions 
 Asserting that events will be thrown also involves [Action<T> delegate](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=netcore-3.1), and is a bit more involved as it requires _three_.  The first delegate is for attaching the assertion-supplied event handler to the listener, the second for detaching it, and the third is for triggering the event with the actual code involved.
@@ -136,7 +136,7 @@ public void EmailerShouldRaiseEmailSentWhenSendingEmails()
     Emailer emailer = new Emailer();
     Assert.Raises<EmailSentEventArgs>(
         listener => emailer += listener, // This action attaches the listener
-        listener => emailer -= listener, // This action detatches the listener 
+        listener => emailer -= listener, // This action detaches the listener 
         () => {
             emailer.SendEmail(address, body);
         }
@@ -154,7 +154,7 @@ There are also similar assertions for events being raised by _asynchronous_ code
 
 ## Property Change Assertions
 
-Becuase C# has deeply integrated the idea of 'Property Change' notifications as part of its GUI frameworks (which we'll cover in a later chapter), it makes sense to have a special assertion to deal with this notification.  Hence, the `Assert.PropertyChanged(INotifyPropertyChanged @object, string propertyName, Action testCode)`.  Using it is simple - supply the object that implements the `INotifyPropertyChanged` interface as the first argument, the name of the property that will be changing as the second, and the Action delegate that will trigger the change as the third.  
+Because C# has deeply integrated the idea of 'Property Change' notifications as part of its GUI frameworks (which we'll cover in a later chapter), it makes sense to have a special assertion to deal with this notification.  Hence, the `Assert.PropertyChanged(INotifyPropertyChanged @object, string propertyName, Action testCode)`.  Using it is simple - supply the object that implements the `INotifyPropertyChanged` interface as the first argument, the name of the property that will be changing as the second, and the Action delegate that will trigger the change as the third.  
 
 For example, if we had a `Profile` object with a `StatusMessage` property that we knew should trigger a notification when it changes, we could write our test as:
 
@@ -166,5 +166,5 @@ public void ProfileShouldNotifyOfStatusMessageChanges() {
 }
 ```
 
-There is also a similar assertion for testing if a property is changed in _asyncrhonous_ code. This operates nearly identically, except instead of supplying an Action, we supply a [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=netcore-3.1):
-* `Assert.PropertyChangedAsync(InotifyPropertyChanged @object, string propertyName, Task testCode)`
+There is also a similar assertion for testing if a property is changed in _asynchronous_ code. This operates nearly identically, except instead of supplying an Action, we supply a [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=netcore-3.1):
+* `Assert.PropertyChangedAsync(INotifyPropertyChanged @object, string propertyName, Task testCode)`

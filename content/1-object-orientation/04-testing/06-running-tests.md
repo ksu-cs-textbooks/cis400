@@ -13,7 +13,7 @@ The xUnit framework is offered as a set of Nuget packages:
 
 As with other aspects of the .NET framework, the tools can be used at either the command line, or though Visual Studio integrations.  The [xunit documentation](https://xunit.net/docs/getting-started/netcore/cmdline) describes the command line approach thoroughly, so we won't belabor it here.  But be aware, if you want to do development in a Linux or Unix environment, you _must_ use the command line, as there is no version of Visual Studio available for those platforms (there is however, a version available for the Mac OS).
 
-When building tests with Visual Studio, you will typically begin by adding an xUnit Test Project to your existing solution.  Using the wizard will automatically incorporate the necessary Nuget packages into the project.  However, you will need to add the project to be test to the Dependencies list of the test project to give it access to the assembly to be tested.  You do this by right-clicking the 'Dependencies' entry under the Test Project in Visual Studio, choosing "Add Project Reference", and in the dialog that pops up, checking the checkbox next to the name of the project you are testing:
+When building tests with Visual Studio, you will typically begin by adding an xUnit Test Project to your existing solution.  Using the wizard will automatically incorporate the necessary Nuget packages into the project.  However, you will need to add the project to be tested to the Dependencies list of the test project to give it access to the assembly to be tested.  You do this by right-clicking the 'Dependencies' entry under the Test Project in Visual Studio, choosing "Add Project Reference", and in the dialog that pops up, checking the checkbox next to the name of the project you are testing:
 
 ![Adding the project reference]({{<static "images/1.4.6.1.gif">}})
 
@@ -27,6 +27,6 @@ As tests complete, the will report their status - pass or fail - indicated by a 
 
 Occasionally, your tests may not seem to finish, but get stuck running. If this happens, check the output panel, switching it from "build" to "tests".  Most likely your test process crashed because of an error in your test code, and the output reporting that error will be reported there.
 
-![Test Ouput in the Output Panel]({{<static "images/1.4.6.4.png">}})
+![Test Output in the Output Panel]({{<static "images/1.4.6.4.png">}})
 
 It is a good idea to run tests you've written previously as you add to or refactor your code.  This practice is known as _regression testing_, and can help you identify errors your changes introduce that break what had previously been working code.  This is also one of the strongest arguments for writing test code rather than performing ad-hoc testing; automated tests are easy to repeat.
