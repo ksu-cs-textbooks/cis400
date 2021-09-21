@@ -136,8 +136,8 @@ Create an XUnit test class, `TaurusTabulehTests` with the following test methods
 * `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `TaurusTabuleh` set to the specified size matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
 * `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `TaurusTabuleh` set to the the specified size the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
 
-#### CancerHelvahCakeTests
-Create an XUnit test class, `TaurusTabulehTests` with the following test methods:
+#### CancerHelvahCakeCakeTests
+Create an XUnit test class, `CancerHelvahCakeTests` with the following test methods:
 * `public void PriceShouldBeCorrect()` - verifies a newly created `CancerHevlahCake` has the price specified in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}
 * `public void CaloriesShouldBeCorrect()` - verifies a newly created `CancerHevlahCake` has the calories specified in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}
 
