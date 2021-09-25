@@ -186,8 +186,8 @@ You will need to define a class to represent the Leo Lamb Gyro, which can be cus
 
 `SpecialInstructions`: A readonly property with the `IEnumerable<string>` type, it should contain a string `"Hold [ingredient]"` for any ingredient indicated by a `bool` that is false, i.e. if the `Tomato` property is false, it should contain a string `"Hold Tomato"`.  Additionally, if the meat selected is not the default, it should contain a string `"Use [meat]"` indicating the type of meat to use, i.e. `"Use Beef"` if the `Meat` property is set to `DonerMeat.Beef`.
 
-#### Pices Fish Dish
-You will need to define a class to represent the Pices Fish Dish, which can be customized after creation.  You should name this class `PicesFishDish` and declare it in the file _PicesFishDish.cs_.  It should have the following properties:
+#### Pisces Fish Dish
+You will need to define a class to represent the Pisces Fish Dish, which can be customized after creation.  You should name this class `PiscesFishDish` and declare it in the file _PiscesFishDish.cs_.  It should have the following properties:
 
 `Price`: A readonly property with the `decimal` type, it should return $5.99.
 
