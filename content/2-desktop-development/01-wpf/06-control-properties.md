@@ -137,7 +137,7 @@ As most controls prominently feature text, it is important to discuss the proper
 
 #### Font Family
 
-The [`FontFamiy`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontfamily?view=netcore-3.1) property sets the font used by the control.  This font needs to be installed on the machine.  You can supply a single font, i.e.:
+The [`FontFamily`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontfamily?view=netcore-3.1) property sets the font used by the control.  This font needs to be installed on the machine.  You can supply a single font, i.e.:
 
 ```xml
 <TextBlock FontFamily="Arial">
@@ -303,9 +303,9 @@ For example, the XAML:
 </TextBlock>
 ```
 
-Produces this ranbow gradient:
+Produces this rainbow gradient:
 
-![Ranbow Linear Gradient Example]({{<static "images/2.1.6.8.png">}})
+![Rainbow Linear Gradient Example]({{<static "images/2.1.6.8.png">}})
 
 Further, the line along with the linear gradient is created is defined by the `StartPoint` and `EndPoint` properties of the `<LinearGradientBrush>`.  These points are relative to the area the brush is covering (i.e. the space occupied by the element), and fall in the range of [0.0 .. 1.0].  The default (as seen above) is a diagonal line from the upper left corner (0,0) to the lower right corner (1.0, 1.0).
 
@@ -330,7 +330,7 @@ To make the above gradient fall in the center half of the element, and be horizo
 
 ![Rainbow Linear Gradient with Start and End Points Example]({{<static "images/2.1.6.9.png">}})
 
-A `<RadialGradietBrush>` is defined similarly through the use of `GradientStops`, only this time they are in relation to the center around which the gradient radiates:
+A `<RadialGradientBrush>` is defined similarly through the use of `GradientStops`, only this time they are in relation to the center around which the gradient radiates:
 
 ```xml
 <TextBlock Foreground="#FFFFFF" FontSize="25">

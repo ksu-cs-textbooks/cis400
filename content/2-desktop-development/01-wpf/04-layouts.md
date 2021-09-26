@@ -30,7 +30,7 @@ Thus, you might expect the code:
 </Grid>
 ```
 
-Creates a grid with three columns, each 200 logial units wide, and two rows, each 100 logical units high. However, it will _actually_ create a grid like this:
+Creates a grid with three columns, each 200 logical units wide, and two rows, each 100 logical units high. However, it will _actually_ create a grid like this:
 
 ![The resulting Grid]({{<static "images/2.1.4.1.png">}})
 

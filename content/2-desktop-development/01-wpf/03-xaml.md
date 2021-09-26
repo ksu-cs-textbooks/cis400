@@ -57,7 +57,7 @@ Note how we repeat the tag name (`Button`) and append the attribute name (`Heigh
 Because XAML is an extension of XML, we can add comments the same way, by enclosing the comment within a `<!--` and `-->`:
 
 ```xml
-<!-- I am a commment -->
+<!-- I am a comment -->
 ```
 
 ## XAML Defines Objects

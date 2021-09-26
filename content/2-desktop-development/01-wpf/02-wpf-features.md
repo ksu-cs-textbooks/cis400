@@ -5,12 +5,12 @@ weight: 20
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Windows Presentation Foundation is a library and toolkit for creating Graphical User Interfaces - a user interface that is presented as a combination of interactive graphical and text elements commonly including buttons, menus, and various flavors of editors and inputs.  GUIs represent a major step forward in usability from earlier programs that were interacted with by typing commands into a text-based terminal (the EPIC software we looked at in the beginning of this textbook is an examlple of this earlier form of user interface).
+Windows Presentation Foundation is a library and toolkit for creating Graphical User Interfaces - a user interface that is presented as a combination of interactive graphical and text elements commonly including buttons, menus, and various flavors of editors and inputs.  GUIs represent a major step forward in usability from earlier programs that were interacted with by typing commands into a text-based terminal (the EPIC software we looked at in the beginning of this textbook is an example of this earlier form of user interface).
 
 You might be wondering why Microsoft introduced WPF when it already had support for creating GUIs in its earlier Windows Forms product.  In part, this decision was driven by the evolution of computing technology.  
 
 ### Screen Resolution and Aspect Ratio
-No doubt you are used to having a wide variety of screen resolutions available across a plethora of devices.  But this was not always the case.  Computer monitors once came in very specific, standardized resolutions, and only gradually were these replaced by newer, higher-resolution montiors.  The table below summarizes this time, indicating the approximate period each resolution dominated the market.
+No doubt you are used to having a wide variety of screen resolutions available across a plethora of devices.  But this was not always the case.  Computer monitors once came in very specific, standardized resolutions, and only gradually were these replaced by newer, higher-resolution monitors.  The table below summarizes this time, indicating the approximate period each resolution dominated the market.
 
 <table>
   <tr>
