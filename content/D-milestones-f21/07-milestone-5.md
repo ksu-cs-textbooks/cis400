@@ -45,7 +45,7 @@ You will create a new project, named `PointOfSale` in your `GyroScope` solution.
 
 ![Selecting .NET Core 5.0 as the Target Framework from the New Project Wizard]({{<static "images/d.f21.7.3.png">}})
 
-If you do not have this option, you may need to update your installation of Visual Studio and add the Desktop Workflow
+If you do not have this option, you may need to update your installation of Visual Studio and add the Desktop Workflow.  These steps are laid out below.
 
 #### Updating Visual Studio to the Latest Version 
 
@@ -60,6 +60,10 @@ This will launch the Visual Studio installer and it will check for a newer versi
 To install the Desktop Workflow, select `Tools > Get Tools and Features...`.  This will open the Visual Studio installer in modification mode.  Make sure the **.NET Desktop Development** workflow is checked.  If it isn't, check it and click the **Modify** button.
 
 ![.NET Desktop Development Workflow]({{<static "images/d.f21.7.5.png">}})
+
+As some students find a video walkthrough more approachable, here is the same material in video tutorial form:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LJff57MAdvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Creating the GUI Components
 
