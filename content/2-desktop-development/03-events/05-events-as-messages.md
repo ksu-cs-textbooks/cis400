@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 It might be coming clear that in many ways, events are another form of _message passing_, much like methods are.  In fact, they are processed much the same way: the `Invoke()` method of the event handler _calls_ each attached event listener in turn. 
 
-{{% notice info %}}
+{{% notice tip %}}
 Event invocation in C# is _synchronous_, just as is method calling - invoking an event listener passes execution to that method the same way calling a method hands program execution to the method.  Once they have finished executing, program execution continues back in the code that invoked the handler.  Let's see a practical example based on our discussion of the Hatch event.  If we were to give our chick a name:
 
 ```csharp

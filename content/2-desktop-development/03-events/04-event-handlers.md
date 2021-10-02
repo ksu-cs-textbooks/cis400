@@ -5,7 +5,7 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
-The _event handler_ is what triggers the event.  You've probably only used existing event handlers defined in GUI controls up to this point, but you can actually write your own as well.
+The _event handler_ is what notifies your event listener of an event occurring (by _invoking_, i.e. _calling_ it).  You've probably only used existing event handlers defined in GUI controls up to this point, but you can actually write your own as well.
 
 Consider a class representing an egg.  What if we wanted to have an event that would be triggered when it hatched?  We could write our own custom event handler for this event!  In C#, these are written much like a field:
 
