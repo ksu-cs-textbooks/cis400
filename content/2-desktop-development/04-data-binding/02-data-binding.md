@@ -5,7 +5,7 @@ weight: 2
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Data binding is a technqiue for synchronizing data between a provider and consumer, so that any time the data changes, the change is reflected in the bound elements.  This strategy is commonly employed in graphical user interfaces (GUIs) to bind controls to data objects.  Both Windows Forms and Windows Presentation Foundation employ data binding.
+Data binding is a technique for synchronizing data between a provider and consumer, so that any time the data changes, the change is reflected in the bound elements.  This strategy is commonly employed in graphical user interfaces (GUIs) to bind controls to data objects.  Both Windows Forms and Windows Presentation Foundation employ data binding.
 
 In WPF, the data object is essentially a normal C# object, which represents some data we want to display in a control. However, this object must implement the `INotifyPropertyChanged` interface in order for changes in the data object to be automatically applied to the WPF control it is bound to.  Implementing this interface comes with two requirements.  First, the class will define a `PropertyDefined` event:
 
@@ -99,7 +99,7 @@ Just as with our static resource, we wrap the entire value in curly braces (`{}`
 <TextBox Text="{Binding Path=FirstName}" />
 ```
 
-However, we cannot bind a read-only property (one that has no setter) to an editable control - only those with both accesible getters and setters.  The XAML for a complete control for editing a person might look something like:
+However, we cannot bind a read-only property (one that has no setter) to an editable control - only those with both accessible getters and setters.  The XAML for a complete control for editing a person might look something like:
 
 ```xml
 <UserControl x:Class="DataBindingExample.PersonControl"
