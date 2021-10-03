@@ -23,8 +23,6 @@ You will need to:
 
 * Create GUI components by extending the WPF `UserControl` base class to create your own custom controls consisting of layout elements and customization screens for all menu items currently offered on the menu
 
-* Provide navigation functionality to switch between selection and customization screens
-
 * Create/Update UML Class Diagrams corresponding to your projects (both the `Data` and `PointOfSale` projects).  Hint: this is when you'll start using the _has-a_ associations more regularly.
 
 ### Purpose:
