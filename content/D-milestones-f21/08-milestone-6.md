@@ -55,9 +55,21 @@ Most of this assignment is centered around the implementation of the `INotifyPro
 
 To satisfy the intent, you should also _invoke_ any event listeners registered with your `PropertyChanged` event handler _when one of the properties of the object changes_, with the details about that change.  You must do this for **ALL** properties that can change in your menu item classes (Hint: you can skip properties like the `LibraLibation.Price`, which cannot change).
 
-{{% notice warning %}}
+{{% notice tip %}}
 Think carefully about the requirement of invoking `PropertyChanged` _when and where the property changes_.  Consider the `Price` property of a `Side`.  Where does it change?  It has no setter!  Remember, it is a _calculated_ value, and its value is dependent on the `Size` property.  So when the `Size` property changes, so does the `Price` property!  You must account for **all** the possible places in your class' code that trigger a property might change when you implement `INotifyPropertyChanged`.
 {{% /notice %}}
+
+{{% notice warning %}}
+An odd side effect of the nature of the .NET platform is that events _cannot be invoked from a different class than they are defined in_.  This includes _inherited_ events.  The standard practice to get around this issue is to declare a protected helper method to do the invocation in a base class that also implements the event, i.e.:
+```csharp
+protected virtual void OnPropertyChanged(string propertyName)
+{
+    this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+}
+```
+This method can then be called in derived classes to indicate a property is changing.
+{{% /notice %}}
+
 
 #### Testing your INotifyPropertyChanged Implementation
 To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions">}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
@@ -156,7 +168,7 @@ You should implement one or more event listeners to handle when the user clicks 
 2. Bind that instance as the `DataContext` of the corresponding customization control instance
 3. Display that customization control instance in the `MainWindow`, replacing or covering up the `MenuItemSelectionControl`
 
-Since the event you are listening for happens in the `MenuItemSelectionControl` but the displaying must happen in the `MainWindow`, you must decide which of these two locations you want to host the event listener.  If you choose the `MainWindow` you will be using a [Routed Event]({{<ref "2-desktop-development/03-events/07-routed-events">}}), i.e. `Button.Click`.  If you choose the `MenuItemsSelectionControl` you will need to climb the [Elements tree]({{<ref "2-desktop-development/02-element-tree/03-navigating-the-tree">}}) to reach the `MainWindow`.
+Since the event you are listening for happens in the `MenuItemSelectionControl` but the displaying must happen in the `MainWindow`, you must decide which of these two locations you want to host the event listener.  If you choose the `MainWindow` you will be using a [Routed Event]({{<ref "2-desktop-development/03-events/08-routed-events">}}), i.e. `Button.Click`.  If you choose the `MenuItemsSelectionControl` you will need to climb the [Elements tree]({{<ref "2-desktop-development/02-element-tree/03-navigating-the-tree">}}) to reach the `MainWindow`.
 
 #### Binding Customization Controls
 Once you know you have your menu item classes (your entrees, sides, drinks, and treats) ready, you can bind their properties to the controls you have created in your customization screens.  Since you have set the screen's `DataContext` to be a new instance of that item (in the previous requirement), these controls will now directly modify the bound menu item object.
