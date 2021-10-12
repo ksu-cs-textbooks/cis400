@@ -17,6 +17,8 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ### Assignment requirements:
 
+* Add an `IMenuItem` interface and implement it on all your menu items
+
 * Implement a class representing an order
 
 * Write unit tests for the order
@@ -27,10 +29,20 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 * Update UML Diagrams
 
-
 ### Purpose:
 
 This assignment is intended to help you gain a greater grasp of creating complex objects and collections, data binding, customizing controls, and more complex relationships between objects.
+
+#### Create the IMenuItem interface and implement it on all MenuItems
+
+In order to add menu items to an `Order`, they need to have the same type.  We can accomplish this by making them each implement an interface.  You will need to write an `IOrderItem` interface, defined in a file named _IOrderItem.cs_.  It should require the following properties:
+
+* `Price` - A `decimal` get-only property representing the price of the menu item.
+* `Calories` - A `uint` get-only property representing the calories of the menu item.
+* `SpecialInstructions` - A `Enumerable<string>` get-only property representing the special instructions for preparing the menu item.
+* `Name` - A `string` get-only property representing the name of the menu item (this should be the same string as is returned from the `ToString()` method).
+
+You will then need to implement the `IOrderItem` interface on **all** of your data classes, i.e. all 12 zodiac-themed food classes, plus the base classes for `Entree`, `Side`, `Drink`, `Treat`, and `Gyro`.  Note this may involve adding properties to classes that previously did not have them!
 
 #### Implement functionality for the Order class
 
