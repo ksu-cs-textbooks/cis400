@@ -170,3 +170,7 @@ The grading rubric for this assignment will be:
 **20% Functionality** Does the program do what the assignment asks?  Do properties return the expected values?  Do methods perform the expected actions?
 
 **20% UML Diagrams** Does your UML diagram reflect the code actually in your release?  Are all classes, enums, etc. included?  Are associations correctly identified?
+
+{{% notice warning %}}
+Projects that do not compile will receive an automatic grade of 0.
+{{% /notice %}}
