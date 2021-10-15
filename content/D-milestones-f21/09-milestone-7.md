@@ -17,7 +17,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ### Assignment requirements:
 
-* Add an `IOrderItem` interface and implement it on all your menu items
+* Add an `IMenuItem` interface and implement it on all your menu items
 
 * Implement a class representing an order
 
@@ -33,20 +33,20 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 This assignment is intended to help you gain a greater grasp of creating complex objects and collections, data binding, customizing controls, and more complex relationships between objects.
 
-#### Create the IOrderItem interface and implement it on all MenuItems
+#### Create the IMenuItem interface and implement it on all MenuItems
 
-In order to add menu items to an `Order`, they need to have the same type.  We can accomplish this by making them each implement an interface.  You will need to write an `IOrderItem` interface, defined in a file named _IOrderItem.cs_.  It should require the following properties:
+In order to add menu items to an `Order`, they need to have the same type.  We can accomplish this by making them each implement an interface.  You will need to write an `IMenuItem` interface, defined in a file named _IMenuItem.cs_.  It should require the following properties:
 
 * `Price` - A `decimal` get-only property representing the price of the menu item.
 * `Calories` - A `uint` get-only property representing the calories of the menu item.
 * `SpecialInstructions` - An `IEnumerable<string>` get-only property representing the special instructions for preparing the menu item.
 * `Name` - A `string` get-only property representing the name of the menu item (this should be the same string as is returned from the `ToString()` method).
 
-You will then need to implement the `IOrderItem` interface on **all** of your data classes, i.e. all 12 zodiac-themed food classes, plus the base classes for `Entree`, `Side`, `Drink`, `Treat`, and `Gyro`.  Note this may involve adding properties to classes that previously did not have them!
+You will then need to implement the `IMenuItem` interface on **all** of your data classes, i.e. all 12 zodiac-themed food classes, plus the base classes for `Entree`, `Side`, `Drink`, `Treat`, and `Gyro`.  Note this may involve adding properties to classes that previously did not have them!
 
 #### Implement functionality for the Order class
 
-In the Data project, create an `Order` class to represent an order, which is a collection of `IOrderItems`.  You will need to create public `Add(IOrderItem item)` and `Remove(IOrderItem item)` methods, which add or remove `IOrderItems` respectively.  Additionally, you should implement a getter and setter for `SalesTaxRate` (a decimal, default 0.09) and getter-only properties for `Subtotal` (a decimal), `Tax` (a decimal), and `Total` (a decimal).  The `Subtotal` is the total price for all items in the order, the `Tax` is the `Subtotal` multiplied by the `SalesTaxRate`, and `Total` is the sum of the `Subtotal` and `Tax`.  It should also provide a property `Calories` which is a unsigned integer, and the sum of all the calories of the items in the order.
+In the Data project, create an `Order` class to represent an order, which is a collection of `IMenuItems`.  You will need to create public `Add(IMenuItem item)` and `Remove(IMenuItem item)` methods, which add or remove `IMenuItems` respectively.  Additionally, you should implement a getter and setter for `SalesTaxRate` (a decimal, default 0.09) and getter-only properties for `Subtotal` (a decimal), `Tax` (a decimal), and `Total` (a decimal).  The `Subtotal` is the total price for all items in the order, the `Tax` is the `Subtotal` multiplied by the `SalesTaxRate`, and `Total` is the sum of the `Subtotal` and `Tax`.  It should also provide a property `Calories` which is a unsigned integer, and the sum of all the calories of the items in the order.
 
 Additionally, the `Order` should have an identifying `Number` getter property, which is unique to each order.  An easy way to ensure uniqueness is to have a private static field, i.e. `nextOrderNumber`, which is initialized to 1.  In the `Order` constructor, set this order's `Number` property to `nextOrderNumber` and then increment `nextOrderNumber`.  When your next order is created, it will use the incremented value, and increment it again. Technically this only ensures a single Point of Sale terminal is using unique order numbers (as multiple terminals will have duplicate values), but it is sufficient for now.
 
@@ -54,13 +54,13 @@ Also, the `Order` should have a `DateTime` property `PlacedAt` identifying the d
 
 Finally, this class should implement the `ICollection`, `INotifyCollectionChanged`, and `INotifyPropertyChanged` interfaces.  Each of these requires you to add specific properties and methods to the `Order` class.  This also means triggering a host of events when specific actions are taken, i.e.:
 
-* Adding an `IOrderItem` to the `Order` should trigger:
+* Adding an `IMenuItem` to the `Order` should trigger:
     1. A `CollectionChanged` event noting the addition of a new item 
     2. A `PropertyChanged` event noting the `Subtotal` property has changed 
     3. A `PropertyChanged` event noting the `Tax` property has changed
     4. A `PropertyChanged` event noting the `Total` property has changed
     5. A `PropertyChanged` event noting the `Calories` property has changed 
-* Removing an `IOrderItem` from the `Order` should trigger:
+* Removing an `IMenuItem` from the `Order` should trigger:
     1. A `CollectionChanged` event noting the removal of the item 
     2. A `PropertyChanged` event noting the `Subtotal` property has changed 
     3. A `PropertyChanged` event noting the `Tax` property has changed
@@ -92,9 +92,9 @@ You should replace this `Order` object any time the "New Order" or "Cancel Order
 Clicking on one of the "Add to Order" buttons you implemented should add an instance of the associated order item to the current `Order` object.
 
 The contents of the current `Order` should be displayed prominently in your GUI, for example, by using a `<ListView>`.  You will want to display:
-* The `IOrderItem`'s name (what you get when you invoke `ToString()` upon it)
-* The `IOrderItem`'s price
-* The `IOrderItem`'s special instructions
+* The `IMenuItem`'s name (what you get when you invoke `ToString()` upon it)
+* The `IMenuItem`'s price
+* The `IMenuItem`'s special instructions
 
 _Hint: You can add a `StringFormat` attribute to a binding to display it as currency, i.e.:  `<TextBlock Text={Binding Path=Total, StringFormat={0:c}}>`. This approach can also be used to add bullets or extra text to a bound string before it is displayed.  See [the docs](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.bindingbase.stringformat?view=net-5.0) for more details._
 
@@ -125,7 +125,7 @@ A second strategy for testing GUIs in WPF is the MVVM (Model-View-ViewModel) arc
 
 #### Update Your UML Diagrams
 
-You will need to update your UML diagrams to reflect the changes you have made to the Data and Point of Sale projects.  Remember to mark the associations between your `Order` and its various `IOrderItem` instances.
+You will need to update your UML diagrams to reflect the changes you have made to the Data and Point of Sale projects.  Remember to mark the associations between your `Order` and its various `IMenuItem` instances.
 
 
 ## Submitting the Assignment
