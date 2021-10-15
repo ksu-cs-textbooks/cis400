@@ -17,7 +17,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ### Assignment requirements:
 
-* Add an `IMenuItem` interface and implement it on all your menu items
+* Add an `IOrderItem` interface and implement it on all your menu items
 
 * Implement a class representing an order
 
@@ -33,7 +33,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 This assignment is intended to help you gain a greater grasp of creating complex objects and collections, data binding, customizing controls, and more complex relationships between objects.
 
-#### Create the IMenuItem interface and implement it on all MenuItems
+#### Create the IOrderItem interface and implement it on all MenuItems
 
 In order to add menu items to an `Order`, they need to have the same type.  We can accomplish this by making them each implement an interface.  You will need to write an `IOrderItem` interface, defined in a file named _IOrderItem.cs_.  It should require the following properties:
 
