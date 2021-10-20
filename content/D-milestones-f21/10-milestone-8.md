@@ -127,11 +127,11 @@ One of the primary benefits of the MVVM architecture is it allows you to push lo
 
 Because the `PointOfSale` is targeting the `net5.0-windows` framework, you cannot set `PointOfSale` as a dependency of your `DataTests` project.  Instead, you will need to create a _new_ XUnit test project named `PointOfSaleTests` to place your unit tests in.  There is not a `.net5.0-windows` XUnit test project template, so use the normal XUnit template and choose the `.Net 5.0` option in the "Additional information" dialog:
  
-![.NET 5.0 framework option]({{<static "images/dotnet5framework">}})
+![.NET 5.0 framework option]({{<static "images/dotnet5framework.png">}})
 
 Once your project is added, open the _PointOfSaleTests.csproj_ file by double-clicking it in Visual Studio.  This should open it as an XML file.  Change the `<TargetFramework>` entry to `net5.0-windows`:
 
-![.NET 5.0-windows framework setting]({{<static "images/dotnet5framework-windows">}})
+![.NET 5.0-windows framework setting]({{<static "images/dotnet5framework-windows.png">}})
 
 Now you can add the `PointOfSale` project as a project dependency to `PointOfSaleTests`, allowing you to add a unit test for any ModelView classes you need to write to test your `PointOfSale` project.
 
