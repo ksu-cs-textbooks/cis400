@@ -17,8 +17,7 @@ Some of the possible options are:
 * `FrameworkPropertyMetadataOptions.BindsTowWayByDefault` - This property uses two-way bindings by default (i.e. the control is an editable control)
 * `FrameworkPropertyMetadataOptions.NotDataBindable` - This property does not allow data binding
 
-
-As our control is _also_ a `FrameworkElement` (also a base class for all controls), we can instead supply a  In this case, we want a two-way binding by default, so we'll include that flag, and we also we'll note that it affects the rendering process.  Multiple flags can be combined with a [bitwise OR](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators#logical-or-operator-).  Constructing our `FrameworkPropertyMetadata` object would then look like:
+In this case, we want a two-way binding by default, so we'll include that flag, and we also we'll note that it affects the rendering process.  Multiple flags can be combined with a [bitwise OR](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators#logical-or-operator-).  Constructing our `FrameworkPropertyMetadata` object would then look like:
 
 ```csharp
 new FrameworkPropertyMetadata(0, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault)
