@@ -72,6 +72,21 @@ Finally, this class should implement the `ICollection`, `INotifyCollectionChange
 
 You may either write your collection class from scratch, or inherit from one of the existing collections and provide the extra functionality (such as `ObservableCollection`).  
 
+{{% notice warning %}}
+When implementing the `INotifyCollectionChanged` interface, you must supply a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-5.0" target="_blank">`NotifyCollectionChangedEventArgs` object</a> that describes the change to the collection.  This class has multiple constructors, and you must select the correct one, or your code will cause a runtime error when the event is invoked.
+
+The possible events are represented by the `NotifyCollectionChangedAction` enumeration, and are:
+* `NotifyCollectionChangedAction.Add` - one or more items were added to the collection
+* `NotifyCollectionChangedAction.Move` - an item was moved in the collection
+* `NotifyCollectionChangedAction.Remove` - one or more items were removed from the collection
+* `NotifyCollectionChangedAction.Replace` - an item was replaced in the collection
+* `NotifyCollectionChangedAction.Reset` - drastic changes were made to the collection
+
+When representing an _add_ action, you must use a two-parameter constructor and supply the item being added as the second argument.
+
+When representing an _remove_ action, you must use a three-parameter constructor. The second argument is the item to be removed, and the third is the index of the item in the collection _before_ it is removed. 
+{{% /notice %}}
+
 #### Order Unit Tests
 
 Additionally, you should write unit tests to verify all of the expected functionality:
