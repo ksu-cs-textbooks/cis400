@@ -70,7 +70,7 @@ Finally, this class should implement the `ICollection`, `INotifyCollectionChange
     1. `PropertyChanged` events for `Subtotal`, `Tax`, and `Total` when the item's `Price` changes 
     2. A `PropertyChanged` event for `Calories` when the item's `Calories` changes
 
-You may either write your collection class from scratch, or inherit from one of the existing collections and provide the extra functionality (such as `ObservableCollection`).  
+You may either write your collection class from scratch, or inherit from one of the existing collections and provide the extra functionality (such as `ObservableCollection`).  Each of these approaches has its strengths and drawbacks.
 
 {{% notice warning %}}
 When implementing the `INotifyCollectionChanged` interface, you must supply a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-5.0" target="_blank">`NotifyCollectionChangedEventArgs` object</a> that describes the change to the collection.  This class has multiple constructors, and you must select the correct one, or your code will cause a runtime error when the event is invoked.
@@ -93,10 +93,13 @@ Additionally, you should write unit tests to verify all of the expected function
 * Adding an item to the `Order` results in that item being included in the order
 * Removing an item from the `Order` results in that item being removed from the order
 * The order implements the `INotifyCollectionChanged` and `INotifyPropertyChanged` interfaces
-* That adding an an item triggers a `CollectionChanged` event
-* That removing an item triggers a `CollectionChanged` event
-* That 
-, and that each of the `CollectionChanged` and `PropertyChanged` events described above occur in the described circumstances.
+* ~~That adding an an item triggers a `CollectionChanged` event~~
+* ~~That removing an item triggers a `CollectionChanged` event~~
+* That and that each of the ~~`CollectionChanged`~~ and `PropertyChanged` events described above occur in the described circumstances.
+
+{{% notice info %}}
+Currently XUnit does not have an assertion that can be used with the `CollectionChanged` event, so we are not requiring that it be tested at the moment.  That it works will be covered by your manual GUI tests.
+{{% /notice %}}
 
 #### Integrate the Order into the Point of Sale Project
 
@@ -126,7 +129,11 @@ One possible layout appears below:
 
 The displayed order should update all of this displayed information as it changes.  If you use data binding for binding the `Order` properties, and have implemented the `CollectionChanged` and `PropertyChanged` events as described above, this should happen automatically, with no further code required from you.
 
-You should also allow the user to select an item already in the order display to customize, i.e. if they have a Flying Saucer and a Eviscerated Eggs in the Order, and then need to change the syrup for the Flying Saucer, they should be able to do so.  This is most easily accomplished by putting the order items in a `<ListBox>` and using its `OnSelectionChanged` event to swap to the customization screen.  Setting the List's `IsSynchronizedWithCurrentItem` property to true allows you to bind your customization screens to the `CurrentItem` Path of the `Order`, i.e. the item just selected in the `<ListBox>`
+You should also allow the user to select an item already in the order display to customize, i.e. if they have a Virgo Classic Gyro and a Taurus Tabouleh in the Order, and then need to change the `Lettuce` property for the Virgo Classic Gyro, they should be able to do so.  There several approaches you might consider:
+1. Putting the order items in a `<ListView>` and using its `OnSelectionChanged` event to swap to the customization screen.  You can then either:
+   a. Listen for the `ListView.SelectionChanged` routed event and use the `SelectedChangedEventArgs.SelectedItem` for the item to customize, or
+   b.  Setting the List's `IsSynchronizedWithCurrentItem` property to true allows you to bind your customization screens to the `CurrentItem` Path of the `Order`, i.e. the item just selected in the `<ListView>`, or
+2. Adding an edit button to the item in the `<ListView>`, following the same strategy detailed for the "Remove" button (below)
 
 Finally, you should provide a means for removing an item from the `Order`.  This is most commonly accomplished by adding a button to the `ListBoxItem` data template displaying the items in the `<ListBox>`, so that there is a delete button for each row in the order.  Another approach would be to have a single "Remove Selected Item from Order" which removes the item currently selected in the `<ListBox>`.  Other approaches are possible, but should be easy for the user to intuit.
 
@@ -141,7 +148,6 @@ A second strategy for testing GUIs in WPF is the MVVM (Model-View-ViewModel) arc
 #### Update Your UML Diagrams
 
 You will need to update your UML diagrams to reflect the changes you have made to the Data and Point of Sale projects.  Remember to mark the associations between your `Order` and its various `IMenuItem` instances.
-
 
 ## Submitting the Assignment
 
