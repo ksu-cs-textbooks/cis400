@@ -122,7 +122,7 @@ _When the planets align!_
 List the four categories of menu items (Entrees, Sides, Drinks, and Treats) using second-level header tags (`<h2>`).
 
 ##### List the Menu Items
-Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of `"menu-item"`. The `<div>` should include, nested inside, the name of the item, its price, its calories, and its description. If an item comes in multiple sizes, you will need to list the price and calories for each size.
+Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of `"menu-item"`. The `<div>` should include, nested inside, the name of the item, its price, and its calories. If an item comes in multiple sizes, you will need to list the price and calories for each size.
 
 You may use additional HTML elements to organize and present this information, and use CSS to style it as you see fit.  You may choose to follow the suggestions of the graphic designer included with the art assets.
 
