@@ -97,17 +97,16 @@ Finally, we can indicate _all_ properties of the model class should be bound wit
 public class Muppet : PageModel {
 
     /// <summary>The muppet's name</summary>
-    [BindProperty]
     public string Name { get; set; }
 
     /// <summary>The muppet's color</summary>
-    [BindProperty]
     public string Color { get; set; }
 
     ///<summary>The muppet's age</summary>
-    [BindProperty]
     public int Age {get; set;}    
 }
 ```
 
-You might be wondering why ModelBinding does not work with GET requests by default.  To understand that it is useful to understand how web applications working with data have come to represent working with that data.  We'll look at one of these approaches, RESTful routes, next.
+{{% notice info %}}
+You might be wondering why ModelBinding does not work with GET requests by default.  In the previous section, we discussed when to use GET or POST requests to submit form data - we use GET requests for smaller data we don't mind displaying the URL, like search terms or filter values.  We use POST requests for large data, especially data we will use to populate an object.  So when using Model Binding, using the POST method is most appropriate.  Microsoft choose to reinforce this practice through the choice to not bind GET requests by default.
+{{% /notice %}}

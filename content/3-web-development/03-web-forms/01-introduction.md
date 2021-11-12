@@ -11,5 +11,11 @@ Now that we have explored some ideas about getting data _from_ the web server, l
 
 Some key terms to learn in this chapter are:
 * Form
+* Input
 * Encoding
 * `Nullable<T>` and `?`
+
+And the HTML tags:
+* `<form>`
+* `<input>`
+* `<textarea>`
