@@ -103,7 +103,7 @@ Add a `string` get-only property to your `IMenuItem` interface.  Then, implement
     <td>Italian flavored ices, the coolest treat you can eat with a spoon!</td>
   </tr>
   <tr>
-    <td>Cancer Halva Cake<td>
+    <td>Cancer Halva Cake</td>
     <td>A gluten-free cake made from sesame seeds</td>
   </tr>
 </table>
