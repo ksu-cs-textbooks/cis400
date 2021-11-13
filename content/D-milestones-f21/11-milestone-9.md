@@ -99,11 +99,11 @@ The navigation bar should look something like:
 #### Create a static Menu class
 In your `Data` project you should create a static class named `Menu` declared in the file _Menu.cs_ which contains the following `static` properties:
 
-* `Entrees` which returns an `IEnumerable<IOrderItem>` containing an instance of all available entrees.  For entrees with choices, i.e. your boolean ingredient properties, you only need to show the default choice.
-* `Sides` which returns an `IEnumerable<IOrderItem>` containing an instance of all available sides.  As each side has 3 different sizes, this collection should contain a small, medium, and large instance of each. Again, you only need to show the default version of each side.
-* `Drinks` which returns an `IEnumerable<IOrderItem>` containing all available drinks.  It should contain one of every flavor of `LibraLibation`, but defaults for all other properties.
-* `Treats` which returns an `IEnumerable<IOrderItem>` containing all available treats.  If a treat has multiple sizes or flavors, one of each must be included. Use the default for any other properties.
-* `FullMenu` should return an `IEnumerable<IOrderItem>` containing all of the items on the menu (basically, one of each of the items found in the categories above).
+* `Entrees` which returns an `IEnumerable<IMenuItem>` containing an instance of all available entrees.  For entrees with choices, i.e. your boolean ingredient properties, you only need to show the default choice.
+* `Sides` which returns an `IEnumerable<IMenuItem>` containing an instance of all available sides.  As each side has 3 different sizes, this collection should contain a small, medium, and large instance of each. Again, you only need to show the default version of each side.
+* `Drinks` which returns an `IEnumerable<IMenuItem>` containing all available drinks.  It should contain one of every flavor of `LibraLibation`, but defaults for all other properties.
+* `Treats` which returns an `IEnumerable<IMenuItem>` containing all available treats.  If a treat has multiple sizes or flavors, one of each must be included. Use the default for any other properties.
+* `FullMenu` should return an `IEnumerable<IMenuItem>` containing all of the items on the menu (basically, one of each of the items found in the categories above).
 
 #### Index Page 
 
