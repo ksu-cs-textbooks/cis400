@@ -124,7 +124,7 @@ List the four categories of menu items (Entrees, Sides, Drinks, and Treats) usin
 ##### List the Menu Items
 Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of `"menu-item"`. The `<div>` should include, nested inside, the name of the item, its price, and its calories. If an item comes in multiple sizes, you will need to list the price and calories for each size.
 
-You may use additional HTML elements to organize and present this information, and use CSS to style it as you see fit.  You may choose to follow the suggestions of the graphic designer included with the art assets.
+You may use additional HTML elements to organize and present this information, and use CSS to style it as you see fit. 
 
 You should use the methods from your `Menu` class in the Data project to determine the entrees, sides, and drinks to display.  This will mean using the `Menu` class in the model class for the index page, _Index.cshtml.cs_.
 
