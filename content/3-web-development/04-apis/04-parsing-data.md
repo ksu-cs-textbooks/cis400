@@ -128,7 +128,7 @@ using Stream responseStream = response.GetStream()
 }
 ```
 
-Then we can navigate from the root element (a `JsonElement` instance) down the nested path of key/value pairs, by calling `GetProperty()` to access each successive property:
+Then we can navigate from the root element (a `JsonElement` instance) down the nested path of key/value pairs, by calling `GetProperty()` to access each successive property, and then print the joke text to the console:
 
 ```csharp
   var contents = jDoc.RootElement.GetProperty("contents");
