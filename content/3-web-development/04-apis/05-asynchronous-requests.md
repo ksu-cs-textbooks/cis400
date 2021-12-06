@@ -58,7 +58,7 @@ public string async GetJoke()
   using Stream responseStream = response.GetStream() 
   {
     XmlDocument xDoc = new XmlDocument();
-    xDoc.LoadStream(responseStream);
+    xDoc.Load(responseStream);
     var node = xDoc.SelectSingleNode("/response/contents/jokes/joke/text");
     return node.InnerText;
   }
