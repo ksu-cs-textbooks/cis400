@@ -24,7 +24,7 @@ We'll be building this software _iteratively_ over the entire semester!  Each we
 The course is organized into modules focused on a specific topic, accessible from the Canvas **modules** menu.  Each module introduces one or more topics, and 1) covers the vocabulary and concepts with assigned readings, 2) puts those concepts into practice with guided tutorials, and 3) tasks you with applying those techniques you just practiced in a weekly milestone.  
 
 {{% notice info %}}
-For Fall and Spring semesters, each week will normally consist of _two_ regular modules and the weekly milestone.  The first module will be due by Wednesday, the second Friday, and the milestone on Sunday. Each regular module will take several hours to complete, and milestones can often take ten hours or more. You should plan your learning schedule accordingly.
+For Fall and Spring semesters, each week will normally consist of _two_ regular modules and the weekly milestone.  The first module will be due by Monday, the second Wednesday, and the milestone on Friday. Each regular module will take several hours to complete, and milestones can often take ten hours or more. You should plan your learning schedule accordingly.
 
 For the Summer semester, the regular 16-week course is compressed into 8 weeks.  Multiple topics are grouped into a single weekly module.  All module content is due by Friday of the assigned week, to allow for greater flexibility in when you complete the module.  Be aware that these compressed modules take a _lot_ of time to complete - you will want to schedule 15-20 hours a week to work on them at times when you are sharp!
 {{% /notice %}}

@@ -24,74 +24,71 @@ The summer offering of CIS 400 compresses the normally 16-week course into 8 wee
 Week 0 
 * Introduction to the Course
 
-Week 1 
-* **Exam 0 - The Preassessment*
+Week 1
 * The Science of Learning Programming
 * Setting the Stage (The context in which object-orientation emerged)
+
+Week 2 
+* Git and GitHub
+* Encapsulation
 * Milestone 1
 
-Week 2
+Week 3
 * Classes and Objects
-* Documenting Objects
+* Documentation
 * Milestone 2
 
-Week 3
-* Testing
-* Advanced C# Syntax
+Week 4
+* Polymorphism
+* UML
 * Milestone 3
 
-Week 4 [Week 2 in summer]
-* Polymorphism
-* UML Diagrams
+Week 5
+* Testing
+* Advanced C# Syntax
 * Milestone 4
 
-Week 5 [Week 3 in summer]
+Week 6
 * Exam I
 
-Week 6 [Week 3 in summer]
+Week 7
 * Windows Presentation Foundation
 * The Elements Tree
-* POS Milestone 1
+* Milestone 5
 
-Week 7 [Week 4 in summer]
+Week 8
 * Events
-* Routed Events
-* POS Milestone 2
-
-Week 8 [Week 4 in summer]
 * Data Binding
-* Dependency Properties
-* POS Milestone 3
+* Milestone 6
 
-Week 9 [Week 5 in summer]
+Week 9
+* Testing WPF Apps
+* Milestone 7
+
+Week 10
 * Dependency Objects
-* Component-Based Design
-* POS Milestone 4
+* Milestone 8
 
-Week 10 [Week 5 in summer]
+Week 11 
 * Exam II
 
-Week 11 [Week 6 in summer]
+Week 12
 * Core Web Technologies
 * ASP.NET
-* Web Milestone 1
+* Milestone 9
 
-Week 12 [Week 6 in summer]
-* Web Data
-* Responsive Design
-* Web Milestone 2
+Week 13
+* Web Forms
+* LINQ 
+* Milestone 10
 
-Week 13 [Week 7 in summer]
-* LINQ
+Week 14
+* Web APIs
+* Milestone 11
+
+Week 15
 * Deployment
-* Web Milestone 3
+* Milestone 12
 
-Week 14 [Week 7 in summer]
-* Blazor components
-* Web Milestone 4
-
-Week 15 [Week 8 in summer]
-* Asynchronous functions
-
-Week 16 [Week 8 in summer]
-* Final
+Week 16 
+* Final Exam

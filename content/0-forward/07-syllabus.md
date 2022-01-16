@@ -14,7 +14,6 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 ### Class Meeting Times and Locations
 * **Section A**: M 1:30pm-3:20pm DUF 1092
 * **Section B**: W 1:30pm-3:20pm DUF 1092
-* **Section S**: F 1:30pm-3:20pm DUF 1092
 
 ### Instructor Contact Information
 * **Instructor:** Nathan Bean (nhbean AT ksu DOT edu)
@@ -88,18 +87,18 @@ These exams will cover the vocabulary and concepts we are learning and involve r
 
 The first exam is a _pretest_ that is used to help establish your knowledge and readiness coming into the course.  You will earn a **100%** for completing this exam, regardless of your correct or incorrect responses.
 
-The second three exams are _midterms_, which cover the content immediately proceeding them. You will have a chance to correct mistakes you have made in thee exams, potentially earning back your full points.
+The second two exams are _midterms_, which cover the content immediately proceeding them. You will have a chance to correct mistakes you have made in thee exams, potentially earning back some lost points.
 
 The _final_ exam is comprehensive, and covers the most important topics and skills we have developed in the course.  This is considered a _summative_ test (one that measures your mastery of a subject).  It will count for twice the number of points as the earlier exams, and you will not have a chance to correct mistakes made on it.
 
 ### Grading
 In theory, each student begins the course with an A. As you submit work, you can either maintain your A (for good work) or chip away at it (for less adequate or incomplete work). In practice, each student starts with 0 points in the gradebook and works upward toward a final point total out of the possible number of points. In this course, it is perfectly possible to get an A simply by completing all the software milestones in a satisfactory manner and attending and participating in class each day. In such a case, the examinations will simply reflect the learning you’ve been doing through that work. Each work category constitutes a portion of the final grade, as detailed below:
 
-30% - Activities, Tutorials, and Quizzes (The lowest 4 scores are dropped)
+30% - Activities, Tutorials, and Quizzes (The lowest 2 scores are dropped)
 
-36% - Programming Assignment Milestones (3.6% each, 11 milestones total; The single lowest assignment score will be dropped)
+44% - Programming Assignment Milestones (4% each, 12 milestones total; The single lowest assignment score will be dropped)
 
-34% - Exams (8.5% each, with the final worth double at 17; 4 exams total)
+26% - Exams (6.5% each, with the final worth double at 12; 4 exams total)
 
 Letter grades will be assigned following the standard scale:
 90% - 100% - A; 80% - 89.99% - B; 70% - 79.99% - C; 60% - 69.99% - D; 00% - 59.99% - F
@@ -130,7 +129,7 @@ development license through your Azure Student Portal. See the CS support docume
 
 Additionally, we will create UML diagrams using Microsoft Visio, which can also be downloaded from the Azure Student Portal (see above).
 
-We will use Xamarin workbooks to distribute some content. This free software can be downlaoded from: [https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
+We will use Xamarin workbooks to distribute some content. This free software can be downloaded from: [https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install](https://docs.microsoft.com/en-us/xamarin/tools/workbooks/install)
 
 Discord also offers some free desktop and mobile clients that you may prefer over the web client.  You may download them from: [https://discord.com/download](https://discord.com/download).
 
@@ -145,7 +144,13 @@ Students who would like additional textbooks should refer to resources available
 ### Subject to Change
 The details in this syllabus are not set in stone. Due to the flexible nature of this class, adjustments may need to be made as the semester progresses, though they will be kept to a minimum. If any changes occur, the changes will be posted on the Canvas page for this course and emailed to all students.
 
-{{% include "themes/ksucs-hugo-theme/static/files/syllabus-no-copyright.md" %}} 
+### Academic Honesty
+
+Kansas State University has an Honor and Integrity System based on personal integrity, which is presumed to be sufficient assurance that, in academic matters, one's work is performed honestly and without unauthorized assistance. Undergraduate and graduate students, by registration, acknowledge the jurisdiction of the Honor and Integrity System. The policies and procedures of the [Honor and Integrity System](https://www.k-state.edu/honor/) apply to all full and part-time students enrolled in undergraduate and graduate courses on-campus, off-campus, and via distance learning. A component vital to the Honor and Integrity System is the inclusion of the Honor Pledge which applies to all assignments, examinations, or other course work undertaken by students. The Honor Pledge is implied, whether or not it is stated: "On my honor, as a student, I have neither given nor received unauthorized aid on this academic work." A grade of XF can result from a breach of academic honesty. The F indicates failure in the course; the X indicates the reason is an Honor Pledge violation.
+
+**For this course, a violation of the Honor Pledge will result in sanctions such as a 0 on the assignment or an XF in the course, depending on severity. Actively seeking unauthorized aid, such as posting lab assignments on sites such as Chegg or StackOverflow or asking another person to complete your work, even if unsuccessful, will result in an immediate XF in the course.**
+
+{{% include "themes/ksucs-hugo-theme/static/files/syllabus-no-copyright-no-honesty.md" %}} 
 
 ### Copyright Notice
 ©2021 The materials in this online course fall under the protection of all intellectual property, copyright and trademark laws of the U.S. The digital materials included here come with the legal permissions and releases of the copyright holders. These course materials should be used for educational purposes only; the contents should not be distributed electronically or otherwise beyond the confines of this online course. The URLs listed here do not suggest endorsement of either the site owners or the contents found at the sites. Likewise, mentioned brands (products and services) do not suggest endorsement. Students own copyright to what they create.
