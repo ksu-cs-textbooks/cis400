@@ -65,10 +65,10 @@ $ git checkout ms1
 
 From this point until you check out a different branch, any commits you make will be made to the `ms1` branch.
 
-The change you will need to make is to add a get-only (that is, a property that only defines a get method, and not a set method) `Name` property of type `string` to the `AquariusIce` class.  Once you have done so, you can commit your changes with:
+The change you will need to make is to add a get-only (that is, a property that only defines a get method, and not a set method) `Name` property of type `string` to the `AppleFritters` class.  It should always have the value `"Apple Fritters"`.  Once you have done so, you can commit your changes with:
 
 ```
-$ git commit -a -m "Added the Name property to AquariusIce"
+$ git commit -a -m "Added the Name property to AppleFritters"
 ```
 
 {{% notice note %}}
@@ -91,15 +91,9 @@ $ git push origin ms1
 
 The first time you do this, it will also create the `origin/ms1` branch on GitHub.
 
-This push will also trigger the webhook you created in step 2.  You can visit https://pendant.cs.ksu.edu/Validations to see your feedback.  If you've missed something, you can make changes and do another commit and push.
-
 {{% notice tip %}}
 If you need to pull this remote branch into another local repo (say you created the branch in the lab but now you are on your home computer), the process is covered in the [previous section]({{<ref "D-milestones/02-feature-branches#pulling-a-remote-feature-branch-to-another-local-machine">}})
 {{% /notice %}}
-
-The following video walks through Parts 2 & 3 in a step-by-step manner:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Y02SKI0gO-w" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Part 3 - Merging your Feature Branch and Submitting to GitHub
 
