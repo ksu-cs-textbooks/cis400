@@ -11,11 +11,11 @@ As we suggested earlier in the chapter, one of the most important uses of a vers
 $ git log
 ```
 
-This should print a list of the commits and thier details, with the newest commit first:
+This should print a list of the commits and their details, with the newest commit first:
 
 ![git log output]({{<static "images/b.7.1.png">}})
 
-Notice each commit is identified by a hash, date, and commit message. This is why a good commit message is important - it helps to let us know what we changed (and therfore what changes we would be undoing if we reverted to that commit).  If we wanted to revert to an earlier version, we would use the **git checkout** command:
+Notice each commit is identified by a hash, date, and commit message. This is why a good commit message is important - it helps to let us know what we changed (and therefore what changes we would be undoing if we reverted to that commit).  If we wanted to revert to an earlier version, we would use the **git checkout** command:
 
 ```
 $ git checkout [hash]
