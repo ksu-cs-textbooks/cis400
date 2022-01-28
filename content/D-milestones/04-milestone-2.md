@@ -117,11 +117,11 @@ You will need to define a class to represent a fried pie (a deep-fried pastry co
 `Calories`: A readonly property with a value of 287 for cherry, 304 for peach, 314 for apricot, 302 for pineapple, 314 for blueberry, 289 for apple, or 314 for pecan.
 
 #### Fried Ice Cream
-You will need to define a class to represent a serving of fried ice cream (frozen ice cream dipped in breading and deep-fried), which can be customized after creation.  You should name this class `FriedPie` and declare it in the file _FriedPie.cs_.  It should have the following properties:
+You will need to define a class to represent a serving of fried ice cream (frozen ice cream dipped in breading and deep-fried), which can be customized after creation.  You should name this class `FriedIceCream` and declare it in the file _FriedIceCream.cs_.  It should have the following properties:
 
 `Name`: A `string` that is "Fried [Flavor] Ice Cream", where [Flavor] is the kind of ice cream, i.e. "Fried Strawberry Ice Cream" for strawberry ice cream.
 
-`Flavor`: A property with the `PieFilling` enum type, indicating the filling of the pie.
+`Flavor`: A property with the `IceCreamFlavor` enum type, indicating the flavor of the ice cream.
 
 `Price`: A readonly property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $3.50.
 
