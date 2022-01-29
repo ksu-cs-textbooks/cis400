@@ -64,7 +64,7 @@ public class Vector3 {
     }
 
     public void Normalize() {
-        var magnitude = Math.Sqrt(Math.pow(this.X, 2) + Math.Pow(this.y, 2), Math.Pow(this.z, 2);
+        var magnitude = Math.Sqrt(Math.pow(this.X, 2) + Math.Pow(this.Y, 2) + Math.Pow(this.Z, 2);
         this.X /= magnitude;
         this.Y /= magnitude;
         this.Z /= magnitude;
