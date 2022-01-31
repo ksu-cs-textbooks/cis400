@@ -26,6 +26,7 @@ You will need to:
 * Create platter classes representing specific platters:
   * Piper Platter
   * Popper Platter
+* Create a UML diagram representing all the classes, enums, and interfaces in your _Data_ project.
 
 ### Purpose:
 
@@ -98,8 +99,18 @@ A Popper Platter is a platter consisting of one of each of the four popper items
 
 Note that the popper properties _must be initialized_ (not be `null`) when the class is first constructed, and each should start as `Small`.  
 
+## UML Diagram
+
+You will also need to create a UML diagram to represent each of the classes, enumerations, and interfaces defined in your _Data_ project. You will need to include a copy of this diagram as a PDF or image file in a _Documentation_ folder in your project. 
+
+In your UML diagram, be sure you represent the relationships between your classes correctly, i.e. _generalization_ for inheritance, _realization_ for interface implementation, and _aggregation_ or _composition_ for classes that hold instances of other classes. Review the chapter on [UML]({{<ref "05-uml">}}) if you are hazy on the distinction.
+
+Carefully read the [adding documentation]({{<ref "B-git-and-github/12-adding-documentation-files">}}) discussion to ensure you are not adding a link to the file rather than the actual file to your project. You can also check the contents of your GitHub repository after you commit to make sure you included your documentation correctly.
+
+If you use Visio to create your UML, it is also a good idea to place your Visio file in the _Documentation_ folder, so you can always have access to it when you work on your project, as you will need to update it as you make changes.
+
 ## Submitting the Assignment
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.3.0` with name `"Milestone 2"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.3.0` with name `"Milestone 3"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 The grading rubric for this assignment will be:
