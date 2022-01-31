@@ -137,7 +137,7 @@ You will need to define a class to represent a serving of fried candy bar (a can
 `Price`: A readonly property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $2.50.
 
 `Calories`: A readonly property with type `uint` and a value of 
-325 for Snickers, 213 for MilkyWay, 396 for Twix, 350 for ThreeMusketeers, or 385 ButterFingers.
+325 for Snickers, 213 for MilkyWay, 396 for Twix, 350 for ThreeMusketeers, or 385 for ButterFingers.
 
 #### Fried Twinkie
 You will need to define a class to represent a serving of fried twinkie (a twinkie dipped in breading and deep-fried), which can be customized after creation.  You should name this class `FriedTwinkie` and declare it in the file _FriedCandyBar.cs_.  It should have the following properties:
