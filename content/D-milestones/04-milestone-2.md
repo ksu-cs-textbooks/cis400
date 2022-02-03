@@ -55,7 +55,7 @@ This milestone serves as a review of how to create classes and sets the stage fo
 
 ## Enum Classes 
 
-All enums should reside in the `FriedPiper.Data.Enums` namespace and be placed in an _Enums_ folder within the Data project in your solution.
+All enums should reside in the `FriedPiper.Data.Enums` namespace and be placed in an _Enums_ folder within the Data project in your solution.  Each should be placed in a file named according to the enum, i.e. `PieFilling` should be defined in _PieFilling.cs_.
 
 The needed enumerations are:
 
@@ -140,7 +140,7 @@ You will need to define a class to represent a serving of fried candy bar (a can
 325 for Snickers, 213 for MilkyWay, 396 for Twix, 350 for ThreeMusketeers, or 385 for ButterFingers.
 
 #### Fried Twinkie
-You will need to define a class to represent a serving of fried twinkie (a twinkie dipped in breading and deep-fried), which can be customized after creation.  You should name this class `FriedTwinkie` and declare it in the file _FriedCandyBar.cs_.  It should have the following properties:
+You will need to define a class to represent a serving of fried twinkie (a twinkie dipped in breading and deep-fried), which can be customized after creation.  You should name this class `FriedTwinkie` and declare it in the file _FriedTwinkie.cs_.  It should have the following properties:
 
 `Name`: A `string` that is always "Fried Twinkie".
 
