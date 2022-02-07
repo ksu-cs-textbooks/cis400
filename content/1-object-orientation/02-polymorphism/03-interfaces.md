@@ -76,7 +76,7 @@ We can then treat these two disparate classes as though they shared the same typ
 List<IJumpable> jumpables = new List<IJumpable>() {new Kangaroo(), new Car(), new Kangaroo()};
 for(int i = 0; i < jumpables.Count; i++)
 {
-    jumpables[i].jump();
+    jumpables[i].Jump();
 }
 ```
 
