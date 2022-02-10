@@ -51,47 +51,50 @@ As a rule of thumb for this course, use at least 8 `[InlineData()]` options if t
 
 The _UnitTests/AppleFrittersTests.cs_ already contains unit tests for the `AppleFritters` class, but these tests were for the original specification, not the refactoring you did for Milestone 3. As a result, some of these tests are not passing, and need to be refactored to meet the new specification.
 
-For example, the value of the `Name` property is no longer always "AppleFritters".  
+For example, the value of the `Name` property is no longer always "AppleFritters".  Instead, it contains the size.  So we need to refactor our `NameShouldBeCorrect()` method to respond to this potential change.
 
- which you can use as a reference.  You will also want to add these tests to that class:
+A good way to handle this is to switch from using a `[Fact]` to using a `[Theory]`, and pass in the possible sizes as `[InlineData]`.  In addition, it is a good practice to pass in the expected value (in this case, what we expect the name to be). This way, we can quickly visually verify the test expectations.  The refactored method might look like this:
 
 ```csharp
 [Theory]
-[InlineData(Size.Small)]
-[InlineData(Size.Medium)]
-[InlineData(Size.Large)]
-public void ShouldBeAbleToSetSize(Size size)
+[InlineData(ServingSize.Small, "Small Apple Fritters")]
+[InlineData(ServingSize.Medium, "Medium Apple Fritters")]
+[InlineData(ServingSize.Large, "Large Apple Fritters")]
+public void ShouldBeAbleToSetSize(ServingSize size, string name)
 {
-    var ice = new AquariusIce() { Size = size };
-    Assert.Equal(size, ice.Size);
-}
-
-[Theory]
-[InlineData(Size.Small, AquariusIceFlavor.BlueRaspberry, "Small BlueRaspberry Aquarius Ice")]
-[InlineData(Size.Small, AquariusIceFlavor.Lemon, "Small Lemon Aquarius Ice")]
-[InlineData(Size.Small, AquariusIceFlavor.Mango, "Small Mango Aquarius Ice")]
-[InlineData(Size.Small, AquariusIceFlavor.Orange, "Small Orange Aquarius Ice")]
-[InlineData(Size.Small, AquariusIceFlavor.Strawberry, "Small Strawberry Aquarius Ice")]
-[InlineData(Size.Small, AquariusIceFlavor.Watermellon, "Small Watermellon Aquarius Ice")]
-[InlineData(Size.Medium, AquariusIceFlavor.BlueRaspberry, "Medium BlueRaspberry Aquarius Ice")]
-[InlineData(Size.Medium, AquariusIceFlavor.Lemon, "Medium Lemon Aquarius Ice")]
-[InlineData(Size.Medium, AquariusIceFlavor.Mango, "Medium Mango Aquarius Ice")]
-[InlineData(Size.Medium, AquariusIceFlavor.Orange, "Medium Orange Aquarius Ice")]
-[InlineData(Size.Medium, AquariusIceFlavor.Strawberry, "Medium Strawberry Aquarius Ice")]
-[InlineData(Size.Medium, AquariusIceFlavor.Watermellon, "Medium Watermellon Aquarius Ice")]
-[InlineData(Size.Large, AquariusIceFlavor.BlueRaspberry, "Large BlueRaspberry Aquarius Ice")]
-[InlineData(Size.Large, AquariusIceFlavor.Lemon, "Large Lemon Aquarius Ice")]
-[InlineData(Size.Large, AquariusIceFlavor.Mango, "Large Mango Aquarius Ice")]
-[InlineData(Size.Large, AquariusIceFlavor.Orange, "Large Orange Aquarius Ice")]
-[InlineData(Size.Large, AquariusIceFlavor.Strawberry, "Large Strawberry Aquarius Ice")]
-[InlineData(Size.Large, AquariusIceFlavor.Watermellon, "Large Watermellon Aquarius Ice")]
-public void ShouldHaveTheRightNameForSizeAndFlavor(Size size, AquariusIceFlavor flavor, string name)
-{
-    var ice = new AquariusIce()
-    {
-        Size = size,
-        Flavor = flavor
-    };
-    Assert.Equal(name, ice.Name);
+    var fritters = new AppleFritters();
+    fritters.Size = size;
+    Assert.Equal(name, fritters.Name);
 }
 ```
+
+Note that we now need to include a using statement for the `FriedPiper.Data.Enums` namespace (`using FriedPiper.Data.Enums`) or else use the fully qualified name for `ServingSize` (`FriedPiper.Data.Enums.ServingSize`).
+
+Likewise our `Calories` and `Price` properties need to change to reflect the new sizes available.  These tests can be written as a `[Theory]` as well, again supping a `ServingSize` and the expected values for `Calories` and `Price`.
+
+But `Calories` is affected by _two_ separate properties - `Size` _and_ `Glazed`. Thus, we need to pass _both_ to our test, along with the expected `Calories` value:
+
+```csharp
+[Theory]
+[InlineData(ServingSize.Small, true, 370)]
+[InlineData(ServingSize.Medium, true, 490)]
+[InlineData(ServingSize.Large, true, 610)]
+[InlineData(ServingSize.Small, false, 240)]
+[InlineData(ServingSize.Medium, false, 360)]
+[InlineData(ServingSize.Large, false, 480)]
+public void CaloriesShouldBeCorrect(ServingSize size, bool glazed, uint calories)
+{
+    var appleFritters = new AppleFritters();
+    appleFritters.Size = size;
+    appleFritters.Glazed = glazed;
+    Assert.Equal(calories, appleFritters.Calories);
+}
+```
+
+{{% notice hint %}}
+You can do operations within an `[InlineData()]`, which may be helpful to keeping your numbers accurate.  For example, a large apple fritters has 480 calories, _plus_ an additional 130 if it is glazed.  You can calculate the sum by hand, _or_ express it as a sum in the `[InlineData()]`:
+
+```csharp
+[InlineData(ServingSize.Large, true, 480 + 130)]
+```
+{{% /notice %}}
