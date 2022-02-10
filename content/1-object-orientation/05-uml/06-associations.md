@@ -66,7 +66,7 @@ Aggregation and composition are commonly confused, especially given they both ar
 
 Aggregation is like a shopping cart.  When you go shopping, you place groceries into the shopping cart, and it holds them as you push it around the store.  Thus, a `ShoppingCart` class might have a `List<Grocery>` named `Contents`, and you would add the items to it.  When you reach the checkout, you would then take the items back out.  The individual `Grocery` objects existed _before_ they were aggregated by the `ShoppingCart`, and also _after_ they were removed from it.
 
-In contract, Composition is like an organism.  Say we create a class representing a `Dog`.  It might be composed of classes like `Tongue`, `Ear`, `Leg`, and `Tail`.  We would probably construct these in the `Dog` class's constructor, and when we dispose of the `Dog` object, we wouldn't expect these component classes to stick around.
+In contrast, Composition is like an organism.  Say we create a class representing a `Dog`.  It might be composed of classes like `Tongue`, `Ear`, `Leg`, and `Tail`.  We would probably construct these in the `Dog` class's constructor, and when we dispose of the `Dog` object, we wouldn't expect these component classes to stick around.
 {{% /notice %}}
 
 ## Multiplicity
