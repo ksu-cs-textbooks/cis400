@@ -98,3 +98,125 @@ You can do operations within an `[InlineData()]`, which may be helpful to keepin
 [InlineData(ServingSize.Large, true, 480 + 130)]
 ```
 {{% /notice %}}
+
+Finally, we want to add some tests to verify that the AppleFritters implements the `IMenuItem` interface and extends the `Popper` base class. This can be done with xUnit's `Assert.IsAssignableFrom<T>()` assertion:
+
+```csharp
+[Fact]
+public void ShouldImplementIMenuItem()
+{
+    var fritters = new AppleFritters();
+    Assert.IsAssignableFrom<IMenuItem>(fritters);
+}
+```
+
+This tests that the `fritter` variable can be casted as a `IMenuItem`.  You'll also want to write a `ShouldExtendPopper()` test in the same way.
+
+#### Write New Unit Tests
+
+You need to write additional unit tests for the rest of the menu item classes.  These should be placed in the `DataTests` project in the _UnitTests_ folder, and named after the class they are testing, i.e. put the fried pie tests in _FriedPieUnitTests.cs_. This makes it easy to determine what class the test belongs to.
+
+In the following sections is a list of _minimum_ test methods you should add (you get to decide if they should be a `[Fact]` or `[Theory]`). Please use the names as written - that makes grading much faster. And remember, you can always add additional tests!
+
+##### FriedPieUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetPieFilling
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedIceCreamUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetIceCreamFlavor
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+##### FriedCandyBarUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetCandyBar
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedTwinkieUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedBananaUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldExtendPopper
+* ShouldBeAbleToSetGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedCheesecakeUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldExtendPopper
+* ShouldBeAbleToSetGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedOreosUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldExtendPopper
+* ShouldBeAbleToSetGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### PiperPlatterUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetLeftPieFilling
+* ShouldBeAbleToSetRightPieFilling
+* ShouldBeAbleToSetLeftIceCreamFlavor
+* ShouldBeAbleToSetRightIceCreamFlavor
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### PopperPlatterUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetSize
+* SettingSizeShouldAlsoSetPopperSize
+* ShouldBeAbleToSetGlazed
+* SettingGlazedShouldAlsoSetPopperGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+## Refactoring Menu Item Classes
+
+You may find in the process of writing your tests that your implementation of a particular menu item is not working correctly.  If this is the case, congratulations! Your tests are doing their job!
+
+At this point, you'll want to refactor the corresponding class to fix any of these problems.  If this involves making changes to the structure of the class, be sure to update your UML diagram as well!
+
+## Submitting the Assignment
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+
+## Grading Rubric
+The grading rubric for this assignment will be:
+
+**25% Structure** Did you implement the structure as laid out in the specification?  Are the correct names used for classes, enums, properties, methods, events, etc?  Do classes inherit from expected base classes?
+
+**25% Documentation** Does every class, method, property, and field use the correct XML-style documentation?  Does every XML comment tag contain explanatory text?
+
+**25% Design** Are you appropriately using C# to create reasonably efficient, secure, and usable software?  Does your code contain bugs that will cause issues at runtime?
+
+**25% Functionality** Does the program do what the assignment asks?  Do properties return the expected values?  Do methods perform the expected actions?
+
+{{% notice warning %}}
+Projects that do not compile will receive an automatic grade of 0.
+{{% /notice %}}
