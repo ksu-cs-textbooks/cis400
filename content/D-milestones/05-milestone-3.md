@@ -44,7 +44,7 @@ This milestone serves to introduce and utilize aspects of polymorphism including
 
 ## Popper Base Class
 
-You will need to create an abstract base class `Popper` in the File _Popper.cs_ in the `FriedPiper.MenuItems` namespace to represent the properties common to all popper menu items (Apple Fritters, Fried Bananas, Fried Cheesecake, and Fried Oreos). The different inheritance modifiers you might want to use are:
+You will need to create an abstract base class `Popper` in the File _Popper.cs_ in the `FriedPiper.Data.MenuItems` namespace to represent the properties common to all popper menu items (Apple Fritters, Fried Bananas, Fried Cheesecake, and Fried Oreos). The different inheritance modifiers you might want to use are:
 * `virtual` when you want to provide an implementation in the base class that can be overridden in derived class,
 * `abstract` when _all_ derived classes need to provide their own implementation, and 
 * a regular method (not `virtual` or `abstract`) when _all_ derived classes can use the base property without overriding it.
@@ -55,7 +55,7 @@ Refactor the popper classes (`AppleFritters`, `FriedBananas`, `FriedCheeseCake`,
 
 ## IMenuItem Interface
 
-You will need to declare an interface `IMenuItem` representing the common aspects of _all_ menu items in the file _IMenuItem.cs_ in the `FriedPiper.MenuItems` namespace.  The properties included in this interface should be:
+You will need to declare an interface `IMenuItem` representing the common aspects of _all_ menu items in the file _IMenuItem.cs_ in the `FriedPiper.Data.MenuItems` namespace.  The properties included in this interface should be:
 
 * `Name` - a get-only `string`
 * `Price` - a get-only `decimal`
