@@ -60,7 +60,7 @@ A good way to handle this is to switch from using a `[Fact]` to using a `[Theory
 [InlineData(ServingSize.Small, "Small Apple Fritters")]
 [InlineData(ServingSize.Medium, "Medium Apple Fritters")]
 [InlineData(ServingSize.Large, "Large Apple Fritters")]
-public void ShouldBeAbleToSetSize(ServingSize size, string name)
+public void NameShouldBeCorrect(ServingSize size, string name)
 {
     var fritters = new AppleFritters();
     fritters.Size = size;
