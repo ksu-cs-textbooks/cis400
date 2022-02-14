@@ -44,7 +44,7 @@ You will need to create an XUnit unit test class in your `DataTests` project for
 In addition, when a test method takes parameters, you will need to provide corresponding `[InlineData()]` attributes to be used by the test runner as arguments for those parameters.  You should supply enough attributes to either 1) be exhaustive (cover all possibilities), or 2) cover a number of expected cases and any edge cases.  
 
 {{% notice info %}}
-As a rule of thumb for this course, use at least 8 `[InlineData()]` options if there are more than 8 possible permutations.
+As a rule of thumb for this course, use at least 8 `[InlineData()]` options if there are more than 8 possible permutations. Good practice is to select these 8 largely at random (i.e. roll dice, use a random number generator, etc).
 {{% /notice %}}
 
 #### Refactor AppleFrittersUnitTests
@@ -70,7 +70,7 @@ public void ShouldBeAbleToSetSize(ServingSize size, string name)
 
 Note that we now need to include a using statement for the `FriedPiper.Data.Enums` namespace (`using FriedPiper.Data.Enums`) or else use the fully qualified name for `ServingSize` (`FriedPiper.Data.Enums.ServingSize`).
 
-Likewise our `Calories` and `Price` properties need to change to reflect the new sizes available.  These tests can be written as a `[Theory]` as well, again supping a `ServingSize` and the expected values for `Calories` and `Price`.
+Likewise our `Calories` and `Price` properties need to change to reflect the new sizes available.  These tests can be written as a `[Theory]` as well, again supplying a `ServingSize` and the expected values for `Calories` and `Price`.
 
 But `Calories` is affected by _two_ separate properties - `Size` _and_ `Glazed`. Thus, we need to pass _both_ to our test, along with the expected `Calories` value:
 
@@ -133,6 +133,7 @@ In the following sections is a list of _minimum_ test methods you should add (yo
 * ShouldBeNamedCorrectly
 * ShouldHaveCorrectPrice
 * ShouldHaveCorrectCalories
+
 ##### FriedCandyBarUnitTests
 
 * ShouldImplementIMenuItem
@@ -148,7 +149,7 @@ In the following sections is a list of _minimum_ test methods you should add (yo
 * ShouldHaveCorrectPrice
 * ShouldHaveCorrectCalories
 
-##### FriedBananaUnitTests
+##### FriedBananasUnitTests
 
 * ShouldImplementIMenuItem
 * ShouldExtendPopper
