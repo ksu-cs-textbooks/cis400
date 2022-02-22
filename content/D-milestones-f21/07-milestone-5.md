@@ -5,7 +5,7 @@ weight: 70
 date: 2018-08-24T10:53:26-05:00
 ---
 
-For this milestone, you will be creating a new _Windows Presentation Foundation_ (WPF) project to provide the functionality for a Point-of-Sale system.  This is the king of application that runs on a register used by employees to take your order at most fast-food restaurants.  
+For this milestone, you will be creating a new _Windows Presentation Foundation_ (WPF) project to provide the functionality for a Point-of-Sale system.  This is the kind of application that runs on a register used by employees to take your order at most fast-food restaurants.  
 
 ### General requirements:
 
