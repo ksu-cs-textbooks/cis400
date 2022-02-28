@@ -95,16 +95,16 @@ For most controls, these are `"Stretch"` by default, which means the control or 
     <td>Control fills the available horizontal space</td>
   </tr>
   <tr>
-    <td>Top</td>
-    <td>Control is aligned along the top of the available space</td>
+    <td>Left</td>
+    <td>Control is aligned along the left of the available space</td>
   </tr>
   <tr>
     <td>Center</td>
     <td>Control is centered in the available horizontal space</td>
   </tr>
   <tr>
-    <td>Bottom</td>
-    <td>Control is aligned along the bottom of the available space</td>
+    <td>Right</td>
+    <td>Control is aligned along the right of the available space</td>
   </tr>
   <tr>
     <th colspan="2">VerticalAlignment</th>
@@ -118,16 +118,16 @@ For most controls, these are `"Stretch"` by default, which means the control or 
     <td>Control fills the available vertical space</td>
   </tr>
   <tr>
-    <td>Left</td>
-    <td>Control is aligned along the left side of the available space</td>
+    <td>Top</td>
+    <td>Control is aligned along the top side of the available space</td>
   </tr>
   <tr>
     <td>Center</td>
     <td>Control is centered in the available vertical space</td>
   </tr>
   <tr>
-    <td>Right</td>
-    <td>Control is aligned along the right side of the available space</td>
+    <td>Bottom</td>
+    <td>Control is aligned along the bottom side of the available space</td>
   </tr>
 </table>
 
