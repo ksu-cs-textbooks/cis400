@@ -125,7 +125,7 @@ You may notice that most controls have a `DesignWidth` and `DesignHeight` attrib
 Additionally, the `MainWindow` should have buttons for "Cancel Order", "Complete Order", and "Select More Items".  Clicking the "Select More Items" should display the Menu Item Selection screen.  We will add the functionality for the other two buttons in the next milestone.
 
 #### Order Summary Control
-Define a custom component `OrderSummaryControl` in the files _OrderSummaryControl.xaml_ and _OrderSummaryControl.xaml.cs_. This component will be used to display the order details - the order number, date, price, tax, and total, as well as all the items in the order and their details.  You should create placeholders for all of this information using the standard WPF components, i.e. `<TextView>` and `<ListView>`, and organize them using one of the layout strategies you have learned.
+Define a custom component `OrderSummaryControl` in the files _OrderSummaryControl.xaml_ and _OrderSummaryControl.xaml.cs_. This component will be used to display the order details - the order number, date, price, tax, and total, as well as all the items in the order and their details.  You should create placeholders for all of this information using the standard WPF components, i.e. `<TextBlock>` and `<ListView>`, and organize them using one of the layout strategies you have learned.
 
 We will bind these controls to real order data in the next milestone.
 
