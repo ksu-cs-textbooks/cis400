@@ -70,7 +70,7 @@ Pushing a feature branch named in accordance with the guidelines (i.e. `ms1`, `m
 
 The other big benefit to pushing your feature branches to GitHub is that you can then pull them into other local repos you have cloned on other machines.  For example, if you pushed your changes from a lab computer, you can pull those changes into a corresponding branch on your home PC.
 
-However, there is one more step invovled the _first_ time you pull a new branch, as you will need a _local_ branch to correspond to it.  You can create that branch, _and_ set it up to track the remote branch, with a single command:
+However, there is one more step involved the _first_ time you pull a new branch, as you will need a _local_ branch to correspond to it.  You can create that branch, _and_ set it up to track the remote branch, with a single command:
 
 ```
 $ git checkout -b ms1 origin/ms1

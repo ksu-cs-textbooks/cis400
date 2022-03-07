@@ -93,7 +93,7 @@ To accomplish the binding in XAML, we use a syntax similar to that we used for s
 <TextBlock Text="{Binding Path=FullName}" />
 ```
 
-Just as with our static resource, we wrap the entire value in curly braces (`{}`), and declare a `Binding`.  The `Path` in the binding specifies the _property_ we want to bind to - in this case, `FullName`.  This is considered a one-way binding, as the `TextBlock` element only displays text - it is not editable.  The corresponding control for editing a textual property is the `<TextBlock>`.  A two-way binding is declared the same way i.e.:
+Just as with our static resource, we wrap the entire value in curly braces (`{}`), and declare a `Binding`.  The `Path` in the binding specifies the _property_ we want to bind to - in this case, `FullName`.  This is considered a one-way binding, as the `TextBlock` element only displays text - it is not editable.  The corresponding control for editing a textual property is the `<TextBox>`.  A two-way binding is declared the same way i.e.:
 
 ```xml
 <TextBox Text="{Binding Path=FirstName}" />
