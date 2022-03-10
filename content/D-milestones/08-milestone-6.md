@@ -18,7 +18,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 * You will need to update your UML to reflect your current code
 
-* YOu will need to update your tests to reflect changes to your Data project
+* You will need to update your tests to reflect changes to your Data project
 
 ### Assignment requirements:
 
@@ -100,7 +100,7 @@ Additionally, it is a good idea to test that the menu item classes implements th
 public void FriedPieShouldImplementINotifyChanged()
 {
   var pie = new FriedPie();
-  Assert.IsAssignableFrom<INotifyChanged>(pie);
+  Assert.IsAssignableFrom<INotifyPropertyChanged>(pie);
 }
 ```
 

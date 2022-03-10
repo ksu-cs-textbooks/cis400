@@ -184,7 +184,7 @@ A group of [RadioButton](https://docs.microsoft.com/en-us/dotnet/api/system.wind
 A [`TextBlock`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock?view=netcore-3.1) can be used to display arbitrary text.  It also makes available a `TextChanged` event that is triggered when its text changes.
 
 ```xml
-<TextBlock>Hi, I have something important to say.  I'm a text box.</TextBlock>
+<TextBlock>Hi, I have something important to say.  I'm a text block.</TextBlock>
 ```
 
 ![A TextBlock Example]({{<static "images/2.1.5.9.png">}})
