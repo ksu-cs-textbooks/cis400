@@ -112,7 +112,7 @@ In addition, you will need to show:
 
 One possible layout appears below:
 
-![Suggested Order control layout]({{<static "images/d.f21.9.1.png">}})
+![Suggested Order control layout]({{<static "images/d.9.1.png">}})
 
 The displayed order should update all of this displayed information as it changes.  If you use data binding for binding the `Order` properties, and have implemented the `CollectionChanged` and `PropertyChanged` events as described above, this should happen automatically, with no further code required from you.
 
