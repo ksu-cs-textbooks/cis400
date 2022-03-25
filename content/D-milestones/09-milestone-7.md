@@ -101,7 +101,7 @@ The contents of the current `Order` should be displayed prominently in your GUI,
 * The `IMenuItem`'s price
 * The `IMenuItem`'s special instructions
 
-_Hint: You can add a `StringFormat` attribute to a binding to display it as currency, i.e.:  `<TextBlock Text={Binding Path=Total, StringFormat={0:c}}>`. This approach can also be used to add bullets or extra text to a bound string before it is displayed.  See [the docs](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.bindingbase.stringformat?view=net-5.0) for more details._
+_Hint: You can add a `StringFormat` attribute to a binding to display it as currency, i.e.:  `<TextBlock Text={Binding Path=Total, StringFormat={}{0:c}}>`. This approach can also be used to add bullets or extra text to a bound string before it is displayed.  See [the docs](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.bindingbase.stringformat?view=net-5.0) for more details._
 
 In addition, you will need to show:
 * The `Order`'s `Number` property, formatted for readability, i.e. "Order #2"
