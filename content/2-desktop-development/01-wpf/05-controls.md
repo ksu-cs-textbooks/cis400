@@ -152,7 +152,7 @@ Now when the program is running, the user can press `ALT + F` to shift focus to 
 
 ### ListBox 
 
-A [`ListBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.listbox?view=netcore-3.1) displays a list of items that can be selected.  The `SelectionMode` property can be set to either `"Single"` or `"Multiple"`, and the `"SelectedItems"` read-only property provides those selected items. The `ItemsSource` property can be set declaratively using `<ListItem>` contents.  It also exposes a `SelectionChanged` event handler:
+A [`ListBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.listbox?view=netcore-3.1) displays a list of items that can be selected.  The `SelectionMode` property can be set to either `"Single"` or `"Multiple"`, and the `"SelectedItems"` read-only property provides those selected items. The `ItemsSource` property can be set declaratively using `<ListBoxItem>` contents.  It also exposes a `SelectionChanged` event handler:
 
 ```xml
 <ListBox>

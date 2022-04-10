@@ -13,7 +13,7 @@ Perhaps the most important of the control properties are those that control sizi
 
 #### Size
 
-WPF controls use three properties to determine the height of the element.  These are `MinHeight`, `Height`, and `MaxHeight`.  THey are doubles expressed in device-independent units (measuring 1/96 of an inch).  The rendering algorithm treats `Height` as a suggestion, but limits the calculated height to fall in the range between `MinHeight` and `MaxHeight`. The height determined by the algorithm can be accessed from the `ActualHeight` read-only property. Similar values exist for width: `MinWidth`, `Width`, `MaxWidth`, and `ActualWidth`.
+WPF controls use three properties to determine the height of the element.  These are `MinHeight`, `Height`, and `MaxHeight`.  They are doubles expressed in device-independent units (measuring 1/96 of an inch).  The rendering algorithm treats `Height` as a suggestion, but limits the calculated height to fall in the range between `MinHeight` and `MaxHeight`. The height determined by the algorithm can be accessed from the `ActualHeight` read-only property. Similar values exist for width: `MinWidth`, `Width`, `MaxWidth`, and `ActualWidth`.
 
 <table>
   <tr>
