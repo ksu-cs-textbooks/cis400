@@ -116,7 +116,7 @@ Under that, add a section greeting the customer with the message:
 _The finest of fried delights!_
 
 ##### List the Menu Categories
-List the four categories of menu items (Entrees, Sides, Drinks, and Treats) using second-level header tags (`<h2>`).
+List the three categories of menu items (Treats, Poppers, and Platters)
 
 ##### List the Menu Items
 Below each of the menu category headers, list the items in that category. Each item should be placed in a `<div>` with a class of `"menu-item"`. The `<div>` should include, nested inside, the name of the item, its price, and its calories. If an item comes in multiple sizes, you will need to list the price and calories for each size.
@@ -127,14 +127,13 @@ You should use the methods from your `Menu` class in the Data project to determi
 
 
 ## Testing 
-
 Testing continues to be a critical part of writing our project.  You will need to write tests for all of your code in the _Data_ project.  We will introduce testing a Razor Page app in a future module, so you don't need to test it yet.
 
 #### Testing the Menu Class
 You should test your `Menu` class to ensure that your properties are returning all the appropriate menu items.  Some strategies you may want to employ:
 
 1. Checking the count of items in a category matches your expectation (i.e. the poppers category contains 4 poppers, each can be 3 sizes, and 2 values for glazed, for a total of 4x3x2 combinations, or a total of 24 items)
-2. Checking that each unique combination exists in the category.  This can be done with the `Assert.Contains()` or `Assert.Collection()` [Colletion Assertions](<ref "/1-object-orientation/04-testing/05-xunit-assertions#collection-assertions">}})
+2. Checking that each unique combination exists in the category.  This can be done with the `Assert.Contains()` or `Assert.Collection()` [Collection Assertions](<ref "/1-object-orientation/04-testing/05-xunit-assertions#collection-assertions">}})
 3. As there are a lot of possible combinations, this is one time you may need to include additional logic in your tests (i.e. loops).
 
 {{% notice hint %}}
