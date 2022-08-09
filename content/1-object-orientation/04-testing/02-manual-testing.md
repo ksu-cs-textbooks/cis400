@@ -19,7 +19,7 @@ The costs involved in fixing software errors also grow larger the longer the err
 
 [^nasa2004]: Jonette M. Stecklein, Jim Dabney, Brandon Dick, Bill Haskins, Randy Lovell, and Gregory Maroney. ["Error Cost Escalation Through the Project Life Cycle"](https://ntrs.nasa.gov/citations/20100036670), NASA, June 19, 2014.
 
-![Comparison of System Cost Factors Excluding Operations](/images/1.4.2.2.png")
+![Comparison of System Cost Factors Excluding Operations](/images/1.4.2.2.png)
 
 It is clear from the graph and the paper that the cost to fix a software error grows exponentially if the fix is delayed.  You probably have instances in your own experience that also speak to this - have you ever had a bug in a program you didn't realize was there until your project was nearly complete?  How hard was it to fix, compared to a error you found and fixed right away?
 

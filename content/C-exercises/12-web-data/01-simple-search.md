@@ -166,7 +166,7 @@ We'll also need ot refactor our _Index.cshtml.cs_ to use the search results, ins
 
 If we try running the project again, and searching for the term "Love"... it crashes?  What is going on?
 
-![The Encountered Exception](/images/6.8.2.png")
+![The Encountered Exception](/images/6.8.2.png)
 
 Notice that the error is a `NullReferenceException`, and occurs in our `if` statement checking the title.
 
