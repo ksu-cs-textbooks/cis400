@@ -9,11 +9,11 @@ The term _test code coverage_ refers to how much of your program's code is execu
 
 Much like Visual Studio provides a Test Explorer for running tests, it provides support for analyzing test coverage.  We can access this from the "Test" menu, where we select the "Analyze Code Coverage for All Tests".
 
-![Code coverage command in the Test Menu]({{<static "images/1.4.7.1.png">}})
+![Code coverage command in the Test Menu](/images/1.4.7.1.png)
 
 This will build and run all our tests, and as they run it will collect data about how many blocks of code are or are not executed.  The results appear in the Code Coverage Results panel:
 
-![Code Coverage results panel]({{<static "images/1.4.7.2.png">}})
+![Code Coverage results panel](/images/1.4.7.2.png)
 
 Be aware that there will always be some blocks that are not picked up in this analysis, so it is typical to shoot for a high percentage.  
 

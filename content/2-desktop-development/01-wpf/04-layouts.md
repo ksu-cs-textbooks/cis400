@@ -32,7 +32,7 @@ Thus, you might expect the code:
 
 Creates a grid with three columns, each 200 logical units wide, and two rows, each 100 logical units high. However, it will _actually_ create a grid like this:
 
-![The resulting Grid]({{<static "images/2.1.4.1.png">}})
+![The resulting Grid](/images/2.1.4.1.png)
 
 Remember, all WPF containers will fill the available space - so the grid stretches the last column and row to fill the remaining space.  Also, any element declared as a child of the grid (in this case, our button), will be placed in the first grid cell - [0,0] (counted from the top-left corner).
 
@@ -64,7 +64,7 @@ Thus, to create a 3x3 grid centered in the available space to represent a game o
 
 Which would create:
 
-![The resulting Tic-Tac-Toe grid]({{<static "images/2.1.4.2.png">}})
+![The resulting Tic-Tac-Toe grid](/images/2.1.4.2.png)
 
 Note too that we use the properties `Grid.Column` and `Grid.Row` in the `<TextBlock>` elements to assign them to cells in the grid.  The row and column indices start at 0 in the upper-left corner of the grid, and increase to the right and down.
 
@@ -85,7 +85,7 @@ The [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.co
 
 Creates this layout:
 
-![The StackPanel Example]({{<static "images/2.1.4.3.png">}})
+![The StackPanel Example](/images/2.1.4.3.png)
 
 ## The WrapPanel
 
@@ -105,11 +105,11 @@ The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.con
 
 Produces this layout when there is ample room:
 
-![The WrapPanel Example]({{<static "images/2.1.4.4.png">}})
+![The WrapPanel Example](/images/2.1.4.4.png)
 
 And this one when things get tighter:
 
-![The Squeezed WrapPanel Example]({{<static "images/2.1.4.5.png">}})
+![The Squeezed WrapPanel Example](/images/2.1.4.5.png)
 
 ## The DockPanel
 
@@ -129,7 +129,7 @@ Thus, this XAML:
 
 Generates this layout:
 
-![The DockPanel Example]({{<static "images/2.1.4.6.png">}})
+![The DockPanel Example](/images/2.1.4.6.png)
 
 ## The Canvas
 
@@ -145,6 +145,6 @@ Finally, the [`Canvas`](https://docs.microsoft.com/en-us/dotnet/api/system.windo
 
 Creates this layout:
 
-![The Canvas Example]({{<static "images/2.1.4.7.png">}})
+![The Canvas Example](/images/2.1.4.7.png)
 
 If there is a chance the `<Canvas>` might be resized, it is a good idea to anchor all elements in the canvas relative to the same corner (i.e. top right) so that they all are moved the same amount.  

@@ -90,11 +90,11 @@ Thus, the `RoundRegister.CashDrawer` is the _Model_, your intermediary class is 
 
 A possible configuration for the cash payment control might be:
 
-![Cash Payment Control Mockup]({{<static "images/CashPayment.png">}})
+![Cash Payment Control Mockup](/images/CashPayment.png)
 
 Note that this kind of control could be composed of other custom controls, i.e. a `CurrencyControl` that exposes a `Label`, `CustomerQuantity`, `ChangeQuantity` dependency properties and looks something like:
 
-![Currency Control Mockup]({{<static "images/CurrencyControl.png">}})
+![Currency Control Mockup](/images/CurrencyControl.png)
 
 While the exact appearance and functionality of the GUI is up to you, it should provide a "Return to Order" button (this can alternatively be labeled as "Select Items" or something similar) which returns to the order to allow changes to be made, as well as a "Finalize Sale" which should invoke the method you defined in your intermediate class for finalizing the sale.  Once this has finished, you should print the receipt and begin a new order (see the details on _Canceling the Order_ above for details).
 
@@ -127,11 +127,11 @@ One of the primary benefits of the MVVM architecture is it allows you to push lo
 
 Because the `PointOfSale` is targeting the `net5.0-windows` framework, you cannot set `PointOfSale` as a dependency of your `DataTests` project.  Instead, you will need to create a _new_ XUnit test project named `PointOfSaleTests` to place your unit tests in.  There is not a `.net5.0-windows` XUnit test project template, so use the normal XUnit template and choose the `.Net 5.0` option in the "Additional information" dialog:
  
-![.NET 5.0 framework option]({{<static "images/dotnet5framework.png">}})
+![.NET 5.0 framework option](/images/dotnet5framework.png)
 
 Once your project is added, open the _PointOfSaleTests.csproj_ file by double-clicking it in Visual Studio.  This should open it as an XML file.  Change the `<TargetFramework>` entry to `net5.0-windows`:
 
-![.NET 5.0-windows framework setting]({{<static "images/dotnet5framework-windows.png">}})
+![.NET 5.0-windows framework setting](/images/dotnet5framework-windows.png)
 
 Now you can add the `PointOfSale` project as a project dependency to `PointOfSaleTests`, allowing you to add a unit test for any ModelView classes you need to write to test your `PointOfSale` project.
 

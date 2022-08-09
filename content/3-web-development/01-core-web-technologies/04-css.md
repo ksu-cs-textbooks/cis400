@@ -45,7 +45,7 @@ A second common use for CSS is to change properties of the element itself.  This
 
 These values provide additional space around the content of the element, following the [CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model):
 
-![CSS Box Model]({{<static "images/boxmodel.png">}})
+![CSS Box Model](/images/boxmodel.png)
 
 ### Providing Layout
 The third common use for CSS is to change how elements are laid out on the page.  By default HTML elements follow the [flow model](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow), where each element appears on the page after the one before it.  Some elements are _block_ level elements, which stretch across the entire page (so the next element appears below it), and others are _inline_ and are only as wide as they need to be to hold their contents, so the next element can appear to the right, if there is room.

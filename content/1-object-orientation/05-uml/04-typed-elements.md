@@ -8,18 +8,20 @@ A second basic building block for UML diagrams is a _typed element_.  Typed elem
 
 The pattern for defining a typed element is:
 
+```math
 $$
 \texttt{[visibility] element : type [constraint]} 
 $$
+```
 
-The optional $[visibility]$ indicates the visibility of the element, the $element$ is the name of the typed element, and the $type$ is its type, and the $[constraint]$ is an optional constraint.  
+The optional {{<math>}}$\texttt{[visibility]}${{</math>}} indicates the visibility of the element, the {{<math>}}$\texttt{element}${{</math>}} is the name of the typed element, and the {{<math>}}$\texttt{type}${{</math>}} is its type, and the {{<math>}}$\texttt{[constraint]}${{</math>}} is an optional constraint.  
 
 ### Visibility
 In UML _visibility_ (what we would call access level in C#) is indicated with symbols, i.e.:
 
-* $\texttt{+}$ indicates `public`
-* $\texttt{-}$ indicates `private`
-* $\texttt{\#}$ indicates `protected`
+* {{<math>}}$\texttt{+}${{</math>}} indicates `public`
+* {{<math>}}$\texttt{-}${{</math>}} indicates `private`
+* {{<math>}}$\texttt{#}${{</math>}} indicates `protected`
 
 I.e. the field:
 
@@ -29,23 +31,27 @@ protected int Size;
 
 Would be expressed:
 
-<div>
+```math
 $$
 \texttt{# Size : int}
 $$
-</div>
+```
 
 ### Constraints
 A typed element can include a _constraint_ indicating some restriction for the element.  The constraints are contained in a pair of curly braces after the typed element, and follow the pattern:
 
+```math
 $$
 \texttt{ {element: boolean expression} }
 $$
+```
 
 For example:
 
+```math
 $$
 \texttt{- age: int {age: >= 0}}
 $$
+```
 
 Indicates the private variable `age` must be greater than or equal to 0.

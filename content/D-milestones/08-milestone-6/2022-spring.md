@@ -1,5 +1,5 @@
 ---
-title: "Milestone 6 Requirements"
+title: "Milestone 6 Requirements (Spring 2022)"
 pre: "8. "
 weight: 80
 date: 2018-08-24T10:53:26-05:00
@@ -131,7 +131,7 @@ Finally, update your UML to reflect the current state of your `Data` and `PointO
 
 The `INotifyPropertyInterface` can be added like so:
 
-![INotifyPropertyChanged UML]({{<static "images/d.7.1.png">}})
+![INotifyPropertyChanged UML](/images/d.7.1.png)
 
 Because this is a _realization_ relationship, you will also need to add the event to your class boxes.  It should be placed in the second box (with your properties) and use the `event` stereotype, i.e.:
 

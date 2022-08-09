@@ -70,7 +70,7 @@ Instead of a `List<Person>`, we'll use an `ObservableCollection<Person>` which i
 
 When we run this code, our results will be:
 
-![The ListView in the running application]({{<static "images/2.4.4.1.png">}})
+![The ListView in the running application](/images/2.4.4.1.png)
 
 This is because the `ListBox` (and the `ListView`) by default are composed of `<TextBlock>` elements, so each `Person` in the list is being bound to a `<TextBlock>`'s `Text` property.  This invokes the `ToString()` method on the `Person` object, hence the `DataBindingExample.Person` displayed for each entry.
 
@@ -106,7 +106,7 @@ We could, of course, override the `ToString()` method on person.  But we can als
 
 And the resulting application would display:
 
-![The updated ListView in the running application]({{<static "images/2.4.4.2.png">}})
+![The updated ListView in the running application](/images/2.4.4.2.png)
 
 Note that in our `DataTemplate`, we can bind to properties in the `Person` object.  This works because as the `ListBox` processes its `ItemsSource` property, it creates a new instance of its `ItemTemplate` (in this case, our custom `DataTemplate`) and assigns the item from the `ItemSource` to its `DataContext`.
 
@@ -164,5 +164,5 @@ Note how we bind the `<PersonControl>`'s `DataContext` to the `CurrentItem` of t
 
 With these changes, when we select a person in the `<RegistryControl>`, their information will appear in the `<PersonControl>`:
 
-![The bound controls]({{<static "images/2.4.4.3.png">}})
+![The bound controls](/images/2.4.4.3.png)
 

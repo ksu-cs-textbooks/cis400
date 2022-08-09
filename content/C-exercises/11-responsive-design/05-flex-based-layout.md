@@ -36,7 +36,7 @@ We can then add additional CSS rules to our _wwwroot/css/site.css_ to apply the 
 
 Now if we run our program and look at our page, we'll see that the flex algorithm has automatically arranged the children `<div>` elements into three equally-sized columns for us!  
 
-![Flex-based columns layout]({{<static "images/3.3.6.1.png">}})
+![Flex-based columns layout](/images/3.3.6.1.png)
 
 Moreover, if we were to add or remove columns, the layout would automatically change to keep them balanced.  You can also apply a number of additional properties to provide more fine-grained control of the layout; the CSS Tricks [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) offers a great guide to the details.
 
@@ -52,6 +52,6 @@ Now to make our layout responsive, we just need to switch the direction of our c
 
 Now when we view our page on a smaller screen, it will use columns instead of rows!
 
-![Single Column Flex Layout]({{<static "images/3.3.6.2.png">}})
+![Single Column Flex Layout](/images/3.3.6.2.png)
 
 We also no longer need to bother with a clearfix `<div>`, though leaving the one we created in the prior example in place won't cause any problems.

@@ -1,0 +1,49 @@
+baseURL = "https://textbooks.cs.ksu.edu/cis400"
+languageCode = "en-us"
+title = "K-State CIS 400 Textbook"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "ksucs-hugo-theme"
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+page = [ "HTML", "Iframeable", "Teleprompter"]
+section = [ "HTML", "Iframeable", "Teleprompter"]
+
+[params]
+  landingPageURL = "/cis400"
+  projectName = "The Flying Saucer"
+  projectUpstream = "https://github.com/ksu-cis/flying-saucer.git"
+  textbookURL = "https://textbooks.cs.ksu.edu/cis400"
+  editURL = "https://gitlab.cs.ksu.edu/nhbean/cis400-textbook/tree/master/content/"
+  description = "K-State CIS 400 Textbook"
+  author = "Nathan H. Bean"
+  showVisitedLinks = false
+  themeVariant = "purple"
+  disableLanguageSwitchingButton = true
+  linenumbers = true
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Custom output format for iframes
+[outputFormats]
+  [outputFormats.Iframeable]
+    name = "Iframeable"
+    baseName = "embed"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+  [outputFormats.Teleprompter]
+    name = "Teleprompter"
+    baseName = "tele"
+    mediaType = "text/html"
+    isPlainText = false
+    isHtml = true

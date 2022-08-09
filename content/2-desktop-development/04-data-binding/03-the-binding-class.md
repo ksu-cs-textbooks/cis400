@@ -7,9 +7,9 @@ date: 2018-08-24T10:53:26-05:00
 
 In Windows Presentation Foundation, data binding is accomplished by a binding object that sits between the _binding target_ (the control) and the _binding source_ (the data object):
 
-![The WPF Data Binding implementation]({{<static "images/2.4.3.1.png">}})
+![The WPF Data Binding implementation](/images/2.4.3.1.png)
 
-It is this [Binding](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.binding?view=netcore-3.1) object that we are defining the properties of in the XAML attribute with `"{Binding}"`.  Hence, `Path` is a property defined on this binding.  
+It is this [Binding](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.binding?view=windowsdesktop-6.0) object that we are defining the properties of in the XAML attribute with `"{Binding}"`.  Hence, `Path` is a property defined on this binding.  
 
 As we mentioned before, bindings can be `OneWay` or `TwoWay` based on the direction the data flows.  The binding mode is specified by the `Binding` object's `Mode` property, which can also be set in XAML. There is actually a two additional options.  The first is a `OneWayToSource` that is basically a reversed one-way binding (the control updates the data object, but the data object does not update the control)   
 

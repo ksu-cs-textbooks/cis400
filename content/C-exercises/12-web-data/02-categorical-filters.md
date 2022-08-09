@@ -142,7 +142,7 @@ Now, back in our PageModel _Index.cshtml.cs_, we'll apply our filter to the resu
 
 Now we can run a search with filters applied.  For example, searching for the word "Love" and movies that are PG or PG-13 yields:
 
-![Filtered Search Results]({{<static "images/6.8.4.png">}})
+![Filtered Search Results](/images/6.8.4.png)
 
 You might be wondering why _Cloverfield_ is listed.  But remember, we're searching by substring, and C __LOVE__ rfield contains love!
 

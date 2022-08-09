@@ -1,5 +1,5 @@
 ---
-title: "Milestone 9 Requirements"
+title: "Milestone 9 Requirements (Spring 2022)"
 pre: "11. "
 weight: 110
 date: 2018-08-24T10:53:26-05:00
@@ -53,7 +53,7 @@ The example website images are drawn from a prior semester's project.  You will 
 
 Modify the Razor page named _Privacy.cshtml_ to meet the following guidelines. An example of what this might look like:
 
-![Privacy page example]({{<static "images/d.10.1.png">}})
+![Privacy page example](/images/d.10.1.png)
 
 It should:
 1. Set the page title to “Privacy Policy”
@@ -66,7 +66,7 @@ _Fried Piper respects the privacy of our diners. This site does not collect your
 
 Create a new Razor page named _About.cshtml_. It should meet the following guidelines. An example of what this might look like:
 
-![About page example]({{<static "images/d.10.2.png">}})
+![About page example](/images/d.10.2.png)
 
 1. Set the page title to “About”
 2. Render a `<h1>` tag with the text “About Fried Piper”
@@ -91,7 +91,7 @@ If you are using the ASP tag helpers, the equivalent tag would be `<a asp-page="
 
 The navigation bar should look something like:
 
-![Navigation example]({{<static "images/d.10.3.png">}})
+![Navigation example](/images/d.10.3.png)
 
 
 #### Create a static Menu class
@@ -99,14 +99,14 @@ In your `Data` project you should create a static class named `Menu` declared in
 
 * `Treats` which returns an `IEnumerable<IMenuItem>` containing an instance of all available fried treats (Fried Pie, Fried Ice Cream, Fried Candy Bars, Fried Twinkies).  For treats with flavor, filling, or candy bar choices, you must include all the available options.
 * `Poppers` which returns an `IEnumerable<IMenuItem>` containing an instance of all available poppers.  As each popper has 3 different sizes, this collection should contain a small, medium, and large instance of each. You should also include both glazed and unglazed options for each.
-* `Platters` which returns an `IEnumerable<IMenuItem>` containing all available platters.  It should contain one instance of every combination of items possible in a Piper Platter.  It should also contain every combintation of popper plater (small, medium, and large as both glazed and unglazed).
+* `Platters` which returns an `IEnumerable<IMenuItem>` containing all available platters.  It should contain one instance of every combination of items possible in a Piper Platter.  It should also contain every combination of popper plater (small, medium, and large as both glazed and unglazed).
 * `FullMenu` should return an `IEnumerable<IMenuItem>` containing all of the items on the menu (one of each of the items found in the categories above).
 
 #### Index Page 
 
 Modify the existing _Index.cshtml_ page to display the full menu of Fried Piper according to the guidelines that follow.  An example of what this might look like:
 
-![Home page example]({{<static "images/d.10.4.png">}})
+![Home page example](/images/d.10.4.png)
 
 ##### Welcome Message
 Add a first-level header (`<h1>`) identifying the page as "Fried Piper".

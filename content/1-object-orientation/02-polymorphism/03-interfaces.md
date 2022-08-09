@@ -7,9 +7,9 @@ date: 2018-08-24T10:53:26-05:00
 
 If we think back to the concept of _message passing_ in object-oriented languages, it can be useful to think of the collection of public methods available in a class as an _interface_, i.e., a list of messages you can dispatch to an object created from that class.  When you were first learning a language (and probably even now), you find yourself referring to these kinds of lists, either in the language documentation, or via Intellisense in Visual Studio.
 
-![The Java API]({{<static "images/2.1.3.1.png">}})
+![The Java API](/images/2.1.3.1.png)
 
-![Visual Studio Intellisense]({{<static "images/2.1.3.2.png">}})
+![Visual Studio Intellisense](/images/2.1.3.2.png)
 
 Essentially, programmers use these 'interfaces' to determine what methods can be invoked on an object.  In other words, which _messages_ can be _passed_ to the object.  This 'interface' (note the lowercase i) is determined by the class definition, specifically what methods it contains.
 

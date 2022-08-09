@@ -27,7 +27,7 @@ Then, in our actual control we can use that string as a _static resource_:
 
 As long as that element is a descendant of the element the resource is declared on, it will be used in the property.  In this case, we'll display the string "Hello World!" in the `TextBlock`.  Note that we have to use the `x:Key` property to identify the resource, and repeat the key in the `"{StaticResource StringToDisplay}"`.  The curly braces and the `StaticResource` both need to be there (technically, they are setting up a _data binding_, which we'll talk about in a future chapter).
 
-We can declare any kind of type as a resource and make it available in our XAML this way.  F
+We can declare any kind of type as a resource and make it available in our XAML this way.  
 
 For example, we could create a `LinearGradientBrush`:
 
@@ -61,7 +61,7 @@ Since it is only defined in one place, it is now easier to reuse, and if we ever
 
 Finally, we can create static resources from images and other media.  First, we have to set its build action to "Resource" in the **"Properties"** window after adding it to our project:
 
-![Setting the image properties]({{<static "images/2.2.5.1.png">}})
+![Setting the image properties](/images/2.2.5.1.png)
 
 Then we can declare a `<BitmapImage>` resource using a `UriSource` property that matches the path to the image within our project:
 

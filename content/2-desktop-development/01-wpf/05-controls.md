@@ -17,7 +17,7 @@ A [`Border`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls
 </Border>
 ```
 
-![A Border Example]({{<static "images/2.1.5.1.png">}})
+![A Border Example](/images/2.1.5.1.png)
 
 ### Button
 
@@ -32,7 +32,7 @@ A [`Button`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls
 </Button>
 ```
 
-![A Button Example]({{<static "images/2.1.5.2.png">}})
+![A Button Example](/images/2.1.5.2.png)
 
 The event handler for the button needs to be declared in the corresponding _.xaml.cs_ file, and will take two parameters, an `object` and `RoutedEventArgs`:
 
@@ -59,7 +59,7 @@ A [`CheckBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.contro
 </CheckBox>  
 ```
 
-![A CheckBox Example]({{<static "images/2.1.5.3.png">}})
+![A CheckBox Example](/images/2.1.5.3.png)
 
 ### ComboBox
 
@@ -74,7 +74,7 @@ A [`ComboBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.contro
 </ComboBox>
 ```
 
-![A ComboBox Example]({{<static "images/2.1.5.6.png">}})
+![A ComboBox Example](/images/2.1.5.6.png)
 
 Note that the ComboBox dropdown doesn't work in the editor - it only operates while the application is running.
 
@@ -119,7 +119,7 @@ The [`Image`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.control
 
 The stretch values effects are captured by this graphic:
 
-![The applied Stretch property]({{<static "images/2.1.6.17.png">}})
+![The applied Stretch property](/images/2.1.6.17.png)
 
 The stretching behavior can be further customized by the [`StretchDirection`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stretchdirection?view=netcore-3.1) property.
 
@@ -133,7 +133,7 @@ A [Label](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.la
 <Label>First Name:</Label>
 ```
 
-![A Label Example]({{<static "images/2.1.5.4.png">}})
+![A Label Example](/images/2.1.5.4.png)
 
 What distinguishes it from other text controls is that it can also be associated with a specific control specified by the `Target` parameter, whose value should be bound to the name of the control.  It can then provide an access key (aka a mnemonic) that will transfer focus to that control when a the corresponding key is pressed.  The access key is indicated by proceeding the corresponding character in the text with an underscore:
 
@@ -146,7 +146,7 @@ What distinguishes it from other text controls is that it can also be associated
 </StackPanel>
 ```
 
-![A Label with Access Key Example]({{<static "images/2.1.5.5.png">}})
+![A Label with Access Key Example](/images/2.1.5.5.png)
 
 Now when the program is running, the user can press `ALT + F` to shift focus to the textbox, so they can begin typing (Note the character "F" is underlined in the GUI).  Good use of access keys means users can navigate forms completely with the keyboard.
 
@@ -163,7 +163,7 @@ A [`ListBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.control
 </ListBox>
 ```
 
-![A Label with Access Key Example]({{<static "images/2.1.5.7.png">}})
+![A Label with Access Key Example](/images/2.1.5.7.png)
 
 ### RadioButton
 
@@ -177,7 +177,7 @@ A group of [RadioButton](https://docs.microsoft.com/en-us/dotnet/api/system.wind
     <RadioButton GroupName="Fruit">Pear</RadioButton> 
 </StackPanel>
 ```
-![A Radio Button Example]({{<static "images/2.1.5.8.png">}})
+![A Radio Button Example](/images/2.1.5.8.png)
 
 ### TextBlock
 
@@ -187,7 +187,7 @@ A [`TextBlock`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.contr
 <TextBlock>Hi, I have something important to say.  I'm a text block.</TextBlock>
 ```
 
-![A TextBlock Example]({{<static "images/2.1.5.9.png">}})
+![A TextBlock Example](/images/2.1.5.9.png)
 
 ### TextBox
 
@@ -196,7 +196,7 @@ And a [`TextBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.con
 ```xml
 <TextBox Text="And I'm a textbox!"/>
 ```
-![A TextBlock Example]({{<static "images/2.1.5.10.png">}})
+![A TextBlock Example](/images/2.1.5.10.png)
 
 ### ToggleButton
 
@@ -208,11 +208,11 @@ Finally, a [`ToggleButton`]() is a button that is either turned on or off.  This
 
 Off looks like: 
 
-![A ToggleButton Example]({{<static "images/2.1.5.11.png">}})
+![A ToggleButton Example](/images/2.1.5.11.png)
 
 And on looks like: 
 
-![A ToggleButton Example]({{<static "images/2.1.5.12.png">}})
+![A ToggleButton Example](/images/2.1.5.12.png)
 
 ### Other Controls
 

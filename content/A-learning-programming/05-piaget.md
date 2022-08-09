@@ -7,14 +7,14 @@ date: 2018-08-24T10:53:26-05:00
 
 Jean Piaget was a biologist and psychologist who performed some of the earliest studies on knowledge acquisition in children.  His work is the foundation of [Constructivism](https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_education)), one of the more influential philosophies of education.
 
-![Jean Piaget]({{<static "images/a.5.1.jpg">}})
+![Jean Piaget](/images/a.5.1.jpg)
 
 ## Genetic Epistemology
 Of especial interest to us is his theory of _genetic epistemology_.  Epistemology is the study of human knowledge, and genetic in this sense refers to _origins_ i.e. the _genesis_, so his theory concerns _how knowledge is created by humans_.
 
 Piaget's genetic epistemology was inspired by studies he conducted of snails of the genus Lymnea native to the lakes of his home, Switzerland.  He was able to establish that what had previously been considered different species of snails based on the shape of their shells were actually one species.  He showed that when the snails of one lake were placed in a different lake, the way their shells grew changed to match those of the snails living in the second lake.  In other words, the traits the snails displayed altered in response to their environment.
 
-![Examples of Lymnea]({{<static "images/a.5.2.jpg">}})
+![Examples of Lymnea](/images/a.5.2.jpg)
 
 Piaget suspected a similar mechanism was at work in human learning.  He proposed that the human brain, much like the bodies of the snails, sought to exist in equilibrium with its environment.  For the brain, this environment meant the ideas it was exposed to.  He proposed two different mechanisms for learning, _accommodation_ and _assimilation_, which related to how structures of knowledge were formed in the brain.  
 
@@ -35,4 +35,4 @@ In addition to the mechanisms of accommodation and assimilation he outlined in h
 ## Neo-Piagetian Theory
 While Piaget focused his study on children, many of the researchers who followed him also looked at how _adults_ learn.  Their findings suggest that _all_ learners progress through the four stages with _any_ new learning.  That is, when you begin to learn a novel concept or skill, you are building the cognitive structures necessary to support it, and that your progress through this process corresponds to these four stages.  Moreover, they have found that the divisions between stages are not rigid and clearly delineated; learners can exist in multiple stages at once (which they call the _overlapping waves model_).
 
-![The Overlapping Waves Model]({{<static "images/a.5.3.png">}})
+![The Overlapping Waves Model](/images/a.5.3.png)

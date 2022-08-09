@@ -15,11 +15,11 @@ It usually consists of a description of the test to perform, broken down into ta
 
 2. Select the "Cowpoke Chili" button from the "Entrees" menu
 
-![The Cowpoke Chili Button]({{<static "images/2.6.3.1.png">}})
+![The Cowpoke Chili Button](/images/2.6.3.1.png)
 
 The app should switch to a customization screen that looks like this:
 
-![The Customize Cowpoke Chili Screen]({{<static "images/2.6.3.2.png">}})
+![The Customize Cowpoke Chili Screen](/images/2.6.3.2.png)
 
 There should be a checkbox for "Cheese", "Sour Cream", "Green Onions", and "Tortilla Strips"
 
@@ -65,7 +65,7 @@ A Cowpoke Chili entry should appear in the order, with a cost of $6.10
 
 3. Uncheck the checkboxes, and a corresponding "Hold" detail should appear in the order, i.e. un-checking cheese should cause the order to look like:
 
-![Unchecked Cheese]({{<static "images/2.6.3.3.png">}})
+![Unchecked Cheese](/images/2.6.3.3.png)
 
 <table>
   <tr>
@@ -91,7 +91,7 @@ A Cowpoke Chili entry should appear in the order, with a cost of $6.10
 </table>
 4. Click the "Menu Item Selection" Button.  This should return you to the main menu screen, with the order still containing the details about the Cowpoke Chili:
 
-![Return to Main Menu]({{<static "images/2.6.3.4.png">}})
+![Return to Main Menu](/images/2.6.3.4.png)
 <table>
   <tr>
     <th width=30>Initial</th>

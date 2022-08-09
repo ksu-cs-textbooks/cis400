@@ -70,7 +70,7 @@ _Edsger Dijkstra, The Humble Programmer (EWD340), Communications of the ACM_
 
 Coupled with this rising demand for programs was a demand for skilled software developers, as reflected in the following table of graduation rates in programming-centric degrees (the dashed line represents the growth of _all_ bachelor degrees, not just computer-related ones):
 
-![Annual Computer-Related Bachelor Degrees Awarded in the US]({{<static "images/1.1.2.1.png">}})
+![Annual Computer-Related Bachelor Degrees Awarded in the US](/images/1.1.2.1.png)
 
 Unfortunately, this graduation rate often lagged far behind the demand for skilled graduates, and was marked by several periods of intense growth (the period from 1965 to 1985, 1995-2003, and the current surge beginning around 2010).  During these surges, it was not uncommon to see students hired directly into the industry after only a course or two of learning programming (coding boot camps are a modern equivalent of this trend).
 

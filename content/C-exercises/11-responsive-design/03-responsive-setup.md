@@ -11,7 +11,7 @@ Before we go farther, there are a couple of concepts we need to understand.  The
 
 A viewport can also be _larger_ than the device width and height.  When mobile phones first started allowing users to browse the web, they had tiny screens.  Phone manufacturers had to decide how to display webpages that were never designed for these devices.  They settled on an approach of setting the viewport to a size consistent with computer monitors of the day, and then scaling the entire page down to fit onto the actual screen.  The result was you could see the entire webpage, but it was tiny.
 
-![Viewports on Mobile Devices]({{<static "images/3.3.4.0.jpg">}})
+![Viewports on Mobile Devices](/images/3.3.4.0.jpg)
 
 This remains the default behavior of mobile browsers to this day - and because the viewport is not aligned with the device size, media queries targeting the viewport also do not correctly account for device size.
 
@@ -42,11 +42,11 @@ aside { border: 5px solid gray; }
 
 Now when the viewport is wider than 750 pixels, you'll see a solid gray border around the banner ad:
 
-![Added Border on the Banner Ad]({{<static "images/3.3.4.1.png">}})
+![Added Border on the Banner Ad](/images/3.3.4.1.png)
 
 And if you size down your viewport, you'll see that banner go to a smaller dashed gray:
 
-![Border at medium viewport size]({{<static "images/3.3.4.2.png">}})
+![Border at medium viewport size](/images/3.3.4.2.png)
 
 We can extend this approach by adding _another_ media query for even smaller screens, say those under 490 pixels:
 
@@ -59,7 +59,7 @@ We can extend this approach by adding _another_ media query for even smaller scr
 
 As this rule is declared _after_ the first two border rules, it will _override_ them both, replacing the values for the border (note, any previously declared rules that have not been overridden will continue to apply).  Now if you size your screen even smaller:
 
-![Border at small viewport size]({{<static "images/3.3.4.3.png">}})
+![Border at small viewport size](/images/3.3.4.3.png)
 
 This strategy of using successively smaller media queries to override CSS styles at different screen widths is known as _responsive breakpoints_, because at those widths you specify, the appearance of your page changes.
 

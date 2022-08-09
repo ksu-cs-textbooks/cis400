@@ -164,15 +164,15 @@ We'll also need ot refactor our _Index.cshtml.cs_ to use the search results, ins
 </ul>
 ```
 
-If we try running the project again, and seaching for the term "Love"... it crashes?  What is going on?
+If we try running the project again, and searching for the term "Love"... it crashes?  What is going on?
 
-![The Encountered Exception]({{<static "images/6.8.2.png">}})
+![The Encountered Exception](/images/6.8.2.png")
 
 Notice that the error is a `NullReferenceException`, and occurs in our `if` statement checking the title.
 
 ### Bad Data 
 
-If we think about what variables are invovled in the line `if(movie.Title.Contains(terms, StringComparison.InvariantCultureIgnoreCase))`, we have:
+If we think about what variables are involved in the line `if(movie.Title.Contains(terms, StringComparison.InvariantCultureIgnoreCase))`, we have:
 
 * `movie`
 * `movie.Title`
@@ -205,7 +205,7 @@ If we comb through the data in _movies.json_, we find on line 54957 a movie with
 
 Working from the provided metadata, we can eventually identify the film as one titled [Unknown](https://en.wikipedia.org/wiki/Unknown_(2006_film)).  It would seem that whomever wrote the script to create this JSON file interpreted "Unknown" to mean the title was unknown (hence null), rather than the literal word "Unknown".  
 
-If we dig deeper into the JSON file, we can find other issues.  For example, the JSON identifies the contraversial film [Birth of a Nation](https://en.wikipedia.org/wiki/The_Birth_of_a_Nation) as being released in 2015, when it was actually the first full-length theatrical film ever released, in _1915_!  Most likely the original database from which these entries were derived only used two digits for the year, i.e. `15`, and the scripter who converted it to JSON chose a threshold date to determine if it was released in the 20 or 21st century, i.e.:
+If we dig deeper into the JSON file, we can find other issues.  For example, the JSON identifies the controversial film [Birth of a Nation](https://en.wikipedia.org/wiki/The_Birth_of_a_Nation) as being released in 2015, when it was actually the first full-length theatrical film ever released, in _1915_!  Most likely the original database from which these entries were derived only used two digits for the year, i.e. `15`, and the scripter who converted it to JSON chose a threshold date to determine if it was released in the 20 or 21st century, i.e.:
 
 ```csharp
 if(date < 28) 
@@ -227,4 +227,4 @@ if(movie.Title != null && movie.Title.Contains(terms, StringComparison.Invariant
 
 This will protect us against a `NullReferenceException` when our movie titles are null.  Now if you try the search again, you should see the results:
 
-![The Search Results for "Love"]({{<static "images/6.8.3.png">}})
+![The Search Results for "Love"](/images/6.8.3.png)

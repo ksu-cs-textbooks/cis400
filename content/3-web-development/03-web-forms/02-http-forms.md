@@ -109,10 +109,10 @@ Perhaps the most important - and versatile - of these is the [`<input>`](https:/
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image" title="<input> elements of type image are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.">image</a></td>
     <td>A graphical <code>submit</code> button. Displays an image defined by the <code>src</code> attribute. The <a href="#htmlattrdefalt">alt</a> attribute displays if the image <a href="#htmlattrdefsrc">src</a> is missing.</td>
     <td>
-      <pre><code class="html">&lt;input type="image" name="ExampleImage" src="{{<static "images/button.png">}}"/&gt;</code></pre>
+      <pre><code class="html">&lt;input type="image" name="ExampleImage" src="/images/button.png">}}"/&gt;</code></pre>
     </td>
     <td>
-      <input type="image" name="ExampleImage" src="{{<static "images/button.png">}}"/>
+      <input type="image" name="ExampleImage" src="/images/button.png">}}"/>
     </td>
   </tr>
   <tr>

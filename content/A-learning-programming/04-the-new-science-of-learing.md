@@ -25,7 +25,7 @@ Caffeine and alcohol, especially when consumed in large quantities, disrupt your
 ## Exercise 
 Exercise plays a surprisingly important role in learning.  When you exercise - especially aerobic exercise (the kind that gets your heart rate up), your body releases extra neurochemicals and proteins that are used by the brain cells to communicate. This rush of extra resources improves your ability to learn new concepts and skills. 
 
-![How Much Physical Exercise do you need?]({{<static "images/a.4.1.jpg">}})
+![How Much Physical Exercise do you need?](/images/a.4.1.jpg)
 
 In addition to getting this regular exercise, you should periodically get up from your computer and walk around, or even better, adopt a standing desk.  The human body is not meant to sit for extended periods of time. Doing so can lead to blood pooling in the bottocks and thighs and increases dramatically your risk of heart attack and stroke.
 

@@ -11,7 +11,7 @@ Historically, the test plan was often developed at the same time as the design f
 
 This model of software development has often been referred to as the 'waterfall model' as each task depends on the one before it:
 
-![The Waterfall Model of Software Development]({{<static "images/1.4.2.1.png">}})
+![The Waterfall Model of Software Development](/images/1.4.2.1.png)
 
 Unfortunately, as this model is often implemented, the programmers responsible for writing the software are reassigned to other projects as the software moves into the testing phase.  Rather than employ valuable programmers as testers, most companies will hire less expensive workers to carry out the testing.  So either a skeleton crew of programmers is left to fix any errors that are found during the tests, or these are passed back to programmers already deeply involved in a new project.
 
@@ -19,7 +19,7 @@ The costs involved in fixing software errors also grow larger the longer the err
 
 [^nasa2004]: Jonette M. Stecklein, Jim Dabney, Brandon Dick, Bill Haskins, Randy Lovell, and Gregory Maroney. ["Error Cost Escalation Through the Project Life Cycle"](https://ntrs.nasa.gov/citations/20100036670), NASA, June 19, 2014.
 
-![Comparison of System Cost Factors Excluding Operations]({{<static "images/1.4.2.2.png">}})
+![Comparison of System Cost Factors Excluding Operations](/images/1.4.2.2.png")
 
 It is clear from the graph and the paper that the cost to fix a software error grows exponentially if the fix is delayed.  You probably have instances in your own experience that also speak to this - have you ever had a bug in a program you didn't realize was there until your project was nearly complete?  How hard was it to fix, compared to a error you found and fixed right away?
 

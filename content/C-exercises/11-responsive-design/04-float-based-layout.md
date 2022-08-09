@@ -36,13 +36,13 @@ We use the child selection operator `>` to apply the css rules to all `<div>` el
 
 If we run the page now, we'll see that we have our columns:
 
-![The three-column float layout]({{<static "images/3.3.5.1.png">}})
+![The three-column float layout](/images/3.3.5.1.png)
 
 But when you scroll down, you'll also see a problem:
 
-![A float error]({{<static "images/3.3.5.2.png">}})
+![A float error](/images/3.3.5.2.png)
 
-Becuase the use of `float` takes elements out of the usual flow layout algorithm, the elements that follow them often end up in unexpected positions.  We have to explictly turn the normal flow layout back on when we're done with our floating elements with a `clear` property, which can be `left`, `right`, or `both`.
+Because the use of `float` takes elements out of the usual flow layout algorithm, the elements that follow them often end up in unexpected positions.  We have to explicitly turn the normal flow layout back on when we're done with our floating elements with a `clear` property, which can be `left`, `right`, or `both`.
 
 This normally is done by adding an empty div with the `clear: both` rule applied after the last column; a technique called a [clearfix](https://developer.mozilla.org/en-US/docs/Web/CSS/clear).  Let's go ahead and declare our clearfix class in _wwwroot/css/site.css_:
 
@@ -60,9 +60,9 @@ And then in our _Pages/Index.cshtml_, we'll add a `<div>` element with that clas
 
 Now when we render the page, we'll see the columns behave as expected:
 
-!The float error fixed]({{<static "images/3.3.5.3.png">}})
+!The float error fixed](/images/3.3.5.3.png)
 
-However, our page is not repsonsive at this point.  So we'll need to add a media query to establish a responsive breakpoint for smaller screens.  Let's use 490 pixels as our breakpoint.  We'll need to add this new rule _below_ the ones we created for our `.float-columns` in _wwwroot/css/site.css_, as we will be overriding those when the media query is true:
+However, our page is not responsive at this point.  So we'll need to add a media query to establish a responsive breakpoint for smaller screens.  Let's use 490 pixels as our breakpoint.  We'll need to add this new rule _below_ the ones we created for our `.float-columns` in _wwwroot/css/site.css_, as we will be overriding those when the media query is true:
 
 ```css
 @media (max-width: 490px) {
@@ -74,4 +74,4 @@ However, our page is not repsonsive at this point.  So we'll need to add a media
 }
 ```
 
-We simply reverse the rules we applied to the columns by setting the properties back to thier defaults.  Now the columns will change to thier stacked appearance when we look at the site on a smaller screen.
+We simply reverse the rules we applied to the columns by setting the properties back to their defaults.  Now the columns will change to their stacked appearance when we look at the site on a smaller screen.

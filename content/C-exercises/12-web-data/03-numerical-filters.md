@@ -109,7 +109,7 @@ We can make our search bar span both columns with `grid-column-start` and `grid-
 }
 ```
 
-Notice too that for CSS, we start counting at 1, not 0.  The filters and the results will fall in the next row automatically, each taking up thier own respective grid cell.  You can read more about the grid layout in [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
+Notice too that for CSS, we start counting at 1, not 0.  The filters and the results will fall in the next row automatically, each taking up their own respective grid cell.  You can read more about the grid layout in [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
 Let's go ahead and use flexbox to lay out our filters in a column:
 
@@ -140,7 +140,7 @@ Also, let's remove most of the margin below our `<h4>` elements:
 
 The resulting page looks much cleaner:
 
-![The Styled Page]({{<static "images/6.8.5.png">}})
+![The Styled Page](/images/6.8.5.png)
 
 ## Capturing the Filter Values
 
@@ -340,7 +340,7 @@ Notice too, that in each of these cases we're treating the range as _inclusive_ 
 
 Now we can filter by IMDB rating:
 
-![Filtering By IMDB]({{<static "images/6.8.6.png">}})
+![Filtering By IMDB](/images/6.8.6.png)
 
 ## Finishing Up
 

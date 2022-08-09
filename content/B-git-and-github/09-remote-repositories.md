@@ -11,7 +11,7 @@ GitHub is a web service that specifically hosts remote git repositories and allo
 
 At this point in your learning, you will likely be using a repository hosted on GitHub (usually created by GitHub classroom when you accept an assignment) as a remote repository you are cloning to one or more local repositories.  For example, you'll likely clone your project on both your home computer and a lab computer so you can work in both locations.
 
-![Common remote repository setup diagram]({{<static "images/b.9.1.png">}})
+![Common remote repository setup diagram](/images/b.9.1.png)
 
 A clone is a copy of the project in its current state, including the hidden _.git_ folder. This means it is _also_ a complete git repository!  The code will be in the same state as that of the currently active branch of the repo it was cloned from (for a project cloned from GitHub, this would be the main/master branch).  
 
@@ -22,7 +22,7 @@ While the cloned repository is a copy of an existing repository, it will not con
 
 Thus, in our diagram above, the home, lab, and GitHub copies of our repository all start exactly the same, with commit **ba4**.  But we can make changes to any one of those repositories and commit them, that repository will be _ahead_ of the other repositories, which will not have that commit. We can see this in the diagram below, where we have added commit **a4e** to the repository on our Lab PC:
 
-![Lab PC with extra commit]({{<static "images/b.9.2.png">}})
+![Lab PC with extra commit](/images/b.9.2.png)
 
 To get this same commit on our other remote repositories, we'll use _push_ and _pull_ commands.
 
@@ -36,7 +36,7 @@ $ git push origin main
 
 This pushes our new commit to the GitHub repository, so it now also has that commit:
 
-![GitHub with extra commit]({{<static "images/b.9.3.png">}})
+![GitHub with extra commit](/images/b.9.3.png)
 
 Because GitHub does not have a reference to our Home PC's repository, we can't push the commit there.  Instead, we'll need to _pull_ it directly from our home computer.
 
@@ -50,7 +50,7 @@ $ git pull origin main
 
 This copies any commits on the GitHub repository into the Home PC repository:
 
-![Home PC with extra commit]({{<static "images/b.9.4.png">}})
+![Home PC with extra commit](/images/b.9.4.png)
 
 If we later go home and want to get those same commits to our home repository
 

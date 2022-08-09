@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 You have probably noticed that as our use of WPF grows more sophisticated, our controls start getting large, and often filled with complex logic.  You are not alone in noticing this trend.  Microsoft architects Ken Cooper and Ted Peters also struggled with the idea, and introduced a new software architectural pattern to help alleviate it: [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel).  This approach splits the user interface code into two classes: the View (the XAML + codebehind), and a ViewModel, which applies any logic needed to format the data from the model object into a form more easily bound and consumed by the view.
 
-![MVVM Pattern]({{<static "images/MVVMPattern.png">}})
+![MVVM Pattern](/images/MVVMPattern.png)
 
 There are several benefits to this pattern:
 

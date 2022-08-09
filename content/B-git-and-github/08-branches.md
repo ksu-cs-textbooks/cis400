@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Branches are a powerful mechanisms for working on different versions of your code.  The name "branch" is derived from visualizing a repository as a tree structure, with each commit being a node in the tree.  For a simple repository, this tree structure is pretty boring - just a straight line as each node has only one child:
 
-![Simple repository with one branch]({{<static "/images/b.8.1.png">}})
+![Simple repository with one branch](/images/b.8.1.png)
 
 This default branch was historically named "master", though recent practice has shifted to using the term "main".  GitHub provides [guidance and support for renaming existing project branches](https://github.com/github/renaming).  
 
@@ -20,11 +20,11 @@ $ git checkout experiment
 
 We now have a new branch, experiment, branching from commit **574ed9f**:
 
-![The same repository with a new branch]({{<static "/images/b.8.2.png">}})
+![The same repository with a new branch](/images/b.8.2.png)
 
 While experiment is the checked out branch, any commits we make are placed on it instead of the main branch.  Let's assume we create two commits on the experiment branch; our tree will now look like:
 
-![Two commits on the experimental branch]({{<static "images/b.8.3.png">}})
+![Two commits on the experimental branch](/images/b.8.3.png)
 
 We can switch back to the main branch at any point with **git checkout main**.  When we do so, our code will be reverted back to how it was in the last commit to the main branch (commit **573ed9f**).  If it turns out our experiment was a flop, we can forget about the experiment branch and the changes we made to it - we're back to a clean working build at the point before we started the experiment.
 

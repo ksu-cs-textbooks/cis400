@@ -5,7 +5,7 @@ weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
 
-All WPF controls (including the layout controls we've already seen) derive from common base classes, i.e. [`UIElement`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.uielement?view=netcore-3.1) and [`FrameworkElement`](), which means they all inherit common properties.  Some of the most commonly used are described here.
+All WPF controls (including the layout controls we've already seen) derive from common base classes, i.e. [`UIElement`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.uielement?view=windowsdesktop-6.0) and [`FrameworkElement`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement?view=windowsdesktop-6.0), which means they all inherit common properties.  Some of the most commonly used are described here.
 
 ### Size & Placement Modifying Properties
 
@@ -137,7 +137,7 @@ As most controls prominently feature text, it is important to discuss the proper
 
 #### Font Family
 
-The [`FontFamily`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontfamily?view=netcore-3.1) property sets the font used by the control.  This font needs to be installed on the machine.  You can supply a single font, i.e.:
+The [`FontFamily`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontfamily?view=windowsdesktop-6.0) property sets the font used by the control.  This font needs to be installed on the machine.  You can supply a single font, i.e.:
 
 ```xml
 <TextBlock FontFamily="Arial">
@@ -151,17 +151,17 @@ Or a list of font families to supply fallback options if the requested font is n
 
 #### Font Size 
 
-The [`FontSize`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontsize?view=netcore-3.1) property determines the size of the font used in the control.
+The [`FontSize`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontsize?view=windowsdesktop-6.0) property determines the size of the font used in the control.
 
 #### Font Style 
 
-The [`FontStyle`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontstyle?view=netcore-3.1) property sets the style of the font used. This can include `"Normal"`, `"Italic"`, or `"Oblique"`.  Italic is typically defined in the font itself (and created by the font creator), while Oblique is created from the normal font by applying a mathematical rendering transformation, and can be used for fonts that do not have a defined italic style.  
+The [`FontStyle`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontstyle?view=windowsdesktop-6.0) property sets the style of the font used. This can include `"Normal"`, `"Italic"`, or `"Oblique"`.  Italic is typically defined in the font itself (and created by the font creator), while Oblique is created from the normal font by applying a mathematical rendering transformation, and can be used for fonts that do not have a defined italic style.  
 
-![Font Styles]({{<static "images/2.1.6.16.png">}})
+![Font Styles](/images/2.1.6.16.png)
 
 #### Font Weight 
 
-The `FontWeight` refers to how thick a stroke is used to draw the font.  It can be set to values like `"Light"`, `"Normal"`, `"Bold"`, or `"Ultra Bold"`.  A list of all available options can be found [here](https://docs.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netcore-3.1#remarks).
+The `FontWeight` refers to how thick a stroke is used to draw the font.  It can be set to values like `"Light"`, `"Normal"`, `"Bold"`, or `"Ultra Bold"`.  A list of all available options can be found [here](https://docs.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=windowsdesktop-6.0#remarks).
 
 #### Text Alignment
 
@@ -177,7 +177,7 @@ There are often times in working with a GUI where you might want to disable or e
 
 The `IsEnabled` property is a boolean that indicates if this control is currently enabled. It defaults to `true`.  Exactly what 'enabled' means for a control is specific to that kind of control, but usually means the control cannot be interacted with.  For example, a button with `IsEnabled=false` cannot be clicked on, and will be rendered grayed out, i.e.:
 
-![Enabled vs. Disabled Buttons]({{<static "images/2.1.6.1.png">}})
+![Enabled vs. Disabled Buttons](/images/2.1.6.1.png)
 
 ```xml
 <Grid>
@@ -194,7 +194,7 @@ The `IsEnabled` property is a boolean that indicates if this control is currentl
 
 A similar effect can be obtained by changing an element's `Opacity` property, a double that ranges from 0.0 (completely transparent) to 1.0 (completely solid).  Below you can see two `<TextBlock>` elements, with the one on the left set to an opacity of 0.40:
 
-![Opacity Example]({{<static "images/2.1.6.2.png">}})
+![Opacity Example](/images/2.1.6.2.png)
 
 ```xml
 <Grid>
@@ -217,7 +217,7 @@ Alerting an elements' opacity does not have any effect on its functionality, i.e
 
 Finally, the Visible property alters how the element is considered in the WPF rendering algorithm.  It has three possible values: `"Visible"`, `"Hidden"`, and `"Collapsed"`. The default value is `"Visible"`, and the element renders normally, as "Button One" does in the example below:
 
-![Visible Visibility Example]({{<static "images/2.1.6.3.png">}})
+![Visible Visibility Example](/images/2.1.6.3.png)
 
 ```xml
 <StackPanel>
@@ -228,7 +228,7 @@ Finally, the Visible property alters how the element is considered in the WPF re
 
 The `"Hidden"` value will hide the element, but preserve its place in the layout.  A hidden element cannot be interacted with, so this is similar to setting the `Opacity` to 0 and `IsEnabled` to false:
 
-![Hidden Visibility Example]({{<static "images/2.1.6.4.png">}})
+![Hidden Visibility Example](/images/2.1.6.4.png)
 
 ```xml
 <StackPanel>
@@ -239,7 +239,7 @@ The `"Hidden"` value will hide the element, but preserve its place in the layout
 
 Finally, the `"Collapsed"` value will leave the element out of the layout calculations, as though it were not a part of the control at all.  A hidden element cannot be interacted with. Note that in the example below, "Button Two" has been rendered in the space previously occupied by "Button One":
 
-![Collapsed Visibility Example]({{<static "images/2.1.6.5.png">}})
+![Collapsed Visibility Example](/images/2.1.6.5.png)
 
 ```xml
 <StackPanel>
@@ -255,9 +255,9 @@ Simply put, a brush determines how to paint graphical objects.  This can be as s
 
 #### Solid Color Brushes
 
-What we've been using up to this point have been [`SolidColorBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.solidcolorbrush?view=netcore-3.1) objects.  This is the simplest of the brush classes, and simply paints with a solid color, i.e.:
+What we've been using up to this point have been [`SolidColorBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.solidcolorbrush?view=windowsdesktop-6.0) objects.  This is the simplest of the brush classes, and simply paints with a solid color, i.e.:
 
-![Solid Color Brush Example]({{<static "images/2.1.6.6.png">}})
+![Solid Color Brush Example](/images/2.1.6.6.png)
 
 ```xml
 <TextBlock Foreground="BlueViolet" Background="DarkSeaGreen" FontSize="25">
@@ -265,7 +265,7 @@ What we've been using up to this point have been [`SolidColorBrush`](https://doc
 </TextBlock>
 ```
 
-The simplest way to set the color in XAML is to use a value from the predefined [brush name list](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.brushes?view=netcore-3.1#remarks), like the `"BlueViolet"` and `"DarkSeaGreen"` in the example.
+The simplest way to set the color in XAML is to use a value from the predefined [brush name list](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.brushes?view=windowsdesktop-6.0#remarks), like the `"BlueViolet"` and `"DarkSeaGreen"` in the example.
 
 Alternatively, you can use a hexadecimal number defining the red, green, and blue channels in that order, i.e. to use K-State purple and white (as defined in the [K-State Brand Guide](https://www.k-state.edu/vpcm/branding/KansasStateUniversity-BrandGuide.pdf)) we'd use:
 
@@ -275,12 +275,12 @@ Alternatively, you can use a hexadecimal number defining the red, green, and blu
 </TextBlock>
 ```
 
-The various formats the hex values can be given are detailed [here](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.solidcolorbrush?view=netcore-3.1#xaml-attribute-usage)
+The various formats the hex values can be given are detailed [here](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.solidcolorbrush?view=windowsdesktop-6.0#xaml-attribute-usage)
 
 
 #### Gradient Brushes
 
-Gradient brushes gradually transition between colors.  There are two kinds of gradient brushes in WPF: with a [`LinearGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.lineargradientbrush?view=netcore-3.1) the brush gradually changes along a line.  With a [`RadialGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.radialgradientbrush?view=netcore-3.1), the color changes radially from a center point.
+Gradient brushes gradually transition between colors.  There are two kinds of gradient brushes in WPF: with a [`LinearGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.lineargradientbrush?view=windowsdesktop-6.0) the brush gradually changes along a line.  With a [`RadialGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.radialgradientbrush?view=windowsdesktop-6.0), the color changes radially from a center point.
 
 In both cases, the gradient is defined in terms of `<GradientStops>` - a distance along the line (or from the center) where the expected color value is defined.  In the spaces between gradient stops, the color value is interpolated between the two stops on either side of the point.  The gradient stop needs both an `Offset` value (a double indicating the percentage of how far along the line or from the center this stop falls, between 0.0 and 1.0) and a `Color` value (which can be defined as with solid color brushes).
 
@@ -305,7 +305,7 @@ For example, the XAML:
 
 Produces this rainbow gradient:
 
-![Rainbow Linear Gradient Example]({{<static "images/2.1.6.8.png">}})
+![Rainbow Linear Gradient Example](/images/2.1.6.8.png)
 
 Further, the line along with the linear gradient is created is defined by the `StartPoint` and `EndPoint` properties of the `<LinearGradientBrush>`.  These points are relative to the area the brush is covering (i.e. the space occupied by the element), and fall in the range of [0.0 .. 1.0].  The default (as seen above) is a diagonal line from the upper left corner (0,0) to the lower right corner (1.0, 1.0).
 
@@ -328,7 +328,7 @@ To make the above gradient fall in the center half of the element, and be horizo
 </TextBlock>
 ```
 
-![Rainbow Linear Gradient with Start and End Points Example]({{<static "images/2.1.6.9.png">}})
+![Rainbow Linear Gradient with Start and End Points Example](/images/2.1.6.9.png)
 
 A `<RadialGradientBrush>` is defined similarly through the use of `GradientStops`, only this time they are in relation to the center around which the gradient radiates:
 
@@ -349,7 +349,7 @@ A `<RadialGradientBrush>` is defined similarly through the use of `GradientStops
 </TextBlock>
 ```
 
-![Rainbow Radial Gradient Example]({{<static "images/2.1.6.10.png">}})
+![Rainbow Radial Gradient Example](/images/2.1.6.10.png)
 
 The gradient fills an ellipse defined by the `Center` property and the `RadiusX` and `RadiusY` properties.  By default these values are (0.5. 0.5), 0.5, and 0.5 respectively.  Like other gradient properties, they are doubles between 0.0 and 1.0.  Finally, the gradient emanates from the `GradientOrigin`, also a point with values defined by this coordinate system.
 
@@ -369,7 +369,7 @@ To center the above gradient in the left half of the block, we would therefore u
 </TextBlock.Background>
 ```
 
-![Rainbow Positioned Radial Gradient Example]({{<static "images/2.1.6.11.png">}})
+![Rainbow Positioned Radial Gradient Example](/images/2.1.6.11.png)
 
 And of course, we can use a gradient for a `Foreground` property as well:
 
@@ -390,11 +390,11 @@ And of course, we can use a gradient for a `Foreground` property as well:
 </TextBlock>
 ```
 
-![Gradient Foreground Example]({{<static "images/2.1.6.12.png">}})
+![Gradient Foreground Example](/images/2.1.6.12.png)
 
 #### Image Brushes
 
-To draw a saved image, we use an [`ImageBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imagebrush?view=netcore-3.1), setting its `ImageSource` property to the image we want to use.  In XAML, that can be as simple as:
+To draw a saved image, we use an [`ImageBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imagebrush?view=windowsdesktop-6.0), setting its `ImageSource` property to the image we want to use.  In XAML, that can be as simple as:
 
 ```xml
 <Button Margin="40" Foreground="White" FontSize="30">
@@ -405,7 +405,7 @@ To draw a saved image, we use an [`ImageBrush`](https://docs.microsoft.com/en-us
 </Button>
 ```
 
-![Image Brush Example]({{<static "images/2.1.6.13.png">}})
+![Image Brush Example](/images/2.1.6.13.png)
 
 We can apply image brushes to any WPF control, allowing for some interesting layering effects, i.e.:
 
@@ -433,16 +433,16 @@ We can apply image brushes to any WPF control, allowing for some interesting lay
 </Grid>
 ```
 
-![Image Brush Layering Example]({{<static "images/2.1.6.14.png">}})
+![Image Brush Layering Example](/images/2.1.6.14.png)
 
 You probably notice that the dish image on the button is distorted.  We can correct this by changing the [`Stretch`](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/graphics-multimedia/tilebrush-overview?view=netframeworkdesktop-4.8#the-base-tile) property.  The possible values are: `"None"`, `"Fill"`, `"Uniform"`, and `"UniformToFill"`.  This graphic from the documentation visual shows these properties:
 
-![The applied Stretch property]({{<static "images/2.1.6.17.png">}})
+![The applied Stretch property](/images/2.1.6.17.png)
 
 The `ImageBrush` extends the `TileBrush`, so the image can actually be _tiled_ if the tile size is set to be smaller than the element that it is painting. The [TileBrush Overview](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/graphics-multimedia/tilebrush-overview) provides a detailed breakdown of applying tiling.
 
 
 {{% notice warning %}}
 When using images with Visual Studio, it is important to understand how those are used and distributed.  You should make sure the images are physically located within the project folder (so that they are included in your source control).  Additionally, you want to mark the property "Copy to Output Directory" to either "Copy Always" or "Copy if Newer."  When distributing your project, these files will also need to be distributed, or the image will be unavailable to your executable.
-![Copy to Output Directory]({{<static "images/2.1.6.15.png">}})
+![Copy to Output Directory](/images/2.1.6.15.png)
 {{% /notice %}}

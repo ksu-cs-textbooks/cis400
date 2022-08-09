@@ -46,7 +46,7 @@ public class Planet {
 
 It describes a planet as having a mass and a radius. But a class does more than just labeling the properties and fields and providing methods to mutate the state they contain.  It also specifies how *memory needs to be allocated* to hold those values as the program runs. In memory, we would need to hold _both_ the mass and radius values.  These are stored side-by-side, as a series of bits that are on or off.  You probably remember from CIS 115 that a `double` is stored as a **sign bit**, **mantissa** and **exponent**.  This is also the case here - a C# `double` requires 64 bits to hold these three parts, and we can represent it with a memory diagram:
 
-![The Planet memory diagram]({{<static "images/1.1.7.1.png">}})
+![The Planet memory diagram](/images/1.1.7.1.png)
 
 We can create a specific planet by invoking its constructor, i.e.:
 
@@ -56,7 +56,7 @@ new Planet(1, 1);
 
 This *allocates* (sets aside) the memory to hold the planet, and populates the mass and radius with the supplied values.  We can represent this with a memory diagram:
 
-![The constructed planet's memory diagram]({{<static "images/1.1.7.2.png">}})
+![The constructed planet's memory diagram](/images/1.1.7.2.png)
 
 With memory diagrams, we typically write the values of variables in their human-readable form.  Technically the values we are storing are in binary, and would each be `0000000000010000000000000000000000000000000000000000000000000001`, so our overall object would be the bits: `00000000000100000000000000000000000000000000000000000000000000010000000000010000000000000000000000000000000000000000000000000001`.
 
@@ -70,7 +70,7 @@ Planet earth = new Planet(1, 1);
 
 Unlike our `double` and other primitive values, this allocated memory holds a _reference_ (an starting address of the memory where the object was allocated).  We indicate this with a box and arrow connecting the variable and object in our memory diagram:
 
-![The memory diagram for the earth variable]({{<static "images/1.1.7.3.png">}})
+![The memory diagram for the earth variable](/images/1.1.7.3.png)
 
 A reference is either 32 bits (on a computer with a 32-bit CPU) or 64 bits (on a computer with a 64-bit CPU), and essentially is an offset from the memory address $0$ indicating where the object will be located in memory (in the computer's RAM).  You'll see this in far more detail in **CIS 450 - Computer Architecture and Operations**, but the important idea for now is the variable stores _where the object is located in memory_ **not** _the object's data itself_.  This is also why if we define a class variable but don't assign it an object, i.e.:
 
@@ -78,7 +78,7 @@ A reference is either 32 bits (on a computer with a 32-bit CPU) or 64 bits (on a
 Planet mars;
 ```
 
-![The memory diagram for the mars variable]({{<static "images/1.1.7.4.png">}})
+![The memory diagram for the mars variable](/images/1.1.7.4.png)
 
 The value of this variable will be `null`.  It's because it doesn't point anywhere!
 
@@ -88,7 +88,7 @@ Returning to our Earth example, `earth` is an *instance* of the class `Planet`. 
 Planet mars = new Planet(0.107, 0.53);
 ```
 
-![The memory diagram for the initialized mars variable]({{<static "images/1.1.7.5.png">}})
+![The memory diagram for the initialized mars variable](/images/1.1.7.5.png)
 
 We can even create a **Planet** instance to represent one of the exoplanets discovered by [NASA’s TESS](https://www.nasa.gov/tess-transiting-exoplanet-survey-satellite "Testing Exoplanet Survey Satellite"):
 
@@ -96,7 +96,7 @@ We can even create a **Planet** instance to represent one of the exoplanets disc
 Planet hd21749b = new Planet(23.20, 2.836);
 ```
 
-![The memory diagram for three planets]({{<static "images/1.1.7.6.png">}})
+![The memory diagram for three planets](/images/1.1.7.6.png)
 
 Let’s think more deeply about the idea of a class as a blueprint.  A blueprint for what, exactly?  For one thing, it serves to describe the *state* of the object, and helps us label that state.  If we were to check our variable **mars’** radius, we do so based on the property **Radius** defined in our class:
 

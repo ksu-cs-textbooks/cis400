@@ -56,11 +56,11 @@ However, we do have one new thing we haven't seen before - a new use of the ques
 
 Remember, a `float` is a value type, and normally you cannot set a value type to `null`.  By making it a nullable type, we effectively have wrapped it in an object (technically, a `Nullable<T>` object).  So instead of `RottenTomatoesRating` referencing the memory where the value of the float is stored, it is now storing a _reference_ to that location in memory.  This reference can itself be `null` if it isn't pointing anywhere.
 
-We need all of these properties to have the possiblity to be `null`, as the data we are working with does not have values for all of them.  Let's look at that data next. 
+We need all of these properties to have the possibility to be `null`, as the data we are working with does not have values for all of them.  Let's look at that data next. 
 
 ### Serialized Movie Data
 
-The _movies.json_ file contains data in a JSON format.  JSON stands for _Javascript Seriialization Object Notation_.  As the name suggests, it is a [serialization](https://en.wikipedia.org/wiki/Serialization) format - a way of expressing the state of a data object in text.  While it originates with JavaScript, JSON has become a popular format for exchanging data in many programming languages.  Let's take a closer look at this file's structure.
+The _movies.json_ file contains data in a JSON format.  JSON stands for _Javascript Serialization Object Notation_.  As the name suggests, it is a [serialization](https://en.wikipedia.org/wiki/Serialization) format - a way of expressing the state of a data object in text.  While it originates with JavaScript, JSON has become a popular format for exchanging data in many programming languages.  Let's take a closer look at this file's structure.
 
 The first movie in the file is _The Land Girls_:
 
@@ -162,7 +162,7 @@ Let's change the header `Hello World` to say `Movies`.  And below that, let's de
 ```
 Go ahead and run your program.  Your page should look like:
 
-![The refactored index page]({{<static "images/6.7.1.png">}})
+![The refactored index page](/images/6.7.1.png)
 
 This approach would work fine, but there are 3,201 entries in our database - do you really want to do that by hand?
 
@@ -182,7 +182,7 @@ Notice that inside the body of the `foreach` loop, we use regular HTML to declar
 
 Each of these is in turn concatenated into the page as the `foreach` loop is processed, resulting in a list of all the movie titles in the database.  Run the program and see for yourself:
 
-![The full list of movies]({{<static "images/6.7.2.png">}})
+![The full list of movies](/images/6.7.2.png)
 
 They're all there.  You can scroll all the way to the bottom.
 
@@ -204,9 +204,9 @@ It might be interesting to see more information about the movies than just the t
 </ul>
 ```
 
-Notice that unlike our WPF XAML, we can nest as many children in an HTML element as we want!  If we run the progam now:
+Notice that unlike our WPF XAML, we can nest as many children in an HTML element as we want!  If we run the program now:
 
-![The detailed movie list]({{<static "images/6.7.3.png">}})
+![The detailed movie list](/images/6.7.3.png)
 
 Well, it works, but it's also underwhelming (and a bit difficult to interpret).  Notice that our first few movies don't have all the rating properties, so there are large blank spaces.
 
@@ -268,7 +268,7 @@ You might wonder why we put the list in an unordered list at all, if we're just 
 
 Remember, it's not just humans that read the internet.  Many bots and algorithms do as well, and they typically won't use the lens of CSS styling - they'll be reading the raw HTML.
 
-We'll make our title headers a dark slate gray, have a slightly larger-then-normal text, and remove the margins so that there are no large spacedb between the header and the text is directly above and beneath them:
+We'll make our title headers a dark slate gray, have a slightly larger-then-normal text, and remove the margins so that there are no large space between the header and the text is directly above and beneath them:
 
 ```css
 .title {
@@ -294,9 +294,9 @@ Finally, let's lighten the color of the MPAA rating and genre:
 
 While the MPAA ratings convey the age-appropriateness of a movie, the IMDB and Rotten Tomatoes ratings provide a sense of how much people _enjoy_ the films.  Since this probably information our readers might want to see to help them judge what films to look at, it might be nice to call attention to them in some way.
 
-What if we put them into thier own boxes, and position them on the right side of the screen, opposite the title?  Something like:
+What if we put them into their own boxes, and position them on the right side of the screen, opposite the title?  Something like:
 
-![Mockup of styled list item]({{<static "images/6.7.4.png">}})
+![Mockup of styled list item](/images/6.7.4.png)
 
 There are many ways of accomplishing this look, including the `float` property or using a `<table>` element.  But let's turn to one of the newer and more powerful css layout features, the flexbox layout.
 
@@ -348,7 +348,7 @@ ul.movie-list > li {
 }
 ```
 
-These can be combined with our earlier rule block with the same selector, or they can be declared seperately.
+These can be combined with our earlier rule block with the same selector, or they can be declared separately.
 
 We'll also use flexbox to make our ratings appear side-by-side:
 
@@ -389,7 +389,7 @@ It might be nice to label the two ratings, as Rotten Tomatoes is on a 100-point 
 }
 ```
 
-If you run your code at this point, you may notice your `<h3>` styles have stopped applying.  If we look at the selector, we'll see why.  It is currently: `ul.movie-list > li > h3`, which indicates the `<h3>` it applies to should be a direct child of the `<li>` tag.  We could swap to using `h3` instead, but this would apply to _all_ `<h3>` tags on our page.  Instead, let's swap the `>` for a space ` `, which indicates a decendant instead of a direct child.  In fact, we could drop the `li` as well:
+If you run your code at this point, you may notice your `<h3>` styles have stopped applying.  If we look at the selector, we'll see why.  It is currently: `ul.movie-list > li > h3`, which indicates the `<h3>` it applies to should be a direct child of the `<li>` tag.  We could swap to using `h3` instead, but this would apply to _all_ `<h3>` tags on our page.  Instead, let's swap the `>` for a space ` `, which indicates a descendant instead of a direct child.  In fact, we could drop the `li` as well:
 
 ```css
 ul.movie-list  h3 {
@@ -401,7 +401,7 @@ ul.movie-list  h3 {
 
 The end result is very close to our sketch:
 
-![The end result]({{<static "images/6.7.5.png">}})
+![The end result](/images/6.7.5.png)
 
 Clearly, CSS is a powerful tool.  It can be challenging to learn, but if you are going to be involved in web development, it is time well spent.
 

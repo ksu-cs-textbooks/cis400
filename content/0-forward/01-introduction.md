@@ -18,4 +18,4 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 ## Welcome Message
 Hello students, and welcome to CIS 400 - Object-Oriented Design, Implementation, and Testing.  My name is Nathan Bean, and I will be your instructor for this course.
 
-![Nathan Bean]({{<static "images/bean-bridge.jpg">}})
+![Nathan Bean](/images/bean-bridge.jpg)

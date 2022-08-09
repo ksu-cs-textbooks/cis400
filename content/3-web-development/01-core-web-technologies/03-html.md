@@ -24,7 +24,7 @@ You likely notice how similar this definition is to buttons in XAML.  As with XA
 
 Let's explore the parts of an HTML element in more detail.
 
-![HTML Element Structure]({{<static "images/html-element-structure.svg">}})
+![HTML Element Structure](/images/html-element-structure.svg)
 
 ### The Start Tag
 

@@ -35,19 +35,19 @@ While we can definitely stretch our browser window to try different sizes, there
 
 First, set Visual Studio to use Chrome as the browser it launches your website with.  From the build target dropdown, select the 'Web Browser' option, and select 'Google Chrome':
 
-![Setting Chrome as the build target]({{<static "images/3.3.3.1.png">}})
+![Setting Chrome as the build target](/images/3.3.3.1.png)
 
 Now run your program. When Chrome loads, turn on developer tools by either pressing `CTRL` + `SHIFT` + `I` or right-clicking on the page and selecting 'Inspect'.  This launches the developer tools in thier own pane in the window.  At the top of the developer pane is an icon that resembles a cellphone in front of a screen.  
 
-![The Device Toolbar toggle button]({{<static "images/3.3.3.2.png">}})
+![The Device Toolbar toggle button](/images/3.3.3.2.png)
 
 Clicking it will toggle the device toolbar, which allows you to emulate different devices, choosing from several common phones and tables, or use the 'responsive' category to set a custom size:
 
-![The device selection dropdown]({{<static "images/3.3.3.3.png">}})
+![The device selection dropdown](/images/3.3.3.3.png)
 
 In addition, you can change the orientation of the device with the rotate button:
 
-![The device selection dropdown]({{<static "images/3.3.3.4.png">}})
+![The device selection dropdown](/images/3.3.3.4.png)
 
 Try selecting a mobile phone and then using the rotate button to change the orientation.  Watch how your `<h1>` elements change color!
 

@@ -10,7 +10,7 @@ Now that we've seen how to dynamically create the content of a Razor Page on the
 
 As software developers, we need to anticipate how our users will likely want to use the software we are developing.  And with that in mind, we need to develop user interfaces that allow the user to communicate those needs to the software we are writing as concisely as possible.  Remember that in HTTP, all communication between the client (and its user) and the server (our web application), is mediated through the request-response mechanism:
 
-![Request-Response Mechanism]({{<static "images/request-response-pattern.png">}})
+![Request-Response Mechanism](/images/request-response-pattern.png)
 
 Thus, any information the user wants to supply the server is typically communicated _through_ a request.  HTML provides a mechanism for enabling this communication in a structured way - forms.  A `<form>` element, when submitted, serializes the values of all `<input>` elements contained within it and submits them to the server in the request.
 

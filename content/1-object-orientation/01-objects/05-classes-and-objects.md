@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 The module-based encapsulation suggested by Parnas and his contemporaries grouped state and behavior together into smaller, self-contained units.  Alan Kay and his co-developers took this concept a step farther.  Alan Kay was heavily influenced by ideas from biology, and saw this encapsulation in similar terms to _cells_.  
 
-![Typical Animal Cell]({{<static "images/1.1.5.1.png">}})
+![Typical Animal Cell](/images/1.1.5.1.png)
 
 Biological cells are also encapsulated - the complex structures of the cell and the functions they perform are all within a cell wall.  This wall is only bridged in carefully-controlled ways, i.e. cellular pumps that move resources into the cell and waste out. While single-celled organisms do exist, far more complex forms of life are made possible by many similar cells working together.
 

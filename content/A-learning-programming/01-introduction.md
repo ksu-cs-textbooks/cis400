@@ -9,4 +9,4 @@ You may have not given much thought to how you have been learning how to program
 
 [^backtothefuture]: This is a reference to the classic 1985 film "Back to the Future," in which Marty McFly (played by Michael J. Fox) travels back in time to save his scientist friend Doc Brown (played by Christopher Loyd). An advance warning: Many of my pop-culture references are going to be grounded in the 80's and 90's.  You may be more familiar with the animated show "Rick and Morty," which was inspired by Doc and Marty's relationship in the film.
 
-![Doc Brown asking about heavy problems]({{<static "images/a.1.1.jpg">}})
+![Doc Brown asking about heavy problems](/images/a.1.1.jpg)

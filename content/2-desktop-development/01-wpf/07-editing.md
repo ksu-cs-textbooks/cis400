@@ -7,8 +7,8 @@ date: 2018-08-24T10:53:26-05:00
 
 To create a new WPF control from within Visual Studio, we usually choose **"Add > User Control (WPF...)"** from the solution context menu.  
 
-![]({{<static "images/2.1.7.1.png">}})
-
+![Adding a UserControl in Visual Studio](/images/2.1.7.1.png)
+ 
 This creates two files, the _[filename].xaml_:
 
 ```xml
@@ -100,7 +100,7 @@ Note that for the namespace attribute, we also included the assembly information
 
 In Visual Studio, opening a WPF XAML file will open a special editor that provides a side-by-side visual and XAML code editors for the control:
 
-![The Visual Studio WPF XAML Editor]({{<static "images/2.1.7.2.png">}})
+![The Visual Studio WPF XAML Editor](/images/2.1.7.2.png)
 
 As you edit the XAML, it also updates the visualization in the visual editor.  Also, many element properties can be edited from the visual editor or the properties pane - and these changes are automatically applied to the XAML. And, just like with Windows Forms, you can drag controls from the toolbox into the visualization to add them to the layout.
 
@@ -108,7 +108,7 @@ However, you will likely find yourselves often directly editing the XAML. This i
 
 A couple of buttons in the editor deserve some closer attention:
 
-![Visual Studio WPF XAML Editor Button Detail 1]({{<static "images/2.1.7.3.png">}})
+![Visual Studio WPF XAML Editor Button Detail 1](/images/2.1.7.3.png)
 
 1. The zoom factor in the design editor
 2. Refreshes the design editor - sometimes it hangs on re-rendering, and you need to click this.
@@ -119,7 +119,7 @@ A couple of buttons in the editor deserve some closer attention:
 7. Toggles snapping to snap lines (those lines that appear between controls to help you align them)
 8. Toggles showing platform-only vs. all controls (for when targeting multiple platforms)
 
-![Visual Studio WPF XAML Editor Button Detail 2]({{<static "images/2.1.7.4.png">}})
+![Visual Studio WPF XAML Editor Button Detail 2](/images/2.1.7.4.png)
 
 9. Switches to a vertical split between the design editor and XAML editor 
 10. Switches to a horizontal split between the design editor and XAML editor

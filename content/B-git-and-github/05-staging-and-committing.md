@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 It is important to understand that Git doesn't save the changes to _every_ file in the directory when you create a commit - it only saves those files you have _staged_ to be committed. This extra step often confuses new Git users, but it exists to give you full control over what gets committed into your repository.
 
-![Staging Diagram]({{<static "images/b.5.3.png">}})
+![Staging Diagram](/images/b.5.3.png)
 
 It may help to understand how Git thinks about files.  Files in your repository directory fall into one of five categories - _untracked_, _unstaged_, _staged_, _committed_, and _ignored_.  
 
@@ -29,7 +29,7 @@ $ git status
 
 This will print the status of all uncommitted files:
 
-![The output of git status]({{<static "images/b.5.1.png">}})
+![The output of git status](/images/b.5.1.png)
 
 There are four files in the _ff_ directory: _example0.txt_, _example1.txt_, _example2.txt_, and _example3.txt_. In the output above, we see:
 
@@ -40,7 +40,7 @@ There are four files in the _ff_ directory: _example0.txt_, _example1.txt_, _exa
 
 Interestingly, you can still change a staged file.  If you do so, Git keeps track of the staged but not committed changes, _and_ the new, unstaged modifications.  For example, if we change _example2.txt_ and run **git status** again, we'll see:
 
-![The output of git status]({{<static "images/b.5.2.png">}})
+![The output of git status](/images/b.5.2.png)
 
 Notice _example2.txt_ now has _two_ statuses - corresponding to the staged and unstaged changes!
 

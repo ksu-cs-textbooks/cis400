@@ -31,7 +31,7 @@ And in our _wwwroot/css/site.css_, let's create an `@media` rule for printing:
 
 Any CSS enclosed in the curly braces following `@media print` will _only_ be applied when the page is printed.  In that case, we set any element wit the class `advertisement` to not display.  Try running the program, and in the browser, select _print preview_.
 
-![The printed webpage]({{<static "images/3.3.2.1.png">}})
+![The printed webpage](/images/3.3.2.1.png)
 
 The advertisement does not appear!  But it still shows up in the browser.  
 
