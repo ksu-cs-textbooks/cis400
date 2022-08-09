@@ -3,4 +3,4 @@
 /public/
 /resources/_gen
 
-.hugo-build.lock
+.hugo_build.lock
