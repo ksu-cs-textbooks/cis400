@@ -19,7 +19,7 @@ These have been installed in the classroom lab, as well as all Engineering and C
 ## Remote Desktop Access
 To use a remote desktop, you must first install a remote desktop client on your computer. Microsoft supplies a client for most platforms, which you can find links to and information about [here](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients?redirectedfrom=MSDN).
 
-The remote desktop server is behind a network firewall, so when accessing it from off-campus, you must be using the K-State Virtual Private Network (VPN).  It has its own client that also must be installed.  You can learn about K-State's VPN and download the client on [K-State's VPN Page](https://www.k-state.edu/its/security/secure-data/vpn/)
+The remote desktop server is behind a network firewall, so when accessing it from off-campus, you must be using the K-State Virtual Private Network (VPN).  It has its own client that also must be installed.  You can learn about K-State's VPN and download the client on [the K-State VPN Page](https://www.k-state.edu/its/security/secure-data/vpn/)
 
 For remote desktop servers, you can use either those maintained by [The Department of Computer Science](https://support.cs.ksu.edu/CISDocs/wiki/Remote_Access) or the [College of Engineering](https://cecs.engg.ksu.edu/labs/vdi).
 
