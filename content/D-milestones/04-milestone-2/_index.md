@@ -24,6 +24,7 @@ You will need to create
 
 * Enums (4) representing:
     * The serving sizes available
+    * The wings sauces available
 
 * Classes (4) representing entrees:
     * Brontowurst (Bratwurst with peppers and onions in a bun)
@@ -31,11 +32,11 @@ You will need to create
     * Pterodactyl Wings (Chicken wings glazed with a signature hot sauce)
     * Veloci-Wrap (A chicken cesar wrap) 
 
-* Classes (4) representing _poppers_ - bite-sized fried treats    
-    * Fried Cheesecake
-    * Fried Oreos
-    * Fried Bananas
-    * Apple Fritters
+* Classes (4) representing sides:
+    * Fryceritops
+    * Meteor Mac & Cheese
+    * Mezzorealla Sticks
+    * Triceritots
 
 ### Purpose:
 
@@ -157,7 +158,7 @@ You will need to define a class to represent Fryceritops (French fries), which c
 
 `Calories`: A readonly property of type `uint` with a value of 365 for small, 465 for medium, or 510 for large, _plus_ an additional 80 calories if `Sauce` is true.
 
-#### Meteor Mac & Cheeese
+#### Meteor Mac & Cheese
 You will need to define a class to represent Meteor Mac & Cheese (Mac and Cheese with sausage bites), which can be customized after creation.  You should name this class `MeteorMacAndCheese` and declare it in the file _MeteorMacAndCheese.cs_.  It should have the following properties:
 
 `Name`: A `string` that is "[Size] Meteor Mac & Cheese" where [Size] is the serving size of the item, i.e. "Small Meteor Mac & Cheese" for when the `Size` property is small.
