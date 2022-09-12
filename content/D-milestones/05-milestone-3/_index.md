@@ -306,7 +306,7 @@ It should have a `Price` get-only property of type `decimal`, a `Calories` get-o
 </table>
 
 #### Cretaceous Coffee
-The class `Cretaceous Coffee` should also be declared in the `DinoDiner.Data.Drinks` namespace. It should have a `Size` property of `ServingSize`. It should have a `Price` property of type `Decimal` that returns $0.75 for small, $1.25 for medium, and $2.00 for large.  It should also have a `Calories` property of type `uint` that returns 0 calories.  It should also have a boolean property `Cream` indicating the coffee is served with cream that defaults to `false`.  If it is `true`, the `Calories` property should instead return 64.
+The class `CretaceousCoffee` should also be declared in the `DinoDiner.Data.Drinks` namespace. It should have a `Size` property of `ServingSize`.  It should have a `Name` property of type `string` that returns "[Size] Cretaceous Coffee" where [Size] is the size of the coffee. It should have a `Price` property of type `Decimal` that returns $0.75 for small, $1.25 for medium, and $2.00 for large.  It should also have a `Calories` property of type `uint` that returns 0 calories.  It should also have a boolean property `Cream` indicating the coffee is served with cream that defaults to `false`.  If it is `true`, the `Calories` property should instead return 64.
 
 ### Refactor Existing Classes to use Inheritance
 Once you have the `Side` base class, refactor your existing side classes (`Fryceritops`, `MeteorMacAndCheese`, `MezzorellaSticks`, and `Triceritots`) to inherit from it.  You will also want to refactor their existing properties as they should now inherit many of them from the base class; some may be deleted, others will need to be refactored as overridden methods by adding the `override` keyword.  
