@@ -36,7 +36,7 @@ You will need to:
 This milestone serves to introduce and utilize aspects of polymorphism including base classes, abstract base classes, abstract methods, virtual methods, and method overriding.  While the actual programming involved is straightforward, the concepts can be challenging to master. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
 
 ### Abstract Base Classes
-You will need to create a base class for each of the kinds of items served at GyroScope: _Entrees_, _Sides_, and _Drinks_. Because you will never instantiate one of these classes directly i.e. you would never write:
+You will need to create a base class for each of the kinds of items served at Dino Diner: _Entrees_, _Sides_, and _Drinks_. Because you will never instantiate one of these classes directly i.e. you would never write:
 
 ```csharp
 Side side = new Side();
@@ -88,7 +88,7 @@ namespace DinoDiner.Data.Entrees
 ### Create a Burger Base Class
 Dino Diner offers a completely customizable burger, with several 'standard' configurations. To support this approach, you will want to create a base Burger class that contains _all_ the possible Burger ingredients available at Dino Diner.  This base class should be named `Burger` and should inherit from the `Entree` class.  The other burger classes (`TRexTriple`, `CarnotaurusCheeseburger`, `DeinonychusDouble`, and `AllosaurusAllAmericanBurger`) and set the appropriate default values for the boolean and enumeration properties through a parameterless constructor.  
 
-The burger should provide a `Patties` property of type `Unit` indicating the number of patties it is served with. A single pattie is 204 calories, and adds $1.50 to the price of the burger.
+The burger should provide a `Patties` property of type `Uint` indicating the number of patties it is served with. A single pattie is 204 calories, and adds $1.50 to the price of the burger.
 
 The other burger ingredients should be represented with `bool` properties and are have the following properties:
 
@@ -165,14 +165,14 @@ You will need to create a new enum in the `DinoDiner.Data.Enums` namespace to re
 * `Cola`
 * `CherryCola`
 * `DoctorDino`
-* `Lemonade`
+* `LemonLime`
 * `DinoDew`
 
 ### Create new Classes
 You will need to create three new classes, `TRexTriple`, `CarnotaurusCheeseburger`, `DeinonychusDouble`, `AllosaurusAllAmericanBurger`, `Plilosoda`, and `Cretaceous Coffee`.
 
 #### T-Rex Triple
-The class `TRexTriple` should be declared in the `DinoDiner.Data.Entrees` namespace.  It should inherit from the `Burger` base class.  The default configuration is three patties served with Tomato, Ketchup, Mayo, Pickle, Onion, Lettuce, and Tomato. The name should always be "T-Rex Triple".
+The class `TRexTriple` should be declared in the `DinoDiner.Data.Entrees` namespace.  It should inherit from the `Burger` base class.  The default configuration is three patties served with Ketchup, Mayo, Pickle, Onion, Lettuce, and Tomato. The name should always be "T-Rex Triple".
 
 #### Carnotaurus Cheeseburger
 The class `CarnotaurusCheeseburger` should be declared in the `DinoDiner.Data.Entrees` namespace.  It should inherit from the `Burger` base class.  The default configuration is one patties served with Tomato, Ketchup, Pickle, and AmericanCheese. The name should always be "Carnotaurus Cheeseburger".
@@ -201,35 +201,35 @@ It should have a `Price` get-only property of type `decimal`, a `Calories` get-o
     <td>Small</td>
     <td>$1.00</td>
     <td>180</td>
-    <td>Small Cola Pilosoda</td>
+    <td>Small Cola Plilosoda</td>
   </tr>
   <tr>
     <td>CherryCola</td>
     <td>Small</td>
     <td>$1.00</td>
     <td>100</td>
-    <td>Small Cherry Cola Pilosoda</td>
+    <td>Small Cherry Cola Plilosoda</td>
   </tr>
   <tr>
     <td>Doctor Dino</td>
     <td>Small</td>
     <td>$1.00</td>
     <td>120</td>
-    <td>Small Doctor Dino Pilosoda</td>
+    <td>Small Doctor Dino Plilosoda</td>
   </tr>
   <tr>
-    <td>Lemonade</td>
+    <td>Lemon-Lime</td>
     <td>Small</td>
     <td>$1.00</td>
     <td>41</td>
-    <td>Small Lemonade Pilosoda</td>
+    <td>Small Lemon-Lime Plilosoda</td>
   </tr>
   <tr>
     <td>DinoDew</td>
     <td>Small</td>
     <td>$1.00</td>
     <td>141</td>
-    <td>Small Dino Dew Pilosoda</td>
+    <td>Small Dino Dew Plilosoda</td>
   </tr>
 
   <tr>
@@ -237,35 +237,35 @@ It should have a `Price` get-only property of type `decimal`, a `Calories` get-o
     <td>Medium</td>
     <td>$1.75</td>
     <td>288</td>
-    <td>Medium Cherry Cola Pilosoda</td>
+    <td>Medium Cherry Cola Plilosoda</td>
   </tr>
   <tr>
     <td>CherryCola</td>
     <td>Medium</td>
     <td>$1.75</td>
     <td>160</td>
-    <td>Medium Cherry Cola Pilosoda</td>
+    <td>Medium Cherry Cola Plilosoda</td>
   </tr>
   <tr>
     <td>Doctor Dino</td>
     <td>Medium</td>
     <td>$1.75</td>
     <td>192</td>
-    <td>Medium Doctor Dino Pilosoda</td>
+    <td>Medium Doctor Dino Plilosoda</td>
   </tr>
   <tr>
-    <td>Lemonade</td>
+    <td>Lemon-Lime</td>
     <td>Medium</td>
     <td>$1.75</td>
     <td>66</td>
-    <td>Medium Lemonade Pilosoda</td>
+    <td>Medium Lemon-Lime Plilosoda</td>
   </tr>
   <tr>
     <td>DinoDew</td>
     <td>Medium</td>
     <td>$1.75</td>
     <td>256</td>
-    <td>Small Dino Dew Pilosoda</td>
+    <td>Small Dino Dew Plilosoda</td>
   </tr>
 
   <tr>
@@ -273,35 +273,35 @@ It should have a `Price` get-only property of type `decimal`, a `Calories` get-o
     <td>Large</td>
     <td>$2.50</td>
     <td>432</td>
-    <td>Large Cola Pilosoda</td>
+    <td>Large Cola Plilosoda</td>
   </tr>
   <tr>
     <td>CherryCola</td>
     <td>Large</td>
     <td>$2.50</td>
     <td>240</td>
-    <td>Large Cherry Cola Pilosoda</td>
+    <td>Large Cherry Cola Plilosoda</td>
   </tr>
   <tr>
     <td>Doctor Dino</td>
     <td>Large</td>
     <td>$2.50</td>
     <td>288</td>
-    <td>Large Doctor Dino Pilosoda</td>
+    <td>Large Doctor Dino Plilosoda</td>
   </tr>
   <tr>
     <td>LemonLime</td>
     <td>Large</td>
     <td>$2.50</td>
     <td>98</td>
-    <td>Large Lemon-Lime Pilosoda</td>
+    <td>Large Lemon-Lime Plilosoda</td>
   </tr>
   <tr>
     <td>DinoDew</td>
     <td>Large</td>
     <td>$2.50</td>
     <td>338</td>
-    <td>Large Dino Dew Pilosoda</td>
+    <td>Large Dino Dew Plilosoda</td>
   </tr>
 </table>
 
