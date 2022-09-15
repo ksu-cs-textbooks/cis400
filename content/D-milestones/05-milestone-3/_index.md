@@ -237,7 +237,7 @@ It should have a `Price` get-only property of type `decimal`, a `Calories` get-o
     <td>Medium</td>
     <td>$1.75</td>
     <td>288</td>
-    <td>Medium Cherry Cola Plilosoda</td>
+    <td>Medium Cola Plilosoda</td>
   </tr>
   <tr>
     <td>CherryCola</td>
@@ -265,7 +265,7 @@ It should have a `Price` get-only property of type `decimal`, a `Calories` get-o
     <td>Medium</td>
     <td>$1.75</td>
     <td>256</td>
-    <td>Small Dino Dew Plilosoda</td>
+    <td>Medium Dino Dew Plilosoda</td>
   </tr>
 
   <tr>
