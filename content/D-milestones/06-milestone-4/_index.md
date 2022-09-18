@@ -9,4 +9,444 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Fall 2022** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-### TBD
+
+For this milestone, you will be creating unit tests for the menu item classes you have defined in the `Data` project. If these tests expose issues in your existing code, you will also want to fix them.  Additionally, you will be creating a UML diagram for your `Data` project.
+
+### General requirements:
+
+* You need to follow the style laid out in the [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
+
+* You need to document your code using [XML-style comments](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags), with a minimum of `<summary>` tags, plus `<param>`, `<returns>`, and `<exception>` as appropriate.  
+
+### Assignment requirements:
+
+You will need to:
+
+* Create a UML diagram for your `Data` Project
+
+* Refactor unit test class for PrehistoricPBJ to match its new specification
+
+* Create unit test classes for:
+  * Brontowurst
+  * PterodactylWings
+  * VelociWraptor
+  * AllosaurusAllAmericanBurger
+  * CarnotaurusCheeseburger
+  * DeinonychusDouble
+  * TRexTripleBurger
+  * Fryceritops
+  * MeteorMacAndCheese
+  * MezzorellaSticks
+  * Triceritots
+  * Plilosoda
+  * CretaceousCoffee 
+
+In addition, if you did not declare your `Burger` base class abstract, you will need to create a unit test class for it.
+
+### Purpose:
+
+This milestone serves to introduce the writing of unit tests.  The real challenge of writing a unit test is not the programming involved, but rather, identifying _what_ you need to test for.  You should make sure that methods and properties behave as expected when used as expected. But you must also account for _edge cases_, where the objects are manipulated in unexpected ways.  If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
+
+### Writing Tests
+You will need to create an XUnit unit test class in your `DataTests` project for each menu item class in the `Data` project.  These test classes must contain (at a minimum) the test methods described below.  You may add additional methods.
+
+In addition, when a test method takes parameters, you will need to provide corresponding `[InlineData()]` attributes to be used by the test runner as arguments for those parameters.  You should supply enough attributes to either 1) be exhaustive (cover all possibilities), or 2) cover a reasonable number of expected cases and any edge cases.  
+
+{{% notice info %}}
+As a rule of thumb for this course, use at least 8 `[InlineData()]` options if there are more than 8 possible permutations. Good practice is to select these 8 largely at random (i.e. roll dice, use a random number generator, etc).
+{{% /notice %}}
+
+#### Refactor PrehistoricPBJUnitTests
+
+The _UnitTests/PrehistoricPBJ.cs_ already contains unit tests for the `PrehistoricPBJ` class, but these tests were for the original specification, not the refactoring you did for Milestone 1. As a result, you do not have a test of the `Name` property. 
+
+We know the name should always be "Prehistoric PBJ".  We could write a test in the form of a `Fact` to confirm this, i.e.:
+
+```csharp
+[Fact]
+public void NameShouldBeCorrect()
+{
+  PrehistoricPBJ pbj = new PrehistoricPBJ();
+  Assert.Equal("Prehistoric PBJ", pbj.Name);
+}
+```
+
+However, a stronger test would consider if changing other aspects of the `PrehistoricPBJ` object might change its name. A `PrehistoricPBJ` has three properties that can be customized: `PeanutButter`, `Jelly`, and `Toasted`.  Using a `Theory` allows us to test different customizations, and ensure the name does not change:
+
+```csharp
+[Theory]
+[InlineData(true, true, true)]
+[InlineData(true, true, false)]
+[InlineData(true, false, true)]
+[InlineData(false, true, true)]
+[InlineData(false, false, true)]
+[InlineData(true, false, false)]
+[InlineData(false, false, false)]
+public void NameShouldBeCorrect(bool peanutButter, bool jelly, bool toasted)
+{
+  PrehistoricPBJ pbj = new PrehistoricPBJ();
+  pbj.PeanutButter = peanutButter;
+  pbj.Jelly = jelly;
+  pbj.Toasted = toasted;
+  Assert.Equal("Prehistoric PBJ", pbj.Name);
+}
+```
+
+Now the test ensures that even when we change aspects of how the `PrehistoricPBJ` is served, we still get the expected name. If the name _did_ change, we could also specify what we expect the name as an additional argument/inline data.  In fact, we can do that even if it doesn't, i.e.:
+
+```csharp
+[Theory]
+[InlineData(true, true, true, "Prehistoric PBJ")]
+[InlineData(true, true, false, "Prehistoric PBJ")]
+[InlineData(true, false, true, "Prehistoric PBJ")]
+[InlineData(false, true, true, "Prehistoric PBJ")]
+[InlineData(false, false, true, "Prehistoric PBJ")]
+[InlineData(true, false, false, "Prehistoric PBJ")]
+[InlineData(false, false, false, "Prehistoric PBJ")]
+public void NameShouldBeCorrect(bool peanutButter, bool jelly, bool toasted, string name)
+{
+  PrehistoricPBJ pbj = new PrehistoricPBJ();
+  pbj.PeanutButter = peanutButter;
+  pbj.Jelly = jelly;
+  pbj.Toasted = toasted;
+  Assert.Equal(name, pbj.Name);
+}
+```
+
+In addition, the `PrehistoricPBJ` should now inherit from the base class `Entree`.  We can check this with a simple `Fact`:
+
+```csharp
+[Fact]
+public void PrehistoricPBJShouldInheritFromEntree()
+{
+  PrehistoricPBJ pbj = new PrehistoricPBJ();
+  Assert.IsAssignableFrom<Entree>(pbj);
+}
+```
+
+This assertion checks that a `PrehistoricPBJ` can be cast as a `Entree`. 
+
+#### Write New Unit Tests
+
+You need to write additional unit tests for the rest of the menu item classes.  These should be placed in the `DataTests` project in the _UnitTests_ folder, and named after the class they are testing, i.e. put the fried pie tests in _FriedPieUnitTests.cs_. This makes it easy to determine what class the test belongs to.
+
+In the following sections is a list of _minimum_ test methods you should add (you get to decide if they should be a `[Fact]` or `[Theory]`). Please use the names as written - that makes grading much faster. And remember, you can always add additional tests!
+
+{{% notice hint %}}
+You can do operations within an `[InlineData()]`, which may be helpful to keeping your numbers accurate.  For example, consider an item with 480 calories, _plus_ an additional 30 if it is served with a sauce.  You can calculate the sum by hand, _or_ express it as a sum in the `[InlineData()]`, i.e:
+
+```csharp
+[InlineData(ServingSize.Large, true, 480 + 130)]
+```
+{{% /notice %}}
+
+##### BrontowurstUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* OnionsShouldDefaultToTrue
+* ShouldBeAbleToSetOnions
+* PeppersShouldDefaultToTrue
+* ShouldBeAbleToSetPeppers
+
+##### PterodactylWingsUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* SauceShouldDefaultToBuffalo
+* ShouldBeAbleToSetSauce
+
+##### VelociWraptorUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* DressingShouldDefaultToTrue
+* ShouldBeAbleToSetDressing
+* CheeseShouldDefaultToTrue
+* ShouldBeAbleToSetCheese
+
+##### AllosaurusAllAmericanBurgerUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* PattiesShouldDefaultToOne
+* ShouldBeAbleToSetPatties
+* KetchupShouldDefaultToTrue
+* ShouldBeAbleToSetKetchup
+* MustardShouldDefaultToTrue
+* ShouldBeAbleToSetMustard
+* PickleShouldDefaultToTrue
+* ShouldBeAbleToSetPickle
+* MayoShouldDefaultToFalse
+* ShouldBeAbleToSetMayo
+* BBQShouldDefaultToFalse
+* ShouldBeAbleToSetBBQ
+* OnionShouldDefaultToFalse
+* ShouldBeAbleToSetOnion
+* TomatoShouldDefaultToFalse
+* ShouldBeAbleToSetTomato
+* LettuceShouldDefaultToFalse
+* ShouldBeAbleToSetLettuce
+* AmericanCheeseShouldDefaultToFalse
+* ShouldBeAbleToSetAmericanCheese
+* SwissCheeseShouldDefaultToFalse
+* ShouldBeAbleToSetSwissCheese
+* BaconShouldDefaultToFalse
+* ShouldBeAbleToSetBacon
+* MushroomsShouldDefaultToFalse
+* ShouldBeAbleToSetMushrooms
+
+##### CarnotaurusCheeseburgerUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* PattiesShouldDefaultToOne
+* ShouldBeAbleToSetPatties
+* KetchupShouldDefaultToTrue
+* ShouldBeAbleToSetKetchup
+* MustardShouldDefaultToFalse
+* ShouldBeAbleToSetMustard
+* PickleShouldDefaultToTrue
+* ShouldBeAbleToSetPickle
+* MayoShouldDefaultToFalse
+* ShouldBeAbleToSetMayo
+* BBQShouldDefaultToFalse
+* ShouldBeAbleToSetBBQ
+* OnionShouldDefaultToFalse
+* ShouldBeAbleToSetOnion
+* TomatoShouldDefaultToTrue
+* ShouldBeAbleToSetTomato
+* LettuceShouldDefaultToFalse
+* ShouldBeAbleToSetLettuce
+* AmericanCheeseShouldDefaultToTrue
+* ShouldBeAbleToSetAmericanCheese
+* SwissCheeseShouldDefaultToFalse
+* ShouldBeAbleToSetSwissCheese
+* BaconShouldDefaultToFalse
+* ShouldBeAbleToSetBacon
+* MushroomsShouldDefaultToFalse
+* ShouldBeAbleToSetMushrooms
+
+##### DeinonychusDoubleUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* PattiesShouldDefaultToTwo
+* ShouldBeAbleToSetPatties
+* KetchupShouldDefaultToFalse
+* ShouldBeAbleToSetKetchup
+* MustardShouldDefaultToFalse
+* ShouldBeAbleToSetMustard
+* PickleShouldDefaultToTrue
+* ShouldBeAbleToSetPickle
+* MayoShouldDefaultToFalse
+* ShouldBeAbleToSetMayo
+* BBQShouldDefaultToTrue
+* ShouldBeAbleToSetBBQ
+* OnionShouldDefaultToTrue
+* ShouldBeAbleToSetOnion
+* TomatoShouldDefaultToFalse
+* ShouldBeAbleToSetTomato
+* LettuceShouldDefaultToFalse
+* ShouldBeAbleToSetLettuce
+* AmericanCheeseShouldDefaultToFalse
+* ShouldBeAbleToSetAmericanCheese
+* SwissCheeseShouldDefaultToTrue
+* ShouldBeAbleToSetSwissCheese
+* BaconShouldDefaultToFalse
+* ShouldBeAbleToSetBacon
+* MushroomsShouldDefaultToTrue
+* ShouldBeAbleToSetMushrooms
+
+##### TRexTripleBurgerUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* PattiesShouldDefaultToThree
+* ShouldBeAbleToSetPatties
+* KetchupShouldDefaultToTrue
+* ShouldBeAbleToSetKetchup
+* MustardShouldDefaultToFalse
+* ShouldBeAbleToSetMustard
+* PickleShouldDefaultToTrue
+* ShouldBeAbleToSetPickle
+* MayoShouldDefaultToTrue
+* ShouldBeAbleToSetMayo
+* BBQShouldDefaultToFalse
+* ShouldBeAbleToSetBBQ
+* OnionShouldDefaultToTrue
+* ShouldBeAbleToSetOnion
+* TomatoShouldDefaultToTrue
+* ShouldBeAbleToSetTomato
+* LettuceShouldDefaultToTrue
+* ShouldBeAbleToSetLettuce
+* AmericanCheeseShouldDefaultToFalse
+* ShouldBeAbleToSetAmericanCheese
+* SwissCheeseShouldDefaultToFalse
+* ShouldBeAbleToSetSwissCheese
+* BaconShouldDefaultToFalse
+* ShouldBeAbleToSetBacon
+* MushroomsShouldDefaultToFalse
+* ShouldBeAbleToSetMushrooms
+
+##### FryceritopsUnitTests
+* ShouldInheritFromSide
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* ShouldBeAbleToSetSize
+* SaltShouldDefaultToTrue
+* ShouldBeAbleToSetSalt
+* SauceShouldDefaultToFalse
+* ShouldBeAbleToSetSauce
+
+##### MeteorMacAndCheeseUnitTests
+* ShouldInheritFromSide
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* ShouldBeAbleToSetSize
+
+##### MezzorellaSticksUnitTests
+* ShouldInheritFromSide
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* ShouldBeAbleToSetSize
+
+##### TriceritotsUnitTests
+* ShouldInheritFromSide
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* ShouldBeAbleToSetSize
+
+##### PlilosodaUnitTests
+* ShouldInheritFromSide
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* ShouldBeAbleToSetSize
+
+##### CretaceousCoffeeUnitTests
+* ShouldInheritFromDrink
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* ShouldBeAbleToSetSize
+
+##### FriedPieUnitTests
+* ShouldInheritFromDrink
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* ShouldBeAbleToSetSize
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetPieFilling
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedIceCreamUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetIceCreamFlavor
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedCandyBarUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetCandyBar
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedTwinkieUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedBananasUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldExtendPopper
+* ShouldBeAbleToSetGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedCheesecakeUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldExtendPopper
+* ShouldBeAbleToSetGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### FriedOreosUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldExtendPopper
+* ShouldBeAbleToSetGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### PiperPlatterUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetLeftPieFilling
+* ShouldBeAbleToSetRightPieFilling
+* ShouldBeAbleToSetLeftIceCreamFlavor
+* ShouldBeAbleToSetRightIceCreamFlavor
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+##### PopperPlatterUnitTests
+
+* ShouldImplementIMenuItem
+* ShouldBeAbleToSetSize
+* SettingSizeShouldAlsoSetPopperSize
+* ShouldBeAbleToSetGlazed
+* SettingGlazedShouldAlsoSetPopperGlazed
+* ShouldBeNamedCorrectly
+* ShouldHaveCorrectPrice
+* ShouldHaveCorrectCalories
+
+## Refactoring Menu Item Classes
+
+You may find in the process of writing your tests that your implementation of a particular menu item is not working correctly.  If this is the case, congratulations! Your tests are doing their job!
+
+At this point, you'll want to refactor the corresponding class to fix any of these problems.  
+
+## Submitting the Assignment
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+
+## Grading Rubric
+The grading rubric for this assignment will be:
+
+**25% Structure** Did you implement the structure as laid out in the specification?  Are the correct names used for classes, enums, properties, methods, events, etc?  Do classes inherit from expected base classes?
+
+**25% Documentation** Does every class, method, property, and field use the correct XML-style documentation?  Does every XML comment tag contain explanatory text?
+
+**25% Design** Are you appropriately using C# to create reasonably efficient, secure, and usable software?  Does your code contain bugs that will cause issues at runtime?
+
+**25% Functionality** Does the program do what the assignment asks?  Do properties return the expected values?  Do methods perform the expected actions?
+
+{{% notice warning %}}
+Projects that do not compile will receive an automatic grade of 0.
+{{% /notice %}}
