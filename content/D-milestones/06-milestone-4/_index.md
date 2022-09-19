@@ -28,6 +28,7 @@ You will need to:
 
 * Create unit test classes for:
   * Brontowurst
+  * DinoNuggets
   * PterodactylWings
   * VelociWraptor
   * AllosaurusAllAmericanBurger
@@ -149,6 +150,14 @@ You can do operations within an `[InlineData()]`, which may be helpful to keepin
 * ShouldBeAbleToSetOnions
 * PeppersShouldDefaultToTrue
 * ShouldBeAbleToSetPeppers
+
+##### DinoNuggetsUnitTests
+* ShouldInheritFromEntree
+* NameShouldBeCorrect
+* PriceShouldBeCorrect
+* CaloriesShouldBeCorrect
+* CountShouldDefaultToSix
+* ShouldBeAbleToSetCount
 
 ##### PterodactylWingsUnitTests
 * ShouldInheritFromEntree
