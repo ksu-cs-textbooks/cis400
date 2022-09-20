@@ -338,7 +338,7 @@ You can do operations within an `[InlineData()]`, which may be helpful to keepin
 * ShouldBeAbleToSetSize
 
 ##### PlilosodaUnitTests
-* ShouldInheritFromSide
+* ShouldInheritFromDrink
 * NameShouldBeCorrect
 * PriceShouldBeCorrect
 * CaloriesShouldBeCorrect
