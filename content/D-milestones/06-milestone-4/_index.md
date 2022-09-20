@@ -343,6 +343,7 @@ You can do operations within an `[InlineData()]`, which may be helpful to keepin
 * PriceShouldBeCorrect
 * CaloriesShouldBeCorrect
 * ShouldBeAbleToSetSize
+* ShouldBeAbleToSetFlavor
 
 ##### CretaceousCoffeeUnitTests
 * ShouldInheritFromDrink
@@ -350,6 +351,8 @@ You can do operations within an `[InlineData()]`, which may be helpful to keepin
 * PriceShouldBeCorrect
 * CaloriesShouldBeCorrect
 * ShouldBeAbleToSetSize
+* ShouldBeAbleToSetCream
+* CreamShouldDefaultToFalse
 
 ## Refactoring Menu Item Classes
 
