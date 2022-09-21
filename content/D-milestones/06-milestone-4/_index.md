@@ -10,7 +10,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 {{% /notice %}}
 
 
-For this milestone, you will be creating unit tests for the menu item classes you have defined in the `Data` project. If these tests expose issues in your existing code, you will also want to fix them.  Additionally, you will be creating a UML diagram for your `Data` project.
+For this milestone, you will be creating unit tests for the menu item classes you have defined in the `Data` project. If these tests expose issues in your existing code, you will also want to fix them. 
 
 ### General requirements:
 
