@@ -129,7 +129,7 @@ This assertion checks that a `PrehistoricPBJ` can be cast as a `Entree`.
 
 #### Write New Unit Tests
 
-You need to write additional unit tests for the rest of the menu item classes.  These should be placed in the `DataTests` project in the _UnitTests_ folder, and named after the class they are testing, i.e. put the fried pie tests in _FriedPieUnitTests.cs_. This makes it easy to determine what class the test belongs to.
+You need to write additional unit tests for the rest of the menu item classes.  These should be placed in the `DataTests` project in the _UnitTests_ folder, and named after the class they are testing, i.e. put the Dino Nuggets tests in _DinoNuggetUnitTests.cs_. This makes it easy to determine what class the test belongs to.
 
 In the following sections is a list of _minimum_ test methods you should add (you get to decide if they should be a `[Fact]` or `[Theory]`). Please use the names as written - that makes grading much faster. And remember, you can always add additional tests!
 
