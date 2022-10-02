@@ -145,7 +145,7 @@ Define a custom component `MenuItemSelectionControl` in the files _MenuSelection
 
 You can arrange these buttons in any fashion you like, but be mindful of your end-users.  You should try to achieve a design that is intuitive to the average user. Also as you design this control, keep in mind _usability_ and the cashiers who will be using it.  For some cashiers, small buttons may be difficult to touch due to advanced age, neuromuscular conditions, or simply large fingertips, so make your buttons large and easy to distinguish.  Similarly, some cashiers my have various vision issues, so making text large and easy-to-read is important.  Finally, some cashiers may be illiterate, so pictures of the menu item are often included as well.
 
-The `MenuItemSelectionControl` must allow for the selection of each menu item currently offered by Fried Piper:
+The `MenuItemSelectionControl` must allow for the selection of each menu item currently offered by Dino Diner:
 
 _Burgers_
 * Allosaurus All-American
@@ -155,6 +155,7 @@ _Burgers_
 
 _Other Entrees_
 * Brontowurst
+* Dino Nuggets
 * Prehistoric PBJ
 * Pterodactyl Wings
 * Veloci-Wraptor
