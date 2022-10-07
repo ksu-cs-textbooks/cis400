@@ -5,17 +5,35 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
-The _event handler_ is what notifies your event listener of an event occurring (by _invoking_, i.e. _calling_ it).  You've probably only used existing event handlers defined in GUI controls up to this point, but you can actually write your own as well.
+The _event handler_ is what notifies your event listener of an event occurring (by _invoking_, i.e. _calling_ it).  You've probably only used existing event handlers defined in GUI controls up to this point, but you can actually write your own as well. To do so, you must first declare a _Delegate_.
 
-Consider a class representing an egg.  What if we wanted to have an event that would be triggered when it hatched?  We could write our own custom event handler for this event!  In C#, these are written much like a field:
+In C# we define an event handler as a [Delegate](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/), a special type that represents a method with a specific method signature and return type. A delegate allows us to associate the delegate any method that matches that signature and return type. For example, the `Click` event handler we discussed earlier is a delegate which matches a method that takes two arguments: an `object` and an `EventArgs`, and returns void.  Any event listener that we write that matches this specification can be attached to the `button.Click`.  In a way, a `Delegate` is like an `Interface`, only for methods instead of objects.
+
+Now, consider a class representing an egg.  What if we wanted to define an event to represent when it hatched?  We'd need a delegate for that event, which can be declared a couple of ways.  The traditional method would be:
+
+```csharp
+public delegate void HatchHandler(object sender, EventArgs args);
+```
+
+And then in our class we'd declare the corresponding event. In C#, these are written much like a field:
 
 ```csharp 
-public event EventArgs Hatch;
+public event HatchHandler Hatch;
 ```
 
 Like a field, an event handler can have an access modifier (`public`, `private`, or `protected`), a name (in this case `Hatch`), and a type (`EventArgs` or one of its descendants).  It also gets marked with the `event` keyword.
 
-We might also want to create our own custom event arguments to accompany the event.  Perhaps we want to provide the baby chick that hatched.  We can create a new class that inherits from `EventArgs`:
+When C# introduced generics, it became possible to use a generic event handler as well, `EventHandler<T>`, where the `T` is the type for the event arguments.  This simplifies writing an event, because we no longer need to define the delegate ourselves.  So instead of the two lines above, we can just use:
+
+```csharp
+public event EventHandler<EventArgs> Hatch;
+```
+
+The second form is increasingly preferred, as it makes testing our code much easier (we'll see this soon), and it's less code to write.  
+
+### Custom EventArgs
+
+We might also want to create our own custom event arguments to accompany the event.  Perhaps we want to provide a reference to an object representing the baby chick that hatched.  To do so we can create a new class that inherits from `EventArgs`:
 
 ```csharp
 /// <summary>
@@ -37,6 +55,12 @@ public class HatchEventArgs : EventArgs
         this.Chick = chick;
     }
 }
+```
+
+And we use this custom event in our event declaration as the type for the generic event handler:
+
+```csharp
+public event EventHandler<HatchEvent> Hatch;
 ```
 
 Now let's say we set up our `Egg` constructor to start a timer to determine when the egg will hatch:
@@ -93,7 +117,7 @@ public class Egg
     /// <summary>
     /// An event triggered when the egg hatches 
     /// </summary>
-    public event EventArgs Hatch;
+    public event EventHandler<HatchEventArgs> Hatch;
 
     /// <summary>
     /// Constructs a new Egg instance 
