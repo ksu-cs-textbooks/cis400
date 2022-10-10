@@ -76,3 +76,28 @@ You can also list all remote repositories in a repo with:
 git remote -v
 ```
 
+#### Remote Branches
+
+You probably noticed in our push and pull examples above, we specified the `main` branch.  You can also pull or push from other branches, i.e. if you had an `experiment` branch on your remote repository `origin` you could pull it with:
+
+```
+git pull origin experiment
+```
+
+That would merge the `experiment` branch into the branch you currently have checked out.  Most often, we want to have our remote and local branches correspond to one another.  In that case, we should create a local `experiment` branch and link it to the one in our `origin` repository.  We need to first create and checkout our local `experiment` branch, and set its upstream:
+
+```
+git branch experiment
+git checkout experiment
+git --set-upstream origin experiment
+```
+
+Now our `local` experiment branch is linked to our remote `experiment` branch - and we can use the short-form push/pull commands when we have the branch checked out, i.e. when the `experiment` branch is checked out, we can use `git push` instead of `git push origin experiment`.
+
+There is also a shorthand for creating a local branch that is synchronized to a remote upstream branch:
+
+```
+git checkout -b experiment origin/experiment
+```
+
+This shorthand does the same operations as the three commands above.
