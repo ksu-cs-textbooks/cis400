@@ -118,7 +118,7 @@ Additionally, you should write unit tests to verify all of the expected function
 * That and that each of the `CollectionChanged` and `PropertyChanged` events described above occur in the described circumstances.
 
 {{% notice info %}}
-Currently XUnit does not have an assertion that can be used with the `CollectionChanged` event.  You will have to write your own - see [the section on testing custom events]({{<ref "03-events/11-testing-custom-events">}}).
+Currently XUnit does not have an assertion that can be used with the `CollectionChanged` event.  You will have to write your own - see [the section on testing custom events]({{<ref "2-desktop-development/03-events/11-testing-custom-events">}}).
 {{% /notice %}}
 
 #### Integrate the Order into the Point of Sale Project
