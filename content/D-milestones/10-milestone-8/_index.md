@@ -167,7 +167,7 @@ The grading rubric for this assignment will be:
 
 **20% Functionality** Does the program do what the assignment asks?  Do properties return the expected values?  Do methods perform the expected actions?
 
-**20% Testing** Do you have unit tests for all classes?  Do your unit tests cover all the functionality of those classes? Do you have a written test plan for your GUI? Do you have a record of employing the test plan in your release?
+**20% Testing** Do you have unit tests for all classes?  Do your unit tests cover all the functionality of those classes? <!-- Do you have a written test plan for your GUI? Do you have a record of employing the test plan in your release? -->
 
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
