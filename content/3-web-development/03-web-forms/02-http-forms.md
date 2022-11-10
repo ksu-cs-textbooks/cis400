@@ -9,7 +9,7 @@ One of the earliest (and still widely used) mechanisms for transferring data fro
 
 ### The `<input>` Element
 
-Perhaps the most important - and versatile - of these is the [`<input>`](https://developer.mozilla.orghttps://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) element.  By setting its `type` attribute, we can represent a wide range of possible inputs, as is demonstrated by this table [taken from MDN](https://developer.mozilla.orghttps://developer.mozilla.org/en-US/docs/Web/HTML/Element/input):
+Perhaps the most important - and versatile - of these is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">`<input>`</a> element.  By setting its `type` attribute, we can represent a wide range of possible inputs, as is demonstrated by this table [taken from the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input):
 
 <table class="standard-table">
  <colgroup>
