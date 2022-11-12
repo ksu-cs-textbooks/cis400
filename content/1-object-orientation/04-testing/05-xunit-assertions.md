@@ -152,6 +152,12 @@ There are also similar assertions for events being raised by _asynchronous_ code
 * `Assert.RaisesAsync<T>(Action attach, Action detach, Task testCode)`
 * `Assert.RaisesAnyAsync<T>(Action attach, Action detach, Task testCode)`
 
+For examples of these assertions, see [section 2.3.10]({{<ref "2-desktop-development/03-events/10-testing-generic-events">}})
+
+{{% notice info %}}
+XUnit does not directly support old-style events - those with a named event handler like `CollectionChangedEventHandler`, only those that use the templated form: `EventHandler<CustomEventArgs>` (with the exception of the `PropertyChanged` event, discussed below).  For strategies to handle the older-style events, see [section 2.3.11]({{<ref "2-desktop-development/03-events/11-testing-custom-events">}})
+{{% /notice %}}
+
 ## Property Change Assertions
 
 Because C# has deeply integrated the idea of 'Property Change' notifications as part of its GUI frameworks (which we'll cover in a later chapter), it makes sense to have a special assertion to deal with this notification.  Hence, the `Assert.PropertyChanged(INotifyPropertyChanged @object, string propertyName, Action testCode)`.  Using it is simple - supply the object that implements the `INotifyPropertyChanged` interface as the first argument, the name of the property that will be changing as the second, and the Action delegate that will trigger the change as the third.  
