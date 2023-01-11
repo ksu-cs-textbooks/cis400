@@ -6,8 +6,12 @@ date = 2018-08-24T10:53:26-05:00
 +++
 
 {{% notice noiframe %}}
-This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Fall 2022** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
+This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
+
+# TBD
+
+<!--
 
 For this milestone, you will be creating base classes for entrées, sides, and drinks served at Dino Diner. This will involve refactoring some already written classes, as well as adding some new ones.  
 
@@ -335,3 +339,5 @@ The grading rubric for this assignment will be:
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
 {{% /notice %}}
+
+-->

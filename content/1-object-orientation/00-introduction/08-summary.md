@@ -1,7 +1,7 @@
 ---
 title: "Summary"
-pre: "5. "
-weight: 50
+pre: "8. "
+weight: 80
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -13,4 +13,6 @@ Tricks were necessary at this time, simply because machines were built with limi
 
 As computers became more powerful and less expensive, the demand for programs (and therefore programmers) grew faster than universities could train new programmers.  Unskilled programmers, unwieldy programming languages, and programming approaches developed to address the problems of older technology led to what became known as the "software crisis" where many projects failed or floundered.
 
-This led to the development of new programming techniques, languages, and paradigms to make the process of programming easier and less error-prone. Among the many new programming paradigms was _structured programming paradigm_, which introduced control-flow structures into programming languages to help programmers reason about the order of program execution in a clear and consistent manner.  Also developed during this time was the _object-oriented paradigm_, which we will be studying in this course.
+This led to the development of new programming techniques, languages, and paradigms to make the process of programming easier and less error-prone. Among the many new programming paradigms was _structured programming paradigm_, which introduced control-flow structures into programming languages to help programmers reason about the order of program execution in a clear and consistent manner.  
+
+Also developed during this time was the _object-oriented paradigm_, which brings together four big ideas: _encapsulation & information hiding_, _message passing_, and _dynamic binding_.  We will be studying this paradigm, its ideas, and implementation in the C# language throughout this course.

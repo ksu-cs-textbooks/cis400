@@ -45,12 +45,3 @@ The object-orientation paradigm was similarly developed to make programming larg
 
 Interestingly, the four top languages in 2019 (Python, JavaScript, Java, and C#) all adopt the object-oriented paradigm - though the exact details of how they implement it vary dramatically.
 
-The term "Object Orientation" was coined by Alan Kay while he was a graduate student in the late 60's. Alan Kay, Dan Ingalls, Adele Goldberg, and others created the first object-oriented language, [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk), which became a very influential language from which many ideas were borrowed.  To Alan, the essential core of object-orientation was three properties a language could possess: [^Elliot2018]
-
-* Encapsulation
-* Message passing
-* Dynamic binding
-
-[^Elliot2018]: Eric Elliot, "The Forgotten History of Object-Oriented Programming," _Medium_, Oct. 31, 2018.
-
-We'll take a look at each of these in the next few chapters.
