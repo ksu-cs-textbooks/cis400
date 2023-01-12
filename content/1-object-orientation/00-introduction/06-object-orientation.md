@@ -9,7 +9,7 @@ The object-orientation paradigm was similarly developed to make programming larg
 
 The term "Object Orientation" was coined by Alan Kay while he was a graduate student in the late 60's. Alan Kay, Dan Ingalls, Adele Goldberg, and others created the first object-oriented language, [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk), which became a very influential language from which many ideas were borrowed.  To Alan, the essential core of object-orientation was three properties a language could possess: [^Elliot2018]
 
-* Encapsulation
+* Encapsulation & Information Hiding
 * Message passing
 * Dynamic binding
 
