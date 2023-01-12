@@ -29,19 +29,48 @@ Believe it or not, there was an actual _reason_ for short names in these early p
 
 [^namelength]: Weishart, Conrad (2010). ["How Long Can a Data Name Be?"](https://www.idinews.com/history/nameLength.html)
 
-### Structured Programming Paradigm
-Another common change to programming languages was the removal of the `GOTO` statement, which allowed the program execution to jump to an arbitrary point in the code (much like a [choose-your-own adventure](https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure) book will direct you to jump to a page). The GOTO came to be considered too primitive, and too easy for a programmer to misuse [^goto]. 
+<!-- TODO: Type Checking, Linting -->
 
-[^goto]: Dijkstra, Edgar (1968). ["Go To Statement Considered Harmful"](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf)
+## Paradigm Shifts
 
-However, the actual _functionality_ of a `GOTO` statement remains in higher-order programming languages, abstracted into control-flow structures like conditionals, loops, and switch statements.  This is the basis of [structured programming](https://en.wikipedia.org/wiki/Structured_programming), a paradigm adopted by all modern higher-order programming languages. Each of these control-flow structures can be represented by careful use of `GOTO` statements (and, in fact the resulting assembly code from compiling these languages does just that). The benefit of using structured programming is it promotes "reliability, correctness, and organizational clarity" by clearly defining the circumstances and effects of code jumps [^wirth1974].
+In addition to these less drastic changes, some evolutionary language changes had sweeping effects, changing the way we approach and think about how programs should be written and executed. These "big ideas" of how programming languages should work are often called _paradigms_.  In the early days of computing, we had two common ones: _imperative_ and _functional_.
 
-[^wirth1974]: Wirth, Nicklaus (1974). ["On the Composition of Well-Structured Programs"](https://oberoncore.ru/_media/library/wirth_on_the_composition_of_well-structured_programs.pdf)
+At its core, imperative programming simply means the idea of writing a program as a sequence of commands, i.e. this Python script uses a sequence of commands to write to a file:
 
-### Object-Orientation Paradigm
-The object-orientation paradigm was similarly developed to make programming large projects easier and less error-prone.  We'll examine just how it seeks to do so in the next few chapters.  But before we do, you might want to see how language popularity has fared since the onset of the software crisis, and how new languages have appeared and grown in popularity in this animated chart from _Data is Beautiful_:
+```python
+f = open("example.txt")
+f.write("Hello from a file!")
+f.close()
+```
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Og847HVwRSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+An imperative program would start executing the first line of code, and then continue executing line-by-line until the end of the file or a command to stop execution was reached. In addition to moving one line through the program code, imperative programs could jump to a specific spot in the code and continue execution from there, using a `GOTO` statement.  We'll revisit that aspect shorty.
 
-Interestingly, the four top languages in 2019 (Python, JavaScript, Java, and C#) all adopt the object-oriented paradigm - though the exact details of how they implement it vary dramatically.
+In contrast, functional programming consisted primarily of functions. One function was designated as the 'main' function that would start the execution of the program. It would then call one or more functions, which would in turn call more functions. Thus, the entire program consisted of function definitions. Consider this Python program:
 
+```python
+def concatenateList(str, list):
+  if(len(list) == 0):
+    return str
+  elif(len(list) == 1):
+    head = list.pop(0)
+    return concatenateList(str + head, list)
+  else:
+    head = list.pop(0)
+    return concatenateList(str + head + ", ", list)
+
+def printToFile(filename, body):
+  f = open(filename)
+  f.write(body)
+
+def printListToFile(filename, list):
+  body = concatenateList("", list)
+  printToFile(filename, body)
+
+def main():
+  printListToFile("list.txt", ["Dog", "Cat", "Mouse"])
+
+main()
+```
+You probably see elements of your favorite higher-order programming language in both of these descriptions.  That's not surprising as modern languages often draw from multiple programming paradigms (after all, both the above examples were written in Python). This, too, is part of language evolution - language developers borrow good ideas as the find them.
+
+But as languages continued to evolve and language creators sought ways to make programming easier, more reliable, and more secure to address the software crisis, new ideas emerged that were large enough to be considered new paradigms. Two of the most impactful of these new paradigms these are _structured programming_ and _object orientation_.  We'll talk about each next.

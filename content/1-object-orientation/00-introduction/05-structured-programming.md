@@ -9,7 +9,13 @@ Another common change to programming languages was the removal of the `GOTO` sta
 
 [^goto]: Dijkstra, Edgar (1968). ["Go To Statement Considered Harmful"](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf)
 
-You probably aren't very familiar with GOTO statements.  Let's see how some familiar structured programming patterns were originally implemented using GOTOs.
+While the `GOTO` statement is absent from most modern programming languages the actual _functionality_ remains, abstracted into control-flow structures like conditionals, loops, and switch statements.  This is the basis of [structured programming](https://en.wikipedia.org/wiki/Structured_programming), a paradigm adopted by all modern higher-order programming languages. 
+
+Each of these control-flow structures can be represented by careful use of `GOTO` statements (and, in fact the resulting assembly code from compiling these languages does just that). The benefit of using structured programming is it promotes "reliability, correctness, and organizational clarity" by clearly defining the circumstances and effects of code jumps [^wirth1974].
+
+[^wirth1974]: Wirth, Nicklaus (1974). ["On the Composition of Well-Structured Programs"](https://oberoncore.ru/_media/library/wirth_on_the_composition_of_well-structured_programs.pdf)
+
+You probably aren't very familiar with GOTO statements because the structured programming paradigm has become so dominant.  Before we move on, let's see how some familiar structured programming patterns were originally implemented using GOTOs:
 
 ### Conditional (if statement)
 In C#, you are probably used to writing if statements with a true branch:
@@ -30,7 +36,7 @@ if(x < 5) goto TrueBranch;
 
 AfterElse:
   Console.WriteLine("The value is:" + x);
-  System.Exit(0);
+  Environment.Exit(0);
 
 TrueBranch:
   x = x * 2;
@@ -103,12 +109,7 @@ Loop:
   goto Test;
 ```
 
-The `do while` and `for` loops are implemented similarly. As you can probably imagine, as more control flow is added to a program, using GOTOs and corresponding labels to jump to becomes very hard to follow - exactly why structure
-
-### Structured Programming Paradigm
-However, the actual _functionality_ of a `GOTO` statement remains in higher-order programming languages, abstracted into control-flow structures like conditionals, loops, and switch statements.  This is the basis of [structured programming](https://en.wikipedia.org/wiki/Structured_programming), a paradigm adopted by all modern higher-order programming languages. Each of these control-flow structures can be represented by careful use of `GOTO` statements (and, in fact the resulting assembly code from compiling these languages does just that). The benefit of using structured programming is it promotes "reliability, correctness, and organizational clarity" by clearly defining the circumstances and effects of code jumps [^wirth1974].
-
-[^wirth1974]: Wirth, Nicklaus (1974). ["On the Composition of Well-Structured Programs"](https://oberoncore.ru/_media/library/wirth_on_the_composition_of_well-structured_programs.pdf)
+The `do while` and `for` loops are implemented similarly. As you can probably imagine, as more control flow is added to a program, using GOTOs and corresponding labels to jump to becomes very hard to follow.
 
 
 {{% notice info %}}
