@@ -27,7 +27,7 @@ One clear example is symbol names for variables and procedures (functions) - not
 
 Believe it or not, there was an actual _reason_ for short names in these early programs.  A six character name would fit into a 36-bit register, allowing for fast dictionary lookups - accordingly, early version of FORTRAN enforced a limit of six characters for variable names[^namelength]. However, it is easy to replace a symbol name with an automatically generated symbol during compilation, allowing for _both_ fast lookup and human readability at a cost of some extra computation during compilation.  This step is built into the compilation process of most current programming languages, allowing for arbitrary-length symbol names with no runtime performance penalty.
 
-[^namelength]: Weishart, Conrad (2010). ["How Long Can a Data Name Be?"](https://www.idinews.com/history/nameLength.html)
+[^namelength]: Weishart, Conrad (2010). "[How Long Can a Data Name Be?](https://www.idinews.com/history/nameLength.html)"
 
 <!-- TODO: Type Checking, Linting -->
 

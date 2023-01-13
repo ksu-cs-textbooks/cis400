@@ -11,7 +11,9 @@ Before we delve too deeply into how to reason about Object-Orientation and how t
 Some key terms to learn in this chapter are:
 
 * The Software Crisis
-
+* GOTO statements
+* Programming Language Paradigm
+* Imperative Programming
+* Functional Programming
 * Structured Programming
-
-
+* Object-Orientation

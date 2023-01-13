@@ -16,22 +16,35 @@ This idea became embodied in object-orientation in the form of _classes_ and _ob
 Let's re-write our `Vector3` struct as a class using this concept:
 
 ```csharp
+/// <summary>A class representing a 3-element vector</summary>
 public class Vector3 {
 
+    /// <summary>The X component of the vector</summary>
     public double X;
+    /// <summary>The Y component of the vector</summary>
     public double Y;
+    /// <summary>The Z component of the vector</summary>
     public double Z;
 
+    /// <summary>Constructs a new vector</summary>
+    /// <param name="x">The value of the vector's x component</param>
+    /// <param name="y">The value of the vector's y component</param>
+    /// <param name="z">The value of the vector's z component</param>
     public Vector3(double x, double y, double z) {
         X = x;
         Y = y;
         Z = z;
     }
 
+    /// <summary>Computes the dot product of this and <paramref name="other"/> vector</summary>
+    /// <param name="other">The other vector to compute with</param>
+    /// <returns>The dot product</returns>
     public double DotProduct(Vector3 other) {
         return X * other.X + Y * other.Y + Z * other.Z;
     }
 
+    /// <summary>Scales this vector by <paramref name="scalar"/></summary>
+    /// <paramref name="scalar">The value to scale by</paramref>
     public void Scale(double scalar) {
         X *= scalar;
         Y *= scalar;

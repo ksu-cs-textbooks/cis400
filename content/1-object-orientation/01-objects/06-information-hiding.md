@@ -41,103 +41,73 @@ We would not be able to change his name, i.e. `willie.first = "Bob"` would fail,
 If we want to allow a field or method to be accessible _outside_ of the object, we must declare it `public`.  While we _can_ declare fields public, this violates the core principles of encapsulation, as any outside code can modify our object's state in uncontrolled ways.
 
 ### Accessor Methods
-Instead, in a true object-oriented approach we would write public  **_accessor methods_**, a.k.a. *getters* and *setters*.  These are methods that allow us to see and change field values _in a controlled way_.  Adding accessors to our Student class might look like:
+Instead, in a true object-oriented approach we would write public  **_accessor methods_**, a.k.a. *getters* and *setters* (so called because they _get_ or _set_ the value of a field).  These methods allow us to see and change field values _in a controlled way_.  Adding accessors to our Student class might look like:
 
 ```csharp
-public class Student {
-    private string first;
-    private string last;
-    private uint wid;
+/// <summary>A class representing a K-State student</summary>
+public class Student
+{
+    private string _first;
+    private string _last;
+    private uint _wid;
 
-    public Student(string first, string last, uint wid) {
-        this.first = first;
-        this.last = last;
-        this.wid = wid;
+    /// <summary>Constructs a new student object</summary>
+    /// <param name="first">The new student's first name</param>
+    /// <param name="last">The new student's last name</param>
+    /// <param wid="wid">The new student's Wildcat ID number</param>
+    public Student(string first, string last, uint wid)
+    {
+        _first = first;
+        _last = last;
+        _wid = wid;
     }
 
-    public string GetFirst() {
-        return this.first;
+    /// <summary>Gets the first name of the student</summary>
+    /// <returns>The student's first name</returns>
+    public string GetFirst()
+    {
+        return _first;
     }
 
-    public void SetFirst(string value) {
-        if(value.Length > 0) this.first = value;
+    /// <summary>Sets the first name of the student</summary>
+    public void SetFirst(string value)
+    {
+        if (value.Length > 0) _first = value;
     }
 
-    public string GetLast() {
-        return this.last;
+    /// <summary>Gets the last name of the student</summary>
+    /// <returns>The student's last name</returns>
+    public string GetLast()
+    {
+        return _last;
     }
 
-    public void SetLast(string value) {
-        if(value.Length > 0) this.last = value;
+    /// <summary>Sets the last name of the student</summary>
+    /// <param name="value">The new name</summary>
+    /// <remarks>The <paramref name="value"/> must be a non-empty string</remarks>
+    public void SetLast(string value)
+    {
+        if (value.Length > 0) _last = value;
     }
 
-    public uint GetWid() {
-        return wid;
+    /// <summary>Gets the student's Wildcat ID Number</summary>
+    /// <returns>The student's Wildcat ID Number</returns>
+    public uint GetWid()
+    {
+        return _wid;
+    }
+
+    /// <summary>Gets the full name of the student</summary>
+    /// <returns>The first and last name of the student as a string</returns>
+    public string GetFullName()
+    {
+        return $"{_first} {_last}"
     }
 }
 ```
 
 Notice how the `SetFirst()` and `SetLast()` method check that the provided name has at least one character?  We can use setters to make sure that we never allow the object state to be set to something that makes no sense.
 
-Also, notice that the `wid` field only has a getter.  This effectively means once a student’s Wid is set by the constructor, it cannot be changed (it’s readonly).  This allows us to share data without allowing it to be changed outside of the class.
+Also, notice that the `wid` field only has a getter.  This effectively means once a student’s Wid is set by the constructor, it cannot be changed.  This allows us to share data without allowing it to be changed outside of the class. 
 
-## C# Properties
-While accessors provide a powerful control mechanism in object-oriented languages, they also require a lot of boilerplate typing.  Many languages therefore introduce a mechanism for quickly defining basic accessors.  In C#, we have [Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties).  Let’s rewrite our Student class with Properties:
-
-```csharp
-public class Student {
-
-    private string first;
-    public string First {
-        get { return this.first; }
-        set { if(value.Length > 0) this.first = value;}
-    }
-
-    private string last;
-    public string Last {
-        get { return this.last; }
-        set { if(value.Length > 0) this.last = value; }
-    }
-
-    private uint wid;
-    public uint Wid {
-        get { return this.wid; }
-    }
-
-    public string Nickname { get; set; }
-
-    public Student(string first, string last, uint wid) {
-        this.first = first;
-        this.last = last;
-        this.wid = wid;
-    }
-}
-```
-
-For the most basic accessor (like Nickname in the example), we can create a property in one line with both getter and setter, with an implicit backing field.  We can also explicitly create our backing field (the private field) as we did for `last`, `first`, and `wid`.  We can also make a property read-only by not defining a setter, like we did for `Wid`.  One of the nice properties of properties is they are treated  like fields instead of methods, and can use the assignment operator:
-
-```csharp
-Student willie = new Student("William", "Wildcat", 888888888);
-willie.Nickname = "Willie";
-Console.Write(willie.First + " " + willie.Last);
-```
-
-{{% notice info %}}
-#### Properties are _Methods_
-
-While C# properties are used like fields, i.e. `Console.WriteLine(willie.Wid)` or `willie.First = "William"`, they are actually _methods_.  As such, they _do not add structure to hold state_, hence the need for a _backing variable_.  
-
-The `Nickname` property in the example above is special syntax for an _implicit_ backing field - the C# compiler creates the necessary space to hold the value.  But we can _only_ access the value stored through that property.  If you need direct access to it, you _must_ create a backing variable.
-
-However, we don't always need a backing variable for a Property getter if the value of a property can be calculated from the current state of the class, i.e., we could add a property `FullName` to our `Student` class:
-
-```csharp 
-public string FullName {
-    get {
-        return first + " " + last;
-    }
-}
-```
-
-Here we're effectively generating the value of the `FullName` property from the `first` and `last` backing variables every time the `FullName` property is requested.  This does cause a bit more computation, but we also know that it will always reflect the current state of the first and last names.
-{{% /notice %}}
+Finally, the `GetFullName()` is also a getter method, but it does not have its own private backing field. Instead it _derives_ its value from the class state. We sometimes call this a derived getter for that reason. 

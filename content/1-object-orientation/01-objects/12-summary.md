@@ -1,7 +1,7 @@
 ---
 title: "Summary"
-pre: "10. "
-weight: 10
+pre: "12. "
+weight: 12
 date: 2018-08-24T10:53:26-05:00
 ---
 

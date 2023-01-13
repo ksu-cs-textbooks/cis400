@@ -40,15 +40,15 @@ If we create an instance of that struct in the variable `b`:
 Vector3 b = new Vector3(1.2, 3.7, 5.6);
 ```
 
-The state of our variable `b` is $\\{1.2, 3.7, 5.6\\}$.  If we change one of `b`’s fields:
+The state of our variable `b` is {{<math>}}$\{1.2, 3.7, 5.6\}${{</math>}}.  If we change one of `b`’s fields:
 
 ```csharp
 b.x = 6.0;
 ```
 
-The state of our variable `b` is $\\{6.0, 3.7, 5.6\\}$.
+The state of our variable `b` is now {{<math>}}$\{6.0, 3.7, 5.6\}${{</math>}}.
 
-We can also think about the state of the *program*, which would be something like: $\\{a: 5, b: \\{x: 6.0, y: 3.7, z: 5.6\\}\\}$, or a state vector like: $|5, 6.0, 3.7, 5.6|$.  We can therefore think of a program as a *state machine*. We can in fact, draw our entire program as a state table listing all possible legal states (combinations of variable values) and the transitions between those states. Techniques like this can be used to reason about our programs and even prove them correct!
+We can also think about the state of the *program*, which would be something like: {{<math>}}$\{a: 5, b: \{x: 6.0, y: 3.7, z: 5.6\}\}${{</math>}}, or a state vector like: {{<math>}}$|5, 6.0, 3.7, 5.6|${{</math>}}.  We can therefore think of a program as a *state machine*. We can in fact, draw our entire program as a state table listing all possible legal states (combinations of variable values) and the transitions between those states. Techniques like this can be used to reason about our programs and even prove them correct!
 
 This way of reasoning about programs is the heart of [Automata Theory](https://en.wikipedia.org/wiki/Automata_theory), a subject you may choose to learn more about if you pursue graduate studies in computer science.
 
@@ -72,7 +72,7 @@ public static Vector3 Scale(Vector3 vec, double scale) {
 }
 ```
 
-If this method was invoked with a vector ${4.0, 1.0, 3.4}$ and a scalar ${2.0}$ 
+If this method was invoked with a vector {{<math>}}$\langle4.0, 1.0, 3.4\rangle${{</math>}} and a scalar {{<math>}}$2.0${{</math>}} 
 our state table would look something like:
 
 <table>
