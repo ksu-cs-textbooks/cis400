@@ -10,7 +10,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 {{% /notice %}}
 
 For this course, we will be using a number of software packages including:
-* Microsoft Visual Studio 2019
+* Microsoft Visual Studio 2022
 * Microsoft Visio 2019
 * Xamarin Workbooks 
 
