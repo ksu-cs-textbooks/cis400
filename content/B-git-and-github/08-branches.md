@@ -18,7 +18,7 @@ $ git branch experiment
 $ git checkout experiment
 ```
 
-We now have a new branch, experiment, branching from commit **574ed9f**:
+We now have a new branch, experiment, branching from commit **573ed9f**:
 
 ![The same repository with a new branch](/images/b.8.2.png)
 

@@ -87,7 +87,7 @@ Here we're effectively generating the value of the `FullName` property from the 
 {{% /notice %}}
 
 ## Auto-Property Syntax
-Not all properties need a to do extra logic in the `get` or `set` body.  Consider our `Vector3` class we discussed earlier. We used public fields to represent the `X`, `Y`, and `Z` components, i.e.:
+Not all properties need to do extra logic in the `get` or `set` body.  Consider our `Vector3` class we discussed earlier. We used public fields to represent the `X`, `Y`, and `Z` components, i.e.:
 
 ```csharp
 public double X = 0;
