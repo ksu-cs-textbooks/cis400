@@ -22,61 +22,61 @@ The milestone due dates are:
   <tr>
     <td>2</td>
     <td>Milestone 1</td>
-    <td>9/2/2022</td>
+    <td>1/27/2023</td>
   </tr>
   <tr>
     <td>3</td>
     <td>Milestone 2</td>
-    <td>9/9/2022</td>
+    <td>2/3/2023</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Milestone 3</td>
-    <td>9/16/2022</td>
+    <td>2/10/2023</td>
   </tr>
   <tr>
     <td>5</td>
     <td>Milestone 4</td>
-    <td>9/23/2022</td>
+    <td>2/17/2023</td>
   </tr>
   <tr>
     <td>7</td>
     <td>Milestone 5</td>
-    <td>10/7/2022</td>
+    <td>3/3/2023</td>
   </tr>
   <tr>
     <td>8</td>
     <td>Milestone 6</td>
-    <td>10/14/2022</td>
+    <td>3/10/2023</td>
   </tr>
   <tr>
     <td>9</td>
     <td>Milestone 7</td>
-    <td>10/21/2022</td>
+    <td>3/24/2023</td>
   </tr>
   <tr>
     <td>10</td>
     <td>Milestone 8</td>
-    <td>10/28/2022</td>
+    <td>3/31/2022</td>
   </tr>
   <tr>
     <td>12</td>
     <td>Milestone 9</td>
-    <td>11/11/2022</td>
+    <td>4/14/2022</td>
   </tr>
   <tr>
     <td>13</td>
     <td>Milestone 10</td>
-    <td>11/18/2022</td>
+    <td>4/21/2022</td>
   </tr>
   <tr>
     <td>14</td>
     <td>Milestone 11</td>
-    <td>12/2/2022</td>
+    <td>4/28/2022</td>
   </tr>
   <tr>
     <td>15</td>
     <td>Milestone 12</td>
-    <td>12/9/2022</td>
+    <td>5/5/2023</td>
   </tr>
 </table>

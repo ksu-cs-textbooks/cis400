@@ -47,7 +47,7 @@ $$
 $$
 ```
 
-The  $\texttt{[visibility]}$ uses the same symbols as typed elements, with the same correspondences. The $\texttt{name}$ is the name of the method, and the $\texttt{[parameter list]}$ is a comma-separated list of typed elements, corresponding to the parameters.  The $\texttt{[:return type]}$ indicates the return type for the method (it can be omitted for void). 
+The {{<math>}}$\texttt{[visibility]}${{</math>}} uses the same symbols as typed elements, with the same correspondences. The {{<math>}}$\texttt{name}$ {{</math>}} is the name of the method, and the {{<math>}}$\texttt{[parameter list]}${{</math>}} is a comma-separated list of typed elements, corresponding to the parameters.  The {{<math>}}$\texttt{[:return type]}${{</math>}} indicates the return type for the method (it can be omitted for void). 
 
 Thus, in the example above, the protected method `Blend` has no parameters and returns a string.  Similarly, the method:
 

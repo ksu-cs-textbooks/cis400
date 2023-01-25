@@ -94,7 +94,7 @@ The `CrashedSaucer` class should be defined in a file named _CrashedSaucer.cs_. 
   <tr>
     <td>Stack Size</td>
     <td>get and set</td>
-    <td>string</td>
+    <td>uint</td>
     <td>Default of 2, no more than 6</td>
   </tr>
   <tr>
