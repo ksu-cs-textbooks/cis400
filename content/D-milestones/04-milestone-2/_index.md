@@ -9,10 +9,7 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# TBD
-
-<!--
-For this milestone, you will be creating classes to represent the offerings of the "Dino Diner" - a prehistoric-themed fast-food franchise.  These will be created within the _Data_ project of the solution you accepted from GitHub classroom.
+For this milestone, you will be creating classes to represent the offerings of _The Flying Saucer_ - a fast-food breakfast franchise.  These will be created within the _Data_ project of the solution you accepted from GitHub classroom.
 
 ### General requirements:
 
@@ -24,21 +21,21 @@ For this milestone, you will be creating classes to represent the offerings of t
 
 You will need to create
 
-* Enums (4) representing:
-    * The serving sizes available
-    * The wings sauces available
+* Enums (2) representing:
+  * Serving sizes available for certain menu items
+  * The various egg preparations available
 
-* Classes (4) representing entrees:
-    * Brontowurst (Bratwurst with peppers and onions in a bun)
-    * DinoNuggets (Six crispy fried breaded chicken nuggets)
-    * Pterodactyl Wings (Chicken wings glazed with a signature hot sauce)
-    * Veloci-Wrap (A chicken cesar wrap) 
+* Classes (1+) representing entrees:
+  * Outer Omelette
+  * Refactoring the Flying Saucer
 
-* Classes (4) representing sides:
-    * Fryceritops
-    * Meteor Mac & Cheese
-    * Mezzorealla Sticks
-    * Triceritots
+* Classes (6) representing sides:
+  * Crop Circle
+  * Glowing Haystack
+  * Taken Bacon
+  * Missing Links
+  * Eviscerated Eggs
+  * You're Toast
 
 ### Purpose:
 
@@ -54,16 +51,27 @@ This milestone serves as a review of how to create classes and sets the stage fo
 
 * The KSU.CS.CodeAnalyzers NuGet package installed in your project will automatically flag issues with for naming and commenting conventions in your code with warnings.  Be sure to address these!
 
+* Create a new feature branch for your milestone and commit your changes to it, and only merge it back into the master branch when you've completed the assignment.
+
+{{% notice tip %}}
+You may be wondering why we ask you to create a feature branch rather than working in `main`, especially as it seems extra work.  There are two reasons:
+1. It is good practice for the future when you are working on a team. Each team member typically has their own branch. That way, as you add incomplete code to your branch, your changes don't impact the other team member's work.  You only merge your new features to `main` when they are complete, tested, and working.
+2. If the UTA asks you to correct a mistake in a former milestone and re-commit, you can switch back to that branch, fix the mistake, create a new release and turn it in.  All _without_ being impacted by your half-done work on the new milestone branch.  Then, you can merge the update to `main` into your current milestone branch so that you have them moving forward. 
+{{% /notice %}}
+
 ## Enum Classes 
 
-All enums should reside in the `DinoDiner.Data.Enums` namespace and be placed in an _Enums_ folder within the Data project in your solution.  Each should be placed in a file named according to the enum, i.e. `ServingSize` should be defined in _ServingSize.cs_.
+Each enumeration should be placed in a file named according to the enum, i.e. `ServingSize` should be defined in _ServingSize.cs_.
 
 The needed enumerations are:
 
-* `WingSauce` - Sauces available for wings 
-  * Buffalo
-  * Teriyaki 
-  * Honey Glaze
+* `EggStyle` - The various ways an egg can be prepared
+  * SoftBoiled
+  * HardBoiled
+  * Scrambled
+  * Poached
+  * SunnySideUp
+  * OverEasy
 
 * `ServingSize` - The size of the menu item
   * Small
@@ -86,112 +94,428 @@ public enum ServingSize
 
 ## Entree Menu Item Classes
 
-All Entree menu item classes should reside in the `DinoDiner.Data.Entrees` namespace and be placed in the _Entrees_ folder within the Data project in your solution. One entree, Prehistoric PB&J, has been provided for you as an example.
+You will need to create one new class `OuterOmelette`, and refactor another, `FlyingSaucer` to represent specific entrees offered at The Flying Saucer.
 
-The needed classes are:
+### Flying Saucer
+The `FlyingSaucer` class provided in the starter project has an issue - the `Price` is constant at $8.50, regardless of the number of pancakes in the stack.  You'll need to refactor the `Price` property so that when additional pancake is added, the price of the entree increases by $0.50, and when a pancake is removed, it is decreased by $0.50.     
 
-#### Brontowurst
-You will need to define a class to represent a Brontowurst (a brautwurst with fried peppers and onions served in a bun), which can be customized after creation.  You should name this class `Brontowurst` and declare it in the file _Brontowurst.cs_.  It should have the following properties:
+### Outer Omelette
+You will need to create a class to represent the Outer Omelette entree named `OuterOmelette`.  The structure of this class is detailed in the UML below (you may add additional private members as needed).
 
-`Name`: A `string` that is always "Brontowurst".
+![OuterOmelette UML diagram](/images/d.s23.4.1.png)
 
-`Price`: A getter-only property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $5.86.
+The specific values for the `OuterOmelette` properties are described in the table below
 
-`Calories`: A getter-only property of type `uint` with a value of 512.
-
-`Onions`: A boolean property indicating if the Brontowurst is served with onions defaulting to `true`.
-
-`Peppers`: A boolean property indicating if the Brontowurst is served with peppers defaulting to `true`.
-
-#### Dino Nuggets
-You will need to define a class to represent a serving of Dino Nuggets (chicken nuggets), which can be customized after creation.  You should name this class `DinoNuggets` and declare it in the file _DinoNuggets.cs_.  It should have the following properties:
-
-`Name`: A `string` that is "[count] Dino Nuggets", where [count] is the number of nuggets.
-
-`Count`: A `uint` property indicating the number of dino nuggets (defaults to 6).
-
-`Price`: A getter-only property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $0.25 per nugget.
-
-`Calories`: A getter-only property with type `uint` and a value of 61 per nugget.
-
-#### Pterodactyl Wings
-You will need to define a class to represent a serving of Pterodactyl Wings (Chicken Wings), which can be customized after creation.  You should name this class `PterodactylWings` and declare it in the file _PterodactylWings.cs_.  It should have the following properties:
-
-`Name`: A `string` that is "[wing sauce] Pterodactyl Wings", where [wing sauce] is one of "Buffalo", "Teriyaki", or "Honey Glaze", corresponding to the `Sauce` property value.
-
-`Sauce`: A property with the `Sauce` enum type, indicating the sauce to use on the wings (default `WingSauce.Buffalo`).
-
-`Price`: A getter-only property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $8.95.
-
-`Calories`: A getter-only property with type `uint` and a value of 360 for Buffalo wings, 342 for Teriyaki wings, or 359 for Honey Glaze wings.
-
-#### Veloci-Wraptor
-You will need to define a class to represent a Veloci-Wraptor (a Caesar chicken wrap), which can be customized after creation.  You should name this class `VelociWraptor` and declare it in the file _VelociWraptor.cs_.  It should have the following properties:
-
-`Name`: A `string` that is always "Veloci-Wraptor".
-
-`Price`: A getter-only property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $6.25.
-
-`Calories`: A getter-only property with type `uint` and a value of 732. If served without dressing, this is reduced by 94 calories. If served without cheese, this is reduced by 22 calories.
-
-`Dressing`: A boolean property indicating if the wrap is served with Caesar dressing (defaults to `true`).
-
-`Cheese`: A boolean property indicating if the wrap is served with parmesan cheese (defaults to `true`).
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Outer Omelette"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"A fully loaded Omelette."</td>
+  </tr>
+  <tr>
+    <td>CheddarCheese</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Peppers</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Mushrooms</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Tomatoes</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Onions</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$7.45</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>94 for the eggs in the omelette, plus 113 calories for cheddar cheese, 24 calories for peppers, 4 calories for mushrooms, 22 calories for tomatoes, and 22 calories for onions</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>For any ingredient not used, should include "Hold [ingredient]" where [ingredient] is the name of the ingredient, i.e. if the CheddarCheese property is false, it should include "Hold Cheddar Cheese"
+    </td>
+</table>
 
 
 ## Side Menu Item Classes
 
-All side menu item classes should reside in the `DinoDiner.Data.Sides` namespace and be placed in the _Sides_ folder within the Data project in your solution. Side menu items all come in three sizes - small, medium, or large, and the price and calories vary based on the size. 
+You will need to create classes to represent the six sides Crop Circle, Glowing Haystack, Taken Bacon, Missing Links, Eviscerated Eggs, and You're Toast. 
 
-The needed classes are:
+### Crop Circle
 
-#### Fryceritops
-You will need to define a class to represent Fryceritops (French fries), which can be customized after creation.  You should name this class `Fryceritops` and declare it in the file _Fryceritops.cs_.  It should have the following properties:
+The structure for the `CropCircle` class appears in the UML diagram below:
 
-`Name`: A `string` that is "[Size] Fryceritops" where [Size] is the serving size of the item, i.e. "Small Fryceritops" for when the `Size` property is small.
+![Crop Circle UML Diagram](/images/d.s23.4.2.png)
 
-`Salt`: A boolean property indicating that the fries should be served with salt, defaults to `true`.
+The specific values for the `CropCircle` properties are described in the table below
 
-`Sauce`: A boolean property indicating that the fries should be served with fry sauce, defaults to `false`.
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Crop Circle"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Oatmeal topped with mixed berries."</td>
+  </tr>
+  <tr>
+    <td>Berries</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$2.00</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>158 calories, plus 89 calories if berries are included</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>Includes "Hold Berries" if the Berries property is false.
+    </td>
+</table>
 
-`Size`: A property of type `ServingSize`.
+### Glowing Haystack
 
-`Price`: A getter-only property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $3.50 for small, $4.00 for medium, and $5.00 for large.
+The structure for the `GlowingHaystack` class appears in the UML diagram below:
 
-`Calories`: A readonly property of type `uint` with a value of 365 for small, 465 for medium, or 510 for large, _plus_ an additional 80 calories if `Sauce` is true.
+![Glowing Haystack UML Diagram](/images/d.s23.4.3.png)
+The specific values for the `GlowingHaystack` properties are described in the table below
 
-#### Meteor Mac & Cheese
-You will need to define a class to represent Meteor Mac & Cheese (Mac and Cheese with sausage bites), which can be customized after creation.  You should name this class `MeteorMacAndCheese` and declare it in the file _MeteorMacAndCheese.cs_.  It should have the following properties:
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Glowing Haystack"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Hash browns smothered in green chile sauce, sour cream, and topped with tomatoes."</td>
+  </tr>
+  <tr>
+    <td>Green Chile Sauce</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Sour Cream</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Tomatoes</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$2.00</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>470 calories, plus 15 calories for green chile sauce, 23 calories for sour cream, and 22 calories for tomatoes</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>For any ingredient not used, should include "Hold [ingredient]" where [ingredient] is the name of the ingredient, i.e. if the GreenChileSauce property is false, it should include "Hold Green Chile Sauce"
+    </td>
+</table>
 
-`Name`: A `string` that is "[Size] Meteor Mac & Cheese" where [Size] is the serving size of the item, i.e. "Small Meteor Mac & Cheese" for when the `Size` property is small.
+### Taken Bacon
 
-`Size`: A property of type `ServingSize`.
+The structure for the `TakenBacon` class appears in the UML diagram below:
 
-`Price`: A getter-only property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $3.50 for small, $4.00 for medium, and $5.25 for large.
+![Taken Bacon UML Diagram](/images/d.s23.4.4.png)
 
-`Calories`: A readonly property of type `uint` with a value of 425 for small, 510 for medium, or 700 for large.
+The specific values for the `TakenBacon` properties are described in the table below
 
-#### Mezzorealla Sticks
-You will need to define a class to represent Mezzorella Sticks (breaded and deep-fried mozzarella cheese sticks), which can be customized after creation.  You should name this class `MezzorellaSticks` and declare it in the file _MezzorellaSticks.cs_.  It should have the following properties:
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Taken Bacon"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Crispy strips of bacon."</td>
+  </tr>
+  <tr>
+    <td>Count</td>
+    <td>get and set</td>
+    <td>uint</td>
+    <td>Defaults to 2 strips of bacon</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$1.00 per strip of bacon</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>43 calories per strip of bacon</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>For any number of strips but two, should include "[n] strips" where [n] is the count.
+    </td>
+</table>
 
-`Name`: A `string` that is "[Size] Mezzorella Sticks" where [Size] is the serving size of the item, i.e. "Small Mezzorella Sticks" for when the `Size` property is small.
+### Missing Links
 
-`Size`: A property of type `ServingSize`.
+The structure for the `MissingLinks` class appears in the UML diagram below:
 
-`Price`: A readonly property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $3.50 for small, $4.00 for medium, and $5.25 for large.
+![MissingLinks UML Diagram](/images/d.s23.4.6.png)
 
-`Calories`: A readonly property of type `uint` with a value of 530 for small, 620 for medium, or 730 for large.
+The specific values for the `MissingLinks` properties are described in the table below
 
-#### Triceritots 
-You will need to define a class to represent Triceritots (tater tots), which can be customized after creation.  You should name this class `Triceritots` and define it in a file named _Triceritots.cs_.  It should have the following properties:
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Missing Links"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>Sizzling pork sausage links."</td>
+  </tr>
+  <tr>
+    <td>Count</td>
+    <td>get and set</td>
+    <td>uint</td>
+    <td>Defaults to 2 sausage links</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$1.00 per sausage link</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>391 calories per link of sausage</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>For any number of links but two, should include "[n] links" where [n] is the count.
+    </td>
+</table>
 
-`Name`: A `string` that is "[Size] Triceritots" where [Size] is the serving size of the item, i.e. "Small Triceritots" for when the `Size` property is small.
+### Eviscerated Eggs
 
-`Size`: A property of type `ServingSize`.
+The structure for the `EvisceratedEggs` class appears in the UML diagram below:
 
-`Price`: A getter-only property (i.e. it has only a `get` and no `set`) of type `decimal` with a value of $3.50 for small, $4.00 for medium, and $5.25 for large.
+![Eviscerated Eggs UML Diagram](/images/d.s23.4.7.png)
 
-`Calories`: A readonly property of type `uint` with a value of 351 for small, 409 for medium, or 583 for large.
+The specific values for the `EvisceratedEggs` properties are described in the table below
+
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Eviscerated Eggs"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Eggs prepared the way you like."</td>
+  </tr>
+  <tr>
+    <td>Style</td>
+    <td>get and set</td>
+    <td>EggStyle</td>
+    <td>Defaults to over easy</td>
+  </tr>
+  <tr>
+    <td>Count</td>
+    <td>get and set</td>
+    <td>uint</td>
+    <td>Defaults to 2 eggs</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$1.00 per strip of bacon</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>43 calories per strip of bacon</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>Should always contain a string corresponding to the Style property, i.e. if the Style property is EggStyle.OverEasy it should contain the string "Over Easy".
+    If any number of eggs other than 2 is chosen, it should also contain "[n] eggs" where [n] is the number of eggs.
+    </td>
+</table>
+
+### You're Toast
+
+The structure for the `YouAreToast` class appears in the UML diagram below:
+
+![You're Toast UML Diagram](/images/d.s23.4.8.png)
+
+The specific values for the `YouAreToast` properties are described in the table below
+
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"You're Toast"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Texas toast."</td>
+  </tr>
+  <tr>
+    <td>Count</td>
+    <td>get and set</td>
+    <td>uint</td>
+    <td>Defaults to 2 slices of toast</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$1.00 per slice of toast</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>100 calories per slice of toast</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>For any number of slices but two, should include "[n] slices" where [n] is the count.
+    </td>
+</table>
+
+
 
 ## Submitting the Assignment
 Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.2.0` with name `"Milestone 2"`.  Copy the URL for the release page and submit it to the Canvas assignment.
@@ -210,4 +534,3 @@ The grading rubric for this assignment will be:
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
 {{% /notice %}}
--->
