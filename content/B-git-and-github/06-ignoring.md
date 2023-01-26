@@ -5,6 +5,8 @@ weight: 6
 date: 2018-08-24T10:53:26-05:00
 ---
 
+{{<youtube LjUpxnmgdOQ>}}
+
 Typically there are some files in a project that we _never_ want to commit.  For example, compilers often create temporary or intermediate files during the compilation process, and these will be recreated every time we re-compile. We also usually don't want to commit the compiled binary files either, as we can always compile our code to get a fresh copy.  Not saving these files means our repository takes up less memory, and Git operations are faster.  
 
 And if our project involves some configuration files with sensitive information (passwords, shared secrets, etc), we don't want to commit these to our repository either - especially if it will be publicly visible on GitHub.

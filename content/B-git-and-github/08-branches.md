@@ -5,6 +5,8 @@ weight: 8
 date: 2018-08-24T10:53:26-05:00
 ---
 
+{{<youtube dPzLr53-Geg>}}
+
 Branches are a powerful mechanisms for working on different versions of your code.  The name "branch" is derived from visualizing a repository as a tree structure, with each commit being a node in the tree.  For a simple repository, this tree structure is pretty boring - just a straight line as each node has only one child:
 
 ![Simple repository with one branch](/images/b.8.1.png)

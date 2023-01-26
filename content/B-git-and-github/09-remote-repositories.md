@@ -5,6 +5,8 @@ weight: 9
 date: 2018-08-24T10:53:26-05:00
 ---
 
+{{<youtube RFPd6Y_JRiw>}}
+
 Git bills itself as a _distributed_ version control system.  This means it has no central server.  Instead, we can create copies of the repository we call _remote repositories_ with the **git clone** command.  These copies can be placed anywhere - in another directory on your computer, or on a different computer on your network, or a computer accessed via the internet.  
 
 GitHub is a web service that specifically hosts remote git repositories and allows you to access them through both your git client _and_ through a web (HTML/CSS/JS) interface.  It was created primarily to provide a place to host publicly-accessible, open-source projects, though you can also use it to create private repositories.  It is not the only such service available; [BitBucket](https://bitbucket.org) is a similar website more focused on closed-source projects, and the popular [GitLab](https://about.gitlab.com/) is an open-source server for hosting Git projects you can install on your own systems.  The Computer Science department at Kansas State University runs its own GitLab server to host projects developed as part of our research and extension mission.

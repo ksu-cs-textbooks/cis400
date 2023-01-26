@@ -4,6 +4,9 @@ pre: "10. "
 weight: 100
 date: 2018-08-24T10:53:26-05:00
 ---
+
+{{<youtube UNfv8hdywEs>}}
+
 When git merges commits from two different branches or remote repositories, it applies the committed changes from both.  In many cases, this works seamlessly, but sometimes it results in _merge conflicts_.  A conflict occurs when the same line(s) in a file were changed in both branches, and git is unsure of which to use.
 
 Git will do several things in this scenario:

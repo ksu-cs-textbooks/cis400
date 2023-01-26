@@ -5,6 +5,8 @@ weight: 5
 date: 2018-08-24T10:53:26-05:00
 ---
 
+{{<youtube isp3dsbZjss>}}
+
 It is important to understand that Git doesn't save the changes to _every_ file in the directory when you create a commit - it only saves those files you have _staged_ to be committed. This extra step often confuses new Git users, but it exists to give you full control over what gets committed into your repository.
 
 ![Staging Diagram](/images/b.5.3.png)

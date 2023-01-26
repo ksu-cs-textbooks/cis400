@@ -5,6 +5,8 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
+{{<youtube zYXS4ILE_Mo>}}
+
 Git converts an ordinary directory (folder) on our computer into a _git repository_, allowing you to save different versions of the directory's contents as you make changes to that directory.  Invoking the **git init** command within the top directory of your project starts this process:
 
 ```js
