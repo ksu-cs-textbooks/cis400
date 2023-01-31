@@ -1,7 +1,7 @@
 ---
 title: "Running Tests"
-pre: "6. "
-weight: 6
+pre: "7. "
+weight: 7
 date: 2018-08-24T10:53:26-05:00
 ---
 
