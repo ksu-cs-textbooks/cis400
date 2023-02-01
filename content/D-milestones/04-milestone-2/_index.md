@@ -445,13 +445,13 @@ The specific values for the `EvisceratedEggs` properties are described in the ta
     <td>Price</td>
     <td>get only</td>
     <td>decimal</td>
-    <td>$1.00 per strip of bacon</td>
+    <td>$1.00 per egg</td>
   </tr>
   <tr>
     <td>Calories</td>
     <td>get only</td>
     <td>uint</td>
-    <td>43 calories per strip of bacon</td>
+    <td>78 calories per egg</td>
   </tr>
   <tr>
     <td>SpecialInstructions</td>
