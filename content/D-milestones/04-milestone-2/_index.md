@@ -374,6 +374,7 @@ The specific values for the `MissingLinks` properties are described in the table
   <tr>
     <td>Description</td>
     <td>get only</td>
+    <td>string</td>
     <td>Sizzling pork sausage links."</td>
   </tr>
   <tr>
