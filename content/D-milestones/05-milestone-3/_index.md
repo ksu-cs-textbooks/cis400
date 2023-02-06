@@ -102,13 +102,13 @@ A few of the properties have been updated with new expectations.  These are high
     <td>Price</td>
     <td>get only</td>
     <td>decimal</td>
-    <td style="background-color: #FBEC5D">$8.50, plus an additional $0.75 for each additional slice beyond the default</td>
+    <td style="background-color: #FBEC5D">$8.50, plus an additional $0.75 for each additional pancake beyond the default</td>
   </tr>
   <tr>
     <td>Calories</td>
     <td>get only</td>
     <td>uint</td>
-    <td>64 per slice of french toast, plus 32 calories if syrup is included, 414 calories if whipped cream is included, and 89 calories if berries are included</td>
+    <td>64 per pancake, plus 32 calories if syrup is included, 414 calories if whipped cream is included, and 89 calories if berries are included</td>
   </tr>
   <tr>
     <td>SpecialInstructions</td>
@@ -116,7 +116,7 @@ A few of the properties have been updated with new expectations.  These are high
     <td>IEnumerable&langle;string&rangle;</td>
     <td>Should include: 
       <ul>
-        <li>"[n] slices" with [n] being the number of slices when it is not the default 2</li>
+        <li>"[n] pancakes" with [n] being the number of pancakes when it is not the default 2</li>
         <li>"Hold Butter" if Butter is false</li>
         <li>"Hold Syrup" if Syrup is false</li>
       </ul>
