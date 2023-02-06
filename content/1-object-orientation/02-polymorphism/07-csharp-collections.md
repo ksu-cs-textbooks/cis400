@@ -26,7 +26,7 @@ jumpables.Add(new Kangaroo());
 
 The C# language and system libraries also define a number of interfaces that apply to custom collections. Implementing these interfaces allows different kinds of data structures to be utilized in a standardized way.
 
-### The IEnumerable<T> Interface
+### The IEnumerable&lt;T&gt; Interface
 
 The first of these is the `IEnumerable<T>` interface, which requires the collection to implement one method:
 
@@ -34,7 +34,7 @@ The first of these is the `IEnumerable<T>` interface, which requires the collect
 
 Implementing this interface allows the collection to be used in a `foreach` loop.
 
-### The ICollection<T> Interface
+### The ICollection&lt;T&gt; Interface
 
 C# Collections also typically implement the `ICollection<T>` interface, which _extends_ the `IEnumerable<T>` interface and adds additional methods:
 
@@ -49,7 +49,7 @@ Additionally, the collection must implement the following properties:
 * `int Count` the number of items in the collection
 * `bool IsReadOnly` the collection is read-only (can't be added to or removed from) 
 
-### IList<T>
+### The IList&lt;T&gt; Interface
 
 Finally, collections that have an implied order and are intended to be accessed by a specific index should probably implement the `IList<T>` interface, which extends `ICollection<T>` and `IEnumerable<T>`. This interface adds these additional methods:
 
