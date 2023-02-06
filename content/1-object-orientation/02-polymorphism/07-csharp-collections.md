@@ -22,9 +22,13 @@ jumpables.Add(new Car());
 jumpables.Add(new Kangaroo());
 ```
 
+## Collection Interfaces
+
+The C# language and system libraries also define a number of interfaces that apply to custom collections. Implementing these interfaces allows different kinds of data structures to be utilized in a standardized way.
+
 ### The IEnumerable<T> Interface
 
-Collections in C# typically implement the `IEnumerable<T>` interface, which requires the collection to implement one method:
+The first of these is the `IEnumerable<T>` interface, which requires the collection to implement one method:
 
 * `public IEnumerator<T> GetEnumerator()`
 
