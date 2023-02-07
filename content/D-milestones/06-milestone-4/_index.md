@@ -9,9 +9,7 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# TBD
-<!--
-For this milestone, you will be creating unit tests for the menu item classes you have defined in the `Data` project. If these tests expose issues in your existing code, you will also want to fix them. 
+For this milestone, you will be creating new classes representing an order and refactoring your existing classes to implement an interface and base classes.  You will also need to update your unit tests to account for these changes.  Finally, you will also create a UML class diagram to represent your classes.
 
 ### General requirements:
 
@@ -23,359 +21,247 @@ For this milestone, you will be creating unit tests for the menu item classes yo
 
 You will need to:
 
+* Create an `IMenuItem` interface to represent an item appearing on the menu
+
+* Refactor your existing classes to implement the `IMenuItem` interface
+
+* Add additional unit tests to verify your menu items can be treated as `IMenuItem` instances
+
+* Create an `Order` class to represent a collection of menu items being ordered together
+
 * Create a UML diagram for your `Data` Project
-
-* Refactor unit test class for PrehistoricPBJ to match its new specification
-
-* Create unit test classes for:
-  * Brontowurst
-  * DinoNuggets
-  * PterodactylWings
-  * VelociWraptor
-  * AllosaurusAllAmericanBurger
-  * CarnotaurusCheeseburger
-  * DeinonychusDouble
-  * TRexTripleBurger
-  * Fryceritops
-  * MeteorMacAndCheese
-  * MezzorellaSticks
-  * Triceritots
-  * Plilosoda
-  * CretaceousCoffee 
-
-In addition, if you did not declare your `Burger` base class abstract, you will need to create a unit test class for it.
 
 ### Purpose:
 
-This milestone serves to introduce the writing of unit tests.  The real challenge of writing a unit test is not the programming involved, but rather, identifying _what_ you need to test for.  You should make sure that methods and properties behave as expected when used as expected. But you must also account for _edge cases_, where the objects are manipulated in unexpected ways.  If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
+This milestone serves to introduce and utilize aspects of polymorphism including base classes, abstract base classes, abstract methods, virtual methods, method overriding, and interfaces.  While the actual programming involved is straightforward, the concepts involved can be challenging to master. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
 
-### Writing Tests
-You will need to create an XUnit unit test class in your `DataTests` project for each menu item class in the `Data` project.  These test classes must contain (at a minimum) the test methods described below.  You may add additional methods.
+### IMenuItem Interface
 
-In addition, when a test method takes parameters, you will need to provide corresponding `[InlineData()]` attributes to be used by the test runner as arguments for those parameters.  You should supply enough attributes to either 1) be exhaustive (cover all possibilities), or 2) cover a reasonable number of expected cases and any edge cases.  
+You will create an interface named `IMenuItem` in the file _IMenuItem.cs_ to represent the properties that all menu items share, which should include: 
 
-{{% notice info %}}
-As a rule of thumb for this course, use at least 8 `[InlineData()]` options if there are more than 8 possible permutations. Good practice is to select these 8 largely at random (i.e. roll dice, use a random number generator, etc).
-{{% /notice %}}
+* A get-only `Name` property of type `string`
+* A get-only `Description` property of type `string`
+* A get-only `Price` property of type `decimal`
+* A get-only `Calories` property of type `uint`
+* A get-only `SpecialInstructions` property of type `IEnumerable<string>` 
 
-#### Refactor PrehistoricPBJUnitTests
+You will need to implement this interface on all existing and future menu items defined in the `Data` project.
 
-The _UnitTests/PrehistoricPBJ.cs_ already contains unit tests for the `PrehistoricPBJ` class, but these tests were for the original specification, not the refactoring you did for Milestone 1. As a result, you do not have a test of the `Name` property. 
+You will also want to test that your menu items can be cast to be an `IMenuItem` using the `Assert.IsAssignableFrom<T>()` assertion in the corresponding unit test file with a new `Fact`.
 
-We know the name should always be "Prehistoric PBJ".  We could write a test in the form of a `Fact` to confirm this, i.e.:
+### Abstract Base Classes 
 
-```csharp
-[Fact]
-public void NameShouldBeCorrect()
-{
-  PrehistoricPBJ pbj = new PrehistoricPBJ();
-  Assert.Equal("Prehistoric PBJ", pbj.Name);
-}
-```
+You will also write abstract base classes representing `Entree`, `Side`, and `Drink` menu items, in files named _Entree.cs_, _Side.cs_, and _Drink.cs_ respectively. These should generalize (collect together) the properties that each of these categories of menu items have in common - either as `abstract` or `virtual` properties, to be overridden as needed in the derived classes.
 
-However, a stronger test would consider if changing other aspects of the `PrehistoricPBJ` object might change its name. A `PrehistoricPBJ` has three properties that can be customized: `PeanutButter`, `Jelly`, and `Toasted`.  Using a `Theory` allows us to test different customizations, and ensure the name does not change:
+All of your menu classes should be refactored to derive from one of these abstract base classes. Note that this may allow you to remove methods or require you to `override` the base method.
 
-```csharp
-[Theory]
-[InlineData(true, true, true)]
-[InlineData(true, true, false)]
-[InlineData(true, false, true)]
-[InlineData(false, true, true)]
-[InlineData(false, false, true)]
-[InlineData(true, false, false)]
-[InlineData(false, false, false)]
-public void NameShouldBeCorrect(bool peanutButter, bool jelly, bool toasted)
-{
-  PrehistoricPBJ pbj = new PrehistoricPBJ();
-  pbj.PeanutButter = peanutButter;
-  pbj.Jelly = jelly;
-  pbj.Toasted = toasted;
-  Assert.Equal("Prehistoric PBJ", pbj.Name);
-}
-```
+You will also want to test that your menu items can be cast to be the corresponding base class using the `Assert.IsAssignableFrom<T>()` assertion in the corresponding unit test file with a new `Fact`.
 
-Now the test ensures that even when we change aspects of how the `PrehistoricPBJ` is served, we still get the expected name. If the name _did_ change, we could also specify what we expect the name as an additional argument/inline data.  In fact, we can do that even if it doesn't, i.e.:
+### Drink Classes
 
-```csharp
-[Theory]
-[InlineData(true, true, true, "Prehistoric PBJ")]
-[InlineData(true, true, false, "Prehistoric PBJ")]
-[InlineData(true, false, true, "Prehistoric PBJ")]
-[InlineData(false, true, true, "Prehistoric PBJ")]
-[InlineData(false, false, true, "Prehistoric PBJ")]
-[InlineData(true, false, false, "Prehistoric PBJ")]
-[InlineData(false, false, false, "Prehistoric PBJ")]
-public void NameShouldBeCorrect(bool peanutButter, bool jelly, bool toasted, string name)
-{
-  PrehistoricPBJ pbj = new PrehistoricPBJ();
-  pbj.PeanutButter = peanutButter;
-  pbj.Jelly = jelly;
-  pbj.Toasted = toasted;
-  Assert.Equal(name, pbj.Name);
-}
-```
+You will also need to implement new classes representing the drinks available at The Flying Saucer, which are Liquified Vegetation, Saucer Fuel, and Inorganic Substance.  All drinks have a `Size` property of type `ServingSize`, in addition to the normal `IMenuItem` properties.
 
-In addition, the `PrehistoricPBJ` should now inherit from the base class `Entree`.  We can check this with a simple `Fact`:
+#### Liquified Vegetation
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Liquified Vegetation"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"A cold glass of blended vegetable juice."</td>
+  </tr>
+  <tr>
+    <td>Size</td>
+    <td>get and set</td>
+    <td>ServingSize</td>
+    <td>Default of `ServingSize.Small`</td>
+  </tr>
+  <tr>
+    <td>Ice</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$1.00 for small, $1.50 for medium, $2.00 for large</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>72 for small, 144 for medium, 216 for large</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>Should include: 
+      <ul>
+        <li>"No Ice" if Ice is false</li>
+      </ul>
+    </td>
+</table>
 
-```csharp
-[Fact]
-public void PrehistoricPBJShouldInheritFromEntree()
-{
-  PrehistoricPBJ pbj = new PrehistoricPBJ();
-  Assert.IsAssignableFrom<Entree>(pbj);
-}
-```
+### Saucer Fuel
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Saucer Fuel" or "Decaf Saucer Fuel" if Decaf is true</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"A steaming cup of coffee."</td>
+  </tr>
+  <tr>
+    <td>Size</td>
+    <td>get and set</td>
+    <td>ServingSize</td>
+    <td>Default of `ServingSize.Small`</td>
+  </tr>
+  <tr>
+    <td>Decaf</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to false</td>
+  </tr>
+  <tr>
+    <td>Cream</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to false</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$1.00 for small, $1.50 for medium, $2.00 for large</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>1 for small, 2 for medium, 3 for large, plus 29 calories for cream</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>Should include: 
+      <ul>
+        <li>"With Cream" if Cream is true</li>
+      </ul>
+    </td>
+</table>
 
-This assertion checks that a `PrehistoricPBJ` can be cast as a `Entree`. 
+#### Inorganic Substance
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Accessors</th>
+    <th>Type</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"Inorganic Substance"</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>get only</td>
+    <td>string</td>
+    <td>"A cold glass of ice water."</td>
+  </tr>
+  <tr>
+    <td>Size</td>
+    <td>get and set</td>
+    <td>ServingSize</td>
+    <td>Default of `ServingSize.Small`</td>
+  </tr>
+  <tr>
+    <td>Ice</td>
+    <td>get and set</td>
+    <td>bool</td>
+    <td>Defaults to true</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>get only</td>
+    <td>decimal</td>
+    <td>$0.00 for any size</td>
+  </tr>
+  <tr>
+    <td>Calories</td>
+    <td>get only</td>
+    <td>uint</td>
+    <td>0 for all sizes</td>
+  </tr>
+  <tr>
+    <td>SpecialInstructions</td>
+    <td>get only</td>
+    <td>IEnumerable&langle;string&rangle;</td>
+    <td>Should include: 
+      <ul>
+        <li>"No Ice" if Ice is false</li>
+      </ul>
+    </td>
+</table>
 
-#### Write New Unit Tests
+### Order Class
 
-You need to write additional unit tests for the rest of the menu item classes.  These should be placed in the `DataTests` project in the _UnitTests_ folder, and named after the class they are testing, i.e. put the Dino Nuggets tests in _DinoNuggetUnitTests.cs_. This makes it easy to determine what class the test belongs to.
+You will also need to create a class, `Order` in a file _order.cs_, representing an order containing multiple, potentially customized menu items.  This class will need to implement the `ICollection<IMenuItem>` interface, allowing it to be treated as a collection.  In addition to the methods and properties required for the interface, it should have the additional properties of:
 
-In the following sections is a list of _minimum_ test methods you should add (you get to decide if they should be a `[Fact]` or `[Theory]`). Please use the names as written - that makes grading much faster. And remember, you can always add additional tests!
+* `Subtotal`, a get-only `decimal` that is the price of all items in the order
+* `TaxRate`, a get/set `decimal` that represents the sales tax rate
+* `Tax`, a get-only `decimal` that is the tax for the order (`Subtotal` * `TaxRate`)
+* `Total`, a get-only `decimal` that is the sum of the `Subtotal` and `Tax`
 
-{{% notice hint %}}
-You can do operations within an `[InlineData()]`, which may be helpful to keeping your numbers accurate.  For example, consider an item with 480 calories, _plus_ an additional 30 if it is served with a sauce.  You can calculate the sum by hand, _or_ express it as a sum in the `[InlineData()]`, i.e:
+### UML Class Diagram
 
-```csharp
-[InlineData(ServingSize.Large, true, 480 + 130)]
-```
-{{% /notice %}}
-
-##### BrontowurstUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* OnionsShouldDefaultToTrue
-* ShouldBeAbleToSetOnions
-* PeppersShouldDefaultToTrue
-* ShouldBeAbleToSetPeppers
-
-##### DinoNuggetsUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* CountShouldDefaultToSix
-* ShouldBeAbleToSetCount
-
-##### PterodactylWingsUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* SauceShouldDefaultToBuffalo
-* ShouldBeAbleToSetSauce
-
-##### VelociWraptorUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* DressingShouldDefaultToTrue
-* ShouldBeAbleToSetDressing
-* CheeseShouldDefaultToTrue
-* ShouldBeAbleToSetCheese
-
-##### AllosaurusAllAmericanBurgerUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* PattiesShouldDefaultToOne
-* ShouldBeAbleToSetPatties
-* KetchupShouldDefaultToTrue
-* ShouldBeAbleToSetKetchup
-* MustardShouldDefaultToTrue
-* ShouldBeAbleToSetMustard
-* PickleShouldDefaultToTrue
-* ShouldBeAbleToSetPickle
-* MayoShouldDefaultToFalse
-* ShouldBeAbleToSetMayo
-* BBQShouldDefaultToFalse
-* ShouldBeAbleToSetBBQ
-* OnionShouldDefaultToFalse
-* ShouldBeAbleToSetOnion
-* TomatoShouldDefaultToFalse
-* ShouldBeAbleToSetTomato
-* LettuceShouldDefaultToFalse
-* ShouldBeAbleToSetLettuce
-* AmericanCheeseShouldDefaultToFalse
-* ShouldBeAbleToSetAmericanCheese
-* SwissCheeseShouldDefaultToFalse
-* ShouldBeAbleToSetSwissCheese
-* BaconShouldDefaultToFalse
-* ShouldBeAbleToSetBacon
-* MushroomsShouldDefaultToFalse
-* ShouldBeAbleToSetMushrooms
-
-##### CarnotaurusCheeseburgerUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* PattiesShouldDefaultToOne
-* ShouldBeAbleToSetPatties
-* KetchupShouldDefaultToTrue
-* ShouldBeAbleToSetKetchup
-* MustardShouldDefaultToFalse
-* ShouldBeAbleToSetMustard
-* PickleShouldDefaultToTrue
-* ShouldBeAbleToSetPickle
-* MayoShouldDefaultToFalse
-* ShouldBeAbleToSetMayo
-* BBQShouldDefaultToFalse
-* ShouldBeAbleToSetBBQ
-* OnionShouldDefaultToFalse
-* ShouldBeAbleToSetOnion
-* TomatoShouldDefaultToTrue
-* ShouldBeAbleToSetTomato
-* LettuceShouldDefaultToFalse
-* ShouldBeAbleToSetLettuce
-* AmericanCheeseShouldDefaultToTrue
-* ShouldBeAbleToSetAmericanCheese
-* SwissCheeseShouldDefaultToFalse
-* ShouldBeAbleToSetSwissCheese
-* BaconShouldDefaultToFalse
-* ShouldBeAbleToSetBacon
-* MushroomsShouldDefaultToFalse
-* ShouldBeAbleToSetMushrooms
-
-##### DeinonychusDoubleUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* PattiesShouldDefaultToTwo
-* ShouldBeAbleToSetPatties
-* KetchupShouldDefaultToFalse
-* ShouldBeAbleToSetKetchup
-* MustardShouldDefaultToFalse
-* ShouldBeAbleToSetMustard
-* PickleShouldDefaultToTrue
-* ShouldBeAbleToSetPickle
-* MayoShouldDefaultToFalse
-* ShouldBeAbleToSetMayo
-* BBQShouldDefaultToTrue
-* ShouldBeAbleToSetBBQ
-* OnionShouldDefaultToTrue
-* ShouldBeAbleToSetOnion
-* TomatoShouldDefaultToFalse
-* ShouldBeAbleToSetTomato
-* LettuceShouldDefaultToFalse
-* ShouldBeAbleToSetLettuce
-* AmericanCheeseShouldDefaultToFalse
-* ShouldBeAbleToSetAmericanCheese
-* SwissCheeseShouldDefaultToTrue
-* ShouldBeAbleToSetSwissCheese
-* BaconShouldDefaultToFalse
-* ShouldBeAbleToSetBacon
-* MushroomsShouldDefaultToTrue
-* ShouldBeAbleToSetMushrooms
-
-##### TRexTripleBurgerUnitTests
-* ShouldInheritFromEntree
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* PattiesShouldDefaultToThree
-* ShouldBeAbleToSetPatties
-* KetchupShouldDefaultToTrue
-* ShouldBeAbleToSetKetchup
-* MustardShouldDefaultToFalse
-* ShouldBeAbleToSetMustard
-* PickleShouldDefaultToTrue
-* ShouldBeAbleToSetPickle
-* MayoShouldDefaultToTrue
-* ShouldBeAbleToSetMayo
-* BBQShouldDefaultToFalse
-* ShouldBeAbleToSetBBQ
-* OnionShouldDefaultToTrue
-* ShouldBeAbleToSetOnion
-* TomatoShouldDefaultToTrue
-* ShouldBeAbleToSetTomato
-* LettuceShouldDefaultToTrue
-* ShouldBeAbleToSetLettuce
-* AmericanCheeseShouldDefaultToFalse
-* ShouldBeAbleToSetAmericanCheese
-* SwissCheeseShouldDefaultToFalse
-* ShouldBeAbleToSetSwissCheese
-* BaconShouldDefaultToFalse
-* ShouldBeAbleToSetBacon
-* MushroomsShouldDefaultToFalse
-* ShouldBeAbleToSetMushrooms
-
-##### FryceritopsUnitTests
-* ShouldInheritFromSide
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* ShouldBeAbleToSetSize
-* SaltShouldDefaultToTrue
-* ShouldBeAbleToSetSalt
-* SauceShouldDefaultToFalse
-* ShouldBeAbleToSetSauce
-
-##### MeteorMacAndCheeseUnitTests
-* ShouldInheritFromSide
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* ShouldBeAbleToSetSize
-
-##### MezzorellaSticksUnitTests
-* ShouldInheritFromSide
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* ShouldBeAbleToSetSize
-
-##### TriceritotsUnitTests
-* ShouldInheritFromSide
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* ShouldBeAbleToSetSize
-
-##### PlilosodaUnitTests
-* ShouldInheritFromDrink
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* ShouldBeAbleToSetSize
-* ShouldBeAbleToSetFlavor
-
-##### CretaceousCoffeeUnitTests
-* ShouldInheritFromDrink
-* NameShouldBeCorrect
-* PriceShouldBeCorrect
-* CaloriesShouldBeCorrect
-* ShouldBeAbleToSetSize
-* ShouldBeAbleToSetCream
-* CreamShouldDefaultToFalse
-
-## Refactoring Menu Item Classes
-
-You may find in the process of writing your tests that your implementation of a particular menu item is not working correctly.  If this is the case, congratulations! Your tests are doing their job!
-
-At this point, you'll want to refactor the corresponding class to fix any of these problems.  
+Finally, you will need to create a UML class diagram for the `Data` project, and add it to your repository.  This can be done with Visio or another visual editing program like [Draw.io](https://draw.io) or [Lucid Charts](https://www.lucidchart.com/pages/landing). You should save the diagram in a PDF or image format that the graders can view. You _also_ will want to keep it in an editable format, as you'll be updating it in future milestones. Be sure to follow the instructions in [Adding Documentation Files]{{<ref "/B-git-and-github/12-adding-documentation-files">}} and double-check that the UML diagrams appear in your release.
 
 ## Submitting the Assignment
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "/B-git-and-github/11-release">}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 The grading rubric for this assignment will be:
 
-**25% Structure** Did you implement the structure as laid out in the specification?  Are the correct names used for classes, enums, properties, methods, events, etc?  Do classes inherit from expected base classes?
+**20% Structure** Did you implement the structure as laid out in the specification?  Are the correct names used for classes, enums, properties, methods, events, etc?  Do classes inherit from expected base classes?
 
-**25% Documentation** Does every class, method, property, and field use the correct XML-style documentation?  Does every XML comment tag contain explanatory text?
+**20% Documentation** Does every class, method, property, and field use the correct XML-style documentation?  Does every XML comment tag contain explanatory text?  Is there a UML Diagram for the data project?  Does the UML accurately reflect the structure of the project
 
-**25% Design** Are you appropriately using C# to create reasonably efficient, secure, and usable software?  Does your code contain bugs that will cause issues at runtime?
+**20% Design** Are you appropriately using C# to create reasonably efficient, secure, and usable software?  Does your code contain bugs that will cause issues at runtime?
 
-**25% Functionality** Does the program do what the assignment asks?  Do properties return the expected values?  Do methods perform the expected actions?
+**20% Functionality** Does the program do what the assignment asks?  Do properties return the expected values?  Do methods perform the expected actions?
+
+**20% Tests** Does the test suite include unit tests for all classes?  Do the unit tests provide adequate coverage of the project?
+
 
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
 {{% /notice %}}
--->
