@@ -247,6 +247,36 @@ You will also need to create a class, `Order` in a file _Order.cs_, representing
 
 Remember that your new classes (`Order` and all the drinks) will all need to have corresponding unit tests added to the `DataTests` project.  Abstract classes `Entree`, `Side`, and `Drink` do not need to be tested, but any properties or methods inherited from them should be tested in the unit tests of the derived classes.
 
+Note that for testing the `Order` class, you will want to use a mock object rather than your real menu item classes.  This can be declared in the unit test class like this:
+
+```csharp
+/// <summary>
+/// A mock menu item for testing
+/// </summary>
+internal MockMenuItem : IMenuItem 
+{
+  public string Name {get; set;}
+  public string Description {get; set;}
+  public decimal Price {get; set;}
+  public uint Calories {get; set;}
+  public IEnumerable<string> SpecialInstructions {get;set;}
+}
+```
+
+This allows you to initialize it with known values in a test, i.e. we might initialize four menu items with prices to test the `Subtotal` property:
+
+```csharp
+[fact]
+public SubtotalShouldReflectItemPrices()
+{ 
+  Order order = new Order();
+  order.Add(new MockMenuItem() {Price = 1.00m});
+  order.Add(new MockMenuItem() {Price = 2.50m});
+  order.Add(new MockMenuItem() {Price = 3.00m});
+  Assert.Equal(6.50m, order.Subtotal);
+}
+```
+
 ### UML Class Diagram
 
 Finally, you will need to create a UML class diagram for the `Data` project, and add it to your repository.  This can be done with Visio or another visual editing program like [Draw.io](https://draw.io) or [Lucid Charts](https://www.lucidchart.com/pages/landing). You should save the diagram in a PDF or image format that the graders can view. You _also_ will want to keep it in an editable format, as you'll be updating it in future milestones. Be sure to follow the instructions in [Adding Documentation Files]{{<ref "/B-git-and-github/12-adding-documentation-files">}} and double-check that the UML diagrams appear in your release.
