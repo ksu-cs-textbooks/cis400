@@ -234,7 +234,7 @@ You will also need to implement new classes representing the drinks available at
 
 ### Order Class
 
-You will also need to create a class, `Order` in a file _order.cs_, representing an order containing multiple, potentially customized menu items.  This class will need to implement the `ICollection<IMenuItem>` interface, allowing it to be treated as a collection.  In addition to the methods and properties required for the interface, it should have the additional properties of:
+You will also need to create a class, `Order` in a file _Order.cs_, representing an order containing multiple, potentially customized menu items.  This class will need to implement the `ICollection<IMenuItem>` interface, allowing it to be treated as a collection.  In addition to the methods and properties required for the interface, it should have the additional properties of:
 
 * `Subtotal`, a get-only `decimal` that is the price of all items in the order
 * `TaxRate`, a get/set `decimal` that represents the sales tax rate
