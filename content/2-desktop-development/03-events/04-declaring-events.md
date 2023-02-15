@@ -5,6 +5,8 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
+Up to this point, you've probably only used events that were defined on library objects, like the Button's Click event.  However, you can also declare events in your own classes, and even create new event types.
+
 In order to attach an event handler to an object in C#, we must first declare that that object has the corresponding event.  To do so, we need both a _name_ for the event, and a _delegate_.
 
 In C# a [Delegate](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/), a special type that represents a method with a specific method signature and return type. A delegate allows us to associate the delegate any method that matches that signature and return type. For example, the `Click` event handler we discussed earlier is a delegate which matches a method that takes two arguments: an `object` and an `EventArgs`, and returns void.  Any event listener that we write that matches this specification can be attached to the `button.Click`.  In a way, a `Delegate` is like an `Interface`, only for methods instead of objects.
