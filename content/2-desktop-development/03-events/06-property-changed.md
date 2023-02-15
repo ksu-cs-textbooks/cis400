@@ -163,15 +163,15 @@ public class DinnerBell
     }
 }
 ```
-#### PropertyChanged Event Handler
+#### PropertyChanged Event Declaration
 
-For the event listeners to work as expected, we need to implement the `PropertyChanged` event handler in our `SmartBowl` class with:
+For the event listeners to work as expected, we need to implement the `PropertyChanged` event in our `SmartBowl` class with:
 
 ```csharp 
 public event PropertyChangedEventHandler PropertyChanged;
 ```
 
-Which makes it available for the event listeners to attach to.  But this is only _part_ of the process, we also need to _invoke_ this event when it happens.  This is done with the `Invoke(object sender, EventArgs e)` method defined for every event handler. It takes two parameters, an `object` which is the source of the event, and the `EventArgs` defining the event.  The specific kind of `EventArgs` corresponds to the event declaration - in our case, `PropertyChangedEventArgs`.
+Which makes it available for the event handlers to attach to.  But this is only _part_ of the process, we also need to _invoke_ this event when it happens.  This is done with the `Invoke(object sender, EventArgs e)` method defined for every event handler. It takes two parameters, an `object` which is the source of the event, and the `EventArgs` defining the event.  The specific kind of `EventArgs` corresponds to the event declaration - in our case, `PropertyChangedEventArgs`.
 
 Let's start with a straightforward example.  Assume we have a `Name` property in the `SmartBowl` that is a customizable string, allowing us to identify the bowl, i.e. "Water" or "Food".  When we change it, we need to invoke the `PropertyChanged` event, i.e.:
 
@@ -275,12 +275,12 @@ public class SmartBowl : INotifyPropertyChanged
 Notice in this code, we use the setter of the `Weight` property to trigger the `PropertyChanged` event.  Because we're dealing with a real-world sensor that may have slight variations in the readings, we also only treat changes of more than 1/16th of an ounce as significant enough to change the property.
 
 {{% notice warning %}}
-With the `INotifyPropertyChanged` interface, the _only_ aspect Visual Studio checks is that the `PropertyChanged` event handler is declared.  There is no built-in check that the programmer is using it as expected.  Therefore it is upon you, the programmer, to ensure that you meet the expectation that comes with implementing this interface: _that any public or protected property that changes will invoke the `PropertyChanged` event handler_.
+With the `INotifyPropertyChanged` interface, the _only_ aspect Visual Studio checks is that the `PropertyChanged` event is declared.  There is no built-in check that the programmer is using it as expected.  Therefore it is upon you, the programmer, to ensure that you meet the expectation that comes with implementing this interface: _that any public or protected property that changes will invoke the `PropertyChanged` event_.
 {{% /notice %}}
 
-#### Testing the PropertyChanged Event Handler 
+#### Testing the PropertyChanged Event
 
-Finally, we should write unit tests to confirm that our `PropertyChanged` event handler works as expected:
+Finally, we should write unit tests to confirm that our `PropertyChanged` event works as expected:
 
 ```csharp 
 
@@ -337,4 +337,4 @@ public void NameChangeShouldTriggerPropertyChanged()
 
 Notice that `Assert.PropertyChanged(@object ojb, string propertyName, Action action)` takes three arguments - first the object with the property that should be changing, second the name of the property we expect to change, and third an action that should trigger the event.  In this case, we change the name property.
 
-The second is a bit more involved, as we have an event that happens based on a timer.  To test it therefore, we have to wait for the timer to have had an opportunity to trigger.  We do this with an asynchronous action, so we use the `Assert.PropertyChangedAsync(@object ojb, string propertyName, Func<Task> action)`.  The first two arguments are the same, but the last one is a `Func` (a function) that returns an asynchronous `Task` object.  The simplest one to use here is `Task.Delay`, which delays for the supplied period of time (in our case, two minutes).  Since our property should change on one-minute intervals, we'll know if there was a problem if it doesn't change after two minutes.
+The second is a bit more involved, as we have an event that happens based on a timer.  To test it therefore, we have to wait for the timer to have had an opportunity to trigger.  We do this with an asynchronous action, so we use the `Assert.PropertyChangedAsync(@object obj, string propertyName, Func<Task> action)`.  The first two arguments are the same, but the last one is a `Func` (a function) that returns an asynchronous `Task` object.  The simplest one to use here is `Task.Delay`, which delays for the supplied period of time (in our case, two minutes).  Since our property should change on one-minute intervals, we'll know if there was a problem if it doesn't change after two minutes.
