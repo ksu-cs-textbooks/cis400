@@ -241,6 +241,10 @@ You will also need to create a class, `Order` in a file _Order.cs_, representing
 * `Tax`, a get-only `decimal` that is the tax for the order (`Subtotal` * `TaxRate`)
 * `Total`, a get-only `decimal` that is the sum of the `Subtotal` and `Tax`
 
+### Add Tests
+
+Remember that your new classes (`Order` and all the drinks) will all need to have corresponding unit tests added to the `DataTests` project.  Abstract classes `Entree`, `Side`, and `Drink` do not need to be tested, but any properties or methods inherited from them should be tested in the unit tests of the derived classes.
+
 ### UML Class Diagram
 
 Finally, you will need to create a UML class diagram for the `Data` project, and add it to your repository.  This can be done with Visio or another visual editing program like [Draw.io](https://draw.io) or [Lucid Charts](https://www.lucidchart.com/pages/landing). You should save the diagram in a PDF or image format that the graders can view. You _also_ will want to keep it in an editable format, as you'll be updating it in future milestones. Be sure to follow the instructions in [Adding Documentation Files]{{<ref "/B-git-and-github/12-adding-documentation-files">}} and double-check that the UML diagrams appear in your release.
