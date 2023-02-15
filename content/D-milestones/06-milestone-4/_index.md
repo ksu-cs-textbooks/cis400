@@ -29,6 +29,8 @@ You will need to:
 
 * Create an `Order` class to represent a collection of menu items being ordered together
 
+* Write unit tests to verify your new classes work as expected
+
 * Create a UML diagram for your `Data` Project
 
 ### Purpose:
