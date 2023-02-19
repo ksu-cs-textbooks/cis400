@@ -87,7 +87,7 @@ These exams will cover the vocabulary and concepts we are learning and involve r
 
 The first exam is a _pretest_ that is used to help establish your knowledge and readiness coming into the course.  You will earn a **100%** for completing this exam, regardless of your correct or incorrect responses.
 
-The second two exams are _midterms_, which cover the content immediately proceeding them. You will have a chance to correct mistakes you have made in thee exams, potentially earning back some lost points.
+The second two exams are _midterms_, which cover the content immediately proceeding them. You will have a chance to correct mistakes you have made in these exams, potentially earning back some lost points.
 
 The _final_ exam is comprehensive, and covers the most important topics and skills we have developed in the course.  This is considered a _summative_ test (one that measures your mastery of a subject).  It will count for twice the number of points as the earlier exams, and you will not have a chance to correct mistakes made on it.
 
