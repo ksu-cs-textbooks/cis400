@@ -43,7 +43,7 @@ In C#, it is common practice to preface Interface names with the character `I`. 
 
 Also note that the method signatures in an `Interface` declaration _do not have access modifiers_.  This is because the whole purpose of defining an interface is to signify methods _that can be used by other code_.  In other words, `public` access is implied by including the method signature in the `Interface` declaration.  
 
-This `Interface` can then be implemented by other classes by listing it after the class name, after a colon `:`.  Any `Class` declaration implementing the interface _must define public methods thats signatures match those were specified by the interface_:
+This `Interface` can then be implemented by other classes by listing it after the class name, after a colon `:`.  Any `Class` declaration implementing the interface _must define public methods whose signatures match those were specified by the interface_:
 
 ```javascript 
 /// <summary>A class representing a kangaroo</summary>
@@ -82,7 +82,7 @@ for(int i = 0; i < jumpables.Count; i++)
 
 Note that while we are treating the Kangaroo and Car instances _as_ `IJumpable` instances, we can _only_ invoke the methods defined in the `IJumpable` interface, even if these objects have other methods. Essentially, the interface represents a new _type_ that can be shared amongst disparate objects in a statically-typed language. The Interface definition serves to assure the static type checker that the objects implementing it can be treated as this new type - i.e. the `Interface` provides a mechanism for implementing polymorphism. 
 
-We often describe the relationship between the interface and the class that implements it as a *is-a* relationship, i.e. a Kangaroo _is a_ IJumpable (i.e. a Kangaroo is a thing that can jump).  We further distinguish this from a related polymorphic mechanism, inheritance, by the strength of the relationship.  We consider interfaces **weak is a** connections, as other than the shared interface, a Kangaroo and a Car don't have much to do with one another.
+We often describe the relationship between the interface and the class that implements it as a *is-a* relationship, i.e. a Kangaroo _is an_ IJumpable (i.e. a Kangaroo is a thing that can jump).  We further distinguish this from a related polymorphic mechanism, inheritance, by the strength of the relationship.  We consider the relationship between interfaces and classes implementing them to be **weak is-a** connections.  For example, other than the shared interface, a Kangaroo and a Car don't have much to do with one another.
 
 A C# class can implement as many interfaces as we want, they just need to be separated by commas, i.e.:
 

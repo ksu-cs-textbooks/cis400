@@ -33,7 +33,7 @@ You will need to create unit test classes for:
 
 ### Purpose:
 
-This milestone serves to practice writing tests utilizing the XUnit testing framework. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to a Professor Bean, the TAs, or your classmates over Discord.
+This milestone serves to practice writing tests utilizing the XUnit testing framework. If you have any confusion after you have read the entire assignment please do not hesitate to reach out to Professor Bean, the TAs, or your classmates over Discord.
 
 ### Unit Test Classes
 For each class in your `Data` project, add a corresponding unit test class in the `Test` project. These should use the same name as the `Data` class, with `UnitTest` appended, i.e. the unit tests for the `FlyingSaucer` class are found in the `FlyingSaucerUnitTests` class.  
