@@ -37,7 +37,7 @@ No doubt you are used to having a wide variety of screen resolutions available a
 
 Windows Forms was introduced in the early 2000's, at a time where the most popular screen resolution in the United States was transitioning from SVGA to XGA, and screen resolutions (especially for business computers running Windows) had remained remarkably consistent for long periods.  Moreover, these resolutions were all using the 4:3 aspect ratio (the ratio of width to height of the screen).  Hence, the developers of Windows forms did not consider the need to support vastly different screen resolutions and aspect ratios.  Contrast that with trends since that time:
 
-![Screen Resolutions in US from 2009-2020](/static "images/2.1.2.1.png)
+![Screen Resolutions in US from 2009-2020](/images/2.1.2.1.png)
 
 There is no longer a clearly dominating resolution, nor even an aspect ratio! Thus, it has become increasingly important for Windows applications to adapt to different screen resolutions.  Windows Forms does not do this easily - each element in a Windows Forms application has a statically defined width and height, as well as its position in the window.  Altering these values in response to different screen resolution requires significant calculations to resize and reposition the elements, and the code to perform these calculations must be written by the programmer.
 

@@ -5,7 +5,7 @@ weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
 
-All WPF controls (including the layout controls we've already seen) derive from common base classes, i.e. [`UIElement`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.uielement?view=windowsdesktop-6.0) and [`FrameworkElement`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement?view=windowsdesktop-6.0), which means they all inherit common properties.  Some of the most commonly used are described here.
+All WPF controls (including the layout controls we've already seen) derive from common base classes, i.e. [UIElement](https://docs.microsoft.com/en-us/dotnet/api/system.windows.uielement?view=windowsdesktop-6.0) and [FrameworkElement](https://docs.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement?view=windowsdesktop-6.0), which means they all inherit common properties.  Some of the most commonly used are described here.
 
 ### Size & Placement Modifying Properties
 
@@ -137,7 +137,7 @@ As most controls prominently feature text, it is important to discuss the proper
 
 #### Font Family
 
-The [`FontFamily`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontfamily?view=windowsdesktop-6.0) property sets the font used by the control.  This font needs to be installed on the machine.  You can supply a single font, i.e.:
+The [FontFamily](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontfamily?view=windowsdesktop-6.0) property sets the font used by the control.  This font needs to be installed on the machine.  You can supply a single font, i.e.:
 
 ```xml
 <TextBlock FontFamily="Arial">
@@ -151,11 +151,11 @@ Or a list of font families to supply fallback options if the requested font is n
 
 #### Font Size 
 
-The [`FontSize`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontsize?view=windowsdesktop-6.0) property determines the size of the font used in the control.
+The [FontSize](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontsize?view=windowsdesktop-6.0) property determines the size of the font used in the control.
 
 #### Font Style 
 
-The [`FontStyle`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontstyle?view=windowsdesktop-6.0) property sets the style of the font used. This can include `"Normal"`, `"Italic"`, or `"Oblique"`.  Italic is typically defined in the font itself (and created by the font creator), while Oblique is created from the normal font by applying a mathematical rendering transformation, and can be used for fonts that do not have a defined italic style.  
+The [FontStyle](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock.fontstyle?view=windowsdesktop-6.0) property sets the style of the font used. This can include `"Normal"`, `"Italic"`, or `"Oblique"`.  Italic is typically defined in the font itself (and created by the font creator), while Oblique is created from the normal font by applying a mathematical rendering transformation, and can be used for fonts that do not have a defined italic style.  
 
 ![Font Styles](/images/2.1.6.16.png)
 
@@ -255,7 +255,7 @@ Simply put, a brush determines how to paint graphical objects.  This can be as s
 
 #### Solid Color Brushes
 
-What we've been using up to this point have been [`SolidColorBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.solidcolorbrush?view=windowsdesktop-6.0) objects.  This is the simplest of the brush classes, and simply paints with a solid color, i.e.:
+What we've been using up to this point have been [SolidColorBrush](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.solidcolorbrush?view=windowsdesktop-6.0) objects.  This is the simplest of the brush classes, and simply paints with a solid color, i.e.:
 
 ![Solid Color Brush Example](/images/2.1.6.6.png)
 
@@ -280,7 +280,7 @@ The various formats the hex values can be given are detailed [here](https://docs
 
 #### Gradient Brushes
 
-Gradient brushes gradually transition between colors.  There are two kinds of gradient brushes in WPF: with a [`LinearGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.lineargradientbrush?view=windowsdesktop-6.0) the brush gradually changes along a line.  With a [`RadialGradientBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.radialgradientbrush?view=windowsdesktop-6.0), the color changes radially from a center point.
+Gradient brushes gradually transition between colors.  There are two kinds of gradient brushes in WPF: with a [LinearGradientBrush](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.lineargradientbrush?view=windowsdesktop-6.0) the brush gradually changes along a line.  With a [RadialGradientBrush](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.radialgradientbrush?view=windowsdesktop-6.0), the color changes radially from a center point.
 
 In both cases, the gradient is defined in terms of `<GradientStops>` - a distance along the line (or from the center) where the expected color value is defined.  In the spaces between gradient stops, the color value is interpolated between the two stops on either side of the point.  The gradient stop needs both an `Offset` value (a double indicating the percentage of how far along the line or from the center this stop falls, between 0.0 and 1.0) and a `Color` value (which can be defined as with solid color brushes).
 
@@ -307,7 +307,7 @@ Produces this rainbow gradient:
 
 ![Rainbow Linear Gradient Example](/images/2.1.6.8.png)
 
-Further, the line along with the linear gradient is created is defined by the `StartPoint` and `EndPoint` properties of the `<LinearGradientBrush>`.  These points are relative to the area the brush is covering (i.e. the space occupied by the element), and fall in the range of [0.0 .. 1.0].  The default (as seen above) is a diagonal line from the upper left corner (0,0) to the lower right corner (1.0, 1.0).
+Further, the line along which the linear gradient is created is defined by the `StartPoint` and `EndPoint` properties of the `<LinearGradientBrush>`.  These points are relative to the area the brush is covering (i.e. the space occupied by the element), and fall in the range of [0.0 .. 1.0].  The default (as seen above) is a diagonal line from the upper left corner (0,0) to the lower right corner (1.0, 1.0).
 
 To make the above gradient fall in the center half of the element, and be horizontal, we could tweak the gradient definition:
 
@@ -394,7 +394,7 @@ And of course, we can use a gradient for a `Foreground` property as well:
 
 #### Image Brushes
 
-To draw a saved image, we use an [`ImageBrush`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imagebrush?view=windowsdesktop-6.0), setting its `ImageSource` property to the image we want to use.  In XAML, that can be as simple as:
+To draw a saved image, we use an [ImageBrush](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imagebrush?view=windowsdesktop-6.0), setting its `ImageSource` property to the image we want to use.  In XAML, that can be as simple as:
 
 ```xml
 <Button Margin="40" Foreground="White" FontSize="30">
@@ -435,7 +435,7 @@ We can apply image brushes to any WPF control, allowing for some interesting lay
 
 ![Image Brush Layering Example](/images/2.1.6.14.png)
 
-You probably notice that the dish image on the button is distorted.  We can correct this by changing the [`Stretch`](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/graphics-multimedia/tilebrush-overview?view=netframeworkdesktop-4.8#the-base-tile) property.  The possible values are: `"None"`, `"Fill"`, `"Uniform"`, and `"UniformToFill"`.  This graphic from the documentation visual shows these properties:
+You probably notice that the dish image on the button is distorted.  We can correct this by changing the [Stretch](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/graphics-multimedia/tilebrush-overview?view=netframeworkdesktop-4.8#the-base-tile) property.  The possible values are: `"None"`, `"Fill"`, `"Uniform"`, and `"UniformToFill"`.  This graphic from the documentation visual shows these properties:
 
 ![The applied Stretch property](/images/2.1.6.17.png)
 

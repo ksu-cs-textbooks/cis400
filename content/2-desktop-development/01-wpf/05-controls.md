@@ -9,7 +9,7 @@ In addition to the layout controls, WPF provides a number of useful (and often f
 
 ### Border 
 
-A [`Border`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.border?view=netcore-3.1) is a control that draws a border around its contents.  The properties specific to a border include `BorderBrush` (which sets the color of the border, see the discussion of brushes on the next page), `BorderThickness` the number of units thick the border should be drawn, `CornerRadius`, which adds rounded corners, and `Padding` which adds space between the border and its contents.
+A [Border](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.border?view=netcore-3.1) is a control that draws a border around its contents.  The properties specific to a border include `BorderBrush` (which sets the color of the border, see the discussion of brushes on the next page), `BorderThickness` the number of units thick the border should be drawn, `CornerRadius`, which adds rounded corners, and `Padding` which adds space between the border and its contents.
 
 ```xml
 <Border BorderBrush="Green" BorderThickness="5" CornerRadius="5" Padding="10">
@@ -21,7 +21,7 @@ A [`Border`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls
 
 ### Button
 
-A [`Button`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.button?view=netcore-3.1) is a control that draws a button. This button can be interacted with by the mouse, and clicking on it triggers any `Click` event handlers that have been attached to it.  Unlike Windows Forms buttons, it can contain any other WPF control, including images and layouts.  Thus, a button featuring an image might be created with:
+A [Button](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.button?view=netcore-3.1) is a control that draws a button. This button can be interacted with by the mouse, and clicking on it triggers any `Click` event handlers that have been attached to it.  Unlike Windows Forms buttons, it can contain any other WPF control, including images and layouts.  Thus, a button featuring an image might be created with:
 
 ```xml
 <Button Click="TriggerBroadcast">
@@ -51,7 +51,7 @@ We'll be discussing events in more detail soon.
 
 ### CheckBox
 
-A [`CheckBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.checkbox?view=netcore-3.1) provides a checkable box corresponding to a boolean value.  The `IsChecked` property reflects the checked or unchecked state of the checkbox.  A checkbox also exposes `Checked` and `Unchecked` event handlers.
+A [CheckBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.checkbox?view=netcore-3.1) provides a checkable box corresponding to a boolean value.  The `IsChecked` property reflects the checked or unchecked state of the checkbox.  A checkbox also exposes `Checked` and `Unchecked` event handlers.
 
 ```xml
 <CheckBox IsChecked="True">
@@ -63,7 +63,7 @@ A [`CheckBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.contro
 
 ### ComboBox
 
-A [`ComboBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.combobox?view=netcore-3.1) provides a drop-down selection list.  The selected value can be accessed through the `SelectedItem` property, and the `IsEditable` boolean property determines if the combo box can be typed into, or simply selected from.  It exposes a `SelectionChanged` event.  The items in the `ComboBox` can be set declaratively:
+A [ComboBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.combobox?view=netcore-3.1) provides a drop-down selection list.  The selected value can be accessed through the `SelectedItem` property, and the `IsEditable` boolean property determines if the combo box can be typed into, or simply selected from.  It exposes a `SelectionChanged` event.  The items in the `ComboBox` can be set declaratively:
 
 ```xml
 <ComboBox>
@@ -111,7 +111,7 @@ We could also leverage _data binding_ to bind the item collection dynamically.  
 
 ### Image 
 
-The [`Image`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.image?view=netcore-3.1) control displays an image.  The image to display is determined by the `Source` property. If the image is not exactly the same size as the `<Image>` control, the `Stretch` property determines how to handle this case.  Its possible values are:
+The [Image](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.image?view=netcore-3.1) control displays an image.  The image to display is determined by the `Source` property. If the image is not exactly the same size as the `<Image>` control, the `Stretch` property determines how to handle this case.  Its possible values are:
 * `"None"` (the default) - the image is displayed at its original size
 * `"Fill"` - the image is resized to the element's size.  This will result in stretching if the aspect ratios are not the same
 * `"Uniform"` - the image is resized to fit into the element.  If the aspect ratios are different, there will be blank areas in the element (letterboxing)
@@ -121,7 +121,7 @@ The stretch values effects are captured by this graphic:
 
 ![The applied Stretch property](/images/2.1.6.17.png)
 
-The stretching behavior can be further customized by the [`StretchDirection`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stretchdirection?view=netcore-3.1) property.
+The stretching behavior can be further customized by the [StretchDirection](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.stretchdirection?view=netcore-3.1) property.
 
 Images can also be used for `Background` or `Foreground` properties, as discussed on the next page.
 
@@ -152,7 +152,7 @@ Now when the program is running, the user can press `ALT + F` to shift focus to 
 
 ### ListBox 
 
-A [`ListBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.listbox?view=netcore-3.1) displays a list of items that can be selected.  The `SelectionMode` property can be set to either `"Single"` or `"Multiple"`, and the `"SelectedItems"` read-only property provides those selected items. The `ItemsSource` property can be set declaratively using `<ListBoxItem>` contents.  It also exposes a `SelectionChanged` event handler:
+A [ListBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.listbox?view=netcore-3.1) displays a list of items that can be selected.  The `SelectionMode` property can be set to either `"Single"` or `"Multiple"`, and the `"SelectedItems"` read-only property provides those selected items. The `ItemsSource` property can be set declaratively using `<ListBoxItem>` contents.  It also exposes a `SelectionChanged` event handler:
 
 ```xml
 <ListBox>
@@ -181,7 +181,7 @@ A group of [RadioButton](https://docs.microsoft.com/en-us/dotnet/api/system.wind
 
 ### TextBlock
 
-A [`TextBlock`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock?view=netcore-3.1) can be used to display arbitrary text.  It also makes available a `TextChanged` event that is triggered when its text changes.
+A [TextBlock](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textblock?view=netcore-3.1) can be used to display arbitrary text.  It also makes available a `TextChanged` event that is triggered when its text changes.
 
 ```xml
 <TextBlock>Hi, I have something important to say.  I'm a text block.</TextBlock>
@@ -191,7 +191,7 @@ A [`TextBlock`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.contr
 
 ### TextBox
 
-And a [`TextBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textbox?view=netcore-3.1) is an editable text box.  It's text can be accessed through the `Text` property:
+And a [TextBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textbox?view=netcore-3.1) is an editable text box.  It's text can be accessed through the `Text` property:
 
 ```xml
 <TextBox Text="And I'm a textbox!"/>
@@ -200,7 +200,7 @@ And a [`TextBox`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.con
 
 ### ToggleButton
 
-Finally, a [`ToggleButton`]() is a button that is either turned on or off.  This can be determined from its `IsChecked` property.  It also has event handlers for `Checked` and `Unchecked` events:
+Finally, a [ToggleButton]() is a button that is either turned on or off.  This can be determined from its `IsChecked` property.  It also has event handlers for `Checked` and `Unchecked` events:
 
 ```xml
 <ToggleButton>On or Off</ToggleButton>
