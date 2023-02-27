@@ -9,16 +9,6 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# TBD
-
-
-Create WPF Project
-Create Order Summary Control
-Create Menu Item Selection Screen
-Create Order Summary Control
-Add event handlers for adding menu items to the Order Summary Control
-Override ToString for Menu Items (hint, put in base class)
-
 ### General requirements:
 
 * You need to follow the style laid out in the [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)

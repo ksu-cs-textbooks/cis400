@@ -98,7 +98,7 @@ In theory, each student begins the course with an A. As you submit work, you can
 
 44% - Programming Assignment Milestones (4% each, 12 milestones total; The single lowest assignment score will be dropped)
 
-26% - Exams (6.5% each, with the final worth double at 12; 4 exams total)
+26% - Exams (5.2% each, with the final worth double at 10.4; 4 exams total)
 
 Letter grades will be assigned following the standard scale:
 90% - 100% - A; 80% - 89.99% - B; 70% - 79.99% - C; 60% - 69.99% - D; 00% - 59.99% - F
