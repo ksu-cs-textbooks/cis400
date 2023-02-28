@@ -87,6 +87,20 @@ Creates this layout:
 
 ![The StackPanel Example](/images/2.1.4.3.png)
 
+The StackPanel can be set to a horizontal orientation by setting its `Orientation` property to `Horizontal`:
+
+```xml
+<StackPanel Orientation="Horizontal">
+    <Button>Banana</Button>
+    <Button>Orange</Button>
+    <Button>Mango</Button>
+    <Button>Strawberry</Button>
+    <Button>Blackberry</Button>
+    <Button>Peach</Button>
+    <Button>Watermelon</Button>
+</StackPanel>
+```
+
 ## The WrapPanel
 
 The [WrapPanel](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.wrappanel?view=netcore-3.1) layout is like the `<StackPanel>`, with the additional caveat that if there is not enough space for its contents, it will wrap to an additional line. For example, this XAML code:
