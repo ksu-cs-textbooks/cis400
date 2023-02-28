@@ -9,8 +9,7 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.
 {{% /notice %}}
 
-# TBD
-<!--
+
 ### General requirements:
 
 * You will need to follow the style laid out in the C# Coding Conventions
@@ -23,9 +22,20 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ### Assignment requirements:
 
-* Implement the `INotifyPropertyChanged` interface on all menu items
+* Refactor the `Order` class for data binding
+  * Implement the `INotifyPropertyChanged` interface 
+  * Implement the `ICollectionChanged` interface 
+  * Add `Number` and `PlacedAt` properties
 
-* Write tests for all additions to the `Data` project
+* Write tests for all changes to the `Order` class
+  * Test `PropertyChanged` notifications
+  * Test `CollectionChanged` notifications 
+  * Test `Number` property
+  * Test `Date` property
+
+* Data bind the `OrderSummaryControl`
+  * Use data binding to display order details (Number, Date, Subtotal, Tax, Total)
+  * Use a custom `DataTemplate` to display items in the order 
 
 * Update your UML Class Diagrams for:
   * Data Library
@@ -36,70 +46,65 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 ### Purpose:
 
 This assignment is intended to familiarize you with the concept of data binding, especially:
-1. How it depends on `PropertyChanged` events to work. 
+1. How it depends on `PropertyChanged` and `CollectionChanged` events to work. 
 2. How data binding is expressed in XAML (the Binding syntax)
 3. How the `DataContext` property in WPF controls can be used to share a bound object
 
-Additionally, this assignment should give you plenty of practice making WPF controls functional. This is also where your projects will really start to diverge from each other depending on the implementation route you choose to follow.
 
 ### Assignment Details
 
-#### Implementing INotifyPropertyChanged
-Most of this assignment is centered around the implementation of the `INotifyPropertyChanged` interface.  This needs to be implemented on every menu item (Note that this can be done _through inheritance_, so you only have to implement it in a common base class - though see the warning below for a common gotcha).  Implementing the interface requires you to declare an event of type `PropertyChangedEventHandler` named `PropertyChanged`.  Doing this much satisfies the _letter_ of the `INotifyPropertyChanged` interface, but not the _intent_.
+#### Refactor the Order class for data binding
 
-To satisfy the intent, you should also _invoke_ any event listeners registered with your `PropertyChanged` event handler _when one of the properties of the object changes_, with the details about that change.  You must do this for **ALL** properties that can change in your menu item classes (Hint: you can skip properties like the `PrehistoricPBJ.Price`, which cannot change).
+In order to prepare the `Order` class to work with data binding, you will need to make the following changes:
 
-{{% notice tip %}}
-Think carefully about the requirement of invoking `PropertyChanged` _when and where the property changes_.  Consider the `Price` property of a `Triceritots`.  Where does it change?  It (depending on your implementation) has no setter!  Remember, it is a _calculated_ value, and its value is dependent on the `Size` property.  So when the `Size` property changes, so does the `Price` property!  You must account for **all** the possible places in your class' code that trigger a property might change when you implement `INotifyPropertyChanged`.
-{{% /notice %}}
+##### Implement INotifyCollectionChanged 
 
-{{% notice warning %}}
-An odd side effect of the nature of the .NET platform is that events _cannot be invoked from a different class than they are defined in_.  This includes _inherited_ events.  The standard practice to get around this issue is to declare a protected helper method to do the invocation in a base class that also implements the event, i.e.:
+As your `Order` class is a collection, it will need to implement the `INotifyCollectionChanged` interface to be able to serve as a data source for the `ListView` in the `OrderSummaryControl`.  You will need to implement the interface and invoke the `CollectionChanged` event any time an item is added or removed from the order (note this includes when the order's contents are cleared).
+
+##### Implement INotifyPropertyChanged
+Likewise, your `Order` class needs to implement the `INotifyPropertyChanged` interface in order to bind its properties to the `OrderSummaryControl`.  You will need to implement the interface and invoke the `PropertyChanged` event any time a property of the order changes (i.e. `Subtotal`, `Tax`, and `Total`).
+
+Note that these properties change when 1) items are added or removed from the order, and 2) when certain properties of the items in the order are changed.  You need to correctly handle both of these cases.
+
+##### Add Number and PlacedAt Properties
+
+You will also need to add two new properties to your `Order` class, `Number` and `PlacedAt`.  
+
+The `Number` should be a unique integer identifying an individual order.  It should be _different_ for each order you create.  An easy way to do this is increment the number each time.  **Hint - you can leverage a `static` variable to keep track of the last number used**.  Once assigned, the `Number` property should not be changed.  
+
+The `PlacedAt` should be a `DateTime` corresponding to when the order was started.  Like the `Number` property, it should not change once set. A good strategy to ensure this is to use an `init` accessor instead of a `set`, and set the initial values in the `Order` constructor.  Note too, that because these values do not change, you don't need worry about invoking `PropertyChanged` for them.
+
+#### Testing the Refactored Order Class
+
+Once you have made the changes to the `Order` class, it is a good idea to test them and make sure they work as expected.  Your `OrderUnitTest` class should be expanded with additional test methods to cover the new events and properties.
+
+##### Testing Your INotifyPropertyChanged Implementation
+To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed trigger the `PropertyChanged` event when its value changes. The [PropertyChange Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions">}}) we discussed in the testing chapter is used for this purpose.
+
+Here is an example testing updating the `TaxRate` property:
+
 ```csharp
-protected virtual void OnPropertyChanged(string propertyName)
+[Fact]
+public void ChangingTaxRateShouldNotifyOfPropertyChange()
 {
-    this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-}
-```
-This method can then be called in derived classes to indicate a property is changing.
-{{% /notice %}}
-
-#### Testing your INotifyPropertyChanged Implementation
-To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions">}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
-
-Here is an example using the `Triceritots`:
-
-```csharp
-[Theory]
-[InlineData(ServingSize.Small, "Size")]
-[InlineData(ServingSize.Medium, "Size")]
-[InlineData(ServingSize.Large, "Size")]
-[InlineData(ServingSize.Small, "Price")]
-[InlineData(ServingSize.Medium, "Price")]
-[InlineData(ServingSize.Large, "Price")]
-[InlineData(ServingSize.Small, "Calories")]
-[InlineData(ServingSize.Medium, "Calories")]
-[InlineData(ServingSize.Large, "Calories")]
-public void ChangingSizeShouldNotifyOfPropertyChanges(ServingSize size, string propertyName)
-{
-  Triceritots tots = new Triceritots();
-  Assert.PropertyChanged(tots, propertyName, ()=>{
-    tots.Size = size;
+  Order order = new Order();
+  Assert.PropertyChanged(order, "TaxRate", ()=>{
+    order.TaxRate = 0.15;
   });
 }
 ```
 
 {{% notice info %}}
-Remember that calculated properties will change _based on the property they are calculated from_, and you must also test for these.  I.e. on the sides, you might have a test method `PricePropertyChangedWhenSizeChanges(Size size)`.  Alternatively, you could combine multiple property checks into one test, i.e. `ShouldNotifyOfPropertyChangedWhenSizeChanges(Size size, string propertyName)` (as in the example above) and supply the names of the separate properties through `[InlineData]`.
+Remember that calculated properties will change _based on the property they are calculated from_, and you must also test for these.  I.e. changing the `TaxRate` will not only change the `TaxRate` property, but it will also cause the value of the `Tax` property to change, as it is calculated from the `Tax` property.  So you should have a test method to verify that changing the `TaxRate` notifies that `Tax` has changed.  Likewise, changing the `TaxRate` _also_ affects the `Total`, as it is derived from the `Tax` property.
 {{% /notice %}}
 
-Additionally, it is important to test that the menu item classes implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions">}}), i.e.:
+Additionally, it is important to test that the `Order` class itself implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions">}}), i.e.:
 
 ```csharp
 public void ShouldImplementINotifyChanged()
 {
-  Triceritots tots = new Triceritots();
-  Assert.IsAssignableFrom<INotifyPropertyChanged>(tots);
+  Order order = new Order();
+  Assert.IsAssignableFrom<INotifyPropertyChanged>(order);
 }
 ```
 
@@ -107,22 +112,26 @@ public void ShouldImplementINotifyChanged()
 You might be wondering why it is important to test for if the class actually implements `INotifyPropertyChanged`.  Property binding _only_ works if the class can be cast to be an instance of `INotifyPropertyChanged`, so even if you have correctly set up the `PropertyChanged` event, your GUI will not update unless you have explicitly implemented the interface.
 {{% /notice %}}
 
-#### Menu Item Selection Event Handler
+##### Testing your INotifyCollectionChanged Implementation
 
-You will also need to implement an event handler for when a button representing a menu item in your `MenuItemSelectionControl` is pressed.  This event will need to:
+You also need to test that you have implemented `INotifyCollectionChanged`.  At a minimum, this should include: 1) a test method to verify that adding a `IMenuItem` to the `Order` triggers the `CollectionChanged` event, 2) a test method to verify that removing an `IMenuItem` from the `Order` triggers the `CollectionChanged` event, and 3) a test method to verify that the `Order` can be cast into an `INotifyCollectionChanged` instance.  
 
-1. Construct an instance of the corresponding menu item (i.e. a `PrehistoricPBJ` if the button pressed was for a Prehistoric PBJ).
-2. Display the corresponding customization screen (i.e. a screen for customizing the Prehistoric PBJ) within the `MainWindow`, replacing or covering up the `MenuItemSelectionControl`
-3. Assign the menu item instance to the `DataContext` of the customization screen. By doing so, the item's properties are bound to the GUI controls
+{{% notice tip %}}
+You will likely want to closely read the section on [Testing Custom Events]({{<ref "2-desktop-development/03-events/11-testing-custom-events">}}) in the testing chapter.  It walks you through how to add custom assertions for testing the `CollectionChanged` event. 
+{{% /notice %}}
 
-If done correctly, changing properties in the customization control will change the bound menu item instance.  Continuing our Prehistoric PBJ example, unchecking the Peanut Butter checkbox should change the displayed calories for the Prehistoric PBJ.
+##### Testing Your New Order Properties
 
-Since the event you are listening for happens in the `MenuItemSelectionControl` but the displaying must happen in the `MainWindow`, you must decide which of these two locations you want to host the event listener.  If you choose the `MainWindow` you will be using a [Routed Event]({{<ref "2-desktop-development/03-events/08-routed-events">}}), i.e. `Button.Click`.  If you choose the `MenuItemsSelectionControl` you will need to climb the [Elements tree]({{<ref "2-desktop-development/02-element-tree/03-navigating-the-tree">}}) to reach the `MainWindow`.
+You will also need to test the properties added to your `Order`.  You will want to make sure that: 
+1. The order `Number` property updates for each subsequent `Order` you create (i.e. the first should be 1, the second should be 2, the third should be 3, and so on...), 
+2. That the `PlacedAt` date and time reflect when the order is created (hint: they don't have to be an exact match), and 
+3. that neither of these properties change when you request them more than once.
 
-#### Binding Customization Controls
-Once you know you have your menu item classes (your entrees, sides, drinks, and treats) ready, you can bind their properties to the controls you have created in your customization screens.  Since you have set the screen's `DataContext` to be a new instance of that item (in the previous requirement), these controls will now directly modify the bound menu item object.
+#### Data bind the OrderSummaryControl
 
-With many controls, verifying your binding is working correctly may be difficult (as the control behaves the same either way).  Using breakpoints, or supplying an initialized object with properties changed from their default to the binding are two ways of verifying. Alternatively, you can bind the same property to a display-only `<TextBlock>` in a summary section. This verification will become much easier when we add order tracking in the next milestone.
+You will want to update your placeholders for the order details (the Number, Date, Subtotal, Tax, and Total) to bind to the corresponding properties of the `Order` class.
+
+In addition, you will want to add a `DataTemplate` to the `ListView` in your `OrderSummaryControl` so that instead of displaying the name of the item, it displays _both_ the name and the price.
 
 #### Updating your UML
 Finally, update your UML to reflect the current state of your `Data` and `PointOfSale` projects.  
@@ -178,4 +187,3 @@ The grading rubric for this assignment will be:
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
 {{% /notice %}}
--->

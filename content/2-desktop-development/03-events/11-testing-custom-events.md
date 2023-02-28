@@ -5,7 +5,7 @@ weight: 11
 date: 2018-08-24T10:53:26-05:00
 ---
 
-In the previous section, we discussed using XUnit's `Assert.Raises<T>` to test generic events (events declared with the `EventHandler<T>` generic).  However, this approach does not work with non-generic events, like `PropertyChanged` and `NotifyCollectionChanged`.  That is why XUnit provides an `Assert.PropertyChanged()` method.  Unfortunately, it does not offer a corresponding test for `NotifyCollectionChanged`.  So to test for this expectation we will need to write our own assertions.
+In the previous section, we discussed using XUnit's `Assert.Raises<T>` to test generic events (events declared with the `EventHandler<T>` generic).  However, this approach does not work with non-generic events, like `PropertyChanged` and `CollectionChanged`.  That is why XUnit provides an `Assert.PropertyChanged()` method.  Unfortunately, it does not offer a corresponding test for `CollectionChanged`.  So to test for this expectation we will need to write our own assertions.
 
 To do that, we need to understand how assertions in the XUnit framework work.  Essentially, they test the truthfulness of what is being asserted (i.e. two values are equal, a collection contains an item, etc.).  If the assertion is not true, then the code raises an exception - specifically, a `XunitException` or a class derived from it. This class provides a `UserMessage` (the message you get when the test fails) and a `StackTrace` (the lines describing where the error was thrown). With this in mind, we can write our own assertion method.  Let's start with a simple example that asserts the value of a string is "Hello World":
 
@@ -42,9 +42,9 @@ The first `InlineData` will pass, and the second will fail with the report `Expe
 
 This was of course, a silly example, but it shows the basic concepts.  We would probably never use this in our own work, as `Assert.Equal()` can do the same thing.  Now let's look at a more complex example that we _would_ use.
 
-## Assertions for NotifyCollectionChanged
+## Assertions for CollectionChanged
 
-As we discussed previously, the `NotifyCollectionChanged` event cannot be tested with the Xunit `Assert.Throws`.  So this is a great candidate for custom assertions.  To be thorough, we should test _all_ the possible actions (and we would do this if expanding the Xunit library).  But for how we plan to use it, we really only need two actions covered - adding and removing items _one at a time_ from the collection.  Let's start with our exception definitions:
+As we discussed previously, the `CollectionChanged` event cannot be tested with the Xunit `Assert.Throws`.  So this is a great candidate for custom assertions.  To be thorough, we should test _all_ the possible actions (and we would do this if expanding the Xunit library).  But for how we plan to use it, we really only need two actions covered - adding and removing items _one at a time_ from the collection.  Let's start with our exception definitions:
 
 ```csharp
 public static class MyAssert

@@ -169,6 +169,23 @@ You might wonder how to represent WPF controls in UML given that there are two f
 
 Technically, any control you embed inside another control is a _composition_ relationship, i.e. adding a `<TextBox>` to a custom control.  However, in the interest of legibility of the resulting UML diagram, we will only show these relationships for custom controls defined in our project.  So you will need to show the relationship between `MainWindow`, `MenuItemSelectionControl`, and `OrderSummaryControl` (as well as any other custom controls you create, if you also compose these controls with simpler user-defined controls).  
 
+Any properties you have given a `x:Name` attribute in your XAML, i.e.:
+
+```xml
+<MainWindow>
+  <Border x:Name="SwitchBorder">
+  </Border>
+</MainWindow>
+```
+
+Are _public properties_ and should therefore show up in your UML, i.e.:
+
+```
++SwitchBorder:Border <<get, set>>
+```
+
+You do not need to show components defined in the XAML that do not have a `Name` or `x:Name` property.
+
 Also, if you made any modifications to the data project, remember to update its UML diagram as well.  This also includes fixing any issues your grader found in your previous diagram version.  
 
 **Note: You do not need to create a UML diagram of your `DataTest` project, though you can if you want.**
