@@ -91,7 +91,7 @@ private void StartHatching(object source, ElapsedEventArgs e)
 However we might have the case where there are no registered event handlers, in which case `Hatch` evaluates to `null`, and attempting to call `Invoke()` will cause an error.  We can prevent this by wrapping our `Invoke()` within a conditional:
 
 ```csharp
-if(Hatch !== null) {
+if(Hatch != null) {
     Hatch.Invoke(this, args);
 }
 ```
