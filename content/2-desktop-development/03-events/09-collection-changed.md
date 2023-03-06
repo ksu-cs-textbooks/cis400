@@ -17,7 +17,7 @@ public event NotifyCollectionChangedEventHandler NotifyCollectionChanged;
 
 And, as you would expect, this event is triggered any time the collection's contents change, much like the `PropertyChanged` event we discussed earlier was triggered when a property changed.  However, the `NotifyCollectionChangedEventArgs` provides a _lot_ more information than we saw with the `PropertyChangedEventArgs`,as you can see in the UML diagram below:
 
-![UML or NotifyCollectionChangedEventArgs and PropertyChangedEventArgs](static/images/2.3.9.1.png)  
+![UML or NotifyCollectionChangedEventArgs and PropertyChangedEventArgs](/images/2.3.9.1.png)  
 
 With `PropertyChangedEventArgs` we simply provide the name of the property that is changing.  But with `NotifyCollectionChangedEventArgs`, we are describing both _what_ the change is (i.e. an Add, Remove, Replace, Move, or Reset), and what item(s) we affected.  So if the action was adding an item, the `NotifyCollectionChangedEventArgs` will let us know what item was added to the collection, and possibly at what position it was added at.
 
