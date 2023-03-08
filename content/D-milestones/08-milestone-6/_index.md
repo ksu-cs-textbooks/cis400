@@ -64,7 +64,7 @@ As your `Order` class is a collection, it will need to implement the `INotifyCol
 ##### Implement INotifyPropertyChanged
 Likewise, your `Order` class needs to implement the `INotifyPropertyChanged` interface in order to bind its properties to the `OrderSummaryControl`.  You will need to implement the interface and invoke the `PropertyChanged` event any time a property of the order changes (i.e. `Subtotal`, `Tax`, and `Total`).
 
-Note that these properties change when 1) items are added or removed from the order, and 2) when certain properties of the items in the order are changed.  You need to correctly handle both of these cases.
+Note that these properties change when 1) items are added or removed from the order.
 
 ##### Add Number and PlacedAt Properties
 
