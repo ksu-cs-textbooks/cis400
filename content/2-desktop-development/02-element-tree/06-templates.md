@@ -98,5 +98,5 @@ If you only need a simple tweak - like applying word-wrapping to the text of a b
 
 This allows the `<Button>` to continue to use the default `ControlTemplate` while providing the desired word-wrapping with a minimum of extra code.  
 
-A similar idea appears with `<DataTemplate>`, which allows you to customize how bound data is displayed in a control.  For example, we often want to display the items in a `<ListBox>` in a different way than the default (a `<TextBlock>` with minimal styling).  We'll visit this in the upcoming [binding lists]({{ref "2-desktop-development/04-data-binding/04-binding-lists"}}) section.
+A similar idea appears with `<DataTemplate>`, which allows you to customize how bound data is displayed in a control.  For example, we often want to display the items in a `<ListBox>` in a different way than the default (a `<TextBlock>` with minimal styling).  We'll visit this in the upcoming [binding lists]({{% ref "2-desktop-development/04-data-binding/04-binding-lists" %}}) section.
 
