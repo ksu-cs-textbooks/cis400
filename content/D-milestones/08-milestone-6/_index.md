@@ -24,7 +24,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 * Refactor the `Order` class for data binding
   * Implement the `INotifyPropertyChanged` interface 
-  * Implement the `ICollectionChanged` interface 
+  * Implement the `INotifyCollectionChanged` interface 
   * Add `Number` and `PlacedAt` properties
 
 * Write tests for all changes to the `Order` class
