@@ -23,7 +23,7 @@ Perhaps the most important aspect of the `DependencyObject` is its support for h
 
 Where does the `Column` and `Row` properties come from?  They aren't defined on the `TextBox` class - you can [check the documentation](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textbox?view=netcore-3.1#properties).  The answer is they are made available through the dependency property system.
 
-At the heart of this system is a collection of key/value pairs much like the `Dictonary`.  When the XAML code `Grid.Column="1"` is processed, this key and value are added to the `TextBox`'s dependency properties collection, and is thereafter accessible by the WPF rendering algorithm.
+At the heart of this system is a collection of key/value pairs much like the `Dictionary`.  When the XAML code `Grid.Column="1"` is processed, this key and value are added to the `TextBox`'s dependency properties collection, and is thereafter accessible by the WPF rendering algorithm.
 
 The `DependencyObject` exposes these stored values with the `GetValue(DependencyProperty)` and `SetValue(DependencyProperty, value)` methods.  For example, we can set the `Column` property to `2` with:
 
@@ -60,25 +60,27 @@ Now, let's assume we want to provide a property `Step` of type `double`, which i
 The first step is to _register_ the dependency property by creating a `DependencyProperty` instance.  This will serve as the key to setting and retrieving the dependency property on a dependency object.  We register new dependency properties with `DependencyProperty.Register(string propertyName, Type propertyType, Type dependencyObjectType)`.  The string is the name of the property, the first type is the type of the property, and the second is the class we want to associated this property with.  So our `Step` property would be registered with:
 
 ```csharp
-DependencyProperty.Register("Step", typeof(double), typeof(NumberBox));
+DependencyProperty.Register(nameof(Step), typeof(double), typeof(NumberBox));
 ```
 
 There is an optional fourth property to `DependencyProperty.Register()` which is a `PropertyMetadata`.  This is used to set the default value of the property.  We probably should specify a default step, so let's add a `PropertyMetadata` object with a default value of 1:
 
 ```csharp
-DependencyProperty.Register("Step", typeof(double), typeof(NumberBox), new PropertyMetadata(1.0));
+DependencyProperty.Register(nameof(Step), typeof(double), typeof(NumberBox), new PropertyMetadata(1.0));
 ```
 
-The `DependencyProperty.Register()` method returns a registered `DependencyObject` to serve as a key for accessing our new property.  To make sure we can access this key from _other_ classes, we define it as a field that is both `public` and `static`.  The convention is to name this field by appending "Property" to the name of the property.  The complete registration, including saving the result to the public static field is:
+The `DependencyProperty.Register()` method returns a registered `DependencyObject` to serve as a key for accessing our new property.  To make sure we can access this key from _other_ classes, we define it as a field that is `public`, `static`, and `readonly`.  The naming convention for `DependencyProperties` is to name this field by appending "Property" to the name of the property.  
+
+Thus, the complete registration, including saving the result to the public static field is:
 
 ```csharp
 /// <summary>
 /// Identifies the NumberBox.Step XAML attached property
 /// </summary>
-public static readonly DependencyProperty StepProperty = DependencyProperty.Register("Step", typeof(double), typeof(NumberBox), new PropertyMetadata(1.0)); 
+public static readonly DependencyProperty StepProperty = DependencyProperty.Register(nameof(Step), typeof(double), typeof(NumberBox), new PropertyMetadata(1.0)); 
 ```
 
-We also want to declare a traditional property with the name "Value".  But instead of declaring a backing field, we will use the key/value pair stored in our `DependencyObject` using `GetValue()` and `SetValue()`:
+We also want to declare a traditional property with the name "Step".  But instead of declaring a backing field, we will use the key/value pair stored in our `DependencyObject` using `GetValue()` and `SetValue()`:
 
 ```csharp
 /// <summary>

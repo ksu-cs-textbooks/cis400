@@ -57,7 +57,7 @@ void HandleButtonClick(object sender, RoutedEventArgs e)
 }
 ```
 
-When either button is clicked, it creates a `Button.Click` event.  As the buttons don't handle it, the event bubbles to the next element in the elments tree - in this case, the `<Grid>`.  As the `<Grid>` _does_ attach a `Button.Click` listener, the event is passed to `HandleButtonClick`.  In this method we use the button's `Name` property to decide the correct action to take.  Also, note that we set the `RoutedEventArgs.Handled` property to `true`.  This lets WPF know that we've taken care of the event, and it does not need to bubble up any farther (if we didn't, we could process the event _again_ further up the elements tree).
+When either button is clicked, it creates a `Button.Click` event.  As the buttons don't handle it, the event bubbles to the next element in the elements tree - in this case, the `<Grid>`.  As the `<Grid>` _does_ attach a `Button.Click` listener, the event is passed to `HandleButtonClick`.  In this method we use the button's `Name` property to decide the correct action to take.  Also, note that we set the `RoutedEventArgs.Handled` property to `true`.  This lets WPF know that we've taken care of the event, and it does not need to bubble up any farther (if we didn't, we could process the event _again_ further up the elements tree).
 
 Much like dependency properties, we can declare our own routed events.  These also use a `Register()` method, but for events this is a static method of the `EventHandler` class:  `EventManger.Register(string eventName, RoutingStrategy routing, Type eventHandlerType, Type controlType)`.  The first argument is a string, which is the name of the event, the second is one of the values from the `RoutingStrategy` enum, the third is the type of event handler, and the fourth is the type of the control it is declared in.  This `Register()` method returns a `RoutedEvent` that is used as a key when registering event listeners, which we typically store in a `public static readonly RoutedEvent` field.
 
@@ -73,7 +73,7 @@ Let's create an example routed event for our `NumberBox`.  Let's assume we defin
 /// <summary>
 /// Identifies the NumberBox.ValueClamped event
 /// </summary>
-public static readonly RoutedEvent ValueClampedEvent = EventManager.RegisterRoutedEvent("ValueClamped", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(NumberBox));
+public static readonly RoutedEvent ValueClampedEvent = EventManager.RegisterRoutedEvent(nameof(ValueClamped), RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(NumberBox));
 ```
 
 Also like dependency properties also need to declare a corresponding C# property, routed events need to declare a corresponding C# event:
