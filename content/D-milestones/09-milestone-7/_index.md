@@ -25,13 +25,11 @@ In this assignment, we will be modifying the Point of Sale application to allow 
 
 * Implement `IPropertyChanged` on all menu items
 
-
-
 * Data bind menu items
 
 * Refactor Order to pass forward property changes
 
-* Create automated tests for your GUI
+* Create/expand your unit tests for any new classes, properties, or methods (at this point, you do not need to test custom WPF control classes)
 
 * Update UML Diagrams
 
