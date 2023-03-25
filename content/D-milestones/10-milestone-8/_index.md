@@ -9,9 +9,6 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# TBD
-
-<!--
 ### General requirements:
 
 * You will need to follow the style laid out in the C# Coding Conventions
@@ -24,9 +21,9 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ### Assignment requirements:
 
-* Add the _RoundRegister.dll_ as a dependency to your project
+* Add the _RoundRegister.dll_ (found in the Canvas module) as a dependency to your project
 
-* Implement the functionality for the "complete order" and "cancel order" buttons.
+* Implement the functionality for the "Complete Order" and "Cancel Order" buttons.
 
 * Process the payment providing options for credit, debit, or cash using the provided `RoundRegister` classes.
 
@@ -98,6 +95,10 @@ Note that this kind of control could be composed of other custom controls, i.e. 
 
 While the exact appearance and functionality of the GUI is up to you, it should provide a "Return to Order" button (this can alternatively be labeled as "Select Items" or something similar) which returns to the order to allow changes to be made, as well as a "Finalize Sale" which should invoke the method you defined in your intermediate class for finalizing the sale.  Once this has finished, you should print the receipt and begin a new order (see the details on _Canceling the Order_ above for details).
 
+{{% notice note %}}
+You may optionally use a more common subset of currency denominations in your View and ViewModel consisting of: Pennies, Nickels, Dimes, Quarters, Ones, Fives, Tens, and Twenties.
+{{% /notice %}}
+
 #### Printing the Receipt 
 
 The _RoundRegister.dll_ contains a `ReceiptPrinter` class that exposes two methods: 
@@ -123,17 +124,9 @@ You should print a receipt for each completed sale.
 
 #### Testing the Cash Payment Processing
 
-One of the primary benefits of the MVVM architecture is it allows you to push logic that would otherwise be in the View classes into the ViewModel, and create unit tests for this ViewModel.  You should write unit tests for the intermediate class that test the ability to make correct change, finalize the sale, and update properties correctly.  
+One of the primary benefits of the MVVM architecture is it allows you to push logic that would otherwise be in the View classes into the ViewModel, and create unit tests for this ViewModel.  You should write unit tests for the intermediate class that test the ability to make correct change, finalize the sale, and update properties correctly.
 
-Because the `PointOfSale` is targeting the `net5.0-windows` framework, you cannot set `PointOfSale` as a dependency of your `DataTests` project.  Instead, you will need to create a _new_ XUnit test project named `PointOfSaleTests` to place your unit tests in.  There is not a `.net5.0-windows` XUnit test project template, so use the normal XUnit template and choose the `.Net 5.0` option in the "Additional information" dialog:
- 
-![.NET 5.0 framework option](/images/dotnet5framework.png)
-
-Once your project is added, open the _PointOfSaleTests.csproj_ file by double-clicking it in Visual Studio.  This should open it as an XML file.  Change the `<TargetFramework>` entry to `net5.0-windows`:
-
-![.NET 5.0-windows framework setting](/images/dotnet5framework-windows.png)
-
-Now you can add the `PointOfSale` project as a project dependency to `PointOfSaleTests`, allowing you to add a unit test for any ModelView classes you need to write to test your `PointOfSale` project.
+You may either add your tests to your existing test project and add the `PointOfSale` project as a dependency, or create a second test project to test classes defined in `PointOfSale`. 
 
 {{% notice tip %}}
 Since you will not be able to replace the `CashDrawer` with a mock instance, you should invoke its `Reset()` method at the start of each test to ensure that each test starts with the drawer in the same state.
@@ -141,11 +134,18 @@ Since you will not be able to replace the `CashDrawer` with a mock instance, you
 
 #### Testing the Payment GUI
 
-While you will be able to unit-test any ViewModel classes you have written programmatically, the GUI functionality must still be hand-tested.  Update your test document to include tests for:
-1. Taking a Credit Card Payment
-2. Taking a Cash Payment
-3. Stopping taking a payment early to return to the order and adding additional items
-4. Canceling the order and starting a new one
+While you will be able to unit-test any ViewModel classes you have written programmatically, the GUI functionality must still be hand-tested.  At this point, you will need to write a testing document. It should include a test process for:
+
+1. Adding items to an order 
+2. Customizing the items in the order as they are added
+3. Customizing the items in the order if they are edited
+4. Removing items in the order
+5. Taking a Credit Card Payment
+6. Taking a Cash Payment
+7. Stopping taking a payment early to return to the order and adding additional items
+8. Canceling the order and starting a new one
+
+For each of these test sequences, you should include _exact_ details of what buttons or controls a user must interact with, and what the expected outcomes will be (hint: screenshots are your friend here).  For example, if you ask the tester to click the "Flying Saucer" button, you should then have them look for the corresponding item in the Order Summary, and verify the price.  Then, if you have them add a pancake, you should have them verify the price has updated.  
 
 #### Update Your UML Diagrams
 
@@ -174,4 +174,4 @@ The grading rubric for this assignment will be:
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
 {{% /notice %}}
--->
+
