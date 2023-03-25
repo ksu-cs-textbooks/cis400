@@ -3,7 +3,6 @@ title: "MVVM Architecture"
 pre: "4. "
 weight: 4
 date: 2018-08-24T10:53:26-05:00
-draft: true
 ---
 
 Compared to automated tests, using a testing plan with human testers is both slow and expensive.  It should not be surprising then that Microsoft developers sought ways to shift as much of the testing burden for WPF projects to automated tests.  Their solution was to develop a new architectural approach known as [_ModelView-View-Model_](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel). 
