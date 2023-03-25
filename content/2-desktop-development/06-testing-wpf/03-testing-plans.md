@@ -128,7 +128,7 @@ If you encountered problems with this test, please describe:
 
 </blockquote>
 
-The essential parts of the test plan are clear instructions of what the tester should do, and what they should see, and a mechanism for reporting issues.  Note the tables in this testing plan, where the tester can initial next to each "passing" test, as well as the area for describing issues at the bottom.  This reporting can either be integrated into the test document, or, it can be a separate form used with the test document (allowing printed documents to be reused).  Additionally, some test documents are created in spreadsheet software or specialized testing documentation software for ease of collection and processing.
+The essential parts of the test plan are clear instructions of what the tester should do, and what they should see, and a mechanism for reporting issues.  Note the tables in this testing plan, where the tester can initial next to each "passing" test, as well as the area for describing issues at the bottom.  This reporting can either be integrated into the test document, or, it can be a separate form used with the test document (allowing the printed instructional part of the test documents to be reused).  Additionally, some test documents are created in spreadsheet software or specialized testing documentation software for ease of collection and processing.
 
 Test plans like this one are then executed by people (often titled "Tester" or "Software Tester") by opening the application, following the steps outlined in the plan, and documenting the results.  This documentation then goes back to the software developers so that they can address any issues found.   
 
