@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Compared to automated tests, using a testing plan with human testers is both slow and expensive.  It should not be surprising then that Microsoft developers sought ways to shift as much of the testing burden for WPF projects to automated tests.  Their solution was to develop a new architectural approach known as [_ModelView-View-Model_](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel). 
 
-![MVVM Pattern]({{<static "images/MVVMPattern.png">}})
+![MVVM Pattern](images/MVVMPattern.png)
 
 This approach expands upon the usual Model-View relationship in a GUI.  A _Model_ class is a class that represents some data, i.e. a `Student`, and the View is the GUI exposing that object's data, i.e. a WPF `<StudentControl>`. Thus, we might have our `Student` class:
 
