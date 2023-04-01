@@ -123,7 +123,7 @@ public void ShouldImplementINotifyChanged()
 {{% notice info %}}
 You might be wondering why it is important to test for if the class actually implements `INotifyPropertyChanged`.  Property binding _only_ works if the class can be cast to be an instance of `INotifyPropertyChanged`, so even if you have correctly set up the `PropertyChanged` event, your GUI will not update unless you have explicitly implemented the interface.
 {{% /notice %}}
-For the various Menu Items to serve as targets of data binding, you must also implement the `IPropertyChanged` interface on each of them.  
+For the various Menu Items to serve as targets of data binding, you must also implement the `INotifyPropertyChanged` interface on each of them.  
 
 
 #### Display bound customization controls when adding or editing an item in the order
