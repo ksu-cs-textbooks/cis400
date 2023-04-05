@@ -6,12 +6,9 @@ date = 2018-08-24T10:53:26-05:00
 +++
 
 {{% notice noiframe %}}
-This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Fall 2022** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
+This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# TBD
-
-<!-- 
 ### General requirements:
 
 * You will need to follow the style laid out in the C# Coding Conventions
@@ -48,9 +45,12 @@ Begin by creating a new Razor Pages app named “Website” within your project.
 
 Beyond these core requirements, you may add features and elements as you see fit. Moreover, you are encouraged to style the site using CSS.
 
-{{% notice warning %}}
-The example website images are drawn from a prior semester's project.  You will need to create yours to reflect the information from _this semester's_ project!
+{{% notice tip %}}
+An [art package](/files/FlyingSaucerMenuArt.zip) has been provided for you to use in developing your site.  Or, you can create your own assets!
 {{% /notice %}}
+
+{{% notice warning %}}
+The example website images are drawn from a prior semester's project.  You will need to create yours to reflect the information from _this semester's_ project! {{% /notice %}}
 
 #### Privacy Page
 
@@ -63,7 +63,7 @@ It should:
 2. Render a `<h1>` tag with the text “Dino Diner Website Privacy Policy” or something similar.
 3. Render the following privacy policy in a `<p>` tag:
 
-_Dino Diner respects the privacy of our diners. This site does not collect your data. This site does not use cookies. This site only offers information about Dino Diner restaurant and its menu selection._
+_The Flying Saucer values and respects the privacy and autonomy of all sentient beings, regardless of their planet of origin. This site does not collect your data. This site does not use cookies. This site only offers information about the Flying Saucer restaurant and its menu selection._
 
 #### About Page 
 
@@ -75,15 +75,15 @@ Create a new Razor page named _About.cshtml_. It should meet the following guide
 2. Render a `<h1>` tag with the text “About Dino Diner”
 3. Render the following description in a `<p>` tag:
 
-_Founded in 2022 by students of the CIS 400 course, Dino Diner offers the finest prehistoric fare for your dining delight!_
+_Founded in 2023 by definitely human Earth students of the CIS 400 course, the Flying Saucer offers breakfast repasts at any hour of the day for your avid consuming. Beam down to any of our many Earth-based locations for a taste._
 
 #### Layout
 
 Modify the existing (created by the template) _Shared/_Layout.cshtml_ to (at a minimum):
 
-1. Set the page title to what is provided by the page with the string “- Dino Diner” concatenated to the end
+1. Set the page title to what is provided by the page with the string “- The Flying Saucer” concatenated to the end
 2. Provide a navigation link to the About page and the Privacy page, and also in-page links (links that scroll down the page) to Entrees, Sides, and Drinks.
-3. Change the copyright statement to “(c) 2022 - Dino Diner LLC.”
+3. Change the copyright statement to “(c) 2022 - The Flying Saucer LLC.”
 
 {{% notice hint %}}
 
@@ -116,7 +116,7 @@ Add a first-level header (`<h1>`) identifying the page as "Dino Diner".
 
 Under that, add a section greeting the customer with the message:
 
-_Satisfing dino-sized appetites!_
+_Breakfast out of this World!_
 
 ##### List the Menu Categories
 List the three categories of menu items (Entrees, Sides, and Drinks)
@@ -181,4 +181,3 @@ The grading rubric for this assignment will be:
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
 {{% /notice %}}
--->
