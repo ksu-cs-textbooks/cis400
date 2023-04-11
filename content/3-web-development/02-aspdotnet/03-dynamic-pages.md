@@ -45,7 +45,7 @@ public string GenerateResponse()
 }
 ```
 
-The resulting string could then be streamed back to the requesting web browser.  This is the basic technique used in all server-side web frameworks: they dynamically assemble the response to a request by assembling strings into an HTML page.  Where the differ is what language they use to do so, and how much of the process they've abstracted.
+The resulting string could then be streamed back to the requesting web browser.  This is the basic technique used in all server-side web frameworks: they dynamically assemble the response to a request by assembling strings into an HTML page.  Where they differ is what language they use to do so, and how much of the process they've abstracted.
 
 This approach was adopted by Microsoft and implemented as _Active Server Pages (ASP)_.  By placing files with the _.asp_ extension among those served by an IIS server, C# or Visual Basic code written on that page would be executed, and the resulting string would be served as a file.  This would happen on each request - so a request for http://somesite.com/somepage.asp would execute the code in the _somepage.asp_ file, and the resulting text would be served.
 
