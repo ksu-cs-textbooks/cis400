@@ -25,8 +25,8 @@ This is only a sampling of the many frameworks and languages used in the modern 
 
 ### IIS and ASP.NET Core
 
-While ASP.NET applications are traditionally hosted on IIS running on the Windows Server operating system, the introduction of .NET Core made it possible to run .NET programs on Linux machines.  As Linux operating systems are typically free and dominate the web server market (W3Cook^[w3cook] reports 98.1% of web servers worldwide run on a Linux OS).
+While ASP.NET applications are traditionally hosted on IIS running on the Windows Server operating system, the introduction of .NET Core made it possible to run .NET programs on Linux machines.  As Linux operating systems are typically free and dominate the web server market (W3Cook[^w3cook] reports 98.1% of web servers worldwide run on a Linux OS).
 
-$[w3cook]: [W3Cook OS Summary](https://web.archive.org/web/20150806093859/http://www.w3cook.com/os/summary/)
+[^w3cook]: [W3Cook OS Summary](https://web.archive.org/web/20150806093859/http://www.w3cook.com/os/summary/)
 
 Microsoft has accordingly migrated its ASP.NET family to a new implementation can run on .NET Core _or_ IIS: [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0).  When you build a ASP.NET Core application, you can choose your deployment target: IIS, .NET Core, or even Microsoft's cloud service, Azure.  The same application can run on _any_ of these platforms.

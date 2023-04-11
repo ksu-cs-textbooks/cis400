@@ -100,9 +100,9 @@ The navigation bar should look something like:
 #### Create a static Menu class
 In your `Data` project you should create a static class named `Menu` declared in the file _Menu.cs_ which contains the following `static` properties:
 
-* `Entrees` which returns an `IEnumerable<IMenuItem>` containing an instance of all available entrees in thier default configuration.
-* `Sides` which returns an `IEnumerable<IMenuItem>` containing an instance of all available sides.  As each side has 3 different sizes, this collection should contain a small, medium, and large instance of each. 
-* `Drinks` which returns an `IEnumerable<IMenuItem>` containing all available drinks.  As each drink has 3 different sizes, this collection should contain a small, medium, and large instance of each. 
+* `Entrees` which returns an `IEnumerable<IMenuItem>` containing an instance of all available entrees in their default configuration.
+* `Sides` which returns an `IEnumerable<IMenuItem>` containing an instance of all available sides.
+* `Drinks` which returns an `IEnumerable<IMenuItem>` containing all available drinks.  As each drink has 2 different sizes, this collection should contain a small and large instance of each. 
 * `FullMenu` should return an `IEnumerable<IMenuItem>` containing all of the items on the menu (one of each of the items found in the categories above).
 
 #### Index Page 

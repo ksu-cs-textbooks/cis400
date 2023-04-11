@@ -66,7 +66,7 @@ The content nested inside the tag can be plain text, or another HTML element (or
 
 The end tag is also enclosed in angle brackets (`<` and `>`).  Immediately after the `<` is a forward slash `/`, and then the tag name.  You do not include attributes in a end tag.
 
-If the element has no content, the end tag can be combined with the start tag in a _self-closing tag_, i.e. the [&lt;input&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) tag is typically written as self-closing:
+If the element has no content, the end tag can be combined with the start tag in a _self-closing tag_, i.e. the [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) tag is typically written as self-closing:
 
 `<input id="first-name" type="text" placeholder="Your first name"/>`
 
@@ -169,7 +169,7 @@ Which renders:
     <i>-Rudyard Kipling, excerpt from "If"</i>
 </blockquote>
 
-Additionally, as a program you may want to use the the [&lt;code&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code) element in conjunction with the [&lt;pre&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) element to display preformatted code snippets in your pages.
+Additionally, as a program you may want to use the the [code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code) element in conjunction with the [pre](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) element to display preformatted code snippets in your pages.
 
 ## HTML Comments
 
@@ -203,7 +203,7 @@ Rather than include an exhaustive list of HTML elements, I will direct you to th
 
 * Some define the meaning, structure or style of text - MDN calls these the [Inline text semantics elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics)
 
-* Some present images, audio, video, or other embedded multimeda content - MDN calls these the [Image and multimedia elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Image_and_multimedia) and [Embedded content elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Embedded_content)
+* Some present images, audio, video, or other embedded multimedia content - MDN calls these the [Image and multimedia elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Image_and_multimedia) and [Embedded content elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Embedded_content)
 
 * Tables are composed of [Table content elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Table_content)
 
