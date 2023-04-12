@@ -102,7 +102,7 @@ In your `Data` project you should create a static class named `Menu` declared in
 
 * `Entrees` which returns an `IEnumerable<IMenuItem>` containing an instance of all available entrees in their default configuration.
 * `Sides` which returns an `IEnumerable<IMenuItem>` containing an instance of all available sides.
-* `Drinks` which returns an `IEnumerable<IMenuItem>` containing all available drinks.  As each drink has 2 different sizes, this collection should contain a small and large instance of each. 
+* `Drinks` which returns an `IEnumerable<IMenuItem>` containing all available drinks.  As each drink has 3 different sizes, this collection should contain a small and large instance of each. 
 * `FullMenu` should return an `IEnumerable<IMenuItem>` containing all of the items on the menu (one of each of the items found in the categories above).
 
 #### Index Page 
