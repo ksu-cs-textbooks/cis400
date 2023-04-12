@@ -9,9 +9,6 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# TBD
-
-<!--
 ### General requirements:
 
 * You will need to follow the style laid out in the C# Coding Conventions
@@ -52,7 +49,7 @@ This assignment is to introduce submitting and processing form data, as well as 
 {{% notice info %}}
 In the last milestone, you had to display every option for each menu category.  In some cases, this was a _lot_ of permutations!  For this milestone, you may make whatever changes you like to the static menu class in order to display the menu as you would prefer, including modifying what is contained in your collection properties, adding additional properties, etc.
 
-The index page should display all pertinent information about your menu, but you may do so in whatever form you choose (i.e. display options in a table, put size information in a callout box, or table, etc). Just be certain that _all_ information is available to a customer (i.e. the calories of a Cretaceous Coffee in its various sizes and with/without cream).
+The index page should display all pertinent information about your menu, but you may do so in whatever form you choose (i.e. display options in a table, put size information in a callout box, or table, etc). Just be certain that _all_ information is available to a customer (i.e. the calories of a Saucer Fuel in its various sizes and with/without cream).
 {{% /notice %}}
 
 #### Search and Filter Form
@@ -73,7 +70,7 @@ Finally, the results listed on the page should be only those that fit the search
 #### Search and Filter functionality
 The Searching and Filtering functionality should be implemented so that when the form on _index.cshtml_ is submitted, the displayed menu results are only those that match the search and/or filter conditions.
 
-Searching should consider the name of the item.  The search should be _case insensitive_ (i.e. capital and lower case letters are treated identically) and work for multiple terms.  Finally, search terms do not need to appear in a particular sequence for a result to be returned (i.e. searching "Nuggets Dino" should return Dino Nuggets options). _Hint: You might want to use `String.Split()` to break up your search terms._
+Searching should consider the name of the item.  The search should be _case insensitive_ (i.e. capital and lower case letters are treated identically) and work for multiple terms.  Finally, search terms do not need to appear in a particular sequence for a result to be returned (i.e. searching "Saucer Crashed" should return the Crashed Saucer options). _Hint: You might want to use `String.Split()` to break up your search terms._
 
 #### Testing the Menu Search and Filter Methods
 You should add tests to verify that the search and filtering functions operate as expected. Remember to test both valid and null values for all parameters.  Pay special attention to the search function - it should behave as described above.  You may want to use the exact described scenarios as part of your tests.
@@ -100,6 +97,3 @@ The grading rubric for this assignment will be:
 {{% notice warning %}}
 Projects that do not compile will receive an automatic grade of 0.
 {{% /notice %}}
-
-
--->
