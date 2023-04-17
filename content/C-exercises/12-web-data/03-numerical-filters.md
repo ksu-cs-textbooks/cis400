@@ -203,10 +203,10 @@ public class IndexModel : PageModel {
     string[] Genre {get; set;}
 
     [BindProperty(SupportsGet=true)]
-    double? IMDBMin;
+    double? IMDBMin {get; set;}
 
     [BindProperty(SupportsGet=true)]
-    double? IMDBMax;
+    double? IMDBMax {get; set;}
 
     /// <summary>
     /// Gets the search results for display on the page
