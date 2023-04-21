@@ -9,9 +9,6 @@ date = 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 400 - Object-Oriented Design, Implementation, and Testing** course at Kansas State University.  This section describes assignments specific to the **Spring 2023** offering of that course.  Prior semester offerings can be found [here](old). If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-# TBD
-
-<!--
 ### Assignment requirements:
 
 * Deploy your website to Azure Web Services
@@ -38,4 +35,3 @@ This is an all-or nothing assignment.  If your website is available, you get ful
 {{% notice warning %}}
 Unlike earlier milestones, due to the end of the semester **late submissions will not be graded**.  Be sure to submit your assignment well in advance of the due date to avoid earning a 0.
 {{% /notice %}}
--->
