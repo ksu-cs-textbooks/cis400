@@ -1,6 +1,6 @@
 ---
 title: "Course Software"
-pre: "6. "
+pre: "5. "
 weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---

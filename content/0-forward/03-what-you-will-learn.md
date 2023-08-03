@@ -1,6 +1,6 @@
 ---
 title: "What You'll Learn"
-pre: "4. "
+pre: "43. "
 weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
@@ -15,16 +15,11 @@ The following is an outline of the topics we will be covering and when.
 Please be aware that this schedule and topic list will likely undergo some revision during the semester.
 {{% /notice %}}
 
-{{% notice warning %}}
-The summer offering of CIS 400 compresses the normally 16-week course into 8 weeks.  Accordingly, for the summer course we double up on weekly modules.
-{{% /notice %}}
 
-## Fall/Spring Schedule
-
-Week 0 
-* Introduction to the Course
+## Schedule
 
 Week 1
+* Introduction to the Course
 * The Science of Learning Programming
 * Setting the Stage (The context in which object-orientation emerged)
 
@@ -67,6 +62,7 @@ Week 9
 
 Week 10
 * Dependency Objects
+* MVVM
 * Milestone 8
 
 Week 11 

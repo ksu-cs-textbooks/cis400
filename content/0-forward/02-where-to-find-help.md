@@ -1,6 +1,6 @@
 ---
 title: "Where to Find Help"
-pre: "3. "
+pre: "2. "
 weight: 30
 date: 2018-08-24T10:53:26-05:00
 ---
@@ -31,11 +31,6 @@ Discord uses _channels_ - the equivalent of chat rooms - to provide a place for 
 
 Additionally, all course announcements will be made in the course channel (as well as through the Canvas announcements), so make a habit of checking the channel regularly.
 
-#### Direct Messaging
-
-Discord also supports direct messaging - you can use this when you have a procedural or grading question.  Type the name or eid of the person you'd like to message into the search bar, and then select them from the results to start a direct message.  Once you've started a direct message with a user, their name will also show up in your side menu.  
-
-However, for general questions, asking them in the course channel will give you the best chance of a fast answer, from the course instructors, TAs, or your fellow students.  And if you help a fellow student, you might get bonus points!
 
 {{% notice tip %}}
 The **helping hand** extra credit assignment provides bonus points for students who are caught helping other students in the class Discord channel.
@@ -51,9 +46,12 @@ Discord includes lots of useful features:
 * You can also set your status to indicate your current availability.
 
 ## Email
-Discord is the preferred communication medium for the course because 1) you will generally get a faster response than email, and 2) writing code in email is _a terrible experience_, both to write and to read.  Discord's support of markdown syntax makes including code comments much easier on both of us.
+The Discord class channel is the preferred communication medium for the course because 1) you will generally get a faster response than email, and 2) writing code in email is _a terrible experience_, both to write and to read.  Discord's support of markdown syntax makes including code comments much easier on both of us.
 
-However, if you have issues with Discord, feel free to email one of the instructors directly if you are unable to post directly on Discord itself for some reason.
+For general questions, asking them in the course channel will give you the best chance of a fast answer, from the course instructors, TAs, or your fellow students.  And if you help a fellow student, you might get bonus points!
+
+If you have a more personal question, however, you are welcome to email the instructor. 
+
 
 ## Other Avenues for Help
 
@@ -67,13 +65,13 @@ Of course, as another step you can always exercise your information-gathering sk
 
 Next, we have grading and administrative issues. This could include problems or mistakes in the grade you received on a project, missing course resources, or any concerns you have regarding the course and the conduct of myself and your peers. You’ll be interacting with us on a variety of online platforms and sometimes things happen that are inappropriate or offensive. There are lots of resources at K-State to help you with those situations. First and foremost, please DM me on Discord as soon as possible and let me know about your concern, if it is appropriate for me to be involved. If not, or if you’d rather talk with someone other than me about your issue, I encourage you to contact either your academic advisor, the CS department staff, College of Engineering Student Services, or the K-State Office of Student Life. Finally, if you have any concerns that you feel should be reported to K-State, you can do so at [https://www.k-state.edu/report/](https://www.k-state.edu/report/). That site also has links to a large number of resources at K-State that you can use when you need help.
 
-Finally, if you find any errors or omissions in the course content, or have suggestions for additional resources to include in the course, DM the instructors on Discord. There are some extra credit points available for helping to improve the course, so be on the lookout for anything that you feel could be changed or improved.
+Finally, if you find any errors or omissions in the course content, or have suggestions for additional resources to include in the course, either post on Discord or email the instructor. There are some extra credit points available for helping to improve the course, so be on the lookout for anything that you feel could be changed or improved.
 
 {{% notice info %}}
 The **Bug Bounty** extra credit assignment gives points for finding errors in the course materials.  Remember, your instructors are human, and do make mistakes!  But we don't want those occasional mistakes to trip you and your peers up in your learning efforts, so bringing them to our attention is appreciated.
 {{% /notice %}}
 
-So, in summary, Discord should always be your first stop when you have a question or run into a problem. For issues with Canvas or Visual Studio, you are also welcome to refer directly to the resources for those platforms. For questions specifically related to the projects, use Discord for sure. For grading questions and errors in the course content or any other issues, please DM the instructors on Discord for assistance.
+So, in summary, Discord should always be your first stop when you have a question or run into a problem. For issues with Canvas or Visual Studio, you are also welcome to refer directly to the resources for those platforms. For questions specifically related to the projects, use Discord for sure. For grading questions and errors in the course content or any other issues, please email the instructor for assistance.
 
 Our goal in this program is to make sure that you have the resources available to you to be successful. Please don’t be afraid to take advantage of them and ask questions whenever you want.
 
