@@ -14,9 +14,6 @@ As you work on the materials in this course, you may run into questions or probl
 ## Course Sessions
 As mentioned before, the course sessions are one of the best time to get help with your assignments - during this time the instructor and TAs are scheduled to be available and on-hand in the computer lab. 
 
-{{% notice note note-1 "For Online Students" %}}
-The online course sections do not have in-person class times.  With that in mind, you should bring your questions directly to the Discord course channel where the instructor, TA, and possibly your peers can help!
-{{% /notice %}}
 
 ## Discord
 For questions that crop up outside of class times, your first line of communication for this course is the departmental Discord server.   If you have not yet signed into the course discord channel, or are not yet a Discord user, please visit [https://discordbot.cs.ksu.edu](https://discordbot.cs.ksu.edu).  This assistant will link your K-State and Discord accounts and set your username for the server in accordance with K-State policy.
