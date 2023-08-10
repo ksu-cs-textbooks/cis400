@@ -1,9 +1,7 @@
 +++
-title = "Homepage"
-date = 2018-08-24T10:53:05-05:00
+title = "CIS 400: Object-Oriented Design, Implementation, and Testing"
+archetype = "home"
 +++
-
-# CIS 400: Object-Oriented Design, Implementation, and Testing
 
 Author: Nathan Bean
 <br>

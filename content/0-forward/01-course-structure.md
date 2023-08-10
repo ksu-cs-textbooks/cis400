@@ -24,6 +24,7 @@ The course is organized into modules focused on a specific topic, accessible fro
 Most non-exam weeks will consist of _two_ video-guided tutorials and the weekly milestone.  The first module will be due by Monday, the second Tuesday, and the milestone on Friday. Each regular tutorial will take several hours to complete, and milestones can often take ten hours or more. You should plan your learning schedule accordingly.
 
 The modules, and all of their associated assignments, are available through Canvas.  You must complete each module item _in order_, and the prior week's module must be finished before you can move on to those in the next week. Be aware that if you procrastinate and don't start until Friday, it is unlikely that you will finish. Which means you will fall behind.  You can very quickly find yourself in a hole you cannot climb out of.  So time management is a _critical_ skill you need to be developing.  
+{{% /notice %}}
 
 {{% notice warning %}}
 Remember that in the CS Professional Program, a grade of **less than C** in a professional program course (like CIS 400) results in a "**Warning of Unsatisfactory Progress**."  This warning sticks with you the rest of your time in Computer Science at K-State. If you earn a second, similar grade, you will be dismissed from the CS Professional Program!

@@ -2,12 +2,11 @@
 title = "Project Milestones"
 date = 2018-08-24T10:53:05-05:00
 weight = 130
-chapter = true
+archetype = "chapter"
+ordinal = "D"
 pre = "D. "
 draft = true
 +++
-
-# Project Milestones
 
 Iteratively Developing a Big Project
 

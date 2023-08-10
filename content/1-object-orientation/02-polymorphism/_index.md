@@ -2,12 +2,10 @@
 title = "Polymorphism"
 date = 2018-08-24T10:53:05-05:00
 weight = 20
-chapter = true
+archetype = "chapter"
+ordinal = "2"
 pre = "<b>2. </b>"
 +++
 
-### Chapter 2
-
-# Polymorphism
 
 It's a shapshifter!
