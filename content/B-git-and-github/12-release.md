@@ -1,7 +1,7 @@
 ---
 title: "Create a Release"
-pre: "13. "
-weight: 130
+pre: "12. "
+weight: 120
 date: 2018-08-24T10:53:26-05:00
 ---
 When you are ready to turn in an assignment, you will need to create a _release tag_.  A _tag_ is nothing more than a specially named commit, and a _release_ is a special tag created on GitHub to mark a specific version of the software.

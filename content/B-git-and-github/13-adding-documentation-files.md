@@ -1,7 +1,7 @@
 ---
 title: "Adding Documentation Files"
-pre: "12. "
-weight: 120
+pre: "13. "
+weight: 130
 date: 2018-08-24T10:53:26-05:00
 ---
 When adding existing documentation files (i.e. UML documents) to your project, you may think adding them through Visual Studio's Solution Explorer would be the way to go.  However, this can lead to an unexpected issue.  Look closely at the example below:
