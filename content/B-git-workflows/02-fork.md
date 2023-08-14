@@ -2,6 +2,7 @@
 title: "Fork"
 pre: "2. "
 weight: 20
+draft: true
 date: 2018-08-24T10:53:26-05:00
 ---
 Forking a project creates a new copy of a project on GitHub under your account. Because the original project and your fork share a common history, you can set the original project as an _upstream_ repository.

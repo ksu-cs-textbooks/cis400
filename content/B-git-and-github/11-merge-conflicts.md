@@ -1,7 +1,7 @@
 ---
 title: "Merge Conflicts"
-pre: "10. "
-weight: 100
+pre: "11. "
+weight: 110
 date: 2018-08-24T10:53:26-05:00
 ---
 
