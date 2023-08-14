@@ -54,6 +54,7 @@ $ git branch
 ```
 
 This will list all local branches, and the currenlty checked out one will have an astrisk next to it (*).
+{{% /notice %}}
 
 ### Pulling a Remote Feature Branch to Another Local Machine
 
