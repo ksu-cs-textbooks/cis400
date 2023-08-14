@@ -1320,6 +1320,10 @@
     <lastmod>2023-01-25T15:17:21-06:00</lastmod>
   </url>
   <url>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/01-course-structure/index.html</loc>
+    <lastmod>2023-08-14T09:56:33-05:00</lastmod>
+  </url>
+  <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/00-introduction/01-introduction/index.html</loc>
     <lastmod>2023-01-13T16:24:44-06:00</lastmod>
   </url>
@@ -1392,10 +1396,6 @@
     <lastmod>2022-10-16T15:44:34-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/01-course-structure/index.html</loc>
-    <lastmod>2023-08-10T15:29:34-05:00</lastmod>
-  </url>
-  <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/05-linq/02-databases/index.html</loc>
     <lastmod>2021-11-12T13:17:56-06:00</lastmod>
   </url>
@@ -1426,6 +1426,10 @@
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/02-web-addresses/index.html</loc>
     <lastmod>2021-11-12T13:17:56-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/02-where-to-find-help/index.html</loc>
+    <lastmod>2023-08-14T09:56:33-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/01-wpf/02-wpf-features/index.html</loc>
@@ -1488,8 +1492,8 @@
     <lastmod>2021-01-22T10:13:00-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/02-where-to-find-help/index.html</loc>
-    <lastmod>2023-08-03T14:15:51-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/03-what-you-will-learn/index.html</loc>
+    <lastmod>2023-08-14T09:56:33-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/04-apis/03-working-with-disposables/index.html</loc>
@@ -1514,6 +1518,10 @@
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/01-core-web-technologies/04-css/index.html</loc>
     <lastmod>2022-08-09T15:47:29-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/04-textbooks/index.html</loc>
+    <lastmod>2023-08-14T09:56:33-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/00-introduction/04-language-evolution/index.html</loc>
@@ -1552,10 +1560,6 @@
     <lastmod>2021-11-12T13:17:56-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/03-what-you-will-learn/index.html</loc>
-    <lastmod>2023-08-03T14:13:27-05:00</lastmod>
-  </url>
-  <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/04-data-binding/index.html</loc>
     <lastmod>2023-08-10T15:29:34-05:00</lastmod>
   </url>
@@ -1580,8 +1584,8 @@
     <lastmod>2023-02-27T16:47:22-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/04-textbooks/index.html</loc>
-    <lastmod>2023-08-03T14:08:31-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/05-software/index.html</loc>
+    <lastmod>2023-08-14T09:56:33-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/05-linq/05-extension-methods/index.html</loc>
@@ -1638,10 +1642,6 @@
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/01-wpf/06-control-properties/index.html</loc>
     <lastmod>2023-02-27T16:47:22-06:00</lastmod>
-  </url>
-  <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/05-software/index.html</loc>
-    <lastmod>2023-08-03T14:08:31-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/a-learning-programming/06-developmental-epistemology/index.html</loc>
