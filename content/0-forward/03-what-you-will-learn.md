@@ -20,11 +20,12 @@ Please be aware that this schedule and topic list will likely undergo some revis
 
 Week 1
 * Introduction to the Course
-* The Science of Learning Programming
+* Pretest
 * Setting the Stage (The context in which object-orientation emerged)
+* Git and GitHub
+* Milestone 0
 
 Week 2 
-* Git and GitHub
 * Encapsulation
 * Milestone 1
 
