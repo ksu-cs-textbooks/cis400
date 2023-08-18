@@ -16,6 +16,12 @@ For this course, we will be using a number of software packages including:
 
 These have been installed in the classroom lab, as well as all Engineering and Computer Science labs.  It is strongly suggested that you install the same versions on your own development machines if you plan on working from home.  Alternatively, you can _remote desktop_ into a lab computer and use the installed software there.
 
+{{% notice warning %}}
+Please note that the "Show whole line completions" option must be disabled in Visual Studio IntelliCode. You can disable it in Visual Studio by going to: Tools->Options, searching for "IntelliCode", and unchecking the box that says "Show whole line completions".
+
+Using the whole line completions to help code the milestones is an academic honesty violation.
+{{% /notice %}}
+
 ## Remote Desktop Access
 To use a remote desktop, you must first install a remote desktop client on your computer. Microsoft supplies a client for most platforms (Mac, Windows, etc.), which you can find links to and information about [here](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients?redirectedfrom=MSDN). 
 
