@@ -5,7 +5,7 @@ weight: 2
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Have you ever been working on a paper for a class, and stopped every now and then to save it under a slightly different name, i.e. "Paper draft 1.docx", "Paper draft 2.docx", "Paper final draft.docx", "Paper final draft with Marge suggestions.docx", and so on?
+Have you ever been working on a paper for a class, and stopped every now and then to save it under a slightly different name, i.e. "Paper draft 1.docx", "Paper draft 2.docx", "Paper final draft.docx", "Paper final draft with Merge suggestions.docx", and so on?
 
 Effectively what you were doing was _version control_ - keeping old copies of a project around. This can be a lifesaver if your current file gets corrupted and becomes unusable.  It can also be helpful to go back and see older versions, perhaps to see what a section looked like _before_ your last set of changes.  It might also be handy if that last major revision just isn't working, and you want to go back to what the paper looked like _before_ you started making changes.
 

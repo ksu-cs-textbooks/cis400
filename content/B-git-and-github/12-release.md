@@ -37,7 +37,7 @@ You will need to fill out the release form, specifically the version and title, 
 
 Releases use _[semantic versioning](https://semver.org/)_, a numbering system that uses three numbers separated by periods (i.e. version 3.4.2).  The first number is the _major_ version - a change in this number indicates a major change in the associated software, i.e. a redesigned interface, a change in what methods are available, etc.  The second number is the _minor_ version.  It indicates small feature additions to the software.  Finally, the third number is the _patch_ version, and this one indicates a change that is typically a bug fix or security fix.  Each number _rolls over_ like the seconds and minutes on a clock when the next version number is increased, i.e. you would go from version 2.7.23 to 3.0.0, or 4.3.12 to 4.4.0.  For this project, each milestone should be treated as a minor release, and each new project as a major one.  
 
-Releases also get a human-readable name.  For this class, you should use the assignment name as the release name, i.e. Menu Milestone 1 for your first release.
+Releases also get a human-readable name.  For this class, you should use the assignment name as the release name, i.e. Milestone 0.
 
 ## Step 4 - Submit your Release URL on K-State Online
 Once you have finished creating the release, GitHub should take you to the release page.  You can also navigate there by clicking the specific release under the "Releases" heading on the right-hand side of your repository lannding page.  Copy the URL of this page; it is what you will submit on Canvas.

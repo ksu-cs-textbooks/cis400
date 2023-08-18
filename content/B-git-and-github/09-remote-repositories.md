@@ -22,7 +22,7 @@ While the cloned repository is a copy of an existing repository, it will not con
 {{% /notice %}}
 
 
-Thus, in our diagram above, the home, lab, and GitHub copies of our repository all start exactly the same, with commit **ba4**.  But we can make changes to any one of those repositories and commit them, that repository will be _ahead_ of the other repositories, which will not have that commit. We can see this in the diagram below, where we have added commit **a4e** to the repository on our Lab PC:
+Thus, in our diagram above, the home, lab, and GitHub copies of our repository all start exactly the same, with commit **ba4**.  But if we make and commit changes to one of those repositories, that repository will be _ahead_ of the other repositories, which will not have that commit. We can see this in the diagram below, where we have added commit **a4e** to the repository on our Lab PC:
 
 ![Lab PC with extra commit](/images/b.9.2.png)
 
@@ -54,10 +54,8 @@ This copies any commits on the GitHub repository into the Home PC repository:
 
 ![Home PC with extra commit](/images/b.9.4.png)
 
-If we later go home and want to get those same commits to our home repository
-
 {{% notice warning %}}
-If you push or pull changes to a repository that has extra commits, Git merges the extra commits with the pushed ones (as with the **merge** command).  This can introduce the possibility of _merge conflicts_ when Git is uncertain how to best combine two changes.  These must be resolved by you as described in the [merge conflict]({{<ref "b-git-and-github/10-merge-conflicts">}}) section.  For this reason, it is _always_ best practice to pull changes into your local branch, fix any merge conflicts, create a new commit, and only then push it to the remote repository.  This ensures that the main branch code is always in good shape.
+If you push or pull changes to a repository that has extra commits, Git merges the extra commits with the pushed ones (as with the **merge** command).  This can introduce the possibility of _merge conflicts_ when Git is uncertain how to best combine two changes.  These must be resolved by you as described in the [merge conflict]({{<ref "b-git-and-github/11-merge-conflicts">}}) section.  For this reason, it is _always_ best practice to pull changes into your local branch, fix any merge conflicts, create a new commit, and only then push it to the remote repository.  This ensures that the main branch code is always in good shape.
 {{% /notice %}}
 
 ### Remote Repositories

@@ -53,7 +53,7 @@ Thus, you should always be certain you are pushing to the correct branch.  You c
 $ git branch  
 ```
 
-This will list all local branches, and the currenlty checked out one will have an astrisk next to it (*).
+This will list all local branches, and the currently checked out one will have an astrisk next to it (*).
 {{% /notice %}}
 
 ### Pulling a Remote Feature Branch to Another Local Machine
@@ -95,4 +95,4 @@ And push the newly expanded main branch to GitHub:
 $ git push origin main
 ```
 
-After which you'll need to [create a release]({{<ref "b-git-and-github/13-release">}}) to turn in.
+After which you'll need to [create a release]({{<ref "b-git-and-github/12-release">}}) to turn in.

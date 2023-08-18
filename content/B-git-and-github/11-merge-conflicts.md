@@ -37,8 +37,9 @@ public void PrintSomething() {
 }
 ```
 
-We need to do this for all conflicts in all conflicting files.  Once they have all been resolved, we need to commit the changes with the command:
+We need to do this for all conflicts in all conflicting files.  Once they have all been resolved, we need to commit the changes with the commands:
 
 ```
-$ git commit -a -m "Fixed merge conflicts"
+$ git add .
+$ git commit -m "Fixed merge conflicts"
 ```

@@ -52,7 +52,7 @@ With this understanding in mind, the standard way of committing changes is to co
 
 ```
 $ git add .
-$ git commit -a -m "<a message about the commit>"
+$ git commit -m "<a message about the commit>"
 ```
 
-The `git add .` adds _all_ untracked and unstaged files (making them _staged_), and `git commit -a` commits all staged or unstaged files.  If you only want to add _some_ files, you can add them individually as we did above, by specifying the path (i.e. `git commit path/to/a/file.txt`) and omit the `-a` in the commit command so only those staged will be committed.  
+The `git add .` adds _all_ untracked and unstaged files (making them _staged_), and `git commit` commits our staged files.

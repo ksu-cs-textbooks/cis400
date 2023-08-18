@@ -18,7 +18,6 @@ Some key terms to learn in this chapter are:
 * GitHub
 * Repository
 * Commit
-* Stash
 * Branch
 * Remote 
 * Clone
