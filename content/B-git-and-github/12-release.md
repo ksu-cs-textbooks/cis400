@@ -24,13 +24,11 @@ nothing to commit, working tree clean
 Then you are good to go.  On the other hand, if you get the message `Your branch is # commits ahead of 'origin/main'`, then you need to [push to master]({{<ref "b-git-and-github/09-remote-repositories#pushing">}}), and if any files are listed as uncommitted, you first need to [commit them]({{<ref  "b-git-and-github/05-staging-and-committing#committing-changes">}}).
 
 ## Step 2 - Navigate to the Releases on GitHub
-Next, open your repository on Github.  Towards the top of the page you should see a tab named "releases".  Click it.
+Next, open your repository on Github.  Towards the right side of the page you should see a link labeled "Create a new release".  Click it.
 
 ![Releases Link](/images/b.11.1.png)
 
-This will load the releases page for your repository.  On it you will see a button "Draft New Release".  Click it.
-
-![Draft New Release Button](/images/b.11.2.png)
+This will load the releases page for your repository.  
 
 ## Step 3 - Complete the Release Form
 You will need to fill out the release form, specifically the version and title, and then click the "Publish Release" button.
@@ -42,6 +40,6 @@ Releases use _[semantic versioning](https://semver.org/)_, a numbering system th
 Releases also get a human-readable name.  For this class, you should use the assignment name as the release name, i.e. Menu Milestone 1 for your first release.
 
 ## Step 4 - Submit your Release URL on K-State Online
-Once you have finished creating the release, GitHub should take you to the release page.  You can also navigate there by clicking the "releases" tab on your GitHub repository's landing page and then clicking the specific release.  Copy the URL of this page; it is what you will submit on K-State Online.
+Once you have finished creating the release, GitHub should take you to the release page.  You can also navigate there by clicking the specific release under the "Releases" heading on the right-hand side of your repository lannding page.  Copy the URL of this page; it is what you will submit on Canvas.
 
 ![Release URL](/images/b.11.4.png)
