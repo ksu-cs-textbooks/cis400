@@ -970,6 +970,11 @@
 	
 		
 		
+
+	
+	
+		
+		
 		
 
 	
@@ -1025,7 +1030,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/01-introduction/index.html</loc>
-    <lastmod>2021-06-02T16:52:10-05:00</lastmod>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/d-milestones/01-introduction/index.html</loc>
@@ -1085,7 +1090,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/02-version-control/index.html</loc>
-    <lastmod>2021-06-02T16:52:10-05:00</lastmod>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/index.html</loc>
@@ -1201,7 +1206,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/05-staging-and-committing/index.html</loc>
-    <lastmod>2023-01-26T14:05:42-06:00</lastmod>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/03-documentation/05-summary/index.html</loc>
@@ -1273,7 +1278,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/08-branches/index.html</loc>
-    <lastmod>2023-01-26T14:05:42-06:00</lastmod>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/01-objects/08-program-memory/index.html</loc>
@@ -1313,7 +1318,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/09-remote-repositories/index.html</loc>
-    <lastmod>2023-01-26T14:05:42-06:00</lastmod>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/01-objects/10-csharp-initalization/index.html</loc>
@@ -1493,7 +1498,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/03-what-you-will-learn/index.html</loc>
-    <lastmod>2023-08-14T09:56:33-05:00</lastmod>
+    <lastmod>2023-08-18T10:54:45-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/04-apis/03-working-with-disposables/index.html</loc>
@@ -1585,7 +1590,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/05-software/index.html</loc>
-    <lastmod>2023-08-14T09:56:33-05:00</lastmod>
+    <lastmod>2023-08-18T10:43:45-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/05-linq/05-extension-methods/index.html</loc>
@@ -1740,8 +1745,8 @@
     <lastmod>2021-02-28T18:07:19-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/10-merge-conflicts/index.html</loc>
-    <lastmod>2023-01-26T14:05:42-06:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/10-feature-branches/index.html</loc>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/06-advanced-csharp/10-summary/index.html</loc>
@@ -1752,20 +1757,24 @@
     <lastmod>2023-08-10T15:29:34-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/11-release/index.html</loc>
-    <lastmod>2022-08-31T13:19:43-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/11-merge-conflicts/index.html</loc>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/index.html</loc>
     <lastmod>2023-08-10T15:29:34-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/12-adding-documentation-files/index.html</loc>
-    <lastmod>2022-08-09T15:47:29-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/12-release/index.html</loc>
+    <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/c-exercises/index.html</loc>
     <lastmod>2023-08-10T15:29:34-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/13-adding-documentation-files/index.html</loc>
+    <lastmod>2023-08-14T10:13:44-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/d-milestones/index.html</loc>
