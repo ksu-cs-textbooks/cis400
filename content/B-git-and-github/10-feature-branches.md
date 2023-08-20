@@ -5,82 +5,72 @@ weight: 100
 date: 2018-08-24T10:53:26-05:00
 ---
 
-## Using Remote-Tracking Feature Branches
+This section summarizes the git commands you will need when creating feature branches for your semester-long project.
 
-In the previous sections, we talked about both feature branches _and_ remote repositories.  It is important to understand that when you create a branch, you do so in the _local_ (i.e. on your machine) repository.  
+## 1. Create and check out a local branch for the current milestone
 
-For example, if you wanted to create a feature branch for milestone 0, you would use this Git command on your development machine:
+When you start a new milestone, you need to create a local branch to hold your work. For example, if you wanted to create a feature branch for Milestone 0, you would do:
 
 ```
 $ git branch ms0
 ```
 
-And then check it out using the command:
+Next, check out your new branch. For our Milestone 0, we would do:
 
 ```
 $ git checkout ms0
 ```
 
-As you work you can add and commit as normal, i.e.:
+## 2. Work on the new branch
+
+As you make progress on the current milestone, it is a good idea to add your changes to the remote repository. First, make sure you are on your milestone branch by doing:
 
 ```
-$ git add . 
-$ git commit -m "A description of what changed"
+$ git branch
 ```
 
-Any commits you make will be made on the feature branch `ms0`, not your main branch. 
-
-## Pushing Feature Branches to GitHub
-
-At this point, your feature branch, and any of its commits, are only on your _local_ machine.  If you want to make them available on your origin (GitHub) repository, you'll need to push them there.  You can do this with the command:
+You will see a list of all local branches, with a `*` next to the currently checked out branch. You should see that the branch for the current milestone has a `*`. Then, add, commit, and push the changes:
 
 ```
-$ git push origin ms0
+$ git add .
+$ git commit -m "description of changes
+$ git push
 ```
 
-This creates a corresponding branch, `ms0` in your GitHub repository, and pushes all the changes from your local `ms0` branch to your GitHub one (which is often referred to as `origin/ms0`).
+When you do `git push` with no options, it will automatically push the changes on the currently checkout out local branch to the remote branch with the same name. In the example above, your changes would be pushed to the remote `ms0` branch. If that remote branch did not already exist, it would be created for you automatically.
 
-{{% notice warning %}}
-The `git push` command pushes the _currently checked out_ local branch to the specified branch of the specified remote repository.  So if you have the local `ms0` branch checked out and push to the `origin` repo `ms0` branch, your two branches will be in sync.  
+## 3. Continuing work on a different computer
 
-But if you have a different branch checked out, i.e. `ms1` and issue the command `git push origin ms0`, your local `ms1` changes will be applied to your remote `ms0` branch!
+Suppose you followed the steps above to start a milestone on your home computer (including pushing the latest changes for your milestone branch) and wanted to continue working on a lab computer.
 
-Likewise, if you specify a _different_ remote branch to push to, i.e. you have `ms0` checked out but use the command `git push origin main`, the changes from your local `ms0` branch will be applied to your remote `main` branch.
+### First time working with the repository
+If this was your FIRST time working on this repository on the new computer, you would need to clone the repository to the new local machine. You can do this with Visual Studio's _File->Clone Repository_ or from the terminal with `git clone [repoURL]`. In this case, ALL branches of your remote repository would be cloned to the new local machine.
 
-Thus, you should always be certain you are pushing to the correct branch.  You can check what branch is currently checked out with the command:
-
-```
-$ git branch  
-```
-
-This will list all local branches, and the currently checked out one will have an astrisk next to it (*).
-{{% /notice %}}
-
-### Pulling a Remote Feature Branch to Another Local Machine
-
-The other big benefit to pushing your feature branches to GitHub is that you can then pull them into other local repos you have cloned on other machines.  For example, if you pushed your changes from a lab computer, you can pull those changes into a corresponding branch on your home PC.
-
-However, there is one more step involved the _first_ time you pull a new branch, as you will need a _local_ branch to correspond to it.  You can create that branch, _and_ set it up to track the remote branch, with a single command:
+### First time working with current branch
+If you have worked with this repository before on the current local computer but have not worked with the new milestone branch, you must first create the new branch:
 
 ```
-$ git checkout -b ms0 origin/ms0
+$ git branch ms0
 ```
 
-This command creates a local branch `ms0` that _tracks_ the remote branch `origin/ms0`.  Because the local `ms0` branch now tracks `origin/ms0`, when you have it checked out, you can use the command:
+Replacing `ms0` with the current milestone branch. If the branch had already been created, you will see an error message (but nothing will happen).
+
+### In all cases
+Next, checkout the current milestone branch:
 
 ```
-$ git pull 
+$ git checkout ms0
 ```
 
-And git will pull from `origin/ms0` into the local `ms0` branch.  Alternatively, you can use the full command:
+Again, replacing `ms0` with the current milestone branch. Then, pull the latest changes for that branch from the remote repository to the local repository. If you do:
 
 ```
-$ git pull origin ms0
+$ git pull
 ```
 
-But you must again be careful that you are pulling the right corresponding branch.
+It will automatically pull from the branch in your remote repository that matches the name of your currently checked out local repository. In our case, it will pull from the remote `ms0` branch into the local `ms0` branch.
 
-### Merging your Feature Branch into Master
+## Merging your feature branch into main
 
 Finally, when you have finished the milestone, you'll want to merge your new changes from the feature branch into the main branch:
 
