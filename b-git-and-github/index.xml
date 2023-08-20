@@ -1074,9 +1074,9 @@ GitHub is a web service that specifically hosts remote git repositories and allo
       <link>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/10-feature-branches/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/10-feature-branches/index.html</guid>
-      <description>Using Remote-Tracking Feature Branches In the previous sections, we talked about both feature branches and remote repositories. It is important to understand that when you create a branch, you do so in the local (i.e. on your machine) repository.
-For example, if you wanted to create a feature branch for milestone 0, you would use this Git command on your development machine:
-$ git branch ms0And then check it out using the command:</description>
+      <description>This section summarizes the git commands you will need when creating feature branches for your semester-long project.
+1. Create and check out a local branch for the current milestone When you start a new milestone, you need to create a local branch to hold your work. For example, if you wanted to create a feature branch for Milestone 0, you would do:
+$ git branch ms0Next, check out your new branch.</description>
     </item>
     <item>
       <title>Merge Conflicts</title>
