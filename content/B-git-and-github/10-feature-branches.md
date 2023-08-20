@@ -79,10 +79,10 @@ $ git checkout main
 $ git merge ms0
 ```
 
-And push the newly expanded main branch to GitHub:
+(Again, replacing `ms0` with the current milestone branch name). Next, push the newly expanded main branch to GitHub:
 
 ```
-$ git push origin main
+$ git push
 ```
 
-After which you'll need to [create a release]({{<ref "b-git-and-github/12-release">}}) to turn in.
+After that, you'll need to [create a release]({{<ref "b-git-and-github/12-release">}}) to turn in.
