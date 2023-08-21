@@ -29,36 +29,13 @@ As you make progress on the current milestone, it is a good idea to add your cha
 $ git branch
 ```
 
-You will see a list of all local branches, with a `*` next to the currently checked out branch. You should see that the branch for the current milestone has a `*`. Then, add, commit, and push the changes:
+You will see a list of all local branches, with a `*` next to the currently checked out branch. You should see that the branch for the current milestone has a `*`. Then, add, commit, and push the changes for your branch to the remote repository:
 
 ```
 $ git add .
-$ git commit -m "description of changes
-$ git push
+$ git commit -m "description of changes"
+$ git push origin ms0
 ```
-
-When you do `git push` with no options, it will automatically push the changes on the currently checkout out local branch to the remote branch with the same name. In the example above, your changes would be pushed to the remote `ms0` branch. If that remote branch did not already exist, it would be created for you automatically.
-
-{{% notice info %}}
-Depending on your `git` configuration, you may get this error when you use `git push`:
-
-```
-fatal: The current branch <branchName> has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin <branchName>
-
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
-```
-
-If you get this error, you can instead do a push where you specify `origin` as the upstream branch:
-
-```
-git push origin <branchName>
-```
-
-{{% /notice %}}
 
 
 ## 3. Continuing work on a different computer
@@ -87,10 +64,10 @@ $ git checkout ms0
 Again, replacing `ms0` with the current milestone branch. Then, pull the latest changes for that branch from the remote repository to the local repository. If you do:
 
 ```
-$ git pull
+$ git pull origin ms0
 ```
 
-It will automatically pull from the branch in your remote repository that matches the name of your currently checked out local repository. In our case, it will pull from the remote `ms0` branch into the local `ms0` branch.
+It will pull from the remote `ms0` branch into the local `ms0` branch.
 
 ## Merging your feature branch into main
 
@@ -104,7 +81,7 @@ $ git merge ms0
 (Again, replacing `ms0` with the current milestone branch name). Next, push the newly expanded main branch to GitHub:
 
 ```
-$ git push
+$ git push origin main
 ```
 
 After that, you'll need to [create a release]({{<ref "b-git-and-github/12-release">}}) to turn in.
