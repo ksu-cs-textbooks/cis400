@@ -63,10 +63,6 @@ At that point you should be able to use `git push` and have it go automatically 
 
 (If you still have errors, you will first need to update your version of git to get a version that is at least 2.37 -- you can check the version number with `git --version`.)
 
-```
-git push origin <branchName>
-```
-
 On subsequent pushes of that branch, you should be able to simply the command to: `git push`.
 {{% /notice %}}
 
