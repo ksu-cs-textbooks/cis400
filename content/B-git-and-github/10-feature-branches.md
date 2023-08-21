@@ -58,7 +58,7 @@ If you get this error, you can update your git configuration as follows:
 git config --global push.autoSetupRemote true
 ```
 
-At that point you should be able to use `git push` and have it go automatically to the corresponding remote branch.
+At that point you should be able to use `git push` or `git pull` and have it go automatically to/from the corresponding remote branch.
 
 (If you still have errors, you will first need to update your version of git to get a version that is at least 2.37 -- you can check the version number with `git --version`.)
 
