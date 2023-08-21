@@ -1069,7 +1069,7 @@ public class Student { private string _first; /// &amp;lt;summary&amp;gt;The stu
       <link>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/01-objects/08-program-memory/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/01-objects/08-program-memory/index.html</guid>
-      <description>YouTube Video Info The above video and below textbook content cover the same ideas (but are not identical). Feel free to pick one or the other.
+      <description>Info The above video and below textbook content cover the same ideas (but are not identical). Feel free to pick one or the other.
 Before we move on to our next concept, it is helpful to explore how programs uses memory. Remember that modern computers are stored program computers, which means the program as well as the data are stored in the computer&amp;rsquo;s memory. A Universal Turing Machine, the standard example of stored program computer, reads the program from the same paper tape that it reads its inputs to and writes its output to.</description>
     </item>
     <item>
