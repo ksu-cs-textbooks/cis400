@@ -39,6 +39,29 @@ $ git push
 
 When you do `git push` with no options, it will automatically push the changes on the currently checkout out local branch to the remote branch with the same name. In the example above, your changes would be pushed to the remote `ms0` branch. If that remote branch did not already exist, it would be created for you automatically.
 
+{{% notice info %}}
+Depending on your `git` configuration, you may get this error when you `git push` on a local branch that has no remote counterpart (which can happen the first time you push a new branch):
+
+```
+fatal: The current branch <brancName> has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin <branchName>
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+```
+
+If you get this error, you can instead do a push where you specify `origin` as the upstream branch:
+
+```
+git push origin <branchName>
+```
+
+On subsequent pushes of that branch, you should be able to simply the command to: `git push`.
+{{% /notice %}}
+
+
 ## 3. Continuing work on a different computer
 
 Suppose you followed the steps above to start a milestone on your home computer (including pushing the latest changes for your milestone branch) and wanted to continue working on a lab computer.

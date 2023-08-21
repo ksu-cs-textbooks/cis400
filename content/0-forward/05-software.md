@@ -12,7 +12,6 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 For this course, we will be using a number of software packages including:
 * Microsoft Visual Studio 2022
 * Microsoft Visio 2021
-* Xamarin Workbooks 
 
 These have been installed in the classroom lab, as well as all Engineering and Computer Science labs.  It is strongly suggested that you install the same versions on your own development machines if you plan on working from home.  Alternatively, you can _remote desktop_ into a lab computer and use the installed software there.
 
