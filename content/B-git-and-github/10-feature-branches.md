@@ -43,7 +43,7 @@ When you do `git push` with no options, it will automatically push the changes o
 Depending on your `git` configuration, you may get this error when you `git push` on a local branch that has no remote counterpart (which can happen the first time you push a new branch):
 
 ```
-fatal: The current branch <brancName> has no upstream branch.
+fatal: The current branch <branchName> has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
     git push --set-upstream origin <branchName>
