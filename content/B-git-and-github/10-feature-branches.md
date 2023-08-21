@@ -58,7 +58,7 @@ If you get this error, you can instead do a push where you specify `origin` as t
 git push origin <branchName>
 ```
 
-On subsequent pushes of that branch, you should be able to simply the command to: `git push`.
+On subsequent pushes of that branch, you should be able to simplify the command to: `git push`.
 {{% /notice %}}
 
 
