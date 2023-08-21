@@ -40,7 +40,7 @@ $ git push
 When you do `git push` with no options, it will automatically push the changes on the currently checkout out local branch to the remote branch with the same name. In the example above, your changes would be pushed to the remote `ms0` branch. If that remote branch did not already exist, it would be created for you automatically.
 
 {{% notice info %}}
-Depending on your `git` configuration, you may get this error when you `git push` on a local branch that has no remote counterpart (which can happen the first time you push a new branch):
+Depending on your `git` configuration, you may get this error when you use `git push`:
 
 ```
 fatal: The current branch <branchName> has no upstream branch.
