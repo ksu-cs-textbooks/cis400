@@ -34,8 +34,42 @@ You will see a list of all local branches, with a `*` next to the currently chec
 ```
 $ git add .
 $ git commit -m "description of changes"
-$ git push origin ms0
+$ git push
 ```
+
+The first time you do this, it will automatically create a remote branch with the same name.
+
+{{% notice info %}}
+Depending on your `git` configuration, you may get this error when you `git push` or `git pull` on a local branch that has no remote counterpart:
+
+```
+fatal: The current branch <branchName> has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin <branchName>
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+```
+
+If you get this error, you can update your git configuration as follows:
+
+```
+git config --global push.autoSetupRemote true
+```
+
+At that point you should be able to use `git push` and have it go automatically to the corresponding remote branch.
+
+
+(If you still have errors, you will first need to update your version of git to get a version that is at least 2.37 -- you can check the version number with `git --version`.)
+
+```
+git push origin <branchName>
+```
+
+On subsequent pushes of that branch, you should be able to simply the command to: `git push`.
+{{% /notice %}}
+
 
 
 ## 3. Continuing work on a different computer
