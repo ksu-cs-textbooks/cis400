@@ -68,7 +68,7 @@ If we assign the created `Planet` object to a variable, we allocate memory for t
 Planet earth = new Planet(1, 1);
 ```
 
-Unlike our `double` and other primitive values, this allocated memory holds a _reference_ (an starting address of the memory where the object was allocated).  We indicate this with a box and arrow connecting the variable and object in our memory diagram:
+Unlike our `double` and other primitive values, this allocated memory holds a _reference_ (a starting address of the memory where the object was allocated).  We indicate this with a box and arrow connecting the variable and object in our memory diagram:
 
 ![The memory diagram for the earth variable](/images/1.1.7.3.png)
 

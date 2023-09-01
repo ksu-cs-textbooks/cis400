@@ -11,7 +11,7 @@ date: 2018-08-24T10:53:26-05:00
 The above video and below textbook content cover the same ideas (but are not identical). Feel free to pick one or the other.
 {{% /notice %}}
 
-Before we move on to our next concept, it is helpful to explore how programs uses memory. Remember that modern computers are [stored program computers](https://en.wikipedia.org/wiki/Stored-program_computer), which means the _program_ as well as the _data_ are stored in the computer's memory. A Universal Turing Machine, the standard example of stored program computer, reads the program from the same paper tape that it reads its inputs to and writes its output to. In contrast, to load a program in the ENIAC, the first electronic computer in the United States, programmers had to physically rewire the computer (it was later modified to be a stored-program computer). 
+Before we move on to our next concept, it is helpful to explore how programs use memory. Remember that modern computers are [stored program computers](https://en.wikipedia.org/wiki/Stored-program_computer), which means the _program_ as well as the _data_ are stored in the computer's memory. A Universal Turing Machine, the standard example of stored program computer, reads the program from the same paper tape that it reads its inputs to and writes its output to. In contrast, to load a program in the ENIAC, the first electronic computer in the United States, programmers had to physically rewire the computer (it was later modified to be a stored-program computer). 
 
 When a program is run, the operating system allocates part of the computer's memory (RAM) for the program to use. This memory is divided into three parts - the _static_ memory, the _stack_, and the _heap_. 
 
