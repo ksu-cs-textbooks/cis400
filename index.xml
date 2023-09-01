@@ -975,21 +975,6 @@
 	
 		
 		
-		
-
-	
-	
-		
-		
-
-	
-	
-		
-
-	
-	
-		
-		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -1040,21 +1025,6 @@ Web Only This textbook was authored for the CIS 400 - Object-Oriented Design, Im
       <pubDate>Fri, 24 Aug 2018 10:53:05 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/index.html</guid>
       <description>Be a Better Version</description>
-    </item>
-    <item>
-      <title>Exercises</title>
-      <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises/index.html</link>
-      <pubDate>Fri, 24 Aug 2018 10:53:05 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises/index.html</guid>
-      <description>Doing the Work</description>
-    </item>
-    <item>
-      <title>Project Milestones</title>
-      <link>https://ksu-cs-textbooks.github.io/cis400/d-milestones/index.html</link>
-      <pubDate>Fri, 24 Aug 2018 10:53:05 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis400/d-milestones/index.html</guid>
-      <description>Iteratively Developing a Big Project
-Web Only This textbook was authored for the CIS 400 - Object-Oriented Design, Implementation, and Testing course at Kansas State University. This section describes assignments specific to that course. If you are not enrolled in the course, please disregard this section.</description>
     </item>
   </channel>
 </rss>

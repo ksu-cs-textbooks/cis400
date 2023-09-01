@@ -975,21 +975,6 @@
 	
 		
 		
-		
-
-	
-	
-		
-		
-
-	
-	
-		
-
-	
-	
-		
-		
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
@@ -1031,10 +1016,6 @@
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/01-introduction/index.html</loc>
     <lastmod>2023-08-18T14:21:00-05:00</lastmod>
-  </url>
-  <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/d-milestones/01-introduction/index.html</loc>
-    <lastmod>2023-08-03T14:08:31-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/0-forward/index.html</loc>
@@ -1282,7 +1263,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/01-objects/08-program-memory/index.html</loc>
-    <lastmod>2023-01-25T15:31:24-06:00</lastmod>
+    <lastmod>2023-09-01T09:30:51-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/08-routed-events/index.html</loc>
@@ -1314,7 +1295,7 @@
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/01-objects/09-objects-in-memory/index.html</loc>
-    <lastmod>2023-01-25T15:17:21-06:00</lastmod>
+    <lastmod>2023-09-01T09:30:51-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/09-remote-repositories/index.html</loc>
@@ -1769,16 +1750,8 @@
     <lastmod>2023-08-18T14:21:00-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/c-exercises/index.html</loc>
-    <lastmod>2023-08-10T15:29:34-05:00</lastmod>
-  </url>
-  <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/13-adding-documentation-files/index.html</loc>
     <lastmod>2023-08-14T10:13:44-05:00</lastmod>
-  </url>
-  <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/d-milestones/index.html</loc>
-    <lastmod>2023-08-10T15:29:34-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/categories/index.html</loc>
