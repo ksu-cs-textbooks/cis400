@@ -51,7 +51,7 @@ This is quite a lot of work to express a simple idea.  C# introduced lambda synt
 bool containsKitten = AnimalList.Find((fullString) => fullString.Contains("kitten"));
 ```
 
-Much cleaner to write.  The C# compiler is converting this lambda expression into a predicate as it compiles, but we no longer have to write it!  You've seen this syntax in your XUnit tests, and you'll also see it when we cover LINQ.  It has also been adapted to simplify writing getters and setters.  Consider this case:
+Much cleaner to write.  The C# compiler is converting this lambda expression into a predicate as it compiles, but we no longer have to write it!  You'll see this syntax in your xUnit tests as well as when we cover LINQ.  It has also been adapted to simplify writing getters and setters.  Consider this case:
 
 ```csharp
 public class Person 

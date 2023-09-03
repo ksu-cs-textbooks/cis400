@@ -45,7 +45,7 @@ In an object-oriented programming language, a Class also _defines a new type_.  
 ```csharp
 public class Student {
   // backing variables
-  private uint creditPoints = 0;
+  private float creditPoints = 0;
   private uint creditHours = 0;
 
   /// <summary>

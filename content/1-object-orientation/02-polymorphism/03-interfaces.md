@@ -92,5 +92,3 @@ public class Frog : IJumpable, ICroakable, ICatchFlies
     // TODO: Implement frog class...
 }
 ```
-
-Next we'll look at inheritance, which represents a **strong is-a** relationship.
