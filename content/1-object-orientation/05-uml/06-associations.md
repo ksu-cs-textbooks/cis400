@@ -42,7 +42,7 @@ Realization refers to making an interface "real" by implementing the methods it 
 ![Realization in UML](/images/5.6.2.png)
 
 ### Generalization
-Generalization refers to extracting the shared parts from different classes to make a *general* base class of what they have in common.  For C# this corresponds to _inheritance_.  We call this a **strong is-a** relationship, because the class has all the same state and behavior as the base class.  In UML, realization is indicated by a solid arrow in the direction of inheritance:
+Generalization refers to extracting the shared parts from different classes to make a *general* base class of what they have in common.  For C# this corresponds to _inheritance_.  We call this a **strong is-a** relationship, because the class has all the same state and behavior as the base class.  In UML, generalization is indicated by a solid arrow in the direction of inheritance:
 
 ![Generalization in UML](/images/5.6.3.png)
 

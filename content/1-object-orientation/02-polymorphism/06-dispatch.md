@@ -85,7 +85,7 @@ List<Fruit> toBlend = List<Fruit>();
 toBlend.Add(new Banana());
 toBlend.Add(new Strawberry());
 
-forEach(Fruit item in toBlend) {
+foreach(Fruit item in toBlend) {
   Console.WriteLine(item.Blend());
 }
 ```
