@@ -28,7 +28,7 @@ Consider the `ShoppingList` class we developed in the last chapter:
 </UserControl>
 ```
 
-Each element in this XAML corresponds to a object of a specific Type, and the nesting of the elements implies a tree-like structure we call the [_element tree_](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/trees-in-wpf?view=netframeworkdesktop-4.8).  We can draw this out as an actual tree:
+Each element in this XAML corresponds to an object of a specific Type, and the nesting of the elements implies a tree-like structure we call the [_element tree_](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/trees-in-wpf?view=netframeworkdesktop-4.8).  We can draw this out as an actual tree:
 
 ![The elements tree for the ShoppingList component](/images/2.2.2.1.png)
 
