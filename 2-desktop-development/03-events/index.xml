@@ -996,7 +996,7 @@
       <link>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/02-message-loop/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/02-message-loop/index.html</guid>
-      <description>At the heart of every Windows program (and most operating systems), is an infinitely repeating loop we call the message loop and a data structure we call an message queue (some languages/operating systems use the term event instead of message). The message queue is managed by the operating system - it adds new events that the GUI needs to know about (i.e. a mouse click that occurred within the GUI) to this queue.</description>
+      <description>At the heart of every Windows program (and most operating systems), is an infinitely repeating loop we call the message loop and a data structure we call a message queue (some languages/operating systems use the term event instead of message). The message queue is managed by the operating system - it adds new events that the GUI needs to know about (i.e. a mouse click that occurred within the GUI) to this queue.</description>
     </item>
     <item>
       <title>Event Handlers</title>

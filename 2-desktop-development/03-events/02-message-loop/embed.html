@@ -991,20 +991,20 @@
     <link href="https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/02-message-loop/tele.html" rel="alternate" type="text/html" title="Message Loops :: K-State CIS 400 Textbook">
     
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696283805" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696283805" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1696283805" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696283805" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696283805" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1696283805" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696283805" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696283805" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1696283805" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696780664" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696780664" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1696780664" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696780664" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696780664" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1696780664" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696780664" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696780664" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1696780664" rel="stylesheet">
     
     
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1696283805" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1696283805" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1696283805" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1696283805" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1696283805"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1696780664" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1696780664" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1696780664" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1696780664" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1696780664"></script>
     
     
     
@@ -1026,7 +1026,7 @@
       window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1696283805" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1696780664" rel="stylesheet">
 
     
   </head>
@@ -1041,7 +1041,7 @@
     
     
     
-<p>At the heart of every Windows program (and most operating systems), is an infinitely repeating loop we call the <em>message loop</em> and a data structure we call an <em>message queue</em> (some languages/operating systems use the term <em>event</em> instead of <em>message</em>).  The message queue is managed by the operating system - it adds new events that the GUI needs to know about (i.e. a mouse click that occurred within the GUI) to this queue.  The message loop is often embedded in the main function of the program, and continuously checks for new messages in the queue.  When it finds one, it processes the message.  Once the message is processed, the message loop again checks for a new message.  The basic code for such a loop looks something like this:</p>
+<p>At the heart of every Windows program (and most operating systems), is an infinitely repeating loop we call the <em>message loop</em> and a data structure we call a <em>message queue</em> (some languages/operating systems use the term <em>event</em> instead of <em>message</em>).  The message queue is managed by the operating system - it adds new events that the GUI needs to know about (i.e. a mouse click that occurred within the GUI) to this queue.  The message loop is often embedded in the main function of the program, and continuously checks for new messages in the queue.  When it finds one, it processes the message.  Once the message is processed, the message loop again checks for a new message.  The basic code for such a loop looks something like this:</p>
 <div class="wrap-code highlight"><pre tabindex="0"><code>function main
     initialize()
     while message != quit
@@ -1062,10 +1062,10 @@ end function</code></pre></div><p>This approach works well for most GUIs as once
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1696283806" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1696283806" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1696283806" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1696780665" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1696780665" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1696780665" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1696283806 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1696780665 defer"></script>
   </body>
 </html>
