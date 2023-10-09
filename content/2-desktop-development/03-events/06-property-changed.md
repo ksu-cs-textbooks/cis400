@@ -34,7 +34,7 @@ This was a common problem in GUI design - sometimes we need to know when a prope
 The standard answer to this dilemma in .NET is the `INotifyPropertyChanged` interface - an interface defined in the `System.ComponentModel` namespace that requires you to implement a single event `PropertyChanged` on the class that is changing.  You can define this event as:
 
 ```csharp 
-public event PropertyChangedEventHandler PropertyChanged;
+public event PropertyChangedEventHandler? PropertyChanged;
 ```
 This sets up the `PropertyChanged` event handler on your class.  Let's first look at writing event listeners to take advantage of this event.
 
@@ -168,7 +168,7 @@ public class DinnerBell
 For the event listeners to work as expected, we need to implement the `PropertyChanged` event in our `SmartBowl` class with:
 
 ```csharp 
-public event PropertyChangedEventHandler PropertyChanged;
+public event PropertyChangedEventHandler? PropertyChanged;
 ```
 
 Which makes it available for the event handlers to attach to.  But this is only _part_ of the process, we also need to _invoke_ this event when it happens.  This is done with the `Invoke(object sender, EventArgs e)` method defined for every event handler. It takes two parameters, an `object` which is the source of the event, and the `EventArgs` defining the event.  The specific kind of `EventArgs` corresponds to the event declaration - in our case, `PropertyChangedEventArgs`.
@@ -202,7 +202,7 @@ public class SmartBowl : INotifyPropertyChanged
     /// <summary>
     /// Event triggered when a property changes
     /// </summary>
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     /// <summary>
     /// The weight sensor installed in the bowl
