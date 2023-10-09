@@ -991,20 +991,20 @@
     <link href="https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/06-property-changed/tele.html" rel="alternate" type="text/html" title="PropertyChanged :: K-State CIS 400 Textbook">
     
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696867782" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696867782" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1696867782" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696867782" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696867782" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1696867782" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696867782" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696867782" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1696867782" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696867982" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1696867982" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1696867982" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696867982" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1696867982" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1696867982" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696867982" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1696867982" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1696867982" rel="stylesheet">
     
     
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1696867782" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1696867782" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1696867782" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1696867782" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1696867782"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1696867982" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1696867982" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1696867982" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1696867982" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1696867982"></script>
     
     
     
@@ -1026,7 +1026,7 @@
       window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1696867782" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1696867982" rel="stylesheet">
 
     
   </head>
@@ -1058,7 +1058,7 @@
 <p>This was a common problem in GUI design - sometimes we need to know when a property changes because we are displaying that property&rsquo;s value in the GUI, possibly in multiple places.  But if that property is <em>not</em> part of a GUI display, we may not care when it changes.</p>
 <h3 id="the-inotifypropertychanged-interface">The INotifyPropertyChanged Interface</h3>
 <p>The standard answer to this dilemma in .NET is the <code>INotifyPropertyChanged</code> interface - an interface defined in the <code>System.ComponentModel</code> namespace that requires you to implement a single event <code>PropertyChanged</code> on the class that is changing.  You can define this event as:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> PropertyChangedEventHandler PropertyChanged;</span></span></code></pre></div><p>This sets up the <code>PropertyChanged</code> event handler on your class.  Let&rsquo;s first look at writing event listeners to take advantage of this event.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> PropertyChangedEventHandler? PropertyChanged;</span></span></code></pre></div><p>This sets up the <code>PropertyChanged</code> event handler on your class.  Let&rsquo;s first look at writing event listeners to take advantage of this event.</p>
 <h4 id="propertychanged-event-listeners">PropertyChanged Event Listeners</h4>
 <p>In our example, we would do this with the smart dog bowl, and add listeners to the dinner bell and empty notification tools.  The <code>PropertyChangedEventArgs</code> includes the name of the property that is changing (<code>PropertyName</code>) - so we can check that 1) the property changing is the weight, and 2) that the weight meets our criteria, i.e.:</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">/// &lt;summary&gt;</span>
@@ -1163,7 +1163,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h4 id="propertychanged-event-declaration">PropertyChanged Event Declaration</h4>
 <p>For the event listeners to work as expected, we need to implement the <code>PropertyChanged</code> event in our <code>SmartBowl</code> class with:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> PropertyChangedEventHandler PropertyChanged;</span></span></code></pre></div><p>Which makes it available for the event handlers to attach to.  But this is only <em>part</em> of the process, we also need to <em>invoke</em> this event when it happens.  This is done with the <code>Invoke(object sender, EventArgs e)</code> method defined for every event handler. It takes two parameters, an <code>object</code> which is the source of the event, and the <code>EventArgs</code> defining the event.  The specific kind of <code>EventArgs</code> corresponds to the event declaration - in our case, <code>PropertyChangedEventArgs</code>.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> PropertyChangedEventHandler? PropertyChanged;</span></span></code></pre></div><p>Which makes it available for the event handlers to attach to.  But this is only <em>part</em> of the process, we also need to <em>invoke</em> this event when it happens.  This is done with the <code>Invoke(object sender, EventArgs e)</code> method defined for every event handler. It takes two parameters, an <code>object</code> which is the source of the event, and the <code>EventArgs</code> defining the event.  The specific kind of <code>EventArgs</code> corresponds to the event declaration - in our case, <code>PropertyChangedEventArgs</code>.</p>
 <p>Let&rsquo;s start with a straightforward example.  Assume we have a <code>Name</code> property in the <code>SmartBowl</code> that is a customizable string, allowing us to identify the bowl, i.e. &ldquo;Water&rdquo; or &ldquo;Food&rdquo;.  When we change it, we need to invoke the <code>PropertyChanged</code> event, i.e.:</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> name = <span style="color:#e6db74">&#34;Bowl&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name {
@@ -1185,7 +1185,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// &lt;summary&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// Event triggered when a property changes</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// &lt;/summary&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> PropertyChangedEventHandler PropertyChanged;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> PropertyChangedEventHandler? PropertyChanged;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// &lt;summary&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// The weight sensor installed in the bowl</span>
@@ -1321,10 +1321,10 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1696867783" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1696867783" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1696867783" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1696867984" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1696867984" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1696867984" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1696867783 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1696867984 defer"></script>
   </body>
 </html>
