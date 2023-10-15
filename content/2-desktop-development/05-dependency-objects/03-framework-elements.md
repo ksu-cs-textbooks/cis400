@@ -14,7 +14,7 @@ Some of the possible options are:
 * `FrameworkPropertyMetadataOptions.AffectsMeasure` - changes to the property may affect the size of the control
 * `FrameworkPropertyMetadataOptions.AffectsArrange` - changes to the property may affect the layout of the control
 * `FrameworkPropertyMetadataOptions.AffectsRender` - changes to the property may affect the appearance of the control
-* `FrameworkPropertyMetadataOptions.BindsTowWayByDefault` - This property uses two-way bindings by default (i.e. the control is an editable control)
+* `FrameworkPropertyMetadataOptions.BindsTwoWayByDefault` - This property uses two-way bindings by default (i.e. the control is an editable control)
 * `FrameworkPropertyMetadataOptions.NotDataBindable` - This property does not allow data binding
 
 In this case, we want a two-way binding by default, so we'll include that flag, and we also we'll note that it affects the rendering process.  Multiple flags can be combined with a [bitwise OR](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators#logical-or-operator-).  Constructing our `FrameworkPropertyMetadata` object would then look like:
