@@ -82,7 +82,7 @@ Notice that we use the `Source` property of the `Binding` class to bind the `Ite
         <CheckBox IsChecked="{Binding Path=IsCartoon}">
             Is a Looney Toon
         </CheckBox>
-        <ListBox ItemsSource="{Binding Source={StaticResource fruits}}" SelectedItem="{Binding Path=FavoriteFruit}"/>
+        <ListView ItemsSource="{Binding Source={StaticResource fruits}}" SelectedItem="{Binding Path=FavoriteFruit}"/>
     </StackPanel>
 </UserControl>
 ```

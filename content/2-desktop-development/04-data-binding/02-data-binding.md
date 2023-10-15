@@ -10,7 +10,7 @@ Data binding is a technique for synchronizing data between a provider and consum
 In WPF, the data object is essentially a normal C# object, which represents some data we want to display in a control. However, this object must implement the `INotifyPropertyChanged` interface in order for changes in the data object to be automatically applied to the WPF control it is bound to.  Implementing this interface comes with two requirements.  First, the class will define a `PropertyChanged` event:
 
 ```csharp
-public event PropertyChangedEventHandler PropertyChanged;
+public event PropertyChangedEventHandler? PropertyChanged;
 ```
 
 And second, it will invoke that `PropertyChanged` event handler _whenever_ one of its properties changes:
@@ -32,7 +32,7 @@ public class Person : INotifyPropertyChanged
     /// <summary>
     /// An event triggered when a property changes 
     /// </summary>
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     private string firstName = "";
     /// <summary>

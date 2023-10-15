@@ -25,7 +25,7 @@ Though this might cause your user confusion because they would _seem_ to be able
 <TextEditor Text="{Binding Path=FullName Mode=OneWay}" IsEnabled="False" />
 ```
 
-The second binding mode is `OneTime` which initializes the control with the property, but does not apply any subsequent changes.  This is similar to the behavior you will see from a data object that does not implement the `INotifyPropertyChanged` interface, as the `Binding` object depends on it to 
+The second binding mode is `OneTime` which initializes the control with the property, but does not apply any subsequent changes.  This is similar to the behavior you will see from a data object that does not implement the `INotifyPropertyChanged` interface, as the `Binding` object depends on it for notifications that the property as changed.
 
 Generally, you'll want to use a control meant to be used with the mode you intend to employ - editable controls default to `TwoWay` and display controls to `OneWay`.
 

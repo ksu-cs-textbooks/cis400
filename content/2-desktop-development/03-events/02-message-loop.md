@@ -5,7 +5,7 @@ weight: 2
 date: 2018-08-24T10:53:26-05:00
 ---
 
-At the heart of every Windows program (and most operating systems), is an infinitely repeating loop we call the _message loop_ and a data structure we call an _message queue_ (some languages/operating systems use the term _event_ instead of _message_).  The message queue is managed by the operating system - it adds new events that the GUI needs to know about (i.e. a mouse click that occurred within the GUI) to this queue.  The message loop is often embedded in the main function of the program, and continuously checks for new messages in the queue.  When it finds one, it processes the message.  Once the message is processed, the message loop again checks for a new message.  The basic code for such a loop looks something like this:
+At the heart of every Windows program (and most operating systems), is an infinitely repeating loop we call the _message loop_ and a data structure we call a _message queue_ (some languages/operating systems use the term _event_ instead of _message_).  The message queue is managed by the operating system - it adds new events that the GUI needs to know about (i.e. a mouse click that occurred within the GUI) to this queue.  The message loop is often embedded in the main function of the program, and continuously checks for new messages in the queue.  When it finds one, it processes the message.  Once the message is processed, the message loop again checks for a new message.  The basic code for such a loop looks something like this:
 
 ```
 function main

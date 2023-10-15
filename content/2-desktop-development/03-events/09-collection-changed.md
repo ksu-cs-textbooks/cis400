@@ -12,7 +12,7 @@ The `PropertyChanged` event notifies us when a _property_ of an object changes, 
 The `INotifyCollectionChanged` interface defined in the `System.Collections.Specialized` namespace indicates the collection implements the `NotifyCollectionChangedEventHandler`, i.e.:
 
 ```csharp 
-public event NotifyCollectionChangedEventHandler NotifyCollectionChanged;
+public event NotifyCollectionChangedEventHandler? NotifyCollectionChanged;
 ```
 
 And, as you would expect, this event is triggered any time the collection's contents change, much like the `PropertyChanged` event we discussed earlier was triggered when a property changed.  However, the `NotifyCollectionChangedEventArgs` provides a _lot_ more information than we saw with the `PropertyChangedEventArgs`,as you can see in the UML diagram below:
