@@ -21,7 +21,7 @@ Perhaps the most important aspect of the `DependencyObject` is its support for h
 </Grid>
 ```
 
-Where does the `Column` and `Row` properties come from?  They aren't defined on the `TextBox` class - you can [check the documentation](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textbox?view=netcore-3.1#properties).  The answer is they are made available through the dependency property system.
+Where do the `Column` and `Row` properties come from?  They aren't defined on the `TextBox` class - you can [check the documentation](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.textbox?view=netcore-3.1#properties).  The answer is they are made available through the dependency property system.
 
 At the heart of this system is a collection of key/value pairs much like the `Dictionary`.  When the XAML code `Grid.Column="1"` is processed, this key and value are added to the `TextBox`'s dependency properties collection, and is thereafter accessible by the WPF rendering algorithm.
 
