@@ -197,6 +197,7 @@ public class ComputerScienceStudentViewModel : INotifyPropertyChanged
     public ComputerScienceStudentViewModel(Student student)
     {
         Student = student;
+        Student.PropertyChanged += HandleStudentPropertyChanged;
     }
 }
 ```
