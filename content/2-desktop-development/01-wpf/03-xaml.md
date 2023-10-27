@@ -125,11 +125,11 @@ When we compile this project, the XAML is actually transformed into a temporary 
 void InitializeComponent() 
 {
     this.Title = "MainWindow";
-    this.Height = "450";
-    this.Width = "800";
+    this.Height = 450;
+    this.Width = 800;
 
     var grid = new Grid();
-    this.Content = grid();
+    this.Content = grid;
 }
 ```
 
