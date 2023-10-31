@@ -33,7 +33,7 @@ Now in our `<form>` in _Index.cshtml_ we can add a checkbox for each of these po
 
 ```html
 <form>
-    @foreach  (String rating in MovieDatabase.MPAARating) 
+    @foreach  (string rating in MovieDatabase.MPAARating) 
     {
         <label>
             <input type="checkbox" name="MPAARatings" value="@rating"/>
@@ -41,7 +41,7 @@ Now in our `<form>` in _Index.cshtml_ we can add a checkbox for each of these po
         </label>
     }
     
-    <input type="text" name="Search" value="@Model.SearchTerms"/>
+    <input type="text" name="SearchTerms" value="@Model.SearchTerms"/>
     <input type="submit" value="Search">
 </form>
 ```
@@ -165,7 +165,7 @@ Here we use a [HashSet](https://docs.microsoft.com/en-us/dotnet/api/system.colle
 But where would this code go?  We could place it in a getter for `MovieDatabase.Genres`:
 
 ```csharp 
-    public IEnumerable<String> Genres 
+    public IEnumerable<string> Genres 
     {
         get 
         {

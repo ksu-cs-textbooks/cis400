@@ -16,14 +16,14 @@ Let's move the filters to a column on the left, leave the search bar above, and 
     <form id="movie-database">
 
         <div id="search">
-            <input type="text" name="Search" value="@Model.SearchTerms" />
+            <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
             <input type="submit" value="Search">
         </div>
 
         <div id="filters">
 
             <h4>MPAA Rating</h4>
-            @foreach (String rating in MovieDatabase.MPAARating)
+            @foreach (string rating in MovieDatabase.MPAARating)
             {
                 <label>
                     <input type="checkbox" name="MPAARatings" value="@rating" checked="@Model.MPAARatings.Contains(rating)" />
@@ -32,7 +32,7 @@ Let's move the filters to a column on the left, leave the search bar above, and 
             }
 
             <h4>Genre</h4>
-            @foreach (String genre in MovieDatabase.Genres)
+            @foreach (string genre in MovieDatabase.Genres)
             {
                 <label>
                     <input type="checkbox" name="Genres" value="@genre" />
