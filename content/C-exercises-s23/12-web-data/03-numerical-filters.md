@@ -16,7 +16,7 @@ Let's move the filters to a column on the left, leave the search bar above, and 
     <form id="movie-database">
 
         <div id="search">
-            <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
+            <input type="text" name="Search" value="@Model.SearchTerms" />
             <input type="submit" value="Search">
         </div>
 
