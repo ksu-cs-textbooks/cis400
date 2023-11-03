@@ -23,7 +23,7 @@ Let's move the filters to a column on the left, leave the search bar above, and 
         <div id="filters">
 
             <h4>MPAA Rating</h4>
-            @foreach (String rating in MovieDatabase.MPAARating)
+            @foreach (string rating in MovieDatabase.MPAARating)
             {
                 <label>
                     <input type="checkbox" name="MPAARatings" value="@rating" checked="@Model.MPAARatings.Contains(rating)" />
@@ -32,7 +32,7 @@ Let's move the filters to a column on the left, leave the search bar above, and 
             }
 
             <h4>Genre</h4>
-            @foreach (String genre in MovieDatabase.Genres)
+            @foreach (string genre in MovieDatabase.Genres)
             {
                 <label>
                     <input type="checkbox" name="Genres" value="@genre" />
@@ -120,21 +120,22 @@ Let's go ahead and use flexbox to lay out our filters in a column:
 }
 ```
 
-And make our number inputs smaller:
+And make our number inputs bigger:
 
 ```css
 #filters input[type=number] {
-    width: 3rem;
+    width: 4rem;
 }
 ```
 
 Notice the use of square brackets in our CSS Selector to only apply to inputs with type number.
 
-Also, let's remove most of the margin below our `<h4>` elements:
+Also, let's add a margin above and remove most of the margin below our `<h4>` elements:
 
 ```css
 #filters h4 {
     margin-bottom: 0.2rem;
+    margin-top: 2rem;
 }
 ```
 
@@ -156,7 +157,7 @@ But the returned value would be a string, so we'd need to parse it:
     IMDBMin = double.Parse(Request.Query["IMDBMin"]);
 ```
 
-If the query was `null`, then this would evaluate to `NAN`, which we wouldn't want to set our `<input>` to...
+If the query was `null`, then this would evaluate to `NaN`, which we wouldn't want to set our `<input>` to...
 
 Instead, we'll look at some options built into the PageModel.  
 
@@ -168,10 +169,10 @@ The first of these options is [_Parameter Binding_](https://docs.microsoft.com/e
     /// <summary>
     /// Gets the search results for display on the page
     /// </summary>
-    OnGet(string SearchTerms, string[] MPAARatings, string[] Genre, double? IMDBMin, double? IMDBMax) {
+    public void OnGet(string SearchTerms, string[] MPAARatings, string[] Genres, double? IMDBMin, double? IMDBMax) {
         this.SearchTerms = SearchTerms;
         this.MPAARatings = MPAARatings;
-        this.Genre = Genre;
+        this.Genres = Genres;
         this.IMDBMin = IMDBMin;
         this.IMDBMax = IMDBMax;
         Movies = MovieDatabase.Search(SearchTerms);
@@ -194,24 +195,24 @@ A second option is to use [_Model Binding_](https://docs.microsoft.com/en-us/asp
 public class IndexModel : PageModel {
 
     [BindProperty(SupportsGet=true)]
-    string SearchTerms {get; set;}
+    public string SearchTerms {get; set;}
 
     [BindProperty(SupportsGet=true)]
-    string[] MPAARatings {get; set;}
+    public string[] MPAARatings {get; set;}
 
     [BindProperty(SupportsGet=true)]
-    string[] Genre {get; set;}
+    public string[] Genres {get; set;}
 
     [BindProperty(SupportsGet=true)]
-    double? IMDBMin {get; set;}
+    public double? IMDBMin {get; set;}
 
     [BindProperty(SupportsGet=true)]
-    double? IMDBMax {get; set;}
+    public double? IMDBMax {get; set;}
 
     /// <summary>
     /// Gets the search results for display on the page
     /// </summary>
-    OnGet() {
+    public voidOnGet() {
         Movies = MovieDatabase.Search(SearchTerms);
         Movies = MovieDatabase.FilterByMPAARating(Movies, MPAARatings);
         Movies = MovieDatabase.FilterByGenre(Movies, Genres);
@@ -252,7 +253,7 @@ public class SomePageModel : PageModel
 _or_ you can parse it from the request:
 
 ```csharp
-class SomePageModel : PageModel
+public class SomePageModel : PageModel
 {
     public void OnGet() {
         var someProperty = float.Parse(Request.Query["SomeProperty"]);

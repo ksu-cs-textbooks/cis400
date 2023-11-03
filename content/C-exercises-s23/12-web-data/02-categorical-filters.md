@@ -33,7 +33,7 @@ Now in our `<form>` in _Index.cshtml_ we can add a checkbox for each of these po
 
 ```html
 <form>
-    @foreach  (String rating in MovieDatabase.MPAARating) 
+    @foreach  (string rating in MovieDatabase.MPAARating) 
     {
         <label>
             <input type="checkbox" name="MPAARatings" value="@rating"/>
@@ -165,7 +165,7 @@ Here we use a [HashSet](https://docs.microsoft.com/en-us/dotnet/api/system.colle
 But where would this code go?  We could place it in a getter for `MovieDatabase.Genres`:
 
 ```csharp 
-    public IEnumerable<String> Genres 
+    public IEnumerable<string> Genres 
     {
         get 
         {
@@ -186,7 +186,7 @@ Instead, let's create a private static variable in the `MovieDatabase` class to 
 
 ```csharp 
     // The genres represented in the database
-    private static string[] genres;
+    private static string[] _genres;
 ```
 
 And expose it with a public static property:
@@ -195,24 +195,22 @@ And expose it with a public static property:
     /// <summary>
     /// Gets the movie genres represented in the database 
     /// </summary>
-    public static string[] Genres => genres;
+    public static string[] Genres => _genres;
 ```
 
 And finally, we'll populate this array in the static constructor of `MovieDatabase`, after the JSON file has been processed:
 
 ```csharp 
     HashSet<string> genreSet = new HashSet<string>();
-    foreach(Movie movie in movies) {
+    foreach(Movie movie in _movies) {
         if(movie.MajorGenre != null) 
         {
             genreSet.Add(movie.MajorGenre);
         }
     }
-    genres = genreSet.ToArray();
+    _genres = genreSet.ToArray();
 ```
 
 This approach means the finding of genres only happens once, and getting the `Genre` property is a constant-time O(1) operation.
 
-{{% notice todo %}}
-Implementing the filters follows the same process as we used for the MPAA filters; I'll leave that as an exercise for the reader.
-{{% /notice %}}
+We can implement the filters for the genres in the same way as we did for the MPAA filters; I'll leave that as an exercise for the reader.
