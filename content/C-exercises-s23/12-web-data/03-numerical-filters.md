@@ -212,7 +212,7 @@ public class IndexModel : PageModel {
     /// <summary>
     /// Gets the search results for display on the page
     /// </summary>
-    public voidOnGet() {
+    public void OnGet() {
         Movies = MovieDatabase.Search(SearchTerms);
         Movies = MovieDatabase.FilterByMPAARating(Movies, MPAARatings);
         Movies = MovieDatabase.FilterByGenre(Movies, Genres);
