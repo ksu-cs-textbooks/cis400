@@ -1012,7 +1012,7 @@ One of the earliest approaches was to write a program to dynamically create the 
       <pubDate>Fri, 24 Aug 2018 10:53:05 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/3-web-development/02-aspdotnet/04-template-rendering/index.html</guid>
       <description>It was not long before new technologies sprang up to replace the ad-hoc string concatenation approach to creating dynamic pages. These template approaches allow you to write a page using primarily HTML, but embed snippets of another language to execute and concatenate into the final page. This is very similar to the template strings we have used in C#, i.e.:
-string time = $&amp;#34;The time is {DateTime.Now}&amp;#34;;Which concatenates the invoking the DateTime.</description>
+string time = $&amp;#34;The time is {DateTime.Now}&amp;#34;;Which concatenates the invoking of the DateTime.</description>
     </item>
     <item>
       <title>Web Frameworks</title>
