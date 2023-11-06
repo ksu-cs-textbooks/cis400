@@ -40,7 +40,7 @@ Immediately after the `<` is the tag name.  In HTML, tag names like `button` sho
 
 #### The Attributes
 
-After the tag name come optional attributes, which are key-value pairs expressed as `key="value"`.  Attributes should be separated from each other and the tag name by whitespace characters (any whitespace will do, but traditionally spaces are used).  As with XAML, different elements have different attributes available - and you can read up on what these are by visiting the MDN article about the specific element.  
+After the tag name comes optional attributes, which are key-value pairs expressed as `key="value"`.  Attributes should be separated from each other and the tag name by whitespace characters (any whitespace will do, but traditionally spaces are used).  As with XAML, different elements have different attributes available - and you can read up on what these are by visiting the MDN article about the specific element.  
 
 However, several attributes bear special mention:
 
