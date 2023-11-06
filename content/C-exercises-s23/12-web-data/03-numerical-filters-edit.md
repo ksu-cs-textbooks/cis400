@@ -1,7 +1,7 @@
 ---
 title: "Numerical Filters"
-pre: "c. "
-weight: 3
+pre: "d. "
+weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 

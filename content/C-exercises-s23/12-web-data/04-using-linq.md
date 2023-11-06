@@ -1,7 +1,7 @@
 ---
 title: "Using LINQ"
-pre: "d. "
-weight: 4
+pre: "e. "
+weight: 5
 date: 2018-08-24T10:53:26-05:00
 ---
 
