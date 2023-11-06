@@ -11,7 +11,7 @@ It was not long before new technologies sprang up to replace the ad-hoc string c
 string time = $"The time is {DateTime.Now}";
 ```
 
-Which concatenates the invoking the [DateTime.Now]() property's `ToString()` method into the string `time`.  While the C# template string above uses curly braces to call out the script snippets, most HTML template libraries initially used some variation of angle brackets + additional characters.  As browsers interpret anything within angle brackets (`<>`) as HTML tags, these would not be rendered if the template was accidentally served as HTML wihout executing and concatenating scripts.  Two early examples are:
+Which concatenates the invoking of the [DateTime.Now]() property's `ToString()` method into the string `time`.  While the C# template string above uses curly braces to call out the script snippets, most HTML template libraries initially used some variation of angle brackets + additional characters.  As browsers interpret anything within angle brackets (`<>`) as HTML tags, these would not be rendered if the template was accidentally served as HTML wihout executing and concatenating scripts.  Two early examples are:
 
 * `<?php echo "This is a PHP example" ?>`
 * `<% Response.Write("This is a classic ASP example) %>`
@@ -38,4 +38,4 @@ Would render the current time.  You can run (and modify) this example on the [w3
 
 This template syntax is the [Razor syntax](https://en.wikipedia.org/wiki/ASP.NET_Razor), and used throughout Microsoft's ASP.NET platform.  Additionally it can be used outside of ASP.NET with the open-source [RazorEngine](https://antaris.github.io/RazorEngine/).
 
-Classic PHP, Classic ASP, and ASP.NET web pages all use a single-page model, where the client (the browser) requests a specific file, and as that file is interpreted, the dynamic page is generated.  This approach worked well in the early days of the world-wide-web, where web sites were essentially a collection of pages.  However, as the web grew increasingly interactive, many web sites grew into full-fledged _web applications_, full-blown programs that did lend themselves to a page-baed structure.  This new need resulted in new technologies to fill the void - web frameworks.  We'll talk about these next.
+Classic PHP, Classic ASP, and ASP.NET web pages all use a single-page model, where the client (the browser) requests a specific file, and as that file is interpreted, the dynamic page is generated.  This approach worked well in the early days of the world-wide-web, where web sites were essentially a collection of pages.  However, as the web grew increasingly interactive, many web sites grew into full-fledged _web applications_, full-blown programs that did lend themselves to a page-based structure.  This new need resulted in new technologies to fill the void - web frameworks.  We'll talk about these next.

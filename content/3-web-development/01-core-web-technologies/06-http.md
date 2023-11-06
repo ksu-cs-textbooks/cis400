@@ -87,7 +87,7 @@ Vary: Accept-Encoding
 <!doctype html>...
 ```
 
-The first line indicates that the server responded using the HTTP 1.1 protocol, the status of the response is a 200 code, which corresponds to the human meaning "OK".  In other words, the request worked.  The remaining lines are headers describing aspects of the request - the __Date__, for example, indicates when the request was made, and the __path__ indicates what was requested.  Most important of these headers, though is the __Content-Type__ header, which indicates what the body of the response consists of.  The content type __text/html__ means the body consists of text, which is formatted as HTML -- in other words, a webpage.  
+The first line indicates that the server responded using the HTTP 1.1 protocol, the status of the response is a 200 code, which corresponds to the human meaning "OK".  In other words, the request worked.  The remaining lines are headers describing aspects of the request - the __Date__, for example, indicates when the request was made, and the __path__ indicates what was requested.  Most important of these headers, though, is the __Content-Type__ header, which indicates what the body of the response consists of.  The content type __text/html__ means the body consists of text, which is formatted as HTML -- in other words, a webpage.  
 
 Everything after the blank line is the body of the response - in this case, the page content as HTML text.  If you scroll far enough through it, you should be able to locate all of the HTML elements in Google's search page.
 

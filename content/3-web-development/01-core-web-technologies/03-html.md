@@ -64,7 +64,7 @@ The content nested inside the tag can be plain text, or another HTML element (or
 
 ### The End Tag
 
-The end tag is also enclosed in angle brackets (`<` and `>`).  Immediately after the `<` is a forward slash `/`, and then the tag name.  You do not include attributes in a end tag.
+The end tag is also enclosed in angle brackets (`<` and `>`).  Immediately after the `<` is a forward slash `/`, and then the tag name.  You do not include attributes in an end tag.
 
 If the element has no content, the end tag can be combined with the start tag in a _self-closing tag_, i.e. the [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) tag is typically written as self-closing:
 
