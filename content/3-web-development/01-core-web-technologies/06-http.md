@@ -37,7 +37,7 @@ Open a PowerShell instance (Windows) or a terminal (Mac/Linux) and enter the com
 $ ssh [eid]@cslinux.cs.ksu.edu
 `
 
-Alternatively, you can us Putty to connect to cslinux.  Detailed instructions on both approaches can be found [on the Ccompute Science support pages](https://support.cs.ksu.edu/CISDocs/wiki/Remote_Access#Remote_Linux_Access#Remote_Linux_Access).
+Alternatively, you can use Putty to connect to cslinux.  Detailed instructions on both approaches can be found [on the Computer Science support pages](https://support.cs.ksu.edu/CISDocs/wiki/Remote_Access#Remote_Linux_Access#Remote_Linux_Access).
 
 {{% notice warning %}}
 If you are connecting from off-campus, you will also need to connect through the K-State VPN to access the Computer Science Linux server. You can find more information about the K-State VPN on the [K-State IT pages](https://www.k-state.edu/it/cybersecurity/vpn/)
