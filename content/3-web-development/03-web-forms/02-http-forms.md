@@ -380,4 +380,4 @@ There are a couple of special attributes we should know for the `<form>` element
   * `text/plain` - useful for debugging
 * `method` - the HTTP method to submit the form using, most often GET or POST
 
-When the form is submitted, the form is serialized using the `enctype`, and submitted using the HTTP `method` to the URL specified by the `action` attribute.  Let's take a deeper look at this process next.
+When the form is submitted, the form is serialized using the `enctype` attribute and submitted using the HTTP `method` to the URL specified by the `action` attribute.  Let's take a deeper look at this process next.

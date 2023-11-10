@@ -86,7 +86,7 @@ The HTTP method determines if the form data is sent as part of the _url_ of the 
 #### GET Requests
 With a GET request, the serialized form data is appended to the url as a _query_ or _search_ parameter. This takes the form of a question mark: `?` followed by the serialized form data.  In addition, the serialized data must be url-encoded to ensure the URL remains valid, as it may contain reserved characters (i.e. the characters `:`,`/`,`?`,`#`, `&`, and `=`) have special meanings in URLs, so the encoded data can't contain them). 
 
-For example, searching using Google uses a GET request, so when we type "Razor Pages" in into Google and click search, it makes a request against the URL: `https://www.google.com/search?q=razor+pages` (Note it adds additional form data fields for a variety of purposes).
+For example, searching using Google uses a GET request, so when we type "Razor Pages" into Google and click search, it makes a request against the URL: `https://www.google.com/search?q=razor+pages` (Note it adds additional form data fields for a variety of purposes).
 
 A GET request is appropriate when the data you are submitting is small, like search terms or filter values.  Once you start submitting larger amounts of data (like parameters to build an object from), you'll probably want to switch to POST requests.  Also, remember the form data for GET requests are visible in the URL, so you'll want to use POST requests when seeing those values might be confusing or annoying to users.  
 

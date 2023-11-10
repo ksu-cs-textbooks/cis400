@@ -15,7 +15,7 @@ If the form was submitted as a GET request, then the `Request.QueryString` is a 
 
 Similarly, the `Form` also exposes the form content as a collection key-value pairs, so we could access a POST request's input with the name "Color" value with `Request.Form["Color"]`.
 
-Finally, the request also allows for checking _both_ collections using its own accessor property, i.e. `Request["Color"]` would provide the submitted value for the input "Color" if it was send with _either_ a GET or POST request.
+Finally, the request also allows for checking _both_ collections using its own accessor property, i.e. `Request["Color"]` would provide the submitted value for the input "Color" if it was sent with _either_ a GET or POST request.
 
 ### Parameter Binding 
 
