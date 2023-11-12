@@ -73,7 +73,7 @@ And we can refactor the line we just added to `OnGet()` to use this new property
     MPAARatings = Request.Query["MPAARatings"];
 ```
 
-Then, in our _Index.cshtml.cs_ Razor Page, we can refactor the checkbox to be checked if we filtered against this rating in our last request:
+Then, in our _Index.cshtml_ Razor Page, we can refactor the checkbox to be checked if we filtered against this rating in our last request:
 
 ```html
     <input type="checkbox" name="MPAARatings" value="@rating" checked="@Model.MPAARatings.Contains(rating)"/>
