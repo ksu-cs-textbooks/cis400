@@ -5,7 +5,7 @@ weight: 2
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Let's add some filters to the page as well.  We'll start with _categorical_ filters, i.e. filtering by category.  Let's start by filtering for MAA Rating.  We know that there are only a handful of ratings issued by the Motion Picture Association of America - G, PG, PG-13, R, and NC-17.  We might be tempted to use an enumeration to represent these values, but in C# an enumeration cannot have strings for values.  Nor can we use the hyphen (`-`) in an enumeration name.  
+Let's add some filters to the page as well.  We'll start with _categorical_ filters, i.e. filtering by category.  Let's start by filtering for MPAA Rating.  We know that there are only a handful of ratings issued by the Motion Picture Association of America - G, PG, PG-13, R, and NC-17.  We might be tempted to use an enumeration to represent these values, but in C# an enumeration cannot have strings for values.  Nor can we use the hyphen (`-`) in an enumeration name.  
 
 ## Defining the MPAA Ratings
 
@@ -33,7 +33,7 @@ Now in our `<form>` in _Index.cshtml_ we can add a checkbox for each of these po
 
 ```html
 <form>
-    @foreach  (string rating in MovieDatabase.MPAARating) 
+    @foreach  (string rating in MovieDatabase.MPAARatings) 
     {
         <label>
             <input type="checkbox" name="MPAARatings" value="@rating"/>
@@ -73,10 +73,10 @@ And we can refactor the line we just added to `OnGet()` to use this new property
     MPAARatings = Request.Query["MPAARatings"];
 ```
 
-Then, in our _Index.cshtml.cs_ Razor Page, we can refactor the checkbox to be checked if we filtered against this rating in our last request:
+Then, in our _Index.cshtml_ Razor Page, we can refactor the checkbox to be checked if we filtered against this rating in our last request:
 
 ```html
-    <input type="checkbox" name="MPAARating" value="@rating" checked="@Model.MPAARatings.Contains(rating)"/>
+    <input type="checkbox" name="MPAARatings" value="@rating" checked="@Model.MPAARatings.Contains(rating)"/>
 ```
 
 Now our filters stick around when we submit the search request.  That just leaves making the filters actually _work_.

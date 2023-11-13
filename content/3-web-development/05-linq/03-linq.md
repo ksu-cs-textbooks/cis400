@@ -47,7 +47,7 @@ foreach(var student in students) {
 }
 var strugglingStudentsAtoN = new List<Student>();
 foreach(var student in strugglingStudents) {
-    if(student.Last.CharAt(0) >= 'A' && student.Last.CharAt(0) < 'N') strugglingStudentsAtoN.Add(student)
+    if(student.Last.CharAt(0) >= 'A' && student.Last.CharAt(0) < 'N') strugglingStudentsAtoN.Add(student);
 }
 ```
 

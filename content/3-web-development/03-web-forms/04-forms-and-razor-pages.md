@@ -108,5 +108,5 @@ public class Muppet : PageModel {
 ```
 
 {{% notice info %}}
-You might be wondering why ModelBinding does not work with GET requests by default.  In the previous section, we discussed when to use GET or POST requests to submit form data - we use GET requests for smaller data we don't mind displaying the URL, like search terms or filter values.  We use POST requests for large data, especially data we will use to populate an object.  So when using Model Binding, using the POST method is most appropriate.  Microsoft choose to reinforce this practice through the choice to not bind GET requests by default.
+You might be wondering why ModelBinding does not work with GET requests by default.  In the previous section, we discussed when to use GET or POST requests to submit form data - we use GET requests for smaller data we don't mind displaying the URL, like search terms or filter values.  We use POST requests for large data, especially data we will use to populate an object.  So when using Model Binding, using the POST method is most appropriate.  Microsoft chose to reinforce this practice through the choice to not bind GET requests by default.
 {{% /notice %}}
