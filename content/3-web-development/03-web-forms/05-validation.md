@@ -11,7 +11,7 @@ Validation refers to the process of making sure the submitted data matches our e
 <input type="number" min="0" name="Age" required>
 ```
 
-If a user attempts to submit a form containing this input is submitted, and the value is less than 0, the browser will display an error message instead of submitting.  In addition, the psuedo-css class `:invalid` will be applied to the element.
+If a user attempts to submit a form containing this input, and the value is less than 0, the browser will display an error message instead of submitting.  In addition, the psuedo-css class `:invalid` will be applied to the element.
 
 We can also mark inputs as required using the `required` attribute.  The browser will refuse to submit the form until all required inputs are completed. Inputs with a `required` attribute also receive the `:required` pseudo-class, allowing you to assign specific styles to them.
 
