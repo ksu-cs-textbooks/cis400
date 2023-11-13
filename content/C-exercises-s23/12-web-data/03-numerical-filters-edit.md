@@ -97,7 +97,7 @@ form#movie-database {
 }
 ```
 
-The right column will be three times as big as the right.
+The right column will be three times as big as the left.
 
 We can make our search bar span both columns with `grid-column-start` and `grid-column-end`:
 
