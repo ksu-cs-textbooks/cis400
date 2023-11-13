@@ -115,7 +115,7 @@ Otherwise, we'll use the same process we did before.  Start with an empty list o
     List<Movie> results = new List<Movie>();
     foreach(Movie movie in movies)
     {
-        if(movie.MPAARating != null && ratings.Contains(movie.MPAARating))
+        if(movie.MPAARatings != null && ratings.Contains(movie.MPAARatings))
         {
             results.Add(movie);
         }
