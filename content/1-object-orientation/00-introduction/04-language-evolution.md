@@ -5,7 +5,7 @@ weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
 
-One of the strategies that computer scientists employed to counter the software crisis was the development of new programing languages.  These new languages would often 1) adopt new techniques intended to make errors harder to make while programming, and 2) remove problematic features that had existed in earlier languages.  
+One of the strategies that computer scientists employed to counter the software crisis was the development of new programming languages.  These new languages would often 1) adopt new techniques intended to make errors harder to make while programming, and 2) remove problematic features that had existed in earlier languages.  
 
 ## A Fortran Example
 Let's take a look at a working (and in current use) program built using Fortran, one of the most popular programming languages at the onset of the software crisis.  This software is the Environmental Policy Integrated Climate (EPIC) Model, created by researchers at Texas A&M:
@@ -71,6 +71,6 @@ def main():
 
 main()
 ```
-You probably see elements of your favorite higher-order programming language in both of these descriptions.  That's not surprising as modern languages often draw from multiple programming paradigms (after all, both the above examples were written in Python). This, too, is part of language evolution - language developers borrow good ideas as the find them.
+You probably see elements of your favorite higher-order programming language in both of these descriptions.  That's not surprising as modern languages often draw from multiple programming paradigms (after all, both the above examples were written in Python). This, too, is part of language evolution - language developers borrow good ideas as they find them.
 
 But as languages continued to evolve and language creators sought ways to make programming easier, more reliable, and more secure to address the software crisis, new ideas emerged that were large enough to be considered new paradigms. Two of the most impactful of these new paradigms these are _structured programming_ and _object orientation_.  We'll talk about each next.

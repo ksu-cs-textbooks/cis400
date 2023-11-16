@@ -29,12 +29,12 @@ And in our _wwwroot/css/site.css_, let's create an `@media` rule for printing:
 }
 ```
 
-Any CSS enclosed in the curly braces following `@media print` will _only_ be applied when the page is printed.  In that case, we set any element wit the class `advertisement` to not display.  Try running the program, and in the browser, select _print preview_.
+Any CSS enclosed in the curly braces following `@media print` will _only_ be applied when the page is printed.  In that case, we set any element with the class `advertisement` to not display.  Try running the program, and in the browser, select _print preview_.
 
 ![The printed webpage](/images/3.3.2.1.png)
 
 The advertisement does not appear!  But it still shows up in the browser.  
 
-This simple technique can be used to easily create printer-friendly versions of your webpage by changing colors to gray tones, replacing fonts, and removing elements that will require a lot of in to print.  
+This simple technique can be used to easily create printer-friendly versions of your webpage by changing colors to gray tones, replacing fonts, and removing elements that will require a lot of ink to print.  
 
 But the media @ rule is also the basis for an even more powerful mechanism, _media queries_, which we'll look at next.

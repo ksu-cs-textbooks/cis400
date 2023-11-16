@@ -37,7 +37,7 @@ First, set Visual Studio to use Chrome as the browser it launches your website w
 
 ![Setting Chrome as the build target](/images/3.3.3.1.png)
 
-Now run your program. When Chrome loads, turn on developer tools by either pressing `CTRL` + `SHIFT` + `I` or right-clicking on the page and selecting 'Inspect'.  This launches the developer tools in thier own pane in the window.  At the top of the developer pane is an icon that resembles a cellphone in front of a screen.  
+Now run your program. When Chrome loads, turn on developer tools by either pressing `CTRL` + `SHIFT` + `I` or right-clicking on the page and selecting 'Inspect'.  This launches the developer tools in their own pane in the window.  At the top of the developer pane is an icon that resembles a cellphone in front of a screen.  
 
 ![The Device Toolbar toggle button](/images/3.3.3.2.png)
 

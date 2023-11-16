@@ -62,7 +62,7 @@ Notice the use of the ASP.NET-specific `<environment>` element?  This conditiona
 
 The issue is that the _site.min.css_ file is not currently being updated when we build our project - instead we're still using the example file that came with the project template.  We'll need to install and configure a NuGet package within the Movie project to enable this extra building step.  You can read more about bundling and minification within ASP.NET Core [here](https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification).
 
-Start by selecting `Tools > NuGet Package Manager > Mange Nuget Packages for Solution...` from the `Tools` menu:
+Start by selecting `Tools > NuGet Package Manager > Manage Nuget Packages for Solution...` from the `Tools` menu:
 
 ![Launching the NuGet Package Manager](/images/c.13.2.9.png)
 
