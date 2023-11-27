@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 ## IP Addresses
 
-As we discussed previously, when we visit web pages in our browser, the browser makes a HTTP or HTTPS request against the web server for the resource.  For this request to be sent to the right server, we must first the server's _address_.  This address takes the form of an Internet Protocol (IP) address.  There are currently two ways these IP addresses are specified, IPv4 and IPv6.  An IPv4 address consists of 32 bits split into 8 bit chunks, and typically expressed as four integers between 0 and 255 separated by periods.  For example, the IP address for Kansas State University is:
+As we discussed previously, when we visit web pages in our browser, the browser makes a HTTP or HTTPS request against the web server for the resource.  For this request to be sent to the right server, we must first get the server's _address_.  This address takes the form of an Internet Protocol (IP) address.  There are currently two ways these IP addresses are specified, IPv4 and IPv6.  An IPv4 address consists of 32 bits split into 8 bit chunks, and is typically expressed as four integers between 0 and 255 separated by periods.  For example, the IP address for Kansas State University is:
 
 $$
 129.130.200.56
@@ -25,7 +25,7 @@ IPv6 adoption requires changes to the internet infrastructure as well as all con
 
 ## Ports
 
-In addition to the address, requests are sent to a _port_, a specific communication endpoint for the computer.  Different applications "listen" at specific ports on your computer - this allows your computer to have multiple applications communicating across the network or interent at the same time.  You might think of your computer as an apartment complex; the IP address is its street address, and the ports are individual aparement numbers.  Different applications then live in different apartments.  Many of these ports are unused (the apartments are vacant), as most computers are only running a few network-facing applications at any given time.
+In addition to the address, requests are sent to a _port_, a specific communication endpoint for the computer.  Different applications "listen" at specific ports on your computer - this allows your computer to have multiple applications communicating across the network or interent at the same time.  You might think of your computer as an apartment complex; the IP address is its street address, and the ports are individual apartment numbers.  Different applications then live in different apartments.  Many of these ports are unused (the apartments are vacant), as most computers are only running a few network-facing applications at any given time.
 
 Many applications and communication services have a "default" port they are expected to use.  This makes it easy to connect to a remote computer.  For example, a webserver uses port 80 by default for HTTP requests, and port 433 for HTTPS requests.  If your server is listening at these ports, there is no need to specify the port number in HTTP/HTTPS requests targeting your IP address.  You can also run a program on a non-standard port.  For example, with our Razor Page applications, we have typically been running our debug version on port $44344$ (with IIS Express) or $5001$ (when running as a console application).  If you know the IP address of your computer, you can visit your running debug server by using the address **http://[ip address]:[port]** from another computer on your network. 
 
