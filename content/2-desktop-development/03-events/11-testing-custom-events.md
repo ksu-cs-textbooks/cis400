@@ -85,7 +85,7 @@ public static class MyAssert {
 }
 ```
 
-We use the generic type `T` to allow our assertion to be used with any kind of collection - and the second parameter `item` is _also_ this type.  That is the object of we are trying to add to the `collection`.  Finally, the `Action` is the code the test will execute that would, in theory, add `item` to `collection`.  Let's flesh out the method body now:
+We use the generic type `T` to allow our assertion to be used with any kind of collection - and the second parameter `item` is _also_ this type.  That is the object we are trying to add to the `collection`.  Finally, the `Action` is the code the test will execute that would, in theory, add `item` to `collection`.  Let's flesh out the method body now:
 
 ```csharp
 public static class MyAssert
