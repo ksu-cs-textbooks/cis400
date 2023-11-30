@@ -156,12 +156,12 @@ public static class MyAssert
 }
 ```
 
-Now we can test this in our code.  For example, if we had a collection of `ShoppingList` objects named `shoppingLists` that implemented `INotifyCollectionChanged`, we could test adding a new Shopping list it with:
+Now we can test this in our code.  For example, if we had a collection of `ShoppingList` objects named `shoppingLists` that implemented `INotifyCollectionChanged`, we could test adding a new shopping list, `shoppingList`, to it with:
 
 ```csharp
 var newList = new ShoppingList();
 MyAssert.NotifyCollectionChangedAdd(shoppingLists, newList, () => {
-  shoppingLists.Add(shoppingList);
+  shoppingLists.Add(newList);
 });
 ```
 
