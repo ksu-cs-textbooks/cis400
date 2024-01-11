@@ -71,19 +71,19 @@ At that point you should be able to use `git push` or `git pull` and have it go 
 Suppose you followed the steps above to start a milestone on your home computer (including pushing the latest changes for your milestone branch) and wanted to continue working on a lab computer.
 
 ### First time working with the repository
-If this was your FIRST time working on this repository on the new computer, you would need to clone the repository to the new local machine. You can do this with Visual Studio's _File->Clone Repository_ or from the terminal with `git clone [repoURL]`. In this case, ALL branches of your remote repository would be cloned to the new local machine.
+If this was your FIRST time working on this repository on the new computer, you would need to clone the repository to the new local machine. You can do this with Visual Studio's _File->Clone Repository_ or from the terminal with `git clone [repoURL]`.
 
 ### First time working with current branch
-If you have worked with this repository before on the current local computer but have not worked with the new milestone branch, you must first create the new branch:
+If you have already cloned this repository to your current local computer but have not yet created a branch on this computer for the current milestone, you can use the `git checkout` option to both create a a new local branch with the same name as a remote branch and switch to that new branch:
 
 ```
-$ git branch ms0
+$ git checkout -b ms0 origin/ms0
 ```
 
-Replacing `ms0` with the current milestone branch. If the branch had already been created, you will see an error message (but nothing will happen).
+Replacing `ms0` with the current milestone branch.
 
-### In all cases
-Next, checkout the current milestone branch:
+### Subsequent times working with a branch
+If you have previously worked with the current milestone branch on your local computer, you need to first checkout that branch:
 
 ```
 $ git checkout ms0
@@ -95,7 +95,7 @@ Again, replacing `ms0` with the current milestone branch. Then, pull the latest 
 $ git pull origin ms0
 ```
 
-It will pull from the remote `ms0` branch into the local `ms0` branch.
+It will fetch updates from the remote `ms0` branch and merge them into the local `ms0` branch.
 
 ## Merging your feature branch into main
 
