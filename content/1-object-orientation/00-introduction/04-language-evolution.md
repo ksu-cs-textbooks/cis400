@@ -15,7 +15,7 @@ Environmental Policy Integrated Climate (EPIC) model is a cropping systems model
 <a href="https://epicapex.tamu.edu/epic/">EPIC Homepage</a>
 </blockquote>
 
-You can download the [raw source code](https://my.syncplicity.com/share/qkybbapeauicx0l/epic1102_code%20032819) and the [accompanying documentation](https://agrilifecdn.tamu.edu/epicapex/files/2015/05/EpicModelDocumentation.pdf).  Open and unzip the source code, and open a file at random using your favorite code editor.  See if you can determine what it does, and how it fits into the overall application.  
+You can download the raw source code [here](https://epicapex.tamu.edu/software/) (click "EPIC v.1102" under "Source Code"). Open and unzip the source code, and open a file at random using your favorite code editor.  See if you can determine what it does, and how it fits into the overall application.  
 
 Try this with a few other files.  What do you think of the organization?  Would you be comfortable adding a new feature to this program?
 
