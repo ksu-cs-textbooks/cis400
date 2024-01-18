@@ -68,7 +68,7 @@ Notice the three statements `int i = 0;`, `i < array.Length`, and `i++;`?  These
 We also can apply this pattern recognition on similar, but unfamiliar formulations.  Consider this code:
 
 ```C#
-for(int i = array.Length; i > 1; i--) {
+for(int i = array.Length-1; i >= 1; i--) {
     array[i] += array[i-1];
 }
 ```

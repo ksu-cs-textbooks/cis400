@@ -74,7 +74,7 @@ Suppose you followed the steps above to start a milestone on your home computer 
 If this was your FIRST time working on this repository on the new computer, you would need to clone the repository to the new local machine. You can do this with Visual Studio's _File->Clone Repository_ or from the terminal with `git clone [repoURL]`.
 
 ### First time working with current branch
-If you have already cloned this repository to your current local computer but have not yet created a branch on this computer for the current milestone, you can use the `git checkout` option to both create a a new local branch with the same name as a remote branch and switch to that new branch:
+If you have already cloned this repository to your current local computer but have not yet created a branch on this computer for the current milestone, you can use the `git checkout` option to both create a new local branch with the same name as a remote branch and switch to that new branch:
 
 ```
 $ git checkout -b ms0 origin/ms0
