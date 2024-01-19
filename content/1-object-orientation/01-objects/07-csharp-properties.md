@@ -156,7 +156,7 @@ This syntax works well if your property bodies are a single expression.  However
 
 ## Different Access Levels
 
-It is possible to declare your property as `public` and give a different access level to one of the accessors, i.e. if we wanted to add a GPA property ot our student:
+It is possible to declare your property as `public` and give a different access level to one of the accessors, i.e. if we wanted to add a GPA property to our student:
 
 ```csharp
 public double GPA { get; private set; } = 4.0;
