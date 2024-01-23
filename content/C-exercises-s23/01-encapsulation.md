@@ -24,7 +24,7 @@ $$\vec{a}+\vec{b}= \langle a_x + b_x, a_y + b_y, a_z + b_z \rangle \tag{Vector A
 $$\vec{a}-\vec{b}= \langle a_x - b_x, a_y - b_y, a_z - b_z \rangle \tag{Vector Subtraction}$$
 $$\vec{a} \cdot s= \langle a_x \cdot s, a_y \cdot s, a_z \cdot s \rangle \tag{Vector Scaling}$$
 $$\vec{a} \cdot \vec{b} = \langle a_x b_x + a_y b_y + a_z b_z \rangle \tag{Vector Dot Product}$$
-$$\vec{a} \times \vec{b} s= \langle 
+$$\vec{a} \times \vec{b} = \langle 
 a_y b_z - a_z b_y, 
 a_z b_x - a_x b_z,
 a_x b_y - a_y b_x \rangle \tag{Vector Cross Product}$$
