@@ -39,13 +39,18 @@ public class Student {
       }
     }
 
+    /// <summary>The student's nickname</summary>
+    public string Nickname { get; set; }
+
     /// <summary>Constructs a new student object</summary>
     /// <param name="first">The new student's first name</param>
     /// <param name="last">The new student's last name</param>
+    /// <param name="nick">The new student's nickname</param>
     /// <param wid="wid">The new student's Wildcat ID number</param>
-    public Student(string first, string last, uint wid) {
+    public Student(string first, string last, string nick, uint wid) {
         _first = first;
         _last = last;
+        Nick = nick;
         _wid = wid;
     }
 }
@@ -56,7 +61,7 @@ If you compare this example to the previous one, you will note that the code con
 While properties _are_ methods, the syntax for working with them in code is identical to that of fields, i.e. if we were to create and then print a `Student`'s identifying information, we'd do something like: 
 
 ```csharp
-Student willie = new Student("Willie", "Wildcat", 99999999);
+Student willie = new Student("Willie", "Wildcat", "WillieCat", 99999999);
 Console.Write("Hello, ")
 Console.WriteLine(willie.FullName);
 Console.Write("Your WID is:");
@@ -73,17 +78,19 @@ While C# properties are used like fields, i.e. `Console.WriteLine(willie.Wid)` o
 
 The `Nickname` property in the example above is special syntax for an _implicit_ backing field - the C# compiler creates the necessary space to hold the value.  But we can _only_ access the value stored through that property.  If you need direct access to it, you _must_ create a backing variable.
 
-However, we don't always need a backing variable for a Property getter if the value of a property can be calculated from the current state of the class, i.e., we could add a property `FullName` to our `Student` class:
+However, we don't always need a backing variable for a Property getter if the value of a property can be calculated from the current state of the class, e.g., consider our `FullName` property in our `Student` class:
 
 ```csharp 
-public string FullName {
-    get {
-        return first + " " + last;
+public string FullName 
+    {
+        get 
+        {
+            return $"{First} {Last}"
+        }
     }
-}
 ```
 
-Here we're effectively generating the value of the `FullName` property from the `first` and `last` backing variables every time the `FullName` property is requested.  This does cause a bit more computation, but we also know that it will always reflect the current state of the first and last names.
+Here we're effectively generating the value of the `FullName` property from the `First` and `Last` properties every time the `FullName` property is requested.  This does cause a bit more computation, but we also know that it will always reflect the current state of the first and last names.
 {{% /notice %}}
 
 ## Auto-Property Syntax
@@ -116,12 +123,12 @@ Which seems like a lot more work for the same effect. To counter this perception
 public double X {get; set;} = 0;
 ```
 
-Note the addition of the `{get, set}` - this is what tells the compiler we want a property and not a field.  When compiled, this code is transformed into a full getter and setter whose bodies match the basic `get` and `set` in the example above. The compiler even creates a private backing field (but we cannot access it in our code, because it is only created at compile time).  Any time you don't need to do any additional logic in a get or set, you can use this syntax.  
+Note the addition of the `{get; set;}` - this is what tells the compiler we want a property and not a field.  When compiled, this code is transformed into a full getter and setter whose bodies match the basic `get` and `set` in the example above. The compiler even creates a private backing field (but we cannot access it in our code, because it is only created at compile time).  Any time you don't need to do any additional logic in a get or set, you can use this syntax.  
 
 Note that in the example above, we set a default value of `0`.  You can omit setting a default value.  You can also define a get-only autoproperty that always returns the default value (remember, you cannot access the compiler-generated backing field, so it can never be changed):
 
 ```csharp
-public double Pi {get} = 3.14;
+public double Pi {get;} = 3.14;
 ```
 
 In practice, this is effectively a constant field, so consider carefully if it is more appropriate to use that instead:
