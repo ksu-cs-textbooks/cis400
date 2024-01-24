@@ -27,7 +27,7 @@ public class Student {
     private uint _wid;
     /// <summary>The student's Wildcat ID number</summary>
     public uint Wid {
-        get { return this.wid; }
+        get { return this._wid; }
     }
 
     /// <summary>The student's full name</summary>
@@ -50,7 +50,7 @@ public class Student {
     public Student(string first, string last, string nick, uint wid) {
         _first = first;
         _last = last;
-        Nick = nick;
+        Nickname = nick;
         _wid = wid;
     }
 }
