@@ -17,7 +17,7 @@ The term "Object Orientation" was coined by Alan Kay while he was a graduate stu
 
 Let's break down each of these ideas, and see how they helped address some of the problems we've identified in this chapter.
 
-__Encapsulation__ refers to breaking programs into smaller units that are easier to read and reason about. In an object-oriented language these units are _classes and objects_, and the data contained in this units is protected from being changed by code outside the unit through _information hiding_.
+__Encapsulation__ refers to breaking programs into smaller units that are easier to read and reason about. In an object-oriented language these units are _classes and objects_, and the data contained in these units is protected from being changed by code outside the unit through _information hiding_.
 
 __Message Passing__ allows us to send well-defined messages between objects. This gives us a well-defined and _controlled_ method for accessing and potentially changing the data contained in an encapsulated unit. In an object oriented language, calling a method on an object is a form of message passing, as are events.
 
