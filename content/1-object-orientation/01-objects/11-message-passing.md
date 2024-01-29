@@ -9,7 +9,7 @@ The second criteria Alan Kay set for object-oriented languages was [message pass
 
 Consider the real-world analogue of a letter sent via the postal service.  Such a message consists of: an address the message needs to be sent to, a return address, the message itself (the letter), and any data that needs to accompany the letter (the enclosures).  A specific letter might be a wedding invitation.  The message includes the details of the wedding (the host, the location, the time), an enclosure might be a refrigerator magnet with these details duplicated.  The recipient should (per custom) send a response to the host addressed to the return address letting them know if they will be attending.
 
-In an object-oriented language, message passing primarily take the form of methods. Let's revisit our example `Vector3` class:
+In an object-oriented language, message passing primarily takes the form of methods. Let's revisit our example `Vector3` class:
 
 ```csharp
 public class Vector3 {
