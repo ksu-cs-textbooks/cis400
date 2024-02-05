@@ -32,4 +32,4 @@ C# Keywords:
 * `sealed` 
 * `as`
 * `is`
-* `dyanamic` 
+* `dynamic` 

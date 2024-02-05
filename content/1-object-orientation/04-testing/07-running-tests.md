@@ -21,7 +21,7 @@ To explore and run your tests, you can open the [Test Explorer](https://docs.mic
 
 ![Run and Run All buttons](/images/1.4.6.2.png)
 
-As tests complete, the will report their status - pass or fail - indicated by a green checkmark or red x next to the test name, as well as the time it took to run the test.  There will also be a summary available with details about any failures that can be accessed by clicking the test name.
+As tests complete, they will report their status - pass or fail - indicated by a green checkmark or red x next to the test name, as well as the time it took to run the test.  There will also be a summary available with details about any failures that can be accessed by clicking the test name.
 
 ![Test Detail Summary](/images/1.4.6.3.png)
 
