@@ -36,4 +36,4 @@ You can uncomment the tests in the `VectorMathUnitTests` class and then run them
 
 ### Submit A Release
 
-[Create a release]({{<ref "/b-git-and-github/11-release">}}) of your project code on GitHub and submit its URL.
+[Create a release]({{<ref "/B-git-and-github/12-release">}}) of your project code on GitHub and submit its URL.
