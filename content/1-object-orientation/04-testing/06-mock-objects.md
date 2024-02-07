@@ -44,7 +44,7 @@ public void ShouldDisplayGreetingOnStartup()
 
 Given our knowledge of C#, the only way `md.LastTextDisplayed` would be the string specified was if the `ATM` class asked it to display the message when it was constructed. Thus, we know it will do the same with the real `DisplayScreen` class.  And if we have also thoroughly unit tested the `DisplayScreen` class, then we have a strong basis for believing our system is built correctly.
 
-This approach also allows us to test things that would normally be very difficult to - for example, we can write a method to have a `MockCardReader` trigger a `CardInserted` event:
+This approach also allows us to test things that would normally be very difficult to do - for example, we can write a method to have a `MockCardReader` trigger a `CardInserted` event:
 
 ```csharp
 internal class MockCardReader : ICardReader 

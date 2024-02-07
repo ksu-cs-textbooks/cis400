@@ -5,7 +5,7 @@ weight: 4
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Writing tests is in many ways just as challenging and creative an endeavor as writing programs.  Tests usually consist of invoking some portion of program code, and then using _assertions_ to determine that the actual results match the expected results.  The result of these assertions are typically reported on a per-test basis, which makes it easy to see where your program is not behaving as expected.  
+Writing tests is in many ways just as challenging and creative an endeavor as writing programs.  Tests usually consist of invoking some portion of program code, and then using _assertions_ to determine that the actual results match the expected results.  The results of these assertions are typically reported on a per-test basis, which makes it easy to see where your program is not behaving as expected.  
 
 Consider a class that is a software control system for a kitchen stove.  It might have properties for four burners, which correspond to what heat output they are currently set to.  Let's assume this is as an integer between 0 (off) and 5 (high).  When we first construct this class, we'd probably expect them all to be off!  A test to verify that expectation would be:
 
