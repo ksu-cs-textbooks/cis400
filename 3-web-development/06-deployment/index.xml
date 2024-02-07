@@ -975,6 +975,156 @@
 	
 		
 		
+		
+
+	
+	
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
+		
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -999,7 +1149,7 @@ Setting up your web applications to deploy to a virtual machine </description>
       <link>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/02-web-addresses/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/02-web-addresses/index.html</guid>
-      <description>IP Addresses As we discussed previously, when we visit web pages in our browser, the browser makes a HTTP or HTTPS request against the web server for the resource. For this request to be sent to the right server, we must first the server&amp;rsquo;s address. This address takes the form of an Internet Protocol (IP) address. There are currently two ways these IP addresses are specified, IPv4 and IPv6. An IPv4 address consists of 32 bits split into 8 bit chunks, and typically expressed as four integers between 0 and 255 separated by periods.</description>
+      <description>IP Addresses As we discussed previously, when we visit web pages in our browser, the browser makes a HTTP or HTTPS request against the web server for the resource. For this request to be sent to the right server, we must first get the server&amp;rsquo;s address. This address takes the form of an Internet Protocol (IP) address. There are currently two ways these IP addresses are specified, IPv4 and IPv6. An IPv4 address consists of 32 bits split into 8 bit chunks, and is typically expressed as four integers between 0 and 255 separated by periods.</description>
     </item>
     <item>
       <title>Secure HTTP</title>
@@ -1014,7 +1164,7 @@ Setting up your web applications to deploy to a virtual machine </description>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/04-web-hosting/index.html</guid>
       <description>To host your website, you will need:
-A computer connected to the Internet A web server program listening at port 80 and/or 433 (depending on if you are using secure communications) If you are using secure communications, a security certificate issued by a valid authority. Let&amp;rsquo;s Encrypt offers free certificates, and is a good source for startign web developers A domain name (while this is technically optional, if you expect users to visit your website you&amp;rsquo;ll probably need one) While you have been running your website in debug mode on your develpment computer, you probably won&amp;rsquo;t use it to host your actual website on the Internet.</description>
+A computer connected to the Internet A web server program listening at port 80 and/or 433 (depending on if you are using secure communications) If you are using secure communications, a security certificate issued by a valid authority. Let&amp;rsquo;s Encrypt offers free certificates, and is a good source for startign web developers A domain name (while this is technically optional, if you expect users to visit your website you&amp;rsquo;ll probably need one) While you have been running your website in debug mode on your development computer, you probably won&amp;rsquo;t use it to host your actual website on the Internet.</description>
     </item>
     <item>
       <title>Virtual Machines</title>
