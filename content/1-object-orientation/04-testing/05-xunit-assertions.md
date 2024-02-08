@@ -30,7 +30,7 @@ There are special assertions to deal with null references:
 * `Assert.Null(object object)` asserts the supplied `object` is null, and 
 * `Assert.NotNull(object object)` asserts the supplied `object` is _not_ null
 
-In addition, two objects may be considered equal, but may or may not the same object (i.e. not referencing the same memory).  This can be asserted with:
+In addition, two objects may be considered equal, but may or may not be the same object (i.e. not referencing the same memory).  This can be asserted with:
 * `Assert.Same(object expected, object actual)` asserts the `expected` and `actual` object references are to the same object, while
 * `Assert.NotSame(object expected, object actual)` asserts the `expected` and `actual` object references are _not_ the same object
 
