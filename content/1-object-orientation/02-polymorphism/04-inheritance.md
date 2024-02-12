@@ -226,7 +226,7 @@ public abstract class Student {
 }
 ```
 
-Now with `Student` as an abstract class, attempting to create a `Student` instance i.e. `Student mark = new Student("Mark", "Guy")` would fail with an exception.  However, we can still create instances of the derived classes `GraduateStudent` and `UndergraduateStudent`, and treat them as `Student` instances.  It is best practice to make any class that serves only as a base class for derived classes and will never be created directly abstract.
+Now with `Student` as an abstract class, attempting to create a `Student` instance i.e. `Student mark = new Student("Mark", "Guy")` would fail with an exception.  However, we can still create instances of the derived classes `GraduateStudent` and `UndergraduateStudent`, and treat them as `Student` instances. It is best practice to make a class abstract if it serves only as a base class for derived classes and will never be created directly.
 
 ## Sealed Classes
 Conversely, C# also offers the `sealed` keyword, which can be used to indicate that a class should *not* be inheritable.  For example:
