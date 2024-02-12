@@ -1190,8 +1190,8 @@ int RoundedSum(int[] a) { int sum = 0; foreach(int i in a) { sum += i; } return 
       <link>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/02-polymorphism/07-csharp-collections/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/02-polymorphism/07-csharp-collections/index.html</guid>
-      <description>Collections in C# are a great example of polymorphism in action. Many collections utilize https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/06-advanced-csharp/05-generics/ to allow the collection to hold an arbitrary type. For example, the List&amp;lt;T&amp;gt; can be used to hold strings, integers, or even specific objects:
-List&amp;lt;string&amp;gt; strings = new List&amp;lt;string&amp;gt;(); List&amp;lt;int&amp;gt; ints = new List&amp;lt;int&amp;gt;(); List&amp;lt;Person&amp;gt; persons = new List&amp;lt;Person&amp;gt;();We can also use an interface as the type, as we did with the IJumpable interface as we discussed in the https://ksu-cs-textbooks.</description>
+      <description>Collections in C# are a great example of polymorphism in action. Many collections utilize generics to allow the collection to hold an arbitrary type. For example, the List&amp;lt;T&amp;gt; can be used to hold strings, integers, or even specific objects:
+List&amp;lt;string&amp;gt; strings = new List&amp;lt;string&amp;gt;(); List&amp;lt;int&amp;gt; ints = new List&amp;lt;int&amp;gt;(); List&amp;lt;Person&amp;gt; persons = new List&amp;lt;Person&amp;gt;();We can also use an interface as the type, as we did with the IJumpable interface as we discussed in the generics section , i.</description>
     </item>
     <item>
       <title>Summary</title>
