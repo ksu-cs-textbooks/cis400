@@ -81,7 +81,7 @@ public class Strawberry : Fruit
 Let's add fruit instances to a list, and invoke their `Blend()` methods:
 
 ```csharp
-List<Fruit> toBlend = List<Fruit>();
+List<Fruit> toBlend = new List<Fruit>();
 toBlend.Add(new Banana());
 toBlend.Add(new Strawberry());
 

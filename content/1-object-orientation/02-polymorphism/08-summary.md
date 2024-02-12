@@ -8,6 +8,6 @@ In this chapter, we explored the concept of types and discussed how variables ar
 
 We explored how class declarations and interface declarations create new types.  We saw how polymorphic mechanisms like interface implementation and inheritance allow object to be treated as (and cast to) different types.  We also introduced the `as` and `is` casting operators, which can be used to cast or test the ability to cast, respectively.  We saw that if the `as` cast operator fails, it evaluates to null instead of throwing an exception.  We also saw the `is` type pattern expression, which simplifies a casting test and casting operation into a single expression.
 
-Finally, we looked at how C# collections leverage the use of interfaces, inheritance, and generic types to quickly and easily make custom collection objects that interact with the C# language in well-defined ways.
+Next, we looked at how C# collections leverage the use of interfaces, inheritance, and generic types to quickly and easily make custom collection objects that interact with the C# language in well-defined ways.
 
 Finally, we explored how messages are dispatched when polymorphism is involved. We saw that the method invoked depends on what Type we are currently treating the object as.  We saw how the C# modifiers `protected`, `abstract`, `virtual`, `override`, and `sealed` interacted with this message dispatch processes.  We also saw how the `dynamic` type could delay determining an object's type until runtime.

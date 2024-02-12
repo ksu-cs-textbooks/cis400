@@ -5,7 +5,7 @@ weight: 7
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Collections in C# are a great example of polymorphism in action.  Many collections utilize {{<ref "/1-object-orientation/06-advanced-csharp/05-generics">}} to allow the collection to hold an arbitrary type.  For example, the `List<T>` can be used to hold strings, integers, or even specific objects:
+Collections in C# are a great example of polymorphism in action.  Many collections utilize [generics]("/1-object-orientation/06-advanced-csharp/05-generics") to allow the collection to hold an arbitrary type.  For example, the `List<T>` can be used to hold strings, integers, or even specific objects:
 
 ```csharp
 List<string> strings = new List<string>();
@@ -13,7 +13,7 @@ List<int> ints = new List<int>();
 List<Person> persons = new List<Person>();
 ```
 
-We can also use an interface as the type, as we did with the `IJumpable` interface as we discussed in the {{<ref "/1-object-orientation/06-advanced-csharp/05-generics">}}, i.e.:
+We can also use an interface as the type, as we did with the `IJumpable` interface as we discussed in the [generics section]("/1-object-orientation/06-advanced-csharp/05-generics"), i.e.:
 
 ```csharp
 List<IJumpable> jumpables = new List<IJumpable>();
