@@ -13,7 +13,7 @@ Unit testing most of these classes would be straightforward, but how do we unit 
 
 We start by replacing each of the dependencies with an interface using the same method signatures, and we pass the dependencies through the ATM constructor.  We make sure our existing classes implement the interface, and pass them into the ATM when we create it.  Thus, this step doesn't change much about how our program operates - we're still using the same classes to do the same things.
 
-But in our unit tests for the `ATM` class, we can create new classes that implement the interfaces and pass them into the ATM instance we are testing.  These are our _mock_ classes, because they "fill in" for the real classes.  Typically, a mock class is much simpler than a real class, and exposes information we might need in our test.  For example, our Display class might include a `DisplayText` method, so have it implement an `IDisplay` interface that listed `DisplayText`. Then our `MockDisplay` class might look like:
+But in our unit tests for the `ATM` class, we can create new classes that implement the interfaces and pass them into the ATM instance we are testing.  These are our _mock_ classes, because they "fill in" for the real classes.  Typically, a mock class is much simpler than a real class, and exposes information we might need in our test.  For example, our Display class might include a `DisplayText` method, so have it implement an `IDisplay` interface that lists `DisplayText`. Then our `MockDisplay` class might look like:
 
 ```csharp
 internal class MockDisplay :IDisplay
