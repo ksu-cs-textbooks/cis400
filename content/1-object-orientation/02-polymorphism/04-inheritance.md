@@ -53,20 +53,20 @@ public class Student {
   /// <param name="creditHours">The number of credit hours in the course </param>
   /// <param name="finalGrade">The final grade earned in the course</param>
   ///
-  public AddCourseGrade(uint creditHours, Grade finalGrade) {
+  public void AddCourseGrade(uint creditHours, Grade finalGrade) {
     this.hours += creditHours;
     switch(finalGrade) {
       case Grade.A:
-        this.credits += 4 * creditHours;
+        this.points += 4 * creditHours;
         break;
       case Grade.B:
-        this.credits += 3 * creditHours;
+        this.points += 3 * creditHours;
         break;
       case Grade.C:
-        this.credits += 2 * creditHours;
+        this.points += 2 * creditHours;
         break;
       case Grade.D:
-        this.credits += 1 * creditHours;
+        this.points += 1 * creditHours;
         break;
     }
   }
@@ -206,20 +206,20 @@ public abstract class Student {
   /// <param name="creditHours">The number of credit hours in the course </param>
   /// <param name="finalGrade">The final grade earned in the course</param>
   ///
-  public AddCourseGrade(uint creditHours, Grade finalGrade) {
+  public void AddCourseGrade(uint creditHours, Grade finalGrade) {
     this.hours += creditHours;
     switch(finalGrade) {
       case Grade.A:
-        this.credits += 4 * creditHours;
+        this.points += 4 * creditHours;
         break;
       case Grade.B:
-        this.credits += 3 * creditHours;
+        this.points += 3 * creditHours;
         break;
       case Grade.C:
-        this.credits += 2 * creditHours;
+        this.points += 2 * creditHours;
         break;
       case Grade.D:
-        this.credits += 1 * creditHours;
+        this.points += 1 * creditHours;
         break;
     }
   }
