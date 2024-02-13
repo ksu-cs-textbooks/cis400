@@ -102,7 +102,7 @@ Let's define a `GraduateStudent` class as well.  This will look much like an `Un
 
 ```csharp
 /// <summary>
-/// A class representing an undergraduate student
+/// A class representing a graduate student
 /// </summary>
 public class GraduateStudent : Student {
 
@@ -114,7 +114,7 @@ public class GraduateStudent : Student {
   }
 
   /// <summary>
-  /// Constructs a new instance of UndergraduateStudent
+  /// Constructs a new instance of GraduateStudent
   /// </summary>
   /// <param name="first">The student's first name </param>
   /// <param name="last">The student's last name</param>
