@@ -130,7 +130,7 @@ Here we add a property for `BachelorDegree`.  Since it's setter is marked as `pr
 Thus, the `GraduateStudent` has all the state and behavior encapsulated in `Student`, _plus_ the additional state of the bachelor's degree title.
 
 ## The `protected` Keyword
-What you might not expect is that any fields declared `private` in the base class are inaccessible in the derived class.  Thus, the private fields `points` and `hours` cannot be used in a method defined in `GraduateStudent`.  This is again part of the _encapsulation_ and _data hiding_ ideals - we've encapsulated and hid those variables within the base class, and any code outside that assembly, even in a derived class, is not allowed to mess with it.
+What you might not expect is that any fields declared `private` in the base class are inaccessible in the derived class.  Thus, the private fields `points` and `hours` cannot be used in a method defined in `GraduateStudent`.  This is again part of the _encapsulation_ and _data hiding_ ideals - we've encapsulated and hidden those variables within the base class, and any code outside that assembly, even in a derived class, is not allowed to mess with it.
 
 However, we often will want to allow access to such variables in a derived class.  C# uses the access modifier `protected` to allow for this access in derived classes, but not the wider world.
 

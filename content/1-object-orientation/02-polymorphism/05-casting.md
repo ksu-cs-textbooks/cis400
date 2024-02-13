@@ -159,7 +159,7 @@ The `is` operator is commonly used to determine if a cast will succeed before pe
 if(sam is UndergraduateStudent) 
 {
     Undergraduate samAsUGrad = sam as UndergraduateStudent;
-    // TODO: Do something undergraduat-ey with samAsUGrad
+    // TODO: Do something undergraduate-ey with samAsUGrad
 }
 ```
 

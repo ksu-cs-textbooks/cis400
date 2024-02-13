@@ -52,7 +52,7 @@ Also notice that we show that `Fruit` and its `Blend()` method are abstract by i
 Has-a associations indicates that a class holds one or more references to instances of another class.   In C#, this corresponds to having a variable or collection with the type of the associated class. This is true for both kinds of has-a associations.  The difference between the two is how strong the association is.
 
 ### Aggregation 
-Aggregation refers to collecting references to other classes.   As the aggregating class has references to the other classes, we call this a **has-a** relationship.  It is considered **weak** because the aggregated classes are only collected by the aggregating class, and can exist on their own.  It is indicated in UML by a solid line from the aggregating class to the one it aggregates, with an open diamond "fletching" on the opposite site of the arrow (the arrowhead is optional). 
+Aggregation refers to collecting references to other classes.   As the aggregating class has references to the other classes, we call this a **has-a** relationship.  It is considered **weak** because the aggregated classes are only collected by the aggregating class, and can exist on their own.  It is indicated in UML by a solid line from the aggregating class to the one it aggregates, with an open diamond "fletching" on the opposite side of the arrow (the arrowhead is optional). 
 
 ![Aggregation in UML](/images/5.6.4.png)
 

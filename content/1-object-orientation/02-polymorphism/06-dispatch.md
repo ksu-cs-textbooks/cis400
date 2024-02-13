@@ -104,7 +104,7 @@ A pulpy mess, I guess?
 A pulpy mess, I guess?
 ```
 
-Which is the return values for the `Fruit` base class `Blend()` implementation.  The line `forEach(Fruit item in toBlend)` explicitly tells the interpreter to treat the `item` as a `Fruit` instance, so of the two available methods (the base or super class implementation), the `Fruit` base class one is selected.
+Which is the return value for the `Fruit` base class `Blend()` implementation.  The line `forEach(Fruit item in toBlend)` explicitly tells the interpreter to treat the `item` as a `Fruit` instance, so of the two available methods (the base or super class implementation), the `Fruit` base class one is selected.
 
 C# 4.0 introduced a new keyword, [dynamic](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/using-type-dynamic) to allow variables like `item` to be dynamically typed at runtime.  Hence, changing the loop to this:
 
@@ -119,7 +119,7 @@ Will give us the first set of results we discussed.
 ## Method Overriding
 Of course, part of the issue in the above example is that we actually have _two_ implementations for `Blend()` available to each fruit.  If we wanted all bananas to use the `Banana` class's `Blend()` method, even when the banana was being treated as a `Fruit`, we need to _override_ the base method instead of creating a new one that hides it (in fact, in Visual Studio we should get a warning that our new method hides the base implementation, and be prompted to add the `new` keyword if that was our intent).
 
-To override a base class method, we first must mark it as `abstract` or `virtual`.  The first keyword, `abstract`, indicates that the method _does not have an implementation_ (a body).  The second, `virtual`, indicates that the base class _does_ provide an implementation.  We should use `abstract` when each derived class will define its own implementation, and `virtual` when some derived classes will want to use a common base implementation.  Then, we must mark the method in the derived class with the `override` key word.
+To override a base class method, we first must mark it as `abstract` or `virtual`.  The first keyword, `abstract`, indicates that the method _does not have an implementation_ (a body).  The second, `virtual`, indicates that the base class _does_ provide an implementation.  We should use `abstract` when each derived class will define its own implementation, and `virtual` when some derived classes will want to use a common base implementation.  Then, we must mark the method in the derived class with the `override` keyword.
 
 Considering our `Fruit` class, since we're providing a unique implementation of `Blend()` in each derived class, the `abstract` keyword is more appropriate:
 
