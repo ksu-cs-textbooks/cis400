@@ -82,7 +82,7 @@ We'll need a collection of results that implements the `IEnumerable<T>` interfac
     List<Movie> results = new List<Movie>();
 ```
 
-Now, there is a chance that the search terms we recieve are `null`.  If that's the case, we would either 1) return _all_ the movies, or 2) return _no_ movies.  You can choose either option, but for now, I'll return all movies
+Now, there is a chance that the search terms we receive are `null`.  If that's the case, we would either 1) return _all_ the movies, or 2) return _no_ movies.  You can choose either option, but for now, I'll return all movies
 
 ```csharp 
     // Return all movies if there are no search terms
