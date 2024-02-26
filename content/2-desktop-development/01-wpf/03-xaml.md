@@ -62,7 +62,7 @@ Because XAML is an extension of XML, we can add comments the same way, by enclos
 
 ## XAML Defines Objects
 
-What makes XAML different from vanilla XML is that _it defines objects_.  The XAML used for Windows Presentation Foundation is drawn from the http://schemas.microsoft.com/winfx/2006/xaml/presentation namespace.  This namespace defines exactly what elements exist in this flavor of XAML, and they correspond to specific classes defined in the WPF namespaces.  
+What makes XAML different from vanilla XML is that _it defines objects_.  The XAML used for Windows Presentation Foundation is drawn from the <div style="display:inline">http://schemas.microsoft.com/winfx/2006/xaml/presentation</div> namespace.  This namespace defines exactly what elements exist in this flavor of XAML, and they correspond to specific classes defined in the WPF namespaces.  
 
 For example, the `<Button>` class corresponds to the WPF [Button](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.button?view=netcore-3.1) class. This class has a `Content` property which defines the text or other content displayed on the button.  Additionally, it has a `Width` and `Height` property.  Thus the XAML:
 

@@ -135,7 +135,7 @@ A [Label](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.la
 
 ![A Label Example](/images/2.1.5.4.png)
 
-What distinguishes it from other text controls is that it can also be associated with a specific control specified by the `Target` parameter, whose value should be bound to the name of the control.  It can then provide an access key (aka a mnemonic) that will transfer focus to that control when a the corresponding key is pressed.  The access key is indicated by proceeding the corresponding character in the text with an underscore:
+What distinguishes it from other text controls is that it can also be associated with a specific control specified by the `Target` parameter, whose value should be bound to the name of the control.  It can then provide an access key (aka a mnemonic) that will transfer focus to that control when the corresponding key is pressed.  The access key is indicated by proceeding the corresponding character in the text with an underscore:
 
 ```xml
 <StackPanel>
