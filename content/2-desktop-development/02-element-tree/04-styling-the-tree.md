@@ -37,11 +37,11 @@ Windows Presentation Foundation takes advantage of the elements tree in other wa
         <Button Grid.Column="0" Grid.Row="2">4</Button>
         <Button Grid.Column="1" Grid.Row="2">5</Button>
         <Button Grid.Column="2" Grid.Row="2">6</Button>
-        <Button Grid.Column="0" Grid.Row="3">7</Button>
-        <Button Grid.Column="1" Grid.Row="3">8</Button>
-        <Button Grid.Column="2" Grid.Row="3">8</Button>
+        <Button Grid.Column="0" Grid.Row="3">1</Button>
+        <Button Grid.Column="1" Grid.Row="3">2</Button>
+        <Button Grid.Column="2" Grid.Row="3">3</Button>
         <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3">0</Button>
-        <Button Grid.Column="3" Grid.Row="1">-</Button>
+        <Button Grid.Column="3" Grid.Row="1">+</Button>
         <Button Grid.Column="3" Grid.Row="2">-</Button>
         <Button Grid.Column="3" Grid.Row="3">*</Button>
         <Button Grid.Column="3" Grid.Row="4">/</Button>
@@ -60,7 +60,7 @@ Thankfully, the XAML developers anticipated this kind of situation, and allow us
 </Grid.Resources>
 ```
 
-The `<Style>` element allows us to specify a `TargetType` property, which is the Type we want the style to apply to - in this case `"Button"`.  Inside the `<Style>` element, we declare `<Setter>` elements, which need `Property` and `Value` attribute.  As you might guess from the names, the `<Setter>` will set the specified property to the specified value on each element of the target type.  
+The `<Style>` element allows us to specify a `TargetType` property, which is the Type we want the style to apply to - in this case `"Button"`.  Inside the `<Style>` element, we declare `<Setter>` elements, which need `Property` and `Value` attributes.  As you might guess from the names, the `<Setter>` will set the specified property to the specified value on each element of the target type.  
 
 Therefore, if we use:
 

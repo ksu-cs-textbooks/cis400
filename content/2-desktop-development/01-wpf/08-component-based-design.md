@@ -92,7 +92,7 @@ This time, let's use a `Grid` layout and divide the available space into three c
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Border Name="listContainer" Grid.ColumnSpan="3">
         </Border>

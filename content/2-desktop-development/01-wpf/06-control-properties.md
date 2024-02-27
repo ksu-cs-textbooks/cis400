@@ -251,7 +251,7 @@ Finally, the `"Collapsed"` value will leave the element out of the layout calcul
 
 You may have noticed the previous examples that colors can be accomplished through the `Background` and `Foreground` properties - where the `Background` determines the color of the element, and `Foreground` determines the color of text and other foreground elements.  While this is true, it is also just the beginning of what is possible.  Both of these properties have the type `Brush`, which deserves a deeper look.  
 
-Simply put, a brush determines how to paint graphical objects.  This can be as simple as painting a solid color, or as complex as panting an image.  The effect used is determined by the type of brush - the `Brush` class itself serving as a base class for several specific types brush.
+Simply put, a brush determines how to paint graphical objects.  This can be as simple as painting a solid color, or as complex as painting an image.  The effect used is determined by the type of brush - the `Brush` class itself serving as a base class for several specific types brush.
 
 #### Solid Color Brushes
 
@@ -267,7 +267,7 @@ What we've been using up to this point have been [SolidColorBrush](https://docs.
 
 The simplest way to set the color in XAML is to use a value from the predefined [brush name list](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.brushes?view=windowsdesktop-6.0#remarks), like the `"BlueViolet"` and `"DarkSeaGreen"` in the example.
 
-Alternatively, you can use a hexadecimal number defining the red, green, and blue channels in that order, i.e. to use K-State purple and white (as defined in the [K-State Brand Guide](https://www.k-state.edu/vpcm/branding/KansasStateUniversity-BrandGuide.pdf)) we'd use:
+Alternatively, you can use a hexadecimal number defining the red, green, and blue channels in that order, i.e. to use K-State purple and white we'd use:
 
 ```xml
 <TextBlock Foreground="#FFFFFF" Background="#512888" FontSize="25">
