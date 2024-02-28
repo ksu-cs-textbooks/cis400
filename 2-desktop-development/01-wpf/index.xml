@@ -1201,8 +1201,8 @@ using System; using System.Collections.Generic; using System.Collections.ObjectM
       <link>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/01-wpf/08-component-based-design/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/01-wpf/08-component-based-design/index.html</guid>
-      <description>WPF and XAML lend themselves to a design approach known as Component-Based Design or Component-Based Development, which rather than focusing on developing the entire GUI in one go, focuses on decomposing user experiences (UX) into individual, focused, and potentially reusable components. These can, in turn, be used to build larger components, and eventually, the entire GUI[^Jayati2019].
-Let&amp;rsquo;s dig deeper by focusing on a specific example. Let&amp;rsquo;s say we want to build an application for keeping track of multiple shopping lists.</description>
+      <description>WPF and XAML lend themselves to a design approach known as Component-Based Design or Component-Based Development, which rather than focusing on developing the entire GUI in one go, focuses on decomposing user experiences (UX) into individual, focused, and potentially reusable components. These can, in turn, be used to build larger components, and eventually, the entire GUI (see &amp;ldquo;UX Principles for Designing Component Based Systems for more details).
+Let&amp;rsquo;s dig deeper by focusing on a specific example.</description>
     </item>
     <item>
       <title>Summary</title>
