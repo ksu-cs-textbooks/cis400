@@ -5,7 +5,7 @@ weight: 80
 date: 2018-08-24T10:53:26-05:00
 ---
 
-WPF and XAML lend themselves to a design approach known as Component-Based Design or Component-Based Development, which rather than focusing on developing the entire GUI in one go, focuses on decomposing user experiences (UX) into individual, focused, and potentially reusable components.  These can, in turn, be used to build larger components, and eventually, the entire GUI (see ["UX Principles for Designing Component Based Systems](https://opensenselabs.com/blog/articles/uxprinciples-cbs) for more details).
+WPF and XAML lend themselves to a design approach known as Component-Based Design or Component-Based Development, which rather than focusing on developing the entire GUI in one go, focuses on decomposing user experiences (UX) into individual, focused, and potentially reusable components.  These can, in turn, be used to build larger components, and eventually, the entire GUI (see ["UX Principles for Designing Component Based Systems"](https://opensenselabs.com/blog/articles/uxprinciples-cbs) for more details).
 
 Let's dig deeper by focusing on a specific example.  Let's say we want to build an application for keeping track of multiple shopping lists.  So our core component is a displayed list, plus a mechanism for adding to it. Let's create a `UserComponent` to represent this.
 
