@@ -33,7 +33,7 @@ But ultimately, the two interfaces were developed by different teams at differen
 
 #### NotifyCollectionChangedAction
 
-The only property of the `NotifyCollectionChangedArgs` that will _always_ be populated is the `Action` property.  The type of htis property is the `NotifyCollectionChangedAction` enumeration, and its values (and what they represent) are:
+The only property of the `NotifyCollectionChangedArgs` that will _always_ be populated is the `Action` property.  The type of This property is the `NotifyCollectionChangedAction` enumeration, and its values (and what they represent) are:
 * `NotifyCollectionChangedAction.Add` - one or more items were added to the collection
 * `NotifyCollectionChangedAction.Move` - an item was moved in the collection
 * `NotifyCollectionChangedAction.Remove` - one or more items were removed from the collection
