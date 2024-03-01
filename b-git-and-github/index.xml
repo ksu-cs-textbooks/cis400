@@ -1161,7 +1161,7 @@ Effectively what you were doing was version control - keeping old copies of a pr
       <link>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/04-initialization/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/04-initialization/index.html</guid>
-      <description>Git converts an ordinary directory (folder) on our computer into a git repository, allowing you to save different versions of the directory&amp;rsquo;s contents as you make changes to that directory. Invoking the git init command within the top directory of your project starts this process:
+      <description>YouTube Video Git converts an ordinary directory (folder) on our computer into a git repository, allowing you to save different versions of the directory&amp;rsquo;s contents as you make changes to that directory. Invoking the git init command within the top directory of your project starts this process:
 $ git init The data describing these changes and how to switch to them is stored in a subdirectory the Git client creates in the top project directory named .</description>
     </item>
     <item>
@@ -1169,7 +1169,7 @@ $ git init The data describing these changes and how to switch to them is stored
       <link>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/05-staging-and-committing/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/05-staging-and-committing/index.html</guid>
-      <description>It is important to understand that Git doesn&amp;rsquo;t save the changes to every file in the directory when you create a commit - it only saves those files you have staged to be committed. This extra step often confuses new Git users, but it exists to give you full control over what gets committed into your repository.
+      <description>YouTube Video It is important to understand that Git doesn&amp;rsquo;t save the changes to every file in the directory when you create a commit - it only saves those files you have staged to be committed. This extra step often confuses new Git users, but it exists to give you full control over what gets committed into your repository.
 It may help to understand how Git thinks about files. Files in your repository directory fall into one of five categories - untracked, unstaged, staged, committed, and ignored.</description>
     </item>
     <item>
@@ -1177,7 +1177,7 @@ It may help to understand how Git thinks about files. Files in your repository d
       <link>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/06-ignoring/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/06-ignoring/index.html</guid>
-      <description>Typically there are some files in a project that we never want to commit. For example, compilers often create temporary or intermediate files during the compilation process, and these will be recreated every time we re-compile. We also usually don&amp;rsquo;t want to commit the compiled binary files either, as we can always compile our code to get a fresh copy. Not saving these files means our repository takes up less memory, and Git operations are faster.</description>
+      <description>YouTube Video Typically there are some files in a project that we never want to commit. For example, compilers often create temporary or intermediate files during the compilation process, and these will be recreated every time we re-compile. We also usually don&amp;rsquo;t want to commit the compiled binary files either, as we can always compile our code to get a fresh copy. Not saving these files means our repository takes up less memory, and Git operations are faster.</description>
     </item>
     <item>
       <title>Reverting Changes</title>
@@ -1193,7 +1193,7 @@ Notice each commit is identified by a hash, date, and commit message.</descripti
       <link>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/08-branches/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/08-branches/index.html</guid>
-      <description>Branches are a powerful mechanisms for working on different versions of your code. The name &amp;ldquo;branch&amp;rdquo; is derived from visualizing a repository as a tree structure, with each commit being a node in the tree. For a simple repository, this tree structure is pretty boring - just a straight line as each node has only one child:
+      <description>YouTube Video Branches are a powerful mechanisms for working on different versions of your code. The name &amp;ldquo;branch&amp;rdquo; is derived from visualizing a repository as a tree structure, with each commit being a node in the tree. For a simple repository, this tree structure is pretty boring - just a straight line as each node has only one child:
 This default branch was historically named &amp;ldquo;master&amp;rdquo;, though recent practice has shifted to using the term &amp;ldquo;main&amp;rdquo;.</description>
     </item>
     <item>
@@ -1201,7 +1201,7 @@ This default branch was historically named &amp;ldquo;master&amp;rdquo;, though 
       <link>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/09-remote-repositories/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/09-remote-repositories/index.html</guid>
-      <description>Git bills itself as a distributed version control system. This means it has no central server. Instead, we can create copies of the repository we call remote repositories with the git clone command. These copies can be placed anywhere - in another directory on your computer, or on a different computer on your network, or a computer accessed via the internet.
+      <description>YouTube Video Git bills itself as a distributed version control system. This means it has no central server. Instead, we can create copies of the repository we call remote repositories with the git clone command. These copies can be placed anywhere - in another directory on your computer, or on a different computer on your network, or a computer accessed via the internet.
 GitHub is a web service that specifically hosts remote git repositories and allows you to access them through both your git client and through a web (HTML/CSS/JS) interface.</description>
     </item>
     <item>
@@ -1218,7 +1218,7 @@ $ git branch ms0Next, check out your new branch.</description>
       <link>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/11-merge-conflicts/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/11-merge-conflicts/index.html</guid>
-      <description>When git merges commits from two different branches or remote repositories, it applies the committed changes from both. In many cases, this works seamlessly, but sometimes it results in merge conflicts. A conflict occurs when the same line(s) in a file were changed in both branches, and git is unsure of which to use.
+      <description>YouTube Video When git merges commits from two different branches or remote repositories, it applies the committed changes from both. In many cases, this works seamlessly, but sometimes it results in merge conflicts. A conflict occurs when the same line(s) in a file were changed in both branches, and git is unsure of which to use.
 Git will do several things in this scenario:
 It will report as output from that command that caused the conflict which file(s) in the repository contain conflicts, and</description>
     </item>
