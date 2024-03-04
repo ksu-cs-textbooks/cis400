@@ -1141,20 +1141,20 @@
     <link href="https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/06-property-changed/tele.html" rel="alternate" type="text/html" title="PropertyChanged :: K-State CIS 400 Textbook">
     
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1709329079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1709329079" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1709329079" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1709329079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1709329079" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1709329079" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1709329079" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1709329079" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1709329079" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1709567168" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1709567168" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1709567168" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1709567168" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1709567168" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1709567168" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1709567168" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1709567168" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1709567168" rel="stylesheet">
     
     
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1709329079" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1709329079" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1709329079" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1709329079" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1709329079"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1709567168" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1709567168" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1709567168" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1709567168" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1709567168"></script>
     
     
     
@@ -1176,7 +1176,7 @@
       window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1709329079" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1709567168" rel="stylesheet">
 
     
   </head>
@@ -1458,7 +1458,7 @@
 </span></span><span style="display:flex;"><span>    Assert.PropertyChanged(bowl, <span style="color:#e6db74">&#34;Name&#34;</span>, () =&gt; {
 </span></span><span style="display:flex;"><span>        bowl.Name = <span style="color:#e6db74">&#34;New Name&#34;</span>;
 </span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>Notice that <code>Assert.PropertyChanged(@object ojb, string propertyName, Action action)</code> takes three arguments - first the object with the property that should be changing, second the name of the property we expect to change, and third an action that should trigger the event.  In this case, we change the name property.</p>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>Notice that <code>Assert.PropertyChanged(@object obj, string propertyName, Action action)</code> takes three arguments - first the object with the property that should be changing, second the name of the property we expect to change, and third an action that should trigger the event.  In this case, we change the name property.</p>
 <p>The second is a bit more involved, as we have an event that happens based on a timer.  To test it therefore, we have to wait for the timer to have had an opportunity to trigger.  We do this with an asynchronous action, so we use the <code>Assert.PropertyChangedAsync(@object obj, string propertyName, Func&lt;Task&gt; action)</code>.  The first two arguments are the same, but the last one is a <code>Func</code> (a function) that returns an asynchronous <code>Task</code> object.  The simplest one to use here is <code>Task.Delay</code>, which delays for the supplied period of time (in our case, two minutes).  Since our property should change on one-minute intervals, we&rsquo;ll know if there was a problem if it doesn&rsquo;t change after two minutes.</p>
 
             <footer class="footline">
@@ -1471,10 +1471,10 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1709329081" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1709329081" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1709329081" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1709567169" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1709567169" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1709567169" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1709329081 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1709567169 defer"></script>
   </body>
 </html>

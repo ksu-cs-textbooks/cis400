@@ -1169,7 +1169,7 @@ In order to attach an event handler to an object in C#, we must first declare th
       <link>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/05-events-as-messages/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/05-events-as-messages/index.html</guid>
-      <description>It might be coming clear that in many ways, events are another form of message passing, much like methods are. In fact, they are processed much the same way: the Invoke() method of the event calls each attached event handler in turn.
+      <description>It might be becoming clear that in many ways, events are another form of message passing, much like methods are. In fact, they are processed much the same way: the Invoke() method of the event calls each attached event handler in turn.
 Tip Regular event invocation in C# is synchronous, just as is method calling - invoking an event passes execution to the event handlers one at a time the same way calling a method hands program execution to the method.</description>
     </item>
     <item>
