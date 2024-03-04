@@ -11,7 +11,7 @@ In Windows Presentation Foundation, data binding is accomplished by a binding ob
 
 It is this [Binding](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.binding?view=windowsdesktop-6.0) object that we are defining the properties of in the XAML attribute with `"{Binding}"`.  Hence, `Path` is a property defined on this binding.  
 
-As we mentioned before, bindings can be `OneWay` or `TwoWay` based on the direction the data flows.  The binding mode is specified by the `Binding` object's `Mode` property, which can also be set in XAML. There is actually a two additional options.  The first is a `OneWayToSource` that is basically a reversed one-way binding (the control updates the data object, but the data object does not update the control)   
+As we mentioned before, bindings can be `OneWay` or `TwoWay` based on the direction the data flows.  The binding mode is specified by the `Binding` object's `Mode` property, which can also be set in XAML. There are actually two additional options.  The first is a `OneWayToSource` that is basically a reversed one-way binding (the control updates the data object, but the data object does not update the control)   
 
 For example, we actually _could_ use a `<TextEditor>` with a read-only property, if we changed the binding mode:
 
@@ -25,7 +25,7 @@ Though this might cause your user confusion because they would _seem_ to be able
 <TextEditor Text="{Binding Path=FullName Mode=OneWay}" IsEnabled="False" />
 ```
 
-The second binding mode is `OneTime` which initializes the control with the property, but does not apply any subsequent changes.  This is similar to the behavior you will see from a data object that does not implement the `INotifyPropertyChanged` interface, as the `Binding` object depends on it for notifications that the property as changed.
+The second binding mode is `OneTime` which initializes the control with the property, but does not apply any subsequent changes.  This is similar to the behavior you will see from a data object that does not implement the `INotifyPropertyChanged` interface, as the `Binding` object depends on it for notifications that the property has changed.
 
 Generally, you'll want to use a control meant to be used with the mode you intend to employ - editable controls default to `TwoWay` and display controls to `OneWay`.
 

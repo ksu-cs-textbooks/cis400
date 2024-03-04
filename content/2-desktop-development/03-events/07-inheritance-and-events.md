@@ -11,7 +11,7 @@ This has some important implications for writing C# events:
 * You cannot invoke events defined in a base class in a derived class
 * The `virtual` and `override` keywords used with events do not actually create an overridden event - you instead end up with two separate implementations.
 
-The standard way programmers have adopted to this issue is to:
+The standard way programmers have adapted to this issue is to:
 1. Define the event normally in the base class 
 2. Add a `protected` helper method to that base class that will invoke the event, taking whatever parameters are needed
 3. Calling that helper method from derived classes.

@@ -335,6 +335,6 @@ public void NameChangeShouldTriggerPropertyChanged()
 }
 ```
 
-Notice that `Assert.PropertyChanged(@object ojb, string propertyName, Action action)` takes three arguments - first the object with the property that should be changing, second the name of the property we expect to change, and third an action that should trigger the event.  In this case, we change the name property.
+Notice that `Assert.PropertyChanged(@object obj, string propertyName, Action action)` takes three arguments - first the object with the property that should be changing, second the name of the property we expect to change, and third an action that should trigger the event.  In this case, we change the name property.
 
 The second is a bit more involved, as we have an event that happens based on a timer.  To test it therefore, we have to wait for the timer to have had an opportunity to trigger.  We do this with an asynchronous action, so we use the `Assert.PropertyChangedAsync(@object obj, string propertyName, Func<Task> action)`.  The first two arguments are the same, but the last one is a `Func` (a function) that returns an asynchronous `Task` object.  The simplest one to use here is `Task.Delay`, which delays for the supplied period of time (in our case, two minutes).  Since our property should change on one-minute intervals, we'll know if there was a problem if it doesn't change after two minutes.
