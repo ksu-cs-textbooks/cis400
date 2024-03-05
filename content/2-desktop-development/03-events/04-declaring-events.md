@@ -49,7 +49,7 @@ public class HatchEventArgs : EventArgs
     public Chick Chick { get; protected set; }
 
     /// <summary>
-    /// Constructs a new HachEventArgs 
+    /// Constructs a new HatchEventArgs 
     /// </summary>
     /// <param name="chick">The chick that hatched</param>
     public HatchEventArgs(Chick chick) 
@@ -62,7 +62,7 @@ public class HatchEventArgs : EventArgs
 And we use this custom event args in our event declaration as the type for the generic `EventHandler<T>` generic:
 
 ```csharp
-public event EventHandler<HatchEvent> Hatch;
+public event EventHandler<HatchEventArgs> Hatch;
 ```
 
 Now let's say we set up our `Egg` constructor to start a timer to determine when the egg will hatch:

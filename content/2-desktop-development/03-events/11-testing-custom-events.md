@@ -19,7 +19,7 @@ public static class MyAssert
 
   public static void HelloWorld(string phrase)
   {
-    if(phrase != "Hello World") throw new HelloWorldException(phrase);
+    if(phrase != "Hello World") throw new HelloWorldAssertionException(phrase);
   }
 }
 ```
@@ -38,7 +38,7 @@ public void ShouldBeHelloWorld(string phrase)
 }
 ```
 
-The first `InlineData` will pass, and the second will fail with the report `Expected "Hello World" but instead saw Hello Bob`.
+The first `InlineData` will pass, and the second will fail with the report `Expected "Hello World" but instead saw "Hello Bob"`.
 
 This was of course, a silly example, but it shows the basic concepts.  We would probably never use this in our own work, as `Assert.Equal()` can do the same thing.  Now let's look at a more complex example that we _would_ use.
 

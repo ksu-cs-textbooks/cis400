@@ -45,8 +45,8 @@ public class Doorbell
     public string Identifier {get; set;}
 
     /// <summary>
-    /// Handles the end of the incubation period 
-    /// by triggering a Hatch event 
+    /// Handles the push of a doorbell
+    /// by triggering a Ring event 
     /// </summary>
     public void Push() 
     {

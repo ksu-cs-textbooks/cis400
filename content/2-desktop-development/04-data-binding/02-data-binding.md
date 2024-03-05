@@ -132,10 +132,10 @@ namespace DataBindingExample
     public partial class PersonEntry : UserControl
     {
         /// <summary>
-        /// Constructs a new PersonControl control 
+        /// Constructs a new PersonEntrycontrol 
         /// </summary>
         /// <param Name="person">The person object to data bind</param>
-        public PersonControl(Person person)
+        public PersonEntry(Person person)
         {
             InitializeComponent();
             this.DataContext = person;
