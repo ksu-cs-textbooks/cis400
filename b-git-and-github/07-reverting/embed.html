@@ -1141,20 +1141,20 @@
     <link href="https://ksu-cs-textbooks.github.io/cis400/b-git-and-github/07-reverting/tele.html" rel="alternate" type="text/html" title="Reverting Changes :: K-State CIS 400 Textbook">
     
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1709651099" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1709651099" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1709651099" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1709651099" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1709651099" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1709651099" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1709651099" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1709651099" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1709651099" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1710774534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1710774534" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1710774534" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1710774534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1710774534" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1710774534" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1710774534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1710774534" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1710774534" rel="stylesheet">
     
     
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1709651099" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1709651099" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1709651099" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1709651099" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1709651099"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1710774534" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1710774534" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1710774534" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1710774534" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1710774534"></script>
     
     
     
@@ -1176,7 +1176,7 @@
       window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1709651099" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1710774534" rel="stylesheet">
 
     
   </head>
@@ -1194,10 +1194,10 @@
 <p>As we suggested earlier in the chapter, one of the most important uses of a version control system is to allow you to revert to an earlier version of your code.  To ask Git to list the available commits, you can use the <strong>git log</strong> command:</p>
 <div class="wrap-code highlight"><pre tabindex="0"><code>$ git log</code></pre></div><p>This should print a list of the commits and their details, with the newest commit first:</p>
 <p>
-<a href="#image-629d856ecccb742f1a88b0e9f7b3be92" class="lightbox-link">
+<a href="#image-5e19b6943aacf142fdf1486d11a8ceed" class="lightbox-link">
 <img src="https://ksu-cs-textbooks.github.io/cis400/images/b.7.1.png" alt="git log output" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-629d856ecccb742f1a88b0e9f7b3be92">
+<a href="javascript:history.back();" class="lightbox" id="image-5e19b6943aacf142fdf1486d11a8ceed">
 <img src="https://ksu-cs-textbooks.github.io/cis400/images/b.7.1.png" alt="git log output" class="lightbox-image" loading="lazy">
 </a></p>
 <p>Notice each commit is identified by a hash, date, and commit message. This is why a good commit message is important - it helps to let us know what we changed (and therefore what changes we would be undoing if we reverted to that commit).  If we wanted to revert to an earlier version, we would use the <strong>git checkout</strong> command:</p>
@@ -1215,10 +1215,10 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1709651103" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1709651103" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1709651103" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1710774537" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1710774537" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1710774537" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1709651103 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1710774537 defer"></script>
   </body>
 </html>
