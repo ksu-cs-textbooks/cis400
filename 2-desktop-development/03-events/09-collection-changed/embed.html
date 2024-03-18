@@ -1141,20 +1141,20 @@
     <link href="https://ksu-cs-textbooks.github.io/cis400/2-desktop-development/03-events/09-collection-changed/tele.html" rel="alternate" type="text/html" title="CollectionChanged :: K-State CIS 400 Textbook">
     
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1710795927" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1710795927" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1710795927" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1710795927" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1710795927" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1710795927" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1710795927" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1710795927" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1710795927" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1710797475" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1710797475" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1710797475" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1710797475" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1710797475" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1710797475" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1710797475" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1710797475" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1710797475" rel="stylesheet">
     
     
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1710795927" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1710795927" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1710795927" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1710795927" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1710795927"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1710797475" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1710797475" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1710797475" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1710797475" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1710797475"></script>
     
     
     
@@ -1176,7 +1176,7 @@
       window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1710795927" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1710797475" rel="stylesheet">
 
     
   </head>
@@ -1196,10 +1196,10 @@
 <p>The <code>INotifyCollectionChanged</code> interface defined in the <code>System.Collections.Specialized</code> namespace indicates the collection implements the <code>NotifyCollectionChangedEventHandler</code>, i.e.:</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> NotifyCollectionChangedEventHandler? NotifyCollectionChanged;</span></span></code></pre></div><p>And, as you would expect, this event is triggered any time the collection&rsquo;s contents change, much like the <code>PropertyChanged</code> event we discussed earlier was triggered when a property changed.  However, the <code>NotifyCollectionChangedEventArgs</code> provides a <em>lot</em> more information than we saw with the <code>PropertyChangedEventArgs</code>,as you can see in the UML diagram below:</p>
 <p>
-<a href="#image-ec0df05dd7adcb1e55352860955460f4" class="lightbox-link">
+<a href="#image-8345d349354bb446ff1f1fc200e9a2db" class="lightbox-link">
 <img src="https://ksu-cs-textbooks.github.io/cis400/images/2.3.9.1.png" alt="UML or NotifyCollectionChangedEventArgs and PropertyChangedEventArgs" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-ec0df05dd7adcb1e55352860955460f4">
+<a href="javascript:history.back();" class="lightbox" id="image-8345d349354bb446ff1f1fc200e9a2db">
 <img src="https://ksu-cs-textbooks.github.io/cis400/images/2.3.9.1.png" alt="UML or NotifyCollectionChangedEventArgs and PropertyChangedEventArgs" class="lightbox-image" loading="lazy">
 </a></p>
 <p>With <code>PropertyChangedEventArgs</code> we simply provide the name of the property that is changing.  But with <code>NotifyCollectionChangedEventArgs</code>, we are describing both <em>what</em> the change is (i.e. an Add, Remove, Replace, Move, or Reset), and what item(s) we affected.  So if the action was adding an item, the <code>NotifyCollectionChangedEventArgs</code> will let us know what item was added to the collection, and possibly at what position it was added at.</p>
@@ -1252,10 +1252,10 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1710795929" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1710795929" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1710795929" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1710797477" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1710797477" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1710797477" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1710795929 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1710797477 defer"></script>
   </body>
 </html>
