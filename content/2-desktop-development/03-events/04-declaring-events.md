@@ -77,7 +77,7 @@ public Egg()
 }
 ```
 
-In the event handler `startHatching`, we'll want to create our new baby chick, and then trigger the `Hatch` event.  To do this, we need to _raise_ the event to pass to any attached handlers with `Hatch.Invoke()`, passing in both the event arguments and the source of the event (our egg):
+In the event handler `StartHatching`, we'll want to create our new baby chick, and then trigger the `Hatch` event.  To do this, we need to _raise_ the event to pass to any attached handlers with `Hatch.Invoke()`, passing in both the event arguments and the source of the event (our egg):
 
 ```csharp
 private void StartHatching(object source, ElapsedEventArgs e) 
