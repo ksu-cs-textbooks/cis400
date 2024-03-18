@@ -39,12 +39,12 @@ As with the `Step`, we also want to declare a traditional property with the name
 /// The NumberBox's displayed value
 /// </summary>
 public double Value {
-    get { return ( double)GetValue(ValueProperty); }
+    get { return (double)GetValue(ValueProperty); }
     set { SetValue(ValueProperty, value); }
 }
 ```
 
-If we want to display the current value of `Value` it in the textbox of our `NumberBox` control, we'll need to bind the `<TextBox>` element's `Text` property.  This is accomplished in a similar fashion to the other bindings we've done previously, only we need to specify a `RelativeSource`.  This is a source relative to the control in the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  We'll specify two properties on the `RelativeSource`: the `Mode` which we set to `FindAncestor` to search up the tree, and the `AncestorType` which we set to our `NumberBox`.  Thus, instead of binding to the `DataContext`, we'll bind to the `NumberBox` the `<TextBox>` is located within.  The full declaration would be:
+If we want to display the current value of `Value` in the textbox of our `NumberBox` control, we'll need to bind the `<TextBox>` element's `Text` property.  This is accomplished in a similar fashion to the other bindings we've done previously, only we need to specify a `RelativeSource`.  This is a source relative to the control in the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  We'll specify two properties on the `RelativeSource`: the `Mode` which we set to `FindAncestor` to search up the tree, and the `AncestorType` which we set to our `NumberBox`.  Thus, instead of binding to the `DataContext`, we'll bind to the `NumberBox` the `<TextBox>` is located within.  The full declaration would be:
 
 ```xml
 <TextBox Grid.Column="1" Text="{Binding Path=Value, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:NumberBox}}"/>
