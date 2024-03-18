@@ -57,7 +57,7 @@ We can also create _new_ dependency properties on our own custom classes extendi
 
 Now, let's assume we want to provide a property `Step` of type `double`, which is the amount the number should be incremented when the "+" or "-" button is pressed.
 
-The first step is to _register_ the dependency property by creating a `DependencyProperty` instance.  This will serve as the key to setting and retrieving the dependency property on a dependency object.  We register new dependency properties with `DependencyProperty.Register(string propertyName, Type propertyType, Type dependencyObjectType)`.  The string is the name of the property, the first type is the type of the property, and the second is the class we want to associated this property with.  So our `Step` property would be registered with:
+The first step is to _register_ the dependency property by creating a `DependencyProperty` instance.  This will serve as the key to setting and retrieving the dependency property on a dependency object.  We register new dependency properties with `DependencyProperty.Register(string propertyName, Type propertyType, Type dependencyObjectType)`.  The string is the name of the property, the first type is the type of the property, and the second is the class we want to associate this property with.  So our `Step` property would be registered with:
 
 ```csharp
 DependencyProperty.Register(nameof(Step), typeof(double), typeof(NumberBox));
