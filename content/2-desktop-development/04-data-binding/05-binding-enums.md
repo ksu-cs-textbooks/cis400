@@ -38,7 +38,7 @@ public Fruit FavoriteFruit
 }
 ```
 
-For example, what if we wanted to use a `ListBox`  to select an item out of this enumeration?  We'd actually need to bind _two_ properties, the `ItemSource` to get the enumeration values, and the `SelectedItem` to mark the item being used.  To accomplish this binding, we'd need to first make the fruits available for binding by creating a static resource to hold them using an `ObjectDataProvider`:
+For example, what if we wanted to use a `ListView`  to select an item out of this enumeration?  We'd actually need to bind _two_ properties, the `ItemSource` to get the enumeration values, and the `SelectedItem` to mark the item being used.  To accomplish this binding, we'd need to first make the fruits available for binding by creating a static resource to hold them using an `ObjectDataProvider`:
 
 ```xml
 <ObjectDataProvider x:Key="fruits" ObjectType="system:Enum" MethodName="GetValues">
@@ -52,7 +52,7 @@ The [`ObjectDataProvider`](https://docs.microsoft.com/en-us/dotnet/api/system.wi
 
 Also, note that because the `Enum` class is defined in the System namespace, we need to bring it into the XAML with an xml namespace mapped to it, with the attribute `xmlns` defined on the UserControl, i.e.: `xmlns:system="clr-namespace:System;assembly=mscorlib"`.
 
-Now we can use the `fruits` key as part of a data source for a listbox: `<ListBox ItemsSource="{Binding Source={StaticResource fruits}}" SelectedItem="{Binding Path=FavoriteFruit}"/>`
+Now we can use the `fruits` key as part of a data source for a listview: `<ListView ItemsSource="{Binding Source={StaticResource fruits}}" SelectedItem="{Binding Path=FavoriteFruit}"/>`
 
 Notice that we use the `Source` property of the `Binding` class to bind the `ItemsSource` to the enumeration values exposed in the static resource `fruits`.  Then we bind the `SelectedItem` to the person's `FavoriteFruit` property.  The entire control would be:
 
@@ -89,7 +89,7 @@ Notice that we use the `Source` property of the `Binding` class to bind the `Ite
 
 ### Binding a ComboBox to an Enum
 
-Binding a `<ComboBox>` is almost identical to the `ListBox` example; we just swap a `ComboBox` for a `ListBox`:
+Binding a `<ComboBox>` is almost identical to the `ListView` example; we just swap a `ComboBox` for a `ListView`:
 
 ```xml
 <UserControl x:Class="DataBindingExample.PersonControl"
@@ -126,10 +126,10 @@ Binding a `<ComboBox>` is almost identical to the `ListBox` example; we just swa
 
 Binding a `<RadioButton>` requires a very different approach, as a radio button exposes an `IsChecked` boolean property that determines if it is checked, much like a `<CheckBox>`, but we want it bound to an enumeration property.  There are a lot of attempts to do this by creating a custom content converter, but ultimately they all have flaws.
 
-Instead, we can restyle a `ListBox` to _look_ like radio buttons, but still provide the same functionality by adding a `<Style>` that applies to the `ListBoxItem` contents of the `ListBox`:
+Instead, we can restyle a `ListView` to _look_ like radio buttons, but still provide the same functionality by adding a `<Style>` that applies to the `ListViewItem` contents of the `ListView`:
 
 ```xml
-<Style TargetType="{x:Type ListBoxItem}">
+<Style TargetType="{x:Type ListViewItem}">
     <Setter Property="Template">
         <Setter.Value>
             <ControlTemplate>
@@ -140,7 +140,7 @@ Instead, we can restyle a `ListBox` to _look_ like radio buttons, but still prov
 </Style>
 ```
 
-This style can be used in conjunction with a `ListBox` declared as we did above:
+This style can be used in conjunction with a `ListView` declared as we did above:
 
 ```xml
 <UserControl x:Class="DataBindingExample.PersonControl"
@@ -158,7 +158,7 @@ This style can be used in conjunction with a `ListBox` declared as we did above:
                 <x:Type TypeName="local:Fruit"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-        <Style TargetType="{x:Type ListBoxItem}">
+        <Style TargetType="{x:Type ListViewItem}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate>
@@ -177,7 +177,7 @@ This style can be used in conjunction with a `ListBox` declared as we did above:
         <CheckBox IsChecked="{Binding Path=IsCartoon}">
             Is a Looney Toon
         </CheckBox>
-        <ListBox ItemsSource="{Binding Source={StaticResource fruits}}" SelectedItem="{Binding Path=FavoriteFruit}"/>
+        <ListView ItemsSource="{Binding Source={StaticResource fruits}}" SelectedItem="{Binding Path=FavoriteFruit}"/>
     </StackPanel>
 </UserControl>
 ```
