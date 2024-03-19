@@ -12,7 +12,7 @@ You have probably noticed that as our use of WPF grows more sophisticated, our c
 There are several benefits to this pattern:
 
 1. Complex logic is kept out of the View classes, allowing them to focus on the task of presentation
-2. Presentation logic is kept out of the Model classes, allowing them ot focus on the task of data management and allowing them to be easily re-used for other views
+2. Presentation logic is kept out of the Model classes, allowing them to focus on the task of data management and allowing them to be easily re-used for other views
 3. Presentation logic is gathered in the ViewModel class, where it can be easily tested
 
 Essentially, this pattern is an application of the [Single-Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle) (that each class in your project should bear a single responsibility).
