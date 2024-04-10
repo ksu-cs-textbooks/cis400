@@ -2513,7 +2513,7 @@ var relearn_search_index = [
     "uri": "/3-web-development/02-aspdotnet/06-razor-pages/index.html"
   },
   {
-    "content": "Chapter 6 Testing WPF How do we test this stuff?\n",
+    "content": "How do we test this stuff?\n",
     "description": "",
     "tags": null,
     "title": "Testing WPF",
