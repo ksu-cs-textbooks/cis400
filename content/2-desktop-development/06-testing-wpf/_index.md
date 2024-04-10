@@ -6,8 +6,4 @@ archetype = "chapter"
 pre = "<b>6. </b>"
 +++
 
-### Chapter 6
-
-# Testing WPF
-
 How do we test this stuff?
