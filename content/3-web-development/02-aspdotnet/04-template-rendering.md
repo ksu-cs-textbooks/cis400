@@ -11,7 +11,7 @@ It was not long before new technologies sprang up to replace the ad-hoc string c
 string time = $"The time is {DateTime.Now}";
 ```
 
-Which concatenates the invoking of the [DateTime.Now]() property's `ToString()` method into the string `time`.  While the C# template string above uses curly braces to call out the script snippets, most HTML template libraries initially used some variation of angle brackets + additional characters.  As browsers interpret anything within angle brackets (`<>`) as HTML tags, these would not be rendered if the template was accidentally served as HTML wihout executing and concatenating scripts.  Two early examples are:
+Which concatenates the invoking of the [DateTime.Now]() property's `ToString()` method into the string `time`.  While the C# template string above uses curly braces to call out the script snippets, most HTML template libraries initially used some variation of angle brackets + additional characters.  As browsers interpret anything within angle brackets (`<>`) as HTML tags, these would not be rendered if the template was accidentally served as HTML without executing and concatenating scripts.  Two early examples are:
 
 * `<?php echo "This is a PHP example" ?>`
 * `<% Response.Write("This is a classic ASP example) %>`

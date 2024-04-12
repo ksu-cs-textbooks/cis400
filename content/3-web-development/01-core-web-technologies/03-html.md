@@ -16,7 +16,7 @@ Thus, it uses the same kind of element structure, consisting of tags.  For examp
 </button>
 ```
 
-You likely notice how similar this definition is to buttons in XAML.  As with XAML elements, HTML elements have and opening and closing tag, and can have additional HTML content nested inside these tags.  HTML tags can also be self-closing, as is the case with the line break tag:
+You likely notice how similar this definition is to buttons in XAML.  As with XAML elements, HTML elements have an opening and closing tag, and can have additional HTML content nested inside these tags.  HTML tags can also be self-closing, as is the case with the line break tag:
 
 ```html
 <br/>
@@ -169,7 +169,7 @@ Which renders:
     <i>-Rudyard Kipling, excerpt from "If"</i>
 </blockquote>
 
-Additionally, as a program you may want to use the the [code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code) element in conjunction with the [pre](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) element to display preformatted code snippets in your pages.
+Additionally, as a programmer you may want to use the the [code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code) element in conjunction with the [pre](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) element to display preformatted code snippets in your pages.
 
 ## HTML Comments
 
