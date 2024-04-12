@@ -1141,20 +1141,20 @@
     <link href="https://ksu-cs-textbooks.github.io/cis400/3-web-development/02-aspdotnet/04-template-rendering/tele.html" rel="alternate" type="text/html" title="Template Rendering :: K-State CIS 400 Textbook">
     
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1712762166" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1712762166" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1712762166" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1712762166" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1712762166" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1712762166" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1712762166" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1712762166" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1712762166" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1712954542" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fontawesome-all.min.css?1712954542" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/nucleus.css?1712954542" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1712954542" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/auto-complete.css?1712954542" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/perfect-scrollbar.min.css?1712954542" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1712954542" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis400/css/fonts.css?1712954542" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme.css?1712954542" rel="stylesheet">
     
     
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1712762166" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1712762166" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1712762166" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1712762166" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1712762166"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/theme-light-theme.css?1712954542" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/variant.css?1712954542" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/print.css?1712954542" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/ie.css?1712954542" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/url.js?1712954542"></script>
     
     
     
@@ -1176,7 +1176,7 @@
       window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1712762166" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis400/css/custom.css?1712954542" rel="stylesheet">
 
     
   </head>
@@ -1193,7 +1193,7 @@
     
 <p>It was not long before new technologies sprang up to replace the ad-hoc string concatenation approach to creating dynamic pages.  These template approaches allow you to write a page using primarily HTML, but embed snippets of another language to execute and concatenate into the final page.  This is very similar to the template strings we have used in C#, i.e.:</p>
 <div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> time = <span style="color:#e6db74">$&#34;The time is {DateTime.Now}&#34;</span>;</span></span></code></pre></div><p>Which concatenates the invoking of the <a href="">DateTime.Now</a>
- property&rsquo;s <code>ToString()</code> method into the string <code>time</code>.  While the C# template string above uses curly braces to call out the script snippets, most HTML template libraries initially used some variation of angle brackets + additional characters.  As browsers interpret anything within angle brackets (<code>&lt;&gt;</code>) as HTML tags, these would not be rendered if the template was accidentally served as HTML wihout executing and concatenating scripts.  Two early examples are:</p>
+ property&rsquo;s <code>ToString()</code> method into the string <code>time</code>.  While the C# template string above uses curly braces to call out the script snippets, most HTML template libraries initially used some variation of angle brackets + additional characters.  As browsers interpret anything within angle brackets (<code>&lt;&gt;</code>) as HTML tags, these would not be rendered if the template was accidentally served as HTML without executing and concatenating scripts.  Two early examples are:</p>
 <ul>
 <li><code>&lt;?php echo &quot;This is a PHP example&quot; ?&gt;</code></li>
 <li><code>&lt;% Response.Write(&quot;This is a classic ASP example) %&gt;</code></li>
@@ -1227,10 +1227,10 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1712762168" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1712762168" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1712762168" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/clipboard.min.js?1712954544" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/perfect-scrollbar.min.js?1712954544" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/theme.js?1712954544" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1712762168 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis400/js/embed-iframe.js?1712954544 defer"></script>
   </body>
 </html>
