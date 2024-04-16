@@ -38,7 +38,7 @@ The `@model` line indicates the _model_ class to use with this page.  Convention
 
 The `@{}` section is a place to define variables.  In this case, we add a key/value pair to the `ViewData` dictionary.  This dictionary is available in both the page and the layout, and is an easy way to pass values between them (in this case, we are providing a title to the layout). The layout is discussed below.
 
-Finally, the page content itself is presented in Razor syntax - a mixture of HTML and embedded C# proceeded by the `@` symbol.  Note that we do not need to provide termination to the C# code - the compiler will automatically determine when we switch from code back to HTML based on the grammar of the C# language.
+Finally, the page content itself is presented in Razor syntax - a mixture of HTML and embedded C# preceded by the `@` symbol.  Note that we do not need to provide termination to the C# code - the compiler will automatically determine when we switch from code back to HTML based on the grammar of the C# language.
 
 ## Layouts
 
