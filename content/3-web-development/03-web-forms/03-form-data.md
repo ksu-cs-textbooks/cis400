@@ -29,7 +29,7 @@ And enter the values "Frank" and "Jones", the form is serialized as the key-valu
 ```
 
 {{% notice info %}}
-Here we are displaying the key-value pairs as JSON for legibility, but how the pairs ar encoded depends on the encoding strategy as discussed below.
+Here we are displaying the key-value pairs as JSON for legibility, but how the pairs are encoded depends on the encoding strategy as discussed below.
 {{% /notice %}}
 
 If a form contains _multiple_ inputs with the same name, they are serialized as an array, i.e. the form:

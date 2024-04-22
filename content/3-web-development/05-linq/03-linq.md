@@ -98,7 +98,7 @@ if(last != null) query = query.Where(s => s.Last == last);
 
 ### Query Results 
 
-The result of the query is therefore a specialized object created by LINQ that implements the `IEnumerable<T>` interface.  The type of `T` depends on the query (queries are always strongly typed, though the type can be inferred).  Fore example, in our `strugglingStudent` query, the result type is `IEnumerable<Student>`:
+The result of the query is therefore a specialized object created by LINQ that implements the `IEnumerable<T>` interface.  The type of `T` depends on the query (queries are always strongly typed, though the type can be inferred).  For example, in our `strugglingStudents` query, the result type is `IEnumerable<Student>`:
 
 ```csharp
 var strugglingStudents = from student in students where student.GPA < 2.0 select student;
