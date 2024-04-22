@@ -1124,6 +1124,11 @@
 	
 		
 		
+
+	
+	
+		
+		
 		
 
 	
@@ -1216,6 +1221,14 @@ Moreover, let&amp;rsquo;s clean up our Index page, as it is getting difficult to
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/03-numerical-filters-edit3/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/03-numerical-filters-edit3/index.html</guid>
+      <description>Let&amp;rsquo;s tackle one of the critics ratings next. While we could create categories and use checkboxes, this doesn&amp;rsquo;t capture the incremental values (i.e. 4.3), and it would be a lot of checkboxes for Rotten Tomatoes ratings! Instead, we&amp;rsquo;ll use a numerical filter, which limits our possible results to a range - between a minimum and maximum value.
+Moreover, let&amp;rsquo;s clean up our Index page, as it is getting difficult to determine what filter(s) go together, and and are adding more.</description>
+    </item>
+    <item>
+      <title>Numerical Filters</title>
+      <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/03-numerical-filters-edit4/index.html</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/03-numerical-filters-edit4/index.html</guid>
       <description>Let&amp;rsquo;s tackle one of the critics ratings next. While we could create categories and use checkboxes, this doesn&amp;rsquo;t capture the incremental values (i.e. 4.3), and it would be a lot of checkboxes for Rotten Tomatoes ratings! Instead, we&amp;rsquo;ll use a numerical filter, which limits our possible results to a range - between a minimum and maximum value.
 Moreover, let&amp;rsquo;s clean up our Index page, as it is getting difficult to determine what filter(s) go together, and and are adding more.</description>
     </item>
