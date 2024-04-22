@@ -13,7 +13,7 @@ The first of these is the [HttpRequest](https://docs.microsoft.com/en-us/dotnet/
 
 If the form was submitted as a GET request, then the `Request.QueryString` is a collection of key-value pairs used like a dictionary, i.e. to access the value of the input with name "Color", we would use: `Request.QueryString["Color"]`.
 
-Similarly, the `Form` also exposes the form content as a collection key-value pairs, so we could access a POST request's input with the name "Color" value with `Request.Form["Color"]`.
+Similarly, the `Form` also exposes the form content as a collection of key-value pairs, so we could access a POST request's input with the name "Color" value with `Request.Form["Color"]`.
 
 Finally, the request also allows for checking _both_ collections using its own accessor property, i.e. `Request["Color"]` would provide the submitted value for the input "Color" if it was sent with _either_ a GET or POST request.
 
