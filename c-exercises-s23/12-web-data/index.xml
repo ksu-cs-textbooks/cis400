@@ -1109,6 +1109,11 @@
 	
 		
 		
+
+	
+	
+		
+		
 		
 
 	
@@ -1149,6 +1154,13 @@ The Request Object When you click the search button, the browser serializes your
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/02-categorical-filters-edit/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/02-categorical-filters-edit/index.html</guid>
+      <description>Let&amp;rsquo;s add some filters to the page as well. We&amp;rsquo;ll start with categorical filters, i.e. filtering by category. Let&amp;rsquo;s start by filtering for MPAA Rating. We know that there are only a handful of ratings issued by the Motion Picture Association of America - G, PG, PG-13, R, and NC-17. We might be tempted to use an enumeration to represent these values, but in C# an enumeration cannot have strings for values.</description>
+    </item>
+    <item>
+      <title>Adding Categorical Filters to the Movie Site</title>
+      <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/02-categorical-filters-edit2/index.html</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/12-web-data/02-categorical-filters-edit2/index.html</guid>
       <description>Let&amp;rsquo;s add some filters to the page as well. We&amp;rsquo;ll start with categorical filters, i.e. filtering by category. Let&amp;rsquo;s start by filtering for MPAA Rating. We know that there are only a handful of ratings issued by the Motion Picture Association of America - G, PG, PG-13, R, and NC-17. We might be tempted to use an enumeration to represent these values, but in C# an enumeration cannot have strings for values.</description>
     </item>
     <item>
