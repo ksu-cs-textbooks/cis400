@@ -49,7 +49,7 @@ To use a different data source, we would just swap `students` for that source, a
 
 Projecting refers to selecting specific data from a data source.  For example, if we wanted to select the full name of every  `Student`, we could do so with this query syntax:
 
-```chsarp
+```csharp
 var studentNames = from student in students select $"{student.First} {student.Last}";
 ```
 
@@ -132,7 +132,7 @@ var undergraduates = students.OfType<UndergraduateStudent>();
 Often we want to apply some form of sorting to our results, i.e. we might want to sort students by GPA.  This can be done with an `orderby` operator.  In query syntax it would be:
 
 ```csharp 
-var studentsByGPA = from student in students orderby student.GPA;
+var studentsByGPA = from student in students orderby student.GPA select student;
 ```
 
 And in method syntax:
@@ -144,13 +144,13 @@ var studentsByGPA = students.OrderBy(student => student.GPA);
 The `orderby` operator sorts in _ascending_ order (so students with the lowest grades would come first in the list).  If we wanted to sort in _descending_ order, we would need to specify descending order in our query syntax:
 
 ```csharp 
-var studentsByGPA = from student in students orderby student.GPA descending;
+var studentsByGPA = from student in students orderby student.GPA descending select student;
 ```
 
 {{% notice tip %}}
 There is also an _ascending_ keyword you can use.  This is helpful if you can't remember the default or want to make it clear to other programmers that the list will be sorted in ascending order:
 ```csharp 
-var studentsByGPA = from student in students orderby student.GPA ascending;
+var studentsByGPA = from student in students orderby student.GPA ascending select student;
 ```
 {{% /notice %}}
 
@@ -163,7 +163,7 @@ var studentsByGPA = students.OrderByDescending(student => student.GPA);
 If we need to order by multiple properties, i.e. first and last names, this is accomplished by a comma-separated list in query syntax:
 
 ```csharp
-var studentsByName = from student in students orderby student.Last, student.First;
+var studentsByName = from student in students orderby student.Last, student.First select student;
 ```
 
 But in method syntax, we need to use a `ThenBy()` operator for subsequent sorting options:
@@ -175,7 +175,7 @@ var studentsByName = students.OrderBy(student => student.Last).ThenBy(student =>
 We can mix and match ascending and descending sorting as well - for example, to sort students by descending GPA, then by names in alphabetical order we would use the query syntax:
 
 ```csharp
-var studentsByGPAAndName = from student in students orderby student.GPA ascending, student.Last, student.First;
+var studentsByGPAAndName = from student in students orderby student.GPA descending, student.Last, student.First select student;
 ```
 
 The corresponding method syntax would need separate operators for each sorting:
@@ -193,7 +193,7 @@ Finally, there is also a `Reverse()` operator which simply reverses the order of
 We often want to split our results into groups, which can be accomplished with the `group by` operator.  Consider the case where we want to split our students by the value of their `Major` field.  We can accomplish this with query syntax:
 
 ```csharp 
-var studentsByMajor = from student in students select student group student by student.Major;
+var studentsByMajor = from student in students group student by student.Major select student;
 ```
 
 or using method syntax:
@@ -225,7 +225,7 @@ var pagedStudents = students.Skip(20).Take(20);
 Note that there is no query syntax corresponding to the `Skip()` and `Take()` operations, so to use them with query syntax, we wrap the query in parenthesis and invoke the methods on the result.  I.e. sorting students alphabetically and then taking the third page of twenty would be:
 
 ```csharp
-var pagedSortedStudents = (from student in students sort by last, first).Skip(40).Take(20);
+var pagedSortedStudents = (from student in students orderby last, first select student).Skip(40).Take(20);
 ```
 
 ## Existence Checks
