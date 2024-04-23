@@ -1910,10 +1910,6 @@
     <lastmod>2023-08-10T15:29:34-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/index.html</loc>
-    <lastmod>2023-08-10T15:29:34-05:00</lastmod>
-  </url>
-  <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/05-linq/index.html</loc>
     <lastmod>2023-08-10T15:29:34-05:00</lastmod>
   </url>
@@ -1968,6 +1964,10 @@
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/1-object-orientation/06-advanced-csharp/index.html</loc>
     <lastmod>2023-08-10T15:29:34-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/index.html</loc>
+    <lastmod>2024-04-23T12:18:02-05:00</lastmod>
   </url>
   <url>
     <loc>https://ksu-cs-textbooks.github.io/cis400/3-web-development/02-aspdotnet/06-razor-pages/index.html</loc>

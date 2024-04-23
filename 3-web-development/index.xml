@@ -1193,18 +1193,18 @@
       <description>Making the Web Accessible - for Programs</description>
     </item>
     <item>
-      <title>Deployment</title>
-      <link>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/index.html</link>
-      <pubDate>Fri, 24 Aug 2018 10:53:05 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/index.html</guid>
-      <description>Putting your work out there</description>
-    </item>
-    <item>
       <title>LINQ</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/3-web-development/05-linq/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:05 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/3-web-development/05-linq/index.html</guid>
       <description>Bridging the Gap Between Databases and Data Structures</description>
+    </item>
+    <item>
+      <title>Deployment</title>
+      <link>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/index.html</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:05 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/index.html</guid>
+      <description>Putting your work out there</description>
     </item>
   </channel>
 </rss>
