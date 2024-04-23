@@ -104,7 +104,7 @@ var studentInfo = students.Select(student => new StudentInfo($"{student.First} {
 One of the most common operations you will do with a query is filter the data, so the results contains only part of the original data.  This is done with the `where` operator takes a statement that resolves to a boolean.  If this boolean expression resolves to true, then the data is included in the results; if it is false, it is excluded.  For example, to find all students older than 25, we would use this query syntax:
 
 ```csharp
-var olderStudents = from student in students where student.Age > 25;
+var olderStudents = from student in students where student.Age > 25 select student;
 ```
 
 or this method syntax:
@@ -118,7 +118,7 @@ var olderStudents = students.Where(student => student.Age > 25);
 If we have a list that contains multiple types, we can filter for specific types with the `where` operator or the `OfType` operator (this is an instance where query and operator syntax vary more greatly).  Consider the case where our `Student` class is a base class to `GraduateStudent` and `UndergraduateStudent` classes.  If we wanted to get a list of only the undergraduates, we could use a `where` query syntax combined with an `is` casting test:
 
 ```csharp
-var undergraduates = from student in students where student is UndergraduateStudent;
+var undergraduates = from student in students where student is UndergraduateStudent select student;
 ```
 
 In this case, the result would be an `IEnumerable<UndergraduateStudent>`.  But the corresponding where in operator syntax would result in an `IEnumerable<Student>` that contained only `UndergraduateStudent` objects.  To perform a cast as part of the filtering, we would instead use the `OfType<T>()` method:
@@ -233,7 +233,7 @@ var pagedSortedStudents = (from student in students sort by last, first).Skip(40
 Sometimes we want to know if a particular record exists in our data source.  The `Any()` operator can be used to perform such a check.  It evaluates to `true` if the query has any results, or `false` if it does not.  Like the `Skip()` and `Take()`, it does not have a query syntax form, so it must be invoked using the method syntax.  For example, to determine if we have at least one student named Bob Smith, we could use:
 
 ```csharp
-var bobSmithExists = (from student in students where student.First == "Bob" && student.Last == "Smith").Any();
+var bobSmithExists = (from student in students where student.First == "Bob" && student.Last == "Smith" select student).Any();
 ```
 
 Or, in method syntax:
@@ -245,7 +245,7 @@ var bobSmithExists = students.Any(student => student.First == "Bob" && student.L
 Alternatively, if we wanted to retrieve Bob Smith's record instead of simply determining if we had one, we could use `First()`:
 
 ```csharp
-var bobSmith = (from student in students where student.First == "Bob" && student.Last == "Smith").First();
+var bobSmith = (from student in students where student.First == "Bob" && student.Last == "Smith" select student).First();
 ```
 
 or in method syntax:
@@ -273,7 +273,7 @@ var studentCount = students.Count();
 This can be combined with any LINQ query, i.e. the count of students with a GPA above 3.0 in query syntax would be:
 
 ```csharp
-var studentsAbove3GPA = (from student in students where student.GPA > 3.0).Count();
+var studentsAbove3GPA = (from student in students where student.GPA > 3.0 select student).Count();
 ```
 
 or in method syntax:

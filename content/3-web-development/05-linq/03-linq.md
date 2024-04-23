@@ -51,7 +51,7 @@ foreach(var student in strugglingStudents) {
 }
 ```
 
-As you can see, this results in _two_ iterations over lists of students.  In the worst case (when every student is struggling) this has a complexity of $O(2*n)$.
+As you can see, this results in _two_ iterations over lists of students. In the worst case (when every student is struggling) this requires 2*n operations.
 
 On the other hand, by delaying the execution of the query until the first time its values are used, LINQ can refactor the query into a form like:
 
@@ -63,7 +63,7 @@ foreach(var student in students) {
 }
 ```
 
-With this refactoring, the worst case becomes $O(n)$ - our query would run twice as fast!  Also, if we never _use_ `strugglingStudentsAtoN`, the query is never executed, so the cost is $O(0)$.  This might seem nonsensical, but consider if we have some kind of conditional, i.e.:
+With this refactoring, we only need one iteration over our list - our query would run twice as fast!  Also, if we never _use_ `strugglingStudentsAtoN`, the query is never executed, so the cost is constant time.  This might seem nonsensical, but consider if we have some kind of conditional, i.e.:
 
 ```csharp
 switch(advisor.Number) {
