@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Let's tackle one of the critics ratings next.  While we could create categories and use checkboxes, this doesn't capture the incremental values (i.e. 4.3), and it would be a _lot_ of checkboxes for Rotten Tomatoes ratings!  Instead, we'll use a _numerical filter_, which limits our possible results to a range - between a minimum and maximum value.  
 
-Moreover, let's clean up our Index page, as it is getting difficult to determine what filter(s) go together, and and are adding more.
+Moreover, let's clean up our Index page, as it is getting difficult to determine what filter(s) go together, and are adding more.
 
 ## Refactoring the Index Page
 Let's move the filters to a column on the left, leave the search bar above, and show our results on the right.  This will require refactoring our _Index.cshtml_ file:

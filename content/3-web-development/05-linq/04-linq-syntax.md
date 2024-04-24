@@ -101,7 +101,7 @@ var studentInfo = students.Select(student => new StudentInfo($"{student.First} {
 
 ## Filtering
 
-One of the most common operations you will do with a query is filter the data, so the results contains only part of the original data.  This is done with the `where` operator takes a statement that resolves to a boolean.  If this boolean expression resolves to true, then the data is included in the results; if it is false, it is excluded.  For example, to find all students older than 25, we would use this query syntax:
+One of the most common operations you will do with a query is filter the data, so the results contain only part of the original data.  This is done with the `where` operator takes a statement that resolves to a boolean.  If this boolean expression resolves to true, then the data is included in the results; if it is false, it is excluded.  For example, to find all students older than 25, we would use this query syntax:
 
 ```csharp
 var olderStudents = from student in students where student.Age > 25 select student;
