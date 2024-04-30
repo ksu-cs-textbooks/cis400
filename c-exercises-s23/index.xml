@@ -1175,7 +1175,7 @@
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/01-encapsulation/index.html</guid>
       <description>Part 1 Follow the tutorial in the following video:
-Part 2 Then add the remaining static methods to the VectorMath class (Scale, DotProduct, CrossProduct, Magnitude, Normalize) following the structure laid out in this UML class diagram:
+YouTube Video Part 2 Then add the remaining static methods to the VectorMath class (Scale, DotProduct, CrossProduct, Magnitude, Normalize) following the structure laid out in this UML class diagram:
 The vector operations these methods should compute are:
 $$\vec{a}+\vec{b}= \langle a_x + b_x, a_y + b_y, a_z + b_z \rangle \tag{Vector Addition}$$ $$\vec{a}-\vec{b}= \langle a_x - b_x, a_y - b_y, a_z - b_z \rangle \tag{Vector Subtraction}$$ $$\vec{a} \cdot s= \langle a_x \cdot s, a_y \cdot s, a_z \cdot s \rangle \tag{Vector Scaling}$$ $$\vec{a} \cdot \vec{b} = \langle a_x b_x + a_y b_y + a_z b_z \rangle \tag{Vector Dot Product}$$ $$\vec{a} \times \vec{b} = \langle a_y b_z - a_z b_y, a_z b_x - a_x b_z, a_x b_y - a_y b_x \rangle \tag{Vector Cross Product}$$ $$||\vec{a}|| = \sqrt{a_x^2 + a_y^2 + a_z^2} \tag{Vector Magnitude}$$ $$\hat{u} = \frac{\vec{u}}{||\vec{u}||} \tag{Vector Normalization}$$ You can uncomment the tests in the VectorMathUnitTests class and then run them to verify your work.</description>
     </item>
@@ -1184,63 +1184,63 @@ $$\vec{a}+\vec{b}= \langle a_x + b_x, a_y + b_y, a_z + b_z \rangle \tag{Vector A
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/02-documentation-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/02-documentation-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>Testing Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/03-testing-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/03-testing-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>Polymorphism Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/04-polymorphism-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/04-polymorphism-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>WPF Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/05-wpf-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/05-wpf-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>Elements Tree Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/06-elements-tree-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/06-elements-tree-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>Events Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/07-events-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/07-events-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>Data Binding Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/08-data-binding-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/08-data-binding-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>Dependency Property Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/09-dependency-property-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/09-dependency-property-exercise/index.html</guid>
-      <description> </description>
+      <description> YouTube Video </description>
     </item>
     <item>
       <title>Razor Pages Exercise</title>
       <link>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/10-razor-page-exercise/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/c-exercises-s23/10-razor-page-exercise/index.html</guid>
-      <description>Now that you know how to create Razor pages, let&amp;rsquo;s see what makes them useful for creating dynamic web pages.
+      <description>YouTube Video Now that you know how to create Razor pages, let&amp;rsquo;s see what makes them useful for creating dynamic web pages.
 Initial Project We&amp;rsquo;ll start with a simple ASP.NET web app using Razor Pages to display a database of movies. This app consists of a single page, Index that will be used to display the details of the movies in the database. It also contains classes representing an individual movie (Movie) and the movie database (MovieDatabase).</description>
     </item>
     <item>
