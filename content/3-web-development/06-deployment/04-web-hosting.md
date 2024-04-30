@@ -9,10 +9,10 @@ To host your website, you will need:
 
 1. A computer connected to the Internet 
 2. A web server program listening at port 80 and/or 433 (depending on if you are using secure communications)
-3. If you are using secure communications, a security certificate issued by a valid authority.  [Let's Encrypt](https://letsencrypt.org/) offers free certificates, and is a good source for startign web developers
+3. If you are using secure communications, a security certificate issued by a valid authority.  [Let's Encrypt](https://letsencrypt.org/) offers free certificates, and is a good source for starting web developers
 4. A domain name (while this is technically optional, if you expect users to visit your website you'll probably need one)
 
-While you have been running your website in debug mode on your development computer, you probably won't use it to host your actual website on the Internet. First, you machine would need to be running the web server application constantly.  Any time your computer was turned off, or the web server was not running, your website would be inaccessible.
+While you have been running your website in debug mode on your development computer, you probably won't use it to host your actual website on the Internet. First, your machine would need to be running the web server application constantly.  Any time your computer was turned off, or the web server was not running, your website would be inaccessible.
 
 Also, in most residental setups, you probably won't be able to access the running program across the Internet anyway.  This is especially if you have multiple computers connected through a router.  In that case, only your router has a unique IP address, and all communications are routed through it using that address.  The router also assigns "internal" addresses to the computers networked to it, and handles distributing request results to those computers that made them (kind of like a mailroom for a very large institution).  To make your website available, you would probably need to set up port forwarding or a similar technique with your router to have it forward requests to the computer running your web server.  You probably would also need to modify your firewall settings (firewalls prevent connections against ports that you don't mean to have open to the Internet).
 
