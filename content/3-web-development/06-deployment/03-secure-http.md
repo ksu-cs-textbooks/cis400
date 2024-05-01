@@ -5,7 +5,7 @@ weight: 30
 date: 2018-08-24T10:53:26-05:00
 ---
 
-We have talked several times about HTTP and HTTPS, without really discussing what is different about these two approaches other than HTTPS is "secure".  Essentially, HTTPS uses the same protocol as HTTP, but requests and responses are _encrypted_ rather than being sent as plain text.  This encryption is handled at a level below HTTP, in the communication layer (currently this uses [TLS - Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)).  This encryption is done through symmetric crypography using a shared secret.  You may remember studying this approach in CIS 115.  Remember this Computerphile video demonstrating a Diffie-Hellman key exchange by mixing paint colors?
+We have talked several times about HTTP and HTTPS, without really discussing what is different about these two approaches other than that HTTPS is "secure".  Essentially, HTTPS uses the same protocol as HTTP, but requests and responses are _encrypted_ rather than being sent as plain text.  This encryption is handled at a level below HTTP, in the communication layer (currently this uses [TLS - Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)).  This encryption is done through symmetric crypography using a shared secret.  You may remember studying this approach in CIS 115.  Remember this Computerphile video demonstrating a Diffie-Hellman key exchange by mixing paint colors?
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NmM9HA2MQGI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
