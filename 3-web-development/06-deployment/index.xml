@@ -1191,7 +1191,7 @@ Setting up your web applications to deploy to a virtual machine </description>
       <link>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/03-secure-http/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis400/3-web-development/06-deployment/03-secure-http/index.html</guid>
-      <description>We have talked several times about HTTP and HTTPS, without really discussing what is different about these two approaches other than HTTPS is &amp;ldquo;secure&amp;rdquo;. Essentially, HTTPS uses the same protocol as HTTP, but requests and responses are encrypted rather than being sent as plain text. This encryption is handled at a level below HTTP, in the communication layer (currently this uses TLS - Transport Layer Security ). This encryption is done through symmetric crypography using a shared secret.</description>
+      <description>We have talked several times about HTTP and HTTPS, without really discussing what is different about these two approaches other than that HTTPS is &amp;ldquo;secure&amp;rdquo;. Essentially, HTTPS uses the same protocol as HTTP, but requests and responses are encrypted rather than being sent as plain text. This encryption is handled at a level below HTTP, in the communication layer (currently this uses TLS - Transport Layer Security ). This encryption is done through symmetric crypography using a shared secret.</description>
     </item>
     <item>
       <title>Web Hosting</title>
