@@ -14,13 +14,13 @@ $ git add .
 $ git commit -a -m "<a message about the commit>"
 ```
 
-Additionally, you may want to [push your changes to origin]({{<ref "b-git-workflows/06-push">}}) so that you can later [pull them into other local repositories]({{<ref "b-git-workflows/07-pull">}}) or turn in an assignment by [creating a release]({{<ref "b-git-workflows/09-release">}}).
+Additionally, you may want to [push your changes to origin]({{% ref "b-git-workflows/06-push"%}}) so that you can later [pull them into other local repositories]({{%ref "b-git-workflows/07-pull"%}}) or turn in an assignment by [creating a release]({{%ref "b-git-workflows/09-release" %}}).
 
 ## Notes
 To git, all files fall into one of four categories: ignored, unstaged, staged, and committed.  
 
 ### Ignored Files
-An _ignored_ file matches a pattern in the __.gitignore__ file, and git effectivley pretends it does not exist (however, if it is staged _before_ the pattern is [added to the __.gitignore__ file]({{<ref "b-git-workflows/10-ignoring-files">}}), git will track it).
+An _ignored_ file matches a pattern in the __.gitignore__ file, and git effectivley pretends it does not exist (however, if it is staged _before_ the pattern is [added to the __.gitignore__ file]({{% ref "b-git-workflows/10-ignoring-files" %}}), git will track it).
 
 ### Unstaged Files
 An _unstaged_ file is a new file that git is not currently tracking, or an existing file that has been changed.  You can add such a file to those ready to be committed with the command:
@@ -53,4 +53,4 @@ The `[a message about the commit]` should be a descriptive message about what ch
 to quit it without saving.
 
 ### Committed Files
-Committed files have their current state saved in your git repo, and will be pushed to remote repositories if you use the [push command]({{<ref "b-git-workflows/06-push">}}).
+Committed files have their current state saved in your git repo, and will be pushed to remote repositories if you use the [push command]({{% ref "b-git-workflows/06-push" %}}).

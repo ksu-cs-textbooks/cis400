@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Pattern matching is another idea common to functional languages that has gradually crept into C#.  Pattern matching refers to extracting information from structured data by matching the shape of that data.
 
-We've already seen the pattern-matching is operator [in our discussion of casting]({{<ref "1-object-orientation/02-polymorphism/05-casting.md">}}).  This allows us to extract the _cast_ version of a variable and assign it to a new one:
+We've already seen the pattern-matching is operator [in our discussion of casting]({{% ref "1-object-orientation/02-polymorphism/05-casting.md" %}}).  This allows us to extract the _cast_ version of a variable and assign it to a new one:
 
 ```csharp
 if(oldVariable is SpecificType newVariable)

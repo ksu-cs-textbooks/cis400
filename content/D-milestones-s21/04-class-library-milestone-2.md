@@ -162,7 +162,7 @@ The `SpecialInstructions` should always be an empty list.
 All of your entree classes will need to be refactored (edited) to inherit from the `Entree` base class.
 
 ## Side Tests 
-You will need to write unit tests for each of your `Side` methods.  These should be defined in the _DataTest_ project, in the `TheFlyingSaucer.DataTests.Sides` namespace.  The unit tests should be provided with assertions to verify the behavior specified for the sides above.  Refer back to the discussion of [writing tests]({{<ref "1-object-orientation/04-testing/04-writing-tests">}}) and [XUnit assertions]({{<ref "1-object-orientation/04-testing/05-xunit-assertions">}}), as well as the entree class for ideas.  Note that you will need to supply appropriate `[InlineData]` attributes for any theory test methods.
+You will need to write unit tests for each of your `Side` methods.  These should be defined in the _DataTest_ project, in the `TheFlyingSaucer.DataTests.Sides` namespace.  The unit tests should be provided with assertions to verify the behavior specified for the sides above.  Refer back to the discussion of [writing tests]({{% ref "1-object-orientation/04-testing/04-writing-tests" %}}) and [XUnit assertions]({{% ref "1-object-orientation/04-testing/05-xunit-assertions"  %}}), as well as the entree class for ideas.  Note that you will need to supply appropriate `[InlineData]` attributes for any theory test methods.
 
 <hr/>
 
@@ -223,7 +223,7 @@ Implement a class to test the You're Toast!, named `YoureToastTests` in the file
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments 
-* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s).
 
 Enum Classes 
@@ -240,7 +240,7 @@ Test Classes
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{% ref "b-git-workflows/01-introduction" %}})
 
   * Keep in mind the version!!!
 

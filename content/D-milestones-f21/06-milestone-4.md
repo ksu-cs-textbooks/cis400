@@ -83,77 +83,77 @@ public void ShouldHaveTheRightNameForSizeAndFlavor(Size size, AquariusIceFlavor 
 
 #### VirgoClassicGyroTests
 Create an XUnit test class, `VirgoClassicGyroTests` with the following test methods:
-* `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `VirgoClassicGyro` match the defaults set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}. 
-* `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void SpecialInstructionsShouldReflectIngredients(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `VirgoClassicGyro` match the defaults set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}. 
+* `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void SpecialInstructionsShouldReflectIngredients(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
 
 #### LeoLambGyroTests
 Create an XUnit test class, `LeoLambGyroTests` with the following test methods:
-* `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `LeoLambGyro` match the defaults set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}. 
-* `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `LeoLambGyro` match the defaults set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}. 
+* `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
         
 #### ScorpioSpicyGyroTests
 Create an XUnit test class, `SpicyScorpioGyroTests` with the following test methods:
-* `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `SpicyScorpioGyro` match the defaults set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}. 
-* `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void DefaultIngredientsShouldBeCorrect()` - verifies the boolean & enum properties of a newly constructed `SpicyScorpioGyro` match the defaults set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}. 
+* `public void PriceShouldBeCorrect()` - verifies the price matches the value set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrect(DonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, uint calories)` - verifies the calories match the values set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void SpecialInstructionsShouldReflectIngredientsDonerMeat meat, bool pita, bool tomato, bool peppers, bool eggplant, bool onion, bool lettuce, bool tzatziki, bool wingSauce, bool mintChutney, string[] expected)` - verifies the special instructions match the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
         
 #### PiscesFishDishTests
 Create an XUnit test class, `PiscesFishDishTests` with the following test methods:
-* `public void PriceShouldBeCorrect()` - verifies the price matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrect()` - verifies the calories matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void PriceShouldBeCorrect()` - verifies the price matches the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrect()` - verifies the calories matches the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
 * `public void SpecialInstructionsShouldBeEmpty()` - verifies the special instructions is an empty collection.
 
 #### AresFriesTests
 Create an XUnit test class, `AriesFriesTests` with the following test methods:
 * `public void SizeShouldDefaultToSmall()` - verifies a newly created `AriesFries` is small.
 * `public void ShouldBeAbleToSetSize(Size size)` - verifies an `AriesFries` can be set to be small, medium, or large.
-* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `AriesFries` set to the specified size matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `AresFries` set to the the specified size the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `AriesFries` set to the specified size matches the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `AresFries` set to the the specified size the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
 
 #### GeminiStuffedGrapeLeavesTests
 Create an XUnit test class, `GeminiStuffedGrapeLeavesTests` with the following test methods:
 * `public void SizeShouldDefaultToSmall()` - verifies a newly created `GeminiStuffedGrapeLeaves` is small.
 * `public void ShouldBeAbleToSetSize(Size size)` - verifies an `GeminiStuffedGrapeLeaves` can be set to be small, medium, or large.
-* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `GeminiStuffedGrapeLeaves` set to the specified size matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `GeminiStuffedGrapeLeaves` set to the the specified size the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `GeminiStuffedGrapeLeaves` set to the specified size matches the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `GeminiStuffedGrapeLeaves` set to the the specified size the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
 
 #### SagittariusGreekSaladTests
 Create an XUnit test class, `SagittariusGreekSaladTests` with the following test methods:
 * `public void SizeShouldDefaultToSmall()` - verifies a newly created `SagittariusGreekSalad` is small.
 * `public void ShouldBeAbleToSetSize(Size size)` - verifies an `SagittariusGreekSalad` can be set to be small, medium, or large.
-* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `SagittariusGreekSalad` set to the specified size matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `SagittariusGreekSalad` set to the the specified size the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `SagittariusGreekSalad` set to the specified size matches the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `SagittariusGreekSalad` set to the the specified size the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
 
 #### TaurusTabulehTests
 Create an XUnit test class, `TaurusTabulehTests` with the following test methods:
 * `public void SizeShouldDefaultToSmall()` - verifies a newly created `TaurusTabuleh` is small.
 * `public void ShouldBeAbleToSetSize(Size size)` - verifies an `TaurusTabuleh` can be set to be small, medium, or large.
-* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `TaurusTabuleh` set to the specified size matches the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
-* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `TaurusTabuleh` set to the the specified size the expectation set out in [Milestone 2]{{<ref "D-Milestones-f21/04-milestone-2">}}.
+* `public void PriceShouldBeCorrectForSize(Size size, decimal price)` - verifies the price for an `TaurusTabuleh` set to the specified size matches the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
+* `public void CaloriesShouldBeCorrectForSize(Size size, uint calories)` - verifies the calories for an `TaurusTabuleh` set to the the specified size the expectation set out in [Milestone 2]{{% ref "D-Milestones-f21/04-milestone-2" %}}.
 
 #### CancerHelvahCakeCakeTests
 Create an XUnit test class, `CancerHelvahCakeTests` with the following test methods:
-* `public void PriceShouldBeCorrect()` - verifies a newly created `CancerHevlahCake` has the price specified in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}
-* `public void CaloriesShouldBeCorrect()` - verifies a newly created `CancerHevlahCake` has the calories specified in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}
+* `public void PriceShouldBeCorrect()` - verifies a newly created `CancerHevlahCake` has the price specified in [Milestone 3]{{% ref "D-Milestones-f21/05-milestone-3" %}}
+* `public void CaloriesShouldBeCorrect()` - verifies a newly created `CancerHevlahCake` has the calories specified in [Milestone 3]{{% ref "D-Milestones-f21/05-milestone-3" %}}
 
 #### LibraLibationTests
 Create an XUnit test class, `LibraLibationTests` with the following test methods:
 * `public void ShouldDefaultToSparkling()` - verifies a newly created `LibraLibationTest` defaults to sparkling.
 * `public void ShouldBeAbleToSetSparkling(bool sparkling)` verifies that you can set a `LibraLibation` sparkling property to `true` or `false`.
 * `public void ShouldBeAbleToSetFlavor(LibraLibationFlavor flavor)` - verifies you can set the `Flavor` property of a `LibraLibation` to any of the `LibraLibationFlavor` enum values.
-* `public void PriceShouldBeCorrectForFlavor(LibraLibationFlavor flavor, decimal price)` - verifies the price of a `LibraLibation` set to the specified flavor and sparkling matches the expectation specified in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}.
-* `public void CaloriesShouldBeCorrectForFlavor(LibraLibationFlavor flavor, uint calories)` - verifies the calories of a `LibraLibation` set to the specified flavor and sparkling matches the expectation specified in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}.
-* `public void NameShouldBeCorrectForFlavorAndSparkling(LibraLibationFlavor flavor, bool sparkling, string name)` - verifies the name of a `LibraLibation` set to the specified flavor and sparkling matches the expectation specified in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}.
+* `public void PriceShouldBeCorrectForFlavor(LibraLibationFlavor flavor, decimal price)` - verifies the price of a `LibraLibation` set to the specified flavor and sparkling matches the expectation specified in [Milestone 3]{{% ref "D-Milestones-f21/05-milestone-3" %}}.
+* `public void CaloriesShouldBeCorrectForFlavor(LibraLibationFlavor flavor, uint calories)` - verifies the calories of a `LibraLibation` set to the specified flavor and sparkling matches the expectation specified in [Milestone 3]{{% ref "D-Milestones-f21/05-milestone-3" %}}.
+* `public void NameShouldBeCorrectForFlavorAndSparkling(LibraLibationFlavor flavor, bool sparkling, string name)` - verifies the name of a `LibraLibation` set to the specified flavor and sparkling matches the expectation specified in [Milestone 3]{{% ref "D-Milestones-f21/05-milestone-3" %}}.
                 
 #### CapricornMountainTeaTests
 Create an XUnit test class, `LibraLibationTests` with the following test methods:
-* `public void PriceShouldBeCorrectForHoney(bool honey, decimal price)` - verifies the price of a `CapricornMountainTea` with or without honey (as specified) matches the price expectation set out in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}.
-* `public void CaloriesShouldBeCorrectForHoney(bool honey, uint calories)` - verifies the calories of a `CapricornMountainTea` with or without honey (as specified) matches the price expectation set out in [Milestone 3]{{<ref "D-Milestones-f21/05-milestone-3">}}.
+* `public void PriceShouldBeCorrectForHoney(bool honey, decimal price)` - verifies the price of a `CapricornMountainTea` with or without honey (as specified) matches the price expectation set out in [Milestone 3]{{% ref "D-Milestones-f21/05-milestone-3" %}}.
+* `public void CaloriesShouldBeCorrectForHoney(bool honey, uint calories)` - verifies the calories of a `CapricornMountainTea` with or without honey (as specified) matches the price expectation set out in [Milestone 3]{{% ref "D-Milestones-f21/05-milestone-3" %}}.
         
 
 ### UML Diagram
@@ -171,19 +171,19 @@ You will be creating a UML diagram for your `Data` project _based on your projec
 * The appropriate associations connecting any boxes that should show a connection, i.e. a solid arrow connecting derived classes to the base class they are derived from (generalization)
     * These arrows must point the correct direction for the association they represent
 
-You should refer to the [UML]({{<ref "1-object-orientation/05-uml">}}) chapter for guidance
+You should refer to the [UML]({{% ref "1-object-orientation/05-uml" %}}) chapter for guidance
 
-Be sure to include the completed UML diagram in your repository.  The [Adding Documentation Files]({{<ref "B-git-and-github/12-adding-documentation-files">}}) section of the Git and GitHub appendix discusses how to do this.
+Be sure to include the completed UML diagram in your repository.  The [Adding Documentation Files]({{% ref "B-git-and-github/13-adding-documentation-files" %}}) section of the Git and GitHub appendix discusses how to do this.
 
 **Note: You do not need to create a UML diagram of your `DataTest` project, though you can if you want.**
 
 ## The Milestone Feature Branch 
 
-You will want to [create a feature branch and push it to GitHub]({{<ref "D-milestones-f21/02-feature-branches">}}) for your validations to be generated on https://pendant.cs.ksu.edu.  For this milestone, your feature branch should be named `ms4`.  
+You will want to [create a feature branch and push it to GitHub]({{% ref "D-milestones-f21/02-feature-branches" %}}) for your validations to be generated on https://pendant.cs.ksu.edu.  For this milestone, your feature branch should be named `ms4`.  
 
 ## Submitting the Assignment
 
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

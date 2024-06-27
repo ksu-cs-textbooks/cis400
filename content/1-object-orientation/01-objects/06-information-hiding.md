@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Now let's return to the concept of [information hiding](https://en.wikipedia.org/wiki/Information_hiding), and how it applies in object-oriented languages.
 
-Unanticipated changes in state are a major source of errors in programs. Again, think back to the EPIC source code we [looked at earlier]({{<ref "1-object-orientation/00-introduction/04-language-evolution">}}). It may have seemed unusual now, but it used a common pattern from the early days of programming, where _all_ the variables the program used were declared in one spot, and were _global_ in scope (i.e. any part of the program could reassign any of those variables).
+Unanticipated changes in state are a major source of errors in programs. Again, think back to the EPIC source code we [looked at earlier]({{% ref "1-object-orientation/00-introduction/04-language-evolution" %}}). It may have seemed unusual now, but it used a common pattern from the early days of programming, where _all_ the variables the program used were declared in one spot, and were _global_ in scope (i.e. any part of the program could reassign any of those variables).
 
 If we consider the program as a state machine, that means that any part of the program code could change any part of the program state.  Provided those changes were intended, everything works fine. But if the _wrong_ part of the state was changed problems would ensue.
 

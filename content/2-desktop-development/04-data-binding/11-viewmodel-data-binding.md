@@ -10,7 +10,7 @@ As Microsoft developed Windows Presentation Framework, they sought to address so
 
 Specifically, Microsoft architects Ken Cooper and Ted Peters introduced a new software archtectural pattern to leverage when writing WPF controls, [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel).  This approach splits the user interface code into two classes: the View (the XAML + codebehind), and a ViewModel, which converts the actual model objects into a form more easily bound and consumed by the view.
 
-![MVVM Pattern]({{<static "images/MVVMPattern.png">}})
+![MVVM Pattern](images/MVVMPattern.png)
 
 Consider the challenge we had in binding an enum to radio buttons.  Neither of the two solutions we came up with were exactly ideal.  The first added additional, otherwise unneeded properties to the `Person` class, and the other used the rather arcane `IValueConverter` implementation.  Had we used the M-V-VM pattern, we would have placed the responsiblity for conversion on a custom Viewmodel class, which would not have polluted our `Person` class with extra methods and would have bound cleanly to the radio buttons with no messy converters.
 
@@ -35,7 +35,7 @@ Since the `CashDrawer` seperates its data into the different denominations, it m
 
 Here is a mockup of what I am thinking:
 
-![Currency User Interface]({{<static "images/CurrencyUI.png">}})
+![Currency User Interface](images/CurrencyUI.png)
 
 ## Creating the ModelView Class 
 

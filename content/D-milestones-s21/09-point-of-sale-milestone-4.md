@@ -88,11 +88,11 @@ Thus, the `RoundRegister.CashDrawer` is the _Model_, your intermediary class is 
 
 A possible configuration for the cash payment control might be:
 
-![Cash Payment Control Mockup]({{<static "images/CashPayment.png">}})
+![Cash Payment Control Mockup](images/CashPayment.png)
 
 Note that this kind of control could be composed of other custom controls, i.e. a `CurrencyControl` that exposes a `Label`, `CustomerQuantity`, `ChangeQuantity` dependency properties and looks something like:
 
-![Currency Control Mockup]({{<static "images/CurrencyControl.png">}})
+![Currency Control Mockup](images/CurrencyControl.png)
 
 While the exact appearance and functionality of the GUI is up to you, it should provide a "Return to Order" button which returns to the order to allow changes to be made, as well as a "Finalize Sale" which should invoke the method you defined in your intermediate class for finalizing the sale.  Once this has finished, you should print the receipt and begin a new order (see the details on _Canceling the Order_ above for details).
 
@@ -130,7 +130,7 @@ Since you will not be able to replace the `CashDrawer` with a mock instance, you
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments
-* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in XAML files**
 
 Canceling the Order 

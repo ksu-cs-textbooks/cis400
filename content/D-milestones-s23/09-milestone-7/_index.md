@@ -82,7 +82,7 @@ This method can then be called in derived classes to indicate a property is chan
 {{% /notice %}}
 
 #### Testing your INotifyPropertyChanged Implementation
-To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions">}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
+To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions" %}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
 
 Here is an example using the `SaucerFuel`:
 
@@ -110,7 +110,7 @@ public void ChangingSizeShouldNotifyOfPropertyChanges(ServingSize size, string p
 Remember that calculated properties will change _based on the property they are calculated from_, and you must also test for these.  I.e. on the sides, you might have a test method `PricePropertyChangedWhenSizeChanges(Size size)`.  Alternatively, you could combine multiple property checks into one test, i.e. `ShouldNotifyOfPropertyChangedWhenSizeChanges(Size size, string propertyName)` (as in the example above) and supply the names of the separate properties through `[InlineData]`.
 {{% /notice %}}
 
-Additionally, it is important to test that the menu item classes implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions">}}), i.e.:
+Additionally, it is important to test that the menu item classes implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions" %}}), i.e.:
 
 ```csharp
 public void ShouldImplementINotifyChanged()
@@ -159,7 +159,7 @@ You will need to update your UML diagrams to reflect the changes you have made t
 
 ## Submitting the Assignment
 
-Once your project is complete [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.7.0` with name `"Milestone 7"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.7.0` with name `"Milestone 7"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

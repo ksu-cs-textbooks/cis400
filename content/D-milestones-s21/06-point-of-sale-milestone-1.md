@@ -18,7 +18,7 @@ With the Point of Sale project, we want to encourage you to go above and beyond 
 
 Accordingly, every semester we award prizes (Radina's Gift Cards) for the best POS design.  This will be judged by your TAs, and will be decided at the last milestone in the Point of Sale project (POS #4).  To be a serious contender though, you should start your efforts with this milestone.
 
-Also, the departmental graphic designer has prepared images that may be used in your Point of Sale.  You can find them on Canvas or download them [here]({{<static "files/FlyingSaucerMenuArt.zip">}}).
+Also, the departmental graphic designer has prepared images that may be used in your Point of Sale.  You can find them on Canvas or download them [here](files/FlyingSaucerMenuArt.zip).
 {{% /notice %}}
 
 ### General requirements:
@@ -47,22 +47,22 @@ This assignment is intended to introduce you to Microsoft's Windows Presentation
 
 Most of this class is concerned with creating custom components which bundle related functionality into a single custom control.  These are created by extending the `UserControl` class found in WPF, and embedding controls into other controls, either by nesting them within XAML, or by adding them programmatically.  The goal is to create a complete user interface for the Point of Sale system.  The initial screen might look something like:
 
-![Example POS Main Screen]({{<static "images/d.6.1.png">}})
+![Example POS Main Screen](images/d.6.1.png)
 
 And pressing a button like the "Flying Saucer" button would add a Flying Saucer instance to the order (to be done next milestone) and will open a customization screen:
 
-![Example POS Customization Screen]({{<static "images/d.6.2.png">}})
+![Example POS Customization Screen](images/d.6.2.png)
 
 Which displays the customization options for the selected menu item.  The "Done" button in this screen will then return back to the main screen.  
 
 In this arrangement, we might see three components (The MainWindow, an order component that manages the overall order, and either the menu item selection screen, or a customization screen for a specific element):
 
-![Example Components of the POS]({{<static "images/d.6.3.png">}})
+![Example Components of the POS](images/d.6.3.png)
 
 Making the menu item selection screen and the customization screens children (i.e. a composition association) of the `OrderComponent` greatly simplifies managing the swapping between the various screens as changes are being made to the order - though this is certainly not the only way of setting up the application.
 
 {{% notice tip %}}
-Note that this example is only one possible direction for your design to go.  The requirement is simply to display the order being built and provide the option to customize the menu item with its specific customizations.  If you would like to organize your application differently, use different controls, add images, multimedia, animations, or use a completely different approach - you are free to do so!  Doing so will make it more likely your Point of Sale will stand out from the rest of the class.  Our department graphic designer has created some [art resources]({{<static "files/FlyingSaucerMenuArt.zip">}}) you may choose to use in your project.
+Note that this example is only one possible direction for your design to go.  The requirement is simply to display the order being built and provide the option to customize the menu item with its specific customizations.  If you would like to organize your application differently, use different controls, add images, multimedia, animations, or use a completely different approach - you are free to do so!  Doing so will make it more likely your Point of Sale will stand out from the rest of the class.  Our department graphic designer has created some [art resources](files/FlyingSaucerMenuArt.zip) you may choose to use in your project.
 {{% /notice %}}
 
 Because of the flexibility offered in WPF and in this assignment, we are not requiring specific classes be written, but rather bundles of _functionality_ (which you _will_ probably want to collect into custom components built of classes extending the `UserControl` base class).  We'll break down this required functionality according to these suggested components next:
@@ -123,7 +123,7 @@ You will also need to provide a button or other means to return to the menu item
 
 For each button in your Menu Selection Screen, pressing that button should display the corresponding customization screen.  From the customization screen, clicking the "done" button should display the menu selection screen.  Further, this should be done without creating a memory leak (i.e. creating new screens and adding them to the elements tree as children of existing elements). The diagram below shows both desirable and undesirable element tree shapes as the user navigates the system:
 
-![Good and Bad Elements Tree Shapes From Navigation]({{<static "images/d.6.4.png">}})
+![Good and Bad Elements Tree Shapes From Navigation](images/d.6.4.png)
 
 Note that you can still create new screens each navigation event and rely on the garbage collector to clean them up - you just need to ensure that references are no longer held for them (in which case you have a memory leak).  Or you can re-use screens you've already created.  Either approach will result in reasonable results.
 
@@ -138,7 +138,7 @@ Also, if you made any modifications to the data project, remember to update its 
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments
-* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in XAML files**
 
 Order Component
@@ -166,4 +166,4 @@ UML Diagram
 
   * Your release tag for this project should start a new major version, i.e. if your library milestones were **v.0.1.0, v0.2.0, and v0.3.0**, this release will be **v1.0.0**.  Likewise, if you started with version 1, this will be version 2.
 
-  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{% ref "b-git-workflows/01-introduction" %}})

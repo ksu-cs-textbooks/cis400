@@ -112,4 +112,4 @@ $ git merge ms0
 $ git push origin main
 ```
 
-After that, you'll need to [create a release]({{<ref "b-git-and-github/12-release">}}) to turn in.
+After that, you'll need to [create a release]({{% ref "b-git-and-github/12-release" %}}) to turn in.

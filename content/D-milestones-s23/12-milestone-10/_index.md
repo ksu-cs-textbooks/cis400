@@ -76,7 +76,7 @@ Searching should consider the name of the item.  The search should be _case inse
 You should add tests to verify that the search and filtering functions operate as expected. Remember to test both valid and null values for all parameters.  Pay special attention to the search function - it should behave as described above.  You may want to use the exact described scenarios as part of your tests.
 
 ## Submitting the Assignment
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.10.0` with name `"Milestone 10"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.10.0` with name `"Milestone 10"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

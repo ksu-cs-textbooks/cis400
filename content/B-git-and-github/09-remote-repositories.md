@@ -55,7 +55,7 @@ This copies any commits on the GitHub repository into the Home PC repository:
 ![Home PC with extra commit](/images/b.9.4.png)
 
 {{% notice warning %}}
-If you push or pull changes to a repository that has extra commits, Git merges the extra commits with the pushed ones (as with the **merge** command).  This can introduce the possibility of _merge conflicts_ when Git is uncertain how to best combine two changes.  These must be resolved by you as described in the [merge conflict]({{<ref "b-git-and-github/11-merge-conflicts">}}) section.  For this reason, it is _always_ best practice to pull changes into your local branch, fix any merge conflicts, create a new commit, and only then push it to the remote repository.  This ensures that the main branch code is always in good shape.
+If you push or pull changes to a repository that has extra commits, Git merges the extra commits with the pushed ones (as with the **merge** command).  This can introduce the possibility of _merge conflicts_ when Git is uncertain how to best combine two changes.  These must be resolved by you as described in the [merge conflict]({{% ref "b-git-and-github/11-merge-conflicts" %}}) section.  For this reason, it is _always_ best practice to pull changes into your local branch, fix any merge conflicts, create a new commit, and only then push it to the remote repository.  This ensures that the main branch code is always in good shape.
 {{% /notice %}}
 
 ### Remote Repositories

@@ -26,7 +26,7 @@ The purpose of this assignment is to set up your local repository, practice work
 
 ### Recommendations:
 
-Unlike future milestones, this milestone should not take very long to complete, provided you follow the steps outlined.  You'll likely want to come back and revisit the [feature branches]({{<ref "D-milestones-f21/02-feature-branches">}}) as well as this page as you work on future assignments.
+Unlike future milestones, this milestone should not take very long to complete, provided you follow the steps outlined.  You'll likely want to come back and revisit the [feature branches]({{% ref "D-milestones-f21/02-feature-branches" %}}) as well as this page as you work on future assignments.
 
 ### Part 1 - Accept the GitHub Assignment and Clone your Repo
 
@@ -42,9 +42,9 @@ It is common practice to indicate a terminal cursor with the `$` - but it is _no
 
 Where `[repoURL]` is the clone repo from GitHub:
 
-[The GitHub Clone URL]({{<static "images/b.3.1.png">}})
+[The GitHub Clone URL](images/b.3.1.png)
 
-This task is covered in more detail in the section on [remote repositories]({{<ref "B-git-and-github/09-remote-repositories">}})
+This task is covered in more detail in the section on [remote repositories]({{% ref "B-git-and-github/09-remote-repositories" %}})
 
 ### Part 2 - Linking your GitHub Account with Pendant 
 
@@ -103,7 +103,7 @@ The first time you do this, it will also create the `origin/ms1` branch on GitHu
 This push will also trigger the webhook you created in step 2.  You can visit https://pendant.cs.ksu.edu/Validations to see your feedback.  If you've missed something, you can make changes and do another commit and push.
 
 {{% notice tip %}}
-If you need to pull this remote branch into another local repo (say you created the branch in the lab but now you are on your home computer), the process is covered in the [previous section]({{<ref "D-milestones-f21/02-feature-branches#pulling-a-remote-feature-branch-to-another-local-machine">}})
+If you need to pull this remote branch into another local repo (say you created the branch in the lab but now you are on your home computer), the process is covered in the [previous section]({{% ref "D-milestones-f21/02-feature-branches#pulling-a-remote-feature-branch-to-another-local-machine" %}})
 {{% /notice %}}
 
 The following video walks through Parts 3 & 4 in a step-by-step manner:
@@ -135,7 +135,7 @@ $ git merge ms1
 After this, your `main` branch contains all the code changes from your `ms1` branch.  
 
 {{% notice note %}}
-Unless you have made changes to your `main` branch in the meantime, this should go smoothly.  If you have changed `main` as well, it is possible that Git may encounter a section of code where changes have been made on both branches, and it is uncertain of how to merge them.  In this case you will need to [resolve the merge conflicts]{{<ref "B-git-and-github/10-merge-conflicts">}} and create a new commit with the resolution before moving on.
+Unless you have made changes to your `main` branch in the meantime, this should go smoothly.  If you have changed `main` as well, it is possible that Git may encounter a section of code where changes have been made on both branches, and it is uncertain of how to merge them.  In this case you will need to [resolve the merge conflicts]{{% ref "B-git-and-github/11-merge-conflicts" %}} and create a new commit with the resolution before moving on.
 {{% /notice %}}
 
 Now you can push your `main` branch to GitHub:
@@ -144,4 +144,4 @@ Now you can push your `main` branch to GitHub:
 $ git push origin main
 ```
 
-And [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.1.0` with name `"Milestone 1"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+And [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.1.0` with name `"Milestone 1"`.  Copy the URL for the release page and submit it to the Canvas assignment.

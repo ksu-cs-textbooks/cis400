@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 When you are ready to turn in an assignment, you will need to create a _release tag_.  A _tag_ is nothing more than a specially named commit, and a _release_ is a special tag created on GitHub to mark a specific version of the software.
 
 ## Step 1 - Make sure _All_ your code is on GitHub
-Since releases are created on GitHub, it is important to make sure you've [committed your changes]({{<ref "b-git-and-github/05-staging-and-committing">}}) and have [pushed them to GitHub]({{<ref "b-git-and-github/09-remote-repositories">}}) before you create the release.  You can check that all changes have been committed and pushed with the command:
+Since releases are created on GitHub, it is important to make sure you've [committed your changes]({{% ref "b-git-and-github/05-staging-and-committing"%}}) and have [pushed them to GitHub]({{%ref "b-git-and-github/09-remote-repositories" %}}) before you create the release.  You can check that all changes have been committed and pushed with the command:
 
 ```
 $ git status
@@ -21,7 +21,7 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-Then you are good to go.  On the other hand, if you get the message `Your branch is # commits ahead of 'origin/main'`, then you need to [push to master]({{<ref "b-git-and-github/09-remote-repositories#pushing">}}), and if any files are listed as uncommitted, you first need to [commit them]({{<ref  "b-git-and-github/05-staging-and-committing#committing-changes">}}).
+Then you are good to go.  On the other hand, if you get the message `Your branch is # commits ahead of 'origin/main'`, then you need to [push to master]({{% ref "b-git-and-github/09-remote-repositories#pushing" %}}), and if any files are listed as uncommitted, you first need to [commit them]({{% ref  "b-git-and-github/05-staging-and-committing#committing-changes"  %}}).
 
 ## Step 2 - Navigate to the Releases on GitHub
 Next, open your repository on Github.  Towards the right side of the page you should see a link labeled "Create a new release".  Click it.

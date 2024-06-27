@@ -37,11 +37,11 @@ After some internal debate in the marketing department, GyroScope has decided to
 
 You will create a new project, named `PointOfSale` in your `GyroScope` solution.  This project **must be a .NET Core 5.0 WPF App**, as is shown in the images below:
 
-![Selecting .NET Core WPF App from the New Project Wizard]({{<static "images/d.f21.7.1.png">}})
+![Selecting .NET Core WPF App from the New Project Wizard](images/d.f21.7.1.png)
 
-![Naming the project in the New Project Wizard]({{<static "images/d.f21.7.2.png">}})
+![Naming the project in the New Project Wizard](images/d.f21.7.2.png)
 
-![Selecting .NET Core 5.0 as the Target Framework from the New Project Wizard]({{<static "images/d.f21.7.3.png">}})
+![Selecting .NET Core 5.0 as the Target Framework from the New Project Wizard](images/d.f21.7.3.png)
 
 If you do not have this option, you may need to update your installation of Visual Studio and add the Desktop Workflow.  These steps are laid out below.
 
@@ -49,7 +49,7 @@ If you do not have this option, you may need to update your installation of Visu
 
 To update Visual Studio, select `Help > Check for Updates`:
 
-![Help > Check for Updates]({{<static "images/d.f21.7.4.png">}})
+![Help > Check for Updates](images/d.f21.7.4.png)
 
 This will launch the Visual Studio installer and it will check for a newer version and prompt you to install it if there is one.
 
@@ -57,7 +57,7 @@ This will launch the Visual Studio installer and it will check for a newer versi
 
 To install the Desktop Workflow, select `Tools > Get Tools and Features...`.  This will open the Visual Studio installer in modification mode.  Make sure the **.NET Desktop Development** workflow is checked.  If it isn't, check it and click the **Modify** button.
 
-![.NET Desktop Development Workflow]({{<static "images/d.f21.7.5.png">}})
+![.NET Desktop Development Workflow](images/d.f21.7.5.png)
 
 As some students find a video walkthrough more approachable, here is the same material in video tutorial form:
 
@@ -67,17 +67,17 @@ As some students find a video walkthrough more approachable, here is the same ma
 
 Most of this assignment is concerned with creating custom components which bundle related functionality into a single custom control.  These are created by extending the `UserControl` class found in WPF, and embedding controls into other controls, either by nesting them within XAML, or by adding them programmatically.  The goal is to create a complete user interface for the Point of Sale system.  The initial screen might look something like:
 
-![Example POS Main Screen]({{<static "images/d.f21.7.6.png">}})
+![Example POS Main Screen](images/d.f21.7.6.png)
 
 And pressing a button like the "Scorpio Spicy Gyro" button would add a Scorpio Spicy Gyro instance to the order (to be done next milestone) and will open a customization screen:
 
-![Example POS Customization Screen]({{<static "images/d.f21.7.7.png">}})
+![Example POS Customization Screen](images/d.f21.7.7.png)
 
 Which displays the customization options for the selected menu item.  The "Select Items" button in this screen will then return back to the menu item selection screen.  
 
 In this arrangement, we see three components (The `MainWindow` which is _composed_ of the other controls and manages the overall layout, an `OrderSummaryControl` that displays the order details, and either the `MenuItemSelectionControl`, or an item customization control for a specific menu item):
 
-![Example Components of the POS]({{<static "images/d.f21.7.8.png">}})
+![Example Components of the POS](images/d.f21.7.8.png)
 
 Making the `MenuItemSelectionControl` and the customization screens children (i.e. a composition association) of the `MainWindow` greatly simplifies managing the swapping between the various screens as changes are being made to the order - though this is certainly not the only way of setting up the application.
 
@@ -151,11 +151,11 @@ Also, if you made any modifications to the data project, remember to update its 
 
 ## The Milestone Feature Branch 
 
-You will want to [create a feature branch and push it to GitHub]({{<ref "D-milestones-f21/02-feature-branches">}}) for your validations to be generated on https://pendant.cs.ksu.edu.  For this milestone, your feature branch should be named `ms5`.  
+You will want to [create a feature branch and push it to GitHub]({{% ref "D-milestones-f21/02-feature-branches" %}}) for your validations to be generated on https://pendant.cs.ksu.edu.  For this milestone, your feature branch should be named `ms5`.  
 
 ## Submitting the Assignment
 
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.5.0` with name `"Milestone 5"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.5.0` with name `"Milestone 5"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

@@ -96,7 +96,7 @@ In addition, you will need to show:
 
 One possible layout appears below:
 
-![Suggested Order control layout]({{<static "images/d.8.1.png">}})
+![Suggested Order control layout](images/d.8.1.png)
 
 The displayed order should update all of this displayed information as it changes.  If you use data binding for binding the `Order` properties, and have implemented the `CollectionChanged` and `PropertyChanged` events as described above, this should happen automatically, with no further code required from you.
 
@@ -121,7 +121,7 @@ You will need to update your UML diagrams to reflect the changes you have made t
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments
-* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in XAML files**
 
 INotifyPropertyChanged implementation
@@ -168,4 +168,4 @@ UML Diagram
 
   * Your release tag for this project should be a new minor version, i.e. if your first Point of Sale milestone was **v.1.0.0**, this release will be **v1.2.0**.
 
-  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{% ref "b-git-workflows/01-introduction" %}})

@@ -125,7 +125,7 @@ In addition, you will need to show:
 
 One possible layout appears below:
 
-![Suggested Order control layout]({{<static "images/d.f21.9.1.png">}})
+![Suggested Order control layout](images/d.f21.9.1.png)
 
 The displayed order should update all of this displayed information as it changes.  If you use data binding for binding the `Order` properties, and have implemented the `CollectionChanged` and `PropertyChanged` events as described above, this should happen automatically, with no further code required from you.
 
@@ -151,7 +151,7 @@ You will need to update your UML diagrams to reflect the changes you have made t
 
 ## Submitting the Assignment
 
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.7.0` with name `"Milestone 7"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.7.0` with name `"Milestone 7"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

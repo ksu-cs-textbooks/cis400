@@ -88,11 +88,11 @@ Thus, the `RoundRegister.CashDrawer` is the _Model_, your intermediary class is 
 
 A possible configuration for the cash payment control might be:
 
-![Cash Payment Control Mockup]({{<static "images/CashPayment.png">}})
+![Cash Payment Control Mockup](images/CashPayment.png)
 
 Note that this kind of control could be composed of other custom controls, i.e. a `CurrencyControl` that exposes a `Label`, `CustomerQuantity`, `ChangeQuantity` dependency properties and looks something like:
 
-![Currency Control Mockup]({{<static "images/CurrencyControl.png">}})
+![Currency Control Mockup](images/CurrencyControl.png)
 
 While the exact appearance and functionality of the GUI is up to you, it should provide a "Return to Order" button which returns to the order to allow changes to be made, as well as a "Finalize Sale" which should invoke the method you defined in your intermediate class for finalizing the sale.  Once this has finished, you should print the receipt and begin a new order (see the details on _Canceling the Order_ above for details).
 
@@ -133,7 +133,7 @@ In addition to the automated tests, you should write a _test plan_ document for 
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Create a Release page]({{<ref "b-git-and-github/11-release">}})
+  * If you do not remember how to do this, please revisit the [Create a Release page]({{% ref "b-git-and-github/12-release" %}})
 
   * Keep in mind the version!!!
 

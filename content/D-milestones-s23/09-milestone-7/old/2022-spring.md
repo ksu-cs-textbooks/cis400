@@ -140,7 +140,7 @@ You will need to update your UML diagrams to reflect the changes you have made t
 
 ## Submitting the Assignment
 
-Once your project is complete [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.7.0` with name `"Milestone 7"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.7.0` with name `"Milestone 7"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

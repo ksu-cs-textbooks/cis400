@@ -14,7 +14,7 @@ As we are creating a project iteratively this semester, it is a good chance to p
 
 ## Using Remote-Tracking Feature Branches
 
-In the GitHub section, we talked about both [feature branches]({{<ref "B-git-and-github/08-branches">}}) _and_ [remote repositories]({{<ref "B-git-and-github/09-remote-repositories">}}).  It is important to understand that when you create a branch, you do so in the _local_ (i.e. on your machine) repository.  
+In the GitHub section, we talked about both [feature branches]({{% ref "B-git-and-github/08-branches" %}}) _and_ [remote repositories]({{% ref "B-git-and-github/09-remote-repositories"  %}}).  It is important to understand that when you create a branch, you do so in the _local_ (i.e. on your machine) repository.  
 
 For example, if you wanted to create a feature branch for data milestone 1, you would use this Git command on your development machine:
 
@@ -105,4 +105,4 @@ And push the newly expanded main branch to GitHub:
 $ git push origin main
 ```
 
-After which you'll need to [create a release]({{<ref "b-git-and-github/11-release">}}) to turn in.
+After which you'll need to [create a release]({{% ref "b-git-and-github/12-release" %}}) to turn in.

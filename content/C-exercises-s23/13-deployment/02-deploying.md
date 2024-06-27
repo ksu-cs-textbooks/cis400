@@ -6,7 +6,7 @@ date: 2018-08-24T10:53:26-05:00
 ---
 
 Before you start this exercise, you should:
-1. Set up your Azure account (see the [previous section]({{<ref "C-exercises-s23/13-deployment/01-azure.md">}})).
+1. Set up your Azure account (see the [previous section]({{% ref "C-exercises-s23/13-deployment/01-azure.md" %}})).
 2. [Sign into Visual Studio](https://docs.microsoft.com/en-us/visualstudio/ide/signing-in-to-visual-studio?view=vs-2019) using the same account as you used for Azure
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rFgET9SLZTk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

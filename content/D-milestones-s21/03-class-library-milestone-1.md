@@ -229,7 +229,7 @@ Similarly, you should not have warnings when you compile.  Uncorrected warnings 
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments 
-* -1 point for every public member not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s).
 
 Enum Classes 

@@ -38,7 +38,7 @@ This milestone serves to introduce and utilize aspects of polymorphism including
 
 * Accuracy is _important_.  Your class, property, enumeration and other names, along with the descriptions _must match the specification given here_.  Otherwise, your code is **not correct**.  While typos may be a small issue in writing intended for human consumption, in computer code _it is a big problem!_ 
 
-* Remember that you must document your classes.  This was covered in prior courses and also discussed in [chapter 3]({{<ref "1-object-orientation/03-documentation">}}) of your textbook.
+* Remember that you must document your classes.  This was covered in prior courses and also discussed in [chapter 3]({{% ref "1-object-orientation/03-documentation" %}}) of your textbook.
 
 * The KSU.CS.CodeAnalyzers NuGet package installed in your project will automatically flag issues for naming and commenting conventions in your code with warnings.  Be sure to address these!
 
@@ -103,14 +103,14 @@ Note that the popper properties _must be initialized_ (not be `null`) when the c
 
 You will also need to create a UML diagram to represent each of the classes, enumerations, and interfaces defined in your _Data_ project. You will need to include a copy of this diagram as a PDF or image file in a _Documentation_ folder in your project. 
 
-In your UML diagram, be sure you represent the relationships between your classes correctly, i.e. _generalization_ for inheritance, _realization_ for interface implementation, and _aggregation_ or _composition_ for classes that hold instances of other classes. Review the chapter on [UML]({{<ref "05-uml">}}) if you are hazy on the distinction.
+In your UML diagram, be sure you represent the relationships between your classes correctly, i.e. _generalization_ for inheritance, _realization_ for interface implementation, and _aggregation_ or _composition_ for classes that hold instances of other classes. Review the chapter on [UML]({{% ref "05-uml" %}}) if you are hazy on the distinction.
 
-Carefully read the [adding documentation]({{<ref "B-git-and-github/12-adding-documentation-files">}}) discussion to ensure you are not adding a link to the file rather than the actual file to your project. You can also check the contents of your GitHub repository after you commit to make sure you included your documentation correctly.
+Carefully read the [adding documentation]({{% ref "B-git-and-github/13-adding-documentation-files" %}}) discussion to ensure you are not adding a link to the file rather than the actual file to your project. You can also check the contents of your GitHub repository after you commit to make sure you included your documentation correctly.
 
 If you use Visio to create your UML, it is also a good idea to place your Visio file in the _Documentation_ folder, so you can always have access to it when you work on your project, as you will need to update it as you make changes.
 
 ## Submitting the Assignment
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.3.0` with name `"Milestone 3"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.3.0` with name `"Milestone 3"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 The grading rubric for this assignment will be:

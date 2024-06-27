@@ -99,15 +99,15 @@ Sides also already have properties for `Name`, `Description`, `Price`, and `Calo
 You will need to add a unit test class for each dog, side, and drink.  These should be defined in the `Test` project and `DogsNSuch.Test` namespace in a file corresponding to the class it is testing, i.e. `ChicagoDog` should have a test class named `ChicagoDogUnitTests` declared in the _ChicagoDogUnitTests.cs_ file.  You will need to add sufficient test methods to the class to be reasonably sure of its functionality.  This includes:
 
 ### Name Property Tests
-You should test that the actual `Name` property matches the expected value.  These values can be found in the description for [Milestone 2]({{<ref "d-milestones-u21/04-milestone-2">}}).  When the `Name` property can vary, i.e. with different sizes of side or different flavors of drink, your test should verify the correct name is used based on those other properties, i.e. a large french fry should have the name "Large French Fries" and a Drink with flavor `DrinkFlavor.RCCola` should have the name "RC Cola".
+You should test that the actual `Name` property matches the expected value.  These values can be found in the description for [Milestone 2]({{% ref "d-milestones-u21/04-milestone-2" %}}).  When the `Name` property can vary, i.e. with different sizes of side or different flavors of drink, your test should verify the correct name is used based on those other properties, i.e. a large french fry should have the name "Large French Fries" and a Drink with flavor `DrinkFlavor.RCCola` should have the name "RC Cola".
 
 You can either write multiple facts or combine these different configurations under a single theory test.
 
 ### Description Property Tests 
-You should test the actual `Description` property matches the expected value.  These values can be found in the description for [Milestone 2]({{<ref "d-milestones-u21/04-milestone-2">}}). 
+You should test the actual `Description` property matches the expected value.  These values can be found in the description for [Milestone 2]({{% ref "d-milestones-u21/04-milestone-2" %}}). 
 
 ### Price Property Tests 
-You should test the actual `Price` property matches the expected value.  These values can be found in the descriptions for [Milestone 1]({{<ref "d-milestones-u21/03-milestone-1">}}) [Milestone 2]({{<ref "d-milestones-u21/04-milestone-2">}}).  When the `Price` property is calculated (i.e. based on the size of a side), you should test for each possible value.  Note you will need to calculate the expected value by hand, and hard-code it into the test.
+You should test the actual `Price` property matches the expected value.  These values can be found in the descriptions for [Milestone 1]({{% ref "d-milestones-u21/03-milestone-1" %}}) [Milestone 2]({{% ref "d-milestones-u21/04-milestone-2"  %}}).  When the `Price` property is calculated (i.e. based on the size of a side), you should test for each possible value.  Note you will need to calculate the expected value by hand, and hard-code it into the test.
 
 When the number of possible permutations is very large (i.e. with the `Dog` boolean properties), you should test at a minimum:
 * Each boolean property in isolation (i.e. each boolean for an ingredient set to `true` while all others are `false`)
@@ -115,7 +115,7 @@ When the number of possible permutations is very large (i.e. with the `Dog` bool
 * A sampling (at least eight) of different combinations of booleans set to `true` and `false`
 
 ### Calories Property Tests
-You should test the actual `Calories` property matches the expected value.  These values can be found in the descriptions for [Milestone 1]({{<ref "d-milestones-u21/03-milestone-1">}}) [Milestone 2]({{<ref "d-milestones-u21/04-milestone-2">}}).  When the `Calories` property is calculated (i.e. based on the size of a side), you should test for each possible value.  Note you will need to calculate the expected value by hand, and hard-code it into the test.
+You should test the actual `Calories` property matches the expected value.  These values can be found in the descriptions for [Milestone 1]({{% ref "d-milestones-u21/03-milestone-1" %}}) [Milestone 2]({{% ref "d-milestones-u21/04-milestone-2"  %}}).  When the `Calories` property is calculated (i.e. based on the size of a side), you should test for each possible value.  Note you will need to calculate the expected value by hand, and hard-code it into the test.
 
 When the number of possible permutations is very large (i.e. with the `Dog` boolean properties), you should test at a minimum:
 * Each boolean property in isolation (i.e. each boolean for an ingredient set to `true` while all others are `false`)
@@ -125,10 +125,10 @@ When the number of possible permutations is very large (i.e. with the `Dog` bool
 This is most easily accomplished with a theory, though it is possible to use multiple facts.
 
 ### Enumeration Property Tests
-You should test that all enumeration properties are initialized to the correct default value.  These expectations can be found in the descriptions for [Milestone 1]({{<ref "d-milestones-u21/03-milestone-1">}}) [Milestone 2]({{<ref "d-milestones-u21/04-milestone-2">}}).
+You should test that all enumeration properties are initialized to the correct default value.  These expectations can be found in the descriptions for [Milestone 1]({{% ref "d-milestones-u21/03-milestone-1" %}}) [Milestone 2]({{% ref "d-milestones-u21/04-milestone-2"  %}}).
 
 ### Boolean Property Tests 
-You should test that all boolean properties are initialized to the correct default value (either `true` or `false` according to the assignment descriptions).  These expectations can be found in the descriptions for [Milestone 1]({{<ref "d-milestones-u21/03-milestone-1">}}) [Milestone 2]({{<ref "d-milestones-u21/04-milestone-2">}}).
+You should test that all boolean properties are initialized to the correct default value (either `true` or `false` according to the assignment descriptions).  These expectations can be found in the descriptions for [Milestone 1]({{% ref "d-milestones-u21/03-milestone-1" %}}) [Milestone 2]({{% ref "d-milestones-u21/04-milestone-2"  %}}).
 
 ### Inheritance/Implementation Tests 
 You should also verify that every class can be treated as its base class (when it inherits from a base class), and that _all_ item classes can be treated as an `IOrderItem`.  This can be done with the `Assert.IsAssignableFrom<T>()` template method, i.e.:
@@ -200,13 +200,13 @@ Since the various specialty dog classes inherit the `Price` and `Calories` from 
 All public classes, properties, methods, fields, etc. should be documented inline using UML-Style documentation, as covered in the [documentation chapter]{((<ref 03-documentation>))}.
 
 ### UML Class Diagram
-You will need to include a UML Class Diagram for the `Data` project, which should follow the guidelines set out in the [UML Chapter]({{<ref "05-uml">}}).  This should be added to a _documentation_ folder in your project, which __must__ be added to source control.  See ({{<ref "b-git-and-github/12-adding-documentation-files">}}) for guidance on ensuring the files are correctly added.  You may include either Visio, PDF, or an image file, but including a Visio file ensures you can continue to edit your UML to keep it up-to-date with changes you will make in future milestones.
+You will need to include a UML Class Diagram for the `Data` project, which should follow the guidelines set out in the [UML Chapter]({{% ref "05-uml" %}}).  This should be added to a _documentation_ folder in your project, which __must__ be added to source control.  See ({{% ref "b-git-and-github/13-adding-documentation-files"  %}}) for guidance on ensuring the files are correctly added.  You may include either Visio, PDF, or an image file, but including a Visio file ensures you can continue to edit your UML to keep it up-to-date with changes you will make in future milestones.
 
 ## Submissions
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Create a Release page]({{<ref "b-git-and-github/11-release">}})
+  * If you do not remember how to do this, please revisit the [Create a Release page]({{% ref "b-git-and-github/12-release" %}})
 
   * Keep in mind the version!!!
 

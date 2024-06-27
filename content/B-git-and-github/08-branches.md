@@ -42,7 +42,7 @@ If, on the other hand, we like the changes from the experiment, and want to add 
 $ git merge experiment
 ```
 
-This merges the specified branch with the currently checked-out branch.  Git accomplishes merging through a recursive strategy, which works very well.  However, if both branches have had changes committed since the last shared commit, there is a possibility that some of those changes will overlap, and Git will not be able to determine which to use.  This is called a _merge conflict_ and must be resolved by you.  See the [merge conflict]({{<ref "b-git-and-github/11-merge-conflicts">}}) section later for more details.
+This merges the specified branch with the currently checked-out branch.  Git accomplishes merging through a recursive strategy, which works very well.  However, if both branches have had changes committed since the last shared commit, there is a possibility that some of those changes will overlap, and Git will not be able to determine which to use.  This is called a _merge conflict_ and must be resolved by you.  See the [merge conflict]({{% ref "b-git-and-github/11-merge-conflicts" %}}) section later for more details.
 
 There are a number of reasons we might want to create a branch; let's examine some common use cases.
 

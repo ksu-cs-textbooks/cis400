@@ -30,7 +30,7 @@ The purpose of this assignment is to set up your local repository, practice work
 
 ### Recommendations:
 
-You'll likely want to come back and revisit the [feature branches]({{<ref "D-milestones/02-feature-branches">}}) as well as this page as you work on future assignments.
+You'll likely want to come back and revisit the [feature branches]({{% ref "D-milestones-s23/02-feature-branches" %}}) as well as this page as you work on future assignments.
 
 ### Part 1 - Accept the GitHub Assignment and Clone your Repo
 
@@ -48,7 +48,7 @@ Where `[repoURL]` is the clone repo from GitHub:
 
 [The GitHub Clone URL](/images/b.3.1.png)
 
-This task is covered in more detail in the section on [remote repositories]({{<ref "/B-git-and-github/09-remote-repositories">}})
+This task is covered in more detail in the section on [remote repositories]({{% ref "/B-git-and-github/09-remote-repositories" %}})
 
 ### Part 2 - Create and Check Out a Local Feature Branch, Make and Commit Changes, and Push to GitHub
 
@@ -216,7 +216,7 @@ The first time you do this, it will also create the `origin/ms1` branch on GitHu
 You can also commit and push changes _before_ you've finished working on your new classes.  This is especially helpful if you need to stop working - it backs up your files in in case something happens.  Likewise, if you want to start working on a different machine (say moving from lab to home), you can pull the latest version of your code from GitHub.
 
 {{% notice tip %}}
-If you need to pull this remote branch into another local repo (say you created the branch in the lab but now you are on your home computer), the process is covered in the [previous section]({{<ref "../02-feature-branches#pulling-a-remote-feature-branch-to-another-local-machine">}})
+If you need to pull this remote branch into another local repo (say you created the branch in the lab but now you are on your home computer), the process is covered in the [previous section]({{% ref "../02-feature-branches#pulling-a-remote-feature-branch-to-another-local-machine" %}})
 {{% /notice %}}
 
 ### Part 3 - Merging your Feature Branch and Submitting to GitHub
@@ -244,7 +244,7 @@ $ git merge ms1
 After this, your `main` branch contains all the code changes from your `ms1` branch.  
 
 {{% notice note %}}
-Unless you have made changes to your `main` branch in the meantime, this should go smoothly.  If you have changed `main` as well, it is possible that Git may encounter a section of code where changes have been made on both branches, and it is uncertain of how to merge them.  In this case you will need to [resolve the merge conflicts]{{<ref "/B-git-and-github/10-merge-conflicts">}} and create a new commit with the resolution before moving on.
+Unless you have made changes to your `main` branch in the meantime, this should go smoothly.  If you have changed `main` as well, it is possible that Git may encounter a section of code where changes have been made on both branches, and it is uncertain of how to merge them.  In this case you will need to [resolve the merge conflicts]{{% ref "/B-git-and-github/11-merge-conflicts" %}} and create a new commit with the resolution before moving on.
 {{% /notice %}}
 
 Now you can push your `main` branch to GitHub:
@@ -253,4 +253,4 @@ Now you can push your `main` branch to GitHub:
 $ git push origin main
 ```
 
-Now [create a release]({{<ref "/B-git-and-github/11-release">}}) tagged `v0.1.0` with name `"Milestone 1"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Now [create a release]({{% ref "/B-git-and-github/12-release" %}}) tagged `v0.1.0` with name `"Milestone 1"`.  Copy the URL for the release page and submit it to the Canvas assignment.

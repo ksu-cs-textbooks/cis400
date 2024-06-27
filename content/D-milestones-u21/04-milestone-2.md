@@ -256,7 +256,7 @@ Declare a  implement a class `Drink` in the file _Drink.cs_ in the `DogsNSuch.Da
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Create a Release page]({{<ref "b-git-and-github/11-release">}})
+  * If you do not remember how to do this, please revisit the [Create a Release page]({{% ref "b-git-and-github/12-release" %}})
 
   * Keep in mind the version!!!
 

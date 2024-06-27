@@ -23,4 +23,4 @@ Then you can use File Explorer to create your Documentation folder and place you
 
 ![Copy File into Documentation Folder](/images/b.12.3.png)
 
-Once the document is in place, you will need to [commit your changes]({{<ref "b-git-and-github/05-staging-and-committing#committing">}}) and [push them to GitHub]({{<ref "b-git-and-github/09-remote-repositories#pushing">}})
+Once the document is in place, you will need to [commit your changes]({{% ref "b-git-and-github/05-staging-and-committing#committing" %}}) and [push them to GitHub]({{% ref "b-git-and-github/09-remote-repositories#pushing"  %}})

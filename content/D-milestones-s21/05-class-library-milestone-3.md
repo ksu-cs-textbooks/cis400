@@ -191,14 +191,14 @@ You will also need to create (or update) a UML Class Diagram to correspond to th
 
 Microsoft Visio is available to CS students for free through the Azure Student Portal, see [this support page](https://support.cs.ksu.edu/CISDocs/wiki/FAQ#MSDNAA) for details.  It can also be found on the remote desktop machines.  Alternatively, you may create your UML with a tool of your choice.
 
-Your finished UML diagram should be included in a _documentation_ folder in a format that the UTAs can access (i.e. `pdf` or `png` with the name _data-milestone-3-uml_).  You may also place your source file in the project, but the image or pdf file is what will be graded.  **Be sure you actually include the file itself, not just a link to a location on your computer!  See [these instructions]({{<ref "b-git-workflows/11-adding-documentation-files.md">}}) for details.**
+Your finished UML diagram should be included in a _documentation_ folder in a format that the UTAs can access (i.e. `pdf` or `png` with the name _data-milestone-3-uml_).  You may also place your source file in the project, but the image or pdf file is what will be graded.  **Be sure you actually include the file itself, not just a link to a location on your computer!  See [these instructions]({{% ref "b-git-workflows/11-adding-documentation-files.md" %}}) for details.**
 
 #### Milestone 3 Rubric
 
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments
-* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s).
 
 Enums
@@ -219,7 +219,7 @@ UML Diagram
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{% ref "b-git-workflows/01-introduction" %}})
 
   * Keep in mind the version!!!
 

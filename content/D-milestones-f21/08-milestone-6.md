@@ -72,13 +72,13 @@ This method can then be called in derived classes to indicate a property is chan
 
 
 #### Testing your INotifyPropertyChanged Implementation
-To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions">}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
+To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions" %}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
 
 {{% notice info %}}
 Remember that calculated properties will change _based on the property they are calculated from_, and you must also test for these.  I.e. on the sides, you might have a test method `PricePropertyChangedWhenSizeChanges(Size size)`.  Alternatively, you could combine multiple property checks into one test, i.e. `ShouldNotifyOfPropertyChangedWhenSizeChanges(Size size, string propertyName)` and supply the names of the separate properties through `[InlineData]`.
 {{% /notice %}}
 
-Additionally, it is a good idea to test that the menu item classes implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions">}}).
+Additionally, it is a good idea to test that the menu item classes implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions" %}}).
 
 #### Override ToString()
 Every C# object has a `ToString()` method that gives a textual representation of the object.  This is also used by WPF when you bind an object to a text control, like a `TextBox`.  The default behavior of `ToString()` is to give the fully-qualified name of the class, i.e. for a `VirgoClassicGyro` it would return `"GyroScope.Data.VirgoClassicGyro"`.  It is therefore a good idea to _override_ this behavior in our data classes to use a more human-readable name, i.e. `"Virgo Classic Gyro"`.  
@@ -168,7 +168,7 @@ You should implement one or more event listeners to handle when the user clicks 
 2. Bind that instance as the `DataContext` of the corresponding customization control instance
 3. Display that customization control instance in the `MainWindow`, replacing or covering up the `MenuItemSelectionControl`
 
-Since the event you are listening for happens in the `MenuItemSelectionControl` but the displaying must happen in the `MainWindow`, you must decide which of these two locations you want to host the event listener.  If you choose the `MainWindow` you will be using a [Routed Event]({{<ref "2-desktop-development/03-events/08-routed-events">}}), i.e. `Button.Click`.  If you choose the `MenuItemsSelectionControl` you will need to climb the [Elements tree]({{<ref "2-desktop-development/02-element-tree/03-navigating-the-tree">}}) to reach the `MainWindow`.
+Since the event you are listening for happens in the `MenuItemSelectionControl` but the displaying must happen in the `MainWindow`, you must decide which of these two locations you want to host the event listener.  If you choose the `MainWindow` you will be using a [Routed Event]({{% ref "2-desktop-development/03-events/08-routed-events" %}}), i.e. `Button.Click`.  If you choose the `MenuItemsSelectionControl` you will need to climb the [Elements tree]({{% ref "2-desktop-development/02-element-tree/03-navigating-the-tree"  %}}) to reach the `MainWindow`.
 
 #### Binding Customization Controls
 Once you know you have your menu item classes (your entrees, sides, drinks, and treats) ready, you can bind their properties to the controls you have created in your customization screens.  Since you have set the screen's `DataContext` to be a new instance of that item (in the previous requirement), these controls will now directly modify the bound menu item object.
@@ -180,7 +180,7 @@ Finally, update your UML to reflect the current state of your `Data` and `PointO
 
 The `INotifyPropertyInterface` can be added like so:
 
-![INotifyPropertyChanged UML]({{<static "images/d.7.1.png">}})
+![INotifyPropertyChanged UML](images/d.7.1.png)
 
 Because this is a _realization_ relationship, you will also need to add the event to your class boxes.  It should be placed in the second box (with your properties) and use the `event` stereotype, i.e.:
 
@@ -209,11 +209,11 @@ You do not need to show components defined in the XAML that do not have a `x:Nam
 
 ## The Milestone Feature Branch 
 
-You will want to [create a feature branch and push it to GitHub]({{<ref "D-milestones-f21/02-feature-branches">}}) for your validations to be generated on https://pendant.cs.ksu.edu.  For this milestone, your feature branch should be named `ms6`.  
+You will want to [create a feature branch and push it to GitHub]({{% ref "D-milestones-f21/02-feature-branches" %}}) for your validations to be generated on https://pendant.cs.ksu.edu.  For this milestone, your feature branch should be named `ms6`.  
 
 ## Submitting the Assignment
 
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.6.0` with name `"Milestone 6"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.6.0` with name `"Milestone 6"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

@@ -5,7 +5,7 @@ weight: 2
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Testing a GUI-based application presents some serious challenges.  A GUI has a strong dependence on the environment it is running in - the operating system is ultimately responsible for displaying the GUI components, and this is also influenced by the hardware it runs on.  As we noted in our [discussion of WPF]({{<ref "2-desktop-development/01-wpf/02-wpf-features">}}), screen resolution can vary dramatically.  So how our GUI appears on one machine may be completely acceptable, but unusable on another.  
+Testing a GUI-based application presents some serious challenges.  A GUI has a strong dependence on the environment it is running in - the operating system is ultimately responsible for displaying the GUI components, and this is also influenced by the hardware it runs on.  As we noted in our [discussion of WPF]({{% ref "2-desktop-development/01-wpf/02-wpf-features" %}}), screen resolution can vary dramatically.  So how our GUI appears on one machine may be completely acceptable, but unusable on another.  
 
 For example, I once had an installer that used a fixed-size dialog that was so large, on my laptop the "accept" button was off-screen below the bottom of the screen - and there was no way to click it.  This is clearly a problem, but the developer failed to recognize it because on their development machine (with nice large monitors) everything fit!  So how do we test a GUI application in this uncertain environment?
 

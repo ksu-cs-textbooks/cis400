@@ -5,7 +5,7 @@ weight: 20
 date: 2018-08-24T10:53:26-05:00
 ---
 
-It is recommended practice that you use [feature branches]({{<ref "B-git-and-github/08-branches">}}) for each new milestone.  This will allow you to keep the new milestone work separate from your main branch until it is complete.  To create a feature branch for data milestone 1, you would use this Git command:
+It is recommended practice that you use [feature branches]({{% ref "B-git-and-github/08-branches" %}}) for each new milestone.  This will allow you to keep the new milestone work separate from your main branch until it is complete.  To create a feature branch for data milestone 1, you would use this Git command:
 
 ```
 $ git branch ms1
@@ -50,4 +50,4 @@ And push the newly expanded main branch to GitHub:
 $ git push origin main
 ```
 
-Finally, you'll need to [create a release]({{<ref "b-git-and-github/11-release">}}) to turn in.
+Finally, you'll need to [create a release]({{% ref "b-git-and-github/12-release" %}}) to turn in.

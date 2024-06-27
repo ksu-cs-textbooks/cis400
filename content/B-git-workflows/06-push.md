@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 To make your changes in a local repository available to other local repositories, or to turn in your homework, you will need to push those changes to the _origin_ remote repository (which is typically your GithHub repository).
 
 ## Step 1 - Checking the Status
-Before you do so, you will want to make sure that you have [committed any changes]({{<ref "b-git-workflows/05-commit">}}) to your local repository.  An easy way to do this is the command:
+Before you do so, you will want to make sure that you have [committed any changes]({{% ref "b-git-workflows/05-commit" %}}) to your local repository.  An easy way to do this is the command:
 
 ```
 $ git status
@@ -25,7 +25,7 @@ $ git pull origin master
 If there are any merge conflicts, the output from this command will tell you what files they are in.  If there are, you'll need to resolve them (step 3).  If not, you can skip to step 4.
 
 ## Step 3 - Fix Merge Conflicts
-If there were merge conflicts in step 2, you'll need to [resolve them]({{<ref "b-git-workflows/08-merge-conflicts">}}) before proceeding to step 4.
+If there were merge conflicts in step 2, you'll need to [resolve them]({{% ref "b-git-workflows/08-merge-conflicts" %}}) before proceeding to step 4.
 
 ## Step 4 - Pushing your Changes
 You can now push your changes to the remote _origin_ repository with the command:

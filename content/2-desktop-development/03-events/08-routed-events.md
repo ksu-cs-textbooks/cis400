@@ -5,7 +5,7 @@ weight: 8
 date: 2018-08-24T10:53:26-05:00
 ---
 
-While events exist in Windows Forms, Windows Presentation Foundation adds a twist with their concept of _routed events_.  Routed events are similar to regular C# events, but provide additional functionality.  One of the most important of these is the ability of the routed event to "bubble" up the [elements tree]({{<ref "2-desktop-development/02-element-tree">}}).  Essentially, the event will be passed up each successive WPF element until one chooses to "handle" it, or the top of the tree is reached (in which case the event is ignored). 
+While events exist in Windows Forms, Windows Presentation Foundation adds a twist with their concept of _routed events_.  Routed events are similar to regular C# events, but provide additional functionality.  One of the most important of these is the ability of the routed event to "bubble" up the [elements tree]({{% ref "2-desktop-development/02-element-tree" %}}).  Essentially, the event will be passed up each successive WPF element until one chooses to "handle" it, or the top of the tree is reached (in which case the event is ignored). 
 
 Consider a Click event handler for a button.  In Windows Forms, we have to attach our listener _directly to the button_, i.e:
 
@@ -92,4 +92,4 @@ namespace WpfApp1
 
 Note that because this event listener will be triggered for _all_ buttons, we need to make sure it's a button we care about - so we cast the `OriginalSource` of the event to be a button and check its `Name` property.  We use the `RoutedEventArgs.OriginalSource` because the `sender` won't necessarily be the specific control the event originated in - in this case it actually is the `Grid` containing the button.  Also, note that we mark `e.Handled` as `true`.  This tells WPF it can stop "bubbling" the event, as we have taken care of it.
 
-We'll cover routed events in more detail in the upcoming [Dependency Objects]({{<ref "2-desktop-development/05-dependency-objects">}}) chapter, but for now you need to know that the GUI events you know from Windows Forms (Click, Select, Focus, Blur), are all routed events in WPF, and therefore take a `RoutedEventArgs` object instead of the event arguments you may be used to. 
+We'll cover routed events in more detail in the upcoming [Dependency Objects]({{% ref "2-desktop-development/05-dependency-objects" %}}) chapter, but for now you need to know that the GUI events you know from Windows Forms (Click, Select, Focus, Blur), are all routed events in WPF, and therefore take a `RoutedEventArgs` object instead of the event arguments you may be used to. 

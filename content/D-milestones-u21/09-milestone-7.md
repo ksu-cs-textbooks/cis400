@@ -50,7 +50,7 @@ Beyond these core requirements, you may add features and elements as you see fit
 
 Modify the Razor page named _Privacy.cshtml_ to meet the following guidelines. An example of what this might look like:
 
-![Privacy page example]({{<static "images/d.u21.9.1.png">}})
+![Privacy page example](images/d.u21.9.1.png)
 
 It should:
 
@@ -64,7 +64,7 @@ _At Dogs 'N Such, we value your privacy.  This site does not collect your data. 
 
 Create a new Razor page named _About.cshtml_. It should meet the following guidelines. An example of what this might look like:
 
-![About page example]({{<static "images/d.u21.9.2.png">}})
+![About page example](images/d.u21.9.2.png)
 
 1. Set the page title to “About”
 2. Render a `<h1>` tag with the text “About The Flying Saucer”
@@ -89,13 +89,13 @@ If you are using the ASP tag helpers, the equivalent tag would be `<a asp-page="
 
 The navigation bar should look something like:
 
-![Navigation example]({{<static "images/d.u21.9.3.png">}})
+![Navigation example](images/d.u21.9.3.png)
 
 #### Index Page 
 
 Modify the existing _Index.cshtml_ page to display the full menu of Dogs 'N Such according to hte guidelines that follow.  An example of what this might look like:
 
-![Home page example]({{<static "images/d.u21.9.4.png">}})
+![Home page example](images/d.u21.9.4.png)
 
 ##### Welcome Message
 Add a first-level header (`<h1>`) identifying the page as "Dogs 'N Such".
@@ -136,7 +136,7 @@ The search should be _case insensitive_ (i.e. capital and lower case letters are
 
 The suggested structure for the Menu class is represented in the UML class diagram, below:
 
-![UML]({{<static "images/web-ms-2.1.png">}})
+![UML](images/web-ms-2.1.png)
 
 #### Testing the Menu Search and Filter Methods
 You should add tests to verify that the search and filtering functions operate as expected. Remember to test both valid and null values for all parameters.
@@ -152,7 +152,7 @@ Alternatively, you can represent the cshtml portion as a box labeled with the pa
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Create a Release page]({{<ref "b-git-and-github/11-release">}})
+  * If you do not remember how to do this, please revisit the [Create a Release page]({{% ref "b-git-and-github/12-release" %}})
 
   * Keep in mind the version!!!
 

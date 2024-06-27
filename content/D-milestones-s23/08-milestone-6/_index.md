@@ -79,7 +79,7 @@ The `PlacedAt` should be a `DateTime` corresponding to when the order was starte
 Once you have made the changes to the `Order` class, it is a good idea to test them and make sure they work as expected.  Your `OrderUnitTest` class should be expanded with additional test methods to cover the new events and properties.
 
 ##### Testing Your INotifyPropertyChanged Implementation
-To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed trigger the `PropertyChanged` event when its value changes. The [PropertyChange Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions">}}) we discussed in the testing chapter is used for this purpose.
+To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed trigger the `PropertyChanged` event when its value changes. The [PropertyChange Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions" %}}) we discussed in the testing chapter is used for this purpose.
 
 Here is an example testing updating the `TaxRate` property:
 
@@ -98,7 +98,7 @@ public void ChangingTaxRateShouldNotifyOfPropertyChange()
 Remember that calculated properties will change _based on the property they are calculated from_, and you must also test for these.  I.e. changing the `TaxRate` will not only change the `TaxRate` property, but it will also cause the value of the `Tax` property to change, as it is calculated from the `Tax` property.  So you should have a test method to verify that changing the `TaxRate` notifies that `Tax` has changed.  Likewise, changing the `TaxRate` _also_ affects the `Total`, as it is derived from the `Tax` property.
 {{% /notice %}}
 
-Additionally, it is important to test that the `Order` class itself implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions">}}), i.e.:
+Additionally, it is important to test that the `Order` class itself implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions" %}}), i.e.:
 
 ```csharp
 public void ShouldImplementINotifyChanged()
@@ -117,7 +117,7 @@ You might be wondering why it is important to test for if the class actually imp
 You also need to test that you have implemented `INotifyCollectionChanged`.  At a minimum, this should include: 1) a test method to verify that adding a `IMenuItem` to the `Order` triggers the `CollectionChanged` event, 2) a test method to verify that removing an `IMenuItem` from the `Order` triggers the `CollectionChanged` event, and 3) a test method to verify that the `Order` can be cast into an `INotifyCollectionChanged` instance.  
 
 {{% notice tip %}}
-You will likely want to closely read the section on [Testing Custom Events]({{<ref "2-desktop-development/03-events/11-testing-custom-events">}}) in the testing chapter.  It walks you through how to add custom assertions for testing the `CollectionChanged` event. 
+You will likely want to closely read the section on [Testing Custom Events]({{% ref "2-desktop-development/03-events/11-testing-custom-events" %}}) in the testing chapter.  It walks you through how to add custom assertions for testing the `CollectionChanged` event. 
 {{% /notice %}}
 
 ##### Testing Your New Order Properties
@@ -168,7 +168,7 @@ You do not need to show components defined in the XAML that do not have a `x:Nam
 
 ## Submitting the Assignment
 
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.6.0` with name `"Milestone 6"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.6.0` with name `"Milestone 6"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

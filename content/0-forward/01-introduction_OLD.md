@@ -13,7 +13,7 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 
 ## Course Resources 
 
-* [Syllabus]({{<ref "0-forward/07-syllabus.md">}})
+* [Syllabus]({{% ref "0-forward/07-syllabus.md" %}})
 * [Textbook]({{<param textbookURL>}})
 
 ## Welcome Message

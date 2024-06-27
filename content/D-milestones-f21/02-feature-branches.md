@@ -10,9 +10,9 @@ For this semester, we will be utilizing a new web-based tool, _Pendant_, develop
 
 For this tool to provide you with feedback, you must meet two conditions:
 1. You must set up webhooks within your GitHub repository, and 
-2. You must use [feature branches]({{<ref "B-git-and-github/08-branches">}}) for each new milestone, and push these branches to your GitHub repository
+2. You must use [feature branches]({{% ref "B-git-and-github/08-branches" %}}) for each new milestone, and push these branches to your GitHub repository
 
-The [first milestone]({{<ref "D-milestones-f21/03-milestone-1">}}) will walk you through the steps to meet condition 1.  The next section provides a GitHub workflow to help meet condition 2.
+The [first milestone]({{% ref "D-milestones-f21/03-milestone-1" %}}) will walk you through the steps to meet condition 1.  The next section provides a GitHub workflow to help meet condition 2.
 
 ## Using Remote-Tracking Feature Branches
 
@@ -107,4 +107,4 @@ And push the newly expanded main branch to GitHub:
 $ git push origin main
 ```
 
-After which you'll need to [create a release]({{<ref "b-git-and-github/11-release">}}) to turn in.
+After which you'll need to [create a release]({{% ref "b-git-and-github/12-release" %}}) to turn in.

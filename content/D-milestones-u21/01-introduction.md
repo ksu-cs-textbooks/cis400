@@ -21,12 +21,12 @@ These milestones are:
   </tr>
   <tr>
     <td>1</td>
-    <td><a href="{{<ref "d-milestones-u21/03-milestone-1">}}">Milestone 1</a></td>
+    <td><a href="{{% ref "d-milestones-u21/03-milestone-1" %}}">Milestone 1</a></td>
     <td>6/13/2021</td>
   </tr>
   <tr>
     <td>2</td>
-    <td><a href="{{<ref "d-milestones-u21/04-milestone-2">}}">Milestone 2</a></td>
+    <td><a href="{{% ref "d-milestones-u21/04-milestone-2" %}}">Milestone 2</a></td>
     <td>6/20/2021</td>
   </tr>
 </table>

@@ -49,9 +49,9 @@ Most of this assignment is centered around the implementation of the `INotifyPro
 
 To satisfy the intent, you should also _invoke_ any event listeners registered with your `PropertyChanged` event handler _when one of the properties of the object changes_, with the details about that change.  You must do this for **ALL** properties that can change in your menu item classes (Hint: you can skip properties like the `NothingToSeeHere.Price`, which cannot change).
 
-To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions">}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
+To verify that you have correctly implemented these properties, you need to write additional tests to check that the property does, indeed change. The [PropertyChange Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#property-change-assertions" %}}) we discussed in the testing chapter is used for this purpose.  These tests should be placed in the unit test class corresponding to the menu item being tested.
 
-Additionally, it is a good idea to test that the menu item classes implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{<ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions">}}).
+Additionally, it is a good idea to test that the menu item classes implements the `INotifyPropertyChanged` interface.  This can be accomplished with the `IsAssignableFrom<T>(object obj)` [Type Assertion]({{% ref "/1-object-orientation/04-testing/05-xunit-assertions#type-assertions" %}}).
 
 Once you know you have your menu item classes (your entreees, sides, and drinks) ready, you can bind their properties to the controls you have created in your customization screens.  In addition, whenever you display the customization screen for a new item added to the order, you should set the screen's `DataContext` to be a new instance of that item.
 
@@ -59,7 +59,7 @@ With many controls, verifying your binding is working correctly may be difficult
 
 Finally, update your UML to reflect the current state of your PointOfSale projects.  The `INotifyPropertyInterface` can be added like so:
 
-![INotifyPropertyChanged UML]({{<static "images/d.7.1.png">}})
+![INotifyPropertyChanged UML](images/d.7.1.png)
 
 To summarize:
 
@@ -80,7 +80,7 @@ Finally, update your UML to reflect the current state of your Data and PointOfSa
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments
-* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in XAML files**
 
 INotifyPropertyChanged implementation
@@ -104,4 +104,4 @@ UML Diagram
 
   * Your release tag for this project should be a new minor version, i.e. if your first Point of Sale milestone was **v.1.0.0**, this release will be **v1.1.0**.
 
-  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{% ref "b-git-workflows/01-introduction" %}})

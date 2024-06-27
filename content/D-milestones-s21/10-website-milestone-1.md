@@ -48,7 +48,7 @@ Beyond these core requirements, you may add features and elements as you see fit
 
 Modify the Razor page named _Privacy.cshtml_ to meet the following guidelines. An example of what this might look like:
 
-![Privacy page example]({{<static "images/d.10.1.png">}})
+![Privacy page example](images/d.10.1.png)
 
 It should:
 
@@ -62,7 +62,7 @@ _The Flying Saucer respects the privacy and autonomy of all sentient beings.  Th
 
 Create a new Razor page named _About.cshtml_. It should meet the following guidelines. An example of what this might look like:
 
-![About page example]({{<static "images/d.10.2.png">}})
+![About page example](images/d.10.2.png)
 
 1. Set the page title to “About”
 2. Render a `<h1>` tag with the text “About The Flying Saucer”
@@ -88,13 +88,13 @@ If you are using the ASP tag helpers, the equivalent tag would be `<a asp-page="
 
 The navigation bar should look like:
 
-![Navigation example]({{<static "images/d.10.3.png">}})
+![Navigation example](images/d.10.3.png)
 
 #### Index Page 
 
 Modify the existing _Index.cshtml_ page to display the full menu of The Flying Saucer according to hte guidelines that follow.  An example of what this might look like:
 
-![Home page example]({{<static "images/d.10.4.png">}})
+![Home page example](images/d.10.4.png)
 
 ##### Welcome Message
 Add a first-level header (`<h1>`) identifying the page as "The Flying Saucer".
@@ -123,7 +123,7 @@ List the flavors available for the Syrups somewhere on the page, under a heading
 Every assignment begins with 100 points, from which points are deducted using the following rubric.  If the total score is reduced to 0, then the assignment is assigned a grade of 0.
 
 Comments
-* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{<ref "1-object-orientation/03-documentation">}}).
+* -1 point for every public member (other than test methods) not commented using XML-Style comments, as is discussed in the [documentation chapter]({{% ref "1-object-orientation/03-documentation" %}}).
 * -1 point for every file not containing a header describing the file purpose and author(s). **Note: you do not need to include these in CSHTML files**
 
 Privacy Page
@@ -165,4 +165,4 @@ Alternatively, you can represent the cshtml portion as a box labeled with the pa
 
   * Your release tag for this project should be a new minor version, i.e. if your first Point of Sale milestone was **v.1.0.0**, this release will be **v1.3.0**.
 
-  * If you do not remember how to do this, please revisit the [Git Workflows]({{<ref "b-git-workflows/01-introduction">}})
+  * If you do not remember how to do this, please revisit the [Git Workflows]({{% ref "b-git-workflows/01-introduction" %}})

@@ -55,7 +55,7 @@ The example website images are drawn from a prior semester's project.  You will 
 
 Modify the Razor page named _Privacy.cshtml_ to meet the following guidelines. An example of what this might look like:
 
-![Privacy page example]({{<static "images/d.10.1.png">}})
+![Privacy page example](images/d.10.1.png)
 
 It should:
 1. Set the page title to “Privacy Policy”
@@ -68,7 +68,7 @@ _Gyro Scope respects the privacy of our diners.  This site will not ask for your
 
 Create a new Razor page named _About.cshtml_. It should meet the following guidelines. An example of what this might look like:
 
-![About page example]({{<static "images/d.10.2.png">}})
+![About page example](images/d.10.2.png)
 
 1. Set the page title to “About”
 2. Render a `<h1>` tag with the text “About Gyro Scope”
@@ -93,7 +93,7 @@ If you are using the ASP tag helpers, the equivalent tag would be `<a asp-page="
 
 The navigation bar should look something like:
 
-![Navigation example]({{<static "images/d.10.3.png">}})
+![Navigation example](images/d.10.3.png)
 
 
 #### Create a static Menu class
@@ -109,7 +109,7 @@ In your `Data` project you should create a static class named `Menu` declared in
 
 Modify the existing _Index.cshtml_ page to display the full menu of Gyro Scope according to hte guidelines that follow.  An example of what this might look like:
 
-![Home page example]({{<static "images/d.10.4.png">}})
+![Home page example](images/d.10.4.png)
 
 ##### Welcome Message
 Add a first-level header (`<h1>`) identifying the page as "Gyro Scope".
@@ -131,7 +131,7 @@ You should use the methods from your `Menu` class in the Data project to determi
 
 ## Submitting the Assignment
 
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.9.0` with name `"Milestone 9"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.9.0` with name `"Milestone 9"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 

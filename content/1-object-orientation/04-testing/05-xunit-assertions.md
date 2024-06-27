@@ -152,10 +152,10 @@ There are also similar assertions for events being raised by _asynchronous_ code
 * `Assert.RaisesAsync<T>(Action attach, Action detach, Task testCode)`
 * `Assert.RaisesAnyAsync<T>(Action attach, Action detach, Task testCode)`
 
-For examples of these assertions, see [section 2.3.10]({{<ref "2-desktop-development/03-events/10-testing-generic-events">}})
+For examples of these assertions, see [section 2.3.10]({{% ref "2-desktop-development/03-events/10-testing-generic-events" %}})
 
 {{% notice info %}}
-XUnit does not directly support old-style events - those with a named event handler like `CollectionChangedEventHandler`, only those that use the templated form: `EventHandler<CustomEventArgs>` (with the exception of the `PropertyChanged` event, discussed below).  For strategies to handle the older-style events, see [section 2.3.11]({{<ref "2-desktop-development/03-events/11-testing-custom-events">}})
+XUnit does not directly support old-style events - those with a named event handler like `CollectionChangedEventHandler`, only those that use the templated form: `EventHandler<CustomEventArgs>` (with the exception of the `PropertyChanged` event, discussed below).  For strategies to handle the older-style events, see [section 2.3.11]({{% ref "2-desktop-development/03-events/11-testing-custom-events" %}})
 {{% /notice %}}
 
 ## Property Change Assertions

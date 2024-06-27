@@ -23,7 +23,7 @@ For this milestone, you will be creating a new project to run a Point-of-Sale sy
 
 * Create GUI components by extending the WPF `UserControl` base class to create your own custom controls to allow the cashier to construct an order by clicking buttons for each menu item and add them to a list.  The GUI should look something like:
 
-![GUI layout]({{<static "images/d.u21.4.1.png">}})
+![GUI layout](images/d.u21.4.1.png)
 
 * Update your UML Class Diagrams to reflect the current state of both projects:
   * Data
@@ -61,7 +61,7 @@ It should also have buttons for finalizing and canceling an order.
 
 Your control should look something like:
 
-![MenuItemSelectionControl]({{<static "images/d.u21.4.2.png">}})
+![MenuItemSelectionControl](images/d.u21.4.2.png)
 
 The only functionality that needs to be supplied for these buttons is switching to the appropriate customization screen when a button is pressed (i.e. pressing the "Hot Dog" button should swap to display a Hot Dog customization screen).  See the refactoring MainWindow discussion below
 
@@ -71,7 +71,7 @@ Create a custom WPF control named `OrderSummary` in the file _OrderSummary.xaml_
 
 Your control should look something like:
 
-![Order Summary Control]({{<static "images/d.u21.4.3.png">}})
+![Order Summary Control](images/d.u21.4.3.png)
 
 This control does not yet need to have implemented functionality - that will be implemented in the next milestone.
 
@@ -81,7 +81,7 @@ Create a custom WPF control named `DogCustomization` in the file _DogCustomizati
 
 Your control should look something like:
 
-![Dog Customization Control]({{<static "images/d.u21.4.4.png">}})
+![Dog Customization Control](images/d.u21.4.4.png)
 
 At this point, only the button for returning to the menu selection screen needs to be operable.  See the discussion on refactoring the MainWindow, below.
 
@@ -89,11 +89,11 @@ At this point, only the button for returning to the menu selection screen needs 
 
 Refactor the MainWindow class to display the Menu Selection Control and the Order Summary Control.  It should look something like:
 
-![Main Window]({{<static "images/d.u21.4.1.png">}})
+![Main Window](images/d.u21.4.1.png)
 
 You should then implement an event handler that will swap the `MenuItemSelection` control for a `DogCustomization` control when one of the hot dog buttons is clicked in the `MenuItemSelection` control.  After swapping, your window should look something like:
 
-![Main Window swapped to dog customization]({{<static "images/d.u21.4.5.png">}})
+![Main Window swapped to dog customization](images/d.u21.4.5.png)
 
 Similarly, you will need to implement an event handler to swap back to the `MenuItemSelection` control when the return to menu button in the `DogCustomization` screen is clicked.
 
@@ -104,7 +104,7 @@ The event handlers can implemented by attaching a `Button.Click` event handler d
 All public classes, properties, methods, fields, etc. should be documented inline using UML-Style documentation, as covered in the [documentation chapter]{((<ref 03-documentation>))}.
 
 ### UML Class Diagram
-You will need to include a UML Class Diagram for the `Data` project and the `PointOfSale` project, which should follow the guidelines set out in the [UML Chapter]({{<ref "05-uml">}}).  This should be added to a _documentation_ folder in your project, which __must__ be added to source control.  See ({{<ref "b-git-and-github/12-adding-documentation-files">}}) for guidance on ensuring the files are correctly added.  You may include either Visio, PDF, or an image file, but including a Visio file ensures you can continue to edit your UML to keep it up-to-date with changes you will make in future milestones.
+You will need to include a UML Class Diagram for the `Data` project and the `PointOfSale` project, which should follow the guidelines set out in the [UML Chapter]({{% ref "05-uml" %}}).  This should be added to a _documentation_ folder in your project, which __must__ be added to source control.  See ({{% ref "b-git-and-github/13-adding-documentation-files"  %}}) for guidance on ensuring the files are correctly added.  You may include either Visio, PDF, or an image file, but including a Visio file ensures you can continue to edit your UML to keep it up-to-date with changes you will make in future milestones.
 
 Note that WPF controls define a single class in two parts (the _.xaml_ file and the _.xaml.cs_ file).  Despite it being spread over two files, it is still a single class and should have only a single box in the UML diagram.
 
@@ -112,7 +112,7 @@ Note that WPF controls define a single class in two parts (the _.xaml_ file and 
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Create a Release page]({{<ref "b-git-and-github/11-release">}})
+  * If you do not remember how to do this, please revisit the [Create a Release page]({{% ref "b-git-and-github/12-release" %}})
 
   * Keep in mind the version!!!
 

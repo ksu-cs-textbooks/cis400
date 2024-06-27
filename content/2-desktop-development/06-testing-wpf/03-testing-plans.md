@@ -5,7 +5,7 @@ weight: 3
 date: 2018-08-24T10:53:26-05:00
 ---
 
-A testing plan is simply a step-by-step guide for a human tester to follow when testing software.  You may remember that we mentioned them back on our testing chapter's discussion on [manual testing]({{<ref "1-object-orientation/04-testing/02-manual-testing">}}). Indeed, we can use a test plan to test _all_ aspects of software, not just the GUI.  However, automated testing is usually cheaper and more effective in many aspects of software design, which is why we prefer it when possible.  So what does a GUI application testing plan look like?
+A testing plan is simply a step-by-step guide for a human tester to follow when testing software.  You may remember that we mentioned them back on our testing chapter's discussion on [manual testing]({{% ref "1-object-orientation/04-testing/02-manual-testing" %}}). Indeed, we can use a test plan to test _all_ aspects of software, not just the GUI.  However, automated testing is usually cheaper and more effective in many aspects of software design, which is why we prefer it when possible.  So what does a GUI application testing plan look like?
 
 It usually consists of a description of the test to perform, broken down into tasks, and populated with annotated screenshots.  Here is an example:
 

@@ -279,10 +279,10 @@ public SubtotalShouldReflectItemPrices()
 
 ### UML Class Diagram
 
-Finally, you will need to create a UML class diagram for the `Data` project, and add it to your repository.  This can be done with Visio or another visual editing program like [Draw.io](https://draw.io) or [Lucid Charts](https://www.lucidchart.com/pages/landing). You should save the diagram in a PDF or image format that the graders can view. You _also_ will want to keep it in an editable format, as you'll be updating it in future milestones. Be sure to follow the instructions in [Adding Documentation Files]{{<ref "/B-git-and-github/12-adding-documentation-files">}} and double-check that the UML diagrams appear in your release.
+Finally, you will need to create a UML class diagram for the `Data` project, and add it to your repository.  This can be done with Visio or another visual editing program like [Draw.io](https://draw.io) or [Lucid Charts](https://www.lucidchart.com/pages/landing). You should save the diagram in a PDF or image format that the graders can view. You _also_ will want to keep it in an editable format, as you'll be updating it in future milestones. Be sure to follow the instructions in [Adding Documentation Files]{{% ref "/B-git-and-github/13-adding-documentation-files" %}} and double-check that the UML diagrams appear in your release.
 
 ## Submitting the Assignment
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "/B-git-and-github/11-release">}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "/B-git-and-github/12-release" %}}) tagged `v0.4.0` with name `"Milestone 4"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 The grading rubric for this assignment will be:

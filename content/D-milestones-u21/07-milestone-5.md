@@ -259,7 +259,7 @@ All of your customization screens need to be data bound this way.
 
 It is easiest to bind the order item at the same time you display the customization screen, i.e. in the button click listener of the `MenuItemSelectionControl`.
 
-Radio buttons are easiest to handle by restyling a `<List>` to use the radiobutton template.  Refer to the textbook section on [Binding Enums]({{<ref "2-desktop-development/04-data-binding/05-binding-enums">}}) for guidance on this process.
+Radio buttons are easiest to handle by restyling a `<List>` to use the radiobutton template.  Refer to the textbook section on [Binding Enums]({{% ref "2-desktop-development/04-data-binding/05-binding-enums" %}}) for guidance on this process.
 
 ### Displaying the Order Properties
 
@@ -269,9 +269,9 @@ You will also want to bind the `Order.Items` property to your `OrderSummaryContr
 
 An example of what this might look like is displayed below:
 
-![An example of the order summary list]({{<static "images/d.u21.7.1.png">}})
+![An example of the order summary list](images/d.u21.7.1.png)
 
-Refer to the textbook section on [Binding Lists]({{<ref "2-desktop-development/04-data-binding/04-binding-lists">}}) for guidance on this process.
+Refer to the textbook section on [Binding Lists]({{% ref "2-desktop-development/04-data-binding/04-binding-lists" %}}) for guidance on this process.
 
 ### Removing Items from the Order
 
@@ -285,7 +285,7 @@ You need to allow the user to remove an item from the order.  The exact details 
 All public classes, properties, methods, fields, etc. in the `Data` and `PointOfSale` projects should be documented inline using UML-Style documentation, as covered in the [documentation chapter]{((<ref 03-documentation>))}.
 
 ### UML Class Diagram
-You will need to update the UML Class Diagram for the `Data` project and the `PointOfSale` project, which should follow the guidelines set out in the [UML Chapter]({{<ref "05-uml">}}).  This should be added to a _documentation_ folder in your project, which __must__ be added to source control.  See ({{<ref "b-git-and-github/12-adding-documentation-files">}}) for guidance on ensuring the files are correctly added.  You may include either Visio, PDF, or an image file, but including a Visio file ensures you can continue to edit your UML to keep it up-to-date with changes you will make in future milestones.
+You will need to update the UML Class Diagram for the `Data` project and the `PointOfSale` project, which should follow the guidelines set out in the [UML Chapter]({{% ref "05-uml" %}}).  This should be added to a _documentation_ folder in your project, which __must__ be added to source control.  See ({{% ref "b-git-and-github/13-adding-documentation-files"  %}}) for guidance on ensuring the files are correctly added.  You may include either Visio, PDF, or an image file, but including a Visio file ensures you can continue to edit your UML to keep it up-to-date with changes you will make in future milestones.
 
 Note that WPF controls define a single class in two parts (the _.xaml_ file and the _.xaml.cs_ file).  Despite it being spread over two files, it is still a single class and should have only a single box in the UML diagram.
 
@@ -293,7 +293,7 @@ Note that WPF controls define a single class in two parts (the _.xaml_ file and 
 
 * Create a new release tag - Submit the release URL
 
-  * If you do not remember how to do this, please revisit the [Create a Release page]({{<ref "b-git-and-github/11-release">}})
+  * If you do not remember how to do this, please revisit the [Create a Release page]({{% ref "b-git-and-github/12-release" %}})
 
   * Keep in mind the version!!!
 

@@ -47,7 +47,7 @@ This milestone serves as a review of how to create classes and sets the stage fo
 
 * Accuracy is _important_.  Your class, property, enumeration and other names, along with the descriptions _must match the specification given here_.  Otherwise, your code is **not correct**.  While typos may be a small issue in writing intended for human consumption, in computer code _it is a big problem!_ 
 
-* Remember that you must document your classes.  This was covered in prior courses and also discussed in [chapter 3]({{<ref "1-object-orientation/03-documentation">}}) of your textbook.
+* Remember that you must document your classes.  This was covered in prior courses and also discussed in [chapter 3]({{% ref "1-object-orientation/03-documentation" %}}) of your textbook.
 
 * The KSU.CS.CodeAnalyzers NuGet package installed in your project will automatically flag issues with for naming and commenting conventions in your code with warnings.  Be sure to address these!
 
@@ -519,7 +519,7 @@ The specific values for the `YouAreToast` properties are described in the table 
 
 
 ## Submitting the Assignment
-Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{<ref "B-git-and-github/11-release">}}) tagged `v0.2.0` with name `"Milestone 2"`.  Copy the URL for the release page and submit it to the Canvas assignment.
+Once your project is complete, merge your feature branch back into the `main` branch and [create a release]({{% ref "B-git-and-github/12-release" %}}) tagged `v0.2.0` with name `"Milestone 2"`.  Copy the URL for the release page and submit it to the Canvas assignment.
 
 ## Grading Rubric
 The grading rubric for this assignment will be:

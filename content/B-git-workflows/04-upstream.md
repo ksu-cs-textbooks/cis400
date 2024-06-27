@@ -21,4 +21,4 @@ Once the _upstream_ repository has been established, you can pull its changes us
 $ git pull upstream master
 ```
 
-This merges the upstream master branch into the local repository.  As with any merge, this may result in _merge conflicts_, which will need to be [resolved]({{<ref "b-git-workflows/08-merge-conflicts">}}).
+This merges the upstream master branch into the local repository.  As with any merge, this may result in _merge conflicts_, which will need to be [resolved]({{% ref "b-git-workflows/08-merge-conflicts" %}}).
