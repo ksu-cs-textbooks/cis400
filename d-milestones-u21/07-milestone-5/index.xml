@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Milestone 5 Requirements :: K-State CIS 400 Textbook</title><link>https://textbooks.cs.ksu.edu/cis400/d-milestones-u21/07-milestone-5/</link><description>For this milestone, you will be adding functionality to your Point-of-Sale system (POS). Specifically, we will be adding support for putting together an order and customizing the elements within it. To do this, we will be leveraging data binding.
+General requirements: You need to follow the style laid out in the C# Coding Conventions
+All classes should be declared in their respective namespace (see below)
+Document your classes using XML-Style comments</description><generator>Hugo</generator><language>en-us</language><lastBuildDate/><atom:link href="https://textbooks.cs.ksu.edu/cis400/d-milestones-u21/07-milestone-5/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

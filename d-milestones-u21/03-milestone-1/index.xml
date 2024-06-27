@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Milestone 1 Requirements :: K-State CIS 400 Textbook</title><link>https://textbooks.cs.ksu.edu/cis400/d-milestones-u21/03-milestone-1/</link><description>For this milestone, you will be creating classes to represent the entrées and sides served at “Dogs ‘N Such” - a fast-food franchise focused on hot dogs. These will be created within the Data project of the solution you accepted from GitHub classroom.
+General requirements: You need to follow the style laid out in the C# Coding Conventions Assignment requirements: You will need to create
+Enum classes (2)
+Hot Dog class</description><generator>Hugo</generator><language>en-us</language><lastBuildDate/><atom:link href="https://textbooks.cs.ksu.edu/cis400/d-milestones-u21/03-milestone-1/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
