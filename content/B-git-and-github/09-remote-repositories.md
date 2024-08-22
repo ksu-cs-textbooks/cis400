@@ -84,20 +84,13 @@ You probably noticed in our push and pull examples above, we specified the `main
 git pull origin experiment
 ```
 
-That would merge the `experiment` branch into the branch you currently have checked out.  Most often, we want to have our remote and local branches correspond to one another.  In that case, we should create a local `experiment` branch and link it to the one in our `origin` repository.  We need to first create and checkout our local `experiment` branch, and set its upstream:
+That would merge the `experiment` branch into the branch you currently have checked out. 
+
+Most often, we want to have our remote and local branches correspond to one another. In that case, we can first fetch all remote changes (without merging them into our local repository), which will also fetch any new remote branches. Then, we can create a new local branch that is synchronized to a new remote upstream branch. For example, suppose there is an `experiment` branch in our remote repository and we wish to create a new local `experiment` branch to track it. We can do:
 
 ```
-git branch experiment
-git checkout experiment
-git --set-upstream origin experiment
-```
-
-Now our `local` experiment branch is linked to our remote `experiment` branch - and we can use the short-form push/pull commands when we have the branch checked out, i.e. when the `experiment` branch is checked out, we can use `git push` instead of `git push origin experiment`.
-
-There is also a shorthand for creating a local branch that is synchronized to a remote upstream branch:
-
-```
+git fetch
 git checkout -b experiment origin/experiment
 ```
 
-This shorthand does the same operations as the three commands above.
+After these commands, we have created the new local `experiment` branch which is currently synchronized with the remote `experiment` branch, and have checked out that new branch. As we make changes, we can use the `git push` and `git pull` shorthands, which will push and pull between the local `experiment` and remote `experiment` branches.
