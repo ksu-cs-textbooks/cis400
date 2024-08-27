@@ -5,7 +5,7 @@ weight: 2
 date: 2018-08-24T10:53:26-05:00
 ---
 
-The first criteria that Alan Kay set for an object-oriented language was _encapsulation_.  In computer science, the term encapsulation refers to organizing code into units.  This provides a mechanism for organizing complex software
+The first criteria that Alan Kay set for an object-oriented language was _encapsulation_.  In computer science, the term encapsulation refers to organizing code into units.  This provides a mechanism for organizing complex software.
 
 A second related idea is _information hiding_, which provides mechanisms for controlling access to encapsulated data and how it can be changed.
 
