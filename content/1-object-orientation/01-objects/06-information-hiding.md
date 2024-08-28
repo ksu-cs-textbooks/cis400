@@ -18,25 +18,25 @@ There are several techniques involved in data hiding in an object-oriented langu
 
 ```csharp
 public class Student {
-    private string first;
-    private string last;
-    private uint wid;
+    private string _first;
+    private string _last;
+    private uint _wid;
 
     public Student(string first, string last, uint wid) {
-        this.first = first;
-        this.last = last;
-        this.wid = wid;
+        this._first = first;
+        this._last = last;
+        this._wid = wid;
     }
 }
 ```
 
-By using the access modifier `private`, we have indicated that our fields `first`, `last`, and `wid` cannot be accessed (seen or assigned to) outside of the code that makes up the `Student` class.  If we were to create a specific student:
+By using the access modifier `private`, we have indicated that our fields `_first`, `_last`, and `_wid` cannot be accessed (seen or assigned to) outside of the code that makes up the `Student` class.  If we were to create a specific student:
 
 ```csharp
 Student willie = new Student("Willie", "Wildcat", 888888888);
 ```
 
-We would not be able to change his name, i.e. `willie.first = "Bob"` would fail, because the field `first` is private.  In fact, we cannot even see his name, so `Console.WriteLine(willie.first);` would also fail.  
+We would not be able to change his name, i.e. `willie._first = "Bob"` would fail, because the field `_first` is private.  In fact, we cannot even see his name, so `Console.WriteLine(willie._first);` would also fail.  
 
 If we want to allow a field or method to be accessible _outside_ of the object, we must declare it `public`.  While we _can_ declare fields public, this violates the core principles of encapsulation, as any outside code can modify our object's state in uncontrolled ways.
 
@@ -108,6 +108,6 @@ public class Student
 
 Notice how the `SetFirst()` and `SetLast()` method check that the provided name has at least one character?  We can use setters to make sure that we never allow the object state to be set to something that makes no sense.
 
-Also, notice that the `wid` field only has a getter.  This effectively means once a student’s Wid is set by the constructor, it cannot be changed.  This allows us to share data without allowing it to be changed outside of the class. 
+Also, notice that the `_wid` field only has a getter.  This effectively means once a student’s Wid is set by the constructor, it cannot be changed.  This allows us to share data without allowing it to be changed outside of the class. 
 
 Finally, the `GetFullName()` is also a getter method, but it does not have its own private backing field. Instead it _derives_ its value from the class state. We sometimes call this a derived getter for that reason. 
