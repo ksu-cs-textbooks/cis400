@@ -34,12 +34,12 @@ private object _tag = null;
 /// An object to represent whatever you need 
 /// </summary>
 public object Tag {
-  get => _obj;
+  get => _tag;
   set 
   {
-    if(value != _obj) 
+    if(value != _tag) 
     {
-      _obj = value;
+      _tag = value;
       OnPropertyChanged(nameof(this.Tag));
     }
   }
