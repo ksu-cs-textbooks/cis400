@@ -14,7 +14,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
 <table class="standard-table">
  <colgroup>
   <col>
-  <col style="width: 50%;">
+  <col style="width: 30%;">
   <col>
  </colgroup>
  <thead>
@@ -29,7 +29,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button" title="<input> elements of type button are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the click event).">button</a></td>
     <td>A push button with no default behavior displaying the value of the <a href="#htmlattrdefvalue">value</a> attribute, empty by default.</td>
     <td>
-      <pre><code class="html">&lt;input type="button" name="ExampleButton" value="Click Me!"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="button" name="ExampleButton" value="Click Me!"/&gt;</code></pre>
     </td>
     <td>
       <input type="button" name="ExampleButton" value="Click Me!"/>
@@ -39,7 +39,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox" title="<input> elements of type checkbox are rendered by default as boxes that are checked (ticked) when activated, like you might see in an official government paper form. The exact appearance depends upon the operating system configuration under which the browser is running. Generally this is a square but it may have rounded corners. A checkbox allows you to select single values for submission in a form (or not).">checkbox</a></td>
     <td>A check box allowing single values to be selected/deselected.</td>
     <td>
-      <pre><code class="html">&lt;label&gt;&lt;input type="checkbox" name="ExampleCheckbox"/&gt;&lt;label&gt;</code></pre></td>
+      <pre white-space="pre-wrap"><code class="html">&lt;label&gt;&lt;input type="checkbox" name="ExampleCheckbox"/&gt;&lt;label&gt;</code></pre></td>
     <td>
       <label><input type="checkbox" name="ExampleCheckbox"/>
     </td>
@@ -48,7 +48,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color" title="<input> elements of type color provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in #rrggbb hexadecimal format.">color</a></td>
     <td>A control for specifying a color; opening a color picker when active in supporting browsers.</td>
     <td>
-      <pre><code class="html">&lt;input type="color" name="ExampleColor" style="width: 40px; height: 40px;"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="color" name="ExampleColor" style="width: 40px; height: 40px;"/&gt;</code></pre>
     </td>
     <td>
       <input type="color" name="ExampleColor" style="width: 40px; height: 40px;"/>
@@ -58,7 +58,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date" title="<input> elements of type=&quot;date&quot; create input fields that let the user enter a date, either with a textbox that validates the input or a special date picker interface.">date</a></td>
     <td>A control for entering a date (year, month, and day, with no time). Opens a date picker or numeric wheels for year, month, day when active in supporting browsers.</td>
     <td>
-     <pre><code class="html">&lt;input type="date" name="ExampleDate"/&gt;</code></pre>
+     <pre white-space="pre-wrap"><code class="html">&lt;input type="date" name="ExampleDate"/&gt;</code></pre>
    </td>
    <td>
     <input type="date" name="ExampleDate"/>
@@ -68,7 +68,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local" title="<input> elements of type datetime-local create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.">datetime-local</a></td>
     <td>A control for entering a date and time, with no time zone. Opens a date picker or numeric wheels for date- and time-components when active in supporting browsers.</td>
     <td>
-      <pre><code class="html">&lt;input type="datetime-local" name="ExampleDatetimeLocal"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="datetime-local" name="ExampleDatetimeLocal"/&gt;</code></pre>
     </td>
     <td>
       <input type="datetime-local" name="ExampleDatetimeLocal"/>
@@ -79,7 +79,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email" title="<input> elements of type email are used to let the user enter and edit an e-mail address, or, if the multiple attribute is specified, a list of e-mail addresses.">email</a></td>
     <td>A field for editing an email address. Looks like a <code>text</code> input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.</td>
     <td>
-      <pre><code class="html">&lt;input type="email" name="ExampleEmail"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="email" name="ExampleEmail"/&gt;</code></pre>
     </td>
     <td>
       <input type="email" name="ExampleEmail"/>
@@ -89,7 +89,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file" title="<input> elements with type=&quot;file&quot; let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using form submission, or manipulated using JavaScript code and the File API.">file</a></td>
     <td>A control that lets the user select a file. Use the <a href="#htmlattrdefaccept">accept</a> attribute to define the types of files that the control can select.</td>
     <td>
-      <pre><code style="html">&lt;input type="file" name="ExampleFile"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code style="html">&lt;input type="file" name="ExampleFile"/&gt;</code></pre>
     </td>
     <td>
       <input type="file" name="ExampleFile"/>
@@ -99,7 +99,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
    <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden" title="<input> elements of type hidden let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.">hidden</a></td>
     <td>A control that is not displayed but whose value is submitted to the server. There is an example in the last column, but it's hidden!</td>
     <td>
-      <pre><code class="html">&lt;input type="hidden" name="ExampleHidden" value="f0321dc35"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="hidden" name="ExampleHidden" value="f0321dc35"/&gt;</code></pre>
     </td>
     <td>
       <input type="hidden" name="ExampleHidden" value="f0321dc35"/> ← It’s here!
@@ -109,7 +109,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image" title="<input> elements of type image are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.">image</a></td>
     <td>A graphical <code>submit</code> button. Displays an image defined by the <code>src</code> attribute. The <a href="#htmlattrdefalt">alt</a> attribute displays if the image <a href="#htmlattrdefsrc">src</a> is missing.</td>
     <td>
-      <pre><code class="html">&lt;input type="image" name="ExampleImage" src="/images/button.png">}}"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="image" name="ExampleImage" src="/images/button.png">}}"/&gt;</code></pre>
     </td>
     <td>
       <input type="image" name="ExampleImage" src="/images/button.png">}}"/>
@@ -119,7 +119,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number" title="<input> elements of type number are used to let the user enter a number. They include built-in validation to reject non-numerical entries.">number</a></td>
     <td>A control for entering a number. Displays a spinner and adds default validation when supported. Displays a numeric keypad in some devices with dynamic keypads.</td>
     <td>
-      <pre><code class="html">&lt;input type="number" name="ExampleNumber" min=0 max=10 step=1/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="number" name="ExampleNumber" min=0 max=10 step=1/&gt;</code></pre>
     </td>
     <td>
       <input type="number" name="ExampleNumber" min=0 max=10 step=1/>
@@ -129,7 +129,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password" title="<input> elements of type password provide a way for the user to securely enter a password.">password</a></td>
     <td>A single-line text field whose value is obscured. Will alert user if site is not secure.</td>
     <td>
-      <pre><code class="html">&lt;input type="password"&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="password"&gt;</code></pre>
     </td>
     <td>
       <input type="password"/>
@@ -139,7 +139,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio" title="<input> elements of type radio are generally used in radio groups—collections of radio buttons describing a set of related options.">radio</a></td>
     <td>A radio button, allowing a single value to be selected out of multiple choices with the same <a href="#htmlattrdefname">name</a> value.</td>
     <td>
-      <pre><code class="html">
+      <pre white-space="pre-wrap"><code class="html">
 &lt;label&gt;
   &lt;input type="radio" name="ExampleRadio" value="1"/&gt;
   Choice One
@@ -170,7 +170,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range" title="<input> elements of type range let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the number input type.">range</a></td>
     <td>A control for entering a number whose exact value is not important. Displays as a range widget defaulting to the middle value. Used in conjunction <a href="#htmlattrdefmin">min</a> and <a href="#htmlattrdefmax">max</a> to define the range of acceptable values.</td>
     <td>
-      <pre><code class="html">&lt;input type="range" name="ExampleRange" min="0" max="25"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="range" name="ExampleRange" min="0" max="25"/&gt;</code></pre>
     </td>
     <td>
       <input type="range" name="ExampleRange" min="0" max="25"/>
@@ -180,7 +180,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset" title="<input> elements of type reset are rendered as buttons, with a default click event handler that resets all of the inputs in the form to their initial values.">reset</a></td>
     <td>A button that resets the contents of the form to default values. Not recommended.</td>
     <td>
-      <pre><code class="html">&lt;input type="reset" name="ResetExample"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="reset" name="ResetExample"/&gt;</code></pre>
     </td>
     <td>
       <input type="reset" name="ResetExample"/>
@@ -190,7 +190,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search" title="<input> elements of type search are text fields designed for the user to enter search queries into. These are functionally identical to text inputs, but may be styled differently by the user agent. ">search</a></td>
     <td>A single-line text field for entering search strings. Line-breaks are automatically removed from the input value. May include a delete icon in supporting browsers that can be used to clear the field. Displays a search icon instead of enter key on some devices with dynamic keypads.</td>
     <td>
-      <pre><code class="html">&lt;input type="search" name="ExampleSearch"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="search" name="ExampleSearch"/&gt;</code></pre>
     </td>
     <td>
       <input type="search" name="ExampleSearch"/>
@@ -200,7 +200,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit" title="<input> elements of type submit are rendered as buttons. When the click event occurs (typically because the user clicked the button), the user agent attempts to submit the form to the server.">submit</a></td>
     <td>A button that submits the form.</td>
     <td>
-      <pre><code class="html">&lt;input type="submit" name="ExampleSubmit" value="Save Changes"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="submit" name="ExampleSubmit" value="Save Changes"/&gt;</code></pre>
     </td>
     <td>
       <input type="submit" name="ExampleSubmit" value="Save Changes"/>
@@ -210,7 +210,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel" title="<input> elements of type tel are used to let the user enter and edit a telephone number. Unlike <input type=&quot;email&quot;> and <input type=&quot;url&quot;> , the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.">tel</a></td>
     <td>A control for entering a telephone number. Displays a telephone keypad in some devices with dynamic keypads.</td>
     <td>
-      <pre><code class="html">&lt;input type="tel" name="ExampleTel"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="tel" name="ExampleTel"/&gt;</code></pre>
     </td>
     <td>
       <input type="tel" name="ExampleTel"/>
@@ -220,7 +220,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text" title="<input> elements of type text create basic single-line text fields.">text</a></td>
     <td>The default value. A single-line text field. Line-breaks are automatically removed from the input value.</td>
     <td>
-      <pre><code class="html">&lt;input type="text" name="ExampleText"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="text" name="ExampleText"/&gt;</code></pre>
     </td>
     <td>
       <input type="text" name="ExampleText"/>
@@ -230,7 +230,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time" title="<input> elements of type time create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).">time</a></td>
     <td>A control for entering a time value with no time zone.</td>
     <td>
-      <pre><code class="html">&lt;input type="time" name="ExampleTime"/&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="time" name="ExampleTime"/&gt;</code></pre>
     </td>
     <td>
       <input type="time" name="ExampleTime"/>
@@ -240,7 +240,7 @@ Perhaps the most important - and versatile - of these is the <a href="https://de
     <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/url" title="<input> elements of type url are used to let the user enter and edit a URL.">url</a></td>
     <td>A field for entering a URL. Looks like a <code>text</code> input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.</td>
     <td>
-      <pre><code class="html">&lt;input type="url" name="ExampleUrl"&gt;</code></pre>
+      <pre white-space="pre-wrap"><code class="html">&lt;input type="url" name="ExampleUrl"&gt;</code></pre>
     </td>
     <td>
       <input type="url" name="ExampleUrl">
