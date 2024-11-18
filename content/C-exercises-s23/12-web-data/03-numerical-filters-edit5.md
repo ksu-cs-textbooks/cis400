@@ -86,7 +86,7 @@ Let's move the filters to a column on the left, leave the search bar above, and 
 Most of this is simply moving elements around the page, but note that we are using inputs of `type=number` to represent our range of IMDB values.  We can specify a minimum and maximum for this range, as well as an allowable increment.  Also, we use the `placeholder` attribute to put text into the `input` until a value is added.
 
 ## Adding More Styles
-Now we'll need to add some rules to our _wwwroot/css/styles.css_.  First, we'll use a `grid` for the layout of the form:
+Now we'll need to add some rules to our _wwwroot/css/site.css_.  First, we'll use a `grid` for the layout of the form:
 
 ```css
 form#movie-database {
