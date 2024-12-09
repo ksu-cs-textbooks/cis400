@@ -40,6 +40,6 @@ Releases use _[semantic versioning](https://semver.org/)_, a numbering system th
 Releases also get a human-readable name.  For this class, you should use the assignment name as the release name, i.e. Milestone 0.
 
 ## Step 4 - Submit your Release URL on K-State Online
-Once you have finished creating the release, GitHub should take you to the release page.  You can also navigate there by clicking the specific release under the "Releases" heading on the right-hand side of your repository lannding page.  Copy the URL of this page; it is what you will submit on Canvas.
+Once you have finished creating the release, GitHub should take you to the release page.  You can also navigate there by clicking the specific release under the "Releases" heading on the right-hand side of your repository landing page.  Copy the URL of this page; it is what you will submit on Canvas.
 
 ![Release URL](/images/b.11.4.png)

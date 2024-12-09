@@ -18,7 +18,7 @@ System.Drawing.Point pointA = new System.Drawing.Point(500, 500);
 System.Windows.Point pointB = new System.Windows.Point(300.0, 200.0);
 ```
 
-The [using directive](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) allows you reference the type without quantification, i.e.:
+The [using directive](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) allows you to reference the type without quantification, i.e.:
 
 ```csharp
 using System.Drawing;
@@ -123,4 +123,4 @@ To duplicate the module behavior with C#, we must declare both the class and its
 
 ## Classes
 
-But what most distinguishes C# is that it is an _object-oriented_ language, and as such, it's primary form of encapsulation is _classes_ and _objects_.  The key idea behind encapsulation in an object-oriented language is that we encapsulate both _state_ and _behavior_ in the class definition.  Let's explore that idea more deeply in the next section. 
+But what most distinguishes C# is that it is an _object-oriented_ language, and as such, its primary form of encapsulation is _classes_ and _objects_.  The key idea behind encapsulation in an object-oriented language is that we encapsulate both _state_ and _behavior_ in the class definition.  Let's explore that idea more deeply in the next section. 

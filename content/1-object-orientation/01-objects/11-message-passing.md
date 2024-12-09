@@ -5,7 +5,7 @@ weight: 11
 date: 2018-08-24T10:53:26-05:00
 ---
 
-The second criteria Alan Kay set for object-oriented languages was [message passing](https://en.wikipedia.org/wiki/Message_passing).  Message passing is a way to request that a unit of code engage in a behavior, i.e. changing its state, or sharing some aspect of its state.  
+The second criterion Alan Kay set for object-oriented languages was [message passing](https://en.wikipedia.org/wiki/Message_passing).  Message passing is a way to request that a unit of code engage in a behavior, i.e. changing its state, or sharing some aspect of its state.  
 
 Consider the real-world analogue of a letter sent via the postal service.  Such a message consists of: an address the message needs to be sent to, a return address, the message itself (the letter), and any data that needs to accompany the letter (the enclosures).  A specific letter might be a wedding invitation.  The message includes the details of the wedding (the host, the location, the time), an enclosure might be a refrigerator magnet with these details duplicated.  The recipient should (per custom) send a response to the host addressed to the return address letting them know if they will be attending.
 

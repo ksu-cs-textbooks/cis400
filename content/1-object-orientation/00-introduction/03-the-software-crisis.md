@@ -5,7 +5,7 @@ weight: 30
 date: 2018-08-24T10:53:26-05:00
 ---
 
-At the 1968 NATO Software Engineering Conference held in Garmisch Germany, the term "Software Crisis" was coined to describe the current state of the software development industry, where common problems included:
+At the 1968 NATO Software Engineering Conference held in Garmisch, Germany, the term "Software Crisis" was coined to describe the current state of the software development industry, where common problems included:
 
 * Projects that ran over-budget
 * Projects that ran over-time 

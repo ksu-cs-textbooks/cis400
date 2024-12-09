@@ -12,11 +12,11 @@ This textbook was authored for the **CIS 400 - Object-Oriented Design, Implement
 As you work on the materials in this course, you may run into questions or problems and need assistance.
 
 ## Course Sessions
-As mentioned before, the course sessions are one of the best time to get help with your assignments - during this time the instructor and TAs are scheduled to be available and on-hand in the computer lab. 
+As mentioned before, the course sessions are one of the best times to get help with your assignments - during this time the instructor and TAs are scheduled to be available and on-hand in the computer lab. 
 
 
 ## Discord
-For questions that crop up outside of class times, your first line of communication for this course is the departmental Discord server.   If you have not yet signed into the course discord channel, or are not yet a Discord user, please visit [https://discordbot.cs.ksu.edu](https://discordbot.cs.ksu.edu).  This assistant will link your K-State and Discord accounts and set your username for the server in accordance with K-State policy.
+For questions that crop up outside of class times, your first line of communication for this course is the departmental Discord server.   If you have not yet signed into the course Discord channel, or are not yet a Discord user, please visit [https://discordbot.cs.ksu.edu](https://discordbot.cs.ksu.edu).  This assistant will link your K-State and Discord accounts and set your username for the server in accordance with K-State policy.
 
 {{% notice tip %}}
 In addition to class channels, the Discord server hosts channels for student clubs, announcements, and general discussion.  It is a good place to find information and socialize when you are unable to meet face-to-face.

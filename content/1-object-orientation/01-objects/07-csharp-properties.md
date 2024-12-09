@@ -35,7 +35,7 @@ public class Student {
     {
       get 
       {
-        return $"{First} {Last}"
+        return $"{First} {Last}";
       }
     }
 
