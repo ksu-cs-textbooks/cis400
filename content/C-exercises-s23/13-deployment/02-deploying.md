@@ -72,7 +72,9 @@ This loads the NuGet Package Manager, which allows us to install additional comp
 
 Then type into the search box "BuildBundlerMinifier".  The corresponding package should show up in the results below. This tool will add the bundling and minification step to the build process of Visual Studio.  Clicking on the project will open a checklist allowing you to choose which projects you want to install the package into.  Check the box next to the _Movies_ project, and then click the `Install` button.
 
-![Installing the BuildBundlerMinifier Package](/images/c.13.2.11.png)
+_Image missing_
+
+<!-- Missing Image [Installing the BuildBundlerMinifier Package](/images/c.13.2.11.png) -->
 
 YOu will need to click `Ok` in the confirmation dialog, and then the package will be installed.  Visual Studio will report that the _bundleconfig.json_ files does not exist.  This file configures the new package to create the minified bundle file - we'll need to add it.  It should be created at the root of the Move project, and it consists of a simple JSON structure:
 

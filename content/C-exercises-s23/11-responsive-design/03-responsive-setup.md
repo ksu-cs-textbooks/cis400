@@ -59,7 +59,9 @@ We can extend this approach by adding _another_ media query for even smaller scr
 
 As this rule is declared _after_ the first two border rules, it will _override_ them both, replacing the values for the border (note, any previously declared rules that have not been overridden will continue to apply).  Now if you size your screen even smaller:
 
-![Border at small viewport size](/images/3.3.4.3.png)
+_Image missing_
+
+<!-- ![Border at small viewport size](/images/3.3.4.3.png) -->
 
 This strategy of using successively smaller media queries to override CSS styles at different screen widths is known as _responsive breakpoints_, because at those widths you specify, the appearance of your page changes.
 
